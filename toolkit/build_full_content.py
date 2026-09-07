@@ -66,9 +66,18 @@ PROMPTS = (
 
 
 WORKFLOWS = (
-    ("WF-001", "standard-to-complete-unit", "Standard to complete unit", "Turn one supplied standard into an aligned unit, assessment and daily sequence.", ("Paste the standard verbatim and list constraints.", "Unpack knowledge, skills and mastery criteria; teacher reviews.", "Draft the final assessment and rubric; teacher corrects content and accessibility.", "Build the lesson sequence backward from the approved assessment.", "Run an alignment audit and produce the final unit pack.")),
-    ("WF-002", "mixed-ability-lesson", "Mixed-ability lesson pack", "Create one common-goal lesson with evidence-based access routes.", ("Define the unchanged objective and mastery evidence.", "Describe observed barriers without names or labels.", "Create core lesson and formative checks.", "Create scaffolded, on-level and extension routes; teacher reviews parity.", "Add grouping, fade plan and next-day decision rules.")),
-    ("WF-003", "incident-to-parent-conversation", "Incident to parent conversation", "Move from verified classroom facts to a calm, policy-aligned family conversation.", ("Record observable facts, immediate actions and applicable policy.", "Separate facts, unknowns and interpretations; teacher verifies.", "Draft neutral contact message with placeholders.", "Prepare questions, support options and an action-plan table.", "Document agreed actions and schedule follow-up without adding new claims.")),
+    ("WF-001", "standard-to-complete-unit", "Standard to complete unit", "Turn one supplied standard into an aligned unit, assessment and daily sequence.", ("Paste the standard verbatim; add grade, duration, schedule, resources and required curriculum boundaries.", "Unpack knowledge, skills, reasoning, prerequisites and observable mastery; pause for teacher correction.", "Design the final assessment and rubric before lessons; independently verify content and scoring.", "Build the lesson sequence backward from the approved evidence, adding formative checkpoints and reteaching triggers.", "Audit every objective, lesson and item for alignment; assemble the unit overview, daily plans, assessment and answer materials.")),
+    ("WF-002", "mixed-ability-lesson", "Mixed-ability lesson pack", "Create one common-goal lesson with evidence-based access routes.", ("Define the unchanged objective and common evidence of mastery.", "Describe observed barriers and current evidence without names, diagnoses or fixed labels.", "Create the core lesson, model, guided practice, independent evidence and formative checks.", "Build scaffolded, on-level and extension routes; compare intellectual demand and correct hidden lower expectations.", "Add flexible grouping, support-fade rules, accessibility checks and next-day instructional decisions.")),
+    ("WF-003", "incident-to-parent-conversation", "Incident to parent conversation", "Move from verified classroom facts to a calm, policy-aligned family conversation.", ("Record observable facts, time, place, roles, immediate safety actions and applicable school procedure.", "Separate confirmed facts, reported information, interpretation and unknowns; teacher verifies the record.", "Draft a neutral initial contact message using placeholders and no determination of motive or guilt.", "Prepare the conversation opening, family questions, support options and an action table with owners and dates.", "Document only agreed actions, preserve unresolved items and schedule policy-aligned follow-up.")),
+    ("WF-004", "scores-to-report-comments", "Scores to report comments", "Turn verified assessment evidence into individualized, defensible report comments.", ("Prepare a de-identified evidence table with objectives, results, observed strengths, error patterns and next priorities.", "Check that every row belongs to the correct fictional learner label and flag missing or inconsistent evidence.", "Draft one comment at a time with strength, evidence and achievable next step; do not infer effort or personality.", "Run a sentence-level fact trace and audit for repetition, pronouns, tone, length and evidence leakage.", "Export approved drafts for secure insertion into the official system; names are added only inside an authorized workflow.")),
+    ("WF-005", "standard-to-assessment", "Standard to aligned assessment", "Build a verified assessment and scoring system from an exact supplied standard.", ("Paste the standard and define grade, taught content, time, formats and accessibility requirements.", "Unpack assessable knowledge, skills and reasoning; create an assessment blueprint with weightings.", "Write items and purposeful distractors mapped to the blueprint; stop for subject-matter review.", "Create worked answers, rubric or point rules, misconception codes and instructional decision thresholds.", "Solve every item independently and audit alignment, ambiguity, accessibility, total points and answer accuracy.")),
+    ("WF-006", "emergency-substitute-pack", "Emergency substitute pack", "Create a self-contained, safe lesson pack another adult can run without guessing.", ("List the schedule, subject, learner routines, materials already available, prohibited activities and policy placeholders.", "Choose a realistic objective and create a no-technology core lesson with exact read-aloud directions.", "Add student task pages, answer guide, early-finisher option and collection instructions.", "Create contingencies for missing materials, shortened time and learners needing established supports.", "Audit safety, supervision, timing and unknown procedures; assemble the one-page overview and attachments.")),
+    ("WF-007", "project-launch-pack", "Project launch pack", "Turn a learning goal into a clear project brief, milestone plan and assessment pack.", ("Define the objective, final evidence, duration, resources, audience and privacy boundaries.", "Create the driving question, authentic scenario, final-product requirements and student choice limits.", "Build milestones, mini-deadlines, teacher checkpoints and a recovery path for missed work.", "Create the rubric, individual-accountability evidence and peer-feedback protocol.", "Audit workload, group equity, accessibility, copyright and public-sharing risk; assemble the launch pack.")),
+    ("WF-008", "parent-conference-pack", "Parent conference pack", "Prepare and document a brief, balanced family conference from verified evidence.", ("Gather authorized strengths, learning evidence, work samples, supports tried and the priority concern.", "Build a timed agenda that separates evidence, interpretation, family perspective and student voice.", "Draft neutral talking points, three open questions and explanations of relevant classroom evidence.", "Create a shared action plan with owner, action, date and evidence of progress.", "Write the factual follow-up summary; verify recipients, dates, consent, privacy and school policy before sending.")),
+    ("WF-009", "intervention-plan-draft", "Evidence to intervention-plan draft", "Organize anonymous learning evidence into a time-bound instructional support draft.", ("Define the exact skill, baseline measure, prior instruction and non-identifying evidence; do not diagnose causes.", "Analyze patterns, identify a narrow instructional target and state uncertainty or missing information.", "Choose an evidence-aligned teaching strategy, dosage, materials and implementation owner.", "Define progress checks, graphing or tally method, review date and decision rules for continue/change/escalate.", "Audit feasibility, access, policy and data privacy; label the result a draft requiring qualified team approval.")),
+    ("WF-010", "field-trip-pack", "Field-trip planning pack", "Organize verified trip requirements into a usable logistics and communication pack.", ("Collect the official venue, date, transport, cost, supervision, medical, accessibility and permission requirements.", "Create the master timeline, approval checklist and unresolved-information register.", "Build the trip-day schedule, group counts, adult responsibilities, contacts and contingency fields.", "Draft family notice, permission checklist and student preparation information from verified details only.", "Reconcile every date, count and cost; complete school safety, accessibility and authorization review.")),
+    ("WF-011", "weekly-admin-pack", "Weekly teacher admin pack", "Turn a teacher's verified weekly notes into a concise set of plans and communications.", ("Sort supplied notes into teaching priorities, deadlines, meetings, communications and items awaiting confirmation.", "Create a realistic weekly priority list that distinguishes essential, scheduled, delegated and deferred work.", "Draft the agenda, staff updates and family notices needed that week using placeholders for unknown details.", "Build action tables with owners, dates and completion evidence; remove duplicates and conflicts.", "Run a privacy, recipient, calendar and policy audit before anything is copied into official systems.")),
+    ("WF-012", "class-data-reflection", "Class data reflection", "Turn de-identified class evidence into instructional conclusions and next actions.", ("Provide the objective, assessment conditions, scoring rules and anonymous response-level evidence.", "Check data quality and summarize distributions without hiding missing, incomparable or weak evidence.", "Identify secure learning, common misconceptions and questions the evidence cannot answer.", "Create flexible next-step groups, targeted tasks and a common reassessment aligned to the same objective.", "Record the instructional hypothesis, decision thresholds and review date; avoid claims about learner traits or causes.")),
 )
 
 
@@ -721,19 +730,6 @@ TITLE_CATALOGS = {
     "09-subject-deep-dives": SUBJECT_DEEP_DIVE_TITLES,
 }
 
-WORKFLOW_TITLES = {
-    "standard-to-assessment": "Standard to aligned assessment",
-    "emergency-substitute-pack": "Emergency substitute pack",
-    "project-launch-pack": "Project launch pack",
-    "parent-conference-pack": "Parent conference pack",
-    "intervention-plan-draft": "Evidence to intervention-plan draft",
-    "field-trip-pack": "Field-trip planning pack",
-    "weekly-admin-pack": "Weekly teacher admin pack",
-    "class-data-reflection": "Class data reflection",
-    "scores-to-report-comments": "Scores to report comments",
-}
-
-
 def slug(title: str) -> str:
     return "-".join("".join(ch.lower() if ch.isalnum() else " " for ch in title).split())
 
@@ -796,6 +792,22 @@ Full-book content draft. Final editorial review is pending.
 '''
 
 
+WORKFLOW_EXAMPLES = {
+    "standard-to-complete-unit": "An entirely fictional Grade 7 ecosystem standard becomes four mastery criteria, a verified model-and-explanation assessment, six sequenced lessons, three hinge checks and a final alignment table.",
+    "mixed-ability-lesson": "An entirely fictional fraction-comparison lesson keeps one justification goal while offering fraction strips, a common-denominator route and a transfer extension; all learners submit the same core evidence.",
+    "incident-to-parent-conversation": "An invented classroom interruption is recorded with role labels only. The teacher separates what was observed from what was reported, follows school procedure and drafts a neutral family check-in with unresolved facts marked.",
+    "scores-to-report-comments": "A fictional table uses Learner A, B and C labels. Each draft traces to the correct objectives and invented evidence; the final export contains placeholders so names are added only inside the authorized school system.",
+    "standard-to-assessment": "A fictional Grade 8 equation standard is unpacked into a blueprint, eight items, worked solutions, diagnostic distractors and a three-level decision rule; every equation is solved independently before approval.",
+    "emergency-substitute-pack": "A fictional Grade 4 map-skills day uses atlases, paper and a board. The pack contains exact directions, an independent task, key, early-finisher option and a no-atlas contingency, with local procedures left as placeholders.",
+    "project-launch-pack": "A fictional Grade 6 water-use project becomes a driving question, three milestones, individual reflection evidence, a content-focused rubric and a private in-class audience option.",
+    "parent-conference-pack": "Fictional Learner A has invented mathematics evidence. A 15-minute agenda balances strength, priority and family perspective, then records two agreed actions with owners, dates and follow-up evidence.",
+    "intervention-plan-draft": "Anonymous fictional exit-ticket responses reveal one narrow fraction misconception. The draft specifies a two-week teaching strategy, twice-weekly checks and decision thresholds, without diagnosing why learners made the error.",
+    "field-trip-pack": "A fictional museum visit uses placeholders for all official details. Confirmed requirements feed one timeline, group-count sheet, adult-role table and family checklist; missing approval and medical procedures remain flagged.",
+    "weekly-admin-pack": "An invented weekly note list is sorted into four priorities, two meetings and three communications. Conflicting dates are flagged rather than resolved by guessing, and each action receives an owner and evidence of completion.",
+    "class-data-reflection": "A fictional anonymous response set is checked for missing entries, summarized by objective and grouped by misconception. The teacher creates targeted next tasks and one common reassessment without assigning fixed learner labels.",
+}
+
+
 def workflow_markdown(item: tuple[str, str, str, str, tuple[str, ...]]) -> str:
     wid, subtopic, title, purpose, steps = item
     rendered_steps = "\n".join(f"{i}. {step}" for i, step in enumerate(steps, 1))
@@ -844,10 +856,11 @@ an alignment, privacy, accuracy and feasibility audit.
 
 ## Fictional end-to-end example
 
-Context: Grade 7 science, a fictional ecosystem unit, 45-minute lessons, paper-based
-materials, and anonymous evidence only. The teacher supplies the objective and constraints,
-reviews each intermediate artifact, corrects any science or timing issue, and approves the
-final pack only after checking alignment, accessibility, privacy and school policy.
+{WORKFLOW_EXAMPLES[subtopic]}
+
+This example demonstrates the process only. The teacher reviews every intermediate
+artifact and approves the final pack only after checking accuracy, alignment,
+accessibility, privacy and applicable school policy.
 
 ## Review checklist
 
@@ -914,28 +927,7 @@ def all_prompts() -> tuple[Prompt, ...]:
 
 
 def all_workflows() -> tuple[tuple[str, str, str, str, tuple[str, ...]], ...]:
-    existing = list(WORKFLOWS)
-    used = {w[1] for w in existing}
-    manifest = json.loads((BOOK / "manifest.json").read_text(encoding="utf-8"))
-    workflow_subtopics = manifest["chapters"][9]["subtopics"]
-    next_id = len(existing) + 1
-    for subtopic in workflow_subtopics:
-        if subtopic in used:
-            continue
-        title = WORKFLOW_TITLES[subtopic]
-        existing.append((
-            f"WF-{next_id:03d}", subtopic, title,
-            f"Produce a reviewed, internally consistent {title.lower()} from supplied source material.",
-            (
-                "Collect the exact source material, goal, constraints and required policy; flag gaps.",
-                "Organize verified facts and create the first artifact; teacher reviews accuracy.",
-                "Create the connected supporting artifact from the approved output only.",
-                "Check alignment, feasibility, accessibility, tone and privacy; revise identified issues.",
-                "Assemble the final pack with action owners, dates and unknowns visibly marked.",
-            ),
-        ))
-        next_id += 1
-    return tuple(existing)
+    return WORKFLOWS
 
 
 def main() -> None:
