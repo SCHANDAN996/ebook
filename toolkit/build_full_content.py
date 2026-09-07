@@ -1,12 +1,13 @@
-"""Build the hand-curated Phase 3 beta content pack.
+"""Build the complete 300-prompt and 12-workflow source draft.
 
-The beta deliberately covers every chapter before the remaining 270 prompts are
-written. Generated Markdown stays deterministic so editorial changes are reviewable.
+The first 30 prompts are hand-curated anchors. The remaining content follows the
+same deterministic, reviewable format without a separate beta gate.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
+import json
 from pathlib import Path
 
 
@@ -71,17 +72,221 @@ WORKFLOWS = (
 )
 
 
+PREFIXES = {
+    "01-lesson-planning": "LP", "02-worksheets-activities": "WA",
+    "03-assessment-rubrics-quizzes": "AS", "04-differentiation-mixed-ability": "DF",
+    "05-parent-communication": "PC", "06-report-card-comments": "RC",
+    "07-classroom-management-sel": "CM", "08-teacher-admin-paperwork": "AD",
+    "09-subject-deep-dives": "SD",
+}
+
+VARIANTS = (
+    ("Create", "from a supplied objective"),
+    ("Adapt", "for limited time and materials"),
+    ("Review", "for alignment and accuracy"),
+    ("Simplify", "without lowering the learning goal"),
+    ("Extend", "for deeper reasoning and transfer"),
+    ("Differentiate", "for mixed readiness"),
+    ("Audit", "for accessibility and inclusion"),
+    ("Turn evidence into", "with clear next steps"),
+    ("Build a low-prep", "for tomorrow's class"),
+    ("Create a collaborative", "with individual accountability"),
+    ("Create an independent", "with a usable answer guide"),
+    ("Improve", "using teacher feedback"),
+)
+
+CHAPTER_GUIDANCE = {
+    "01-lesson-planning": (
+        "a classroom-ready instructional plan",
+        "objective and success criteria; timed sequence; teacher moves; student actions; checks for understanding; independent evidence; misconceptions; materials; adaptations; teacher verification",
+    ),
+    "02-worksheets-activities": (
+        "a purposeful student activity with an answer or observation guide",
+        "student-facing directions; model or launch; sequenced tasks; expected product; participation structure; answer guide; misconception check; extension; accessibility check",
+    ),
+    "03-assessment-rubrics-quizzes": (
+        "a valid classroom assessment resource aligned to the supplied objective",
+        "student directions; assessment content; points or criteria; complete key; diagnostic rationale; scoring guidance; reteaching decisions; alignment audit",
+    ),
+    "04-differentiation-mixed-ability": (
+        "an access plan that preserves the same learning goal",
+        "unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit",
+    ),
+    "05-parent-communication": (
+        "a factual, respectful family communication draft",
+        "subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit",
+    ),
+    "06-report-card-comments": (
+        "a concise report-card resource grounded only in verified evidence",
+        "final comment or bank; strength; evidence placeholder; actionable next step; length check; fact trace; fairness and prohibited-inference audit",
+    ),
+    "07-classroom-management-sel": (
+        "a preventive, teachable and restorative classroom support",
+        "observable goal; teacher language; student steps; practice plan; response options; follow-up; data check; accessibility, safety and policy boundaries",
+    ),
+    "08-teacher-admin-paperwork": (
+        "a concise administrative document that does not invent decisions",
+        "purpose; polished document; owners and dates as supplied; action table; unresolved questions; [CONFIRM] flags; privacy and policy check",
+    ),
+    "09-subject-deep-dives": (
+        "a subject-accurate teaching resource connecting concepts, evidence and transfer",
+        "core concept; prerequisites; accurate model; worked example; misconception diagnostic; guided application; independent transfer; answer guide; subject-accuracy audit",
+    ),
+}
+
+SAMPLE_ALLOCATIONS = {
+    "01-lesson-planning": 12, "02-worksheets-activities": 8,
+    "03-assessment-rubrics-quizzes": 8, "04-differentiation-mixed-ability": 7,
+    "05-parent-communication": 6, "06-report-card-comments": 6,
+    "07-classroom-management-sel": 5, "08-teacher-admin-paperwork": 4,
+    "09-subject-deep-dives": 4,
+}
+
+SAMPLE_OUTPUTS = {
+    "01-lesson-planning": """**Illustrative excerpt — Grade 6 science, 50 minutes**
+
+**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
+carbon dioxide to make sugar and release oxygen.
+
+**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
+teacher models a plant as a solar-powered food factory and labels three inputs and two
+outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
+students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
+exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
+
+**Evidence:** A secure response shows all five substances in the correct direction and
+explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
+than 25% label sugar as an input, begin the next lesson with a carbon-source model.""",
+    "02-worksheets-activities": """**Illustrative excerpt — Grade 7 ecosystem activity**
+
+**Directions:** Arrange Sunlight → Algae → Snails → Perch → Herons. Remove the snail card,
+then annotate every downstream effect with ↑, ↓ or ? and one reason.
+
+1. Which organism loses its immediate food source? Explain.
+2. Why can herons be affected even though they do not eat snails?
+3. Predict one change to algae and state what additional evidence you would need.
+
+**Answer guide:** Perch decrease because their prey is missing; herons may later decrease
+because fewer perch are available. Algae may increase as grazing falls, although a firm
+claim requires information about other grazers and limiting factors. Award reasoning,
+not the arrow alone. A response saying only perch change reveals a broken-chain
+misconception and should receive a short food-web tracing task.""",
+    "03-assessment-rubrics-quizzes": """**Illustrative excerpt — Grade 8 linear equations**
+
+1. Solve `x - 9 = -4`. A −13, B 5, C 13, D −5. **Answer: B.** Choosing A suggests the
+same operation was used instead of the inverse.
+2. Solve `4(y - 3) = 20` and show each step. **Answer:** `y = 8`.
+3. Explain why `6x + 4 = 2(3x + 5)` has no solution. **Answer:** expanding gives
+`6x + 4 = 6x + 10`; subtracting `6x` leaves the false statement `4 = 10`.
+
+**Decision rule:** 3/3 secure; 2/3 check the error code; 0-1/3 reteach inverse operations
+with balance models. Inspect Question 3 first when deciding whether learners distinguish
+no solution from infinitely many solutions.""",
+    "04-differentiation-mixed-ability": """**Illustrative excerpt — one goal, three access routes**
+
+**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
+
+**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
+complete: “___ is closer to one because it is missing ___.”
+**On-level route:** Prove the comparison using both missing pieces and twelfths.
+**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
+`n` increases.
+
+All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
+from one while `5/6` is `1/6` from one. Supports change representation and language,
+not the mathematical target. Remove the sentence frame once the learner explains the
+relationship independently.""",
+    "05-parent-communication": """**Illustrative email — all names and details are fictional**
+
+**Subject: Science progress and brief check-in for Jordan**
+
+Dear Mr. and Mrs. Lee,
+
+Jordan regularly contributes thoughtful ideas during our Grade 7 science discussions.
+Over the past two weeks, Jordan has submitted two of four assigned classwork tasks. I
+have provided written reminders and additional classroom time; two tasks remain.
+
+Could we arrange a 10-minute call to make a manageable completion plan? I am available
+Thursday at 3:30 PM or Friday at 8:00 AM. Please let me know whether either time works.
+
+Sincerely,
+
+[TEACHER NAME]
+
+[SCHOOL CONTACT]
+
+**Teacher check:** Verify recipients, dates, assignment record, time zone and school
+communication policy before sending.""",
+    "06-report-card-comments": """**Illustrative comment — fictional evidence**
+
+Jordan accurately solves one- and two-step equations and demonstrated this on 8 of 10
+items in the latest classroom assessment. Written work is clearest when each inverse
+operation is shown on a separate line. The next priority is distributing negative signs
+consistently across parentheses. Annotating the sign before simplifying will help Jordan
+check this step independently.
+
+**Fact trace:** “8 of 10” comes from the supplied assessment record; “negative signs”
+comes from the supplied error pattern; the suggested annotation is the teacher-provided
+strategy. No claim is made about effort, personality, support at home or future results.""",
+    "07-classroom-management-sel": """**Illustrative routine — Grade 4 table transition**
+
+**Observable goal:** Move from carpet spots to assigned tables with materials ready in
+90 seconds. **Teach:** “When the chime sounds: freeze, point to your table, pick up the
+named material, walk on the outside lane, begin the displayed starter.” Model once,
+model a common error, then let students identify the difference.
+
+Practise twice without removing learning time as a penalty. Give neutral feedback:
+“Twenty-two learners began the starter; six still needed materials.” Track time and
+missing-material counts for five days. If the narrow aisle causes congestion, dismiss
+the far row first. Re-teach the step that breaks down rather than labelling the class.
+Follow existing safety and accessibility plans.""",
+    "08-teacher-admin-paperwork": """**Illustrative meeting-minutes excerpt**
+
+**Grade 6 planning meeting — [DATE]**
+**Decision:** Use one common exit-ticket question in all three mathematics sections next
+week. **Evidence reviewed:** anonymous responses from the prior fraction lesson.
+
+| Action | Owner | Due | Evidence of completion |
+|---|---|---|---|
+| Draft common question | Ms. Rivera | [DATE] | Question shared with team |
+| Confirm printing | [CONFIRM] | [DATE] | Sets placed in mailboxes |
+| Bring response counts | Each teacher | Next meeting | 3-category tally |
+
+**Unresolved:** The notes mention intervention time but do not identify an owner or
+schedule; retain this as `[CONFIRM]` rather than inventing agreement.""",
+    "09-subject-deep-dives": """**Illustrative concept explanation — fractions near one**
+
+Both 3/4 and 5/6 are one unit fraction short of a whole, but the missing pieces are not
+the same size. Fourths are larger pieces than sixths, so 1/4 > 1/6. Therefore subtracting
+1/6 from one leaves more than subtracting 1/4: `5/6 > 3/4`.
+
+**Representation:** Draw two equal number lines from 0 to 1 and mark the unfilled final
+interval on each. **Hinge question:** “Two pizzas each have one slice missing. Must the
+amount left be equal?” Correct response: no; the original partitions determine slice
+size. **Transfer:** Order 2/3, 7/8 and 11/12 without common denominators. Answer:
+`2/3 < 7/8 < 11/12`, because the missing unit fractions decrease.""",
+}
+
+WORKFLOW_TITLES = {
+    "standard-to-assessment": "Standard to aligned assessment",
+    "emergency-substitute-pack": "Emergency substitute pack",
+    "project-launch-pack": "Project launch pack",
+    "parent-conference-pack": "Parent conference pack",
+    "intervention-plan-draft": "Evidence to intervention-plan draft",
+    "field-trip-pack": "Field-trip planning pack",
+    "weekly-admin-pack": "Weekly teacher admin pack",
+    "class-data-reflection": "Class data reflection",
+    "scores-to-report-comments": "Scores to report comments",
+}
+
+
 def slug(title: str) -> str:
     return "-".join("".join(ch.lower() if ch.isalnum() else " " for ch in title).split())
 
 
 def prompt_markdown(p: Prompt) -> str:
     inputs = "\n".join(f"- `[{value}]`" for value in p.inputs)
-    sample = (
-        "A strong response should preserve every supplied fact, follow the requested sections, "
-        "include usable teacher-facing details, and flag any missing information instead of inventing it."
-        if p.sample else "Not included in this edition."
-    )
+    sample = SAMPLE_OUTPUTS[p.folder] if p.sample else "Not included in this edition."
     prompt_text = f"""You are an experienced K-12 instructional planning assistant.\n\nTeacher inputs:\n{inputs}\n\nTask:\n{p.deliverable}\n\nRequired output:\n{p.sections}\n\nRules:\n- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].\n- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.\n- Keep the named grade, time, materials, objective, and policy constraints unchanged.\n- Make student-facing language clear and age-appropriate.\n- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.\n- End with a short TEACHER VERIFICATION checklist."""
     return f'''---
 {{
@@ -133,7 +338,7 @@ def prompt_markdown(p: Prompt) -> str:
 
 ## Editorial notes
 
-Phase 3 beta draft. Cross-tool model testing and qualified human review are pending.
+Full-book content draft. Final editorial review is pending.
 '''
 
 
@@ -200,19 +405,107 @@ final pack only after checking alignment, accessibility, privacy and school poli
 '''
 
 
+def generated_prompt(
+    pid: str, folder: str, subtopic: str, ordinal: int
+) -> Prompt:
+    display = subtopic.replace("-and-", " & ").replace("-", " ")
+    action, qualifier = VARIANTS[(ordinal - 1) % len(VARIANTS)]
+    product, sections = CHAPTER_GUIDANCE[folder]
+    title = f"{action} {display} {qualifier}"
+    return Prompt(
+        pid,
+        folder,
+        subtopic,
+        title,
+        f"You need {product} focused on {display}.",
+        (
+            "GRADE_BAND: learner age or grade",
+            "SUBJECT_AND_CONTEXT: exact course, unit or situation",
+            "GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable",
+            "VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information",
+            "TIME_LENGTH_AND_FORMAT_CONSTRAINTS",
+            "AVAILABLE_MATERIALS_OR_SUPPORTS",
+            "SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS",
+        ),
+        f"Create {product} for the supplied {display} task.",
+        f"Return: {sections}.",
+        f"Fictional case: [GRADE], [SUBJECT], {display}; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.",
+    )
+
+
+def all_prompts() -> tuple[Prompt, ...]:
+    manifest = json.loads((BOOK / "manifest.json").read_text(encoding="utf-8"))
+    anchors = list(PROMPTS)
+    generated: list[Prompt] = []
+    for chapter in manifest["chapters"][:9]:
+        folder = f"{chapter['order']:02d}-{chapter['id']}"
+        prefix = PREFIXES[folder]
+        chapter_anchors = [p for p in anchors if p.folder == folder]
+        next_id = max((int(p.id.split("-")[1]) for p in chapter_anchors), default=0) + 1
+        for subtopic, target in chapter["subtopics"].items():
+            present = sum(p.subtopic == subtopic for p in chapter_anchors)
+            for ordinal in range(present + 1, target + 1):
+                generated.append(generated_prompt(f"{prefix}-{next_id:03d}", folder, subtopic, ordinal))
+                next_id += 1
+    combined = anchors + generated
+    selected: list[Prompt] = []
+    seen: dict[str, int] = {}
+    for prompt in combined:
+        seen[prompt.folder] = seen.get(prompt.folder, 0) + 1
+        selected.append(replace(prompt, sample=seen[prompt.folder] <= SAMPLE_ALLOCATIONS[prompt.folder]))
+    return tuple(selected)
+
+
+def all_workflows() -> tuple[tuple[str, str, str, str, tuple[str, ...]], ...]:
+    existing = list(WORKFLOWS)
+    used = {w[1] for w in existing}
+    manifest = json.loads((BOOK / "manifest.json").read_text(encoding="utf-8"))
+    workflow_subtopics = manifest["chapters"][9]["subtopics"]
+    next_id = len(existing) + 1
+    for subtopic in workflow_subtopics:
+        if subtopic in used:
+            continue
+        title = WORKFLOW_TITLES[subtopic]
+        existing.append((
+            f"WF-{next_id:03d}", subtopic, title,
+            f"Produce a reviewed, internally consistent {title.lower()} from supplied source material.",
+            (
+                "Collect the exact source material, goal, constraints and required policy; flag gaps.",
+                "Organize verified facts and create the first artifact; teacher reviews accuracy.",
+                "Create the connected supporting artifact from the approved output only.",
+                "Check alignment, feasibility, accessibility, tone and privacy; revise identified issues.",
+                "Assemble the final pack with action owners, dates and unknowns visibly marked.",
+            ),
+        ))
+        next_id += 1
+    return tuple(existing)
+
+
 def main() -> None:
-    for p in PROMPTS:
+    prompts = all_prompts()
+    workflows = all_workflows()
+    # Generated source is reproducible; remove the previous generated edition so
+    # renamed prompts cannot remain as duplicates after an editorial rewrite.
+    for folder in PREFIXES:
+        prompt_dir = BOOK / "chapters" / folder / "prompts"
+        if prompt_dir.is_dir():
+            for old in prompt_dir.glob("*.md"):
+                old.unlink()
+    workflow_dir = BOOK / "chapters" / "10-multi-step-workflows" / "workflows"
+    if workflow_dir.is_dir():
+        for old in workflow_dir.glob("*.md"):
+            old.unlink()
+    for p in prompts:
         target = BOOK / "chapters" / p.folder / "prompts" / f"{p.id.lower()}-{slug(p.title)}.md"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(prompt_markdown(p), encoding="utf-8")
 
-    workflow_dir = BOOK / "chapters" / "10-multi-step-workflows" / "workflows"
     workflow_dir.mkdir(parents=True, exist_ok=True)
-    for workflow in WORKFLOWS:
+    for workflow in workflows:
         target = workflow_dir / f"{workflow[0].lower()}-{slug(workflow[2])}.md"
         target.write_text(workflow_markdown(workflow), encoding="utf-8")
 
-    print(f"Built {len(PROMPTS)} prompts and {len(WORKFLOWS)} workflows.")
+    print(f"Built {len(prompts)} prompts and {len(workflows)} workflows.")
 
 
 if __name__ == "__main__":

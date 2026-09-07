@@ -22,7 +22,7 @@ design and review gates pass.
 ## Production gates
 
 1. Blueprint passes `python toolkit/run.py book-check`.
-2. A 30-prompt beta passes automated checks and structured review.
+2. The complete 300-prompt source passes structural checks and editorial review.
 3. Design prototypes for cover, chapter opener, prompt, example and workflow pages
    are approved before bulk layout work.
 4. Remaining content is written chapter by chapter and frozen after review.
@@ -40,9 +40,8 @@ book. See [`design/design-spec.md`](design/design-spec.md) for the decisions to 
 Generated files never replace the Markdown sources. Do not put API keys, student
 records or unlicensed source material anywhere in this public repository.
 
-## Phase 3 beta content
+## Full content draft
 
-Run `python toolkit/build_beta_content.py` to deterministically rebuild the editorial
-beta, then `python toolkit/run.py beta-check`. The beta contains 30 standalone prompts
-across all nine prompt chapters plus three reviewed-step workflows. Every item remains
-`draft` until cross-model testing and qualified teacher review are recorded.
+Run `python toolkit/build_full_content.py` to deterministically rebuild the complete
+300-prompt, 12-workflow source, then `python toolkit/run.py content-check`. There is no
+separate 30-prompt beta gate. Every item remains `draft` until final editorial review.

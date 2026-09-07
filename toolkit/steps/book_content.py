@@ -108,15 +108,15 @@ def check(root: Path = BOOK_ROOT) -> dict:
     }
 
 
-def beta_content_issues(root: Path = BOOK_ROOT) -> list[str]:
-    """Validate the editorial shape of the Phase 3 beta corpus offline."""
+def full_content_issues(root: Path = BOOK_ROOT) -> list[str]:
+    """Validate the editorial shape and counts of the complete source corpus offline."""
     issues: list[str] = []
     prompts = sorted((root / "chapters").glob("0[1-9]-*/prompts/*.md"))
     workflows = sorted((root / "chapters" / "10-multi-step-workflows" / "workflows").glob("*.md"))
-    if len(prompts) != 30:
-        issues.append(f"beta must contain 30 prompts, found {len(prompts)}")
-    if len(workflows) != 3:
-        issues.append(f"beta must contain 3 workflows, found {len(workflows)}")
+    if len(prompts) != 300:
+        issues.append(f"book must contain 300 prompts, found {len(prompts)}")
+    if len(workflows) != 12:
+        issues.append(f"book must contain 12 workflows, found {len(workflows)}")
 
     ids: list[str] = []
     for path in prompts:
@@ -134,7 +134,7 @@ def beta_content_issues(root: Path = BOOK_ROOT) -> list[str]:
         if "```text" not in text:
             issues.append(f"{path.relative_to(root)}: copy-paste prompt is not fenced")
     if len(ids) != len(set(ids)):
-        issues.append("beta prompt IDs must be unique")
+        issues.append("prompt IDs must be unique")
 
     for path in workflows:
         text = path.read_text(encoding="utf-8")
@@ -145,10 +145,13 @@ def beta_content_issues(root: Path = BOOK_ROOT) -> list[str]:
     return issues
 
 
-def check_beta(root: Path = BOOK_ROOT) -> dict:
-    issues = beta_content_issues(root)
+def check_full_content(root: Path = BOOK_ROOT) -> dict:
+    issues = full_content_issues(root)
     if issues:
-        raise ValueError("Beta content failed: " + "; ".join(issues))
+        raise ValueError("Full content failed: " + "; ".join(issues))
     prompts = list((root / "chapters").glob("0[1-9]-*/prompts/*.md"))
     samples = sum('"sample_output": true' in p.read_text(encoding="utf-8") for p in prompts)
-    return {"prompts": len(prompts), "workflows": 3, "sample_outputs": samples}
+    if samples != 60:
+        raise ValueError(f"Full content failed: expected 60 sample outputs, found {samples}")
+    workflows = list((root / "chapters" / "10-multi-step-workflows" / "workflows").glob("*.md"))
+    return {"prompts": len(prompts), "workflows": len(workflows), "sample_outputs": samples}
