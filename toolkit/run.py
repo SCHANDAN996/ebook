@@ -39,7 +39,7 @@ def estimate():
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("command", choices=["estimate", "status", "book-check", "design-preview", "catalog", "outputs", "build", "qc", "all"])
+    ap.add_argument("command", choices=["estimate", "status", "book-check", "beta-check", "design-preview", "catalog", "outputs", "build", "qc", "all"])
     ap.add_argument("--profile", choices=["pilot", "beta", "full"], default="pilot")
     ap.add_argument("-y", "--yes", action="store_true", help="Explicitly approve API spending")
     ap.add_argument("--budget-usd", type=float, help="Planning allowance acknowledged for this run")
@@ -72,6 +72,13 @@ def main(argv=None):
             print(f"Book blueprint passed: {summary['chapters']} chapters, "
                   f"{summary['prompts']} prompts, {summary['workflows']} workflows, "
                   f"{summary['sample_outputs']} selected full sample outputs.")
+            return 0
+        if args.command == "beta-check":
+            from steps import book_content
+            summary = book_content.check_beta()
+            print(f"Beta content passed: {summary['prompts']} prompts, "
+                  f"{summary['workflows']} workflows, "
+                  f"{summary['sample_outputs']} sample-output markers.")
             return 0
         if args.command == "design-preview":
             import book_design_preview

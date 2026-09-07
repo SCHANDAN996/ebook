@@ -39,3 +39,10 @@ book. See [`design/design-spec.md`](design/design-spec.md) for the decisions to 
 
 Generated files never replace the Markdown sources. Do not put API keys, student
 records or unlicensed source material anywhere in this public repository.
+
+## Phase 3 beta content
+
+Run `python toolkit/build_beta_content.py` to deterministically rebuild the editorial
+beta, then `python toolkit/run.py beta-check`. The beta contains 30 standalone prompts
+across all nine prompt chapters plus three reviewed-step workflows. Every item remains
+`draft` until cross-model testing and qualified teacher review are recorded.

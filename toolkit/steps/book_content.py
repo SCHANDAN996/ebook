@@ -10,6 +10,11 @@ from pathlib import Path
 BOOK_ROOT = Path(__file__).resolve().parents[2] / "book"
 HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+REQUIRED_PROMPT_SECTIONS = (
+    "## Use this when", "## Teacher inputs", "## Copy-paste prompt",
+    "## Fictional test case", "## Sample output",
+    "## Teacher verification checklist", "## Editorial notes",
+)
 
 
 def load_blueprint(root: Path = BOOK_ROOT) -> dict:
@@ -102,3 +107,48 @@ def check(root: Path = BOOK_ROOT) -> dict:
         "sample_outputs": manifest["full_sample_output_target"],
     }
 
+
+def beta_content_issues(root: Path = BOOK_ROOT) -> list[str]:
+    """Validate the editorial shape of the Phase 3 beta corpus offline."""
+    issues: list[str] = []
+    prompts = sorted((root / "chapters").glob("0[1-9]-*/prompts/*.md"))
+    workflows = sorted((root / "chapters" / "10-multi-step-workflows" / "workflows").glob("*.md"))
+    if len(prompts) != 30:
+        issues.append(f"beta must contain 30 prompts, found {len(prompts)}")
+    if len(workflows) != 3:
+        issues.append(f"beta must contain 3 workflows, found {len(workflows)}")
+
+    ids: list[str] = []
+    for path in prompts:
+        text = path.read_text(encoding="utf-8")
+        match = re.search(r'"id":\s*"([A-Z]{2}-\d{3})"', text)
+        if not match:
+            issues.append(f"{path.relative_to(root)}: missing valid prompt ID")
+        else:
+            ids.append(match.group(1))
+        for section in REQUIRED_PROMPT_SECTIONS:
+            if section not in text:
+                issues.append(f"{path.relative_to(root)}: missing {section}")
+        if "[NEEDS TEACHER INPUT]" not in text:
+            issues.append(f"{path.relative_to(root)}: missing unknown-facts safeguard")
+        if "```text" not in text:
+            issues.append(f"{path.relative_to(root)}: copy-paste prompt is not fenced")
+    if len(ids) != len(set(ids)):
+        issues.append("beta prompt IDs must be unique")
+
+    for path in workflows:
+        text = path.read_text(encoding="utf-8")
+        if "## Workflow" not in text or "## Fictional end-to-end example" not in text:
+            issues.append(f"{path.relative_to(root)}: incomplete workflow structure")
+        if "previous **reviewed** output" not in text:
+            issues.append(f"{path.relative_to(root)}: missing human review gate")
+    return issues
+
+
+def check_beta(root: Path = BOOK_ROOT) -> dict:
+    issues = beta_content_issues(root)
+    if issues:
+        raise ValueError("Beta content failed: " + "; ".join(issues))
+    prompts = list((root / "chapters").glob("0[1-9]-*/prompts/*.md"))
+    samples = sum('"sample_output": true' in p.read_text(encoding="utf-8") for p in prompts)
+    return {"prompts": len(prompts), "workflows": 3, "sample_outputs": samples}
