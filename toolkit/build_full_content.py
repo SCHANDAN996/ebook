@@ -403,9 +403,65 @@ WORKSHEET_ACTIVITY_TITLES = {
     ),
 }
 
+ASSESSMENT_TITLES = {
+    "quizzes-and-tests": (
+        "Create a balanced classroom assessment",
+        "Build a short quiz across recall, application and reasoning",
+        "Write diagnostic multiple-choice questions with purposeful distractors",
+        "Create a constructed-response assessment with a scoring guide",
+        "Design a pre-assessment that separates prerequisite and grade-level skills",
+        "Build a cumulative assessment without over-weighting recent lessons",
+        "Adapt an assessment for a shorter testing period",
+        "Create parallel assessment forms with equivalent demand",
+        "Audit a test for alignment, ambiguity and answer-key errors",
+        "Turn a supplied objective list into a complete assessment blueprint",
+    ),
+    "formative-checks-and-exit-tickets": (
+        "Create hinge questions for live teaching",
+        "Build a five-minute check for understanding during instruction",
+        "Write an exit ticket that distinguishes three levels of understanding",
+        "Create a misconception poll with actionable response options",
+        "Design a show-me task using mini-whiteboards or paper",
+        "Turn anonymous responses into a next-day formative check",
+        "Create a transfer question that reveals reasoning rather than recall",
+        "Audit a formative check for speed, reading load and decision usefulness",
+    ),
+    "rubrics": (
+        "Build a student-readable analytic rubric",
+        "Create observable descriptors for four performance levels",
+        "Turn an objective and task into aligned rubric criteria",
+        "Build a single-point rubric with feedback space",
+        "Create a rubric for collaborative work with individual evidence",
+        "Rewrite vague rubric words as observable evidence",
+        "Calibrate a rubric using fictional work samples",
+        "Audit a rubric for double penalties, bias and irrelevant criteria",
+    ),
+    "diagnosis-and-misconceptions": (
+        "Diagnose errors from anonymous work",
+        "Code anonymous responses by misconception rather than score alone",
+        "Build flexible reteaching groups from response patterns",
+        "Distinguish a careless slip from a conceptual misunderstanding",
+        "Create targeted mini-tasks for three misconception groups",
+        "Plan a reassessment that shows whether reteaching worked",
+    ),
+    "answer-keys-and-feedback": (
+        "Create a complete worked answer key from verified questions",
+        "Write actionable feedback matched to common response patterns",
+        "Audit an answer key for mathematical, factual and scoring errors",
+        "Create learner-friendly solution explanations without hiding reasoning",
+    ),
+    "standards-based-grading": (
+        "Map assessment evidence to supplied standards and objectives",
+        "Create a standards-based proficiency scale with observable evidence",
+        "Summarize class mastery without averaging unrelated skills",
+        "Audit a standards-based grade summary for missing or weak evidence",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
+    "03-assessment-rubrics-quizzes": ASSESSMENT_TITLES,
 }
 
 WORKFLOW_TITLES = {
