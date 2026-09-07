@@ -18,6 +18,7 @@ cross-tool compatibility have not yet been validated.
 ```bash
 python -m unittest discover -s tests -v
 python toolkit/run.py book-check
+python toolkit/run.py design-preview
 python toolkit/run.py estimate
 python toolkit/run.py status
 ```
