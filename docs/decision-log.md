@@ -180,6 +180,35 @@ Message Batches API — **50% छूट**। इसी एक फ़ैसले
 
 ---
 
+## 8क. Cold email का फ़ैसला
+
+**सवाल:** क्या cold email से promote कर सकते हैं?
+
+**फ़ैसला: नहीं — teachers को सीधा नहीं। बाद में स्कूलों को, हाँ।**
+
+| वजह | आँकड़ा |
+|---|---|
+| B2C cold email की बिक्री दर | **0.215%** = एक बिक्री पर **464 ईमेल** |
+| $27 के product पर | घाटे का सौदा |
+| Teachers के ईमेल | K-12 districts के सबसे सख़्त फ़िल्टर के पीछे |
+| 2026 के नियम | spam complaints 0.3% से ज़्यादा = **सीधा rejection**, spam folder भी नहीं |
+| नया domain | 4-6 हफ़्ते सिर्फ़ 5-10 ईमेल/दिन, वरना domain जल जाता है |
+
+**क़ानूनी तौर पर** अमेरिका में वैध है (CAN-SPAM, consent की ज़रूरत नहीं), पर 6 शर्तें
+हैं और एक भी छूटने पर **प्रति ईमेल $51,744 तक** जुर्माना। कनाडा (CASL) और
+यूरोप/UK (GDPR) में बिल्कुल मत भेजिए।
+
+**पर एक रूप काम करता है:** teacher को $27 का PDF नहीं — **स्कूल को 40 licence**।
+वो B2B है: reply rate 3–5%, एक सौदा $500–2,000 का। **यह बाद का क़दम है** — पहले
+20-30 असली ख़रीदार चाहिए जिनकी बात ईमेल में लिखी जा सके।
+
+**और सबसे बड़ी बात:** lead magnet से आने वाले ईमेल **cold नहीं, warm** हैं —
+10-50 गुना बेहतर चलते हैं, ₹0 ख़र्च, कोई क़ानूनी झंझट नहीं। वही असली रास्ता है।
+
+पूरा विश्लेषण: [`channels-cold-email.md`](channels-cold-email.md)
+
+---
+
 ## 9. अभी की स्थिति
 
 ### ✅ हो चुका
@@ -195,11 +224,14 @@ Message Batches API — **50% छूट**। इसी एक फ़ैसले
 
 - [ ] `toolkit/config.py` में `support_email` बदलना (अभी `CHANGE_ME@example.com`)
 - [ ] Lead magnet teacher Facebook groups में बाँटना — **यही अगला कदम है**
+- [ ] Pinterest पर resources डालना (₹0, teachers वहाँ ढूँढती हैं)
 - [ ] Landing page (email capture)
 - [ ] 100+ email मिलें तो: `python3 run.py all` (~₹1,530)
 - [ ] Lemon Squeezy पर checkout + order bump + upsell
 - [ ] Meta Pixel + Conversions API
 - [ ] 5 creatives, फिर ads
+- [ ] *(बाद में)* TpT पर listing
+- [ ] *(20-30 बिक्री के बाद)* स्कूलों को B2B cold email
 
 ---
 
