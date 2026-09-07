@@ -277,6 +277,151 @@ size. **Transfer:** Order 2/3, 7/8 and 11/12 without common denominators. Answer
 `2/3 < 7/8 < 11/12`, because the missing unit fractions decrease.""",
 }
 
+PROMPT_SAMPLE_OUTPUTS = {
+    "LP-001": """**Illustrative output — complete Grade 6 science lesson**
+
+**Objective:** I can model how sunlight, water and carbon dioxide help a plant make sugar
+and release oxygen. **Success evidence:** A labelled diagram shows three inputs entering,
+two products in the correct locations and one accurate explanatory sentence.
+
+**50-minute sequence:** 0-5 prior-knowledge write; 5-15 teacher model of a plant as a
+solar-powered food factory; 15-28 pairs sort input/output cards; 28-43 learners create an
+independent arrow model; 43-50 exit ticket. Ask throughout: “Is sunlight matter or the
+energy source?” **Misconception response:** If sugar is labelled as coming from soil, use a
+carbon-tracing example before independent work. **Exit ticket:** Can a watered plant make
+sugar without carbon dioxide? Explain using *input*.""",
+    "LP-002": """**Illustrative output — backward-planned Grade 8 equations unit**
+
+**Final mastery:** Solve and justify one-variable linear equations, including distribution
+and variables on both sides. **Final evidence:** Six-item assessment: two procedural items,
+two error analyses, one no-solution/infinite-solutions comparison and one written model.
+
+**Eight-lesson sequence:** (1) inverse operations and equality; (2) two-step equations;
+(3) distribution; (4) combining like terms; (5) variables on both sides; (6) special
+solutions; (7) mixed reasoning clinic; (8) assessment and reflection. Hinge checks follow
+Lessons 2, 4 and 6. If fewer than 75% justify the same operation on both sides, reteach with
+a balance representation before continuing. Extension asks learners to create and verify
+an equation with no solution.""",
+    "LP-003": """**Illustrative output — unpacking a supplied informational-text standard**
+
+**Key actions:** identify a claim, select relevant evidence, explain how evidence supports
+the claim and distinguish strong from weak support. **Prerequisites:** locate explicit
+details and paraphrase without changing meaning.
+
+**Objectives:** (1) I can identify the author's central claim. (2) I can select two details
+that directly support it. (3) I can explain the connection between each detail and the
+claim. **Mastery evidence:** Given a new 500-word text, the learner states the claim,
+quotes or paraphrases two accurate details and writes one reasoning sentence per detail.
+The teacher must paste and verify the exact local standard before using this sequence; no
+standard wording is invented in this example.""",
+    "LP-004": """**Illustrative output — matched food-web warm-up and exit ticket**
+
+**Warm-up (5 minutes):** “Algae → snails → perch → herons. If snails suddenly decline,
+which population changes first? What might happen later?” Learners write, pair-share and
+mark direct versus indirect effects. Responses reveal whether they stop reasoning after one
+link.
+
+**Exit ticket (5 minutes):** “A pollutant reduces algae but does not directly poison fish.
+Explain two ways herons could still be affected.” **Answer guide:** Less algae can reduce
+snails, then perch, leaving less prey for herons; other defensible food-web routes require
+stated evidence. **Decision:** secure = two connected steps; developing = one correct step;
+not yet = only direct poisoning. Begin the next lesson with chain tracing if over 25% are
+not yet.""",
+    "LP-005": """**Illustrative output — no-surprises Grade 4 map-skills substitute plan**
+
+**Goal:** Use a map key and compass rose to describe locations. **Materials:** atlases,
+paper and pencils; no devices. **55 minutes:** attendance and posted starter (5); model one
+example from the instruction card (8); independent atlas hunt (22); partner comparison
+using established routines (10); exit question and collection (10).
+
+**Read aloud:** “Use the key exactly as printed. If you disagree, point to the map evidence.”
+The answer sheet includes page references and acceptable direction language. Early finishers
+write three accurate clues for a partner. If atlases are unavailable, use the printed room
+map task. Attendance, emergency and dismissal procedures remain `[NEEDS TEACHER INPUT]`.""",
+    "LP-006": """**Illustrative output — concept-development lesson on equivalent fractions**
+
+Begin with two equal paper strips showing 1/2 and 2/4. Learners silently decide whether the
+amounts are equal and explain what stays constant when partitions change. The teacher then
+connects folding, a number line and multiplication of numerator and denominator.
+
+Guided examples use 2/3 = 4/6 and one non-example, 2/3 ≠ 3/4. Partners create an equivalent
+fraction and prove it with two representations. Independent evidence asks learners to fill
+`3/5 = ?/20` and explain why multiplying only the denominator changes the value. The exit
+ticket contrasts “more pieces” with “more amount.” If learners rely only on a memorized
+rule, return to equal-length strips before symbolic practice.""",
+    "LP-007": """**Illustrative output — inquiry lesson around condensation**
+
+**Phenomenon:** Water appears outside a sealed cup of ice water. Learners first observe
+without explanation, then record two competing ideas: leakage or water from surrounding
+air. Groups design a comparison using a sealed cold cup and room-temperature control.
+
+The teacher approves safety and variables before materials are distributed. Learners record
+where droplets form, compare controls and write a claim-evidence-reasoning response.
+Expected pattern: droplets form outside the cold cup; this is not a promised result. Ask,
+“What evidence would distinguish a leak from condensation?” Independent transfer explains
+fog on a bathroom mirror. The lesson ends by listing evidence still needed, preventing the
+model explanation from being presented as experimental proof.""",
+    "LP-008": """**Illustrative output — explicit instruction with guided release**
+
+**Skill:** Identify and punctuate an introductory phrase. **I do:** The teacher thinks aloud,
+finds the sentence opening, checks whether it can move and inserts a comma. **We do:** The
+class annotates three examples, including one sentence with no introductory phrase. **You
+do together:** Pairs correct four sentences and justify each decision. **You do alone:**
+Learners edit a six-sentence paragraph and write one original example.
+
+After every stage, a two-item check determines release. If fewer than 80% identify the
+boundary, add bracketed phrase models before independent work. The exit ticket includes one
+correct sentence and one tempting over-comma error. The teacher verifies local terminology
+and style guidance before use.""",
+    "LP-009": """**Illustrative output — equitable discussion lesson**
+
+**Question:** Should a fictional town replace a vacant lot with housing or a public park?
+Learners receive two short authorized sources with different evidence. Silent preparation
+requires one claim, two pieces of evidence and one question before anyone speaks.
+
+In groups of four, roles rotate: facilitator invites, evidence tracker records sources,
+connector links ideas and challenger asks for reasoning. Use stems: “The source supports
+that because…” and “What evidence would change your view?” No learner must disclose personal
+housing experience. Individual evidence is a final 120-word position that addresses one
+counterargument. The teacher tracks whose ideas enter the discussion and pauses if two
+voices dominate.""",
+    "LP-010": """**Illustrative output — no-technology lesson on ratios**
+
+Materials are a board, scrap paper and pencils. Start with the fictional recipe “2 cups rice
+for 3 cups water.” Learners draw double number lines for 1, 2 and 4 batches, then compare
+strategies. The teacher models scaling both quantities and contrasts the non-example of
+adding the same number to each.
+
+Pairs solve three ratio situations on folded paper and exchange one explanation for checking.
+Independent evidence asks for a missing value and a written justification. The exit ticket:
+“A learner changes 2:3 to 4:5. Is the ratio equivalent? Prove it.” Answer: no; 2:3 scaled by
+2 is 4:6. No printing, projector, internet or purchased material is required.""",
+    "LP-011": """**Illustrative output — lesson around one supplied complex text**
+
+Before reading, preview only three essential terms and ask learners to predict the author's
+purpose from the title and source. First read: gist in one sentence. Second read: annotate
+the claim, supporting evidence and one unresolved question. Third read: compare which detail
+most strongly supports the claim.
+
+The teacher models annotation on the first paragraph but does not paraphrase the entire
+text. Pairs rehearse explanations; independent evidence is a claim-evidence-reasoning
+paragraph using the authorized passage. A plain-language companion may sit beside the
+original, but quoted evidence must come from the original. Insert `[AUTHORIZED TEXT]` and
+verify copyright permission, factual accuracy and vocabulary before teaching.""",
+    "LP-012": """**Illustrative output — safe investigation of dissolving rate**
+
+**Question:** How does water temperature affect the time for one teaspoon of sugar to
+dissolve? **Variables:** change water temperature; measure seconds; keep cup, water volume,
+sugar amount and stirring pattern constant. **Safety:** teacher handles hot water; use warm,
+not boiling, water; no tasting; wipe spills immediately.
+
+Groups predict, run three conditions and record results in a supplied table. They graph time
+against temperature and write a claim supported by their own data. The guide states an
+expected pattern—warmer water often dissolves sugar faster—but never fabricates results.
+Learners name one limitation and one improvement. The teacher verifies temperatures,
+equipment and local laboratory rules before approval.""",
+}
+
 # Chapter 1 is written as 60 distinct teacher jobs rather than repeated variations of
 # one generic shell. Indexes match the manifest allocation within each subtopic.
 LESSON_PLANNING_TITLES = {
@@ -736,7 +881,10 @@ def slug(title: str) -> str:
 
 def prompt_markdown(p: Prompt) -> str:
     inputs = "\n".join(f"- `[{value}]`" for value in p.inputs)
-    sample = SAMPLE_OUTPUTS[p.folder] if p.sample else "Not included in this edition."
+    sample = (
+        PROMPT_SAMPLE_OUTPUTS.get(p.id, SAMPLE_OUTPUTS[p.folder])
+        if p.sample else "Not included in this edition."
+    )
     prompt_text = f"""You are an experienced K-12 instructional planning assistant.\n\nTeacher inputs:\n{inputs}\n\nTask:\n{p.deliverable}\n\nRequired output:\n{p.sections}\n\nRules:\n- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].\n- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.\n- Keep the named grade, time, materials, objective, and policy constraints unchanged.\n- Make student-facing language clear and age-appropriate.\n- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.\n- End with a short TEACHER VERIFICATION checklist."""
     return f'''---
 {{

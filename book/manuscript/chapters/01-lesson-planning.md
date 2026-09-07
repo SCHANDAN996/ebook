@@ -89,20 +89,18 @@ Grade 6 science; photosynthesis; 50 minutes; students model matter and energy; b
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — complete Grade 6 science lesson**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Objective:** I can model how sunlight, water and carbon dioxide help a plant make sugar
+and release oxygen. **Success evidence:** A labelled diagram shows three inputs entering,
+two products in the correct locations and one accurate explanatory sentence.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+**50-minute sequence:** 0-5 prior-knowledge write; 5-15 teacher model of a plant as a
+solar-powered food factory; 15-28 pairs sort input/output cards; 28-43 learners create an
+independent arrow model; 43-50 exit ticket. Ask throughout: “Is sunlight matter or the
+energy source?” **Misconception response:** If sugar is labelled as coming from soil, use a
+carbon-tracing example before independent work. **Exit ticket:** Can a watered plant make
+sugar without carbon dioxide? Explain using *input*.
 
 ## Teacher verification checklist
 
@@ -187,20 +185,18 @@ Grade 8 mathematics; linear equations; 8 lessons of 45 minutes; solve and justif
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — backward-planned Grade 8 equations unit**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Final mastery:** Solve and justify one-variable linear equations, including distribution
+and variables on both sides. **Final evidence:** Six-item assessment: two procedural items,
+two error analyses, one no-solution/infinite-solutions comparison and one written model.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+**Eight-lesson sequence:** (1) inverse operations and equality; (2) two-step equations;
+(3) distribution; (4) combining like terms; (5) variables on both sides; (6) special
+solutions; (7) mixed reasoning clinic; (8) assessment and reflection. Hinge checks follow
+Lessons 2, 4 and 6. If fewer than 75% justify the same operation on both sides, reteach with
+a balance representation before continuing. Extension asks learners to create and verify
+an equation with no solution.
 
 ## Teacher verification checklist
 
@@ -281,20 +277,18 @@ Grade 5 ELA; standard supplied by teacher; 4 lessons; informational text unit.
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — unpacking a supplied informational-text standard**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Key actions:** identify a claim, select relevant evidence, explain how evidence supports
+the claim and distinguish strong from weak support. **Prerequisites:** locate explicit
+details and paraphrase without changing meaning.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+**Objectives:** (1) I can identify the author's central claim. (2) I can select two details
+that directly support it. (3) I can explain the connection between each detail and the
+claim. **Mastery evidence:** Given a new 500-word text, the learner states the claim,
+quotes or paraphrases two accurate details and writes one reasoning sentence per detail.
+The teacher must paste and verify the exact local standard before using this sequence; no
+standard wording is invented in this example.
 
 ## Teacher verification checklist
 
@@ -377,20 +371,19 @@ Grade 7 science; food webs; explain indirect ecosystem effects; 5 minutes each; 
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — matched food-web warm-up and exit ticket**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Warm-up (5 minutes):** “Algae → snails → perch → herons. If snails suddenly decline,
+which population changes first? What might happen later?” Learners write, pair-share and
+mark direct versus indirect effects. Responses reveal whether they stop reasoning after one
+link.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+**Exit ticket (5 minutes):** “A pollutant reduces algae but does not directly poison fish.
+Explain two ways herons could still be affected.” **Answer guide:** Less algae can reduce
+snails, then perch, leaving less prey for herons; other defensible food-web routes require
+stated evidence. **Decision:** secure = two connected steps; developing = one correct step;
+not yet = only direct poisoning. Begin the next lesson with chain tracing if over 25% are
+not yet.
 
 ## Teacher verification checklist
 
@@ -475,20 +468,17 @@ Grade 4 social studies; map skills; 55 minutes; atlases and paper; no devices; e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — no-surprises Grade 4 map-skills substitute plan**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Goal:** Use a map key and compass rose to describe locations. **Materials:** atlases,
+paper and pencils; no devices. **55 minutes:** attendance and posted starter (5); model one
+example from the instruction card (8); independent atlas hunt (22); partner comparison
+using established routines (10); exit question and collection (10).
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+**Read aloud:** “Use the key exactly as printed. If you disagree, point to the map evidence.”
+The answer sheet includes page references and acceptable direction language. Early finishers
+write three accurate clues for a partner. If atlases are unavailable, use the printed room
+map task. Attendance, emergency and dismissal procedures remain `[NEEDS TEACHER INPUT]`.
 
 ## Teacher verification checklist
 
@@ -573,20 +563,17 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — concept-development lesson on equivalent fractions**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+Begin with two equal paper strips showing 1/2 and 2/4. Learners silently decide whether the
+amounts are equal and explain what stays constant when partitions change. The teacher then
+connects folding, a number line and multiplication of numerator and denominator.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+Guided examples use 2/3 = 4/6 and one non-example, 2/3 ≠ 3/4. Partners create an equivalent
+fraction and prove it with two representations. Independent evidence asks learners to fill
+`3/5 = ?/20` and explain why multiplying only the denominator changes the value. The exit
+ticket contrasts “more pieces” with “more amount.” If learners rely only on a memorized
+rule, return to equal-length strips before symbolic practice.
 
 ## Teacher verification checklist
 
@@ -671,20 +658,18 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — inquiry lesson around condensation**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Phenomenon:** Water appears outside a sealed cup of ice water. Learners first observe
+without explanation, then record two competing ideas: leakage or water from surrounding
+air. Groups design a comparison using a sealed cold cup and room-temperature control.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+The teacher approves safety and variables before materials are distributed. Learners record
+where droplets form, compare controls and write a claim-evidence-reasoning response.
+Expected pattern: droplets form outside the cold cup; this is not a promised result. Ask,
+“What evidence would distinguish a leak from condensation?” Independent transfer explains
+fog on a bathroom mirror. The lesson ends by listing evidence still needed, preventing the
+model explanation from being presented as experimental proof.
 
 ## Teacher verification checklist
 
@@ -769,20 +754,18 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — explicit instruction with guided release**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Skill:** Identify and punctuate an introductory phrase. **I do:** The teacher thinks aloud,
+finds the sentence opening, checks whether it can move and inserts a comma. **We do:** The
+class annotates three examples, including one sentence with no introductory phrase. **You
+do together:** Pairs correct four sentences and justify each decision. **You do alone:**
+Learners edit a six-sentence paragraph and write one original example.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+After every stage, a two-item check determines release. If fewer than 80% identify the
+boundary, add bracketed phrase models before independent work. The exit ticket includes one
+correct sentence and one tempting over-comma error. The teacher verifies local terminology
+and style guidance before use.
 
 ## Teacher verification checklist
 
@@ -867,20 +850,18 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — equitable discussion lesson**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Question:** Should a fictional town replace a vacant lot with housing or a public park?
+Learners receive two short authorized sources with different evidence. Silent preparation
+requires one claim, two pieces of evidence and one question before anyone speaks.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+In groups of four, roles rotate: facilitator invites, evidence tracker records sources,
+connector links ideas and challenger asks for reasoning. Use stems: “The source supports
+that because…” and “What evidence would change your view?” No learner must disclose personal
+housing experience. Individual evidence is a final 120-word position that addresses one
+counterargument. The teacher tracks whose ideas enter the discussion and pauses if two
+voices dominate.
 
 ## Teacher verification checklist
 
@@ -965,20 +946,17 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — no-technology lesson on ratios**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+Materials are a board, scrap paper and pencils. Start with the fictional recipe “2 cups rice
+for 3 cups water.” Learners draw double number lines for 1, 2 and 4 batches, then compare
+strategies. The teacher models scaling both quantities and contrasts the non-example of
+adding the same number to each.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+Pairs solve three ratio situations on folded paper and exchange one explanation for checking.
+Independent evidence asks for a missing value and a written justification. The exit ticket:
+“A learner changes 2:3 to 4:5. Is the ratio equivalent? Prove it.” Answer: no; 2:3 scaled by
+2 is 4:6. No printing, projector, internet or purchased material is required.
 
 ## Teacher verification checklist
 
@@ -1063,20 +1041,18 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — lesson around one supplied complex text**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+Before reading, preview only three essential terms and ask learners to predict the author's
+purpose from the title and source. First read: gist in one sentence. Second read: annotate
+the claim, supporting evidence and one unresolved question. Third read: compare which detail
+most strongly supports the claim.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+The teacher models annotation on the first paragraph but does not paraphrase the entire
+text. Pairs rehearse explanations; independent evidence is a claim-evidence-reasoning
+paragraph using the authorized passage. A plain-language companion may sit beside the
+original, but quoted evidence must come from the original. Insert `[AUTHORIZED TEXT]` and
+verify copyright permission, factual accuracy and vocabulary before teaching.
 
 ## Teacher verification checklist
 
@@ -1161,20 +1137,18 @@ Fictional case: [GRADE], [SUBJECT], complete lessons; the teacher supplies the e
 
 ## Sample output
 
-**Illustrative excerpt — Grade 6 science, 50 minutes**
+**Illustrative output — safe investigation of dissolving rate**
 
-**Objective:** I can draw and label a model showing how a plant uses sunlight, water and
-carbon dioxide to make sugar and release oxygen.
+**Question:** How does water temperature affect the time for one teaspoon of sugar to
+dissolve? **Variables:** change water temperature; measure seconds; keep cup, water volume,
+sugar amount and stirring pattern constant. **Safety:** teacher handles hot water; use warm,
+not boiling, water; no tasting; wipe spills immediately.
 
-**Sequence:** 0-5 min: students answer, “Where does a plant's food come from?” 5-15 min:
-teacher models a plant as a solar-powered food factory and labels three inputs and two
-outputs. 15-30 min: pairs sort input/output cards and justify each placement. 30-43 min:
-students independently draw an arrow model and add a one-sentence explanation. 43-50 min:
-exit ticket—“Can a watered plant make sugar without carbon dioxide? Explain using *input*.”
-
-**Evidence:** A secure response shows all five substances in the correct direction and
-explains that sugar is made rather than absorbed from soil. **Reteach trigger:** If more
-than 25% label sugar as an input, begin the next lesson with a carbon-source model.
+Groups predict, run three conditions and record results in a supplied table. They graph time
+against temperature and write a claim supported by their own data. The guide states an
+expected pattern—warmer water often dissolves sugar faster—but never fabricates results.
+Learners name one limitation and one improvement. The teacher verifies temperatures,
+equipment and local laboratory rules before approval.
 
 ## Teacher verification checklist
 
