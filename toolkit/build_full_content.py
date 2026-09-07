@@ -599,6 +599,46 @@ REPORT_COMMENT_TITLES = {
     ),
 }
 
+CLASSROOM_MANAGEMENT_TITLES = {
+    "routines-and-transitions": (
+        "Design and teach a classroom routine",
+        "Teach an efficient entry routine with an immediate learning start",
+        "Create a calm transition between whole-group and independent work",
+        "Build a materials routine that reduces waiting and lost equipment",
+        "Plan a dismissal routine that protects safety and learning time",
+        "Audit a routine using timing, participation and independence evidence",
+    ),
+    "behaviour-reset-support": (
+        "Create a brief private behaviour-reset conversation",
+        "Write neutral redirection language for a recurring disruption",
+        "Plan a re-entry routine after a learner leaves the classroom",
+        "Create a reset menu that preserves dignity and instructional access",
+        "Audit a response plan for escalation, shame and inconsistent expectations",
+    ),
+    "restorative-conversations": (
+        "Prepare a restorative conversation",
+        "Create questions that explore impact, needs and possible repair",
+        "Build a voluntary repair agreement with a scheduled follow-up",
+        "Audit a restorative script for coercion, blame and safeguarding limits",
+    ),
+    "social-emotional-learning": (
+        "Create an age-appropriate lesson on naming and managing emotions",
+        "Teach a practical strategy for pausing before responding",
+        "Build an empathy activity without requiring personal disclosure",
+        "Audit an SEL activity for privacy, culture and clinical overreach",
+    ),
+    "morning-meetings": (
+        "Plan a 10-minute morning meeting with a clear community goal",
+        "Create inclusive check-in options that do not force disclosure",
+        "Build a weekly morning-meeting sequence without repetitive prompts",
+    ),
+    "seating-and-grouping": (
+        "Create a seating plan from classroom access and learning constraints",
+        "Build a transparent regrouping plan using temporary learning evidence",
+        "Audit seating and grouping decisions for labels, isolation and accessibility",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
@@ -606,6 +646,7 @@ TITLE_CATALOGS = {
     "04-differentiation-mixed-ability": DIFFERENTIATION_TITLES,
     "05-parent-communication": PARENT_COMMUNICATION_TITLES,
     "06-report-card-comments": REPORT_COMMENT_TITLES,
+    "07-classroom-management-sel": CLASSROOM_MANAGEMENT_TITLES,
 }
 
 WORKFLOW_TITLES = {
