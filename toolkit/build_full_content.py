@@ -681,6 +681,34 @@ TEACHER_ADMIN_TITLES = {
     ),
 }
 
+SUBJECT_DEEP_DIVE_TITLES = {
+    "mathematics": (
+        "Create a concept-first mathematics explanation",
+        "Connect concrete, visual and symbolic mathematics representations",
+        "Build a mathematics error-analysis lesson with verified solutions",
+    ),
+    "english-language-arts": (
+        "Build a close-reading lesson from an authorized supplied text",
+        "Create an evidence-based writing task with a clear mentor model",
+        "Design a revision lesson that separates ideas, organization and conventions",
+    ),
+    "science": (
+        "Design an evidence-based science investigation",
+        "Build a claim-evidence-reasoning task from supplied observations",
+        "Audit a science explanation for causation, uncertainty and safety",
+    ),
+    "social-studies": (
+        "Create a source-analysis lesson using origin, purpose and context",
+        "Build a corroboration task with multiple supplied perspectives",
+        "Design a historical claim task that distinguishes evidence from interpretation",
+    ),
+    "arts-physical-education-and-electives": (
+        "Create a skill-development lesson with modelling, practice and reflection",
+        "Adapt a performance task for space, equipment and physical access",
+        "Build an observable process rubric for an arts, PE or elective task",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
@@ -690,6 +718,7 @@ TITLE_CATALOGS = {
     "06-report-card-comments": REPORT_COMMENT_TITLES,
     "07-classroom-management-sel": CLASSROOM_MANAGEMENT_TITLES,
     "08-teacher-admin-paperwork": TEACHER_ADMIN_TITLES,
+    "09-subject-deep-dives": SUBJECT_DEEP_DIVE_TITLES,
 }
 
 WORKFLOW_TITLES = {
