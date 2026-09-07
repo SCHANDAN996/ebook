@@ -348,6 +348,66 @@ LESSON_PLANNING_TITLES = {
     ),
 }
 
+WORKSHEET_ACTIVITY_TITLES = {
+    "practice-worksheets": (
+        "Build a focused practice worksheet",
+        "Create practice that moves from a model to independent work",
+        "Write a worksheet that targets one common misconception",
+        "Build mixed practice that requires learners to choose a strategy",
+        "Create a short retrieval worksheet for previously taught skills",
+        "Design an application worksheet using realistic classroom contexts",
+        "Adapt a worksheet for black-and-white printing and limited space",
+        "Create an error-analysis worksheet from fictional student work",
+        "Write a worksheet with foundation, application and reasoning sections",
+        "Audit and repair a worksheet whose questions are repetitive or unclear",
+    ),
+    "learning-stations": (
+        "Design four learning stations",
+        "Create hands-on, reading, discussion and writing stations",
+        "Plan station rotations for a large class and small room",
+        "Build self-checking stations that do not depend on the teacher",
+        "Create one quiet station and three collaborative stations",
+        "Differentiate station access while preserving one shared objective",
+        "Design a teacher-led reteaching station from exit-ticket evidence",
+        "Audit station directions, timing, materials and accountability",
+    ),
+    "collaborative-tasks": (
+        "Create an accountable group task",
+        "Design a jigsaw task where every learner holds essential information",
+        "Build a group investigation with rotating cognitive roles",
+        "Create a consensus task that requires evidence and disagreement",
+        "Turn an individual worksheet into meaningful collaborative reasoning",
+        "Audit a group task for participation, access and individual evidence",
+    ),
+    "review-games": (
+        "Build a review game that measures learning",
+        "Create a no-speed review game using mini-whiteboards",
+        "Design a team review game with individual accountability",
+        "Build a misconception challenge using diagnostic distractors",
+        "Create a low-prep review game with paper question cards",
+        "Audit a review game for fairness, accuracy and useful teacher data",
+    ),
+    "homework-sets": (
+        "Create a short homework set with a clear purpose",
+        "Build homework that mixes retrieval and current learning",
+        "Design homework with a meaningful no-internet option",
+        "Create a family-readable homework guide without requiring family teaching",
+        "Audit a homework set for workload, access and answer-key accuracy",
+    ),
+    "project-briefs": (
+        "Write a student-ready project brief from a supplied objective",
+        "Create project milestones, checkpoints and submission requirements",
+        "Design a choice-based project with equivalent learning demands",
+        "Build a group-project brief with individual evidence of mastery",
+        "Audit a project brief for clarity, feasibility and privacy",
+    ),
+}
+
+TITLE_CATALOGS = {
+    "01-lesson-planning": LESSON_PLANNING_TITLES,
+    "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
+}
+
 WORKFLOW_TITLES = {
     "standard-to-assessment": "Standard to aligned assessment",
     "emergency-substitute-pack": "Emergency substitute pack",
@@ -492,8 +552,8 @@ def generated_prompt(
     display = subtopic.replace("-and-", " & ").replace("-", " ")
     action, qualifier = VARIANTS[(ordinal - 1) % len(VARIANTS)]
     product, sections = CHAPTER_GUIDANCE[folder]
-    if folder == "01-lesson-planning":
-        title = LESSON_PLANNING_TITLES[subtopic][ordinal - 1]
+    if folder in TITLE_CATALOGS:
+        title = TITLE_CATALOGS[folder][subtopic][ordinal - 1]
     else:
         title = f"{action} {display} {qualifier}"
     return Prompt(
