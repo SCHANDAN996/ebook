@@ -639,6 +639,48 @@ CLASSROOM_MANAGEMENT_TITLES = {
     ),
 }
 
+TEACHER_ADMIN_TITLES = {
+    "staff-emails": (
+        "Write a concise staff email with one clear action",
+        "Turn rough notes into a professional colleague update",
+        "Draft a meeting request with purpose, preparation and time limit",
+        "Write a follow-up email that separates decisions from open questions",
+        "Audit a staff email for tone, recipients, dates and unnecessary detail",
+    ),
+    "agendas-and-minutes": (
+        "Turn notes into accountable meeting minutes",
+        "Build a timed agenda around decisions that must be made",
+        "Convert discussion notes into decisions, actions and a parking lot",
+        "Audit meeting minutes for invented consensus, owners or deadlines",
+    ),
+    "professional-goals": (
+        "Draft a measurable professional growth goal",
+        "Turn baseline evidence into a realistic semester action plan",
+        "Create leading and outcome indicators for a teaching goal",
+        "Build midpoint decision rules for revising a professional goal",
+    ),
+    "observation-reflections": (
+        "Write an evidence-based reflection after a classroom observation",
+        "Separate observed events, interpretation and next action",
+        "Turn observer feedback into one measurable instructional experiment",
+    ),
+    "field-trip-logistics": (
+        "Build a field-trip planning checklist from official requirements",
+        "Create a trip-day schedule with owners, counts and contingency fields",
+        "Audit a field-trip draft for permissions, access, safety and unknowns",
+    ),
+    "clubs-and-duty-plans": (
+        "Create a club launch plan with purpose, routines and supervision fields",
+        "Build a fair duty rota from supplied availability and policy",
+        "Audit a club or duty plan for gaps, overload and unclear responsibility",
+    ),
+    "grants-and-proposals": (
+        "Turn a verified classroom need into a concise proposal outline",
+        "Build a grant budget narrative from supplied costs and restrictions",
+        "Audit a proposal for unsupported claims, missing evidence and compliance",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
@@ -647,6 +689,7 @@ TITLE_CATALOGS = {
     "05-parent-communication": PARENT_COMMUNICATION_TITLES,
     "06-report-card-comments": REPORT_COMMENT_TITLES,
     "07-classroom-management-sel": CLASSROOM_MANAGEMENT_TITLES,
+    "08-teacher-admin-paperwork": TEACHER_ADMIN_TITLES,
 }
 
 WORKFLOW_TITLES = {
