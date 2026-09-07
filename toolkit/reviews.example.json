@@ -1,0 +1,10 @@
+{
+  "COPY_CURRENT_OUTPUT_KEY_HERE": {
+    "approved": false,
+    "reviewer": "",
+    "reviewed_at": "",
+    "notes": "Record actual review findings before approving.",
+    "fingerprint": "COPY_FROM_REVIEWED_RECORD",
+    "output_sha256": "COPY_FROM_REVIEWED_RECORD"
+  }
+}

@@ -1,515 +1,111 @@
-# 00.2 — MARKET RESEARCH: Kaun Sa Niche Jeetega + Poora Plan
+# Current strategy - validated pilot before expansion
 
-**Sawal:** Market mein kya chal raha hai? Kaun sa niche mein **user base sabse zyada**, **earning sabse zyada**, **CTR sabse zyada** aur **lagat sabse kam** hai? Content AI se ban jaayega.
+Updated 2026-09-07. This replaces the original market-ranking/ad-playbook document.
+The earlier version remains in Git history. Do not treat old numerical claims as
+validated forecasts.
 
-**Ye document sirf market data par bana hai** — kisi mojooda kaam par nahi. Saare numbers ke source neeche.
+## Decision
 
----
+Continue exploring teacher-facing AI workflows, but do not launch a 300-prompt
+product or paid funnel before a narrower paid pilot has been tested.
+Prompt count is a feature, not the buyer's outcome.
 
-## 🏆 SEEDHA JAWAB
+Proposed test offer: a coherent set of editable planning resources, worked examples
+and 3 connected workflows for one grade band/task. Choose the exact segment after
+teacher interviews; Grades 3-5 planning is a starting hypothesis, not a proven winner.
 
-# **AI for Teachers** — Teachers ke liye AI Prompt & Workflow System
+## Evidence versus hypotheses
 
-| Kasauti | Jawab | Proof |
-|---|---|---|
-| **User base** | 4 crore+ teachers duniya bhar; sirf US mein **40 lakh K-12 + 17 lakh college + 10 lakh admin** | Facebook par direct targetable |
-| **Earning** | **$27** front-end → **$41 AOV**, margin 95%+ | Ladder $67–$197 tak khulta hai |
-| **CTR** | **2.74%** — sab categories mein **doosra sabse zyada**, aur **sabse tez badhta (+29.38% YoY)** | E-learning category |
-| **Lagat** | Content 100% AI se, koi inventory nahi, **Meta ki restricted category nahi** | Zero policy risk |
-
-**Par asli wajah do aur hain — aur wahi faisla karti hain:**
-
-### 🔑 Wajah #1: Ye audience PEHLE SE PDF khareedti hai — proof ke saath
-
-**Teachers Pay Teachers (TpT)** ek marketplace hai jahan teachers doosre teachers se PDF khareedte hain:
-
-- **$879 million (₹7,300 crore) saalana revenue**
-- **40 lakh+ educators** us platform par
-- **3 mein se 2 American teacher** ne pichle saal koi resource download kiya
-- **1 billion+ downloads**
-
-> **Ye info-product duniya ki sabse durlabh cheez hai.** Aapko market ko ye sikhana hi nahi padega ki "PDF ke paise dene hote hain" — wo pehle se ₹7,300 crore saalana de rahe hain. Baaki har niche mein aapko pehle ye behaviour banana padta hai.
-
-### 🔑 Wajah #2: Facebook ki SABSE ACHHI demographic yahi hai
-
-Research: *"Zyadatar educators mahilayein hain aur aadhe se zyada 40 saal se upar hain."*
-
-**Mahilayein, 40+ — ye Facebook ki sabse zyada active aur sabse zyada convert karne wali demographic hai.** Baaki saare advertiser Instagram par 20-30 saal walon ke liye lad rahe hain. Ye audience Facebook par baithi hai, Facebook groups mein baithi hai, aur khareedti hai.
-
-### 🔑 Wajah #3: Dard abhi, is waqt, sabse zyada hai
-
-- **60% teachers pehle se AI use kar rahe hain**, aur **44% prep time bacha rahe hain**
-- **51% K-12 teachers** AI tools use kar chuke hain
-- AI in Education market: **$6.4B (2025) → $79.6B (2034)**, CAGR **31.35%**
-- Saath mein AI job-anxiety bhi hai
-
-**Matlab:** wo pehle se AI use kar rahe hain, **par bekaar tarike se** — random prompts, har baar zero se. Unhe system chahiye. Ye "demand banao" wala kaam nahi hai, "demand pehle se hai" wala kaam hai.
-
-### 🔑 Wajah #4: Yahan AI content SLOP nahi hai — wahi product hai
-
-Product hi **AI prompts** hai. AI se AI-prompts banana yahan **kamzori nahi, taakat hai.** Aur har prompt verify ho sakta hai — chala kar uska asli output book mein paste kar do. Ye "AI ne likha" wala shak khatam kar deta hai.
-
----
-
-## ⚠️ MERI EK PICHLI SOCH GALAT THI — Correction
-
-Pehle maine socha tha "zero competition = achha". **Market data iske ulat kehta hai:**
-
-> *"Jin ebook niches mein rising Google Trends interest hai aur **5-15 competitors** hain, wo hamesha **zero-competition** wale niches se behtar perform karte hain. Ek average ebook bhookhi (starving) audience mein, ek shandaar ebook se zyada bikega jo saturated niche mein ho."*
-
-**Zero competition ka matlab aksar "koi market hi nahi hai" hota hai.**
-
-AI-for-Teachers mein **bilkul sahi maatra** mein competition hai:
-
-| Competition | Kahan | Kya kar rahe hain |
-|---|---|---|
-| Kindle books | Amazon | "100 AI Prompts for School Teachers" — **$2.99–9.99** |
-| Prompt bundles | TpT | "350+ prompts Mega Bundle" |
-| Publisher books | Solution Tree | "Fifty AI Prompts for Teachers" |
-
-**Demand proven hai. Par ek bhi Meta ads funnel nahi chala raha.** Sab Amazon/TpT ke search par lad rahe hain — koi paid traffic + order bump + upsell wala funnel nahi hai. **Yahi gap hai.**
-
----
-
-## 📊 BAAKI NICHES — Kyun #1 Nahi Bane
-
-| Rank | Niche | Data | Reject/Demote karne ki wajah |
-|---|---|---|---|
-| **#2** | **AI for [high-income profession]** (realtor, HR, marketer, accountant) | AI skills ka zikr **+109%** badha; **77% upskillers non-technical**; price **$49–499** | Ticket bada, par audience Meta par thandi hai (wo LinkedIn par hain), CPM mehnga, aur B2B ka trust cycle lamba. **Ye aapka Product #2 hai, #1 nahi** |
-| **#3** | **Health / Fitness** | **Sabse zyada CTR — 3.02%**; video 78% winning ads | Meta ki sabse sakht policy. Before/after ab "implied transformation" tak ban. Q1 2026 mein supplements ke **64% accounts review** hue (+41% QoQ). Ek AI-likhi health book = liability |
-| **#4** | **Personal Finance** | Sabse zyada CPM evergreen niche ($15–22 CPM) | **38 deshon mein advertiser verification mandatory** ho gaya. Income claims regulated. Ek strike = account gaya |
-| **#5** | **Notion / Canva templates** | Etsy par top-selling, 70–90% margin | Ye **organic/Etsy/Pinterest ka khel hai**, paid ads ka nahi. $9–29 par CAC nikalna mushkil |
-| **#6** | **Parenting** | Bada audience, low competition, evergreen | Monetization kamzor — parents free content par rukte hain, bahut kam paid convert hote hain |
-| **#7** | **Make Money Online** | Sabse zyada demand | Policy suicide. Ek AI-likhi "paisa kamao" book = account ban + refund storm |
-
----
-
-## 💰 OFFER STACK
-
-Market rule: **front-end kabhi ad cost cover nahi karta.** AOV front-end ka **1.5–2.5x** hona chahiye. Order bump 30-45% log lete hain (+20-40% AOV), pehla upsell 10-20%.
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│  FRONT-END                                            $27    │
-│  "The Teacher AI Toolkit"                                    │
-│  300 copy-paste prompts + 12 ready workflows                 │
-│  Grade-band wise: K-2 / 3-5 / 6-8 / 9-12                     │
-├──────────────────────────────────────────────────────────────┤
-│  ORDER BUMP (checkout par tick-box)                   +$17   │
-│  "Parent Communication Pack"                                 │
-│  80 ready emails — mushkil baat-cheet, progress update,      │
-│  behaviour, meeting request                                  │
-│  Expected: 30-45% log lenge                                  │
-├──────────────────────────────────────────────────────────────┤
-│  UPSELL (payment ke turant baad, 1-click)             +$67   │
-│  "Complete Teacher AI System"                                │
-│  Video walkthrough + editable Google Docs + report card      │
-│  comment generator + differentiation pack + 1 saal update    │
-│  Expected: 10-20% log lenge                                  │
-└──────────────────────────────────────────────────────────────┘
-
-AOV = $27 + ($17 × 35%) + ($67 × 12%)
-    = $27 + $5.95 + $8.04
-    = $41 per buyer   (≈ ₹3,600)
-```
-
-**Price $27 kyun, $97 nahi?** Market data: *"Teachers apne hi paise kharch kar rahe hain aur zyada select kar rahe hain; **kam price wale, zyada value wale** resources achha perform kar rahe hain."* **Ye volume ka khel hai, price ka nahi.**
-
----
-
-## 🧮 UNIT ECONOMICS — Do Scenario
-
-**REALISTIC:**
-```
-CPM (US, education)     $15        (₹1,300)
-Link CTR                2.5%   →   CPC = $0.60
-Landing page → sale     4.0%   →   25 clicks per sale
-CPA                     $15        (₹1,300)
-AOV                     $41        (₹3,600)
-ROAS                    2.7x   ✅   → $20/din kharch = ~$54/din revenue
-```
-
-**PESSIMISTIC:**
-```
-CPM                     $22
-Link CTR                1.5%   →   CPC = $1.47
-Landing page → sale     2.0%   →   67 clicks per sale
-CPA                     $73.50
-AOV                     $41
-ROAS                    0.56x  ❌   → offer ya landing page badalna padega
-```
-
-**Test budget: $20/din × 7 din = $140 (≈ ₹12,500).** Iska maqsad profit nahi — sirf ye pata karna ki aap kaunse scenario mein ho.
-
-> **Imaandari:** Ye Plan B (India local) se **mehnga test** hai. Par per-sale earning 10x hai. India mein ₹299 milta, yahan $41 (₹3,600) milta hai.
-
----
-
-## 🆓 PEHLE MUFT MEIN VALIDATE KARO (paisa lagane se pehle)
-
-**Ye step skip mat karna — $140 bachane ka mauka hai.**
-
-Facebook par teachers ke **bahut bade active groups** hain (lakhon members). Wahan:
-
-1. Ek **free lead magnet** banao: "25 AI Prompts That Save Teachers 5 Hours a Week" (PDF)
-2. 5-6 bade teacher groups mein value post karo (promotion nahi — asli madad), PDF free do
-3. Email collect karo
-
-**Signal padho:**
-- 3 din mein **100+ email** mile → demand asli hai, ads chalu karo
-- 20 se kam → offer ya angle galat hai, **ads mat chalao**
-
-**Lagat: ₹0. Time: 3 din.** Aur ye emails baad mein aapki pehli buyer list ban jaayengi.
-
----
-
-## 🎯 CAMPAIGN STRUCTURE
-
-### Phase 1: Test (Din 1-7, $20/din)
-
-```
-CAMPAIGN
-├─ Objective:      Sales (Conversions)
-├─ Budget:         CBO — $20/day
-├─ Advantage+:     OFF   ← $1,000/din se kam budget par ye 31% underperform karta hai
-│
-├─ AD SET A — "Interest"          ($10/day)
-│  ├─ Location:    USA + Canada  (Phase 2 mein UK/AU)
-│  ├─ Age:         28 – 60
-│  ├─ Gender:      Women (85% educators mahilayein hain)
-│  ├─ Interests:   Teachers Pay Teachers, Teaching, Lesson plan,
-│  │               Classroom management, Education
-│  └─ 5 creatives
-│
-└─ AD SET B — "Broad"             ($10/day)
-   ├─ Same location/age/gender
-   ├─ Detailed targeting: KHAALI
-   └─ Same 5 creatives
-
-Placements: Advantage+ ON, par manually EXCLUDE:
-            ✗ Audience Network   ✗ Messenger
-Conversion event: Purchase
-   └─ 5 din mein 15 se kam purchase → "Initiate Checkout" par switch
-```
-
-> **Note:** Zyadatar niches mein 2026 mein broad targeting jeetti hai. Par yahan **"Teachers Pay Teachers" ek asli interest hai jo sirf asli teachers ke paas hota hai** — isliye dono test karo. Ye un gine-chune niches mein se hai jahan interest targeting abhi bhi kaam karti hai.
-
-### Phase 2: Retargeting (500+ pixel events ke baad, ~Din 15)
-
-| Audience | Message |
+| Claim | What we can responsibly conclude |
 |---|---|
-| Video 50%+ dekha, buy nahi kiya | Alag angle — social proof / testimonial |
-| Landing page visit, buy nahi | Ek prompt ka asli output dikhao (proof) |
-| Checkout shuru, buy nahi | **Sabse garam.** $10 off ya extra bonus |
-| Buyers | Ads mat chalao — email/upsell se karo |
-
-### Phase 3: Scale (sirf jab ROAS 2x+, 14 din tak stable)
-
-- Budget har 3 din **20%** badhao. Double mat karo — learning phase reset ho jaayega
-- UK + Australia add karo (same English content, koi extra kaam nahi)
-- **$3,000/din cross karne par Advantage+ test karo** — tab wo 18% kam CAC, 23% zyada ROAS deta hai
-- Tab **Product #2** launch karo: "AI for Realtors" ya "AI for HR" ($67-197) — same funnel, alag audience
-
----
-
-## 📅 SEASONALITY — Timing ka bada faayda
-
-| Time | Demand | Kya karein |
-|---|---|---|
-| **Jul – Sep** | 🔥 PEAK (back to school) | Sabse zyada budget yahan |
-| **Jan** | 🔥 Second peak (new semester) | Dobara push |
-| Oct – Dec | Medium | Maintain |
-| **Jun** | ❄️ Dead (chhuttiyan) | Budget kam, content banao |
-
-**Abhi September hai — aap peak window ke andar ho.** Ye timing ka faayda 4 hafte mein khatam ho jaayega. Jaldi launch karne ka asli karan yahi hai.
-
----
-
-## 📝 CONTENT KAISE BANEGA (AI se — par slop nahi)
-
-### Wo ek cheez jo aapko baaki sabse alag karegi
-
-Amazon par $2.99–9.99 wali sab books mein sirf **prompt ki list** hai. Aapke product mein:
-
-> **Har prompt ke saath uska ASLI OUTPUT hoga** — screenshot ya paste kiya hua.
-
-Kyun ye sab kuch badal deta hai:
-1. Buyer ko **turant dikhta hai** ki milega kya → refund girta hai
-2. "AI ne likha hai" wala shak khatam — kyunki aap output dikha rahe ho
-3. **Ad creative iske andar se hi ban jaata hai** (Part: Creatives dekho)
-4. Aapko sirf prompts chalane hain — mehnat kam, value 5x
-
-### Structure (300 prompts)
-
-| Section | Prompts | AI bana sakta? | Verify karna hai? |
-|---|---|---|---|
-| Lesson planning (grade-band wise) | 60 | ✅ | ✅ Chala kar output check |
-| Worksheets & activities | 40 | ✅ | ✅ |
-| Assessment, rubrics, quizzes | 40 | ✅ | ✅ |
-| Differentiation (mixed ability) | 35 | ✅ | ⚠️ Disclaimer: "professional judgement ki jagah nahi" |
-| Parent communication | 30 | ✅ | ✅ |
-| Report card comments | 30 | ✅ | ✅ |
-| Classroom management & SEL | 25 | ✅ | ⚠️ Disclaimer |
-| Teacher admin (emails, forms, plans) | 25 | ✅ | ✅ |
-| Subject-specific (Math/ELA/Science) | 15 | ✅ | ✅ |
-| **12 Workflows** (multi-step, copy-paste chain) | — | ✅ | ✅ **Ye asli differentiator hai** |
-
-**Grade-band aur subject wise banana zaroori hai.** Market data: *"Specific, narrow topics broad titles se 3-5x zyada bikte hain."* "AI for Teachers" theek hai, par andar sab kuch specific hona chahiye.
-
-### Production pipeline (aap developer ho — iska faayda uthao)
-
-```
-Din 1  →  AI se 300 prompts + 12 workflows generate karwao
-Din 2  →  Script likho jo har prompt ko API se chala kar output save kare
-          (yahi wo cheez hai jo competition manually nahi kar sakti)
-Din 3  →  Markdown → HTML → PDF pipeline (Puppeteer / wkhtmltopdf)
-          + Google Docs editable version
-Din 4  →  Design pass: cover, section pages, mobile-readable layout
-```
-
-> **Ye pipeline likhi ja chuki hai — repo ke `toolkit/` folder mein.**
-> `python run.py estimate` se kharcha dekho, `catalog` se prompts banao,
-> `outputs` se sabke asli output nikalo, `build` se PDF. Poora detail
-> `../toolkit/README.md` mein.
-
-**Ye aapka sabse bada unfair advantage hai:** baaki sab Canva mein haath se bana rahe hain. Aap ek script se 300 prompt ka output nikal sakte ho. **1 din ka kaam, jo unke 3 hafte lagega.**
-
-### QC Checklist — bina ye pass kiye publish mat karo
-
-- [ ] Har prompt kam se kam **1 baar chalaya** aur output theek aaya
-- [ ] Output **asli** hai, banaya hua nahi
-- [ ] Grade-band ke prompts us grade ke liye sach mein sahi hain
-- [ ] Differentiation/SEL section par **professional disclaimer** hai
-- [ ] Kisi bachche ka data / privacy ka mashwara galat nahi hai (FERPA-safe language)
-- [ ] PDF phone par padhne layak hai
-- [ ] File < 25 MB
-- [ ] Prompts **ChatGPT, Claude aur Gemini teeno** par test kiye (teachers alag-alag tool use karte hain)
-- [ ] Har page par support email
-
----
-
-## 🎬 AD CREATIVES
-
-### Market kya kehta hai
-
-- Cold traffic: **9-15 second video, problem-first hook**
-- **Hook rate 25% se kam → baaki ad bekaar hai.** Pehle 3 second theek karo
-- **UGC > polished** — chamakdaar ad skip ho jaate hain
-- Saaf static images bhi ab achha perform kar rahe hain — "simplicity wins"
-
-### ⚠️ Ek imaandar problem — aur uska hal
-
-Sabse achha performing format **"main ek teacher hoon"** wala UGC hota hai. **Aap teacher nahi ho — aur jhooth bolna nahi hai** (Meta par misrepresentation policy violation bhi hai, aur teachers ise 10 second mein pakad lengi).
-
-**Do saaf raste:**
-
-1. **Product-demo ads** (jhooth ki zaroorat hi nahi) — screen recording sabse strong proof hai
-2. **Asli teacher UGC creator hire karo** — $50-150 mein ek video. **Ye aapka sabse zyada ROI wala kharch hai.** 2-3 creators se shuru karo
-
-### 5 Ready Ad Concepts
-
----
-
-**AD 1 — SCREEN DEMO** *(sabse pehle yahi banao)*
-*12 second screen recording + voiceover*
-
-> **Hook (0-3s):** *[Blank screen]* "A full week of lesson plans. Watch."
-> **Body (3-10s):** *[Prompt paste karte hue, output aata hua]* "Paste the prompt. Grade level, subject, standard. Objectives, activities, worksheet, exit ticket — done."
-> **CTA (10-12s):** "300 prompts like this. $27. Link below."
-
-*Kyun: sabse sasta creative, sabse strong proof. Aur ye content aapke product ke andar se hi nikal aata hai.*
-
----
-
-**AD 2 — TIME HOOK** *(sabse bada universal dard)*
-*15 second*
-
-> **Hook (0-3s):** "Sunday night lesson planning — 20 minutes instead of 4 hours."
-> **Body (3-12s):** "Most teachers already use AI. The problem is starting from a blank box every single time. These are 300 prompts that already work — organized by grade and subject."
-> **CTA:** "The Teacher AI Toolkit. $27."
-
----
-
-**AD 3 — REAL TEACHER UGC** *(hire karo — jhooth mat bolo)*
-*20 second, teacher apne phone par*
-
-> "I used to spend my whole Sunday planning. Now I use these prompts. This one writes my report card comments — 28 students, twelve minutes. This one handles parent emails I don't want to write. It's $27, I got it back the first weekend."
-
----
-
-**AD 4 — STATIC "OFFER STACK"**
-*1080×1350, saaf text*
-
-```
-┌──────────────────────────────────┐
-│   THE TEACHER AI TOOLKIT         │
-│                                  │
-│  ✓ 300 copy-paste prompts        │
-│  ✓ 12 done-for-you workflows     │
-│  ✓ Sorted by grade K-2/3-5/6-8/  │
-│    9-12 + subject                │
-│  ✓ Report card comments          │
-│  ✓ Parent emails                 │
-│  ✓ Works in ChatGPT, Claude,     │
-│    Gemini                        │
-│  ✓ Every prompt shown WITH its   │
-│    real output                   │
-│                                  │
-│           $27                    │
-└──────────────────────────────────┘
-```
-
----
-
-**AD 5 — CAROUSEL** *(baad mein test karo)*
-Card 1: "Lesson plans" → 2: "Worksheets" → 3: "Report card comments" → 4: "Parent emails" → 5: "300 prompts. $27."
-
----
-
-### ⚠️ META POLICY — Ye galti 90% log karte hain
-
-Meta ki **Personal Attributes** policy: aap aisa ad nahi chala sakte jo viewer ke baare mein kuch **assert ya imply** kare.
-
-| ❌ Risky | ✅ Safe |
-|---|---|
-| "Are you a teacher struggling with planning?" | "Lesson planning, done in 20 minutes." |
-| "You're wasting your weekends" | "Sunday night planning — 20 minutes instead of 4 hours." |
-| "Tired of grading?" | "300 prompts for grading, planning and parent emails." |
-| "Make $X teaching" | *(koi bhi income claim — bilkul nahi)* |
-
-> **Rule:** Viewer ke baare mein baat mat karo, **kaam ke baare mein** baat karo. Statement likho, sawal nahi.
-
-### Creative production — AI ka sahi istemaal
-
-| Cheez | Kaise | Note |
-|---|---|---|
-| Scripts | AI se 20 hook, 5 chuno | Sabse aasan jagah |
-| Screen recordings | Khud record karo | Product hi content hai |
-| Voiceover | AI TTS (English) chalega | English mein AI voice ab pakdi nahi jaati |
-| Teacher UGC | **Hire karo** ($50-150/video) | Sabse zyada ROI wala kharch |
-| Static | AI layout + Canva finish | Text hamesha khud daalo |
-
-**Hafte mein 2-3 naye creative add karte raho.** Creative fatigue 10-14 din mein aa jaati hai. Funnel budget se nahi marta, creative khatam hone se marta hai.
-
----
-
-## 🛠️ TECH SETUP (ads se pehle)
-
-| Cheez | Recommendation | Kyun |
-|---|---|---|
-| Checkout | **Lemon Squeezy** ya **Paddle** | Merchant of Record — US sales tax/VAT khud handle karte hain. Ek Indian seller ke liye ye Stripe se bahut kam sirdard hai |
-| Alternative | Gumroad | Aasan par fees zyada aur order bump kamzor |
-| Landing page | Khud banao (aap developer ho) ya Systeme.io | 2 second mein load hona chahiye |
-| Delivery | Instant email + download link | Teachers email kholti hain (Bharat audience ke ulat) |
-| Tracking | **Meta Pixel + Conversions API dono** | Sirf browser pixel par 30-40% event loss |
-| Email | ConvertKit / MailerLite free tier | Lead magnet list yahin jaayegi |
-
----
-
-## 📈 METRICS & KILL RULES
-
-Roz sirf ye 5 dekho:
-
-| Metric | Target | Neeche ho to |
-|---|---|---|
-| **Hook rate** (3s views / impressions) | > 25% | Pehle 3 second badlo |
-| **Link CTR** | > 1.5% | Hook theek, offer/copy kharab |
-| **LP → Initiate Checkout** | > 8% | Landing page problem |
-| **IC → Purchase** | > 40% | Checkout problem |
-| **CPA** | < $20 | Neeche kill rules |
-
-**Kill Rules (bina emotion):**
-- Creative par **$30 kharch, 0 Add-to-Cart** → band
-- Creative par **CPA 3x target, 0 purchase** → band
-- Ad set par **$140 (7 din), ROAS < 0.5x** → **offer/landing page badlo, creative nahi**
-- **Kisi ad set ko 3 din se pehle mat chhedo** — learning phase reset hota hai. Sabse common galti yahi hai
-
----
-
-## 📋 14 DIN KA PLAN
-
-| Din | Kaam |
-|---|---|
-| **1-3** | **Muft validation** — lead magnet banao, teacher FB groups mein daalo, email count dekho. 100+ mile to aage badho |
-| **4** | 300 prompts + 12 workflows AI se generate karo |
-| **5** | Script chalao jo har prompt ka **asli output** nikale aur save kare |
-| **6** | PDF pipeline + Google Docs version + design pass |
-| **7** | Landing page + Lemon Squeezy + order bump + upsell. Test purchase karo |
-| **8** | Meta Pixel + Conversions API. Test Events mein **Purchase fire hote dekho** |
-| **9** | 5 creatives (2 screen demo, 1 time-hook, 2 static). UGC creator ko hire karo |
-| **10** | Business Manager, page setup, page par 4-5 asli post. **Launch — $20/din** |
-| **11-12** | Kuch mat chhedo. Learning phase |
-| **13** | Pehla review. Kill rules. 2 naye creative |
-| **14** | Winner duplicate karo, loser band. UGC video aa gaya to add karo |
-| **15+** | 500 events → Retargeting ON. Phir UK/AU add karo |
-
----
-
-## ⚖️ IMAANDAR RISK LIST
-
-1. **Teachers ka budget kam hai.** Isliye $27, $97 nahi. Ye volume ka khel hai — 100 sale/mahina se $4,100. Kam price hi feature hai, bug nahi
-2. **Aap teacher nahi ho.** Ye asli limitation hai. Demo ads se shuru karo, phir asli teacher UGC hire karo. **Teacher hone ka natak mat karo** — pakad liye jaoge aur Meta par policy violation bhi hai
-3. **Test $140 ka hai, ₹3,500 ka nahi.** Ye Plan B se mehnga hai. Par per-sale $41 vs ₹299 — 10x farak
-4. **AI content ka risk asli hai.** Bina chalaye prompt daal diya aur wo kaam nahi kiya → refund + bura review. **QC checklist skip mat karna**
-5. **Seasonality asli hai.** Abhi peak window (Jul-Sep) hai, June dead hai. Late launch = agla peak January
-6. **Pehla funnel fail ho sakta hai.** $140 seekhne ki fees hai. Zyadatar log pehla fail hone par chhod dete hain — asli fail wahi hai
-7. **Meta account restrict ho sakta hai.** Din 1 se business verification karao, page par asli content rakho, **ek backup page bana kar rakho**
-
----
-
-## 🎯 EK LINE MEIN
-
-> **Duniya ki ek hi audience hai jisne ₹7,300 crore saalana kharch karke sabit kiya hai ki wo ajnabiyon se PDF khareedti hai — teachers. Aur unka sabse bada dard abhi AI hai. Us audience ke saamne, us dard ka, AI se bana hua solution rakho — $27 mein.**
-
----
-
-## SOURCES
-
-**Market size & buying behaviour**
-- [Teachers Pay Teachers — company profile & revenue](https://growjo.com/company/Teachers_Pay_Teachers)
-- [Teachers Pay Teachers — Wikipedia](https://en.wikipedia.org/wiki/Teachers_Pay_Teachers)
-- [Education trends on TpT 2026 — Lindsay Bowden](https://lindsaybowden.com/podcast/education-trends-on-teachers-pay-teachers/)
-- [AI in Education Market Size & Forecast — IMARC](https://www.imarcgroup.com/ai-in-education-market)
-- [AI in Education Market to USD 136.79 Bn — Precedence Research](https://www.precedenceresearch.com/ai-in-education-market)
-- [Digital product market size — 152K products analyzed](https://insightraider.com/en/blog/digital-product-market-size)
-- [100+ digital product statistics 2026 — Whop](https://whop.com/blog/digital-product-statistics/)
-
-**Ad benchmarks**
-- [Facebook Ads Benchmarks by Industry 2026 — Lebesgue](https://lebesgue.io/facebook-ads/facebook-benchmarks-by-industry-ctr-cpm-cr-and-cac)
-- [Facebook Ads Benchmarks 2026 — Digital Applied](https://www.digitalapplied.com/blog/facebook-ads-benchmarks-2026-cpc-cpm-ctr-industry)
-- [Meta Ads ROAS Benchmarks by Industry 2026 — Adamigo](https://www.adamigo.ai/blog/meta-ads-roas-benchmarks-by-industry-2026)
-- [ROAS Benchmarks by Industry 2026 — Superscale](https://superscale.ai/learn/roas-benchmarks-by-industry/)
-
-**Niche selection & competition**
-- [Best Ebook Niches 2026, ranked by demand & competition — Inkfluence AI](https://www.inkfluenceai.com/best-ebook-niches)
-- [Best low-competition ebook niches 2026 — Inkfluence AI](https://www.inkfluenceai.com/blog/best-ebook-niches-low-competition-high-demand-2026)
-- [31 trending digital products actually selling in 2026 — Inkfluence AI](https://www.inkfluenceai.com/blog/best-digital-product-niches-2026)
-- [AI bookspam wave 2026 — Tekedia](https://www.tekedia.com/ai-bookspam-wave-increasing-grut-of-slops-in-2026/)
-- [Top evergreen niches by CPM 2026 — OutlierKit](https://outlierkit.com/resources/youtube-niches-guide/)
-
-**AI skills demand**
-- [AI upskilling 2026: 80% must retrain — Digital Applied](https://www.digitalapplied.com/blog/ai-upskilling-workforce-guide-stay-relevant-2026)
-- [Most in-demand AI skills 2026 — CertiProf](https://certiprof.com/blogs/news/the-most-in-demand-ai-skills-in-2026-closing-the-employability-gap)
-- [Future of work: hiring trends 2026 — SkillsetCourse](https://skillsetcourse.com/market/future-work-hiring-growth-2026)
-
-**Targeting & creative**
-- [How to effectively target teachers on Facebook — The Influence Crowd](https://theinfluencecrowd.co.uk/how-to-effectively-target-teachers-on-facebook/)
-- [Facebook ad targeting for teacherpreneurs — JD Teacherpreneur Marketing](https://www.jenzaiadimartile.com/podcast/episode15)
-- [9 tips for marketing to teachers — SheerID](https://www.sheerid.com/wp-content/uploads/2017/11/9-tips-for-marketing-to-teachers.pdf)
-- [What winning Meta ads have in common 2026 (500+ creatives) — Brandsearch](https://brandsearch.co/blog/winning-meta-ad-patterns-2026)
-- [Meta ad formats 2026: which converts best — Dataslayer](https://www.dataslayer.ai/blog/meta-ad-formats-in-2025-guide)
-- [7 Meta ads creative strategies that work in 2026 — Flighted](https://www.flighted.co/blog/7-meta-ads-creative-strategies-that-work)
-
-**Funnel & policy**
-- [SLO funnel / self-liquidating offer — LT Ads](https://ltoads.com/blog/how-to-set-up-self-liquidating-offer-funnel)
-- [8 upsell strategies that increased AOV by 68% — SamCart](https://www.samcart.com/blog/upsell-strategies)
-- [Meta Advantage+ vs manual ABO — Visible Factors](https://visiblefactors.com/meta-advantage-vs-manual-abo-a-playbook-to-scale-past-100k/)
-- [Meta ads sensitive categories restrictions 2026 — wetracked.io](https://www.wetracked.io/post/meta-ads-new-sensitive-categories-restrictions)
-- [Meta health & wellness ad standards — Transparency Center](https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/)
-- [Meta ads policy 2026: rules & violations — Stackmatix](https://www.stackmatix.com/blog/meta-ads-policy)
-
-**Competitive landscape**
-- [AI Tools for Teachers 2026–2027 — Amazon Kindle](https://www.amazon.com/Tools-Teachers-2026-2027-Assessment-Engagement-ebook/dp/B0H1GYXV2M)
-- [100 AI Prompts for School Teachers — Amazon Kindle](https://www.amazon.com/100-PROMPTS-SCHOOL-TEACHERS-Professional-ebook/dp/B0DQ4WJ3MW)
-- [Fifty AI Prompts for Teachers — Solution Tree](https://www.solutiontree.com/fifty-ai-prompts-for-teachers.html)
-- [AI prompts on TpT](https://www.teacherspayteachers.com/browse?search=ai+prompts)
+| Teachers buy resources | TPT's official 2023 announcement describes both free and paid materials; this does not establish demand for our product |
+| No competitors run Meta funnels | Unverified; remove this claim unless a documented current competitor/ad-library review supports it |
+| Only cheap prompt-list books compete | Incomplete: free teacher AI tools are substitutes too |
+| 2.74% CTR / $15 CPA | Historical planning inputs, not forecasts or observed project performance |
+| 100 emails in three days proves demand | False as a validation rule: count qualified visits, actual usage, repeat use and paid purchases |
+| $41 AOV | Hypothetical bump/upsell attach rates, not observed revenue |
+| Every example is a real API output | Only future provenance-backed executions qualify; current free examples are editorial illustrations |
+| 5 hours saved per week | Not measured; do not use in marketing |
+| Zero policy risk | No such guarantee; content, claims, privacy and platform policies still apply |
+| AI-generated prompts cannot be slop | Wrong: outputs require evidence and qualified review regardless of topic |
+
+MagicSchool's official free tier includes 80+ teacher tools. The offer needs a
+specific reason to pay: coherent resources, accurate examples, editable formats,
+reliable instructions and teacher-reviewed usefulness. Automation is a production
+advantage, not a durable barrier to copying.
+
+## First product, not the full ladder
+
+- Free sample: select useful prompts; clearly label illustrations.
+- Technical pilot: 5 prompts + 1 workflow to verify API/execution, after approval.
+- Paid beta: 30 carefully reviewed prompts + 3 workflows and editable artifacts.
+- Full library: 300 + 12 only if users want breadth and pay for it.
+- Postpone the $17 bump, $67 upsell, subscriptions and other professions.
+- Do not claim teacher authorship, endorsements or results that did not happen.
+
+One-time $27 is an initial price hypothesis. Test an honest, complete small offer
+at a stated price; do not advertise a nonexistent bundle or invented discount.
+
+## Economics
+
+Base Lemon Squeezy fee: 5% + $0.50 per transaction; additional fees can apply.
+At a $27 product price, ignoring tax/additional fees, base fee is $1.85 and the
+remainder is $25.15 **before** ads, refunds, support and other costs.
+
+Contribution per buyer =
+net product revenue - platform/payment fees - refund/chargeback cost
+- attributable acquisition cost - variable support/delivery cost.
+
+Exclude taxes collected for remittance from product revenue. Reconcile multi-order
+upsells separately if introduced later. Merchant-of-record services do not make
+all of an Indian seller's own accounting/tax obligations disappear.
+
+Do not underwrite acquisition using $41 AOV until actual attach rates exist.
+A $140 ad test is an optional maximum-risk envelope, not approved spending and not
+a statistically reliable benchmark by itself. Stop when the agreed limit is reached.
+
+API estimates depend on configured prices and actual token usage. Current Opus 5
+pricing in the repository matches the official $5/$25 per million tokens reference;
+this is not a promise that generation will succeed or finish at a specific rupee cost.
+Review current provider prices before each approved live run.
+
+## Validation and distribution
+
+1. Interview approximately 10 target teachers about their last real planning task.
+2. Invite a small volunteer pilot, following community rules and permissions.
+3. Track qualified visits, opt-ins, activation, repeat use, corrections and purchase.
+4. Record task time including editing/review, not just AI response time.
+5. Ask why they would choose this over their existing/free tools.
+6. Seek 5-10 genuine paid beta buyers. This is an early signal, not proof of scale.
+7. Use consent-based email collection and an unsubscribe mechanism.
+8. Use fictional demonstration data only; do not collect student records in feedback.
+
+Do not conclude the offer failed from low email counts when reach was also low.
+Conversely, many free downloads do not imply paid demand.
+
+## Ads, only after product and delivery work
+
+Begin with a single clear offer and 2-3 honest demonstrations. Avoid splitting a
+small budget into many underfunded experiments. Use actual verified purchase events,
+not optimistic attribution. Investigate traffic quality, product, page, checkout
+and tracking separately when sales are weak.
+
+Do not copy fixed gender/age, interest, Advantage+, optimization-switch or scaling
+rules from the historical strategy. Confirm current platform capabilities before
+configuration. No universal CTR threshold or calendar date substitutes for evidence.
+
+Pause before spending if delivery is broken, claims are unsupported, privacy issues
+are found or the agreed loss limit has been reached. Do not bypass restrictions
+with replacement accounts/pages.
+
+## Sources checked for the September 7 audit
+
+- [TPT official acquisition announcement, March 2023](https://blog.teacherspayteachers.com/ixl-learning-acquires-tpt/)
+- [MagicSchool pricing and free-tier tools](https://www.magicschool.ai/pricing)
+- [Lemon Squeezy fees](https://docs.lemonsqueezy.com/help/getting-started/fees)
+- [Anthropic Opus 5 release and pricing](https://www.anthropic.com/news/claude-opus-5)
+- [Claude stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons)
+- [US Department of Education: student identifiers](https://studentprivacy.ed.gov/content/personally-identifiable-information-education-records)
+
+Prices, policies and tool availability can change. The sources do not establish
+our product's CTR, conversion, teacher approval, measured savings or profitability.

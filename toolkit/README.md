@@ -1,112 +1,116 @@
-# Teacher AI Toolkit — build pipeline
+# Pipeline operation
 
-Ye wo script hai jo `00.2 MARKET RESEARCH` wale plan ka product banati hai:
-**300 copy-paste prompts + 12 workflows, aur har prompt ke saath uska ASLI output.**
+Python 3.10+. All generation uses fictional demonstration data.
+The API adapter still needs a real, owner-approved smoke test; offline tests do
+not establish provider access or classroom quality.
 
-Wahi ek cheez product ko Amazon ki $4.99 wali prompt-list books se alag karti hai —
-aur wahi cheez unke liye haath se karna namumkin hai.
+## Dependency separation
 
----
+- Status, estimate, QC, HTML builds and core tests: Python standard library.
+- PDF: `python -m pip install -r toolkit/requirements-pdf.txt`
+- Paid generation: `python -m pip install -r toolkit/requirements.txt`
 
-## Setup
+No browser engine or Anthropic SDK is needed for offline builds.
+Set `ANTHROPIC_API_KEY` through your shell or secret manager when you deliberately
+choose paid generation. Never commit it.
+
+## Profiles and cache locations
+
+| Profile | Prompts | Workflows | Cache |
+|---|---:|---:|---|
+| pilot (default) | 5 | 1 | toolkit/build/pilot/ |
+| beta | 30 | 3 | toolkit/build/beta/ |
+| full | 300 | 12 | toolkit/build/full/ |
+
+Each workflow has 3-6 sequential steps. The pilot has at most 11 output requests,
+not 300. Requests across independent workflows can share a batch, but later
+steps wait for actual predecessor results. Multiple rounds may take much longer
+than a single batch. A one-hour local timeout preserves state; it does not cancel
+the provider's batch or prevent billing.
+
+Old files in `toolkit/build/` are untouched. They are not silently imported into
+a new profile, and legacy plain-text outputs do not qualify as verified results.
+
+## Commands
 
 ```bash
-cd toolkit
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-export ANTHROPIC_API_KEY=sk-ant-...      # ya:  ant auth login
+python toolkit/run.py estimate --profile pilot
+python toolkit/run.py status --profile pilot
+python toolkit/run.py qc --profile pilot
+python toolkit/run.py build --profile pilot --html-only
+python toolkit/run.py build --profile pilot --draft --html-only
 ```
 
-## Chalao
+Normal build fails on missing/stale/incomplete content. Only explicit `--draft`
+allows a visibly marked preview despite QC failures.
+No command produces an unmarked sales edition by default.
+
+### Commands that spend money
 
 ```bash
-python run.py estimate     # kitna paisa lagega — pehle ye dekho
-python run.py catalog      # step 1: prompts likhwao        (~10-20 min)
-python run.py outputs      # step 2: sab chala kar output    (~1 ghanta)
-python run.py build        # step 3: HTML + PDF + QC         (seconds)
-
-python run.py status       # kabhi bhi — bina kharche ke progress
-python run.py all -y       # teeno ek saath, bina puchhe
+python toolkit/run.py catalog --profile pilot --yes --budget-usd 4
+python toolkit/run.py outputs --profile pilot --yes --budget-usd 4
+# Or both stages plus build:
+python toolkit/run.py all --profile pilot --yes --budget-usd 4
 ```
 
-Sab kuch `build/` mein aata hai:
+Run the estimate again before selecting beta/full. Both explicit approval and
+a sufficient planning allowance are required. The allowance is deliberately
+conservative but not a hard billing cap: it assumes at most 24K input tokens per
+request and configured model prices; unusual/edited inputs can exceed that.
+Each invocation acknowledges a fresh allowance. Configure provider-level spend
+limits and reconcile usage with the provider invoice.
 
-| File | Kya hai |
-|---|---|
-| `catalog.json` | 300 prompts + 12 workflows |
-| `outputs.json` | Har prompt ka asli output |
-| `teacher-ai-toolkit.html` | Book (browser mein khol kar dekho) |
-| `teacher-ai-toolkit.pdf` | Book (bechne wali file) |
+No automatic catalog retry, failed-item resubmission or SDK retry is enabled.
+Rerunning failed work can cost money.
 
----
+## Saved state
 
-## Design ki 3 baatein
+- `catalog.json`: generated catalog and generation-settings fingerprint.
+- `outputs.json`: exact executed input, complete output, model, timestamp,
+  prompt/settings fingerprint, output hash, batch ID and token usage.
+- `batch_state.json`: submitted batch ID plus immutable request manifest.
+- `failures.json`: per-item error/refusal/truncation reason.
+- `usage.json`: deduplicated response usage and estimated charges, including
+  nonempty truncated/refused messages. This is not a complete invoice.
+- `reviews.json`: genuine human approvals, created by the reviewer workflow.
+- `qc.json`: latest validation report.
+- `manifest.json`: successful build profile, checksums and release status.
 
-**1. Har step resume hota hai.** Beech mein Ctrl+C dabao ya net chala jaaye — kuch
-nahi khota. Har chunk ke baad disk par likha jaata hai, aur dobara chalane par sirf
-bacha hua kaam hota hai. 300 prompts ke job mein ye zaroori hai, luxury nahi.
+JSON writes are atomic. A corrupt cache raises an error rather than becoming an
+empty cache. This is a **single-process pipeline**: never run two writers against
+the same profile at once.
 
-**2. Step 2 Batch API par chalta hai.** 300 sample outputs latency-sensitive nahi
-hain, aur batch par **50% chhoot** milti hai. Batch ka id disk par save hota hai —
-agar batch chalte waqt aap script band kar do, agli baar wo dobara paisa kharch
-nahi karega, sirf usi batch ka nateeja uthayega.
+### Recovery rules
 
-**3. Prompts chunk mein bante hain.** 60 prompts ek hi request mein maangne par
-output `max_tokens` se bahar nikal kar **kat jaata hai** — aur pata bhi nahi chalta.
-Isliye 15-15 ke chunk, aur har chunk ko pichhle prompts ki list di jaati hai taaki
-duplicate na bane.
+1. If a saved batch has an ID, rerun the same profile/settings to retrieve it.
+2. If settings/catalog changed while a batch is pending, restore the original
+   inputs before resuming. Do not combine old results with new inputs.
+3. If state says `submitting` but has no ID, the request outcome is uncertain.
+   Inspect your authorized provider batch list, identify the exact request batch,
+   and restore its ID. Do not delete the state and blindly submit again.
+4. Failed steps block descendants. Read `failures.json`, fix the cause, review
+   the budget and then explicitly rerun.
+5. Catalog-setting changes require preserving the previous run separately before
+   regenerating. Destructive `--force` regeneration is intentionally disabled.
 
----
+## Release gate
 
-## QC
+Configure a real `support_email` in `config.py`'s product definition.
+Copy the structure in `reviews.example.json` and have the reviewer record
+each **current** output's fingerprint and hash, reviewer ID, review date and notes.
+Never mark a generated/test approval as a real teacher review.
 
-`python run.py build` har baar ye check karta hai:
+```bash
+python toolkit/run.py qc --profile beta --release
+python toolkit/run.py build --profile beta --release
+```
 
-- kitne prompts ke output missing hain
-- kaun se output shak ke layak chhote hain (< 400 chars)
-- kis prompt mein `[PLACEHOLDER]` bhara nahi gaya
-- duplicate slug
-- grade band ka balance (sab K-2 par to nahi hai?)
-- PDF 25 MB se bada to nahi
+Release rejects missing approvals, placeholder contact, invalid counts, stale
+outputs, missing dependencies and PDF failures. `--release` cannot be combined
+with `--draft` or `--html-only`.
 
-**Ye poora QC nahi hai.** Strategy doc ke checklist mein jo cheezein haath se karni
-hain — prompts ko ChatGPT/Gemini par bhi test karna, differentiation section ko
-padhna — wo script nahi kar sakti. Wo bhi karo.
-
----
-
-## Naya product banana (Realtor / HR kit)
-
-Poori script niche-agnostic hai. `config.py` mein sirf teen cheezein badlo:
-
-1. `PRODUCT` — title, subtitle, audience
-2. `SECTIONS` — sections aur counts
-3. `WORKFLOW_BRIEF`
-
-Aur `steps/catalog.py` ka `SYSTEM` prompt naye audience ke hisaab se. Bas.
-**Ye "factory" hai — pehla product 4 din, doosra 1 din.**
-
----
-
-## Kharche ka control
-
-`config.py` mein:
-
-| Setting | Asar |
-|---|---|
-| `OUTPUT_EFFORT` | `"medium"` default. `"low"` sasta, `"high"` behtar |
-| `OUTPUT_MAX_TOKENS` | Sample output ki upper limit |
-| `SECTIONS[*]["count"]` | Kam prompts = kam kharcha |
-| `MAX_OUTPUT_CHARS` | Book mein output kitna chhape (PDF size) |
-
-`python run.py estimate` har badlav ke baad dobara chala kar dekh lo.
-
----
-
-## Zaroori: ye script product **banati** hai, **verify** nahi karti
-
-Book bikne se pehle wo cheez karo jo koi script nahi kar sakti — kuch prompts khud
-chala kar dekho, aur `build/teacher-ai-toolkit.html` ko poora ek baar padho. Agar
-prompt kaam nahi karta to refund aur bura review aata hai, aur wahi is niche mein
-sabse bada risk hai.
+A passing machine check verifies records and structure, **not** reviewer identity,
+factual correctness, legal compliance or usefulness. The human checklist remains
+mandatory. No sales, delivery, marketing or classroom rollout is performed by
+this pipeline.

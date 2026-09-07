@@ -12,7 +12,7 @@ _SAFE = re.compile(r"[^A-Za-z0-9_-]")
 def custom_id(raw: str) -> str:
     """Batch API custom_id: safe charset, unique, <= 64 chars."""
     cid = _SAFE.sub("-", raw)
-    if len(cid) > 64:
+    if cid != raw or len(cid) > 64:
         cid = cid[:55] + "-" + hashlib.sha1(raw.encode()).hexdigest()[:8]
     return cid
 

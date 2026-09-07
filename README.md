@@ -1,91 +1,79 @@
-# ebook — Teacher AI Toolkit
+# Teacher AI Toolkit - development project
 
-Ek digital product ko market research se leke bikne-layak PDF tak le jaane ka
-poora kaam: **rannneeti, gaNit, aur wo script jo product khud banati hai.**
+A pipeline for building and checking teacher-facing prompt/workflow resources.
+**Not a launch-ready paid product.** Demand, teaching quality, time savings and
+cross-tool compatibility have not yet been validated.
 
-**Product:** *The Teacher AI Toolkit* — K-12 teachers ke liye 300 copy-paste AI
-prompts + 12 multi-step workflows. Front-end $27, target AOV $41.
+## Current state
 
-**Sabse badi baat:** har prompt ke saath uska **ASLI output** chhapta hai. Amazon
-par $2.99–9.99 wali prompt-list books mein sirf prompt ki list hoti hai. Wahi ek
-farak product ko alag karta hai — aur wahi unke liye haath se karna namumkin hai.
+- Free preview: **25 prompts + 3 clearly labelled editorial examples**, all fictional.
+- Default technical pilot: **5 prompts + 1 workflow**, isolated from beta/full caches.
+- Beta profile: **30 prompts + 3 workflows**; full profile: **300 + 12**.
+- Workflow steps consume the previous step's **actual successful output**.
+- Strict automated QC, content/model-aware cache, execution provenance and offline tests.
+- Paid generation, teacher review, checkout, ads and email collection are **not activated**.
 
----
+## Start here - no API spending
 
-## Repo mein kya hai
+```bash
+python -m unittest discover -s tests -v
+python toolkit/run.py estimate
+python toolkit/run.py status
+```
 
-| Path | Kya hai |
+The tests use an in-memory fake provider, not an API key. PDF-specific tests require
+the optional PDF dependencies.
+
+### Rebuild the free preview locally
+
+```bash
+python -m pip install -r toolkit/requirements-pdf.txt
+python toolkit/lead_magnet.py --output-dir deliverables
+```
+
+Outputs: [PDF](deliverables/lead-magnet.pdf) and [mobile-readable HTML](deliverables/lead-magnet.html).
+No API or browser download is required. A PDF-generation error fails the command.
+The examples are **not** represented as logged AI executions or teacher-tested results.
+
+## Paid generation - only after explicit budget approval
+
+Read [pipeline instructions](toolkit/README.md), then configure provider spending limits.
+Keep API keys in your local environment, never in GitHub or a prompt.
+
+```bash
+python -m pip install -r toolkit/requirements.txt
+python toolkit/run.py estimate --profile pilot
+# Only after reviewing the estimate and setting the provider limit:
+python toolkit/run.py all --profile pilot --yes --budget-usd 4
+```
+
+The last command **spends money**. The $4 argument acknowledges a planning allowance;
+it is **not a provider-enforced billing cap**. The current pilot planning allowance
+is about $3.35, subject to settings and pricing. Do not edit a single section count
+to simulate a pilot: select the profile instead.
+
+The default build is visibly marked as a development edition. A sellable release
+requires recorded human approvals for every current output and a real support email:
+
+```bash
+python toolkit/run.py qc --profile beta --release
+python toolkit/run.py build --profile beta --release
+```
+
+Do not upload a paid edition or sensitive customer data into a public repository.
+This repository is currently public; the free preview is intentionally visible.
+
+## Working documents
+
+| Document | Purpose |
 |---|---|
-| [`docs/strategy.md`](docs/strategy.md) | **Yahan se shuru karo.** Poora market research — niche kyun chuna, unit economics, campaign settings, 5 ready ad scripts, Meta policy ke jaal, 14-din ka plan |
-| [`docs/decision-log.md`](docs/decision-log.md) | **फ़ैसलों का पूरा रिकॉर्ड (देवनागरी में)** — अब तक क्या-क्या तय हुआ और क्यों, कौन से niche रद्द हुए, पैसा कहाँ लगेगा, अभी की स्थिति और बाक़ी काम |
-| [`docs/channels-cold-email.md`](docs/channels-cold-email.md) | **कौन सा चैनल, किस क्रम में (देवनागरी में)** — cold email क़ानूनी है या नहीं, क्यों इस product के लिए घाटे का सौदा है, और उसका वो रूप जो सचमुच काम करता है (स्कूलों को B2B) |
-| [`docs/plan-b-thekedar-kit.md`](docs/plan-b-thekedar-kit.md) | Ek alag, India-only, kam budget wala plan. Side mein rakha hua |
-| [`deliverables/lead-magnet.pdf`](deliverables/lead-magnet.pdf) | **Muft lead magnet — banaa hua PDF.** 25 prompts, 3 ke saath asli output. Seedha baant sakte ho |
-| [`toolkit/`](toolkit/) | Product banane wali pipeline. Detail: [`toolkit/README.md`](toolkit/README.md) |
+| [Current strategy](docs/strategy.md) | Evidence, uncertainties, costs and decision gates |
+| [Channel analysis](docs/channels-cold-email.md) | Why cold email is not the initial channel, and the school B2B alternative |
+| [30-day roadmap](docs/roadmap.md) | Prioritized next steps; no automatic ad launch |
+| [Reviewer checklist](docs/reviewer-checklist.md) | Classroom, accuracy, privacy and usability review |
+| [Decision log](docs/decision-log.md) | Corrections followed by historical decisions |
+| [Parked Plan B](docs/plan-b-thekedar-kit.md) | Historical alternative, not approved launch instructions |
+| [Free preview PDF](deliverables/lead-magnet.pdf) | 25 prompts and three clearly labelled fictional examples |
+| [Toolkit instructions](toolkit/README.md) | Build, validate and release workflow |
 
----
-
-## Kis kram mein chalna hai
-
-### Kadam 0 — Muft validation (₹0)
-
-Paisa lagane se **pehle** demand check karo.
-
-```bash
-cd toolkit
-pip install -r requirements.txt
-python3 lead_magnet.py          # koi API call nahi, koi kharcha nahi
-```
-
-`build/lead-magnet.pdf` banta hai. **Ya seedha
-[`deliverables/lead-magnet.pdf`](deliverables/lead-magnet.pdf) uthao — wahi file
-pehle se repo mein padi hai**, kuch chalane ki zaroorat hi nahi.
-
-25 prompts, 3 ke saath asli sample output. Ye teacher wale Facebook groups mein
-muft baanto, badle mein email lo.
-
-- 3 din mein **100+ email** → maang asli hai, aage badho
-- **20 se kam** → angle galat hai. **~₹14,000 bach gaye**
-
-### Kadam 1 — Product banao (~₹1,530)
-
-```bash
-export ANTHROPIC_API_KEY=sk-ant-...
-
-python3 run.py estimate     # kitna lagega, pehle dekho
-python3 run.py catalog      # 300 prompts + 12 workflows
-python3 run.py outputs      # sabko chala kar ASLI output (Batch API, 50% sasta)
-python3 run.py build        # HTML + PDF + QC
-```
-
-> **Pehli baar poora 300 mat chalao.** `config.py` mein kisi ek section ka
-> `count` **5** kar do, `python3 run.py all -y` chalao (~₹40). Sab theek dikhe,
-> tabhi poora chalao.
-
-### Kadam 2 — Ads (~₹12,500 test)
-
-Settings, targeting, creatives, kill rules — sab
-[`docs/strategy.md`](docs/strategy.md) mein hain.
-
----
-
-## Paisa kahan lagega
-
-| Cheez | Kharcha | Zaroori? |
-|---|---|---|
-| Free validation | **₹0** | ✅ sabse pehle |
-| Product banana (Anthropic API) | ~₹1,530 | ✅ |
-| Landing page | ₹0 (khud banao) | ✅ |
-| Payment gateway (Lemon Squeezy) | ₹0 upfront, ~5% per sale | ✅ |
-| Facebook ads test (7 din) | ~₹12,500 | ✅ |
-| Teacher UGC video | ₹4,000–13,000 | ❌ baad mein |
-
----
-
-## Naya product banana
-
-Poori pipeline niche-agnostic hai. `toolkit/config.py` mein sirf `PRODUCT`,
-`SECTIONS` aur `WORKFLOW_BRIEF` badlo (aur `steps/catalog.py` ka system prompt) —
-"AI for Realtors" ya "AI for HR" ban jaayega.
-
-**Pehla product 4 din, doosra 1 din.** Ye factory hai, ek product nahi.
+The first goal is a useful product people choose to pay for, not the largest prompt count.

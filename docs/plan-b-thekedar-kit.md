@@ -1,5 +1,12 @@
 # 00.9 — PLAN B: Thekedar Kit (Local India Niche)
 
+> **Historical, unvalidated alternative - not approved implementation instructions.**
+> The numerical advertising claims, safety/compliance assurances and guaranteed
+> buyer-to-app conversion assumptions below were not established by this project.
+> Do not use construction ratios or legal templates without qualified review.
+> No account/page should be used to bypass platform restrictions.
+> Current work follows [strategy.md](strategy.md) and [roadmap.md](roadmap.md).
+
 > ⚠️ **YE PLAN SIDE MEIN RAKHA GAYA HAI (Plan B).** Ye market research se nahi, is repo ke apps se nikala gaya tha. Asli market-research wala plan `00.2 MARKET RESEARCH` file mein hai. Ye tab kaam aayega jab aap India-only, kam budget wala local play karna chahein.
 
 **Sawal tha:** Facebook ads se ebook bechkar earning karni hai. Kaun sa niche sabse suitable hai (kam lagat, zyada CTR, zyada earning), aur uska content kaise banayein?

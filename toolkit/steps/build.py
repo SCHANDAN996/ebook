@@ -9,6 +9,8 @@ from typing import Dict, List
 
 import config
 from steps.keys import prompt_key, workflow_key
+from steps.contracts import quality_issues, digest
+from steps.storage import load_json, save_json
 
 # ------------------------------------------------------------------ markdown
 _BOLD = re.compile(r"\*\*(.+?)\*\*")
@@ -25,7 +27,25 @@ def _inline(text: str) -> str:
 
 
 def _md(text: str) -> str:
-    """Chhota markdown renderer — headings, lists, paragraphs. Koi dependency nahi."""
+    """Escaped Markdown subset: headings, lists, paragraphs and pipe tables."""
+    source_lines = text.splitlines()
+    for idx in range(len(source_lines) - 1):
+        header, separator = source_lines[idx], source_lines[idx + 1]
+        cells = separator.strip().strip("|").split("|")
+        if "|" not in header or not cells or not all(re.fullmatch(r"\s*:?-{3,}:?\s*", cell) for cell in cells):
+            continue
+        end = idx + 2
+        while end < len(source_lines) and "|" in source_lines[end] and source_lines[end].strip():
+            end += 1
+        rows = [header] + source_lines[idx + 2:end]
+        table = ["<table>"]
+        for row_index, row in enumerate(rows):
+            tag = "th" if row_index == 0 else "td"
+            table.append("<tr>" + "".join(f"<{tag}>{_inline(cell.strip())}</{tag}>"
+                         for cell in row.strip().strip("|").split("|")) + "</tr>")
+        table.append("</table>")
+        return (_md("\n".join(source_lines[:idx])) + "\n" + "\n".join(table)
+                + "\n" + _md("\n".join(source_lines[end:])))
     lines, parts, buf, list_tag = text.split("\n"), [], [], None
 
     def flush_para():
@@ -101,59 +121,34 @@ def _trim(text: str) -> tuple[str, bool]:
 
 # ------------------------------------------------------------------ css
 CSS = """
-@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+@page { size: A4; margin: 18mm 19mm 22mm; }
 * { box-sizing: border-box; }
-body { font: 10.5pt/1.55 "Segoe UI", -apple-system, Helvetica, Arial, sans-serif;
-       color: #1b1f24; margin: 0; }
-code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em;
-       background: #eef1f4; padding: 1px 4px; border-radius: 3px; }
-
-.cover { height: 245mm; display: flex; flex-direction: column;
-         justify-content: center; page-break-after: always; }
-.cover h1 { font-size: 34pt; line-height: 1.1; margin: 0 0 10mm; letter-spacing: -0.5pt; }
-.cover .sub { font-size: 14pt; color: #47515c; margin-bottom: 22mm; }
-.cover .promise { font-size: 11pt; border-left: 3px solid #1b1f24;
-                  padding-left: 6mm; color: #2b333c; max-width: 120mm; }
-
-h2.section { font-size: 20pt; margin: 0 0 2mm; page-break-before: always;
-             page-break-after: avoid; letter-spacing: -0.3pt; }
-h2.section + .sectionnote { color: #6b7580; font-size: 9.5pt; margin: 0 0 8mm; }
-
-.card { page-break-inside: avoid; margin: 0 0 9mm; padding-bottom: 6mm;
-        border-bottom: 1px solid #e3e7eb; }
-.card h3 { font-size: 12.5pt; margin: 0 0 1.5mm; }
-.meta { font-size: 8.5pt; color: #6b7580; margin: 0 0 3mm; }
-.meta span { display: inline-block; border: 1px solid #d5dae0; border-radius: 3px;
-             padding: 0.5mm 2mm; margin-right: 2mm; }
-.use { font-size: 9.5pt; color: #3d4650; margin: 0 0 4mm; }
-
-.label { font-size: 8pt; letter-spacing: 0.9pt; text-transform: uppercase;
-         color: #6b7580; margin: 0 0 1.5mm; }
-.prompt { background: #f5f7f9; border: 1px solid #e3e7eb; border-radius: 4px;
-          padding: 4mm; white-space: pre-wrap; font-size: 9.5pt;
-          font-family: "SF Mono", Menlo, Consolas, monospace; }
-.output { border-left: 3px solid #cfd6dd; padding: 0 0 0 5mm; margin-top: 5mm; }
-.output h4, .output h5, .output h6 { font-size: 10.5pt; margin: 4mm 0 1.5mm; }
-.output p, .output li { font-size: 9.5pt; }
-.output ul, .output ol { margin: 1.5mm 0 1.5mm 5mm; padding: 0; }
-.raw { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 8.5pt;
-       white-space: pre-wrap; color: #3d4650; }
-.trimmed { font-size: 8.5pt; color: #6b7580; font-style: italic; margin-top: 2mm; }
-.missing { font-size: 9pt; color: #9aa3ac; font-style: italic; }
-
-.note { background: #fbf7ec; border: 1px solid #e8dcc0; border-radius: 4px;
-        padding: 4mm; font-size: 9pt; margin: 0 0 8mm; }
-.toc { page-break-after: always; }
-.toc li { margin-bottom: 1.5mm; }
-.wf { page-break-inside: avoid; margin-bottom: 9mm; }
-.wf .step { margin: 4mm 0 0 5mm; padding-left: 4mm; border-left: 2px solid #e3e7eb; }
-footer { margin-top: 14mm; padding-top: 4mm; border-top: 1px solid #e3e7eb;
-         font-size: 8.5pt; color: #6b7580; }
+body { font: 16px/1.65 system-ui, sans-serif; color:#21363d; margin:0 auto;
+       max-width:850px; padding:28px; }
+h1,h2,h3 { color:#123c45; line-height:1.3; break-after:avoid; }
+h1 {font-size:32px;} h2 {font-size:25px; margin-top:32px;} h3 {font-size:19px;}
+a {color:#176878;} .cover {border-bottom:3px solid #176878; padding:12px 0 24px;}
+.sub,.meta,.label,.sectionnote {color:#53636a;}
+.label {font-size:13px;font-weight:700;margin-bottom:5px;}
+.prompt {background:#f0f4f7;border:1px solid #d9e3e8;border-radius:8px;padding:16px;
+         white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;}
+.card,.wf {border-bottom:1px solid #dae4e8;padding:0 0 20px;margin:24px 0;}
+.output {border-left:3px solid #6e9eaa;padding-left:16px;margin-top:18px;}
+.note {background:#fff4d8;padding:16px;border-radius:8px;margin:18px 0;}
+.step {margin-top:20px;} .missing {color:#9c342e;}
+.raw {white-space:pre-wrap;overflow-wrap:anywhere;}
+table {border-collapse:collapse;width:100%;margin:15px 0;}
+th,td {border:1px solid #cad7dd;padding:8px;text-align:left;vertical-align:top;}
+footer {margin-top:24px;border-top:1px solid #dae4e8;padding-top:14px;}
+@media(max-width:600px) {body {padding:16px;} h1 {font-size:27px;} .prompt {font-size:15px;}}
+@media print {body {padding:0;font-size:10.5pt;} .prompt {font-size:9.5pt;}
+ h1 {font-size:26pt;} h2 {font-size:18pt;} h3 {font-size:12pt;} }
 """
 
 
 # ------------------------------------------------------------------ render
-def _card(p: dict, output: str | None) -> str:
+def _card(p: dict, record) -> str:
+    output = record.get("output") if isinstance(record, dict) else None
     bits = [f'<div class="card">',
             f'<h3>{html.escape(p["title"])}</h3>',
             f'<p class="meta"><span>{html.escape(p.get("grade_band", "All"))}</span>'
@@ -163,8 +158,12 @@ def _card(p: dict, output: str | None) -> str:
             f'<div class="prompt">{html.escape(p["prompt"])}</div>']
 
     if output:
+        bits += ['<p class="label">Exact example input (fictional data)</p>',
+                 f'<div class="prompt">{html.escape(record["input"])}</div>',
+                 f'<p class="meta">Model: {html.escape(record.get("model", "unknown"))}; '
+                 f'date: {html.escape(record.get("generated_at", "unknown"))}</p>']
         text, trimmed = _trim(output)
-        bits.append('<div class="output"><p class="label">What it produced</p>')
+        bits.append('<div class="output"><p class="label">Recorded AI draft - teacher review required</p>')
         bits.append(_md(text))
         if trimmed:
             bits.append('<p class="trimmed">Output continues — trimmed here for length.</p>')
@@ -179,16 +178,21 @@ def _card(p: dict, output: str | None) -> str:
 def _workflow(wf: dict, outputs: Dict[str, str]) -> str:
     bits = [f'<div class="wf"><h3>{html.escape(wf["title"])}</h3>',
             f'<p class="use">{html.escape(wf.get("goal", ""))}</p>',
-            f'<p class="meta"><span>Replaces {html.escape(wf.get("replaces", "—"))}</span></p>']
+            f'<p class="meta">Planning aid; no measured time-saving claim.</p>']
     for step in wf.get("steps", []):
         key = workflow_key(wf["slug"], step["step"])
         bits.append(f'<div class="step"><p class="label">Step {step["step"]} — '
                     f'{html.escape(step["title"])}</p>')
         bits.append(f'<div class="prompt">{html.escape(step["prompt"])}</div>')
-        out = outputs.get(key)
+        record = outputs.get(key)
+        out = record.get("output") if isinstance(record, dict) else None
         if out:
+            bits.append('<p class="label">Exact chained example input</p>')
+            bits.append(f'<div class="prompt">{html.escape(record["input"])}</div>')
             text, trimmed = _trim(out)
-            bits.append('<div class="output"><p class="label">What it produced</p>')
+            bits.append(f'<p class="meta">Model: {html.escape(record.get("model", "unknown"))}; '
+                        f'date: {html.escape(record.get("generated_at", "unknown"))}</p>')
+            bits.append('<div class="output"><p class="label">Recorded AI draft - teacher review required</p>')
             bits.append(_md(text))
             if trimmed:
                 bits.append('<p class="trimmed">Output continues — trimmed for length.</p>')
@@ -198,153 +202,78 @@ def _workflow(wf: dict, outputs: Dict[str, str]) -> str:
     return "\n".join(bits)
 
 
-def render_html(catalog: dict, outputs: Dict[str, str]) -> str:
+def render_html(catalog: dict, outputs: dict, release=False) -> str:
     p = config.PRODUCT
     parts = [
-        "<!doctype html><html><head><meta charset='utf-8'>",
+        "<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>",
         f"<title>{html.escape(p['title'])}</title>",
         f"<style>{CSS}</style></head><body>",
         f"<div class='cover'><h1>{html.escape(p['title'])}</h1>",
+        ("<p class='note'>Recorded human-review edition. Review for your own classroom.</p>" if release else
+         "<p class='note'>DEVELOPMENT DRAFT - not for sale; classroom quality is not certified.</p>"),
         f"<p class='sub'>{html.escape(p['subtitle'])}</p>",
         f"<p class='promise'>{html.escape(p['promise'])}</p></div>",
         "<div class='toc'><h2 style='page-break-before:auto'>Contents</h2><ol>",
     ]
     for s in config.SECTIONS:
         n = len(catalog["sections"].get(s["id"], []))
-        parts.append(f"<li>{html.escape(s['title'])} — {n} prompts</li>")
-    parts.append(f"<li>Workflows — {len(catalog.get('workflows', []))}</li></ol>")
+        parts.append(f"<li><a href='#{s['id']}'>{html.escape(s['title'])}</a> - {n} prompts</li>")
+    parts.append(f"<li><a href='#workflows'>Workflows</a> - {len(catalog.get('workflows', []))}</li></ol>")
     parts.append(f"<div class='note'><strong>Before you start.</strong> "
                  f"{html.escape(config.DISCLAIMER)}</div></div>")
 
     for s in config.SECTIONS:
         prompts = catalog["sections"].get(s["id"], [])
-        parts.append(f"<h2 class='section'>{html.escape(s['title'])}</h2>")
+        parts.append(f"<h2 class='section' id='{s['id']}'>{html.escape(s['title'])}</h2>")
         parts.append(f"<p class='sectionnote'>{len(prompts)} prompts</p>")
         if s.get("sensitive"):
             parts.append(f"<div class='note'>{html.escape(config.DISCLAIMER)}</div>")
         for pr in prompts:
             parts.append(_card(pr, outputs.get(prompt_key(s["id"], pr["slug"]))))
 
+    parts.append("<h2 class='section' id='workflows'>Workflows</h2>")
     if catalog.get("workflows"):
-        parts.append("<h2 class='section'>Workflows</h2>")
         parts.append("<p class='sectionnote'>Multi-step chains — each step feeds the next.</p>")
         for wf in catalog["workflows"]:
             parts.append(_workflow(wf, outputs))
 
-    parts.append(f"<footer>{html.escape(p['title'])} — support: "
-                 f"{html.escape(p['support_email'])}</footer></body></html>")
+    contact = (f'<a href="mailto:{html.escape(p["support_email"])}">Contact support</a>'
+               if p["support_email"] else
+               f'<a href="{html.escape(p["support_url"])}">Project feedback (no student data)</a>')
+    parts.append(f"<footer><p>{contact}</p></footer></body></html>")
     return "\n".join(parts)
 
 
-# ------------------------------------------------------------------ QC
-def qc(catalog: dict, outputs: Dict[str, str]) -> List[str]:
-    """Strategy doc ka QC checklist — jitna automate ho sakta hai."""
-    issues, slugs = [], {}
-    total = missing = short = leaky = 0
-
-    for s in config.SECTIONS:
-        prompts = catalog["sections"].get(s["id"], [])
-        if len(prompts) != s["count"]:
-            issues.append(f"{s['title']}: {len(prompts)} prompts, expected {s['count']}")
-        for pr in prompts:
-            total += 1
-            key = f"{s['id']}__{pr['slug']}"
-            slugs[key] = slugs.get(key, 0) + 1
-            out = outputs.get(prompt_key(s["id"], pr["slug"]))
-            if not out:
-                missing += 1
-            elif len(out) < 400:
-                short += 1
-                issues.append(f"short output ({len(out)} chars): {key}")
-            if "[" in pr.get("example_filled_prompt", ""):
-                leaky += 1
-                issues.append(f"unfilled placeholder in example: {key}")
-
-    for key, n in slugs.items():
-        if n > 1:
-            issues.append(f"duplicate slug x{n}: {key}")
-
-    bands = {}
-    for s in config.SECTIONS:
-        for pr in catalog["sections"].get(s["id"], []):
-            bands[pr.get("grade_band", "?")] = bands.get(pr.get("grade_band", "?"), 0) + 1
-
-    print(f"\n  Prompts: {total}   with output: {total - missing}   missing: {missing}")
-    print(f"  Suspiciously short: {short}   unfilled placeholders: {leaky}")
-    print(f"  Grade bands: {dict(sorted(bands.items()))}")
+# ------------------------------------------------------------------ QC / build
+def qc(catalog, outputs, release=False):
+    issues = quality_issues(catalog, outputs, load_json(config.REVIEW_JSON, {}), release)
+    save_json(config.QC_JSON, {"profile": config.PROFILE, "release": release,
+                               "passed": not issues, "issues": issues})
     return issues
 
 
-# ------------------------------------------------------------------ run
-def run() -> None:
-    catalog = json.loads(config.CATALOG_JSON.read_text())
-    outputs = (json.loads(config.OUTPUTS_JSON.read_text())
-               if config.OUTPUTS_JSON.exists() else {})
-
+def run(draft=False, release=False, html_only=False):
+    if release and (draft or html_only):
+        raise ValueError("Release requires strict QC and PDF")
+    catalog = load_json(config.CATALOG_JSON)
+    outputs = load_json(config.OUTPUTS_JSON, {})
+    issues = qc(catalog, outputs, release)
+    if issues and not draft:
+        raise ValueError("QC failed; no book built: " + "; ".join(issues[:12]))
     config.BUILD.mkdir(parents=True, exist_ok=True)
-    config.BOOK_HTML.write_text(render_html(catalog, outputs), encoding="utf-8")
-    print(f"  HTML: {config.BOOK_HTML}")
-
-    issues = qc(catalog, outputs)
+    source = render_html(catalog, outputs, release)
+    config.BOOK_HTML.write_text(source, encoding="utf-8")
+    if not html_only:
+        from steps.pdf_export import export_pdf
+        export_pdf(source, config.BOOK_PDF, config.PRODUCT["title"],
+                   "Human review recorded - check before use" if release else "DEVELOPMENT DRAFT - not for sale")
+    save_json(config.MANIFEST_JSON, {
+        "profile": config.PROFILE, "release": release, "automated_qc_passed": not issues,
+        "catalog_sha256": digest(catalog), "outputs_sha256": digest(outputs),
+        "html_sha256": digest(source), "pdf_created": not html_only,
+        "compatibility": "No cross-tool claim: check reviewer test records"})
+    print(f"HTML: {config.BOOK_HTML}")
+    if not html_only:
+        print(f"PDF: {config.BOOK_PDF}")
     if issues:
-        print(f"\n  QC ne {len(issues)} baat uthayi hai (pehli 15):")
-        for i in issues[:15]:
-            print(f"    - {i}")
-    else:
-        print("\n  QC saaf hai.")
-
-    _pdf()
-
-
-def _chromium_candidates() -> list:
-    """Playwright ka pinned browser na mile to ye raste dekho.
-    (Kuch environments mein chromium alag jagah pehle se rakha hota hai.)"""
-    import os
-    import glob
-
-    found = []
-    env = os.environ.get("CHROMIUM_PATH")
-    if env:
-        found.append(env)
-    found += sorted(glob.glob("/opt/pw-browsers/chromium-*/chrome-linux/chrome"))
-    found += ["/usr/bin/chromium", "/usr/bin/chromium-browser",
-              "/usr/bin/google-chrome"]
-    return [f for f in found if os.path.exists(f)]
-
-
-def _pdf() -> None:
-    """HTML se PDF. Ye step fail hone par build fail nahi hota — HTML kaafi hai."""
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        print("\n  PDF ke liye:  pip install playwright && playwright install chromium")
-        print("  Tab tak HTML ko browser mein khol kar Print -> Save as PDF karo.")
-        return
-
-    attempts = [None] + _chromium_candidates()
-    last_error = None
-
-    for exe in attempts:
-        try:
-            with sync_playwright() as pw:
-                kwargs = {"executable_path": exe} if exe else {}
-                browser = pw.chromium.launch(**kwargs)
-                page = browser.new_page()
-                page.goto(config.BOOK_HTML.resolve().as_uri(), wait_until="load")
-                page.pdf(path=str(config.BOOK_PDF), format="A4", print_background=True)
-                browser.close()
-            break
-        except Exception as exc:  # browser missing / sandbox / launch failure
-            last_error = exc
-            continue
-    else:
-        print(f"\n  PDF nahi ban paaya: {type(last_error).__name__}")
-        print("  Theek karne ke liye:  playwright install chromium")
-        print("  Ya HTML ko browser mein khol kar Print -> Save as PDF karo.")
-        print(f"  HTML taiyar hai: {config.BOOK_HTML}")
-        return
-
-    mb = config.BOOK_PDF.stat().st_size / 1_048_576
-    print(f"  PDF:  {config.BOOK_PDF}  ({mb:.1f} MB)")
-    if mb > 25:
-        print("  \u26a0 25 MB se bada hai \u2014 config.py mein MAX_OUTPUT_CHARS kam karo.")
+        print(f"Draft only: {len(issues)} QC issues; see qc.json")
