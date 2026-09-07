@@ -508,11 +508,59 @@ DIFFERENTIATION_TITLES = {
     ),
 }
 
+PARENT_COMMUNICATION_TITLES = {
+    "positive-notes": (
+        "Write a specific positive family message",
+        "Share academic growth using one concrete classroom example",
+        "Recognize a learner's helpful contribution without using labels",
+        "Write a brief celebration message suitable for a mobile screen",
+        "Create a positive note that invites the learner's own reflection",
+        "Build a reusable strength-note template with visible evidence fields",
+    ),
+    "concern-emails": (
+        "Communicate an academic concern with a next step",
+        "Write a missing-work message using dates and verified counts",
+        "Explain a recurring learning difficulty without diagnosing its cause",
+        "Request a brief family check-in with two exact scheduling options",
+        "Revise a blaming concern email into factual collaborative language",
+        "Audit a concern message for evidence, tone and unsupported claims",
+    ),
+    "conference-preparation": (
+        "Prepare a balanced family conference",
+        "Build a 15-minute conference agenda around learning evidence",
+        "Prepare questions that invite family and student perspective",
+        "Turn classroom evidence into a shared action-plan table",
+        "Write a factual post-conference summary with owners and dates",
+    ),
+    "newsletters": (
+        "Draft a useful class newsletter",
+        "Create a concise weekly learning update for families",
+        "Rewrite a newsletter as a mobile-friendly plain-text version",
+        "Audit a class newsletter for dates, jargon, access and action items",
+    ),
+    "permissions-and-logistics": (
+        "Draft a permission notice from verified trip or event details",
+        "Create a clear family checklist for materials, dates and return forms",
+        "Write a schedule-change notice without inventing school policy",
+        "Audit a logistics message for missing consent, safety and contact details",
+    ),
+    "clear-and-accessible-language": (
+        "Rewrite school language in plain family-friendly English",
+        "Create a translation-ready message using short unambiguous sentences",
+        "Audit a family message for jargon, idioms and hidden assumptions",
+    ),
+    "difficult-conversations": (
+        "Prepare a calm conversation about a repeated classroom concern",
+        "Create a fact-based communication plan for disagreement with a family",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
     "03-assessment-rubrics-quizzes": ASSESSMENT_TITLES,
     "04-differentiation-mixed-ability": DIFFERENTIATION_TITLES,
+    "05-parent-communication": PARENT_COMMUNICATION_TITLES,
 }
 
 WORKFLOW_TITLES = {
