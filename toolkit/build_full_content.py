@@ -458,10 +458,61 @@ ASSESSMENT_TITLES = {
     ),
 }
 
+DIFFERENTIATION_TITLES = {
+    "scaffolds": (
+        "Add temporary scaffolds without lowering the goal",
+        "Turn an observed barrier into a targeted support plan",
+        "Create a graphic organizer that preserves essential reasoning",
+        "Write sentence frames at three levels of language support",
+        "Break a complex task into checkpoints without doing the thinking",
+        "Add worked examples and prompts with a clear fade plan",
+        "Create a scaffold menu learners can choose from responsibly",
+        "Audit classroom supports for dependence and hidden lower expectations",
+    ),
+    "tiered-tasks": (
+        "Create three routes to the same objective",
+        "Build scaffolded, on-level and extension versions of one task",
+        "Tier a task by representation rather than by easier content",
+        "Create three entry points with one common mastery product",
+        "Design tiered questions that move from access to transfer",
+        "Check that every tier carries equal curricular dignity",
+        "Create a whole-class debrief that reconnects three task versions",
+    ),
+    "multilingual-support": (
+        "Make a task accessible to multilingual learners",
+        "Identify the language demands hidden inside a subject task",
+        "Build an essential vocabulary preview with visuals and examples",
+        "Create structured partner rehearsal before independent writing",
+        "Plan purposeful home-language use without assuming proficiency",
+        "Separate content evidence from English-language evidence",
+    ),
+    "reading-and-accessibility": (
+        "Adapt text access while preserving meaning",
+        "Chunk a demanding source without rewriting its claims",
+        "Create a plain-language companion beside the original text",
+        "Add glossary, guiding questions and audio-access suggestions",
+        "Reduce unnecessary reading load in a non-reading assessment",
+        "Audit adapted materials for lost meaning or unsupported simplification",
+    ),
+    "extensions": (
+        "Create an extension that deepens reasoning instead of adding more work",
+        "Build a transfer challenge using a new context",
+        "Design an open-ended investigation with clear evidence expectations",
+        "Audit an extension for novelty, rigor and connection to the objective",
+    ),
+    "flexible-grouping": (
+        "Build temporary groups from anonymous learning evidence",
+        "Create a rotation plan for three changing instructional needs",
+        "Plan mixed-readiness groups with meaningful roles and accountability",
+        "Audit a grouping plan for labels, access, movement and regrouping triggers",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
     "03-assessment-rubrics-quizzes": ASSESSMENT_TITLES,
+    "04-differentiation-mixed-ability": DIFFERENTIATION_TITLES,
 }
 
 WORKFLOW_TITLES = {
