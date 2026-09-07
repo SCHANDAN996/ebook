@@ -267,6 +267,87 @@ size. **Transfer:** Order 2/3, 7/8 and 11/12 without common denominators. Answer
 `2/3 < 7/8 < 11/12`, because the missing unit fractions decrease.""",
 }
 
+# Chapter 1 is written as 60 distinct teacher jobs rather than repeated variations of
+# one generic shell. Indexes match the manifest allocation within each subtopic.
+LESSON_PLANNING_TITLES = {
+    "complete-lessons": (
+        "Build a complete evidence-led lesson",
+        "Plan a concept-development lesson from prior knowledge",
+        "Plan an inquiry lesson around a puzzling phenomenon",
+        "Create an explicit-instruction lesson with guided release",
+        "Design a discussion-centered lesson with equitable participation",
+        "Build a no-technology lesson using basic classroom materials",
+        "Create a lesson around one complex text or source",
+        "Plan a safe hands-on investigation lesson",
+        "Design a problem-based mathematics lesson",
+        "Compress a full lesson into a purposeful 30-minute period",
+        "Expand a lesson for a 90-minute block without filler",
+        "Repair a draft lesson whose activities do not match its objective",
+    ),
+    "backward-unit-planning": (
+        "Plan a unit backward from mastery",
+        "Unpack final mastery into a prerequisite learning map",
+        "Design a final performance task before planning daily lessons",
+        "Create a coherent lesson sequence from an approved assessment",
+        "Place formative checkpoints and reteaching decisions across a unit",
+        "Audit a unit for gaps, repetition and cognitive progression",
+        "Shorten a unit while protecting its essential learning",
+        "Add transfer and reflection to the end of a unit",
+    ),
+    "standards-and-objectives": (
+        "Turn a standard into measurable objectives",
+        "Separate knowledge, skill and reasoning within a standard",
+        "Rewrite a technical objective as a student-friendly I-can statement",
+        "Create observable success criteria for an existing objective",
+        "Check whether an activity truly aligns to a supplied standard",
+        "Map several objectives into a logical teaching order",
+        "Identify prerequisite skills without lowering the grade-level target",
+        "Write evidence statements showing what mastery would look like",
+    ),
+    "warm-ups-and-exit-tickets": (
+        "Create a matched warm-up and exit ticket",
+        "Design a warm-up that exposes prior knowledge in five minutes",
+        "Write a misconception-revealing hinge question",
+        "Create an exit ticket with secure, developing and not-yet response bands",
+        "Turn yesterday's exit-ticket patterns into today's opening task",
+        "Build a retrieval-practice warm-up without introducing new content",
+        "Create a transfer exit ticket that cannot be answered by copying",
+        "Audit an exit ticket for alignment, ambiguity and reading load",
+    ),
+    "pacing-and-transitions": (
+        "Build a realistic minute-by-minute lesson timeline",
+        "Diagnose where a lesson is likely to run out of time",
+        "Write concise transitions between lesson segments",
+        "Create a pacing contingency when discussion runs long",
+        "Plan meaningful early-finisher work connected to the objective",
+        "Adapt one lesson for both a regular period and a shortened schedule",
+    ),
+    "substitute-and-emergency-plans": (
+        "Create a no-surprises substitute lesson",
+        "Build an emergency no-print lesson from materials already in the room",
+        "Write exact substitute directions that require no subject guessing",
+        "Create a technology-failure backup for a digital lesson",
+        "Prepare an independent catch-up lesson for an unexpected absence",
+        "Audit a substitute plan for safety, clarity and collection procedures",
+    ),
+    "projects-and-interdisciplinary-lessons": (
+        "Launch a project with a clear driving question and final product",
+        "Connect two subjects around one authentic problem",
+        "Break a multiweek project into milestones and checkpoints",
+        "Create individual accountability inside a group project",
+        "Design a project rubric that measures learning rather than decoration",
+        "Plan a public-product option that protects student privacy",
+    ),
+    "reflection-and-adaptation": (
+        "Turn lesson evidence into a next-day adjustment",
+        "Write a post-lesson reflection based on observations rather than feelings alone",
+        "Identify what to keep, change and investigate after a lesson",
+        "Adapt a lesson after most learners miss the same misconception",
+        "Plan targeted follow-up for three anonymous response patterns",
+        "Compare the intended lesson with what learners actually demonstrated",
+    ),
+}
+
 WORKFLOW_TITLES = {
     "standard-to-assessment": "Standard to aligned assessment",
     "emergency-substitute-pack": "Emergency substitute pack",
@@ -411,7 +492,10 @@ def generated_prompt(
     display = subtopic.replace("-and-", " & ").replace("-", " ")
     action, qualifier = VARIANTS[(ordinal - 1) % len(VARIANTS)]
     product, sections = CHAPTER_GUIDANCE[folder]
-    title = f"{action} {display} {qualifier}"
+    if folder == "01-lesson-planning":
+        title = LESSON_PLANNING_TITLES[subtopic][ordinal - 1]
+    else:
+        title = f"{action} {display} {qualifier}"
     return Prompt(
         pid,
         folder,
@@ -427,7 +511,7 @@ def generated_prompt(
             "AVAILABLE_MATERIALS_OR_SUPPORTS",
             "SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS",
         ),
-        f"Create {product} for the supplied {display} task.",
+        f"Complete this teacher task: {title}. Create {product} using only the supplied inputs.",
         f"Return: {sections}.",
         f"Fictional case: [GRADE], [SUBJECT], {display}; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.",
     )
@@ -504,6 +588,26 @@ def main() -> None:
     for workflow in workflows:
         target = workflow_dir / f"{workflow[0].lower()}-{slug(workflow[2])}.md"
         target.write_text(workflow_markdown(workflow), encoding="utf-8")
+
+    manuscript = BOOK / "manuscript" / "chapters"
+    manuscript.mkdir(parents=True, exist_ok=True)
+    for folder in PREFIXES:
+        source_dir = BOOK / "chapters" / folder / "prompts"
+        intro = (BOOK / "chapters" / folder / "chapter.md").read_text(encoding="utf-8").rstrip()
+        parts = [intro, "\n---\n"]
+        for source in sorted(source_dir.glob("*.md")):
+            parts.append(source.read_text(encoding="utf-8").strip())
+            parts.append("\n---\n")
+        (manuscript / f"{folder}.md").write_text("\n\n".join(parts).rstrip() + "\n", encoding="utf-8")
+
+    workflow_intro = (BOOK / "chapters" / "10-multi-step-workflows" / "chapter.md").read_text(encoding="utf-8").rstrip()
+    workflow_parts = [workflow_intro, "\n---\n"]
+    for source in sorted(workflow_dir.glob("*.md")):
+        workflow_parts.append(source.read_text(encoding="utf-8").strip())
+        workflow_parts.append("\n---\n")
+    (manuscript / "10-multi-step-workflows.md").write_text(
+        "\n\n".join(workflow_parts).rstrip() + "\n", encoding="utf-8"
+    )
 
     print(f"Built {len(prompts)} prompts and {len(workflows)} workflows.")
 
