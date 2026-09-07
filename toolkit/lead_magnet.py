@@ -1,40 +1,26 @@
 #!/usr/bin/env python3
-"""Free lead magnet — "25 AI Prompts That Save Teachers 5 Hours a Week".
-
-Ye ₹0 wala validation step hai (strategy doc, "PEHLE MUFT MEIN VALIDATE KARO").
-Teacher Facebook groups mein ye free baanto aur email count dekho:
-
-    3 din mein 100+ email  ->  demand asli hai, ads chalu karo
-    20 se kam              ->  angle galat hai, ads par paisa mat lagao
-
-Iska content haath se likha hua hai — **koi API call nahi, koi kharcha nahi**.
-
-    python lead_magnet.py
+"""Free preview: 25 planning prompts and explicitly illustrative, fictional examples.
+No API calls. No measured time-saving or cross-tool compatibility claim.
 """
 
 from __future__ import annotations
 
-import glob
+import argparse
+from pathlib import Path
 import html
-import os
 
 import config
 from steps.build import CSS, _md
 
-TITLE = "25 AI Prompts That Save Teachers 5 Hours a Week"
-SUBTITLE = "Copy, paste, fill in the brackets. Works in ChatGPT, Claude and Gemini."
-
+TITLE = "25 AI Planning Prompts for Teachers"
+SUBTITLE = "A free development preview: adapt, review and try one classroom task."
 FOOTER_CTA = (
-    "These 25 are the fastest wins. The full Teacher AI Toolkit has 300 prompts "
-    "and 12 multi-step workflows — and every single one is printed with the real "
-    "output it produced, so you can see what you are getting before you run it."
+    "A larger Teacher AI Toolkit is in development, not yet validated for sale. "
+    "These illustrative examples are not logged API executions or teacher-reviewed results. "
+    "There is no guaranteed time saving or verified cross-tool compatibility. "
+    "Share feedback through the project link below; never include student records."
 )
-
-SAFETY = (
-    "Never paste a student's name, ID, or any identifying detail into an AI tool. "
-    "Use initials or 'Student A'. Everything these prompts produce is a first "
-    "draft — read it before it reaches a student, a family, or a permanent record."
-)
+SAFETY = config.DISCLAIMER
 
 # ---------------------------------------------------------------------------
 # 25 prompts. Har prompt mein role, context, constraint aur output format hai —
@@ -43,8 +29,8 @@ SAFETY = (
 PROMPTS = [
     # ---- Planning ----------------------------------------------------------
     ("Planning", "A full lesson plan from one standard", "K-2 · 3-5 · 6-8 · 9-12",
-     "You have the standard and 40 minutes. This writes the whole plan.",
-     """You are an experienced [GRADE] teacher planning a [MINUTES]-minute lesson on [TOPIC], aligned to [STANDARD CODE OR DESCRIPTION].
+     "Supply standard text and lesson duration to create a plan for review.",
+     """You are an experienced [GRADE] teacher planning a [MINUTES]-minute lesson on [TOPIC], aligned to [SUPPLIED STANDARD TEXT].
 
 Write the full plan with these sections and nothing else:
 1. Learning objective, in student-facing "I can" language
@@ -57,7 +43,7 @@ Write the full plan with these sections and nothing else:
 
 Keep every section short enough to read at a glance while teaching. No introduction, no summary."""),
 
-    ("Planning", "Emergency sub plan in 5 minutes", "All grades",
+    ("Planning", "A substitute plan for an unexpected absence", "All grades",
      "You are sick at 6am. This writes a plan a stranger can teach.",
      """Write a substitute teacher plan for [GRADE] [SUBJECT] for [NUMBER] periods.
 
@@ -81,7 +67,7 @@ They must spiral: Monday and Tuesday review [TOPIC THEY KEEP FORGETTING], Wednes
 
 For each day give me: the question exactly as students will see it, the answer, and one sentence on what a wrong answer tells me."""),
 
-    ("Planning", "Unit skeleton from a end goal", "6-8 · 9-12",
+    ("Planning", "Unit skeleton from an end goal", "6-8 · 9-12",
      "Work backwards from the assessment instead of forwards from day one.",
      """I am planning a [NUMBER]-week unit on [TOPIC] for [GRADE]. The unit ends with [FINAL ASSESSMENT].
 
@@ -95,7 +81,7 @@ Table format, one row per week."""),
 
     ("Planning", "Turn a textbook chapter into a lesson", "6-8 · 9-12",
      "The book has the content. It does not have a lesson.",
-     """Below is a textbook section for [GRADE] [SUBJECT]. Turn it into a [MINUTES]-minute lesson that does not involve reading it aloud.
+     """Below is a passage I have permission to reproduce for [GRADE] [SUBJECT]. Turn it into a [MINUTES]-minute lesson that does not involve reading it aloud.
 
 Give me: a hook that creates a question the text answers, the 3 ideas worth keeping (and what to cut), an activity that makes students use the ideas rather than restate them, and an exit ticket.
 
@@ -103,11 +89,11 @@ TEXT:
 [PASTE THE SECTION HERE]"""),
 
     # ---- Report cards ------------------------------------------------------
-    ("Report cards", "28 report card comments from a score list", "All grades",
-     "The single biggest time sink of the term, done in one pass.",
+    ("Report cards", "Batch report card drafts from fictional notes", "All grades",
+     "Draft comments from supplied fictional observations; verify before adapting.",
      """I am writing report card comments for [GRADE] [SUBJECT].
 
-Below is my class list as "Student initials | overall grade | one or two keywords about them". For each student write a comment of [NUMBER] sentences that:
+Below is my class list as "Fictional student label | example grade | supplied evidence". For each student write a comment of [NUMBER] sentences that:
 - opens with a specific strength, not a generic compliment
 - names one concrete next step the student can act on
 - is written to be read by a parent, warm but honest
@@ -116,9 +102,9 @@ Below is my class list as "Student initials | overall grade | one or two keyword
 Vary the sentence openings — comments that all start the same way read as copy-paste.
 
 CLASS LIST:
-[A.B. | B+ | strong writer, rushes edits]
-[C.D. | C | participates, struggles with multi-step problems]
-[PASTE THE REST]"""),
+Student A | B+ | strong writer, rushes edits
+Student B | C | participates, struggles with multi-step problems
+[ADD FICTIONAL EXAMPLES ONLY]"""),
 
     ("Report cards", "Rewrite a blunt comment", "All grades",
      "You know what you mean. This makes it survivable for a parent.",
@@ -135,7 +121,7 @@ COMMENT:
 
 Give me 6 comments for each of these bands: excelling, secure, approaching, struggling, and inconsistent effort.
 
-Each comment must have a blank [NAME] and one blank [SPECIFIC EXAMPLE] so I can drop in something real. Vary the openings across the bank. Group them under headings."""),
+Each comment must have a blank [FICTIONAL LABEL] and one blank [SPECIFIC EXAMPLE] so I can drop in something real. Vary the openings across the bank. Group them under headings."""),
 
     # ---- Parent communication ---------------------------------------------
     ("Parent emails", "The email you have been putting off", "All grades",
@@ -151,15 +137,15 @@ Rules: open with something genuine and specific about the child. State the conce
 Then give me a shorter version for a parent who does not read long emails."""),
 
     ("Parent emails", "Positive notes home, ten at a time", "All grades",
-     "The highest-return five minutes in teaching.",
+     "Draft positive notes using only the observations supplied.",
      """Write 10 short positive notes home for [GRADE], one per student, based on the notes below.
 
 Each must be 2-3 sentences, name something specific (not "a pleasure to teach"), and sound like a real person wrote it. Vary the structure so they do not read as a template.
 
 STUDENTS:
-[A.B. — helped a new student find the room]
-[C.D. — finally asked for help instead of staying stuck]
-[PASTE THE REST]"""),
+Student A - fictional example: helped a new student find the room
+Student B - fictional example: asked for help
+[ADD FICTIONAL EXAMPLES ONLY]"""),
 
     ("Parent emails", "Conference prep one-pager", "All grades",
      "Ten minutes per family, and you have 24 families.",
@@ -181,7 +167,7 @@ NOTES:
 
     # ---- Differentiation ---------------------------------------------------
     ("Differentiation", "One task, three levels", "All grades",
-     "Same lesson, three entry points, no extra planning period.",
+     "Three entry points into the same lesson, with a shared learning objective.",
      """Take the task below for [GRADE] [SUBJECT] and give me three versions:
 
 - Scaffolded: same thinking, more support (sentence starters, worked example, chunked steps)
@@ -299,63 +285,52 @@ Each day: a greeting, a share prompt that a shy student can answer in one senten
 Keep the prompts about things students choose to share, never about home circumstances."""),
 ]
 
-# 3 asli sample output — dikhane ke liye ki paid book kaisi hai
+# Editorial examples, not execution evidence. Exact fictional inputs are shown.
+EXAMPLE_INPUTS = {
+    "Batch report card drafts from fictional notes":
+        "Write two sentences per fictional learner using only these supplied notes. "
+        "Do not infer gender or add observations. Student A: strong writer, rushes edits. "
+        "Student B: participates, struggles with multi-step problems.",
+    "One task, three levels":
+        "Create three versions of this Grade 4 math task: compare 1/2 and 3/4 and "
+        "explain which is larger. Keep the same fraction-comparison objective. "
+        "Include a shared discussion question and an answer key.",
+    "The email you have been putting off":
+        "Draft an email using this fictional scenario only: Student A asks questions "
+        "during discussions. Three practice assignments are missing. I supplied paper "
+        "copies and gave reminders. Ask the family for a short conversation to learn "
+        "whether there are barriers. Do not invent reasons or pronouns.",
+}
 SAMPLES = {
-    "28 report card comments from a score list": """**A.B. — B+**
-
-A.B. writes with a confidence that shows in every first draft, and this term her opening paragraphs have become genuinely persuasive. Her next step is editing: she reaches the end of a piece and stops, when a second pass is where her writing would go from good to strong. Asking her to reread one paragraph aloud before submitting would make a visible difference.
-
-**C.D. — C**
-
-C.D. contributes to every class discussion and is often the first to attempt a question others avoid — that willingness is a real strength. Multi-step problems are where the difficulty sits: he understands each step alone but loses the thread partway through. Working through problems by writing each step on its own line, rather than solving in his head, is the habit to build this term.""",
-
-    "One task, three levels": """**Scaffolded version**
-
-Same question, more support:
-- A worked example of a similar problem sits at the top of the page
-- The task is broken into three labelled steps rather than one instruction
-- Sentence starters for the explanation: "I know ___ because ___", "First I ___, then I ___"
-- The numbers are chosen so the arithmetic never blocks the thinking
-
-**On-level version**
-
-The task as written, with one change: the instruction now names the format of the answer ("explain your reasoning in two sentences"), which removes the ambiguity most students stall on.
-
-**Extension version**
-
-Same topic, harder thinking — not more questions:
-- One of the given values is removed; students must decide what information they would need and justify it
-- A second part asks: "A classmate got [wrong answer]. What did they most likely do?"
-
-**Running all three together**
-
-All three end at the same discussion question, so the share-out works as one conversation. Circulate to the scaffolded group first — they need you in the first four minutes; the extension group needs you at minute twelve.""",
-
-    "The email you have been putting off": """**Subject: A quick note about maths homework**
-
-Dear [Parent name],
-
-I want to start by saying that [Student] has been one of the steadiest contributors in our class discussions this term — he asks the question everyone else is thinking, which takes some courage.
-
-I am writing because homework has not been coming in for the past three weeks. I have checked that he has the assignments written down, moved his seat closer to the board, and offered lunchtime catch-up sessions twice. None of it has changed the pattern, so I think I am missing something about what is getting in the way at this end of the day.
-
-Would you have fifteen minutes this week for a phone call? I would rather understand what is happening than keep guessing.
-
-Best wishes,
-[Your name]
-
----
-
-**Shorter version**
-
-Dear [Parent name],
-
-[Student] contributes well in class, but homework has not come in for three weeks. I have tried reminders, a seat change, and lunchtime sessions without a change.
-
-Could we speak for fifteen minutes this week? I would like to understand what is getting in the way.
-
-Best wishes,
-[Your name]""",
+    "Batch report card drafts from fictional notes":
+        "**Student A**\n\nStudent A shows strength in writing. A useful next step "
+        "is to allow time for checking and revising each draft.\n\n"
+        "**Student B**\n\nStudent B participates in class. A useful next step "
+        "is to write down and check each stage of a multi-step problem.\n\n"
+        "**Teacher check:** Replace general wording with verified classroom evidence "
+        "locally; do not add evidence that was never observed.",
+    "One task, three levels":
+        "**Supported task**\n\nDraw two equal-sized rectangles. Split each into four "
+        "equal parts. Shade two parts in the first and three in the second. "
+        "Complete: 1/2 = __/4. Therefore __ is larger because __.\n\n"
+        "**Independent task**\n\nCompare 1/2 and 3/4. Draw a model or use equivalent "
+        "fractions to explain your answer in two sentences.\n\n"
+        "**Extension task**\n\nFind a fraction strictly between 1/2 and 3/4. "
+        "Show why it belongs between them using equivalent fractions.\n\n"
+        "**Shared discussion**\n\nWhy must the wholes be the same size when we compare?\n\n"
+        "**Answer key**\n\n1/2 = 2/4, so 3/4 is larger. One extension answer "
+        "is 5/8 because 1/2 = 4/8 and 3/4 = 6/8. "
+        "Check equal-sized wholes and equal partitions.",
+    "The email you have been putting off":
+        "**Subject: Checking in about practice assignments**\n\n"
+        "Hello,\n\nStudent A asks questions during class discussions. "
+        "I wanted to check in because three practice assignments are missing. "
+        "I have provided paper copies and reminders.\n\n"
+        "Could we arrange a short conversation to understand whether any barriers "
+        "are making these assignments difficult to complete? We can agree on a manageable "
+        "next step together.\n\nThank you.\n\n"
+        "**Teacher check:** This is fictional. Confirm every observation before "
+        "adapting it locally, and add contact details outside the AI tool.",
 }
 
 
@@ -365,21 +340,33 @@ def render() -> str:
         groups.setdefault(group, []).append((title, bands, use, prompt))
 
     parts = [
-        "<!doctype html><html><head><meta charset='utf-8'>",
+        "<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>",
         f"<title>{html.escape(TITLE)}</title><style>{CSS}</style></head><body>",
         f"<div class='cover'><h1>{html.escape(TITLE)}</h1>",
         f"<p class='sub'>{html.escape(SUBTITLE)}</p>",
-        "<p class='promise'>Three of them are shown with the real output they "
-        "produced, so you can see what you are actually getting.</p></div>",
+        "<p class='promise'>Includes three editorial examples using fictional data. "
+        "These are illustrations, not recorded API outputs or validated classroom results.</p></div>",
+        "<h2 id='quick-start'>Start with one task</h2>",
+        "<p>Choose one prompt. Fill in task details using fictional or non-identifying material. "
+        "Use only an authorized AI service. Check the result and correct it before use. "
+        "Record whether it helped; no fixed time saving is promised.</p>",
+        "<p>For chained workflows, paste the previous reviewed output into the next step. "
+        "Do not assume a new chat remembers another conversation.</p>",
+        "<h2 id='contents'>Contents</h2>",
+        "<p>" + " | ".join(f"<a href='#group-{i}'>{html.escape(group)}</a>"
+                          for i, group in enumerate(groups)) + "</p>",
         f"<div class='note'><strong>Before you start.</strong> {html.escape(SAFETY)}</div>",
     ]
 
     n = 0
-    for group, items in groups.items():
-        parts.append(f"<h2 class='section'>{html.escape(group)}</h2>")
+    for group_index, (group, items) in enumerate(groups.items()):
+        parts.append(f"<h2 class='section' id='group-{group_index}'>{html.escape(group)}</h2>")
         parts.append(f"<p class='sectionnote'>{len(items)} prompts</p>")
         for title, bands, use, prompt in items:
             n += 1
+            prompt += ("\n\nUse only supplied facts and fictional examples. Do not infer identity, "
+                       "pronouns, achievements or diagnoses. If key evidence is missing, ask "
+                       "instead of inventing it. Review all results before classroom use.")
             parts += [
                 "<div class='card'>",
                 f"<h3>{n}. {html.escape(title)}</h3>",
@@ -389,52 +376,37 @@ def render() -> str:
                 f"<div class='prompt'>{html.escape(prompt)}</div>",
             ]
             if title in SAMPLES:
-                parts.append("<div class='output'><p class='label'>What it produced</p>")
+                parts.append("<div class='output'><p class='label'>Fictional example input</p>")
+                parts.append(f"<div class='prompt'>{html.escape(EXAMPLE_INPUTS[title])}</div>")
+                parts.append("<p class='label'>Illustrative draft - not a recorded API execution</p>")
                 parts.append(_md(SAMPLES[title]))
                 parts.append("</div>")
             parts.append("</div>")
 
     parts += [
-        "<h2 class='section'>What is in the full toolkit</h2>",
+        "<h2 class='section' id='next'>Project status and feedback</h2>",
         f"<div class='note'>{html.escape(FOOTER_CTA)}</div>",
-        f"<footer>{html.escape(TITLE)} &mdash; "
-        f"{html.escape(config.PRODUCT['support_email'])}</footer></body></html>",
+        f"<footer><p><a href='{config.PRODUCT['support_url']}'>Project feedback</a>"
+        " - do not include any student information.</p></footer></body></html>",
     ]
     return "\n".join(parts)
 
 
-def main() -> None:
-    config.BUILD.mkdir(parents=True, exist_ok=True)
-    out_html = config.BUILD / "lead-magnet.html"
-    out_pdf = config.BUILD / "lead-magnet.pdf"
-    out_html.write_text(render(), encoding="utf-8")
-    print(f"  HTML: {out_html}")
-    print(f"  {len(PROMPTS)} prompts, {len(SAMPLES)} with real sample output")
-
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        print("  PDF ke liye: pip install playwright && playwright install chromium")
-        return
-
-    exes = [None] + [p for p in
-                     sorted(glob.glob("/opt/pw-browsers/chromium-*/chrome-linux/chrome"))
-                     + ["/usr/bin/chromium", "/usr/bin/google-chrome"]
-                     if os.path.exists(p)]
-    for exe in exes:
-        try:
-            with sync_playwright() as pw:
-                b = pw.chromium.launch(**({"executable_path": exe} if exe else {}))
-                pg = b.new_page()
-                pg.goto(out_html.resolve().as_uri(), wait_until="load")
-                pg.pdf(path=str(out_pdf), format="A4", print_background=True)
-                b.close()
-            print(f"  PDF:  {out_pdf}  "
-                  f"({out_pdf.stat().st_size / 1_048_576:.2f} MB)")
-            return
-        except Exception:
-            continue
-    print("  PDF nahi bana — HTML browser mein khol kar Print -> Save as PDF karo.")
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--output-dir", type=Path, default=config.ROOT / "build" / "lead-magnet")
+    ap.add_argument("--html-only", action="store_true")
+    args = ap.parse_args(argv)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    source = render()
+    out_html = args.output_dir / "lead-magnet.html"
+    out_html.write_text(source, encoding="utf-8")
+    if not args.html_only:
+        from steps.pdf_export import export_pdf
+        export_pdf(source, args.output_dir / "lead-magnet.pdf", TITLE,
+                   "Free development preview - fictional examples; review before use")
+    print(f"{len(PROMPTS)} prompts; {len(SAMPLES)} illustrative examples. No API calls.")
+    print(f"Files: {args.output_dir}")
 
 
 if __name__ == "__main__":

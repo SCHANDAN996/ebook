@@ -8,12 +8,14 @@ sirf bacha hua kaam hoga.
 from __future__ import annotations
 
 import json
-from typing import List
+from typing import List, Literal
 
 import anthropic
 from pydantic import BaseModel, Field
 
 import config
+from steps.storage import load_json, save_json
+from steps.contracts import catalog_issues, digest
 
 
 # ------------------------------------------------------------------ schema
@@ -21,7 +23,7 @@ class Prompt(BaseModel):
     slug: str = Field(description="kebab-case id, unique within the section")
     title: str = Field(description="What this prompt does, 3-8 words")
     use_case: str = Field(description="One sentence: when a teacher reaches for this")
-    grade_band: str = Field(description='One of K-2, 3-5, 6-8, 9-12, or "All"')
+    grade_band: Literal["K-2", "3-5", "6-8", "9-12", "All"]
     subject: str = Field(description='Subject, or "Any"')
     prompt: str = Field(
         description="The copy-paste prompt. Use [SQUARE BRACKETS] for anything the "
@@ -51,7 +53,7 @@ class Workflow(BaseModel):
     slug: str
     title: str
     goal: str = Field(description="The finished thing the teacher walks away with")
-    replaces: str = Field(description='Time it replaces, e.g. "about 3 hours"')
+    replaces: str = Field(description='Task it helps with; never claim measured time savings')
     steps: List[WorkflowStep]
 
 
@@ -70,27 +72,50 @@ Rules:
 - Write prompts that give the model real context: role, grade band, constraints,
   and the exact output format wanted. A bare one-line instruction is a bad prompt.
 - Use [SQUARE BRACKETS] for what the teacher fills in. Keep placeholders few and obvious.
-- Never instruct a teacher to paste student names, IDs, or other identifying details.
-- The prompts must work in ChatGPT, Claude and Gemini alike. Do not reference any
-  one tool's features, plugins, or UI.
+- Use fictional demonstration data only, never real student records or initials.
+- Do not invent student facts, pronouns, curriculum codes or achievements.
+- Require the teacher to supply standard TEXT; a code alone is not verified alignment.
+- Avoid tool-specific features. Compatibility is untested until recorded by reviewers.
 - Vary grade bands and subjects across the set. Do not cluster everything on one band.
 - example_filled_prompt must read like a real teacher's real request, with specific
-  values (a real standard code, a real topic, a real class size)."""
+  values (fictional class size, concrete topic and supplied standard text).
+- Do not promise hours saved. Outputs must be reviewed by a qualified teacher.
+- Workflow steps 2 onward MUST use {{{{PREVIOUS_OUTPUT}}}} in both prompt and
+  example_filled_prompt; step 1 must be self-contained without this marker."""
 
 
 def _client() -> anthropic.Anthropic:
-    return anthropic.Anthropic()
+    return anthropic.Anthropic(max_retries=0)
 
 
 def _load() -> dict:
     if config.CATALOG_JSON.exists():
-        return json.loads(config.CATALOG_JSON.read_text())
+        return load_json(config.CATALOG_JSON)
     return {"sections": {}, "workflows": []}
 
 
 def _save(catalog: dict) -> None:
-    config.BUILD.mkdir(parents=True, exist_ok=True)
-    config.CATALOG_JSON.write_text(json.dumps(catalog, indent=2, ensure_ascii=False))
+    save_json(config.CATALOG_JSON, catalog)
+
+
+def _parsed(resp, field, want):
+    usage = resp.usage.model_dump()
+    log = load_json(config.USAGE_JSON, {})
+    log[resp.id] = {"stage": "catalog", "batch": False, "model": resp.model,
+                    "usage": usage, "stop_reason": resp.stop_reason,
+                    "estimated_usd": (usage.get("input_tokens", 0) * config.PRICE_IN_PER_MTOK
+                                      + usage.get("output_tokens", 0) * config.PRICE_OUT_PER_MTOK) / 1e6}
+    save_json(config.USAGE_JSON, log)
+    if resp.stop_reason != "end_turn" or resp.parsed_output is None:
+        raise ValueError("Catalog response incomplete/refused; saved chunks preserved. No auto-retry.")
+    batch = [p.model_dump() for p in getattr(resp.parsed_output, field)]
+    if len(batch) != want:
+        raise ValueError(f"Expected exactly {want} {field}; received {len(batch)}. No auto-retry.")
+    slugs = [p["slug"] for p in batch]
+    import re
+    if len(set(slugs)) != len(slugs) or any(not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", s) for s in slugs):
+        raise ValueError("Invalid or duplicate generated slug")
+    return batch
 
 
 def _extra(effort):
@@ -125,10 +150,9 @@ Every prompt must be distinct from the others in kind, not just in wording.{avoi
             output_format=PromptSet,
             **_extra(config.CATALOG_EFFORT),
         )
-        batch = [p.model_dump() for p in resp.parsed_output.prompts]
-        if not batch:
-            print("    ! model ne 0 prompts diye — is section ko yahin rok rahe hain")
-            break
+        batch = _parsed(resp, "prompts", want)
+        if set(p["slug"] for p in prompts) & set(p["slug"] for p in batch):
+            raise ValueError("Duplicate slug across catalog chunks; existing chunks preserved")
 
         prompts.extend(batch)
         _checkpoint(section["id"], prompts)
@@ -160,10 +184,9 @@ Each step's prompt should be written so it can consume the previous step's outpu
             output_format=WorkflowSet,
             **_extra(config.CATALOG_EFFORT),
         )
-        batch = [w.model_dump() for w in resp.parsed_output.workflows]
-        if not batch:
-            print("    ! model ne 0 workflows diye — ruk rahe hain")
-            break
+        batch = _parsed(resp, "workflows", want)
+        if set(w["slug"] for w in workflows) & set(w["slug"] for w in batch):
+            raise ValueError("Duplicate workflow across chunks")
 
         workflows.extend(batch)
         _checkpoint("__workflows__", workflows)
@@ -186,8 +209,20 @@ def _checkpoint(key: str, items: List[dict]) -> None:
 
 def run(force: bool = False) -> dict:
     global _STATE
+    if force:
+        raise ValueError("Destructive --force regeneration disabled. Preserve existing runs separately.")
+    generation_hash = digest({"system": SYSTEM, "sections": config.SECTIONS,
+                               "workflows": config.WORKFLOW_COUNT, "brief": config.WORKFLOW_BRIEF,
+                               "model": config.MODEL, "max_tokens": config.CATALOG_MAX_TOKENS,
+                               "effort": config.CATALOG_EFFORT, "schema": config.SCHEMA_VERSION})
+    existing = _load()
+    if config.CATALOG_JSON.exists() and existing.get("generation_hash") != generation_hash:
+        raise ValueError("Catalog generation settings changed or legacy cache found. Preserve it separately first.")
+    if load_json(config.BATCH_STATE, {}):
+        raise ValueError("A batch is pending; do not change catalog until it is recovered")
     client = _client()
-    _STATE = {"sections": {}, "workflows": []} if force else _load()
+    _STATE = existing
+    _STATE["generation_hash"] = generation_hash
     _STATE.setdefault("sections", {})
     _STATE.setdefault("workflows", [])
 
@@ -212,4 +247,7 @@ def run(force: bool = False) -> dict:
         _save(_STATE)
         print(f"  \u2713 {'Workflows':<30} {len(_STATE['workflows'])} workflows")
 
+    issues = catalog_issues(_STATE)
+    if issues:
+        raise ValueError("Catalog QC failed: " + "; ".join(issues[:10]))
     return _STATE

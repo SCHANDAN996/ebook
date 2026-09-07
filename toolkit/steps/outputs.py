@@ -1,168 +1,143 @@
-"""Step 2 — har prompt ko sach mein chalao aur uska ASLI output save karo.
-
-Yahi wo cheez hai jo is product ko Amazon ki $4.99 wali prompt-list books se alag
-karti hai: book mein har prompt ke neeche uska asli output chhapta hai.
-
-Message Batches API use hoti hai — 300 requests latency-sensitive nahi hain, aur
-batch par 50% chhoot milti hai.
-
-Kaam resume hota hai: jo prompts pehle ban chuke hain wo dobara nahi chalte, aur
-ek adhoora batch agli baar sirf poll hota hai (dobara paisa nahi lagta).
-"""
-
-from __future__ import annotations
-
-import json
+"""Resumable batches with actual workflow dependencies and provenance."""
+from datetime import datetime, timezone
 import time
-from typing import Dict, List
-
-import anthropic
-from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
-from anthropic.types.messages.batch_create_params import Request
-
 import config
-from steps.keys import prompt_key, workflow_key
-
-SYSTEM = (
-    "You are the AI assistant a classroom teacher is talking to. Answer the request "
-    "directly and completely, in the format asked for. Produce the finished artefact "
-    "— the actual lesson plan, the actual worksheet, the actual email — not advice "
-    "about how to make one, and no preamble about what you are about to do."
-)
-
-def collect_items(catalog: dict) -> List[dict]:
-    """Har wo cheez jise chalana hai: {key, prompt}."""
-    items: List[dict] = []
-
-    for section in config.SECTIONS:
-        for p in catalog["sections"].get(section["id"], []):
-            text = p.get("example_filled_prompt") or p.get("prompt", "")
-            if text.strip():
-                items.append({"key": prompt_key(section["id"], p["slug"]),
-                              "prompt": text})
-
-    for wf in catalog.get("workflows", []):
-        for step in wf.get("steps", []):
-            text = step.get("example_filled_prompt") or step.get("prompt", "")
-            if text.strip():
-                items.append({"key": workflow_key(wf["slug"], step["step"]),
-                              "prompt": text})
-
-    # duplicate keys hata do (dono mein ek hi slug aa sakta hai)
-    seen, unique = set(), []
-    for it in items:
-        if it["key"] not in seen:
-            seen.add(it["key"])
-            unique.append(it)
-    return unique
+from steps.contracts import (OUTPUT_SYSTEM, catalog_issues, digest, fingerprint,
+                             required_items, settings_hash, valid_record)
+from steps.storage import load_json, save_json
 
 
-def _load_outputs() -> Dict[str, str]:
-    if config.OUTPUTS_JSON.exists():
-        return json.loads(config.OUTPUTS_JSON.read_text())
-    return {}
-
-
-def _save_outputs(outputs: Dict[str, str]) -> None:
-    config.BUILD.mkdir(parents=True, exist_ok=True)
-    config.OUTPUTS_JSON.write_text(json.dumps(outputs, indent=2, ensure_ascii=False))
-
-
-def _load_state() -> dict:
-    if config.BATCH_STATE.exists():
-        return json.loads(config.BATCH_STATE.read_text())
-    return {}
-
-
-def _save_state(state: dict) -> None:
-    config.BUILD.mkdir(parents=True, exist_ok=True)
-    config.BATCH_STATE.write_text(json.dumps(state, indent=2))
-
-
-def _params(prompt: str) -> MessageCreateParamsNonStreaming:
-    params: dict = {
-        "model": config.MODEL,
-        "max_tokens": config.OUTPUT_MAX_TOKENS,
-        "system": SYSTEM,
-        "messages": [{"role": "user", "content": prompt}],
-    }
+def _params(prompt):
+    params = {"model": config.MODEL, "max_tokens": config.OUTPUT_MAX_TOKENS,
+              "system": OUTPUT_SYSTEM, "messages": [{"role": "user", "content": prompt}]}
     if config.OUTPUT_EFFORT:
         params["output_config"] = {"effort": config.OUTPUT_EFFORT}
-    return MessageCreateParamsNonStreaming(**params)
+    return params
 
 
-def _harvest(client: anthropic.Anthropic, batch_id: str,
-             outputs: Dict[str, str]) -> Dict[str, int]:
-    """Ek khatam ho chuke batch ke results uthao. Results kisi bhi order mein aate
-    hain — isliye hamesha custom_id se match karo, position se kabhi nahi."""
-    tally = {"succeeded": 0, "errored": 0, "canceled": 0, "expired": 0, "empty": 0}
-
-    for result in client.messages.batches.results(batch_id):
-        kind = result.result.type
-        if kind != "succeeded":
-            tally[kind] = tally.get(kind, 0) + 1
-            if kind == "errored":
-                print(f"    ! {result.custom_id}: {result.result.error.type}")
-            continue
-
-        msg = result.result.message
-        text = "\n".join(b.text for b in msg.content if b.type == "text").strip()
-        if not text:
-            tally["empty"] += 1
-            continue
-        outputs[result.custom_id] = text
-        tally["succeeded"] += 1
-
-    _save_outputs(outputs)
-    return tally
+def _snapshot(catalog):
+    return digest({"catalog": catalog, "settings": settings_hash()})
 
 
-def _wait(client: anthropic.Anthropic, batch_id: str, poll_seconds: int = 30):
+def ready_items(catalog, outputs, attempted=()):
+    return [i for i in required_items(catalog, outputs)
+            if i["prompt"] is not None and i["key"] not in attempted
+            and not valid_record(outputs.get(i["key"]), i["prompt"])]
+
+
+def _wait(client, batch_id, poll_seconds, timeout):
+    deadline = time.monotonic() + timeout
     while True:
         batch = client.messages.batches.retrieve(batch_id)
         if batch.processing_status == "ended":
-            return batch
-        counts = batch.request_counts
-        print(f"    {batch.processing_status}: {counts.succeeded} done, "
-              f"{counts.processing} running, {counts.errored} errored",
-              flush=True)
-        time.sleep(poll_seconds)
+            return
+        if time.monotonic() >= deadline:
+            raise TimeoutError("Batch still running; saved state intact. Run outputs again to resume.")
+        print(f"  Batch {batch_id}: {batch.processing_status}", flush=True)
+        time.sleep(min(poll_seconds, max(0, deadline - time.monotonic())))
 
 
-def run(catalog: dict, poll_seconds: int = 30) -> Dict[str, str]:
-    client = anthropic.Anthropic()
-    outputs = _load_outputs()
-    state = _load_state()
+def _usage(message):
+    usage = getattr(message, "usage", None)
+    if hasattr(usage, "model_dump"):
+        return usage.model_dump()
+    return {name: getattr(usage, name, 0) for name in ("input_tokens", "output_tokens")}
 
-    # Pichhli baar ka batch adhoora chhoot gaya tha? Pehle usi ko khatam karo.
-    if state.get("batch_id"):
-        bid = state["batch_id"]
-        print(f"  Pehle se chal raha batch mila: {bid}")
-        _wait(client, bid, poll_seconds)
-        tally = _harvest(client, bid, outputs)
-        print(f"  Uthaya gaya: {tally}")
-        _save_state({})
 
-    items = collect_items(catalog)
-    todo = [i for i in items if i["key"] not in outputs]
-    print(f"  {len(items)} prompts total, {len(items) - len(todo)} pehle se ho chuke, "
-          f"{len(todo)} baaki")
-    if not todo:
-        return outputs
+def _harvest(client, state, outputs):
+    failures = load_json(config.FAILURE_JSON, {})
+    usage_log = load_json(config.USAGE_JSON, {})
+    seen = set()
+    items = {i["key"]: i for i in state["items"]}
+    for result in client.messages.batches.results(state["batch_id"]):
+        key = result.custom_id
+        if key not in items or key in seen:
+            raise ValueError("Unexpected/duplicate result ID; batch state preserved")
+        seen.add(key)
+        kind = result.result.type
+        reason = kind
+        if kind == "succeeded":
+            msg = result.result.message
+            text = "\n".join(b.text for b in msg.content if b.type == "text").strip()
+            reason = getattr(msg, "stop_reason", None)
+            usage = _usage(msg)
+            # Truncated/refused messages are billed too. Reharvesting must not double-count.
+            usage_log[f"{state['batch_id']}:{key}"] = {
+                "stage": "outputs", "batch": True, "usage": usage,
+                "model": getattr(msg, "model", config.MODEL), "stop_reason": reason,
+                "estimated_usd": (usage.get("input_tokens", 0) * config.PRICE_IN_PER_MTOK
+                                  + usage.get("output_tokens", 0) * config.PRICE_OUT_PER_MTOK)
+                                  / 1e6 * config.BATCH_DISCOUNT}
+            save_json(config.USAGE_JSON, usage_log)
+            if reason == "end_turn" and text:
+                outputs[key] = {"status": "succeeded", "stop_reason": reason,
+                                "input": items[key]["prompt"], "output": text,
+                                "fingerprint": fingerprint(items[key]["prompt"]),
+                                "output_sha256": digest(text),
+                                "generated_at": datetime.now(timezone.utc).isoformat(),
+                                "model": getattr(msg, "model", config.MODEL),
+                                "batch_id": state["batch_id"], "usage": usage}
+                failures.pop(key, None)
+                save_json(config.OUTPUTS_JSON, outputs)
+                save_json(config.FAILURE_JSON, failures)
+                continue
+            reason = reason if text else "empty"
+        failures[key] = {"reason": reason, "batch_id": state["batch_id"],
+                         "fingerprint": fingerprint(items[key]["prompt"])}
+        save_json(config.FAILURE_JSON, failures)
+    if seen != set(items):
+        raise ValueError("Incomplete result stream; resume preserved batch, do not resubmit")
 
-    requests = [Request(custom_id=i["key"], params=_params(i["prompt"])) for i in todo]
-    batch = client.messages.batches.create(requests=requests)
-    _save_state({"batch_id": batch.id, "count": len(todo)})
-    print(f"  Batch bheja: {batch.id} ({len(todo)} requests)")
-    print("  Zyadatar batch 1 ghante mein poore hote hain (max 24 ghante).")
-    print("  Yahan rukna zaroori nahi — Ctrl+C dabao aur baad mein dobara chalao,")
-    print("  ye wahin se uthayega jahan chhoda tha.")
 
-    _wait(client, batch.id, poll_seconds)
-    tally = _harvest(client, batch.id, outputs)
-    _save_state({})
-
-    print(f"  Nateeja: {tally}")
-    if tally["errored"] or tally["expired"]:
-        print("  Jo fail hue unhe dobara chalane ke liye ye step phir se chala do.")
+def run(catalog, poll_seconds=30, timeout=3600, client=None):
+    if poll_seconds < 1 or timeout < 1:
+        raise ValueError("poll and timeout must be positive")
+    problems = catalog_issues(catalog)
+    if problems:
+        raise ValueError("Catalog invalid: " + "; ".join(problems[:10]))
+    state = load_json(config.BATCH_STATE, {})
+    snapshot = _snapshot(catalog)
+    if state and state.get("snapshot") != snapshot:
+        raise ValueError("Pending batch has different catalog/settings. Restore those before resuming.")
+    if state and not state.get("batch_id"):
+        raise ValueError("Submission outcome uncertain. Check provider batch list and recover its ID "
+                         "in batch_state.json; do not blindly resubmit or delete state.")
+    live_client = client is None
+    if live_client:
+        import anthropic
+        from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
+        from anthropic.types.messages.batch_create_params import Request
+        client = anthropic.Anthropic(max_retries=0)
+    outputs = load_json(config.OUTPUTS_JSON, {})
+    attempted = set()
+    if state:
+        _wait(client, state["batch_id"], poll_seconds, timeout)
+        _harvest(client, state, outputs)
+        attempted.update(i["key"] for i in state["items"])
+        save_json(config.BATCH_STATE, {})
+    while True:
+        items = ready_items(catalog, outputs, attempted)
+        if not items:
+            break
+        # Intent before network: a timeout is ambiguous, not permission to retry.
+        state = {"snapshot": snapshot, "items": items, "status": "submitting"}
+        save_json(config.BATCH_STATE, state)
+        requests = ([Request(custom_id=i["key"],
+                             params=MessageCreateParamsNonStreaming(**_params(i["prompt"])))
+                     for i in items] if live_client else
+                    [{"custom_id": i["key"], "params": _params(i["prompt"])} for i in items])
+        batch = client.messages.batches.create(requests=requests)
+        state.update(batch_id=batch.id, status="submitted")
+        save_json(config.BATCH_STATE, state)
+        print(f"  Submitted {len(items)} requests in {batch.id}")
+        _wait(client, batch.id, poll_seconds, timeout)
+        _harvest(client, state, outputs)
+        attempted.update(i["key"] for i in items)
+        save_json(config.BATCH_STATE, {})
+        # Successful predecessor output now unlocks the next workflow step.
+    missing = [i["key"] for i in required_items(catalog, outputs)
+               if i["prompt"] is None or not valid_record(outputs.get(i["key"]), i["prompt"])]
+    if missing:
+        raise ValueError(f"{len(missing)} outputs failed/blocked; inspect failures.json. "
+                         "No automatic retries. Re-running may spend money.")
     return outputs

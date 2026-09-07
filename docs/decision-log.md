@@ -1,5 +1,27 @@
 # फ़ैसलों का पूरा रिकॉर्ड (Decision Log)
 
+## 2026-09-07: समीक्षा के बाद सुधार - यही वर्तमान निर्णय है
+
+नीचे का पुराना रिकॉर्ड ऐतिहासिक है। उसके market rankings, CTR/CPA, $41 AOV,
+"zero risk", "no competition", "5 hours saved", "100 emails = proven demand"
+और छोटे test की ₹40 लागत को सत्यापित तथ्य न मानें।
+वर्तमान निर्णय [strategy.md](strategy.md) और [roadmap.md](roadmap.md) में हैं।
+
+- Default pilot अब 5 prompts + 1 workflow है; beta/full caches अलग हैं।
+- QC missing outputs/workflows को असफल करता है।
+- Workflow steps अब वास्तविक पूर्व output पर निर्भर हैं।
+- Cache input/model fingerprints और output provenance रखता है।
+- पुराने lead-magnet samples को verified API outputs कहना उचित नहीं था।
+  उनकी जगह स्पष्ट fictional editorial examples दिए गए हैं।
+- Student initials को anonymization बताना हटाया; privacy और factual checks बढ़ाए।
+- PDF को browser-free exporter, clickable index, bookmarks और page numbers दिए।
+- बड़ा paid product, real teacher review, live API test और sales funnel अभी बाकी हैं।
+- कोई API खर्च, ad launch, customer outreach या checkout activation नहीं किया गया।
+
+---
+
+## ऐतिहासिक रिकॉर्ड - वर्तमान execution instructions नहीं
+
 यह दस्तावेज़ बताता है कि **अब तक क्या-क्या तय हुआ और क्यों** — शुरुआत से आज तक।
 कुछ महीने बाद जब याद न रहे कि फ़लाँ फ़ैसला क्यों लिया था, तो यही फ़ाइल खोलिए।
 
