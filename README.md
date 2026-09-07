@@ -17,7 +17,9 @@ farak product ko alag karta hai — aur wahi unke liye haath se karna namumkin h
 | Path | Kya hai |
 |---|---|
 | [`docs/strategy.md`](docs/strategy.md) | **Yahan se shuru karo.** Poora market research — niche kyun chuna, unit economics, campaign settings, 5 ready ad scripts, Meta policy ke jaal, 14-din ka plan |
+| [`docs/decision-log.md`](docs/decision-log.md) | **फ़ैसलों का पूरा रिकॉर्ड (देवनागरी में)** — अब तक क्या-क्या तय हुआ और क्यों, कौन से niche रद्द हुए, पैसा कहाँ लगेगा, अभी की स्थिति और बाक़ी काम |
 | [`docs/plan-b-thekedar-kit.md`](docs/plan-b-thekedar-kit.md) | Ek alag, India-only, kam budget wala plan. Side mein rakha hua |
+| [`deliverables/lead-magnet.pdf`](deliverables/lead-magnet.pdf) | **Muft lead magnet — banaa hua PDF.** 25 prompts, 3 ke saath asli output. Seedha baant sakte ho |
 | [`toolkit/`](toolkit/) | Product banane wali pipeline. Detail: [`toolkit/README.md`](toolkit/README.md) |
 
 ---
@@ -34,8 +36,12 @@ pip install -r requirements.txt
 python3 lead_magnet.py          # koi API call nahi, koi kharcha nahi
 ```
 
-`build/lead-magnet.pdf` banta hai — 25 prompts, 3 ke saath asli sample output.
-Ye teacher wale Facebook groups mein muft baanto, badle mein email lo.
+`build/lead-magnet.pdf` banta hai. **Ya seedha
+[`deliverables/lead-magnet.pdf`](deliverables/lead-magnet.pdf) uthao — wahi file
+pehle se repo mein padi hai**, kuch chalane ki zaroorat hi nahi.
+
+25 prompts, 3 ke saath asli sample output. Ye teacher wale Facebook groups mein
+muft baanto, badle mein email lo.
 
 - 3 din mein **100+ email** → maang asli hai, aage badho
 - **20 se kam** → angle galat hai. **~₹14,000 bach gaye**

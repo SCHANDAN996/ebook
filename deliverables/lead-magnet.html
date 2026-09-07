@@ -1,0 +1,437 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<title>25 AI Prompts That Save Teachers 5 Hours a Week</title><style>
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+* { box-sizing: border-box; }
+body { font: 10.5pt/1.55 "Segoe UI", -apple-system, Helvetica, Arial, sans-serif;
+       color: #1b1f24; margin: 0; }
+code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em;
+       background: #eef1f4; padding: 1px 4px; border-radius: 3px; }
+
+.cover { height: 245mm; display: flex; flex-direction: column;
+         justify-content: center; page-break-after: always; }
+.cover h1 { font-size: 34pt; line-height: 1.1; margin: 0 0 10mm; letter-spacing: -0.5pt; }
+.cover .sub { font-size: 14pt; color: #47515c; margin-bottom: 22mm; }
+.cover .promise { font-size: 11pt; border-left: 3px solid #1b1f24;
+                  padding-left: 6mm; color: #2b333c; max-width: 120mm; }
+
+h2.section { font-size: 20pt; margin: 0 0 2mm; page-break-before: always;
+             page-break-after: avoid; letter-spacing: -0.3pt; }
+h2.section + .sectionnote { color: #6b7580; font-size: 9.5pt; margin: 0 0 8mm; }
+
+.card { page-break-inside: avoid; margin: 0 0 9mm; padding-bottom: 6mm;
+        border-bottom: 1px solid #e3e7eb; }
+.card h3 { font-size: 12.5pt; margin: 0 0 1.5mm; }
+.meta { font-size: 8.5pt; color: #6b7580; margin: 0 0 3mm; }
+.meta span { display: inline-block; border: 1px solid #d5dae0; border-radius: 3px;
+             padding: 0.5mm 2mm; margin-right: 2mm; }
+.use { font-size: 9.5pt; color: #3d4650; margin: 0 0 4mm; }
+
+.label { font-size: 8pt; letter-spacing: 0.9pt; text-transform: uppercase;
+         color: #6b7580; margin: 0 0 1.5mm; }
+.prompt { background: #f5f7f9; border: 1px solid #e3e7eb; border-radius: 4px;
+          padding: 4mm; white-space: pre-wrap; font-size: 9.5pt;
+          font-family: "SF Mono", Menlo, Consolas, monospace; }
+.output { border-left: 3px solid #cfd6dd; padding: 0 0 0 5mm; margin-top: 5mm; }
+.output h4, .output h5, .output h6 { font-size: 10.5pt; margin: 4mm 0 1.5mm; }
+.output p, .output li { font-size: 9.5pt; }
+.output ul, .output ol { margin: 1.5mm 0 1.5mm 5mm; padding: 0; }
+.raw { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 8.5pt;
+       white-space: pre-wrap; color: #3d4650; }
+.trimmed { font-size: 8.5pt; color: #6b7580; font-style: italic; margin-top: 2mm; }
+.missing { font-size: 9pt; color: #9aa3ac; font-style: italic; }
+
+.note { background: #fbf7ec; border: 1px solid #e8dcc0; border-radius: 4px;
+        padding: 4mm; font-size: 9pt; margin: 0 0 8mm; }
+.toc { page-break-after: always; }
+.toc li { margin-bottom: 1.5mm; }
+.wf { page-break-inside: avoid; margin-bottom: 9mm; }
+.wf .step { margin: 4mm 0 0 5mm; padding-left: 4mm; border-left: 2px solid #e3e7eb; }
+footer { margin-top: 14mm; padding-top: 4mm; border-top: 1px solid #e3e7eb;
+         font-size: 8.5pt; color: #6b7580; }
+</style></head><body>
+<div class='cover'><h1>25 AI Prompts That Save Teachers 5 Hours a Week</h1>
+<p class='sub'>Copy, paste, fill in the brackets. Works in ChatGPT, Claude and Gemini.</p>
+<p class='promise'>Three of them are shown with the real output they produced, so you can see what you are actually getting.</p></div>
+<div class='note'><strong>Before you start.</strong> Never paste a student&#x27;s name, ID, or any identifying detail into an AI tool. Use initials or &#x27;Student A&#x27;. Everything these prompts produce is a first draft — read it before it reaches a student, a family, or a permanent record.</div>
+<h2 class='section'>Planning</h2>
+<p class='sectionnote'>5 prompts</p>
+<div class='card'>
+<h3>1. A full lesson plan from one standard</h3>
+<p class='meta'><span>K-2 · 3-5 · 6-8 · 9-12</span></p>
+<p class='use'>You have the standard and 40 minutes. This writes the whole plan.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>You are an experienced [GRADE] teacher planning a [MINUTES]-minute lesson on [TOPIC], aligned to [STANDARD CODE OR DESCRIPTION].
+
+Write the full plan with these sections and nothing else:
+1. Learning objective, in student-facing &quot;I can&quot; language
+2. Warm-up (3-5 min) that surfaces prior knowledge
+3. Mini-lesson with the exact steps I model, in order
+4. Guided practice, including what I circulate and look for
+5. Independent practice
+6. Exit ticket — one question that would actually reveal who did not get it
+7. The single most common misconception on this topic, and the exact question I ask to catch it
+
+Keep every section short enough to read at a glance while teaching. No introduction, no summary.</div>
+</div>
+<div class='card'>
+<h3>2. Emergency sub plan in 5 minutes</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>You are sick at 6am. This writes a plan a stranger can teach.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Write a substitute teacher plan for [GRADE] [SUBJECT] for [NUMBER] periods.
+
+Assume the sub knows nothing about my class and may not know the subject. The work must be meaningful, not busywork, and must need no preparation or special materials.
+
+Include:
+- A 3-line &quot;what this class is like&quot; note
+- Minute-by-minute timing for each period
+- Exactly what to write on the board
+- The task itself, written out in full so it can be photocopied
+- What to do if students finish early
+- What to leave me a note about
+
+Write it as one page the sub can follow top to bottom.</div>
+</div>
+<div class='card'>
+<h3>3. A week of bell ringers</h3>
+<p class='meta'><span>3-5 · 6-8 · 9-12</span></p>
+<p class='use'>Five warm-ups that spiral back to what they keep forgetting.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Create 5 bell ringers (one per day) for [GRADE] [SUBJECT], each taking under 5 minutes.
+
+They must spiral: Monday and Tuesday review [TOPIC THEY KEEP FORGETTING], Wednesday and Thursday preview [THIS WEEK&#x27;S TOPIC], Friday mixes both.
+
+For each day give me: the question exactly as students will see it, the answer, and one sentence on what a wrong answer tells me.</div>
+</div>
+<div class='card'>
+<h3>4. Unit skeleton from a end goal</h3>
+<p class='meta'><span>6-8 · 9-12</span></p>
+<p class='use'>Work backwards from the assessment instead of forwards from day one.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>I am planning a [NUMBER]-week unit on [TOPIC] for [GRADE]. The unit ends with [FINAL ASSESSMENT].
+
+Work backwards. Give me:
+- The 4-6 things students must be able to do to succeed on that assessment
+- Those skills sequenced across the weeks, with a reason for the order
+- One checkpoint per week that tells me who is off track early
+- The two lessons in this unit most likely to go wrong, and why
+
+Table format, one row per week.</div>
+</div>
+<div class='card'>
+<h3>5. Turn a textbook chapter into a lesson</h3>
+<p class='meta'><span>6-8 · 9-12</span></p>
+<p class='use'>The book has the content. It does not have a lesson.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Below is a textbook section for [GRADE] [SUBJECT]. Turn it into a [MINUTES]-minute lesson that does not involve reading it aloud.
+
+Give me: a hook that creates a question the text answers, the 3 ideas worth keeping (and what to cut), an activity that makes students use the ideas rather than restate them, and an exit ticket.
+
+TEXT:
+[PASTE THE SECTION HERE]</div>
+</div>
+<h2 class='section'>Report cards</h2>
+<p class='sectionnote'>3 prompts</p>
+<div class='card'>
+<h3>6. 28 report card comments from a score list</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>The single biggest time sink of the term, done in one pass.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>I am writing report card comments for [GRADE] [SUBJECT].
+
+Below is my class list as &quot;Student initials | overall grade | one or two keywords about them&quot;. For each student write a comment of [NUMBER] sentences that:
+- opens with a specific strength, not a generic compliment
+- names one concrete next step the student can act on
+- is written to be read by a parent, warm but honest
+- never compares one student to another
+
+Vary the sentence openings — comments that all start the same way read as copy-paste.
+
+CLASS LIST:
+[A.B. | B+ | strong writer, rushes edits]
+[C.D. | C | participates, struggles with multi-step problems]
+[PASTE THE REST]</div>
+<div class='output'><p class='label'>What it produced</p>
+<p><strong>A.B. — B+</strong></p>
+<p>A.B. writes with a confidence that shows in every first draft, and this term her opening paragraphs have become genuinely persuasive. Her next step is editing: she reaches the end of a piece and stops, when a second pass is where her writing would go from good to strong. Asking her to reread one paragraph aloud before submitting would make a visible difference.</p>
+<p><strong>C.D. — C</strong></p>
+<p>C.D. contributes to every class discussion and is often the first to attempt a question others avoid — that willingness is a real strength. Multi-step problems are where the difficulty sits: he understands each step alone but loses the thread partway through. Working through problems by writing each step on its own line, rather than solving in his head, is the habit to build this term.</p>
+</div>
+</div>
+<div class='card'>
+<h3>7. Rewrite a blunt comment</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>You know what you mean. This makes it survivable for a parent.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Rewrite the report card comment below so it is honest but not deflating for a parent to read.
+
+Keep every fact. Do not soften it into meaninglessness — the parent must still understand there is a problem and what to do about it. Give me three versions: gentle, direct, and firm.
+
+COMMENT:
+[PASTE YOUR DRAFT]</div>
+</div>
+<div class='card'>
+<h3>8. A comment bank you can reuse all year</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>Build it once in January, use it every term after.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Build a report card comment bank for [GRADE] [SUBJECT].
+
+Give me 6 comments for each of these bands: excelling, secure, approaching, struggling, and inconsistent effort.
+
+Each comment must have a blank [NAME] and one blank [SPECIFIC EXAMPLE] so I can drop in something real. Vary the openings across the bank. Group them under headings.</div>
+</div>
+<h2 class='section'>Parent emails</h2>
+<p class='sectionnote'>4 prompts</p>
+<div class='card'>
+<h3>9. The email you have been putting off</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>A concern email that does not turn into a meeting about your tone.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Write an email to a parent about a concern.
+
+Concern: [WHAT IS HAPPENING]
+What I have already tried: [WHAT YOU TRIED]
+What I want from this email: [A MEETING / AWARENESS / SUPPORT AT HOME]
+
+Rules: open with something genuine and specific about the child. State the concern in plain terms without jargon or diagnosis language. Describe behaviour, never character. End with one clear ask. Under 200 words. No emoji.
+
+Then give me a shorter version for a parent who does not read long emails.</div>
+<div class='output'><p class='label'>What it produced</p>
+<p><strong>Subject: A quick note about maths homework</strong></p>
+<p>Dear [Parent name],</p>
+<p>I want to start by saying that [Student] has been one of the steadiest contributors in our class discussions this term — he asks the question everyone else is thinking, which takes some courage.</p>
+<p>I am writing because homework has not been coming in for the past three weeks. I have checked that he has the assignments written down, moved his seat closer to the board, and offered lunchtime catch-up sessions twice. None of it has changed the pattern, so I think I am missing something about what is getting in the way at this end of the day.</p>
+<p>Would you have fifteen minutes this week for a phone call? I would rather understand what is happening than keep guessing.</p>
+<p>Best wishes, [Your name]</p>
+<div class="raw">---</div>
+<p><strong>Shorter version</strong></p>
+<p>Dear [Parent name],</p>
+<p>[Student] contributes well in class, but homework has not come in for three weeks. I have tried reminders, a seat change, and lunchtime sessions without a change.</p>
+<p>Could we speak for fifteen minutes this week? I would like to understand what is getting in the way.</p>
+<p>Best wishes, [Your name]</p>
+</div>
+</div>
+<div class='card'>
+<h3>10. Positive notes home, ten at a time</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>The highest-return five minutes in teaching.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Write 10 short positive notes home for [GRADE], one per student, based on the notes below.
+
+Each must be 2-3 sentences, name something specific (not &quot;a pleasure to teach&quot;), and sound like a real person wrote it. Vary the structure so they do not read as a template.
+
+STUDENTS:
+[A.B. — helped a new student find the room]
+[C.D. — finally asked for help instead of staying stuck]
+[PASTE THE REST]</div>
+</div>
+<div class='card'>
+<h3>11. Conference prep one-pager</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>Ten minutes per family, and you have 24 families.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>I have parent conferences for [GRADE] [SUBJECT]. Each is [MINUTES] minutes.
+
+From the notes below, build me a one-page card per student with: one strength with evidence, one growth area with evidence, one thing to ask the parent, and one thing the parent can do at home. Keep each card to what I can scan in 20 seconds.
+
+NOTES:
+[PASTE YOUR NOTES]</div>
+</div>
+<div class='card'>
+<h3>12. Class newsletter from rough notes</h3>
+<p class='meta'><span>K-2 · 3-5</span></p>
+<p class='use'>Bullet points in, finished newsletter out.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Turn these rough notes into a warm, scannable class newsletter for [GRADE] families for the week of [DATE].
+
+Sections: what we learned, what is coming up, dates to remember, how to help at home. Keep it under 300 words, use headings, and write at a reading level any parent can follow.
+
+NOTES:
+[PASTE YOUR BULLET POINTS]</div>
+</div>
+<h2 class='section'>Differentiation</h2>
+<p class='sectionnote'>4 prompts</p>
+<div class='card'>
+<h3>13. One task, three levels</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>Same lesson, three entry points, no extra planning period.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Take the task below for [GRADE] [SUBJECT] and give me three versions:
+
+- Scaffolded: same thinking, more support (sentence starters, worked example, chunked steps)
+- On-level: as written, tightened if needed
+- Extension: same topic, genuinely harder thinking — not just more questions
+
+All three must be able to run in the same room at the same time, and end with students able to share in one discussion.
+
+TASK:
+[PASTE YOUR TASK]</div>
+<div class='output'><p class='label'>What it produced</p>
+<p><strong>Scaffolded version</strong></p>
+<p>Same question, more support:</p>
+<ul>
+<li>A worked example of a similar problem sits at the top of the page</li>
+<li>The task is broken into three labelled steps rather than one instruction</li>
+<li>Sentence starters for the explanation: &quot;I know ___ because ___&quot;, &quot;First I ___, then I ___&quot;</li>
+<li>The numbers are chosen so the arithmetic never blocks the thinking</li>
+</ul>
+<p><strong>On-level version</strong></p>
+<p>The task as written, with one change: the instruction now names the format of the answer (&quot;explain your reasoning in two sentences&quot;), which removes the ambiguity most students stall on.</p>
+<p><strong>Extension version</strong></p>
+<p>Same topic, harder thinking — not more questions:</p>
+<ul>
+<li>One of the given values is removed; students must decide what information they would need and justify it</li>
+<li>A second part asks: &quot;A classmate got [wrong answer]. What did they most likely do?&quot;</li>
+</ul>
+<p><strong>Running all three together</strong></p>
+<p>All three end at the same discussion question, so the share-out works as one conversation. Circulate to the scaffolded group first — they need you in the first four minutes; the extension group needs you at minute twelve.</p>
+</div>
+</div>
+<div class='card'>
+<h3>14. Rewrite a text to a lower reading level</h3>
+<p class='meta'><span>3-5 · 6-8 · 9-12</span></p>
+<p class='use'>Keep the ideas. Lose the barrier.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Rewrite the passage below for [GRADE] students reading roughly [NUMBER] years below grade level.
+
+Keep every key idea and all subject vocabulary — define the vocabulary in place rather than removing it. Shorten sentences, make the structure obvious, and add a heading every few paragraphs.
+
+Then list the 5 words a student may still get stuck on, with a student-friendly definition each.
+
+PASSAGE:
+[PASTE THE TEXT]</div>
+</div>
+<div class='card'>
+<h3>15. Supports for multilingual learners</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>Access to the lesson, not a different lesson.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>For the [GRADE] [SUBJECT] lesson below, give me supports for students still developing English.
+
+I need: the 6 words that will block comprehension with a plain definition and a visual I could sketch, sentence frames for the discussion, a way for a student to show understanding without writing a paragraph, and one thing I should say differently while teaching.
+
+Do not simplify the content or lower the expectation — only the language load.
+
+LESSON:
+[PASTE YOUR PLAN]</div>
+</div>
+<div class='card'>
+<h3>16. Real work for early finishers</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>Not a word search. Something that actually extends.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Students finishing [TASK] early in [GRADE] [SUBJECT] need something that extends the same thinking, not filler.
+
+Give me 5 options that: need no new instruction from me, take 5-15 minutes, use only what is already on their desk, and could be shared with the class in one sentence.
+
+For each, say in one line what deeper thinking it demands.</div>
+</div>
+<h2 class='section'>Assessment</h2>
+<p class='sectionnote'>4 prompts</p>
+<div class='card'>
+<h3>17. A quiz with an answer key and a diagnosis</h3>
+<p class='meta'><span>3-5 · 6-8 · 9-12</span></p>
+<p class='use'>Every wrong answer tells you something specific.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Write a [NUMBER]-question quiz on [TOPIC] for [GRADE].
+
+Mix recall, application, and one question that needs reasoning. For each question give me: the question, the answer, and — for each wrong option — what a student choosing it probably misunderstands.
+
+Then tell me which 2 questions to look at first when I grade, to find out fastest who needs reteaching.</div>
+</div>
+<div class='card'>
+<h3>18. A single-point rubric</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>One column of criteria. Faster to write, far faster to grade.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Build a single-point rubric for [ASSIGNMENT] in [GRADE] [SUBJECT].
+
+Format: a centre column stating what proficient looks like for each criterion, with blank columns either side for &quot;needs work&quot; and &quot;exceeds&quot; that I fill in per student. Use 4-5 criteria maximum, written in language a [GRADE] student can read and act on.
+
+Then give me 3 feedback sentences per criterion that I can reuse.</div>
+</div>
+<div class='card'>
+<h3>19. Exit tickets that actually sort the class</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>One question that separates &#x27;got it&#x27; from &#x27;nodded along&#x27;.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Write 5 exit ticket questions for [TOPIC] in [GRADE] [SUBJECT].
+
+Each must be answerable in under 3 minutes and must distinguish real understanding from surface repetition — a student who only copied the steps should get it wrong.
+
+For each, tell me what a correct answer proves and what the most likely wrong answer tells me to reteach.</div>
+</div>
+<div class='card'>
+<h3>20. Questions aimed at one misconception</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>You know exactly what they are getting wrong. Target it.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>My [GRADE] students are consistently making this mistake in [SUBJECT]: [DESCRIBE THE MISTAKE].
+
+Give me 6 questions designed so that a student holding this misconception gets them wrong in a visible way, plus 2 where the misconception does not matter — so I can tell it apart from a general struggle.
+
+Then give me the sequence of 3 questions I would ask one student, out loud, to walk them out of it.</div>
+</div>
+<h2 class='section'>Worksheets</h2>
+<p class='sectionnote'>2 prompts</p>
+<div class='card'>
+<h3>21. A worksheet that ramps properly</h3>
+<p class='meta'><span>K-2 · 3-5 · 6-8</span></p>
+<p class='use'>Starts where they are, ends where you want them.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Create a practice worksheet on [TOPIC] for [GRADE].
+
+Structure it in four blocks: 2 warm-up items anyone can do, 5 core items building in difficulty, 2 items that combine this with [EARLIER TOPIC], and 1 challenge.
+
+Include the answer key, and mark which single item is the &quot;if they get this, they have it&quot; question.</div>
+</div>
+<div class='card'>
+<h3>22. A station rotation from one topic</h3>
+<p class='meta'><span>K-2 · 3-5 · 6-8</span></p>
+<p class='use'>Four stations, four different ways in, one period.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Design 4 stations on [TOPIC] for [GRADE], [MINUTES] minutes each.
+
+Each station must use a different mode — one hands-on, one reading, one talking, one writing — and must work without me standing there.
+
+For each: the instruction card exactly as students read it, materials (nothing I have to buy), and what I check when I walk past.</div>
+</div>
+<h2 class='section'>Time &amp; admin</h2>
+<p class='sectionnote'>3 prompts</p>
+<div class='card'>
+<h3>23. The email to your admin</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>Professional, short, and it makes the ask clearly.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Write an email to [ADMINISTRATOR ROLE] about [SITUATION].
+
+I want: [WHAT YOU ACTUALLY WANT]. Tone: professional, brief, not apologetic and not confrontational. Lead with the ask, then the context, then what I have already done. Under 150 words.
+
+Then a one-line version for a hallway conversation.</div>
+</div>
+<div class='card'>
+<h3>24. Behaviour reset script</h3>
+<p class='meta'><span>All grades</span></p>
+<p class='use'>What to say when it goes wrong, prepared in advance.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>A [GRADE] student is [DESCRIBE THE BEHAVIOUR]. I want to reset this without a power struggle and without an audience.
+
+Give me: what I say in the moment (under 15 words), what I say to them one-to-one afterwards, and three things NOT to say and why.
+
+Focus on the behaviour and the repair, not on the student&#x27;s character. This is a classroom conversation, not a diagnosis.</div>
+</div>
+<div class='card'>
+<h3>25. Morning meeting for a whole week</h3>
+<p class='meta'><span>K-2 · 3-5</span></p>
+<p class='use'>Five days of openings, built around one thread.</p>
+<p class='label'>The prompt</p>
+<div class='prompt'>Plan 5 morning meetings for [GRADE], 10 minutes each, threaded around [THEME].
+
+Each day: a greeting, a share prompt that a shy student can answer in one sentence, and a 2-minute activity. Build across the week so Friday connects back to Monday.
+
+Keep the prompts about things students choose to share, never about home circumstances.</div>
+</div>
+<h2 class='section'>What is in the full toolkit</h2>
+<div class='note'>These 25 are the fastest wins. The full Teacher AI Toolkit has 300 prompts and 12 multi-step workflows — and every single one is printed with the real output it produced, so you can see what you are getting before you run it.</div>
+<footer>25 AI Prompts That Save Teachers 5 Hours a Week &mdash; CHANGE_ME@example.com</footer></body></html>
