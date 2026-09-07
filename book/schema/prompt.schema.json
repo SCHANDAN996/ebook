@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Teacher AI Toolkit prompt metadata",
+  "type": "object",
+  "required": [
+    "id", "slug", "chapter", "subtopic", "title", "grade_bands",
+    "subjects", "sensitivity", "sample_output", "review_status", "content_version"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Z]{2,3}-[0-9]{3}$"},
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "chapter": {"type": "string"},
+    "subtopic": {"type": "string"},
+    "title": {"type": "string", "minLength": 5},
+    "grade_bands": {
+      "type": "array",
+      "items": {"enum": ["K-2", "3-5", "6-8", "9-12", "All"]},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "subjects": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "sensitivity": {"enum": ["standard", "sensitive"]},
+    "sample_output": {"type": "boolean"},
+    "review_status": {"enum": ["draft", "ai_checked", "subject_reviewed", "approved"]},
+    "content_version": {"type": "integer", "minimum": 1}
+  },
+  "additionalProperties": false
+}
+
