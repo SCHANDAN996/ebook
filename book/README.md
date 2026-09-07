@@ -31,6 +31,11 @@ design and review gates pass.
 7. The master PDF is generated once content is complete, then rendered page by page
    for visual QA before release.
 
+## Phase 2 prototype
+
+Run `python toolkit/run.py design-preview` to build the five-page layout prototype and
+its copy-enabled companion HTML. This is a design approval artifact, not the master
+book. See [`design/design-spec.md`](design/design-spec.md) for the decisions to review.
+
 Generated files never replace the Markdown sources. Do not put API keys, student
 records or unlicensed source material anywhere in this public repository.
-
