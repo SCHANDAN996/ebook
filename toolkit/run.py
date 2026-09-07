@@ -39,7 +39,7 @@ def estimate():
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("command", choices=["estimate", "status", "catalog", "outputs", "build", "qc", "all"])
+    ap.add_argument("command", choices=["estimate", "status", "book-check", "catalog", "outputs", "build", "qc", "all"])
     ap.add_argument("--profile", choices=["pilot", "beta", "full"], default="pilot")
     ap.add_argument("-y", "--yes", action="store_true", help="Explicitly approve API spending")
     ap.add_argument("--budget-usd", type=float, help="Planning allowance acknowledged for this run")
@@ -65,6 +65,13 @@ def main(argv=None):
             usage = load_json(config.USAGE_JSON, {})
             print("Recorded estimated spend: $", round(sum(v.get("estimated_usd", 0) for v in usage.values()), 4))
             print("Batch state:", load_json(config.BATCH_STATE, {}).get("status", "idle"))
+            return 0
+        if args.command == "book-check":
+            from steps import book_content
+            summary = book_content.check()
+            print(f"Book blueprint passed: {summary['chapters']} chapters, "
+                  f"{summary['prompts']} prompts, {summary['workflows']} workflows, "
+                  f"{summary['sample_outputs']} selected full sample outputs.")
             return 0
         if args.command in {"catalog", "outputs", "all"}:
             v = estimate()

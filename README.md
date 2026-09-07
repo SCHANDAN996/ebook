@@ -17,6 +17,7 @@ cross-tool compatibility have not yet been validated.
 
 ```bash
 python -m unittest discover -s tests -v
+python toolkit/run.py book-check
 python toolkit/run.py estimate
 python toolkit/run.py status
 ```
@@ -34,6 +35,13 @@ python toolkit/lead_magnet.py --output-dir deliverables
 Outputs: [PDF](deliverables/lead-magnet.pdf) and [mobile-readable HTML](deliverables/lead-magnet.html).
 No API or browser download is required. A PDF-generation error fails the command.
 The examples are **not** represented as logged AI executions or teacher-tested results.
+
+### Full-book source
+
+The structured source for the planned 300-prompt, 12-workflow master edition lives in
+[`book/`](book/). Its manifest fixes chapter allocations, prompt/workflow templates,
+review boundaries and provisional design tokens before bulk writing begins. No final
+master PDF is generated until the content and design gates pass.
 
 ## Paid generation - only after explicit budget approval
 

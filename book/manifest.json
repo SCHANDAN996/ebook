@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "book_id": "teacher-ai-toolkit",
+  "title": "The Teacher AI Toolkit",
+  "audience": "K-12 classroom teachers",
+  "language": "en",
+  "primary_page_size": "US Letter",
+  "alternate_page_size": "A4",
+  "standalone_prompt_total": 300,
+  "workflow_total": 12,
+  "full_sample_output_target": 60,
+  "copy_experience": "selectable PDF text plus companion HTML copy button",
+  "chapters": [
+    {
+      "order": 1,
+      "id": "lesson-planning",
+      "title": "Lesson Planning",
+      "kind": "prompt",
+      "item_count": 60,
+      "intro": "chapters/01-lesson-planning/chapter.md",
+      "subtopics": {
+        "complete-lessons": 12,
+        "backward-unit-planning": 8,
+        "standards-and-objectives": 8,
+        "warm-ups-and-exit-tickets": 8,
+        "pacing-and-transitions": 6,
+        "substitute-and-emergency-plans": 6,
+        "projects-and-interdisciplinary-lessons": 6,
+        "reflection-and-adaptation": 6
+      }
+    },
+    {
+      "order": 2,
+      "id": "worksheets-activities",
+      "title": "Worksheets & Activities",
+      "kind": "prompt",
+      "item_count": 40,
+      "intro": "chapters/02-worksheets-activities/chapter.md",
+      "subtopics": {
+        "practice-worksheets": 10,
+        "learning-stations": 8,
+        "collaborative-tasks": 6,
+        "review-games": 6,
+        "homework-sets": 5,
+        "project-briefs": 5
+      }
+    },
+    {
+      "order": 3,
+      "id": "assessment-rubrics-quizzes",
+      "title": "Assessment, Rubrics & Quizzes",
+      "kind": "prompt",
+      "item_count": 40,
+      "intro": "chapters/03-assessment-rubrics-quizzes/chapter.md",
+      "subtopics": {
+        "quizzes-and-tests": 10,
+        "formative-checks-and-exit-tickets": 8,
+        "rubrics": 8,
+        "diagnosis-and-misconceptions": 6,
+        "answer-keys-and-feedback": 4,
+        "standards-based-grading": 4
+      }
+    },
+    {
+      "order": 4,
+      "id": "differentiation-mixed-ability",
+      "title": "Differentiation & Mixed Ability",
+      "kind": "prompt",
+      "item_count": 35,
+      "intro": "chapters/04-differentiation-mixed-ability/chapter.md",
+      "subtopics": {
+        "scaffolds": 8,
+        "tiered-tasks": 7,
+        "multilingual-support": 6,
+        "reading-and-accessibility": 6,
+        "extensions": 4,
+        "flexible-grouping": 4
+      }
+    },
+    {
+      "order": 5,
+      "id": "parent-communication",
+      "title": "Parent Communication",
+      "kind": "prompt",
+      "item_count": 30,
+      "intro": "chapters/05-parent-communication/chapter.md",
+      "subtopics": {
+        "positive-notes": 6,
+        "concern-emails": 6,
+        "conference-preparation": 5,
+        "newsletters": 4,
+        "permissions-and-logistics": 4,
+        "clear-and-accessible-language": 3,
+        "difficult-conversations": 2
+      }
+    },
+    {
+      "order": 6,
+      "id": "report-card-comments",
+      "title": "Report Card Comments",
+      "kind": "prompt",
+      "item_count": 30,
+      "intro": "chapters/06-report-card-comments/chapter.md",
+      "subtopics": {
+        "comment-banks": 8,
+        "strengths-and-next-steps": 8,
+        "subject-specific-comments": 7,
+        "bulk-drafts-from-fictional-evidence": 4,
+        "tone-and-rewriting": 3
+      }
+    },
+    {
+      "order": 7,
+      "id": "classroom-management-sel",
+      "title": "Classroom Management & SEL",
+      "kind": "prompt",
+      "item_count": 25,
+      "intro": "chapters/07-classroom-management-sel/chapter.md",
+      "subtopics": {
+        "routines-and-transitions": 6,
+        "behaviour-reset-support": 5,
+        "restorative-conversations": 4,
+        "social-emotional-learning": 4,
+        "morning-meetings": 3,
+        "seating-and-grouping": 3
+      }
+    },
+    {
+      "order": 8,
+      "id": "teacher-admin-paperwork",
+      "title": "Teacher Admin & Paperwork",
+      "kind": "prompt",
+      "item_count": 25,
+      "intro": "chapters/08-teacher-admin-paperwork/chapter.md",
+      "subtopics": {
+        "staff-emails": 5,
+        "agendas-and-minutes": 4,
+        "professional-goals": 4,
+        "observation-reflections": 3,
+        "field-trip-logistics": 3,
+        "clubs-and-duty-plans": 3,
+        "grants-and-proposals": 3
+      }
+    },
+    {
+      "order": 9,
+      "id": "subject-deep-dives",
+      "title": "Subject-Specific Deep Dives",
+      "kind": "prompt",
+      "item_count": 15,
+      "intro": "chapters/09-subject-deep-dives/chapter.md",
+      "subtopics": {
+        "mathematics": 3,
+        "english-language-arts": 3,
+        "science": 3,
+        "social-studies": 3,
+        "arts-physical-education-and-electives": 3
+      }
+    },
+    {
+      "order": 10,
+      "id": "multi-step-workflows",
+      "title": "Multi-Step Teacher Workflows",
+      "kind": "workflow",
+      "item_count": 12,
+      "intro": "chapters/10-multi-step-workflows/chapter.md",
+      "subtopics": {
+        "standard-to-complete-unit": 1,
+        "scores-to-report-comments": 1,
+        "incident-to-parent-conversation": 1,
+        "standard-to-assessment": 1,
+        "mixed-ability-lesson": 1,
+        "emergency-substitute-pack": 1,
+        "project-launch-pack": 1,
+        "parent-conference-pack": 1,
+        "intervention-plan-draft": 1,
+        "field-trip-pack": 1,
+        "weekly-admin-pack": 1,
+        "class-data-reflection": 1
+      }
+    }
+  ]
+}
+
