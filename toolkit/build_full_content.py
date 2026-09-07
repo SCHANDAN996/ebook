@@ -49,13 +49,13 @@ PROMPTS = (
     Prompt("DF-002", "04-differentiation-mixed-ability", "tiered-tasks", "Create three routes to the same objective", "A mixed-readiness class needs different entry points and one shared destination.", ("GRADE_BAND", "SUBJECT_AND_CORE_TASK", "COMMON_OBJECTIVE", "EVIDENCE_OF_MASTERY", "READINESS_EVIDENCE", "TIME_AND_MATERIALS"), "Create scaffolded, on-level and extension versions with equal curricular dignity.", "Return all three student-facing tasks; what changes and what stays fixed; success criteria; likely misconception and teacher check-question for each; flexible assignment guidance; whole-class discussion bridge.", "Grade 5 mathematics; compare fractions; justify using distance from one; fraction strips available.", "3-12", "Any", True),
     Prompt("DF-003", "04-differentiation-mixed-ability", "multilingual-support", "Make a task accessible to multilingual learners", "Language demands may hide subject understanding.", ("GRADE_BAND", "SUBJECT_AND_TASK", "CONTENT_OBJECTIVE", "LANGUAGE_FUNCTION", "LEARNER_LANGUAGE_PROFILES: no names", "WORDS_THAT_MUST_REMAIN", "AVAILABLE_TRANSLATION_SUPPORT"), "Add language support without replacing content learning or assuming proficiency.", "Return: essential vocabulary with plain definitions; visuals to provide; sentence frames at three support levels; partner rehearsal; model response; home-language use options; content-versus-language observation checklist; fade plan.", "Grade 6 social studies; explain cause and effect in migration; newcomers and intermediate English learners; terms push factor and pull factor must remain.", "K-12", "Any"),
     Prompt("DF-004", "04-differentiation-mixed-ability", "reading-and-accessibility", "Adapt text access while preserving meaning", "Learners need a more accessible route into a demanding source.", ("GRADE_BAND", "ORIGINAL_TEXT", "PURPOSE_FOR_READING", "TERMS_TO_PRESERVE", "ACCESS_NEEDS", "MAX_LENGTH", "ASSESSMENT_BOUNDARY"), "Create access supports while clearly separating any adapted text from the original.", "Return: difficulty analysis; chunked original with headings; glossary; optional plain-language companion; guiding questions; audio/visual suggestions; comprehension checks; statement of what was not changed. Do not claim a reading level without a defined measure.", "Grade 9 biology source passage; identify evidence for natural selection; preserve adaptation, variation and selection pressure.", "3-12", "Any"),
-    Prompt("PC-001", "05-parent-communication", "positive-notes", "Write a specific positive family message", "You want to share genuine, evidence-based progress.", ("STUDENT_FIRST_NAME_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "OBSERVED_ACTION", "LEARNING_OR_COMMUNITY_IMPACT", "TONE", "LENGTH", "LANGUAGE"), "Draft a warm message grounded only in supplied evidence.", "Return: subject line; full message; 50-word version. Keep praise specific, avoid labels, preserve placeholders, and invite—not require—a reply.", "Jordan; Grade 7 science; connected two classmates' ideas during a food-web discussion; helped the group revise its model; warm; under 140 words.", "K-12", "Any"),
-    Prompt("PC-002", "05-parent-communication", "concern-emails", "Communicate an academic concern with a next step", "A family needs clear facts and a manageable path forward.", ("STUDENT_FIRST_NAME_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "STRENGTH_EVIDENCE", "CONCERN_EVIDENCE_AND_DATES", "SUPPORT_ALREADY_OFFERED", "REQUESTED_NEXT_STEP", "AVAILABLE_CONTACT_OPTIONS", "TONE_AND_LENGTH"), "Write a factual, collaborative message without blame, diagnosis or invented context.", "Return: neutral subject; full email; brief version; factual consistency check. Separate observation from interpretation and retain all scheduling details exactly.", "Jordan; Grade 7 science; thoughtful discussion contributions; 2 of 4 tasks submitted over two weeks; written reminders and extra class time; 10-minute call; Thursday 3:30 PM or Friday 8:00 AM.", "K-12", "Any", True),
+    Prompt("PC-001", "05-parent-communication", "positive-notes", "Write a specific positive family message", "You want to share genuine, evidence-based progress.", ("STUDENT_LABEL_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "OBSERVED_ACTION", "LEARNING_OR_COMMUNITY_IMPACT", "TONE", "LENGTH", "LANGUAGE"), "Draft a warm message grounded only in supplied evidence.", "Return: subject line; full message; 50-word version. Keep praise specific, avoid labels, preserve placeholders, and invite—not require—a reply.", "Entirely fictional case: Learner A; Grade 7 science; connected two classmates' ideas during a food-web discussion; helped the group revise its model; warm; under 140 words.", "K-12", "Any"),
+    Prompt("PC-002", "05-parent-communication", "concern-emails", "Communicate an academic concern with a next step", "A family needs clear facts and a manageable path forward.", ("STUDENT_LABEL_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "STRENGTH_EVIDENCE", "CONCERN_EVIDENCE_AND_DATES", "SUPPORT_ALREADY_OFFERED", "REQUESTED_NEXT_STEP", "AVAILABLE_CONTACT_OPTIONS", "TONE_AND_LENGTH"), "Write a factual, collaborative message without blame, diagnosis or invented context.", "Return: neutral subject; full email; brief version; factual consistency check. Separate observation from interpretation and retain all scheduling details exactly.", "Entirely fictional case: Learner A; Grade 7 science; thoughtful discussion contributions; 2 of 4 invented practice tasks submitted over two weeks; fictional written reminders and extra class time; 10-minute call; [OPTION 1] or [OPTION 2].", "K-12", "Any", True),
     Prompt("PC-003", "05-parent-communication", "conference-preparation", "Prepare a balanced family conference", "You need an evidence-led conversation that ends with shared actions.", ("GRADE_AND_SUBJECT", "STRENGTH_EVIDENCE", "LEARNING_EVIDENCE", "ATTENDANCE_OR_BEHAVIOR_FACTS_IF_RELEVANT", "SUPPORTS_TRIED", "FAMILY_INPUT_TO_SEEK", "MEETING_LENGTH"), "Create a conference agenda and talking points without speculating about causes.", "Return: opening; evidence summary; work samples to bring; 3 family questions; student-voice question; shared plan table with owner/date/evidence; follow-up message; statements to avoid.", "Grade 5 mathematics; accurate computation but explanations incomplete; three anonymized work samples; 15-minute conference.", "K-12", "Any"),
     Prompt("PC-004", "05-parent-communication", "newsletters", "Draft a useful class newsletter", "Families need a concise update they can act on.", ("GRADE_AND_CLASS", "DATE_RANGE", "LEARNING_HIGHLIGHTS", "UPCOMING_DATES", "AT_HOME_OPTION", "MATERIALS_OR_PERMISSION_NEEDED", "CONTACT_PLACEHOLDER", "LANGUAGE_AND_LENGTH"), "Draft an accessible newsletter with no invented dates or requirements.", "Return: scannable newsletter; plain-text mobile version; translation-ready version with short sentences; missing-information flags; final date/links checklist.", "Grade 3; October 5-9; multiplication arrays and plant needs; museum form due [DATE]; optional array hunt at home; under 300 words.", "K-8", "Any"),
     Prompt("RC-001", "06-report-card-comments", "comment-banks", "Build an evidence-safe comment bank", "You need reusable comments that still sound specific and humane.", ("GRADE_AND_SUBJECT", "LEARNING_OBJECTIVES", "PERFORMANCE_CATEGORIES", "TONE", "LENGTH_RANGE", "RESTRICTED_WORDS_OR_POLICIES"), "Create modular comments with visible evidence placeholders rather than invented claims.", "Return comments for exceeding/meeting/developing/beginning; each includes strength, evidence placeholder and next step; neutral pronoun variants; repetition audit; prohibited-inference checklist.", "Grade 6 science; model systems and explain evidence; four performance categories; 45-65 words; avoid fixed-ability labels.", "K-12", "Any", True),
     Prompt("RC-002", "06-report-card-comments", "strengths-and-next-steps", "Turn evidence into a balanced report comment", "You have assessment evidence and need a concise, defensible comment.", ("STUDENT_NAME_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "OBSERVED_STRENGTHS", "SPECIFIC_EVIDENCE", "NEXT_LEARNING_PRIORITY", "SUPPORT_OR_STRATEGY", "WORD_LIMIT"), "Write a report comment using only supplied evidence.", "Return one comment and a fact trace showing which input supports each sentence. Include one actionable next step; avoid personality, effort or home-support claims unless explicitly evidenced.", "[STUDENT]; Grade 8 mathematics; solves two-step equations accurately; 8/10 on quiz; sign errors with distribution; annotate negative signs; 70 words.", "K-12", "Any"),
-    Prompt("RC-003", "06-report-card-comments", "tone-and-rewriting", "Rewrite a comment for clarity and fairness", "A draft comment may be vague, harsh or unsupported.", ("ORIGINAL_COMMENT", "VERIFIED_EVIDENCE", "GRADE_AND_SUBJECT", "DESIRED_TONE", "WORD_LIMIT", "SCHOOL_POLICY_NOTES"), "Rewrite the comment while preserving verified facts and removing unsupported judgments.", "Return: revised comment; change log categorized as clarity/tone/evidence/actionability; any claim that cannot be retained; one next-step sentence. Do not soften away a material concern.", "Original: 'Jordan is lazy and never finishes anything.' Evidence: 2 of 4 tasks submitted in two weeks after reminders; Grade 7 science; calm and direct; 60 words.", "K-12", "Any"),
+    Prompt("RC-003", "06-report-card-comments", "tone-and-rewriting", "Rewrite a comment for clarity and fairness", "A draft comment may be vague, harsh or unsupported.", ("ORIGINAL_COMMENT", "VERIFIED_EVIDENCE", "GRADE_AND_SUBJECT", "DESIRED_TONE", "WORD_LIMIT", "SCHOOL_POLICY_NOTES"), "Rewrite the comment while preserving verified facts and removing unsupported judgments.", "Return: revised comment; change log categorized as clarity/tone/evidence/actionability; any claim that cannot be retained; one next-step sentence. Do not soften away a material concern.", "Entirely fictional case: 'Learner A is lazy and never finishes anything.' Invented evidence: 2 of 4 practice tasks submitted over two weeks after reminders; Grade 7 science; calm and direct; 60 words.", "K-12", "Any"),
     Prompt("CM-001", "07-classroom-management-sel", "routines-and-transitions", "Design and teach a classroom routine", "A recurring transition is costing time or creating confusion.", ("GRADE_BAND", "ROUTINE_OR_TRANSITION", "CURRENT_OBSERVATIONS", "DESIRED_BEHAVIOR", "TIME_TARGET", "ROOM_CONSTRAINTS", "SCHOOL_EXPECTATIONS"), "Create an explicitly taught routine, not a punishment system.", "Return: observable steps; teacher script; visual cue; model/non-model practice; feedback language; 5-day rehearsal plan; simple time/data tracker; reset procedure; accessibility considerations.", "Grade 4; move from carpet to tables; takes 4 minutes with materials forgotten; goal 90 seconds; narrow aisle.", "K-12", "Any", True),
     Prompt("CM-002", "07-classroom-management-sel", "restorative-conversations", "Prepare a restorative conversation", "A classroom harm needs acknowledgment, repair and reintegration.", ("AGE_OR_GRADE", "OBSERVABLE_INCIDENT_FACTS", "PEOPLE_INVOLVED_AS_ROLES", "IMMEDIATE_SAFETY_ACTIONS", "POLICY_REQUIREMENTS", "CONVERSATION_LENGTH", "KNOWN_NEEDS_OR_ACCOMMODATIONS"), "Create a voluntary, developmentally appropriate conversation guide; do not determine guilt or replace required safeguarding.", "Return: readiness check; private opening; neutral fact statement; questions about impact and needs; repair options; agreement template; follow-up; escalation/safeguarding boundaries; phrases to avoid.", "Grade 8; one student mocked another's presentation; teacher stopped comments and separated seating; school incident log required; 10 minutes.", "K-12", "Any"),
     Prompt("AD-001", "08-teacher-admin-paperwork", "agendas-and-minutes", "Turn notes into accountable meeting minutes", "A team needs concise decisions and next actions from rough notes.", ("MEETING_NAME_AND_DATE", "ATTENDEE_ROLES", "AGENDA", "ROUGH_NOTES", "CONFIRMED_DECISIONS", "ACTION_OWNERS_AND_DATES", "CONFIDENTIALITY_RULES"), "Produce factual minutes without inventing consensus, owners or deadlines.", "Return: attendees; agenda summary; decisions; action table; parking lot; unresolved questions; next meeting placeholder; verification flags. Mark unclear statements as [CONFIRM].", "Grade-level planning meeting; anonymized notes; three confirmed decisions; two tentative actions missing owners.", "K-12", "Any", True),
@@ -198,16 +198,17 @@ not the mathematical target. Remove the sentence frame once the learner explains
 relationship independently.""",
     "05-parent-communication": """**Illustrative email — all names and details are fictional**
 
-**Subject: Science progress and brief check-in for Jordan**
+**Subject: Science progress and brief check-in**
 
-Dear Mr. and Mrs. Lee,
+Dear Family,
 
-Jordan regularly contributes thoughtful ideas during our Grade 7 science discussions.
-Over the past two weeks, Jordan has submitted two of four assigned classwork tasks. I
-have provided written reminders and additional classroom time; two tasks remain.
+In this entirely fictional example, Learner A regularly contributes thoughtful ideas
+during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
+four invented practice tasks. Written reminders and additional classroom time were also
+part of this invented scenario; two fictional tasks remain.
 
 Could we arrange a 10-minute call to make a manageable completion plan? I am available
-Thursday at 3:30 PM or Friday at 8:00 AM. Please let me know whether either time works.
+at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
 
 Sincerely,
 
@@ -217,13 +218,13 @@ Sincerely,
 
 **Teacher check:** Verify recipients, dates, assignment record, time zone and school
 communication policy before sending.""",
-    "06-report-card-comments": """**Illustrative comment — fictional evidence**
+    "06-report-card-comments": """**Illustrative comment — entirely fictional, non-identifying evidence**
 
-Jordan accurately solves one- and two-step equations and demonstrated this on 8 of 10
-items in the latest classroom assessment. Written work is clearest when each inverse
-operation is shown on a separate line. The next priority is distributing negative signs
-consistently across parentheses. Annotating the sign before simplifying will help Jordan
-check this step independently.
+Fictional Learner A accurately solves one- and two-step equations and demonstrated this
+on 8 of 10 invented practice items. The fictional work is clearest when each inverse
+operation is shown on a separate line. The next practice priority is distributing negative
+signs consistently across parentheses. Annotating the sign before simplifying is the
+suggested next strategy in this invented example.
 
 **Fact trace:** “8 of 10” comes from the supplied assessment record; “negative signs”
 comes from the supplied error pattern; the suggested annotation is the teacher-provided
@@ -555,12 +556,56 @@ PARENT_COMMUNICATION_TITLES = {
     ),
 }
 
+REPORT_COMMENT_TITLES = {
+    "comment-banks": (
+        "Build an evidence-safe comment bank",
+        "Create comment starters for four levels of demonstrated mastery",
+        "Build modular strength, evidence and next-step sentence parts",
+        "Create a comment bank that avoids fixed-ability labels",
+        "Write concise comments within a strict character limit",
+        "Create neutral pronoun variants without changing the evidence",
+        "Build a comment bank with visible placeholders for supporting evidence",
+        "Audit a comment bank for repetition, vagueness and invented claims",
+    ),
+    "strengths-and-next-steps": (
+        "Turn evidence into a balanced report comment",
+        "Write a strength statement tied to a specific learning objective",
+        "Convert an error pattern into one achievable next step",
+        "Build a balanced comment from assessment and classroom evidence",
+        "Write a comment when evidence is limited or inconsistent",
+        "Create a learner-friendly next step that families can understand",
+        "Add an instructional strategy without promising a future result",
+        "Audit a report comment using a sentence-by-sentence fact trace",
+    ),
+    "subject-specific-comments": (
+        "Write a mathematics comment about concepts, procedures and reasoning",
+        "Write a science comment about investigation, evidence and explanation",
+        "Write an English language arts comment about reading and writing evidence",
+        "Write a social studies comment about sources, claims and perspective",
+        "Write an arts comment about process, technique and reflection",
+        "Write a physical education comment using observable skill evidence",
+        "Audit subject-specific terminology for accuracy and family clarity",
+    ),
+    "bulk-drafts-from-fictional-evidence": (
+        "Create distinct comment drafts from a fictional evidence table",
+        "Generate bulk comments without mixing one learner's evidence with another",
+        "Vary sentence structure while preserving every supplied fact",
+        "Audit a bulk comment set for duplicates, contradictions and evidence leakage",
+    ),
+    "tone-and-rewriting": (
+        "Rewrite a comment for clarity and fairness",
+        "Replace harsh or vague judgments with verified learning evidence",
+        "Shorten a report comment without removing the material concern",
+    ),
+}
+
 TITLE_CATALOGS = {
     "01-lesson-planning": LESSON_PLANNING_TITLES,
     "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
     "03-assessment-rubrics-quizzes": ASSESSMENT_TITLES,
     "04-differentiation-mixed-ability": DIFFERENTIATION_TITLES,
     "05-parent-communication": PARENT_COMMUNICATION_TITLES,
+    "06-report-card-comments": REPORT_COMMENT_TITLES,
 }
 
 WORKFLOW_TITLES = {
