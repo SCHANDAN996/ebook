@@ -70,9 +70,11 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .copy:hover{background:#66e6d2}
 .copy:active{transform:translateY(1px)}
 .copy.ok{background:var(--warn)}
-.box pre{margin:0; padding:18px; overflow-x:auto; white-space:pre-wrap;
-         word-break:break-word; color:#cfd9e3;
-         font:13px/1.62 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -97,18 +99,21 @@ blockquote strong{color:var(--warn)}
   h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
 
-  /* A tall card must be allowed to split, or every one that does not fit
-     jumps to the next page and leaves half a page blank. */
-  .card{break-inside:auto; padding:0 0 12pt; border:0;
-        border-bottom:1px solid var(--line); border-radius:0; margin-bottom:12pt}
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
   .head{break-after:avoid}
 
   /* The prompt itself stays whole. */
   .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:8pt}
-  .bar{background:#e8f1ef; padding:5pt 9pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:6.6pt; color:var(--accent)}
-  .box pre{color:#131c26; font-size:8.6pt; line-height:1.5; padding:9pt 11pt;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
            white-space:pre-wrap; overflow:visible}
   .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
        letter-spacing:.05em}
