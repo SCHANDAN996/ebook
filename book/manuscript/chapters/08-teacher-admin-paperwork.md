@@ -3,15 +3,15 @@
 **25 prompts**
 
 None of this is teaching, and all of it takes teaching time. These prompts clear
-the paperwork quickly and in a professional register — brief, specific, and asking
-plainly for what you need.
+the paperwork quickly and in a professional register — brief, specific, and
+asking plainly for what you need.
 
 ## What's in here
 
 | Group | Prompts | Use when |
 |---|---|---|
 | Staff emails | 5 | Short, clear, with the ask up front |
-| Agendas and minutes | 4 | Meetings that end on time |
+| Agendas and minutes | 4 | Meetings that end on time and produce something |
 | Professional goals | 4 | Measurable, and actually achievable |
 | Observation reflections | 3 | After a lesson observation |
 | Field trip logistics | 3 | The list you will forget one item from |
@@ -23,1031 +23,972 @@ plainly for what you need.
 Put the ask in the first line. Everything after it is context, and half your
 readers will not reach it.
 
-Do not promise a student outcome in a professional goal. "I will do X and gather
-evidence Y" is a goal you control; "scores will rise 10%" is not.
+Do not promise a student outcome in a professional goal. "I will do X and
+gather evidence Y" is a goal you control; "scores will rise 10%" is not.
 
-Anything with a date, an approval or a policy reference — check it against the
-real document. The model will produce a plausible date.
+Anything with a date, an approval, a cost or a policy reference — check it
+against the real document. The model will produce a plausible date.
 
-Ask for a one-line hallway version alongside the email. You will use it more.
-
-## Every prompt in this chapter
-
-### Agendas And Minutes
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-001 | Turn notes into accountable meeting minutes | All |
-| AD-008 | Build a timed agenda around decisions that must be made | 3-5, 6-8, 9-12 |
-| AD-009 | Convert discussion notes into decisions, actions and a parking lot | 3-5, 6-8, 9-12 |
-| AD-010 | Audit meeting minutes for invented consensus, owners or deadlines | 3-5, 6-8, 9-12 |
-
-### Professional Goals
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-002 | Draft a measurable professional growth goal | All |
-| AD-011 | Turn baseline evidence into a realistic semester action plan | 3-5, 6-8, 9-12 |
-| AD-012 | Create leading and outcome indicators for a teaching goal | 3-5, 6-8, 9-12 |
-| AD-013 | Build midpoint decision rules for revising a professional goal | 3-5, 6-8, 9-12 |
-
-### Staff Emails
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-003 | Write a concise staff email with one clear action | 3-5, 6-8, 9-12 |
-| AD-004 | Turn rough notes into a professional colleague update | 3-5, 6-8, 9-12 |
-| AD-005 | Draft a meeting request with purpose, preparation and time limit | 3-5, 6-8, 9-12 |
-| AD-006 | Write a follow-up email that separates decisions from open questions | 3-5, 6-8, 9-12 |
-| AD-007 | Audit a staff email for tone, recipients, dates and unnecessary detail | 3-5, 6-8, 9-12 |
-
-### Observation Reflections
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-014 | Write an evidence-based reflection after a classroom observation | 3-5, 6-8, 9-12 |
-| AD-015 | Separate observed events, interpretation and next action | 3-5, 6-8, 9-12 |
-| AD-016 | Turn observer feedback into one measurable instructional experiment | 3-5, 6-8, 9-12 |
-
-### Field Trip Logistics
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-017 | Build a field-trip planning checklist from official requirements | 3-5, 6-8, 9-12 |
-| AD-018 | Create a trip-day schedule with owners, counts and contingency fields | 3-5, 6-8, 9-12 |
-| AD-019 | Audit a field-trip draft for permissions, access, safety and unknowns | 3-5, 6-8, 9-12 |
-
-### Clubs And Duty Plans
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-020 | Create a club launch plan with purpose, routines and supervision fields | 3-5, 6-8, 9-12 |
-| AD-021 | Build a fair duty rota from supplied availability and policy | 3-5, 6-8, 9-12 |
-| AD-022 | Audit a club or duty plan for gaps, overload and unclear responsibility | 3-5, 6-8, 9-12 |
-
-### Grants And Proposals
-
-| ID | Prompt | Grades |
-|---|---|---|
-| AD-023 | Turn a verified classroom need into a concise proposal outline | 3-5, 6-8, 9-12 |
-| AD-024 | Build a grant budget narrative from supplied costs and restrictions | 3-5, 6-8, 9-12 |
-| AD-025 | Audit a proposal for unsupported claims, missing evidence and compliance | 3-5, 6-8, 9-12 |
+Ask for the one-line hallway version alongside the email. You will use it more.
 
 ---
 
----
-
-### AD-001 · Turn notes into accountable meeting minutes
-
-*All grades  ·  Any subject*
-
-**When you need this**
-
-A team needs concise decisions and next actions from rough notes.
-
-**COPY FROM HERE**
-
-```text
-Turn notes into accountable meeting minutes.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [AUTHORIZED_NOTES: supply verified information; do not leave blank]
-- [CONFIRMED_DECISIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Separate decisions, proposed actions and open questions. Never invent attendees, consensus, owners or deadlines.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Decision: use one common exit item next week. Action: draft the item. Owner: teacher-role A. Due: [NEEDS TEACHER INPUT]. Open question: when will the team review the draft? Do not convert next week into an invented calendar date. Record only the agreement actually present in these notes.
-
----
-
-### AD-002 · Draft a measurable professional growth goal
-
-*All grades  ·  Any subject*
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to draft a measurable professional growth goal.
-
-**COPY FROM HERE**
-
-```text
-Draft a measurable professional growth goal.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [BASELINE: supply verified information; do not leave blank]
-- [TEACHING_GOAL: supply verified information; do not leave blank]
-- [TERM_LENGTH: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Draft a measurable professional goal with a feasible action and evidence source. Do not guarantee a student-outcome improvement.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Proposed goal: include one planned check for understanding in each of the next six weekly observed lessons and record the resulting instructional decision. Implementation evidence: lesson plan and observation note. Outcome evidence: response patterns on aligned checks, interpreted cautiously. Review after week three. This is a proposed professional goal, not a promise that a student score will improve by a set percentage.
+## Staff emails
 
 ---
 
 ### AD-003 · Write a concise staff email with one clear action
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a concise staff email with one clear action.
+An email that gets done rather than filed.
 
 **COPY FROM HERE**
 
 ```text
-Write a concise staff email with one clear action.
+Write a staff email.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MESSAGE_PURPOSE: supply verified information; do not leave blank]
-- [CONFIRMED_ACTION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+To: [ROLE OR TEAM]
+What I need: [THE ONE ACTION]
+By when: [DATE]
+Context they need: [ONLY WHAT IS NECESSARY]
 
-Specific requirements:
-Write a concise email with one clear request and verified deadline. Minimize recipients and confidential detail.
+Rules:
+- The ask is in the first line. Context comes after
+- One action only. If I have given you two, tell me to send two emails
+- Under 120 words
+- Subject line under 8 words, naming the action and the deadline
+- No apology for emailing, no "just", no "sorry to bother"
+- Say what happens if they do nothing, if that matters
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the email, the subject line, and a one-line version for a corridor
+conversation.
+
+Use only the facts I supplied. Do not invent a date, a policy or a reason.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Subject: Review requested: common exit item. Hello colleagues, Please review the attached exit item for alignment and ambiguity by Thursday at noon. Add any suggested correction beside the relevant question. Thank you, [TEACHER]. Verify the actual date, timezone, recipient list and attachment locally before sending; the draft cannot confirm those operational details.
+- Is the ask genuinely in the first line?
+- Is it one action?
 
 ---
 
 ### AD-004 · Turn rough notes into a professional colleague update
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to turn rough notes into a professional colleague update.
+Bullet points in your head, something readable out.
 
 **COPY FROM HERE**
 
 ```text
-Turn rough notes into a professional colleague update.
+Turn these notes into an update for [WHO]:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ROUGH_NOTES: supply verified information; do not leave blank]
-- [AUDIENCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[PASTE YOUR ROUGH NOTES]
 
-Specific requirements:
-Distinguish completed work, current status and next action. Preserve uncertainty rather than making unfinished work sound complete.
+Give me:
+- The update, organised so the most important thing is first
+- What is a decision, what is progress, and what is a problem — kept separate
+- Anything in my notes that is my opinion rather than fact, marked as such
+- Anything I have implied but not stated, so I can decide whether to state it
+- Under 200 words
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not add anything I did not write. If a note is too cryptic to expand, quote
+it back and ask.
+
+Then tell me what a reader would still not know after reading this.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-The station cards are drafted. The answer keys still need checking, and the room layout has not yet been confirmed. My next step is to verify the keys before finalizing the rotation plan. Please flag any known room constraints. This update separates completed work from pending work rather than calling the whole activity ready.
+- Has anything been added that you did not write?
+- Is opinion clearly separated from fact?
 
 ---
 
 ### AD-005 · Draft a meeting request with purpose, preparation and time limit
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to draft a meeting request with purpose, preparation and time limit.
+So the meeting is short and the right people come prepared.
 
 **COPY FROM HERE**
 
 ```text
-Draft a meeting request with purpose, preparation and time limit.
+Write a meeting request.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PURPOSE: supply verified information; do not leave blank]
-- [AVAILABLE_SLOTS: supply verified information; do not leave blank]
-- [PREPARATION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Purpose: [WHAT MUST BE DECIDED OR RESOLVED]
+Who: [ROLES]
+Length: [MINUTES]
+Options: [TWO SPECIFIC DATES AND TIMES]
 
-Specific requirements:
-Offer a meeting request with decision goal and time limit. Use only confirmed scheduling options and timezone.
+Give me:
+- The request, with the purpose in one sentence
+- What each person should bring or think about beforehand
+- The decision the meeting exists to reach
+- What happens if we cannot meet — the asynchronous alternative
+- Under 120 words
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Say plainly whether attendance is required or optional
+- Do not schedule a meeting for something that could be an email — if that is
+  what I have described, say so
+- No agenda longer than the meeting can hold
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- If it said this could be an email, it probably could.
+- Is the preparation realistic for people's actual week?
 
 ---
 
 ### AD-006 · Write a follow-up email that separates decisions from open questions
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a follow-up email that separates decisions from open questions.
+So nobody leaves the meeting with a different version of what happened.
 
 **COPY FROM HERE**
 
 ```text
-Write a follow-up email that separates decisions from open questions.
+Write a follow-up after a meeting.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MEETING_RECORD: supply verified information; do not leave blank]
-- [OPEN_ITEMS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What was discussed: [YOUR NOTES]
+What was decided: [LIST IT]
+What was not resolved: [LIST IT]
 
-Specific requirements:
-Separate decisions from suggestions and unresolved questions. Assign owners only when explicitly agreed.
+Structure it in three clearly separated parts:
+- Decisions, each with who and by when
+- Open questions, each with who will resolve it and by when
+- Everything else, briefly
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Record only decisions actually made. If something was discussed but not
+  decided, it goes in open questions, not decisions
+- Every item has a named owner. No unowned items
+- No decision attributed to a person who did not make it
+- Invite correction
+
+Flag anything in my notes that I have recorded as agreed but reads as
+unresolved.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Has anything moved from "discussed" to "decided"?
+- Does every item have an owner?
 
 ---
 
 ### AD-007 · Audit a staff email for tone, recipients, dates and unnecessary detail
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a staff email for tone, recipients, dates and unnecessary detail.
+Before you send it to twelve people, one of whom will forward it.
 
 **COPY FROM HERE**
 
 ```text
-Audit a staff email for tone, recipients, dates and unnecessary detail.
+Audit this staff email: [PASTE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [EMAIL: supply verified information; do not leave blank]
-- [VERIFIED_CALENDAR: supply verified information; do not leave blank]
-- [RECIPIENT_ROLES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Whether the ask is clear, single, and in the first two lines
+- Every date, name and figure I should verify before sending
+- Anything that reads as blame, frustration or passive aggression, quoted
+- Anyone on the recipient list who does not need this, and anyone missing
+- What could be cut with no loss
+- Anything that would read badly if forwarded to someone I did not intend
 
-Specific requirements:
-Check recipient scope, tone, dates and attachments. Keep private addresses out of shared prompts and verify them locally before sending.
+Then tell me the one sentence I should delete, and whether this needs to be an
+email at all.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be direct about tone. I wrote it and cannot hear it any more.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- The tone flags: trust them over your own ear.
+- Verify every date and figure.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Agendas and minutes
 
 ---
 
 ### AD-008 · Build a timed agenda around decisions that must be made
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a timed agenda around decisions that must be made.
+A meeting that ends on time because it was built to.
 
 **COPY FROM HERE**
 
 ```text
-Build a timed agenda around decisions that must be made.
+Build an agenda for a [MINUTES]-minute meeting.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [DECISIONS_NEEDED: supply verified information; do not leave blank]
-- [MEETING_MINUTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Purpose: [WHAT MUST BE DECIDED]
+Attendees: [ROLES]
+Items I have been given: [LIST THEM]
 
-Specific requirements:
-Build a timed agenda prioritizing decisions and pre-reading. Keep information-only items separate and show total duration.
+Give me:
+- The agenda with minutes per item, adding up to less than the meeting length
+- Each item labelled: decision, discussion, or information
+- Information items grouped at the end or moved to writing entirely
+- The decision that matters most, placed first
+- What we do if we run out of time on item one
+- What each attendee needs before the meeting
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- No item without a stated outcome
+- If the items cannot fit honestly, say which to drop rather than compressing
+  everything
+- Anything purely informational should not be in a meeting; say so
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Do the minutes add up with slack, or exactly?
+- Are the information items really necessary in the room?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+### AD-001 · Turn notes into accountable meeting minutes
+*All grades*
+
+**When you need this**
+Minutes people can act on rather than skim.
+
+**COPY FROM HERE**
+
+```text
+Turn these meeting notes into minutes:
+
+[PASTE YOUR NOTES]
+
+Structure:
+- Decisions: what was decided, who decided, effective when
+- Actions: what, who, by when
+- Open: what was raised and not resolved, and who is picking it up
+- Noted: information shared, briefly
+
+Rules:
+- Record only what my notes contain. Do not smooth a disagreement into
+  consensus, and do not record agreement that was not stated
+- Every action has a named owner and a date. If my notes lack one, write
+  [OWNER?] or [DATE?] rather than assigning it yourself
+- Where people disagreed, record that they disagreed
+- No interpretation of anyone's tone or intent
+
+Then list every point where my notes were ambiguous about who agreed to what.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Fill in every `[OWNER?]` and `[DATE?]` before circulating.
+- Has any disagreement been smoothed over?
 
 ---
 
 ### AD-009 · Convert discussion notes into decisions, actions and a parking lot
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to convert discussion notes into decisions, actions and a parking lot.
+An hour of discussion, and you need to know what actually came of it.
 
 **COPY FROM HERE**
 
 ```text
-Convert discussion notes into decisions, actions and a parking lot.
+Sort these discussion notes into three piles:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [DISCUSSION_NOTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[PASTE THE NOTES]
 
-Specific requirements:
-Return decision, action, owner, due date and parking-lot fields. Use unknown markers where the notes do not establish agreement.
+- DECIDED: settled, with who and when
+- ACTION: someone will do something, with who and by when
+- PARKING LOT: raised, not resolved, and not being carried forward now
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- A thing is only DECIDED if my notes show it was decided. Being discussed at
+  length is not deciding
+- Nothing in ACTION without an owner. Mark [OWNER?] where my notes do not say
+- The parking lot needs a date to revisit, or it needs deleting — say which
+
+Then tell me:
+- What we spent the most time on, and which pile it ended in
+- Anything that will come back at the next meeting because it was not settled
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is anything in DECIDED that was only discussed?
+- Does the parking lot have a revisit date, or should it be dropped?
 
 ---
 
 ### AD-010 · Audit meeting minutes for invented consensus, owners or deadlines
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit meeting minutes for invented consensus, owners or deadlines.
+Minutes become the record. Getting them wrong is expensive later.
 
 **COPY FROM HERE**
 
 ```text
-Audit meeting minutes for invented consensus, owners or deadlines.
+Audit these minutes against my notes.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MINUTES: supply verified information; do not leave blank]
-- [ORIGINAL_NOTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+MINUTES: [PASTE THEM]
+MY NOTES: [PASTE THEM]
 
-Specific requirements:
-Trace each decision and deadline to the notes. Flag invented consensus and preserve dissent or unresolved questions.
+Tell me:
+- Anything recorded as agreed that my notes do not support
+- Any owner assigned who did not accept the action
+- Any deadline that appears in the minutes but not in my notes
+- Anywhere disagreement has been smoothed into consensus
+- Anything attributed to a person who did not say it
+- Anything in my notes that is missing from the minutes
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Quote each one.
+
+Then tell me which entry would cause the most trouble in three months if it is
+wrong.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Anything it flagged as invented: remove it, do not soften it.
+- Circulate for correction before treating these as final.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Professional goals
+
+---
+
+### AD-002 · Draft a measurable professional growth goal
+*All grades*
+
+**When you need this**
+A goal you control, not a wish about your students.
+
+**COPY FROM HERE**
+
+```text
+Draft a professional growth goal for this year.
+
+What I want to get better at: [DESCRIBE IT]
+Why: [WHAT PROMPTED THIS]
+Time available: [BE HONEST]
+
+Rules — the first one matters most:
+- The goal must be about what I will do, not what students will achieve. I do
+  not control their outcomes and should not be held to them
+- No percentage improvements in student scores
+- The action must fit the time I stated. If it does not, say so
+- The evidence must be something I can actually gather while teaching full time
+
+Give me:
+- The goal in one sentence
+- The specific actions, with when
+- The evidence I collect, and how long collecting it takes each week
+- What would make me revise this goal mid-year
+
+Then tell me what this goal will cost me, honestly.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Is it about your practice or students' scores?
+- Could you actually gather that evidence in a normal week?
 
 ---
 
 ### AD-011 · Turn baseline evidence into a realistic semester action plan
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to turn baseline evidence into a realistic semester action plan.
+Starting from where you actually are.
 
 **COPY FROM HERE**
 
 ```text
-Turn baseline evidence into a realistic semester action plan.
+Build a semester action plan from this baseline:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [BASELINE_EVIDENCE: supply verified information; do not leave blank]
-- [TERM_DATES: supply verified information; do not leave blank]
-- [RESOURCES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Where I am now: [DESCRIBE, WITH EVIDENCE]
+Where I want to be: [DESCRIBE]
+Constraints: [TIME, TEACHING LOAD, ANYTHING ELSE]
 
-Specific requirements:
-Create a semester sequence with feasible actions and review points. Label targets as proposed until approved.
+Give me:
+- A plan across [NUMBER] weeks, with what happens in which week
+- The two weeks in the term where this will not happen — reports, exams,
+  whatever I told you — and how the plan survives them
+- What I stop doing to make room. A plan that adds without removing will fail
+- The smallest version of this plan, for a bad term
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not plan for an ideal term. Plan for a normal one.
+
+Then tell me the week this plan is most likely to be abandoned, and what would
+keep it alive.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does it say what you stop doing? If not, it will not survive.
+- Is the smallest version still worth doing?
 
 ---
 
 ### AD-012 · Create leading and outcome indicators for a teaching goal
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create leading and outcome indicators for a teaching goal.
+Knowing in week four whether this is working.
 
 **COPY FROM HERE**
 
 ```text
-Create leading and outcome indicators for a teaching goal.
+For this professional goal — [PASTE IT] — give me indicators.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TEACHING_GOAL: supply verified information; do not leave blank]
-- [MEASURES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Two kinds, kept separate:
+- Leading indicators: things I can see within weeks, about what I am doing
+- Outcome indicators: things that would show it made a difference, later
 
-Specific requirements:
-Separate implementation indicators from student outcomes. Describe collection burden and limitations of each measure.
+For each:
+- What it is, specifically
+- How I measure it, in under five minutes a week
+- What a good early sign looks like, and what a bad one looks like
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Leading indicators must be about my practice, not student results
+- Outcome indicators may involve students, but state honestly how much I can
+  attribute to this goal — probably less than I would like
+- No indicator requiring extra data collection I will not sustain
+
+Then tell me which indicator I will stop tracking first, and whether that
+matters.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Which will you stop tracking? Be honest, then drop it now.
+- Is the attribution claim honest?
 
 ---
 
 ### AD-013 · Build midpoint decision rules for revising a professional goal
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build midpoint decision rules for revising a professional goal.
+Deciding in advance what would make you change course.
 
 **COPY FROM HERE**
 
 ```text
-Build midpoint decision rules for revising a professional goal.
+For this goal — [PASTE IT] — write midpoint decision rules.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [GOAL: supply verified information; do not leave blank]
-- [MIDPOINT_EVIDENCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- What I check at the midpoint, and how long that check takes
+- Three outcomes: on track, partly working, not working
+- For each, the specific decision — continue, adjust how, or stop
+- What "not working" actually looks like, described concretely enough that I
+  cannot talk myself out of it
+- What I would need to see to justify abandoning this goal entirely
 
-Specific requirements:
-Define continue, adapt and stop rules using supplied priorities. Avoid arbitrary thresholds presented as research-established cutoffs.
+Rules:
+- Write the rules now, so the midpoint me cannot rationalise
+- Abandoning a goal that is not working is a legitimate outcome. Say so
+- Do not build in a rule that always produces "keep going"
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me which outcome I am most likely to misread as success.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Is "not working" described concretely enough to be undeniable?
+- Would you accept stopping as an outcome?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Observation reflections
 
 ---
 
 ### AD-014 · Write an evidence-based reflection after a classroom observation
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write an evidence-based reflection after a classroom observation.
+After the observation, before the meeting.
 
 **COPY FROM HERE**
 
 ```text
-Write an evidence-based reflection after a classroom observation.
+Help me write a reflection after a classroom observation.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBSERVATION_NOTES: supply verified information; do not leave blank]
-- [LESSON_GOAL: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What happened in the lesson: [DESCRIBE — no student names]
+Feedback I received: [PASTE OR SUMMARISE]
+How I feel about it: [BE HONEST — this is for my thinking, not the document]
 
-Specific requirements:
-Reflect on observed events, possible explanations and next steps separately. Do not invent student reactions or observer judgments.
+Give me:
+- The reflection, based on observable events rather than on how it felt
+- Where I agree with the feedback, and why
+- Where I do not, stated professionally with the evidence for my view
+- What I genuinely do not know yet
+- One thing I will do differently, and how I will know whether it helped
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Do not simply agree with everything to be safe
+- Do not be defensive either
+- Keep my feelings out of the written version, but tell me if they are pointing
+  at something worth examining
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does the disagreement read as professional or defensive?
+- Is the "one thing" small enough to actually do?
 
 ---
 
 ### AD-015 · Separate observed events, interpretation and next action
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to separate observed events, interpretation and next action.
+Feedback that mixes what happened with what it meant.
 
 **COPY FROM HERE**
 
 ```text
-Separate observed events, interpretation and next action.
+Sort this observation feedback into three columns:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [EVENT_NOTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[PASTE THE FEEDBACK]
 
-Specific requirements:
-Build three columns: observation, interpretation and next action. Retain multiple plausible interpretations where evidence is weak.
+- OBSERVED: what actually happened in the room
+- INTERPRETED: what the observer concluded from it
+- RECOMMENDED: what they suggest
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+For each interpretation, tell me:
+- Which observation supports it
+- Whether another interpretation would fit the same observation
+- Whether the observer had context they may not have had — a prior lesson, a
+  student's circumstances, what I was deliberately doing
+
+Then tell me:
+- Which recommendation follows clearly from the evidence
+- Which rests on an interpretation I could reasonably question
+- The one recommendation to act on first
+
+Do not dismiss feedback because an alternative interpretation exists.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Are you questioning an interpretation, or avoiding the feedback?
+- Does the observer's missing context actually change it?
 
 ---
 
 ### AD-016 · Turn observer feedback into one measurable instructional experiment
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to turn observer feedback into one measurable instructional experiment.
+Six suggestions, and you have room for one.
 
 **COPY FROM HERE**
 
 ```text
-Turn observer feedback into one measurable instructional experiment.
+Turn this feedback into one small experiment I can run:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBSERVER_FEEDBACK: supply verified information; do not leave blank]
-- [CHANGEABLE_PRACTICE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[PASTE THE FEEDBACK]
+Constraints: [TIME, CLASSES, WHAT IS ALREADY ON]
 
-Specific requirements:
-Design one small instructional trial with baseline, measure and review date. Do not claim causality from a single lesson.
+Give me:
+- The single change, small enough to try in a fortnight
+- Exactly what I do differently, described so I could do it tomorrow
+- What I look for to know whether it worked
+- How long before I judge it — long enough to be fair, short enough to matter
+- What I do if it makes things worse
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- One change. If I try three I will not know which did anything
+- It must be something I can sustain, not something that works because I am
+  paying it unusual attention
+- Say which of the suggestions I am setting aside, so I know what I am not doing
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Is it genuinely one change?
+- Could you sustain it after the novelty wears off?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Field trip logistics
 
 ---
 
 ### AD-017 · Build a field-trip planning checklist from official requirements
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a field-trip planning checklist from official requirements.
+The list you will otherwise forget one item from.
 
 **COPY FROM HERE**
 
 ```text
-Build a field-trip planning checklist from official requirements.
+Build a planning checklist for a trip.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OFFICIAL_TRIP_REQUIREMENTS: supply verified information; do not leave blank]
-- [APPROVAL_STATUS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Destination and activity: [DESCRIBE]
+Date, group size, year group: [STATE THEM]
+My school's stated requirements: [PASTE OR SUMMARISE WHAT YOU HAVE]
 
-Specific requirements:
-Create a checklist from supplied requirements only. Keep medical and emergency identities in approved local systems.
+Give me a checklist ordered by deadline, working backwards from the trip date,
+covering: approvals, consent, transport, staffing, medical and dietary
+information, money, communication, and what happens on the day.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Use only the requirements I supplied. Do not state a ratio, a form, a
+  timescale or a policy I did not give you
+- Where a standard requirement is missing from what I supplied, list it as
+  [CHECK WITH SCHOOL] rather than filling it in
+- Mark which items are legal or policy requirements versus good practice, only
+  where I told you which is which
+
+I will verify every item against my school's own procedures before relying on
+this.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Take every `[CHECK WITH SCHOOL]` to the person who actually knows.
+- Do not treat any stated ratio or timescale as authoritative.
 
 ---
 
 ### AD-018 · Create a trip-day schedule with owners, counts and contingency fields
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a trip-day schedule with owners, counts and contingency fields.
+The single sheet every adult carries on the day.
 
 **COPY FROM HERE**
 
 ```text
-Create a trip-day schedule with owners, counts and contingency fields.
+Build a trip-day schedule.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CONFIRMED_TIMES: supply verified information; do not leave blank]
-- [GROUP_COUNTS: supply verified information; do not leave blank]
-- [STAFF_ROLES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Timings: [WHAT YOU KNOW — departure, arrival, activities, return]
+Adults: [HOW MANY, AND THEIR ROLES]
+Students: [NUMBER, GROUPS]
 
-Specific requirements:
-Reconcile counts and build a trip-day timeline with contingency fields. Do not invent supervision ratios or emergency contacts.
+Give me a one-page schedule with:
+- Each time slot, what happens, and which adult is responsible
+- Head-count points, with a box to write the number and the time
+- Where each group is at any given moment
+- Blank fields for contact numbers and the meeting point
+- What to do if the group is running late — who is told, in what order
+- What to do if a student is separated from the group
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Every slot has a named responsible adult. No unowned time
+- Leave [BLANK] for anything I did not give you, including emergency contacts
+- It must be readable on paper, on a windy pavement, folded in a pocket
+
+I will check the emergency and safeguarding elements against my school's
+procedures.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Fill every `[BLANK]`, especially contacts.
+- Print it. It has to work without a phone.
 
 ---
 
 ### AD-019 · Audit a field-trip draft for permissions, access, safety and unknowns
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a field-trip draft for permissions, access, safety and unknowns.
+Before it goes to whoever approves trips.
 
 **COPY FROM HERE**
 
 ```text
-Audit a field-trip draft for permissions, access, safety and unknowns.
+Audit this trip plan: [PASTE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TRIP_DRAFT: supply verified information; do not leave blank]
-- [APPROVED_REQUIREMENTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- What is missing that a trip plan normally contains
+- Every consent, medical or emergency element that appears incomplete
+- Anything assuming a student can walk far, climb stairs, tolerate noise, eat
+  a standard meal, swim, or afford a cost
+- What happens to a student whose family cannot pay, and whether that is stated
+- Anything stated as a school or venue policy that I should verify
+- What is not planned for: bad weather, a late coach, a student who is unwell,
+  a group returning after the school day ends
+- Every unknown I have written as though it were settled
 
-Specific requirements:
-Audit permissions, access, safety and unresolved facts. Block operational use while a critical approval is missing.
+List the accessibility gaps separately. A trip a student cannot join is a
+problem to solve before booking, not on the day.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+I will verify all safeguarding and consent requirements with my school.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Solve the accessibility gaps before booking, not after.
+- Every "verify" flag goes to the person who approves trips.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Clubs and duty plans
 
 ---
 
 ### AD-020 · Create a club launch plan with purpose, routines and supervision fields
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a club launch plan with purpose, routines and supervision fields.
+Starting something that will still be running in March.
 
 **COPY FROM HERE**
 
 ```text
-Create a club launch plan with purpose, routines and supervision fields.
+Plan the launch of a [CLUB OR ACTIVITY] for [GRADE] students.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CLUB_PURPOSE: supply verified information; do not leave blank]
-- [SUPERVISION_POLICY: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+When and where: [DETAILS]
+How many students: [NUMBER OR LIMIT]
+What I have: [SPACE, EQUIPMENT, OTHER ADULTS]
 
-Specific requirements:
-Draft routines, access options and a supervision checklist. Do not invent staffing authorization or eligibility rules.
+Give me:
+- The purpose in one sentence, so I can say no to things that are not it
+- The first three sessions, in enough detail to run them
+- The routines: arriving, starting, packing up, leaving
+- How students join, and what happens if more want to come than I can take
+- What I need to confirm before the first session — supervision, permission,
+  access — as [CONFIRM] items rather than assumptions
+- What makes this sustainable in week ten, when the novelty is gone
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not state a supervision requirement or ratio. Mark it [CONFIRM WITH SCHOOL].
+
+Then tell me the most likely reason this club stops running.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Every `[CONFIRM]` before session one, not after.
+- Is the week-ten answer honest?
 
 ---
 
 ### AD-021 · Build a fair duty rota from supplied availability and policy
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a fair duty rota from supplied availability and policy.
+A rota nobody can reasonably call unfair.
 
 **COPY FROM HERE**
 
 ```text
-Build a fair duty rota from supplied availability and policy.
+Build a duty rota.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [AVAILABILITY: supply verified information; do not leave blank]
-- [DUTY_RULES: supply verified information; do not leave blank]
-- [LOAD_LIMITS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Duties to cover: [LIST THEM, WITH TIMES]
+People available: [LIST, WITH THEIR CONSTRAINTS AND ANY EXEMPTIONS]
+Period: [HOW MANY WEEKS]
+Rules I have been given: [PASTE THEM]
 
-Specific requirements:
-Create a rota satisfying explicit constraints and show workload totals. Flag infeasibility instead of silently violating a rule.
+Give me:
+- The rota, week by week
+- A count of duties per person, so the distribution is visible
+- Who has the least desirable slots, and how those rotate
+- What happens when someone is absent
+- Anything I asked for that cannot be covered with the people available
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Use only the availability and constraints I gave you
+- Do not assume anyone can cover outside their stated availability
+- If the rota cannot be filled fairly, say so plainly rather than producing an
+  uneven one that looks complete
+
+Then tell me who will feel hardest done by, and whether they would be right.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Check the duty counts yourself.
+- If it says it cannot be filled fairly, take that upward.
 
 ---
 
 ### AD-022 · Audit a club or duty plan for gaps, overload and unclear responsibility
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a club or duty plan for gaps, overload and unclear responsibility.
+Before it runs and the gap becomes obvious.
 
 **COPY FROM HERE**
 
 ```text
-Audit a club or duty plan for gaps, overload and unclear responsibility.
+Audit this club or duty plan: [PASTE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [DUTY_OR_CLUB_PLAN: supply verified information; do not leave blank]
-- [ROLE_REQUIREMENTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Any time period with no named adult responsible
+- Any handover point where responsibility is ambiguous — arriving, leaving,
+  between activities
+- Anyone carrying noticeably more than others
+- What happens when a person is absent, and whether that is planned or assumed
+- Anything requiring an adult to be in two places
+- Anything assuming a student can stay late, get home afterwards, or afford to
+  take part
 
-Specific requirements:
-Check coverage, overload, breaks and unclear ownership. Preserve contractual or local requirements supplied by the teacher.
+Then tell me:
+- The single riskiest gap
+- Whether this plan works on a week when two people are ill
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+I will confirm all supervision requirements with my school.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Close the riskiest gap before it runs.
+- Does it survive two absences?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Grants and proposals
 
 ---
 
 ### AD-023 · Turn a verified classroom need into a concise proposal outline
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to turn a verified classroom need into a concise proposal outline.
+Asking for something, briefly and credibly.
 
 **COPY FROM HERE**
 
 ```text
-Turn a verified classroom need into a concise proposal outline.
+Outline a proposal for [WHAT YOU WANT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VERIFIED_NEED: supply verified information; do not leave blank]
-- [EVIDENCE: supply verified information; do not leave blank]
-- [PROPOSAL_CRITERIA: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+The need, with evidence: [DESCRIBE WHAT YOU HAVE OBSERVED OR RECORDED]
+Who I am asking: [ROLE OR BODY]
+Rough cost: [IF KNOWN]
 
-Specific requirements:
-Build a concise need-action-evidence outline. Keep unsupported statistics, endorsements and impact claims out.
+Give me an outline covering:
+- The need, in two sentences, evidenced
+- What I am asking for, specifically
+- What changes if it is funded, stated as what becomes possible rather than
+  what will be achieved
+- What happens if it is not
+- How I would know afterwards whether it was worth it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Use only the evidence I gave you. Do not invent a statistic, a comparison
+  school, or a research finding
+- No claim about improved outcomes that I cannot support
+- If my evidence is too thin to justify the ask, say so and tell me what to
+  gather first
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- If it said the evidence is thin, gather more before asking.
+- Any statistic in there that you did not supply? Remove it.
 
 ---
 
 ### AD-024 · Build a grant budget narrative from supplied costs and restrictions
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a grant budget narrative from supplied costs and restrictions.
+Explaining the numbers so they are believed.
 
 **COPY FROM HERE**
 
 ```text
-Build a grant budget narrative from supplied costs and restrictions.
+Write the budget narrative for a proposal.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [COSTS: supply verified information; do not leave blank]
-- [QUANTITIES: supply verified information; do not leave blank]
-- [FUNDING_RESTRICTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Costs: [ITEMISE WHAT YOU HAVE, WITH SOURCES]
+Restrictions: [WHAT THE FUNDER WILL AND WILL NOT COVER]
+Total requested: [AMOUNT]
 
-Specific requirements:
-Recalculate line items and totals, explain each expense and flag restricted costs. Leave vendor quotes as supplied, not invented.
+Give me:
+- A narrative explaining each cost and why it is necessary
+- The arithmetic, shown, so a reader can check it
+- Anything that falls outside the stated restrictions, flagged
+- What is ongoing versus one-off, and who covers the ongoing part
+- What I would cut first if only part is funded
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Use only the figures I supplied. Do not estimate, round, or add a contingency
+  I did not state
+- Check every total and state that you have
+- Where a cost is missing that a funder would expect, list it as missing
+
+I will verify all figures and the funder's terms myself before submitting.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Re-add every column yourself.
+- Check the restrictions against the funder's actual terms.
 
 ---
 
 ### AD-025 · Audit a proposal for unsupported claims, missing evidence and compliance
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a proposal for unsupported claims, missing evidence and compliance.
+The last read before it is submitted.
 
 **COPY FROM HERE**
 
 ```text
-Audit a proposal for unsupported claims, missing evidence and compliance.
+Audit this proposal: [PASTE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PROPOSAL: supply verified information; do not leave blank]
-- [FUNDER_RULES: supply verified information; do not leave blank]
-- [SOURCES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Requirements I was given: [PASTE THEM, IF ANY]
 
-Specific requirements:
-Trace claims to evidence and check eligibility, budget and missing documents. Do not fabricate citations or approval likelihood.
+Tell me:
+- Every claim not supported by evidence in the proposal itself, quoted
+- Every statistic, research reference or comparison — and whether I supplied it
+  or it appeared from nowhere
+- Any promise about outcomes I cannot guarantee
+- Any requirement from the guidance that the proposal does not address
+- Any arithmetic error
+- Anything a sceptical reader would ask that this does not answer
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Then tell me:
+- The weakest claim, which is where it will be challenged
+- Whether the ask is proportionate to the evidence
+
+Do not soften this. A proposal declined for overreach is worse than one that
+asked for less.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
+- Any statistic you did not supply: delete it, do not verify it later.
+- Re-check the arithmetic yourself.
