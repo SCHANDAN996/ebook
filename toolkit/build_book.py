@@ -191,6 +191,8 @@ blockquote strong{color:var(--warn)}
         padding-bottom:9pt; border-bottom:1px solid var(--line)}
   .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
        margin:13pt 0 5pt; color:var(--dim)}
+  /* The screen theme lifts bold text to near-white. On paper that is invisible. */
+  strong{color:#101a26; font-weight:700}
 
   /* The prompt itself stays whole. */
   .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;

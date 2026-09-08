@@ -1,5 +1,45 @@
 # फ़ैसलों का पूरा रिकॉर्ड (Decision Log)
 
+## 2026-09-08: Geography तय — US only. यही वर्तमान निर्णय है।
+
+**फ़ैसला: बाज़ार United States है। India वाला रास्ता बंद।**
+
+यह कोई नया फ़ैसला नहीं, पहले से लिए गए फ़ैसले को लिखित करना है। नीचे "3. दूसरी
+कोशिश" में niche इसी आधार पर चुना गया था — *"K-12 teachers के लिए AI prompt +
+workflow system, US/Tier-1, $27"* — और उसके चारों सबूत अमेरिकी हैं: US में 40 लाख
+K-12 teachers, Teachers Pay Teachers का $879M बाज़ार, "3 में से 2 अमेरिकी teacher"
+वाला डाउनलोड आँकड़ा, और Facebook की 40+ महिला educator demographic. Cold-email
+विश्लेषण भी सिर्फ़ अमेरिकी CAN-SPAM पर बना है।
+
+इसके बावजूद `SALES-LAUNCH-PLAN.md` में दो अलग geography (International $ और India
+₹) साथ-साथ खुली रह गई थीं, और उसी फ़ाइल में लिखा था *"पहले एक geography चुनें,
+दोनों साथ नहीं।"* वह चुनाव अब यह है: **US.**
+
+- Pricing: सिर्फ़ USD। ₹ वाला column hypothesis के तौर पर रहेगा, launch path में नहीं।
+- Paid test: सिर्फ़ International hypothesis ($50 cap)। ₹2,000 वाला test नहीं चलेगा।
+- `plan-b-thekedar-kit.md` India-only है और Plan B ही रहेगा — वह market research
+  से नहीं निकला था, यह उसमें ख़ुद लिखा है।
+
+**इसका सीधा नतीजा किताब पर:** किताब ब्रिटिश अंग्रेज़ी में लिखी जा चुकी थी —
+`behaviour`, `maths`, `marking`, `timetable`, `judgement`, और पहले ही पन्ने पर
+`Year 7 science`. एक अमेरिकी teacher के लिए यह तुरंत पकड़ में आता है। manuscript
+और front-matter की 146 जगहें अमेरिकी अंग्रेज़ी में बदली गईं, `Year 7 / Year 5` को
+`7th grade / 5th grade` किया गया, और safety page में **FERPA** तथा **COPPA** वाला
+हिस्सा जोड़ा गया — अमेरिकी teacher student privacy का यही नाम खोजती है।
+
+**एक पुराना दावा सुधारा जा रहा है:** 2026-09-07 की सूची कहती है कि PDF को
+"browser-free exporter, clickable index, bookmarks और page numbers" दिए गए। यह
+सही नहीं था। 2026-09-08 तक PDF में न bookmark थे, न page number, न cover, और
+exporter headless Chromium ही है, browser-free नहीं। अब bookmarks (हर prompt का),
+page numbers, running header, cover और complete edition में clickable index
+सचमुच मौजूद हैं — exporter अब भी Chromium है।
+
+**अभी भी बाकी:** `support_email` और `support_url` placeholder हैं, किसी अमेरिकी
+teacher ने review नहीं किया (सभी 300 prompts `review_status: draft`), किताब में
+लेखक का नाम नहीं है, और repo public है जबकि paid PDF उसी में committed है।
+
+---
+
 ## 2026-09-07: समीक्षा के बाद सुधार - यही वर्तमान निर्णय है
 
 नीचे का पुराना रिकॉर्ड ऐतिहासिक है। उसके market rankings, CTR/CPA, $41 AOV,

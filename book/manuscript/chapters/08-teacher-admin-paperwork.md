@@ -89,7 +89,7 @@ Turn these notes into an update for [WHO]:
 [PASTE YOUR ROUGH NOTES]
 
 Give me:
-- The update, organised so the most important thing is first
+- The update, organized so the most important thing is first
 - What is a decision, what is progress, and what is a problem — kept separate
 - Anything in my notes that is my opinion rather than fact, marked as such
 - Anything I have implied but not stated, so I can decide whether to state it
@@ -240,7 +240,7 @@ Items I have been given: [LIST THEM]
 
 Give me:
 - The agenda with minutes per item, adding up to less than the meeting length
-- Each item labelled: decision, discussion, or information
+- Each item labeled: decision, discussion, or information
 - Information items grouped at the end or moved to writing entirely
 - The decision that matters most, placed first
 - What we do if we run out of time on item one
@@ -508,7 +508,7 @@ Give me:
 - What I would need to see to justify abandoning this goal entirely
 
 Rules:
-- Write the rules now, so the midpoint me cannot rationalise
+- Write the rules now, so the midpoint me cannot rationalize
 - Abandoning a goal that is not working is a legitimate outcome. Say so
 - Do not build in a rule that always produces "keep going"
 
@@ -539,7 +539,7 @@ After the observation, before the meeting.
 Help me write a reflection after a classroom observation.
 
 What happened in the lesson: [DESCRIBE — no student names]
-Feedback I received: [PASTE OR SUMMARISE]
+Feedback I received: [PASTE OR SUMMARIZE]
 How I feel about it: [BE HONEST — this is for my thinking, not the document]
 
 Give me:
@@ -656,7 +656,7 @@ Build a planning checklist for a trip.
 
 Destination and activity: [DESCRIBE]
 Date, group size, year group: [STATE THEM]
-My school's stated requirements: [PASTE OR SUMMARISE WHAT YOU HAVE]
+My school's stated requirements: [PASTE OR SUMMARIZE WHAT YOU HAVE]
 
 Give me a checklist ordered by deadline, working backwards from the trip date,
 covering: approvals, consent, transport, staffing, medical and dietary
@@ -710,7 +710,7 @@ Rules:
 - Leave [BLANK] for anything I did not give you, including emergency contacts
 - It must be readable on paper, on a windy pavement, folded in a pocket
 
-I will check the emergency and safeguarding elements against my school's
+I will check the emergency and child-protection elements against my school's
 procedures.
 ```
 
@@ -747,7 +747,7 @@ Tell me:
 List the accessibility gaps separately. A trip a student cannot join is a
 problem to solve before booking, not on the day.
 
-I will verify all safeguarding and consent requirements with my school.
+I will verify all child-protection and consent requirements with my school.
 ```
 
 **TO HERE**
@@ -929,7 +929,7 @@ Explaining the numbers so they are believed.
 ```text
 Write the budget narrative for a proposal.
 
-Costs: [ITEMISE WHAT YOU HAVE, WITH SOURCES]
+Costs: [ITEMIZE WHAT YOU HAVE, WITH SOURCES]
 Restrictions: [WHAT THE FUNDER WILL AND WILL NOT COVER]
 Total requested: [AMOUNT]
 
@@ -977,7 +977,7 @@ Tell me:
 - Any promise about outcomes I cannot guarantee
 - Any requirement from the guidance that the proposal does not address
 - Any arithmetic error
-- Anything a sceptical reader would ask that this does not answer
+- Anything a skeptical reader would ask that this does not answer
 
 Then tell me:
 - The weakest claim, which is where it will be challenged

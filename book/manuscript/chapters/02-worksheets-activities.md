@@ -227,7 +227,7 @@ Word problems that do not insult the reader.
 ```text
 Create an application worksheet on [SKILL] for [GRADE] [SUBJECT].
 
-Use contexts a [GRADE] student would actually recognise. No talking animals, no
+Use contexts a [GRADE] student would actually recognize. No talking animals, no
 scenarios where nobody would ever need the answer, and no situations that assume
 money, travel or possessions a family may not have.
 
@@ -255,7 +255,7 @@ knowledge some students may not have, flag it.
 *All grades*
 
 **When you need this**
-One page, one side, and the colour printer is a fantasy.
+One page, one side, and the color printer is a fantasy.
 
 **COPY FROM HERE**
 
@@ -264,15 +264,15 @@ Rework the worksheet below so it prints on one side of one sheet in black and
 white.
 
 Constraints:
-- Nothing that depends on colour to be understood
-- No shading that turns into a grey block on a school photocopier
+- Nothing that depends on color to be understood
+- No shading that turns into a gray block on a school photocopier
 - Enough writing space for a [GRADE] student's handwriting
 - Readable at 100% — do not solve the space problem by shrinking the type
 
 Give me:
 - The reworked sheet
 - What you cut or compressed, and what is lost
-- Anywhere colour was carrying meaning, and what replaces it
+- Anywhere color was carrying meaning, and what replaces it
 
 If it genuinely will not fit on one side, say so and tell me the best two-page
 split.
@@ -340,7 +340,7 @@ Section 2 — Application: can they use it in a context
 Section 3 — Reasoning: can they explain, justify, or spot when it does not apply
 
 Every student attempts all three sections. The sections are not ability groups
-and must not be labelled as such.
+and must not be labeled as such.
 
 Give me:
 - 4 items in section 1, 3 in section 2, 2 in section 3
@@ -589,7 +589,7 @@ For each station give me:
 - An extended version — same topic, harder thinking, not more questions
 - What every version produces, so they all feed one closing discussion
 
-The versions must not be labelled by ability, and a student should be able to
+The versions must not be labeled by ability, and a student should be able to
 move between them without asking permission.
 
 Tell me how the closing discussion works when different students did different
@@ -675,7 +675,7 @@ STATIONS:
 
 **Before you send it**
 - Do you agree with which station it called weakest?
-- Is the timing judgement based on your class, or an ideal one?
+- Is the timing judgment based on your class, or an ideal one?
 
 ---
 
@@ -1138,7 +1138,7 @@ If [MINUTES] is not enough for the purpose, tell me rather than overfilling it.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-Keeping the old alive while practising the new.
+Keeping the old alive while practicing the new.
 
 **COPY FROM HERE**
 
@@ -1425,7 +1425,7 @@ Tell me:
 - Whether it fits the time given, honestly
 - Anything requiring money, internet, transport, adult help, or equipment a
   household may not have
-- Whether the marking rewards the learning or the presentation
+- Whether the grading rewards the learning or the presentation
 - Anything that would put a student's name, image, work or personal details in
   front of an audience, and what needs consent first
 - The three questions students will ask on day one that the brief does not answer

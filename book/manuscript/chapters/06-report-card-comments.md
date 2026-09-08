@@ -29,7 +29,7 @@ Do not let it invent a strength to balance the structure. A manufactured
 compliment is the fastest way for a family to stop trusting the rest.
 
 Vary the openings. Twenty-eight comments that all begin the same way are
-recognisable as generated, and parents compare.
+recognizable as generated, and parents compare.
 
 ---
 
@@ -60,7 +60,7 @@ Rules:
 - No comment may be sendable without filling the evidence blank. Write them so
   the gap is obvious
 - Describe what the student did, never what kind of learner they are
-- No praise for effort, attitude, behaviour or personality unless I add it
+- No praise for effort, attitude, behavior or personality unless I add it
 - Vary the openings across the bank — list them so I can check no two match
 - Nothing that predicts or promises future performance
 
@@ -428,7 +428,7 @@ Give me:
 - What I do in class to support it
 - How I would know in three weeks whether it worked
 
-Do not write "should continue to practise" or "needs to focus more". Those are
+Do not write "should continue to practice" or "needs to focus more". Those are
 not next steps. If the pattern needs teaching rather than practice, say so.
 ```
 
@@ -490,8 +490,8 @@ What I have: [LIST IT HONESTLY, INCLUDING GAPS AND WHY — no names]
 
 Rules:
 - Say plainly what the comment is based on, and over what period
-- Do not extrapolate from a small sample into a general judgement
-- Do not fill the gap with attendance commentary, effort, or behaviour
+- Do not extrapolate from a small sample into a general judgment
+- Do not fill the gap with attendance commentary, effort, or behavior
 - Do not imply the student is behind if I do not have evidence for that
 - Give a next step only if the evidence supports one; otherwise say what I will
   look for next term
@@ -505,7 +505,7 @@ Tell me if the honest answer is that I cannot write a meaningful comment yet.
 **TO HERE**
 
 **Before you send it**
-- Has thin evidence quietly become a judgement?
+- Has thin evidence quietly become a judgment?
 - Is the limitation stated plainly?
 
 ---
@@ -599,8 +599,8 @@ EVIDENCE: [PASTE WHAT YOU HAVE]
 For each sentence, tell me:
 - Which piece of evidence supports it
 - Whether it is fully supported, partly supported, or unsupported
-- Where it generalises beyond what the evidence shows
-- Whether it describes learning, or effort, behaviour or personality
+- Where it generalizes beyond what the evidence shows
+- Whether it describes learning, or effort, behavior or personality
 - Whether a family could challenge it and be right
 
 Then give me:
@@ -627,7 +627,7 @@ Do not accept a sentence as supported because it sounds reasonable.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-"Good at maths" hides which of the three is actually strong.
+"Good at math" hides which of the three is actually strong.
 
 **COPY FROM HERE**
 
@@ -752,7 +752,7 @@ Distinguish:
 - Knowledge of content
 - Using sources — reading them, questioning them, weighing them
 - Constructing an argument with evidence
-- Recognising perspective and that accounts differ
+- Recognizing perspective and that accounts differ
 
 Give me:
 - The comment, naming which of these the evidence supports
@@ -1008,7 +1008,7 @@ Check for:
 - Any comment contradicting its own evidence row
 - Any claim not sourced to the table at all
 - Any placeholder left unfilled
-- Any comment about effort, behaviour or personality rather than learning
+- Any comment about effort, behavior or personality rather than learning
 - Repeated opening words or repeated closing sentences
 
 Report leakage first and separately. That is the error that does real damage.
@@ -1053,7 +1053,7 @@ For each, tell me:
 - What the student would take away, if they read it
 
 Then tell me which version fits what I described, and flag anything in my
-original that is a judgement rather than an observation.
+original that is a judgment rather than an observation.
 
 COMMENT:
 [PASTE IT]
@@ -1076,12 +1076,12 @@ The comment says something about the child that the evidence does not.
 **COPY FROM HERE**
 
 ```text
-Rewrite this [GRADE] [SUBJECT] comment, replacing judgement with evidence.
+Rewrite this [GRADE] [SUBJECT] comment, replacing judgment with evidence.
 
 COMMENT: [PASTE IT]
 EVIDENCE: [PASTE WHAT YOU ACTUALLY HAVE]
 
-For each judgement in the original:
+For each judgment in the original:
 - Quote it
 - Say what it claims about the student
 - Say whether my evidence supports it
@@ -1090,7 +1090,7 @@ For each judgement in the original:
 Pay particular attention to: lazy, careless, unmotivated, does not try, capable
 but, could do better, disruptive, immature, and anything about attitude.
 
-If a judgement is unsupported, do not soften it — remove it. A gently worded
+If a judgment is unsupported, do not soften it — remove it. A gently worded
 unsupported claim is still an unsupported claim on a permanent record.
 
 Then tell me what the comment says once every unsupported claim is gone.

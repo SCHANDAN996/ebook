@@ -13,18 +13,18 @@ separate real understanding from having copied the method.
 |---|---|---|
 | Quizzes and tests | 13 | A full assessment with a key |
 | Formative checks and exit tickets | 7 | Finding out today, not next week |
-| Rubrics | 7 | Marking that is fair and fast |
+| Rubrics | 7 | Grading that is fair and fast |
 | Diagnosis and misconceptions | 5 | You know they are stuck; where exactly |
 | Answer keys and feedback | 4 | Comments that change what they do next |
 | Standards-based grading | 4 | Reporting against standards |
 
 ## Worth knowing before you start
 
-**Check the maths and the facts yourself.** This is the chapter where an
+**Check the math and the facts yourself.** This is the chapter where an
 unverified error reaches a student's grade. The model will produce a wrong
 answer key with complete confidence.
 
-Ask what each wrong option reveals. That turns marking into diagnosis and costs
+Ask what each wrong option reveals. That turns grading into diagnosis and costs
 you nothing extra.
 
 Single-point rubrics — one column describing proficient — are faster to write
@@ -90,7 +90,7 @@ Three sections, clearly different in what they demand:
 - Application: can they use it in a familiar context
 - Reasoning: can they explain, justify, or spot where it does not apply
 
-A student who revised by memorising should do well in the first section and
+A student who revised by memorizing should do well in the first section and
 struggle in the third. That contrast is the point.
 
 Give me the quiz, the answer key, and one line per section on what a strong or
@@ -146,7 +146,7 @@ If you cannot name the thinking behind an option, do not include it.
 *Grades 6-8, 9-12*
 
 **When you need this**
-Extended answers, marked consistently, without three hours of agonising.
+Extended answers, marked consistently, without three hours of agonizing.
 
 **COPY FROM HERE**
 
@@ -406,8 +406,8 @@ Write every descriptor for the student, in words a [GRADE] student uses.
 Requirements:
 - 4-5 criteria maximum, each about the learning
 - Four levels, each described by what is present rather than what is missing
-- No word that requires my judgement of effort, attitude or neatness
-- Nothing that penalises the same weakness in two criteria
+- No word that requires my judgment of effort, attitude or neatness
+- Nothing that penalizes the same weakness in two criteria
 
 Give me the rubric, plus one sentence per criterion a student could use to
 self-check before submitting.
@@ -541,7 +541,7 @@ A show of hands that actually tells you something.
 
 ```text
 Write a quick poll on [TOPIC] for [GRADE] [SUBJECT] that I can run with a show
-of hands, fingers, or coloured cards.
+of hands, fingers, or colored cards.
 
 Give me:
 - The question, said aloud in under 20 seconds
@@ -716,7 +716,7 @@ Write four-level descriptors for this criterion in [GRADE] [SUBJECT]:
 Task: [TASK]
 
 Each level must describe what is present in the work, not what is missing.
-"Does not include evidence" is a marking note; "Uses one piece of evidence,
+"Does not include evidence" is a grading note; "Uses one piece of evidence,
 stated without explanation" is a descriptor.
 
 Give me:
@@ -741,7 +741,7 @@ without saying exactly what would count.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-The rubric should measure the objective, not the artefact.
+The rubric should measure the objective, not the artifact.
 
 **COPY FROM HERE**
 
@@ -765,7 +765,7 @@ smallest change to the task that would fix it.
 **TO HERE**
 
 **Before you send it**
-- Are you marking the learning or the artefact?
+- Are you grading the learning or the artifact?
 - Do you agree with what it said the task cannot evidence?
 
 ---
@@ -781,7 +781,7 @@ Faster to write, far faster to mark, and the feedback is specific.
 ```text
 Build a single-point rubric for [TASK] in [GRADE] [SUBJECT].
 
-Format: one centre column stating what proficient looks like for each criterion,
+Format: one center column stating what proficient looks like for each criterion,
 with blank columns either side for what is not yet there and what goes beyond.
 
 Give me:
@@ -789,7 +789,7 @@ Give me:
 - The proficient descriptor for each
 - Three reusable feedback sentences per criterion for the not-yet column
 - Three for the beyond column
-- The one criterion I should look at first when marking
+- The one criterion I should look at first when grading
 
 The blank columns stay blank in the template — I fill them per student. Do not
 pre-fill them with generic levels.
@@ -799,7 +799,7 @@ pre-fill them with generic levels.
 
 **Before you send it**
 - Are the reusable sentences specific enough to be worth reusing?
-- Could a student self-assess against the centre column?
+- Could a student self-assess against the center column?
 
 ---
 
@@ -834,7 +834,7 @@ Do not include peer-rating scores as a criterion. Tell me why if you disagree.
 
 **Before you send it**
 - Can you mark the individual part without relying on memory?
-- Is a quiet student penalised anywhere here?
+- Is a quiet student penalized anywhere here?
 
 ---
 
@@ -1008,14 +1008,14 @@ Give me:
 - Two scripts that would score the same but belong in different codes, and why
   that distinction matters more than the score
 
-Keep the codes few enough to hold in my head while marking.
+Keep the codes few enough to hold in my head while grading.
 ```
 
 **TO HERE**
 
 **Before you send it**
 - Can you assign a script in a few seconds using these markers?
-- Is the same-score-different-code example one you recognise?
+- Is the same-score-different-code example one you recognize?
 
 ---
 
@@ -1142,7 +1142,7 @@ The original problem was: [DESCRIBE THE MISCONCEPTION OR GAP]
 
 Give me:
 - Questions that test the same thing in a different form, so a student who
-  memorised my reteaching examples cannot pass on recall
+  memorized my reteaching examples cannot pass on recall
 - One question where the old misconception would still show, if it survived
 - The answer key
 - What it means if results improve on the familiar form but not the new one
@@ -1266,7 +1266,7 @@ QUESTIONS AND KEY:
 
 **Before you send it**
 - Verify anything it calls an error, yourself. It can be wrong too.
-- Decide the arguable answers before you start marking, not during.
+- Decide the arguable answers before you start grading, not during.
 
 ---
 
@@ -1376,7 +1376,7 @@ to avoid that.
 
 **Before you send it**
 - Could you place a real student using only these descriptions?
-- Is the over-generous level one you recognise in your own marking?
+- Is the over-generous level one you recognize in your own grading?
 
 ---
 
@@ -1389,7 +1389,7 @@ A single average hides everything that matters.
 **COPY FROM HERE**
 
 ```text
-Summarise where my [GRADE] [SUBJECT] class stands on these standards, from this
+Summarize where my [GRADE] [SUBJECT] class stands on these standards, from this
 evidence:
 
 STANDARDS: [LIST THEM]
@@ -1432,8 +1432,8 @@ Tell me:
 - Where the evidence is all of one type, so I am measuring one format rather
   than the learning
 - Any standard where recent work outweighs everything else without a reason
-- Anywhere a behaviour or effort judgement has crept into an academic standard
-- Which judgement I would find hardest to defend if a family questioned it
+- Anywhere a behavior or effort judgment has crept into an academic standard
+- Which judgment I would find hardest to defend if a family questioned it
 
 Then tell me the one standard I should gather more evidence on before reporting.
 
@@ -1444,5 +1444,5 @@ SUMMARY:
 **TO HERE**
 
 **Before you send it**
-- Could you defend the judgement it flagged as weakest?
+- Could you defend the judgment it flagged as weakest?
 - Has effort crept into an academic standard anywhere?

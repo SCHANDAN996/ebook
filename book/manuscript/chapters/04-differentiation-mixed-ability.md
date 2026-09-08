@@ -113,24 +113,24 @@ attention. Stay with what the work shows.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-Organisers often organise the thinking away.
+Organizers often organize the thinking away.
 
 **COPY FROM HERE**
 
 ```text
-Design a graphic organiser for this [GRADE] [SUBJECT] task: [TASK]
+Design a graphic organizer for this [GRADE] [SUBJECT] task: [TASK]
 
-The organiser must hold the structure while leaving the reasoning to the
+The organizer must hold the structure while leaving the reasoning to the
 student. Boxes that only need copying are not helping.
 
 Give me:
-- The organiser, described so I could draw it on a board
+- The organizer, described so I could draw it on a board
 - What goes in each section, as the student sees it
 - The one section where the actual thinking happens, and why it stays blank
 - What a completed one looks like when it is done well
 - What a completed one looks like when the student filled boxes without thinking
 
-Then tell me what this organiser makes harder, since every structure closes
+Then tell me what this organizer makes harder, since every structure closes
 something off.
 ```
 
@@ -477,7 +477,7 @@ Structure:
 - 2 transfer questions in a context we have not used
 
 Every student attempts every tier. These are not ability groups and must not be
-labelled as such.
+labeled as such.
 
 Give me the questions, the answers, and:
 - What it means if a student is fine on core and stuck on transfer
@@ -516,7 +516,7 @@ Tell me:
 - Whether the naming, ordering or layout signals a ranking
 - Whether every version has something worth sharing in the closing discussion
 
-Then tell me the single change that would most equalise them, and whether any
+Then tell me the single change that would most equalize them, and whether any
 version should simply be removed.
 
 TASKS:
@@ -614,7 +614,7 @@ The task is not about language, and language is why it is failing.
 **COPY FROM HERE**
 
 ```text
-Analyse the language demands in this [GRADE] [SUBJECT] task: [PASTE IT]
+Analyze the language demands in this [GRADE] [SUBJECT] task: [PASTE IT]
 
 Tell me:
 - Command words, and what each actually asks for — students often lose marks
@@ -745,7 +745,7 @@ Then tell me where this would be a bad idea in this lesson, and why.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-Marking science, and accidentally marking English.
+Grading science, and accidentally grading English.
 
 **COPY FROM HERE**
 
@@ -764,7 +764,7 @@ Tell me:
 - An alternative way to evidence the same objective with a lower language load
 - What I should not correct, because it is not what I am assessing
 
-Then give me a marking note I could write for myself so I stay consistent
+Then give me a grading note I could write for myself so I stay consistent
 across thirty scripts.
 ```
 
@@ -772,7 +772,7 @@ across thirty scripts.
 
 **Before you send it**
 - Would a strong thinker with weak English pass this?
-- Is your marking note specific enough to hold you to it?
+- Is your grading note specific enough to hold you to it?
 
 ---
 
@@ -836,7 +836,7 @@ Give me:
 - The chunk students will find hardest, and the support that goes there
 - The vocabulary gloss for each chunk, alongside rather than replacing the text
 
-Do not paraphrase, modernise or simplify the source itself. The whole point is
+Do not paraphrase, modernize or simplify the source itself. The whole point is
 that students meet the original.
 
 SOURCE:
@@ -921,7 +921,7 @@ Then tell me which single support would help most if I only had time for one.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-A maths test that is secretly a reading test.
+A math test that is secretly a reading test.
 
 **COPY FROM HERE**
 

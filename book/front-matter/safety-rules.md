@@ -17,10 +17,10 @@ reading it first.
 - Student names, initials or ID numbers
 - Contact details for students or families
 - Medical information, diagnoses, or protected plans
-- Confidential incident or safeguarding records
+- Confidential incident or child-protection records
 - Any story detailed enough to identify one child
 
-Write **"a Year 5 student"** or **"Student A"** instead.
+Write **"a 5th grade student"** or **"Student A"** instead.
 
 > Taking the name out is not the same as making it anonymous. A class of 28 with
 > one wheelchair user is identifiable without any name at all. If the detail is
@@ -28,6 +28,36 @@ Write **"a Year 5 student"** or **"Student A"** instead.
 
 Use whatever AI tool your school has approved. If your school has not approved
 one, ask before putting any school information into any of them.
+
+---
+
+## Why the rule above is not just good manners
+
+Under **FERPA**, a student's education records — and any personally identifiable
+information taken from them — are protected. A district can share those records
+with an outside company only under an agreement that binds the company to use
+the data for the school's purposes and nothing else. A general chat tool you
+signed up for yourself is not covered by any such agreement.
+
+So the practical line is simple:
+
+| This is fine | This is not |
+|---|---|
+| "A 5th grade student who reverses digits" | The student's name, initials or ID |
+| "Three anonymous response patterns I saw" | A screenshot of the gradebook |
+| Your own wording of a concern | The text of an IEP, 504 plan or incident report |
+
+Your district may also have its own rules that are stricter than FERPA, and an
+approved-vendor list that is shorter than you expect. Ask once; it takes a
+minute and it settles the question for the whole year.
+
+**If students will use a tool themselves**, check their age against the tool's
+own terms as well — most consumer AI tools set a minimum age, and **COPPA**
+governs services that collect data from children under 13. That is a district
+decision, not a classroom one.
+
+This book is written so you never need to cross any of those lines: every
+prompt works from your description of the situation, not from the record.
 
 ---
 
@@ -51,10 +81,10 @@ than fill the gap. When it asks, answer — do not let it guess.
 
 ---
 
-## Judgements that stay with you
+## Judgments that stay with you
 
 AI does not decide a final grade, a placement, a disciplinary outcome, or
-anything to do with safeguarding. It can help you draft the words. The decision
+anything to do with child protection. It can help you draft the words. The decision
 is yours, and so is the responsibility.
 
 Never let it infer a diagnosis, a home situation, a motivation, an identity, or
@@ -68,7 +98,7 @@ extra time, that must survive into the draft.
 
 ## Two habits worth building
 
-**Check the maths and the facts yourself.** If you ask the model to check its
+**Check the math and the facts yourself.** If you ask the model to check its
 own work it will say it checked. That is not verification.
 
 **Read the draft as the person receiving it.** A parent email that reads fine to
@@ -78,7 +108,7 @@ you at 9pm may not read fine to a family at 8am.
 
 ## If a request touches harm or danger
 
-Stop. Do not work it through with an AI tool. Follow your school's safeguarding
+Stop. Do not work it through with an AI tool. Follow your school's mandated-reporting
 or emergency procedure. That process exists for exactly this moment.
 
 ---

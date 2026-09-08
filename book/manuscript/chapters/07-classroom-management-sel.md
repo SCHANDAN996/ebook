@@ -2,7 +2,7 @@
 
 **25 prompts**
 
-Most behaviour problems are routine problems wearing a disguise. These prompts
+Most behavior problems are routine problems wearing a disguise. These prompts
 work on the structures — how a transition runs, what you say in the first ten
 seconds, how a conversation gets repaired afterwards — rather than on the
 student.
@@ -12,7 +12,7 @@ student.
 | Group | Prompts | Use when |
 |---|---|---|
 | Routines and transitions | 6 | The same four minutes lost, every day |
-| Behaviour reset support | 5 | It went wrong; you want it back |
+| Behavior reset support | 5 | It went wrong; you want it back |
 | Restorative conversations | 4 | Repair, not punishment |
 | Social-emotional learning | 4 | Building it into normal lessons |
 | Morning meetings | 3 | Openings a shy student can join |
@@ -21,11 +21,11 @@ student.
 ## Worth knowing before you start
 
 **This chapter has the firmest limit in the book.** If a situation involves
-harm, abuse, or immediate danger, stop and follow your school's safeguarding
+harm, abuse, or immediate danger, stop and follow your school's mandated-reporting
 procedure. Do not work it through with an AI tool. Nothing here is a substitute
 for that process, and several prompts are written to say so and stop.
 
-Focus on the behaviour and the repair. Nothing here should produce a judgement
+Focus on the behavior and the repair. Nothing here should produce a judgment
 about a child's character, home life or motivation.
 
 A restorative conversation is not a forced apology. If a draft demands one,
@@ -59,12 +59,12 @@ Give me:
 - The routine as a sequence of steps, one action per step
 - The exact words I say to start it, under 10 seconds
 - The signal that tells me everyone has finished
-- How I teach it in the first week: what I model, what they practise, what I
+- How I teach it in the first week: what I model, what they practice, what I
   correct
 - What I do on day 20 when it starts to slip
 
 Do not build in a reward, a points system, or a competition. The routine should
-work because it is clear, not because it is incentivised.
+work because it is clear, not because it is incentivized.
 
 Keep it to steps a [GRADE] student can hold in their head.
 ```
@@ -254,11 +254,11 @@ Be blunt about a routine that has become habit rather than function.
 
 ---
 
-## Behaviour reset support
+## Behavior reset support
 
 ---
 
-### CM-008 · Create a brief private behaviour-reset conversation
+### CM-008 · Create a brief private behavior-reset conversation
 *All grades*
 
 **When you need this**
@@ -268,9 +268,9 @@ Something needs saying, and it must not become a performance.
 
 ```text
 Prepare a brief private conversation with a [GRADE] student about a classroom
-behaviour.
+behavior.
 
-What happened, observably: [DESCRIBE THE BEHAVIOUR — not the student]
+What happened, observably: [DESCRIBE THE BEHAVIOR — not the student]
 What I want: [THE SPECIFIC CHANGE]
 
 Give me:
@@ -281,12 +281,12 @@ Give me:
 - Three things NOT to say, and why each makes it worse
 
 Rules:
-- Address the behaviour and its effect, never the character
+- Address the behavior and its effect, never the character
 - Do not ask a student to explain themselves in front of others
 - Do not require an apology
 - Do not speculate about home, mood, or what is going on for them
 
-If what I described suggests harm, danger or a safeguarding concern, stop and
+If what I described suggests harm, danger or a child-protection concern, stop and
 tell me to follow my school's process instead.
 ```
 
@@ -307,7 +307,7 @@ The twelfth time today, and your tone is starting to show.
 **COPY FROM HERE**
 
 ```text
-Write redirection language for this recurring [GRADE] classroom behaviour:
+Write redirection language for this recurring [GRADE] classroom behavior:
 
 [DESCRIBE IT — what happens, how often, in what part of the lesson]
 
@@ -324,7 +324,7 @@ Rules: no sarcasm, no rhetorical questions, no comparisons to other students,
 no public countdowns, and nothing that requires the student to respond verbally
 in front of the class.
 
-Then tell me what the behaviour might be communicating that redirection cannot
+Then tell me what the behavior might be communicating that redirection cannot
 address.
 ```
 
@@ -357,8 +357,8 @@ Give me:
 - What I do if they return still upset
 
 Rules:
-- Re-entry is not the moment for consequences or a conversation about behaviour
-- Do not require the student to apologise before rejoining
+- Re-entry is not the moment for consequences or a conversation about behavior
+- Do not require the student to apologize before rejoining
 - Do not have them stand at the door waiting for permission in front of everyone
 
 I will follow my school's procedures for anything involving where a student went
@@ -421,14 +421,14 @@ Before the plan is in place for a term.
 **COPY FROM HERE**
 
 ```text
-Audit this [GRADE] behaviour response plan: [PASTE OR DESCRIBE IT]
+Audit this [GRADE] behavior response plan: [PASTE OR DESCRIBE IT]
 
 Tell me:
 - Where a step escalates rather than de-escalates
-- Anything that makes a student's behaviour visible to the class — a chart, a
-  name on the board, a public warning, a colour change
+- Anything that makes a student's behavior visible to the class — a chart, a
+  name on the board, a public warning, a color change
 - Anywhere the response depends on my mood, energy, or how the day has gone
-- Where the same behaviour would get different responses from different
+- Where the same behavior would get different responses from different
   students, and why that might be happening
 - Anything that removes learning as a consequence
 - Whether there is a route back for a student who has had a bad day
@@ -479,13 +479,13 @@ Rules — these are not optional:
 - I do not determine guilt in this conversation
 
 If what I described involves harm, abuse, bullying or immediate danger, stop and
-tell me to follow my school's safeguarding process instead of continuing.
+tell me to follow my school's mandated-reporting process instead of continuing.
 ```
 
 **TO HERE**
 
 **Before you send it**
-- If it flagged safeguarding, stop and use your school's process.
+- If it flagged child protection, stop and use your school's process.
 - Is any question really an accusation?
 
 ---
@@ -508,7 +508,7 @@ Give me four sets:
 - What could be different next time
 
 Rules:
-- No question beginning "why did you", which produces defence, not reflection
+- No question beginning "why did you", which produces defense, not reflection
 - No question a student can only answer by admitting fault
 - Every question answerable by a student who is upset, embarrassed, or
   monosyllabic
@@ -540,7 +540,7 @@ Something agreed, that both students actually agreed to.
 Build a repair agreement after a restorative conversation between [GRADE]
 students.
 
-What was discussed: [SUMMARISE — no names]
+What was discussed: [SUMMARIZE — no names]
 What was offered: [BY WHOM]
 
 Give me:
@@ -568,7 +568,7 @@ should not be written.
 
 ---
 
-### CM-015 · Audit a restorative script for coercion, blame and safeguarding limits
+### CM-015 · Audit a restorative script for coercion, blame and child-protection limits
 *All grades*
 
 **When you need this**
@@ -581,12 +581,12 @@ Audit this restorative script or plan: [PASTE IT]
 
 Tell me:
 - Any question that assigns blame while appearing neutral, quoted
-- Anywhere a student is required to apologise, forgive, or say they are fine
+- Anywhere a student is required to apologize, forgive, or say they are fine
 - Anywhere disclosure of feelings is compulsory rather than invited
 - Anything that would be unsafe if there is a power imbalance between the
   students
 - Anywhere the process continues when a student clearly wants to stop
-- Anything that belongs in a safeguarding process rather than a classroom
+- Anything that belongs in a child-protection process rather than a classroom
   conversation
 
 Then tell me:
@@ -632,10 +632,10 @@ Give me:
 Rules:
 - No student is asked to share a personal feeling or experience
 - Nothing that asks students to rate, chart or report their own mood publicly
-- No language that pathologises ordinary feelings
+- No language that pathologizes ordinary feelings
 - This is teaching vocabulary and strategy, not therapy
 
-If any part of what I have asked for belongs with a counsellor rather than a
+If any part of what I have asked for belongs with a counselor rather than a
 teacher, say so.
 ```
 
@@ -662,7 +662,7 @@ Give me:
 - The strategy, in three steps a student can remember when upset
 - Why it works, in language a [GRADE] student accepts — not neuroscience
 - How I teach it when nobody is upset, which is the only time it can be taught
-- Three fictional scenarios to practise on
+- Three fictional scenarios to practice on
 - The cue I use in the moment that is not "calm down"
 - What I say when a student uses it and it does not work
 
@@ -705,7 +705,7 @@ Rules — these define the task:
 
 Give me:
 - The activity
-- The fictional scenarios, written so no student would recognise themselves
+- The fictional scenarios, written so no student would recognize themselves
 - The discussion questions
 - What I do if a student volunteers something personal anyway
 - The closing that does not require anyone to have been moved
@@ -738,7 +738,7 @@ Tell me:
 - Anywhere a response would reveal a student's home, family or circumstances to
   the class
 - Anything assuming a family shape, faith, culture or way of expressing emotion
-- Anything crossing from teaching into counselling or therapy
+- Anything crossing from teaching into counseling or therapy
 - Any use of clinical language a teacher should not be applying to a child
 - Anything a student could not opt out of without being noticed
 
@@ -817,7 +817,7 @@ Give me:
 - How I avoid a check-in becoming a public mood display
 
 Rules:
-- No mood charts, colour cards, or anything the class can see
+- No mood charts, color cards, or anything the class can see
 - No question requiring a student to say they are not fine in order to be heard
 - Opting out must be invisible and unremarkable
 - I am not collecting data on children's emotional states
@@ -899,7 +899,7 @@ Give me:
 
 Rules:
 - No student named or described in a way that identifies them
-- No seat that is visibly the special seat, the front-for-behaviour seat, or the
+- No seat that is visibly the special seat, the front-for-behavior seat, or the
   isolation seat
 - Everyone can see the board and reach the door
 ```

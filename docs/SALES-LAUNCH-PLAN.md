@@ -31,16 +31,20 @@ Positioning: **A practical, editable starting point for teacher work - with exam
 
 ## 4. Pricing: मेरी शुरुआती recommendation
 
-ये test prices हैं, बाजार द्वारा साबित optimum prices नहीं। USD और INR अलग regional hypotheses हैं, exchange-rate conversions नहीं।
+ये test prices हैं, बाजार द्वारा साबित optimum prices नहीं।
 
-| Offer | International test price | India test price | कब रखें |
-|---|---:|---:|---|
-| Free sample | $0 | ₹0 | खरीद से पहले fit जाँचने के लिए |
-| Individual launch edition | $12 | ₹499 | review और delivery checks के बाद |
-| Regular individual edition | $19 | ₹799 | useful feedback और low support friction मिलने के बाद test करें |
-| Team licence | अभी quote न दें | अभी quote न दें | usage rights, seat count और support तय होने के बाद |
+**Geography: United States (8 सितंबर 2026 को तय, देखें [decision log](decision-log.md)).**
+इसलिए कीमत सिर्फ़ USD में है। India वाला ₹ column हटा दिया गया है — वह एक अलग
+hypothesis था, इस launch का रास्ता नहीं।
 
-शुरू में ₹99 या $2 जैसा अत्यंत कम price paid ads के साथ न चुनें: fixed transaction cost और acquisition cost margin खा सकती है। सिर्फ prompt count के आधार पर $49-$99 premium pricing भी उचित नहीं है।
+| Offer | US test price | कब रखें |
+|---|---:|---|
+| Free sample | $0 | खरीद से पहले fit जाँचने के लिए |
+| Individual launch edition | $12 | review और delivery checks के बाद |
+| Regular individual edition | $19 | useful feedback और low support friction मिलने के बाद test करें |
+| Team licence | अभी quote न दें | usage rights, seat count और support तय होने के बाद |
+
+शुरू में $2 जैसा अत्यंत कम price paid ads के साथ न चुनें: fixed transaction cost और acquisition cost margin खा सकती है। सिर्फ prompt count के आधार पर $49-$99 premium pricing भी उचित नहीं है।
 
 Market context: free prompt resources उपलब्ध हैं; TPT पर एक six-toolkit bundle का listed price $44.99 दिखाई दिया। यह अलग product है, आपका direct value-equivalent नहीं और इसकी listing sales demand का प्रमाण नहीं। इसलिए आपकी differentiation examples, safe workflow, usability और support होगी, केवल 300 संख्या नहीं। [Free-resource landscape](https://www.teacherspayteachers.com/browse/free?search=ai+prompts), [illustrative bundle listing](https://www.teacherspayteachers.com/Product/AI-Teacher-Toolkit-Bundle-ChatGPT-Prompts-Teaching-Resources-17303206).
 
@@ -135,8 +139,8 @@ Real demonstration को काटकर instant full result जैसा न �
 
 ### दिन 18-24: छोटा paid test, केवल अलग budget approval के बाद
 
-- International hypothesis: कुल अधिकतम $50 learning budget, पाँच दिन; यह अभी खर्च करने की अनुमति नहीं है।
-- India hypothesis: अलग ₹2,000 cap, पाँच दिन; पहले एक geography चुनें, दोनों साथ नहीं।
+- US audience, कुल अधिकतम $50 learning budget, पाँच दिन; यह अभी खर्च करने की अनुमति नहीं है।
+- Geography तय हो चुकी है (US), इसलिए दूसरा समानांतर geography test नहीं चलेगा।
 - दो creatives, एक offer, एक landing page। बहुत सारे audiences में tiny budget न बाँटें।
 - Daily spend, landing visits, samples, sales, refunds और support requests लिखें।
 - Budget पूरा होने पर स्वतः रोकें। Profitability, tracking और buyer satisfaction देखे बिना scale न करें।

@@ -40,7 +40,7 @@ Treat every suggested timing as optimistic. Handing out paper takes four minutes
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-You have an objective and a slot in the timetable, and nothing else yet.
+You have an objective and a slot in the schedule, and nothing else yet.
 
 **COPY FROM HERE**
 
@@ -57,7 +57,7 @@ believe they met the objective, then design the lesson to produce exactly that.
 Give me:
 1. The objective as a student-facing "I can" statement
 2. A 5-minute opening that surfaces what they already know
-3. The modelling steps, in the order I say and do them
+3. The modeling steps, in the order I say and do them
 4. Guided practice, plus what I should look for while circulating
 5. Independent practice
 6. An exit ticket — one question that separates real understanding from
@@ -103,7 +103,7 @@ For each stage, tell me what a student still holding the old idea would say, so
 I can hear it while circulating.
 
 End with a check that distinguishes a student who has the new concept from one
-who has memorised the new vocabulary.
+who has memorized the new vocabulary.
 ```
 
 **TO HERE**
@@ -155,7 +155,7 @@ assuming I have it.
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-A procedure where practising it wrong first would be costly.
+A procedure where practicing it wrong first would be costly.
 
 **COPY FROM HERE**
 
@@ -269,7 +269,7 @@ One difficult text, and you want them to work through it rather than survive it.
 ```text
 Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson built around the text below.
 
-Do not summarise the text for students. Design a lesson that makes them work
+Do not summarize the text for students. Design a lesson that makes them work
 through it.
 
 Give me:
@@ -680,7 +680,7 @@ UNIT:
 
 **Before you send it**
 - Do you agree with the gaps, or is it missing context you hold in your head?
-- Is the flat-demand judgement fair?
+- Is the flat-demand judgment fair?
 
 ---
 
@@ -1006,7 +1006,7 @@ convince a colleague they have met the objective.
 Give me:
 - 4-5 evidence statements, from minimum sufficient to clearly beyond
 - For each, an example of what that looks like in actual work
-- The one piece of evidence to prioritise if I only have time for one
+- The one piece of evidence to prioritize if I only have time for one
 - Two things students often produce that look like evidence but are not, and why
 
 Do not attach grades or percentages to these.
@@ -1461,7 +1461,7 @@ Give me five options that:
 
 For each, say in one line what deeper thinking it demands.
 
-No word searches, no colouring, and nothing that is simply more of the same
+No word searches, no coloring, and nothing that is simply more of the same
 questions. If a student would experience it as a punishment for working
 quickly, do not include it.
 ```
@@ -1590,7 +1590,7 @@ Your plan is good but the cover teacher filled the gaps wrong.
 
 ```text
 Rewrite these directions so a substitute who does not know [SUBJECT] can follow
-them without making any judgement calls.
+them without making any judgment calls.
 
 For every step, replace anything requiring subject knowledge with an explicit
 instruction. If the plan says "discuss the answers", write out the answers.
@@ -1713,7 +1713,7 @@ PLAN:
 
 **Before you send it**
 - Check safety and emergency procedures against your school's policy.
-- Is the collection procedure something the office would recognise?
+- Is the collection procedure something the office would recognize?
 
 ---
 
@@ -1785,7 +1785,7 @@ shared topic word is not a connection.
 
 **Before you send it**
 - Is the connection structural or decorative?
-- Can you separate the two subjects when marking?
+- Can you separate the two subjects when grading?
 
 ---
 
@@ -1913,7 +1913,7 @@ Give me:
 Do not suggest anything requiring students to hold personal accounts on public
 platforms.
 
-I will confirm all of this against my school's own consent and safeguarding
+I will confirm all of this against my school's own consent and child-protection
 policy.
 ```
 
@@ -2085,7 +2085,7 @@ Give me:
 - The differentiated middle, with what each group works on
 - Where I spend my time, and in what order
 - A shared closing task that works for all three
-- How groups are formed without labelling anyone
+- How groups are formed without labeling anyone
 
 No student names, and nothing that makes the grouping visible as ability.
 ```

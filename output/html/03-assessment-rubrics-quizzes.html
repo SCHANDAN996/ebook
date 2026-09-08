@@ -130,6 +130,8 @@ blockquote strong{color:var(--warn)}
         padding-bottom:9pt; border-bottom:1px solid var(--line)}
   .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
        margin:13pt 0 5pt; color:var(--dim)}
+  /* The screen theme lifts bold text to near-white. On paper that is invisible. */
+  strong{color:#101a26; font-weight:700}
 
   /* The prompt itself stays whole. */
   .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
@@ -155,14 +157,14 @@ blockquote strong{color:var(--warn)}
 <table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
 <tr><td>Quizzes and tests</td><td>13</td><td>A full assessment with a key</td></tr>
 <tr><td>Formative checks and exit tickets</td><td>7</td><td>Finding out today, not next week</td></tr>
-<tr><td>Rubrics</td><td>7</td><td>Marking that is fair and fast</td></tr>
+<tr><td>Rubrics</td><td>7</td><td>Grading that is fair and fast</td></tr>
 <tr><td>Diagnosis and misconceptions</td><td>5</td><td>You know they are stuck; where exactly</td></tr>
 <tr><td>Answer keys and feedback</td><td>4</td><td>Comments that change what they do next</td></tr>
 <tr><td>Standards-based grading</td><td>4</td><td>Reporting against standards</td></tr>
 </tbody></table>
 <h2>Worth knowing before you start</h2>
-<p><strong>Check the maths and the facts yourself.</strong> This is the chapter where an unverified error reaches a student's grade. The model will produce a wrong answer key with complete confidence.</p>
-<p>Ask what each wrong option reveals. That turns marking into diagnosis and costs you nothing extra.</p>
+<p><strong>Check the math and the facts yourself.</strong> This is the chapter where an unverified error reaches a student's grade. The model will produce a wrong answer key with complete confidence.</p>
+<p>Ask what each wrong option reveals. That turns grading into diagnosis and costs you nothing extra.</p>
 <p>Single-point rubrics — one column describing proficient — are faster to write and far faster to mark than a full grid. Several prompts here use them.</p>
 <h2>Quizzes and tests</h2>
 <article class="card" id="AS-001"><div class="head"><span class="pid">AS-001</span><h3>Create a balanced classroom assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
@@ -198,7 +200,7 @@ Three sections, clearly different in what they demand:
 - Application: can they use it in a familiar context
 - Reasoning: can they explain, justify, or spot where it does not apply
 
-A student who revised by memorising should do well in the first section and
+A student who revised by memorizing should do well in the first section and
 struggle in the third. That contrast is the point.
 
 Give me the quiz, the answer key, and one line per section on what a strong or
@@ -230,7 +232,7 @@ If you cannot name the thinking behind an option, do not include it.</pre></div>
 <ul><li>Can you name the thinking behind every wrong option?</li><li>Could a confused student eliminate their way to the answer?</li></ul></article>
 <article class="card" id="AS-007"><div class="head"><span class="pid">AS-007</span><h3>Create a constructed-response assessment with a scoring guide</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Extended answers, marked consistently, without three hours of agonising.</p>
+<p>Extended answers, marked consistently, without three hours of agonizing.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create [NUMBER] constructed-response questions on [TOPIC] for [GRADE] [SUBJECT].
 
 For each question give me:
@@ -388,8 +390,8 @@ Write every descriptor for the student, in words a [GRADE] student uses.
 Requirements:
 - 4-5 criteria maximum, each about the learning
 - Four levels, each described by what is present rather than what is missing
-- No word that requires my judgement of effort, attitude or neatness
-- Nothing that penalises the same weakness in two criteria
+- No word that requires my judgment of effort, attitude or neatness
+- Nothing that penalizes the same weakness in two criteria
 
 Give me the rubric, plus one sentence per criterion a student could use to
 self-check before submitting.
@@ -464,7 +466,7 @@ No marks and no percentages. I am sorting, not scoring.</pre></div>
 <p class="lbl">When you need this</p>
 <p>A show of hands that actually tells you something.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a quick poll on [TOPIC] for [GRADE] [SUBJECT] that I can run with a show
-of hands, fingers, or coloured cards.
+of hands, fingers, or colored cards.
 
 Give me:
 - The question, said aloud in under 20 seconds
@@ -566,7 +568,7 @@ Do not build anything that lets the class work out who was in which group.</pre>
 Task: [TASK]
 
 Each level must describe what is present in the work, not what is missing.
-&quot;Does not include evidence&quot; is a marking note; &quot;Uses one piece of evidence,
+&quot;Does not include evidence&quot; is a grading note; &quot;Uses one piece of evidence,
 stated without explanation&quot; is a descriptor.
 
 Give me:
@@ -581,7 +583,7 @@ without saying exactly what would count.</pre></div>
 <ul><li>Is the 2/3 boundary something you could defend to a parent?</li><li>Any vague words left?</li></ul></article>
 <article class="card" id="AS-022"><div class="head"><span class="pid">AS-022</span><h3>Turn an objective and task into aligned rubric criteria</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>The rubric should measure the objective, not the artefact.</p>
+<p>The rubric should measure the objective, not the artifact.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Derive rubric criteria for this [GRADE] [SUBJECT] task.
 
 Objective: [OBJECTIVE]
@@ -597,13 +599,13 @@ Give me:
 If the task cannot evidence the objective, say so plainly and tell me the
 smallest change to the task that would fix it.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Are you marking the learning or the artefact?</li><li>Do you agree with what it said the task cannot evidence?</li></ul></article>
+<ul><li>Are you grading the learning or the artifact?</li><li>Do you agree with what it said the task cannot evidence?</li></ul></article>
 <article class="card" id="AS-023"><div class="head"><span class="pid">AS-023</span><h3>Build a single-point rubric with feedback space</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Faster to write, far faster to mark, and the feedback is specific.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a single-point rubric for [TASK] in [GRADE] [SUBJECT].
 
-Format: one centre column stating what proficient looks like for each criterion,
+Format: one center column stating what proficient looks like for each criterion,
 with blank columns either side for what is not yet there and what goes beyond.
 
 Give me:
@@ -611,12 +613,12 @@ Give me:
 - The proficient descriptor for each
 - Three reusable feedback sentences per criterion for the not-yet column
 - Three for the beyond column
-- The one criterion I should look at first when marking
+- The one criterion I should look at first when grading
 
 The blank columns stay blank in the template — I fill them per student. Do not
 pre-fill them with generic levels.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Are the reusable sentences specific enough to be worth reusing?</li><li>Could a student self-assess against the centre column?</li></ul></article>
+<ul><li>Are the reusable sentences specific enough to be worth reusing?</li><li>Could a student self-assess against the center column?</li></ul></article>
 <article class="card" id="AS-024"><div class="head"><span class="pid">AS-024</span><h3>Create a rubric for collaborative work with individual evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A group mark that does not hide who learned what.</p>
@@ -637,7 +639,7 @@ Give me:
 
 Do not include peer-rating scores as a criterion. Tell me why if you disagree.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Can you mark the individual part without relying on memory?</li><li>Is a quiet student penalised anywhere here?</li></ul></article>
+<ul><li>Can you mark the individual part without relying on memory?</li><li>Is a quiet student penalized anywhere here?</li></ul></article>
 <article class="card" id="AS-025"><div class="head"><span class="pid">AS-025</span><h3>Rewrite vague rubric words as observable evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Your rubric says "shows good understanding" and nobody knows what that means.</p>
@@ -743,9 +745,9 @@ Give me:
 - Two scripts that would score the same but belong in different codes, and why
   that distinction matters more than the score
 
-Keep the codes few enough to hold in my head while marking.</pre></div>
+Keep the codes few enough to hold in my head while grading.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Can you assign a script in a few seconds using these markers?</li><li>Is the same-score-different-code example one you recognise?</li></ul></article>
+<ul><li>Can you assign a script in a few seconds using these markers?</li><li>Is the same-score-different-code example one you recognize?</li></ul></article>
 <article class="card" id="AS-030"><div class="head"><span class="pid">AS-030</span><h3>Distinguish a careless slip from a conceptual misunderstanding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Reteaching a concept someone already understands wastes everyone's time.</p>
@@ -821,7 +823,7 @@ The original problem was: [DESCRIBE THE MISCONCEPTION OR GAP]
 
 Give me:
 - Questions that test the same thing in a different form, so a student who
-  memorised my reteaching examples cannot pass on recall
+  memorized my reteaching examples cannot pass on recall
 - One question where the old misconception would still show, if it survived
 - The answer key
 - What it means if results improve on the familiar form but not the new one
@@ -895,7 +897,7 @@ with the key by default.
 QUESTIONS AND KEY:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Verify anything it calls an error, yourself. It can be wrong too.</li><li>Decide the arguable answers before you start marking, not during.</li></ul></article>
+<ul><li>Verify anything it calls an error, yourself. It can be wrong too.</li><li>Decide the arguable answers before you start grading, not during.</li></ul></article>
 <article class="card" id="AS-036"><div class="head"><span class="pid">AS-036</span><h3>Create learner-friendly solution explanations without hiding reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Solutions a student can learn from, rather than copy.</p>
@@ -960,11 +962,11 @@ arithmetic.
 Then tell me the level most often assigned too generously, and what to look for
 to avoid that.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Could you place a real student using only these descriptions?</li><li>Is the over-generous level one you recognise in your own marking?</li></ul></article>
+<ul><li>Could you place a real student using only these descriptions?</li><li>Is the over-generous level one you recognize in your own grading?</li></ul></article>
 <article class="card" id="AS-039"><div class="head"><span class="pid">AS-039</span><h3>Summarize class mastery without averaging unrelated skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A single average hides everything that matters.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Summarise where my [GRADE] [SUBJECT] class stands on these standards, from this
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Summarize where my [GRADE] [SUBJECT] class stands on these standards, from this
 evidence:
 
 STANDARDS: [LIST THEM]
@@ -993,15 +995,15 @@ Tell me:
 - Where the evidence is all of one type, so I am measuring one format rather
   than the learning
 - Any standard where recent work outweighs everything else without a reason
-- Anywhere a behaviour or effort judgement has crept into an academic standard
-- Which judgement I would find hardest to defend if a family questioned it
+- Anywhere a behavior or effort judgment has crept into an academic standard
+- Which judgment I would find hardest to defend if a family questioned it
 
 Then tell me the one standard I should gather more evidence on before reporting.
 
 SUMMARY:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Could you defend the judgement it flagged as weakest?</li><li>Has effort crept into an academic standard anywhere?</li></ul></article></div><script>
+<ul><li>Could you defend the judgment it flagged as weakest?</li><li>Has effort crept into an academic standard anywhere?</li></ul></article></div><script>
 function copyText(t){
   if(navigator.clipboard && window.isSecureContext){
     return navigator.clipboard.writeText(t);

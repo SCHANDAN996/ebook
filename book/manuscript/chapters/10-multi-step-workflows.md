@@ -128,7 +128,7 @@ Context:
 - Materials: [LIST]
 
 STEP 1 — Build the core lesson.
-Plan the on-level lesson: opening, modelling, guided practice, independent
+Plan the on-level lesson: opening, modeling, guided practice, independent
 work, exit ticket. Build it backward from what would show the objective was
 met. Then stop.
 ```
@@ -163,7 +163,7 @@ contributions, and the shared conclusion. Then stop.
 STEP 5 — Check the dignity.
 Review all three routes. Would the class work out which is the lesser one? Does
 every route have something worth sharing? Tell me the single change that would
-most equalise them.
+most equalize them.
 ```
 
 **Before you use it**
@@ -184,7 +184,7 @@ Something happened, and the conversation has to be right.
 Help me prepare a family conversation, one step at a time. Stop after each step.
 
 Before we start: if what I describe involves harm, abuse, or immediate danger,
-stop and tell me to follow my school's safeguarding process instead of
+stop and tell me to follow my school's mandated-reporting process instead of
 continuing this workflow.
 
 Context:
@@ -226,13 +226,13 @@ Record disagreement as disagreement. Invite correction. Then stop.
 ```text
 STEP 5 — Check it.
 Review everything: any claim I cannot evidence, anywhere a family could
-reasonably read blame, anything that belongs in a safeguarding process rather
+reasonably read blame, anything that belongs in a child-protection process rather
 than a conversation with me. Tell me the one sentence to cut.
 ```
 
 **Before you use it**
 - If Step 1 flags inference as fact, fix it before Step 2.
-- If any step raises safeguarding, stop and use your school's process.
+- If any step raises child protection, stop and use your school's process.
 
 ---
 
@@ -538,7 +538,7 @@ rather than a conversation.
 
 **Before you use it**
 - Fix anything Step 1 flags as impression before it reaches a card.
-- Practise the Step 4 openings aloud once.
+- Practice the Step 4 openings aloud once.
 
 ---
 
@@ -555,7 +555,7 @@ Help me draft an intervention plan in steps. Stop after each.
 
 Read this first: this is a draft to take into my school's own process. It is not
 a decision, a diagnosis, or a referral. If at any step the evidence points
-toward something requiring a specialist, a safeguarding response, or a formal
+toward something requiring a specialist, a mandated report, or a formal
 assessment, say so and tell me to stop and use my school's process instead of
 continuing.
 
@@ -628,7 +628,7 @@ Context:
 - Destination and activity: [DESCRIBE]
 - Date, year group, number of students: [STATE THEM]
 - Adults available: [NUMBER AND ROLES]
-- My school's requirements as I understand them: [PASTE OR SUMMARISE]
+- My school's requirements as I understand them: [PASTE OR SUMMARIZE]
 
 STEP 1 — Build the backwards checklist.
 Working back from the trip date: approvals, consent, transport, staffing,

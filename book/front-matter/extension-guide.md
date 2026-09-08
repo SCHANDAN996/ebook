@@ -18,7 +18,7 @@ authorized team, not through the AI output.
 
 ## Responsible student AI use
 
-Adapt WA-011: give a clearly labelled fictional AI answer containing a teacher-verified error.
+Adapt WA-011: give a clearly labeled fictional AI answer containing a teacher-verified error.
 Learners identify the claim, locate evidence, correct the answer and explain what remains
 uncertain. Do not accuse a learner of AI misuse from style or an automated detector alone.
 Use AS-007 for process evidence such as explanation, revision and an in-class response.

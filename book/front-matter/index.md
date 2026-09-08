@@ -297,14 +297,14 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | CM-005 | Build a materials routine that reduces waiting and lost equipment |
 | CM-006 | Plan a dismissal routine that protects safety and learning time |
 | CM-007 | Audit a routine using timing, participation and independence evidence |
-| CM-008 | Create a brief private behaviour-reset conversation |
+| CM-008 | Create a brief private behavior-reset conversation |
 | CM-009 | Write neutral redirection language for a recurring disruption |
 | CM-010 | Plan a re-entry routine after a learner leaves the classroom |
 | CM-011 | Create a reset menu that preserves dignity and instructional access |
 | CM-012 | Audit a response plan for escalation, shame and inconsistent expectations |
 | CM-013 | Create questions that explore impact, needs and possible repair |
 | CM-014 | Build a voluntary repair agreement with a scheduled follow-up |
-| CM-015 | Audit a restorative script for coercion, blame and safeguarding limits |
+| CM-015 | Audit a restorative script for coercion, blame and child-protection limits |
 | CM-016 | Create an age-appropriate lesson on naming and managing emotions |
 | CM-017 | Teach a practical strategy for pausing before responding |
 | CM-018 | Build an empathy activity without requiring personal disclosure |
@@ -362,7 +362,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | SD-010 | Create a source-analysis lesson using origin, purpose and context |
 | SD-011 | Build a corroboration task with multiple supplied perspectives |
 | SD-012 | Design a historical claim task that distinguishes evidence from interpretation |
-| SD-013 | Create a skill-development lesson with modelling, practice and reflection |
+| SD-013 | Create a skill-development lesson with modeling, practice and reflection |
 | SD-014 | Adapt a performance task for space, equipment and physical access |
 | SD-015 | Build an observable process rubric for an arts, PE or elective task |
 
@@ -433,6 +433,6 @@ when you fill the prompt in. These are the ones written for one subject:
 | SD-010 | Create a source-analysis lesson using origin, purpose and context |
 | SD-011 | Build a corroboration task with multiple supplied perspectives |
 | SD-012 | Design a historical claim task that distinguishes evidence from interpretation |
-| SD-013 | Create a skill-development lesson with modelling, practice and reflection |
+| SD-013 | Create a skill-development lesson with modeling, practice and reflection |
 | SD-014 | Adapt a performance task for space, equipment and physical access |
 | SD-015 | Build an observable process rubric for an arts, PE or elective task |

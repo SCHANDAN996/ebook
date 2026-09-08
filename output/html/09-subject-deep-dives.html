@@ -130,6 +130,8 @@ blockquote strong{color:var(--warn)}
         padding-bottom:9pt; border-bottom:1px solid var(--line)}
   .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
        margin:13pt 0 5pt; color:var(--dim)}
+  /* The screen theme lifts bold text to near-white. On paper that is invisible. */
+  strong{color:#101a26; font-weight:700}
 
   /* The prompt itself stays whole. */
   .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
@@ -362,7 +364,7 @@ Then tell me the risk of giving a model at all, and how to reduce it.</pre></div
 
 Separate three passes, in this order, and say why the order matters:
 - Ideas: is there enough here, and is it the right thing
-- Organisation: is it in an order a reader can follow
+- Organization: is it in an order a reader can follow
 - Conventions: sentences, punctuation, spelling
 
 Give me:
@@ -453,7 +455,7 @@ not mean it is better supported.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify every date and event it used.</li><li>Are both interpretations genuinely defensible?</li></ul>
 <h2>Arts, PE and electives</h2></article>
-<article class="card" id="SD-013"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modelling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-013"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modeling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Skill teaching where practice is deliberate rather than just repeated.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [SUBJECT] lesson teaching [SKILL] to [GRADE].
@@ -502,7 +504,7 @@ Rules:
 <ul><li>Would a student feel singled out by the adapted route?</li><li>Is what you assess genuinely the same?</li></ul></article>
 <article class="card" id="SD-015"><div class="head"><span class="pid">SD-015</span><h3>Build an observable process rubric for an arts, PE or elective task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Marking the learning rather than the finished performance.</p>
+<p>Grading the learning rather than the finished performance.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a rubric for [TASK] in [SUBJECT] for [GRADE], assessing [OBJECTIVE].
 
 Weight process and technique over the finished product, and say how you have
@@ -525,7 +527,7 @@ Give me:
 Then tell me which criterion would advantage a student with outside coaching,
 and how to reduce that.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Which criterion favours the already-trained student? Fix it.</li><li>Is anything here about the body rather than the learning?</li></ul></article></div><script>
+<ul><li>Which criterion favors the already-trained student? Fix it.</li><li>Is anything here about the body rather than the learning?</li></ul></article></div><script>
 function copyText(t){
   if(navigator.clipboard && window.isSecureContext){
     return navigator.clipboard.writeText(t);

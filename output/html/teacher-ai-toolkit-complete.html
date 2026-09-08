@@ -130,6 +130,8 @@ blockquote strong{color:var(--warn)}
         padding-bottom:9pt; border-bottom:1px solid var(--line)}
   .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
        margin:13pt 0 5pt; color:var(--dim)}
+  /* The screen theme lifts bold text to near-white. On paper that is invisible. */
+  strong{color:#101a26; font-weight:700}
 
   /* The prompt itself stays whole. */
   .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
@@ -438,14 +440,14 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <tr><td><a href="#CM-005">CM-005</a></td><td>Build a materials routine that reduces waiting and lost equipment</td></tr>
 <tr><td><a href="#CM-006">CM-006</a></td><td>Plan a dismissal routine that protects safety and learning time</td></tr>
 <tr><td><a href="#CM-007">CM-007</a></td><td>Audit a routine using timing, participation and independence evidence</td></tr>
-<tr><td><a href="#CM-008">CM-008</a></td><td>Create a brief private behaviour-reset conversation</td></tr>
+<tr><td><a href="#CM-008">CM-008</a></td><td>Create a brief private behavior-reset conversation</td></tr>
 <tr><td><a href="#CM-009">CM-009</a></td><td>Write neutral redirection language for a recurring disruption</td></tr>
 <tr><td><a href="#CM-010">CM-010</a></td><td>Plan a re-entry routine after a learner leaves the classroom</td></tr>
 <tr><td><a href="#CM-011">CM-011</a></td><td>Create a reset menu that preserves dignity and instructional access</td></tr>
 <tr><td><a href="#CM-012">CM-012</a></td><td>Audit a response plan for escalation, shame and inconsistent expectations</td></tr>
 <tr><td><a href="#CM-013">CM-013</a></td><td>Create questions that explore impact, needs and possible repair</td></tr>
 <tr><td><a href="#CM-014">CM-014</a></td><td>Build a voluntary repair agreement with a scheduled follow-up</td></tr>
-<tr><td><a href="#CM-015">CM-015</a></td><td>Audit a restorative script for coercion, blame and safeguarding limits</td></tr>
+<tr><td><a href="#CM-015">CM-015</a></td><td>Audit a restorative script for coercion, blame and child-protection limits</td></tr>
 <tr><td><a href="#CM-016">CM-016</a></td><td>Create an age-appropriate lesson on naming and managing emotions</td></tr>
 <tr><td><a href="#CM-017">CM-017</a></td><td>Teach a practical strategy for pausing before responding</td></tr>
 <tr><td><a href="#CM-018">CM-018</a></td><td>Build an empathy activity without requiring personal disclosure</td></tr>
@@ -499,7 +501,7 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <tr><td><a href="#SD-010">SD-010</a></td><td>Create a source-analysis lesson using origin, purpose and context</td></tr>
 <tr><td><a href="#SD-011">SD-011</a></td><td>Build a corroboration task with multiple supplied perspectives</td></tr>
 <tr><td><a href="#SD-012">SD-012</a></td><td>Design a historical claim task that distinguishes evidence from interpretation</td></tr>
-<tr><td><a href="#SD-013">SD-013</a></td><td>Create a skill-development lesson with modelling, practice and reflection</td></tr>
+<tr><td><a href="#SD-013">SD-013</a></td><td>Create a skill-development lesson with modeling, practice and reflection</td></tr>
 <tr><td><a href="#SD-014">SD-014</a></td><td>Adapt a performance task for space, equipment and physical access</td></tr>
 <tr><td><a href="#SD-015">SD-015</a></td><td>Build an observable process rubric for an arts, PE or elective task</td></tr>
 </tbody></table>
@@ -548,7 +550,7 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <tr><td><a href="#SD-010">SD-010</a></td><td>Create a source-analysis lesson using origin, purpose and context</td></tr>
 <tr><td><a href="#SD-011">SD-011</a></td><td>Build a corroboration task with multiple supplied perspectives</td></tr>
 <tr><td><a href="#SD-012">SD-012</a></td><td>Design a historical claim task that distinguishes evidence from interpretation</td></tr>
-<tr><td><a href="#SD-013">SD-013</a></td><td>Create a skill-development lesson with modelling, practice and reflection</td></tr>
+<tr><td><a href="#SD-013">SD-013</a></td><td>Create a skill-development lesson with modeling, practice and reflection</td></tr>
 <tr><td><a href="#SD-014">SD-014</a></td><td>Adapt a performance task for space, equipment and physical access</td></tr>
 <tr><td><a href="#SD-015">SD-015</a></td><td>Build an observable process rubric for an arts, PE or elective task</td></tr>
 </tbody></table>
@@ -573,7 +575,7 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <tr><td>Adapting one task for a mixed class</td><td>Chapter 4</td></tr>
 <tr><td>Writing to a family</td><td>Chapter 5</td></tr>
 <tr><td>Report card season</td><td>Chapter 6</td></tr>
-<tr><td>Routines, behaviour, morning meeting</td><td>Chapter 7</td></tr>
+<tr><td>Routines, behavior, morning meeting</td><td>Chapter 7</td></tr>
 <tr><td>Emails, goals, forms, admin</td><td>Chapter 8</td></tr>
 <tr><td>Subject-specific work</td><td>Chapter 9</td></tr>
 <tr><td>A whole job, start to finish</td><td>Chapter 10</td></tr>
@@ -583,8 +585,8 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <p>Every prompt has parts like <code>[GRADE_SUBJECT]</code> or <code>[UNIT_TOPIC]</code>. Replace the whole thing, brackets included.</p>
 <blockquote><p><code>[GRADE_SUBJECT: exact age/grade and subject]</code></p></blockquote>
 <blockquote><p>becomes</p></blockquote>
-<blockquote><p><code>Year 7 science</code></p></blockquote>
-<p><strong>Be specific.</strong> "Year 7 science, mixed ability, 26 students, 50-minute lesson, no lab access this week" gets you something usable. "Science" gets you something generic.</p>
+<blockquote><p><code>7th grade science</code></p></blockquote>
+<p><strong>Be specific.</strong> "7th grade science, mixed ability, 26 students, 50-minute lesson, no lab access this week" gets you something usable. "Science" gets you something generic.</p>
 <p>If a prompt asks for something you genuinely do not have, say so in the chat rather than inventing it. The prompts are written to ask you back.</p>
 <h2>Getting a better result</h2>
 <p><strong>Answer its questions.</strong> If it comes back asking for the assessment date or the reading level, the prompt is working correctly. Answer, and the next draft will be much closer.</p>
@@ -599,19 +601,30 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <h2>Three things this book will not do</h2>
 <p><strong>It will not know your students.</strong> Nothing here should be given identifying details. See the safety page.</p>
 <p><strong>It will not check your subject facts.</strong> Verify content and calculations yourself, especially anything a student will be marked on.</p>
-<p><strong>It will not decide anything.</strong> Grades, placements, behaviour outcomes and anything touching safeguarding stay with you and your school's process.</p>
+<p><strong>It will not decide anything.</strong> Grades, placements, behavior outcomes and anything touching child protection stay with you and your school's process.</p>
 <h2>If a prompt does not work</h2>
 <p>Tell us which one — the ID is at the top of every prompt, like <code>LP-002</code> — and what you got instead. That is the fastest way to get it fixed.</p>
 <h1 class="chap" id="00-safety">Before you use any prompt in this book</h1><p>Read this once. It applies to every prompt in every chapter.</p>
 <h2>The one-minute version</h2>
 <p>AI writes a <strong>first draft</strong>. You are the teacher. Nothing in this book produces something that goes to a student, a family, or a permanent record without you reading it first.</p>
 <h2>Never paste these into an AI tool</h2>
-<ul><li>Student names, initials or ID numbers</li><li>Contact details for students or families</li><li>Medical information, diagnoses, or protected plans</li><li>Confidential incident or safeguarding records</li><li>Any story detailed enough to identify one child</li></ul>
-<p>Write <strong>"a Year 5 student"</strong> or <strong>"Student A"</strong> instead.</p>
+<ul><li>Student names, initials or ID numbers</li><li>Contact details for students or families</li><li>Medical information, diagnoses, or protected plans</li><li>Confidential incident or child-protection records</li><li>Any story detailed enough to identify one child</li></ul>
+<p>Write <strong>"a 5th grade student"</strong> or <strong>"Student A"</strong> instead.</p>
 <blockquote><p>Taking the name out is not the same as making it anonymous. A class of 28 with</p></blockquote>
 <blockquote><p>one wheelchair user is identifiable without any name at all. If the detail is</p></blockquote>
 <blockquote><p>what makes the request work, that is exactly the detail to leave out.</p></blockquote>
 <p>Use whatever AI tool your school has approved. If your school has not approved one, ask before putting any school information into any of them.</p>
+<h2>Why the rule above is not just good manners</h2>
+<p>Under <strong>FERPA</strong>, a student's education records — and any personally identifiable information taken from them — are protected. A district can share those records with an outside company only under an agreement that binds the company to use the data for the school's purposes and nothing else. A general chat tool you signed up for yourself is not covered by any such agreement.</p>
+<p>So the practical line is simple:</p>
+<table><thead><tr><th>This is fine</th><th>This is not</th></tr></thead><tbody>
+<tr><td>"A 5th grade student who reverses digits"</td><td>The student's name, initials or ID</td></tr>
+<tr><td>"Three anonymous response patterns I saw"</td><td>A screenshot of the gradebook</td></tr>
+<tr><td>Your own wording of a concern</td><td>The text of an IEP, 504 plan or incident report</td></tr>
+</tbody></table>
+<p>Your district may also have its own rules that are stricter than FERPA, and an approved-vendor list that is shorter than you expect. Ask once; it takes a minute and it settles the question for the whole year.</p>
+<p><strong>If students will use a tool themselves</strong>, check their age against the tool's own terms as well — most consumer AI tools set a minimum age, and <strong>COPPA</strong> governs services that collect data from children under 13. That is a district decision, not a classroom one.</p>
+<p>This book is written so you never need to cross any of those lines: every prompt works from your description of the situation, not from the record.</p>
 <h2>What AI may write, and what it may not</h2>
 <p><strong>It may invent:</strong> teaching activities, practice questions, worked examples, fictional scenarios, sentence starters, structures and sequences.</p>
 <p><strong>It must never invent:</strong></p>
@@ -623,15 +636,15 @@ h1.chap{font-size:2rem; margin:0 0 .4rem}
 <tr><td>Test scores or measured results</td><td>These are evidence, not text</td></tr>
 </tbody></table>
 <p>If something you need is missing, the prompt is written to <strong>ask you</strong> rather than fill the gap. When it asks, answer — do not let it guess.</p>
-<h2>Judgements that stay with you</h2>
-<p>AI does not decide a final grade, a placement, a disciplinary outcome, or anything to do with safeguarding. It can help you draft the words. The decision is yours, and so is the responsibility.</p>
+<h2>Judgments that stay with you</h2>
+<p>AI does not decide a final grade, a placement, a disciplinary outcome, or anything to do with child protection. It can help you draft the words. The decision is yours, and so is the responsibility.</p>
 <p>Never let it infer a diagnosis, a home situation, a motivation, an identity, or a fixed ability level. It cannot know these, and a confident sentence about them is still a guess.</p>
 <p><strong>Keep any accommodation or constraint you supplied.</strong> If you said a student has extra time, that must survive into the draft.</p>
 <h2>Two habits worth building</h2>
-<p><strong>Check the maths and the facts yourself.</strong> If you ask the model to check its own work it will say it checked. That is not verification.</p>
+<p><strong>Check the math and the facts yourself.</strong> If you ask the model to check its own work it will say it checked. That is not verification.</p>
 <p><strong>Read the draft as the person receiving it.</strong> A parent email that reads fine to you at 9pm may not read fine to a family at 8am.</p>
 <h2>If a request touches harm or danger</h2>
-<p>Stop. Do not work it through with an AI tool. Follow your school's safeguarding or emergency procedure. That process exists for exactly this moment.</p>
+<p>Stop. Do not work it through with an AI tool. Follow your school's mandated-reporting or emergency procedure. That process exists for exactly this moment.</p>
 <h2>Paste this once, at the start of your chat</h2>
 <p>Instead of repeating rules in every prompt, paste this at the top of a new conversation. Everything after it inherits the rules.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>You are helping a classroom teacher draft materials.
@@ -670,7 +683,7 @@ Confirm you have these, then wait for my first task.</pre></div>
 <h2>Complete lessons</h2>
 <article class="card" id="LP-001"><div class="head"><span class="pid">LP-001</span><h3>Build a complete evidence-led lesson</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>You have an objective and a slot in the timetable, and nothing else yet.</p>
+<p>You have an objective and a slot in the schedule, and nothing else yet.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC].
 
 Objective: [OBJECTIVE — what students should be able to do by the end]
@@ -683,7 +696,7 @@ believe they met the objective, then design the lesson to produce exactly that.
 Give me:
 1. The objective as a student-facing &quot;I can&quot; statement
 2. A 5-minute opening that surfaces what they already know
-3. The modelling steps, in the order I say and do them
+3. The modeling steps, in the order I say and do them
 4. Guided practice, plus what I should look for while circulating
 5. Independent practice
 6. An exit ticket — one question that separates real understanding from
@@ -714,7 +727,7 @@ For each stage, tell me what a student still holding the old idea would say, so
 I can hear it while circulating.
 
 End with a check that distinguishes a student who has the new concept from one
-who has memorised the new vocabulary.</pre></div>
+who has memorized the new vocabulary.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the "cannot explain" example genuinely unexplainable with prior knowledge?</li><li>Does the definition arrive after the need for it, not before?</li></ul></article>
 <article class="card" id="LP-007"><div class="head"><span class="pid">LP-007</span><h3>Plan an inquiry lesson around a puzzling phenomenon</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
@@ -742,7 +755,7 @@ assuming I have it.</pre></div>
 <ul><li>Is the phenomenon actually puzzling, or just unfamiliar?</li><li>Is there a point where you teach directly? Pure discovery rarely works.</li></ul></article>
 <article class="card" id="LP-008"><div class="head"><span class="pid">LP-008</span><h3>Create an explicit-instruction lesson with guided release</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>A procedure where practising it wrong first would be costly.</p>
+<p>A procedure where practicing it wrong first would be costly.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson teaching [SKILL OR PROCEDURE]
 using explicit instruction with gradual release.
 
@@ -810,7 +823,7 @@ physical grouping, movement, talk — as an advantage.</pre></div>
 <p>One difficult text, and you want them to work through it rather than survive it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson built around the text below.
 
-Do not summarise the text for students. Design a lesson that makes them work
+Do not summarize the text for students. Design a lesson that makes them work
 through it.
 
 Give me:
@@ -1059,7 +1072,7 @@ list of strengths.
 UNIT:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Do you agree with the gaps, or is it missing context you hold in your head?</li><li>Is the flat-demand judgement fair?</li></ul></article>
+<ul><li>Do you agree with the gaps, or is it missing context you hold in your head?</li><li>Is the flat-demand judgment fair?</li></ul></article>
 <article class="card" id="LP-022"><div class="head"><span class="pid">LP-022</span><h3>Shorten a unit while protecting its essential learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Snow days, assemblies, a lost week — and the unit still has to finish.</p>
@@ -1247,7 +1260,7 @@ convince a colleague they have met the objective.
 Give me:
 - 4-5 evidence statements, from minimum sufficient to clearly beyond
 - For each, an example of what that looks like in actual work
-- The one piece of evidence to prioritise if I only have time for one
+- The one piece of evidence to prioritize if I only have time for one
 - Two things students often produce that look like evidence but are not, and why
 
 Do not attach grades or percentages to these.</pre></div>
@@ -1512,7 +1525,7 @@ Give me five options that:
 
 For each, say in one line what deeper thinking it demands.
 
-No word searches, no colouring, and nothing that is simply more of the same
+No word searches, no coloring, and nothing that is simply more of the same
 questions. If a student would experience it as a punishment for working
 quickly, do not include it.</pre></div>
 <p class="lbl">Before you send it</p>
@@ -1582,7 +1595,7 @@ genuinely cannot be taught this way, say so and suggest a related one that can.<
 <p class="lbl">When you need this</p>
 <p>Your plan is good but the cover teacher filled the gaps wrong.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite these directions so a substitute who does not know [SUBJECT] can follow
-them without making any judgement calls.
+them without making any judgment calls.
 
 For every step, replace anything requiring subject knowledge with an explicit
 instruction. If the plan says &quot;discuss the answers&quot;, write out the answers.
@@ -1658,7 +1671,7 @@ I will check anything safety-related against my school&#x27;s own procedures.
 PLAN:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Check safety and emergency procedures against your school's policy.</li><li>Is the collection procedure something the office would recognise?</li></ul>
+<ul><li>Check safety and emergency procedures against your school's policy.</li><li>Is the collection procedure something the office would recognize?</li></ul>
 <h2>Projects and interdisciplinary</h2></article>
 <article class="card" id="LP-049"><div class="head"><span class="pid">LP-049</span><h3>Launch a project with a clear driving question and final product</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
@@ -1699,7 +1712,7 @@ Give me:
 If the honest connection is thin, say so rather than manufacturing one. A
 shared topic word is not a connection.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the connection structural or decorative?</li><li>Can you separate the two subjects when marking?</li></ul></article>
+<ul><li>Is the connection structural or decorative?</li><li>Can you separate the two subjects when grading?</li></ul></article>
 <article class="card" id="LP-051"><div class="head"><span class="pid">LP-051</span><h3>Break a multiweek project into milestones and checkpoints</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>So you find out in week two, not week five.</p>
@@ -1776,7 +1789,7 @@ Give me:
 Do not suggest anything requiring students to hold personal accounts on public
 platforms.
 
-I will confirm all of this against my school&#x27;s own consent and safeguarding
+I will confirm all of this against my school&#x27;s own consent and child-protection
 policy.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check against your school's consent policy before anything is shared.</li><li>Is the alternative genuinely equivalent, or obviously the lesser option?</li></ul>
@@ -1875,7 +1888,7 @@ Give me:
 - The differentiated middle, with what each group works on
 - Where I spend my time, and in what order
 - A shared closing task that works for all three
-- How groups are formed without labelling anyone
+- How groups are formed without labeling anyone
 
 No student names, and nothing that makes the grouping visible as ability.</pre></div>
 <p class="lbl">Before you send it</p>
@@ -2030,7 +2043,7 @@ not been taught, say so instead of including it.</pre></div>
 <p>Word problems that do not insult the reader.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an application worksheet on [SKILL] for [GRADE] [SUBJECT].
 
-Use contexts a [GRADE] student would actually recognise. No talking animals, no
+Use contexts a [GRADE] student would actually recognize. No talking animals, no
 scenarios where nobody would ever need the answer, and no situations that assume
 money, travel or possessions a family may not have.
 
@@ -2048,20 +2061,20 @@ knowledge some students may not have, flag it.</pre></div>
 <ul><li>Do any contexts assume money, travel, or a kind of home life?</li><li>Is the reading level right for your weakest reader?</li></ul></article>
 <article class="card" id="WA-010"><div class="head"><span class="pid">WA-010</span><h3>Adapt a worksheet for black-and-white printing and limited space</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
-<p>One page, one side, and the colour printer is a fantasy.</p>
+<p>One page, one side, and the color printer is a fantasy.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rework the worksheet below so it prints on one side of one sheet in black and
 white.
 
 Constraints:
-- Nothing that depends on colour to be understood
-- No shading that turns into a grey block on a school photocopier
+- Nothing that depends on color to be understood
+- No shading that turns into a gray block on a school photocopier
 - Enough writing space for a [GRADE] student&#x27;s handwriting
 - Readable at 100% — do not solve the space problem by shrinking the type
 
 Give me:
 - The reworked sheet
 - What you cut or compressed, and what is lost
-- Anywhere colour was carrying meaning, and what replaces it
+- Anywhere color was carrying meaning, and what replaces it
 
 If it genuinely will not fit on one side, say so and tell me the best two-page
 split.
@@ -2101,7 +2114,7 @@ Section 2 — Application: can they use it in a context
 Section 3 — Reasoning: can they explain, justify, or spot when it does not apply
 
 Every student attempts all three sections. The sections are not ability groups
-and must not be labelled as such.
+and must not be labeled as such.
 
 Give me:
 - 4 items in section 1, 3 in section 2, 2 in section 3
@@ -2249,7 +2262,7 @@ For each station give me:
 - An extended version — same topic, harder thinking, not more questions
 - What every version produces, so they all feed one closing discussion
 
-The versions must not be labelled by ability, and a student should be able to
+The versions must not be labeled by ability, and a student should be able to
 move between them without asking permission.
 
 Tell me how the closing discussion works when different students did different
@@ -2302,7 +2315,7 @@ Be blunt about the weak one.
 STATIONS:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Do you agree with which station it called weakest?</li><li>Is the timing judgement based on your class, or an ideal one?</li></ul>
+<ul><li>Do you agree with which station it called weakest?</li><li>Is the timing judgment based on your class, or an ideal one?</li></ul>
 <h2>Collaborative tasks</h2></article>
 <article class="card" id="WA-003"><div class="head"><span class="pid">WA-003</span><h3>Create an accountable group task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
@@ -2569,7 +2582,7 @@ If [MINUTES] is not enough for the purpose, tell me rather than overfilling it.<
 <ul><li>Time it honestly. Homework always takes longer than planned.</li><li>Could a student with no help at home complete this?</li></ul></article>
 <article class="card" id="WA-032"><div class="head"><span class="pid">WA-032</span><h3>Build homework that mixes retrieval and current learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Keeping the old alive while practising the new.</p>
+<p>Keeping the old alive while practicing the new.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a homework set for [GRADE] [SUBJECT] mixing:
 - Today&#x27;s learning: [TOPIC]
 - Something from last month: [TOPIC]
@@ -2737,7 +2750,7 @@ Tell me:
 - Whether it fits the time given, honestly
 - Anything requiring money, internet, transport, adult help, or equipment a
   household may not have
-- Whether the marking rewards the learning or the presentation
+- Whether the grading rewards the learning or the presentation
 - Anything that would put a student&#x27;s name, image, work or personal details in
   front of an audience, and what needs consent first
 - The three questions students will ask on day one that the brief does not answer
@@ -2755,14 +2768,14 @@ BRIEF:
 <table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
 <tr><td>Quizzes and tests</td><td>13</td><td>A full assessment with a key</td></tr>
 <tr><td>Formative checks and exit tickets</td><td>7</td><td>Finding out today, not next week</td></tr>
-<tr><td>Rubrics</td><td>7</td><td>Marking that is fair and fast</td></tr>
+<tr><td>Rubrics</td><td>7</td><td>Grading that is fair and fast</td></tr>
 <tr><td>Diagnosis and misconceptions</td><td>5</td><td>You know they are stuck; where exactly</td></tr>
 <tr><td>Answer keys and feedback</td><td>4</td><td>Comments that change what they do next</td></tr>
 <tr><td>Standards-based grading</td><td>4</td><td>Reporting against standards</td></tr>
 </tbody></table>
 <h2>Worth knowing before you start</h2>
-<p><strong>Check the maths and the facts yourself.</strong> This is the chapter where an unverified error reaches a student's grade. The model will produce a wrong answer key with complete confidence.</p>
-<p>Ask what each wrong option reveals. That turns marking into diagnosis and costs you nothing extra.</p>
+<p><strong>Check the math and the facts yourself.</strong> This is the chapter where an unverified error reaches a student's grade. The model will produce a wrong answer key with complete confidence.</p>
+<p>Ask what each wrong option reveals. That turns grading into diagnosis and costs you nothing extra.</p>
 <p>Single-point rubrics — one column describing proficient — are faster to write and far faster to mark than a full grid. Several prompts here use them.</p>
 <h2>Quizzes and tests</h2>
 <article class="card" id="AS-001"><div class="head"><span class="pid">AS-001</span><h3>Create a balanced classroom assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
@@ -2798,7 +2811,7 @@ Three sections, clearly different in what they demand:
 - Application: can they use it in a familiar context
 - Reasoning: can they explain, justify, or spot where it does not apply
 
-A student who revised by memorising should do well in the first section and
+A student who revised by memorizing should do well in the first section and
 struggle in the third. That contrast is the point.
 
 Give me the quiz, the answer key, and one line per section on what a strong or
@@ -2830,7 +2843,7 @@ If you cannot name the thinking behind an option, do not include it.</pre></div>
 <ul><li>Can you name the thinking behind every wrong option?</li><li>Could a confused student eliminate their way to the answer?</li></ul></article>
 <article class="card" id="AS-007"><div class="head"><span class="pid">AS-007</span><h3>Create a constructed-response assessment with a scoring guide</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Extended answers, marked consistently, without three hours of agonising.</p>
+<p>Extended answers, marked consistently, without three hours of agonizing.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create [NUMBER] constructed-response questions on [TOPIC] for [GRADE] [SUBJECT].
 
 For each question give me:
@@ -2988,8 +3001,8 @@ Write every descriptor for the student, in words a [GRADE] student uses.
 Requirements:
 - 4-5 criteria maximum, each about the learning
 - Four levels, each described by what is present rather than what is missing
-- No word that requires my judgement of effort, attitude or neatness
-- Nothing that penalises the same weakness in two criteria
+- No word that requires my judgment of effort, attitude or neatness
+- Nothing that penalizes the same weakness in two criteria
 
 Give me the rubric, plus one sentence per criterion a student could use to
 self-check before submitting.
@@ -3064,7 +3077,7 @@ No marks and no percentages. I am sorting, not scoring.</pre></div>
 <p class="lbl">When you need this</p>
 <p>A show of hands that actually tells you something.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a quick poll on [TOPIC] for [GRADE] [SUBJECT] that I can run with a show
-of hands, fingers, or coloured cards.
+of hands, fingers, or colored cards.
 
 Give me:
 - The question, said aloud in under 20 seconds
@@ -3166,7 +3179,7 @@ Do not build anything that lets the class work out who was in which group.</pre>
 Task: [TASK]
 
 Each level must describe what is present in the work, not what is missing.
-&quot;Does not include evidence&quot; is a marking note; &quot;Uses one piece of evidence,
+&quot;Does not include evidence&quot; is a grading note; &quot;Uses one piece of evidence,
 stated without explanation&quot; is a descriptor.
 
 Give me:
@@ -3181,7 +3194,7 @@ without saying exactly what would count.</pre></div>
 <ul><li>Is the 2/3 boundary something you could defend to a parent?</li><li>Any vague words left?</li></ul></article>
 <article class="card" id="AS-022"><div class="head"><span class="pid">AS-022</span><h3>Turn an objective and task into aligned rubric criteria</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>The rubric should measure the objective, not the artefact.</p>
+<p>The rubric should measure the objective, not the artifact.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Derive rubric criteria for this [GRADE] [SUBJECT] task.
 
 Objective: [OBJECTIVE]
@@ -3197,13 +3210,13 @@ Give me:
 If the task cannot evidence the objective, say so plainly and tell me the
 smallest change to the task that would fix it.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Are you marking the learning or the artefact?</li><li>Do you agree with what it said the task cannot evidence?</li></ul></article>
+<ul><li>Are you grading the learning or the artifact?</li><li>Do you agree with what it said the task cannot evidence?</li></ul></article>
 <article class="card" id="AS-023"><div class="head"><span class="pid">AS-023</span><h3>Build a single-point rubric with feedback space</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Faster to write, far faster to mark, and the feedback is specific.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a single-point rubric for [TASK] in [GRADE] [SUBJECT].
 
-Format: one centre column stating what proficient looks like for each criterion,
+Format: one center column stating what proficient looks like for each criterion,
 with blank columns either side for what is not yet there and what goes beyond.
 
 Give me:
@@ -3211,12 +3224,12 @@ Give me:
 - The proficient descriptor for each
 - Three reusable feedback sentences per criterion for the not-yet column
 - Three for the beyond column
-- The one criterion I should look at first when marking
+- The one criterion I should look at first when grading
 
 The blank columns stay blank in the template — I fill them per student. Do not
 pre-fill them with generic levels.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Are the reusable sentences specific enough to be worth reusing?</li><li>Could a student self-assess against the centre column?</li></ul></article>
+<ul><li>Are the reusable sentences specific enough to be worth reusing?</li><li>Could a student self-assess against the center column?</li></ul></article>
 <article class="card" id="AS-024"><div class="head"><span class="pid">AS-024</span><h3>Create a rubric for collaborative work with individual evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A group mark that does not hide who learned what.</p>
@@ -3237,7 +3250,7 @@ Give me:
 
 Do not include peer-rating scores as a criterion. Tell me why if you disagree.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Can you mark the individual part without relying on memory?</li><li>Is a quiet student penalised anywhere here?</li></ul></article>
+<ul><li>Can you mark the individual part without relying on memory?</li><li>Is a quiet student penalized anywhere here?</li></ul></article>
 <article class="card" id="AS-025"><div class="head"><span class="pid">AS-025</span><h3>Rewrite vague rubric words as observable evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Your rubric says "shows good understanding" and nobody knows what that means.</p>
@@ -3343,9 +3356,9 @@ Give me:
 - Two scripts that would score the same but belong in different codes, and why
   that distinction matters more than the score
 
-Keep the codes few enough to hold in my head while marking.</pre></div>
+Keep the codes few enough to hold in my head while grading.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Can you assign a script in a few seconds using these markers?</li><li>Is the same-score-different-code example one you recognise?</li></ul></article>
+<ul><li>Can you assign a script in a few seconds using these markers?</li><li>Is the same-score-different-code example one you recognize?</li></ul></article>
 <article class="card" id="AS-030"><div class="head"><span class="pid">AS-030</span><h3>Distinguish a careless slip from a conceptual misunderstanding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Reteaching a concept someone already understands wastes everyone's time.</p>
@@ -3421,7 +3434,7 @@ The original problem was: [DESCRIBE THE MISCONCEPTION OR GAP]
 
 Give me:
 - Questions that test the same thing in a different form, so a student who
-  memorised my reteaching examples cannot pass on recall
+  memorized my reteaching examples cannot pass on recall
 - One question where the old misconception would still show, if it survived
 - The answer key
 - What it means if results improve on the familiar form but not the new one
@@ -3495,7 +3508,7 @@ with the key by default.
 QUESTIONS AND KEY:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Verify anything it calls an error, yourself. It can be wrong too.</li><li>Decide the arguable answers before you start marking, not during.</li></ul></article>
+<ul><li>Verify anything it calls an error, yourself. It can be wrong too.</li><li>Decide the arguable answers before you start grading, not during.</li></ul></article>
 <article class="card" id="AS-036"><div class="head"><span class="pid">AS-036</span><h3>Create learner-friendly solution explanations without hiding reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Solutions a student can learn from, rather than copy.</p>
@@ -3560,11 +3573,11 @@ arithmetic.
 Then tell me the level most often assigned too generously, and what to look for
 to avoid that.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Could you place a real student using only these descriptions?</li><li>Is the over-generous level one you recognise in your own marking?</li></ul></article>
+<ul><li>Could you place a real student using only these descriptions?</li><li>Is the over-generous level one you recognize in your own grading?</li></ul></article>
 <article class="card" id="AS-039"><div class="head"><span class="pid">AS-039</span><h3>Summarize class mastery without averaging unrelated skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A single average hides everything that matters.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Summarise where my [GRADE] [SUBJECT] class stands on these standards, from this
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Summarize where my [GRADE] [SUBJECT] class stands on these standards, from this
 evidence:
 
 STANDARDS: [LIST THEM]
@@ -3593,15 +3606,15 @@ Tell me:
 - Where the evidence is all of one type, so I am measuring one format rather
   than the learning
 - Any standard where recent work outweighs everything else without a reason
-- Anywhere a behaviour or effort judgement has crept into an academic standard
-- Which judgement I would find hardest to defend if a family questioned it
+- Anywhere a behavior or effort judgment has crept into an academic standard
+- Which judgment I would find hardest to defend if a family questioned it
 
 Then tell me the one standard I should gather more evidence on before reporting.
 
 SUMMARY:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Could you defend the judgement it flagged as weakest?</li><li>Has effort crept into an academic standard anywhere?</li></ul></article>
+<ul><li>Could you defend the judgment it flagged as weakest?</li><li>Has effort crept into an academic standard anywhere?</li></ul></article>
 <h1 class="chap" id="04-differentiation-mixed-ability">Chapter 4 — Differentiation and Mixed Ability</h1><p class="lede">35 prompts</p><p>Differentiation fails when it quietly becomes three separate lessons running in one room, or when "support" turns into a permanently lower expectation. These prompts keep one destination and change the route: same objective, same closing discussion, different ways in.</p>
 <h2>What's in here</h2>
 <table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
@@ -3664,20 +3677,20 @@ attention. Stay with what the work shows.</pre></div>
 <ul><li>Does the check genuinely separate the three?</li><li>Has it stayed with the work rather than the student?</li></ul></article>
 <article class="card" id="DF-006"><div class="head"><span class="pid">DF-006</span><h3>Create a graphic organizer that preserves essential reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Organisers often organise the thinking away.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a graphic organiser for this [GRADE] [SUBJECT] task: [TASK]
+<p>Organizers often organize the thinking away.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a graphic organizer for this [GRADE] [SUBJECT] task: [TASK]
 
-The organiser must hold the structure while leaving the reasoning to the
+The organizer must hold the structure while leaving the reasoning to the
 student. Boxes that only need copying are not helping.
 
 Give me:
-- The organiser, described so I could draw it on a board
+- The organizer, described so I could draw it on a board
 - What goes in each section, as the student sees it
 - The one section where the actual thinking happens, and why it stays blank
 - What a completed one looks like when it is done well
 - What a completed one looks like when the student filled boxes without thinking
 
-Then tell me what this organiser makes harder, since every structure closes
+Then tell me what this organizer makes harder, since every structure closes
 something off.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a student fill this in correctly without understanding?</li><li>Is the thinking still theirs to do?</li></ul></article>
@@ -3881,7 +3894,7 @@ Structure:
 - 2 transfer questions in a context we have not used
 
 Every student attempts every tier. These are not ability groups and must not be
-labelled as such.
+labeled as such.
 
 Give me the questions, the answers, and:
 - What it means if a student is fine on core and stuck on transfer
@@ -3906,7 +3919,7 @@ Tell me:
 - Whether the naming, ordering or layout signals a ranking
 - Whether every version has something worth sharing in the closing discussion
 
-Then tell me the single change that would most equalise them, and whether any
+Then tell me the single change that would most equalize them, and whether any
 version should simply be removed.
 
 TASKS:
@@ -3959,7 +3972,7 @@ Do not assume anything about which language a student speaks at home.</pre></div
 <article class="card" id="DF-018"><div class="head"><span class="pid">DF-018</span><h3>Identify the language demands hidden inside a subject task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The task is not about language, and language is why it is failing.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Analyse the language demands in this [GRADE] [SUBJECT] task: [PASTE IT]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Analyze the language demands in this [GRADE] [SUBJECT] task: [PASTE IT]
 
 Tell me:
 - Command words, and what each actually asks for — students often lose marks
@@ -4038,7 +4051,7 @@ Then tell me where this would be a bad idea in this lesson, and why.</pre></div>
 <ul><li>Could a student decline without it being noticed?</li><li>Have you assumed anything about who speaks what?</li></ul></article>
 <article class="card" id="DF-022"><div class="head"><span class="pid">DF-022</span><h3>Separate content evidence from English-language evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Marking science, and accidentally marking English.</p>
+<p>Grading science, and accidentally grading English.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] task, separate what shows subject understanding from
 what shows English proficiency.
 
@@ -4053,10 +4066,10 @@ Tell me:
 - An alternative way to evidence the same objective with a lower language load
 - What I should not correct, because it is not what I am assessing
 
-Then give me a marking note I could write for myself so I stay consistent
+Then give me a grading note I could write for myself so I stay consistent
 across thirty scripts.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Would a strong thinker with weak English pass this?</li><li>Is your marking note specific enough to hold you to it?</li></ul>
+<ul><li>Would a strong thinker with weak English pass this?</li><li>Is your grading note specific enough to hold you to it?</li></ul>
 <h2>Reading and accessibility</h2></article>
 <article class="card" id="DF-004"><div class="head"><span class="pid">DF-004</span><h3>Adapt text access while preserving meaning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
@@ -4094,7 +4107,7 @@ Give me:
 - The chunk students will find hardest, and the support that goes there
 - The vocabulary gloss for each chunk, alongside rather than replacing the text
 
-Do not paraphrase, modernise or simplify the source itself. The whole point is
+Do not paraphrase, modernize or simplify the source itself. The whole point is
 that students meet the original.
 
 SOURCE:
@@ -4141,7 +4154,7 @@ Then tell me which single support would help most if I only had time for one.</p
 <ul><li>Do the audio suggestions work with what your school actually has?</li><li>Are the guiding questions at the right points for your class?</li></ul></article>
 <article class="card" id="DF-026"><div class="head"><span class="pid">DF-026</span><h3>Reduce unnecessary reading load in a non-reading assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>A maths test that is secretly a reading test.</p>
+<p>A math test that is secretly a reading test.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Reduce the reading load in this [GRADE] [SUBJECT] assessment without changing
 what it assesses.
 
@@ -4360,7 +4373,7 @@ most need told.</pre></div>
 <tr><td>Difficult conversations</td><td>2</td><td>When it is already tense</td></tr>
 </tbody></table>
 <h2>Worth knowing before you start</h2>
-<p>Describe behaviour, never character. "Three tasks are not recorded as submitted" is a fact. "He is unmotivated" is a guess about a child you are writing to their family about.</p>
+<p>Describe behavior, never character. "Three tasks are not recorded as submitted" is a fact. "He is unmotivated" is a guess about a child you are writing to their family about.</p>
 <p>Do not let it infer a home cause. If a draft says "with support at home this will improve", cut that line — you do not know what home looks like.</p>
 <p>Read the draft as the parent, at 8am, on a phone. Anything that reads as blame will be answered as blame.</p>
 <p>Ask for a shorter version too. Many families will not read past four lines.</p>
@@ -4381,7 +4394,7 @@ Rules:
 - Describe what the student did, not what kind of person they are
 - Two to four sentences, readable on a phone
 - No &quot;but&quot;, no concern attached, nothing asked of the family
-- Do not generalise one observation into a pattern
+- Do not generalize one observation into a pattern
 
 Give me the message, and a shorter two-sentence version.
 
@@ -4502,7 +4515,7 @@ What I want from this email: [A MEETING / AWARENESS / A SPECIFIC NEXT STEP]
 Rules:
 - Open with something genuine and specific about the child
 - State the concern as observable fact, not interpretation
-- Describe behaviour, never character
+- Describe behavior, never character
 - Do not name a cause. Do not suggest anything about home, motivation, effort,
   attention or ability
 - Do not promise improvement
@@ -4590,7 +4603,7 @@ Do not soften it into meaninglessness — the family must still understand there
 is a problem and what happens next.
 
 Show me:
-- Each sentence carrying blame, judgement, or an inference about home,
+- Each sentence carrying blame, judgment, or an inference about home,
   character or motivation — quoted
 - What is factually true in it, and what is my interpretation presented as fact
 - The rewritten message
@@ -4610,7 +4623,7 @@ DRAFT:
 
 Tell me:
 - Every claim not supported by something I could show — quoted
-- Anywhere I describe character rather than behaviour
+- Anywhere I describe character rather than behavior
 - Anywhere I imply a cause: home, effort, attitude, ability, attention
 - Anywhere a family could reasonably read blame
 - Whether the ask is clear, single, and actually answerable
@@ -4661,7 +4674,7 @@ Give me the agenda with minutes allocated to each part, including:
 Then tell me:
 - Which part to cut first if we are running over
 - The conversation this agenda does not handle — the one that needs a separate
-  meeting — and how I recognise it early and say so</pre></div>
+  meeting — and how I recognize it early and say so</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the family get real time, or a token minute?</li><li>Could you say "this needs a longer conversation" comfortably?</li></ul></article>
 <article class="card" id="PC-016"><div class="head"><span class="pid">PC-016</span><h3>Prepare questions that invite family and student perspective</h3></div><p class="meta">All grades</p>
@@ -4691,7 +4704,7 @@ for, and how to hold that well.</pre></div>
 <p>So the meeting produces something rather than just happening.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn this into a shared action plan after a conference in [GRADE] [SUBJECT]:
 
-What we discussed: [SUMMARISE — no names]
+What we discussed: [SUMMARIZE — no names]
 What was agreed: [LIST IT]
 
 Give me a table with: what will happen, who does it, by when, and how we will
@@ -4711,7 +4724,7 @@ agreed, list it separately as open.</pre></div>
 <ul><li>Does every row have an owner?</li><li>Is anything here the family did not actually agree to?</li></ul></article>
 <article class="card" id="PC-018"><div class="head"><span class="pid">PC-018</span><h3>Write a factual post-conference summary with owners and dates</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
-<p>A record, sent the same day, that both sides recognise.</p>
+<p>A record, sent the same day, that both sides recognize.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a summary email after a family conference in [GRADE] [SUBJECT].
 
 What was discussed: [YOUR NOTES — no names]
@@ -4842,7 +4855,7 @@ Rules:
 
 Give me the notice and the tear-off slip.
 
-I will check this against my school&#x27;s own consent and safeguarding requirements
+I will check this against my school&#x27;s own consent and child-protection requirements
 before it goes out.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check every detail against the actual arrangements.</li><li>Check the form against your school's required consent wording.</li><li>Fill in anything it listed as missing — do not send it with gaps.</li></ul></article>
@@ -4882,7 +4895,7 @@ Rules:
 - State no policy, procedure or entitlement I have not given you
 - If families will ask something this notice cannot answer, say who to ask
   rather than guessing
-- Do not apologise repeatedly; say it once if warranted
+- Do not apologize repeatedly; say it once if warranted
 - Do not speculate about further changes
 
 Under 100 words, plus a one-line version for a text message.
@@ -4907,13 +4920,13 @@ Tell me:
 
 Then tell me the single addition that would prevent the most replies.
 
-I will check all consent and safeguarding elements against my school&#x27;s own
+I will check all consent and child-protection elements against my school&#x27;s own
 requirements.
 
 MESSAGE:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Add the missing items before sending, not after the questions arrive.</li><li>Take the consent and safeguarding flags to your school's process.</li></ul>
+<ul><li>Add the missing items before sending, not after the questions arrive.</li><li>Take the consent and child-protection flags to your school's process.</li></ul>
 <h2>Clear and accessible language</h2></article>
 <article class="card" id="PC-026"><div class="head"><span class="pid">PC-026</span><h3>Rewrite school language in plain family-friendly English</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
@@ -4946,7 +4959,7 @@ MESSAGE:
 
 Rules:
 - One idea per sentence, under 15 words where possible
-- No idioms, phrasal verbs, metaphors, humour or cultural references
+- No idioms, phrasal verbs, metaphors, humor or cultural references
 - No sarcasm, no understatement
 - Consistent terms — do not call the same thing two different names
 - Dates written in full, unambiguously — not 03/04, which means two different
@@ -5045,7 +5058,7 @@ I will follow my school&#x27;s procedures for anything formal.</pre></div>
 <p><strong>Use initials or "Student A".</strong> These comments go into a permanent record. The drafting should not put a child's name into an AI tool.</p>
 <p>Give it your real evidence — scores, dates, things you wrote down. A comment built on nothing reads like a comment built on nothing.</p>
 <p>Do not let it invent a strength to balance the structure. A manufactured compliment is the fastest way for a family to stop trusting the rest.</p>
-<p>Vary the openings. Twenty-eight comments that all begin the same way are recognisable as generated, and parents compare.</p>
+<p>Vary the openings. Twenty-eight comments that all begin the same way are recognizable as generated, and parents compare.</p>
 <h2>Comment banks</h2>
 <article class="card" id="RC-001"><div class="head"><span class="pid">RC-001</span><h3>Build an evidence-safe comment bank</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
@@ -5064,7 +5077,7 @@ Rules:
 - No comment may be sendable without filling the evidence blank. Write them so
   the gap is obvious
 - Describe what the student did, never what kind of learner they are
-- No praise for effort, attitude, behaviour or personality unless I add it
+- No praise for effort, attitude, behavior or personality unless I add it
 - Vary the openings across the bank — list them so I can check no two match
 - Nothing that predicts or promises future performance
 
@@ -5289,7 +5302,7 @@ Give me:
 - What I do in class to support it
 - How I would know in three weeks whether it worked
 
-Do not write &quot;should continue to practise&quot; or &quot;needs to focus more&quot;. Those are
+Do not write &quot;should continue to practice&quot; or &quot;needs to focus more&quot;. Those are
 not next steps. If the pattern needs teaching rather than practice, say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could the student start this tomorrow, alone?</li><li>Is it one thing?</li></ul></article>
@@ -5323,8 +5336,8 @@ What I have: [LIST IT HONESTLY, INCLUDING GAPS AND WHY — no names]
 
 Rules:
 - Say plainly what the comment is based on, and over what period
-- Do not extrapolate from a small sample into a general judgement
-- Do not fill the gap with attendance commentary, effort, or behaviour
+- Do not extrapolate from a small sample into a general judgment
+- Do not fill the gap with attendance commentary, effort, or behavior
 - Do not imply the student is behind if I do not have evidence for that
 - Give a next step only if the evidence supports one; otherwise say what I will
   look for next term
@@ -5334,7 +5347,7 @@ without sounding defensive.
 
 Tell me if the honest answer is that I cannot write a meaningful comment yet.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Has thin evidence quietly become a judgement?</li><li>Is the limitation stated plainly?</li></ul></article>
+<ul><li>Has thin evidence quietly become a judgment?</li><li>Is the limitation stated plainly?</li></ul></article>
 <article class="card" id="RC-015"><div class="head"><span class="pid">RC-015</span><h3>Create a learner-friendly next step that families can understand</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The next step should mean something to the child it is about.</p>
@@ -5390,8 +5403,8 @@ EVIDENCE: [PASTE WHAT YOU HAVE]
 For each sentence, tell me:
 - Which piece of evidence supports it
 - Whether it is fully supported, partly supported, or unsupported
-- Where it generalises beyond what the evidence shows
-- Whether it describes learning, or effort, behaviour or personality
+- Where it generalizes beyond what the evidence shows
+- Whether it describes learning, or effort, behavior or personality
 - Whether a family could challenge it and be right
 
 Then give me:
@@ -5405,7 +5418,7 @@ Do not accept a sentence as supported because it sounds reasonable.</pre></div>
 <h2>Subject-specific comments</h2></article>
 <article class="card" id="RC-018"><div class="head"><span class="pid">RC-018</span><h3>Write a mathematics comment about concepts, procedures and reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>"Good at maths" hides which of the three is actually strong.</p>
+<p>"Good at math" hides which of the three is actually strong.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] mathematics report comment.
 
 Evidence: [WHAT THE WORK SHOWS — no names]
@@ -5484,7 +5497,7 @@ Distinguish:
 - Knowledge of content
 - Using sources — reading them, questioning them, weighing them
 - Constructing an argument with evidence
-- Recognising perspective and that accounts differ
+- Recognizing perspective and that accounts differ
 
 Give me:
 - The comment, naming which of these the evidence supports
@@ -5639,7 +5652,7 @@ Check for:
 - Any comment contradicting its own evidence row
 - Any claim not sourced to the table at all
 - Any placeholder left unfilled
-- Any comment about effort, behaviour or personality rather than learning
+- Any comment about effort, behavior or personality rather than learning
 - Repeated opening words or repeated closing sentences
 
 Report leakage first and separately. That is the error that does real damage.
@@ -5667,7 +5680,7 @@ For each, tell me:
 - What the student would take away, if they read it
 
 Then tell me which version fits what I described, and flag anything in my
-original that is a judgement rather than an observation.
+original that is a judgment rather than an observation.
 
 COMMENT:
 [PASTE IT]</pre></div>
@@ -5676,12 +5689,12 @@ COMMENT:
 <article class="card" id="RC-029"><div class="head"><span class="pid">RC-029</span><h3>Replace harsh or vague judgments with verified learning evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The comment says something about the child that the evidence does not.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this [GRADE] [SUBJECT] comment, replacing judgement with evidence.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this [GRADE] [SUBJECT] comment, replacing judgment with evidence.
 
 COMMENT: [PASTE IT]
 EVIDENCE: [PASTE WHAT YOU ACTUALLY HAVE]
 
-For each judgement in the original:
+For each judgment in the original:
 - Quote it
 - Say what it claims about the student
 - Say whether my evidence supports it
@@ -5690,7 +5703,7 @@ For each judgement in the original:
 Pay particular attention to: lazy, careless, unmotivated, does not try, capable
 but, could do better, disruptive, immature, and anything about attitude.
 
-If a judgement is unsupported, do not soften it — remove it. A gently worded
+If a judgment is unsupported, do not soften it — remove it. A gently worded
 unsupported claim is still an unsupported claim on a permanent record.
 
 Then tell me what the comment says once every unsupported claim is gone.</pre></div>
@@ -5720,19 +5733,19 @@ same weight. If it does not, say so — going over the limit and asking for an
 exception is better than a comment that no longer says what I meant.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the shorter version still land the concern?</li><li>Verify the count yourself.</li></ul></article>
-<h1 class="chap" id="07-classroom-management-sel">Chapter 7 — Classroom Management and SEL</h1><p class="lede">25 prompts</p><p>Most behaviour problems are routine problems wearing a disguise. These prompts work on the structures — how a transition runs, what you say in the first ten seconds, how a conversation gets repaired afterwards — rather than on the student.</p>
+<h1 class="chap" id="07-classroom-management-sel">Chapter 7 — Classroom Management and SEL</h1><p class="lede">25 prompts</p><p>Most behavior problems are routine problems wearing a disguise. These prompts work on the structures — how a transition runs, what you say in the first ten seconds, how a conversation gets repaired afterwards — rather than on the student.</p>
 <h2>What's in here</h2>
 <table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
 <tr><td>Routines and transitions</td><td>6</td><td>The same four minutes lost, every day</td></tr>
-<tr><td>Behaviour reset support</td><td>5</td><td>It went wrong; you want it back</td></tr>
+<tr><td>Behavior reset support</td><td>5</td><td>It went wrong; you want it back</td></tr>
 <tr><td>Restorative conversations</td><td>4</td><td>Repair, not punishment</td></tr>
 <tr><td>Social-emotional learning</td><td>4</td><td>Building it into normal lessons</td></tr>
 <tr><td>Morning meetings</td><td>3</td><td>Openings a shy student can join</td></tr>
 <tr><td>Seating and grouping</td><td>3</td><td>Who sits where, on purpose</td></tr>
 </tbody></table>
 <h2>Worth knowing before you start</h2>
-<p><strong>This chapter has the firmest limit in the book.</strong> If a situation involves harm, abuse, or immediate danger, stop and follow your school's safeguarding procedure. Do not work it through with an AI tool. Nothing here is a substitute for that process, and several prompts are written to say so and stop.</p>
-<p>Focus on the behaviour and the repair. Nothing here should produce a judgement about a child's character, home life or motivation.</p>
+<p><strong>This chapter has the firmest limit in the book.</strong> If a situation involves harm, abuse, or immediate danger, stop and follow your school's mandated-reporting procedure. Do not work it through with an AI tool. Nothing here is a substitute for that process, and several prompts are written to say so and stop.</p>
+<p>Focus on the behavior and the repair. Nothing here should produce a judgment about a child's character, home life or motivation.</p>
 <p>A restorative conversation is not a forced apology. If a draft demands one, change it — several prompts rule it out explicitly.</p>
 <p>Keep in-the-moment scripts under fifteen words. Anything longer becomes an audience.</p>
 <h2>Routines and transitions</h2>
@@ -5749,12 +5762,12 @@ Give me:
 - The routine as a sequence of steps, one action per step
 - The exact words I say to start it, under 10 seconds
 - The signal that tells me everyone has finished
-- How I teach it in the first week: what I model, what they practise, what I
+- How I teach it in the first week: what I model, what they practice, what I
   correct
 - What I do on day 20 when it starts to slip
 
 Do not build in a reward, a points system, or a competition. The routine should
-work because it is clear, not because it is incentivised.
+work because it is clear, not because it is incentivized.
 
 Keep it to steps a [GRADE] student can hold in their head.</pre></div>
 <p class="lbl">Before you send it</p>
@@ -5866,14 +5879,14 @@ Then tell me:
 Be blunt about a routine that has become habit rather than function.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Time it honestly next lesson before deciding.</li><li>Does it work when you are tired? That is the real test.</li></ul>
-<h2>Behaviour reset support</h2></article>
-<article class="card" id="CM-008"><div class="head"><span class="pid">CM-008</span><h3>Create a brief private behaviour-reset conversation</h3></div><p class="meta">All grades</p>
+<h2>Behavior reset support</h2></article>
+<article class="card" id="CM-008"><div class="head"><span class="pid">CM-008</span><h3>Create a brief private behavior-reset conversation</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Something needs saying, and it must not become a performance.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare a brief private conversation with a [GRADE] student about a classroom
-behaviour.
+behavior.
 
-What happened, observably: [DESCRIBE THE BEHAVIOUR — not the student]
+What happened, observably: [DESCRIBE THE BEHAVIOR — not the student]
 What I want: [THE SPECIFIC CHANGE]
 
 Give me:
@@ -5884,19 +5897,19 @@ Give me:
 - Three things NOT to say, and why each makes it worse
 
 Rules:
-- Address the behaviour and its effect, never the character
+- Address the behavior and its effect, never the character
 - Do not ask a student to explain themselves in front of others
 - Do not require an apology
 - Do not speculate about home, mood, or what is going on for them
 
-If what I described suggests harm, danger or a safeguarding concern, stop and
+If what I described suggests harm, danger or a child-protection concern, stop and
 tell me to follow my school&#x27;s process instead.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the in-the-moment line short enough to say without a pause?</li><li>Is anything here about the child rather than what they did?</li></ul></article>
 <article class="card" id="CM-009"><div class="head"><span class="pid">CM-009</span><h3>Write neutral redirection language for a recurring disruption</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The twelfth time today, and your tone is starting to show.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write redirection language for this recurring [GRADE] classroom behaviour:
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write redirection language for this recurring [GRADE] classroom behavior:
 
 [DESCRIBE IT — what happens, how often, in what part of the lesson]
 
@@ -5913,7 +5926,7 @@ Rules: no sarcasm, no rhetorical questions, no comparisons to other students,
 no public countdowns, and nothing that requires the student to respond verbally
 in front of the class.
 
-Then tell me what the behaviour might be communicating that redirection cannot
+Then tell me what the behavior might be communicating that redirection cannot
 address.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Say them aloud. Any sarcasm you did not intend?</li><li>Do they name the wanted action rather than the problem?</li></ul></article>
@@ -5932,8 +5945,8 @@ Give me:
 - What I do if they return still upset
 
 Rules:
-- Re-entry is not the moment for consequences or a conversation about behaviour
-- Do not require the student to apologise before rejoining
+- Re-entry is not the moment for consequences or a conversation about behavior
+- Do not require the student to apologize before rejoining
 - Do not have them stand at the door waiting for permission in front of everyone
 
 I will follow my school&#x27;s procedures for anything involving where a student went
@@ -5968,14 +5981,14 @@ without withdrawing it from everyone.</pre></div>
 <article class="card" id="CM-012"><div class="head"><span class="pid">CM-012</span><h3>Audit a response plan for escalation, shame and inconsistent expectations</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before the plan is in place for a term.</p>
-<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] behaviour response plan: [PASTE OR DESCRIBE IT]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] behavior response plan: [PASTE OR DESCRIBE IT]
 
 Tell me:
 - Where a step escalates rather than de-escalates
-- Anything that makes a student&#x27;s behaviour visible to the class — a chart, a
-  name on the board, a public warning, a colour change
+- Anything that makes a student&#x27;s behavior visible to the class — a chart, a
+  name on the board, a public warning, a color change
 - Anywhere the response depends on my mood, energy, or how the day has gone
-- Where the same behaviour would get different responses from different
+- Where the same behavior would get different responses from different
   students, and why that might be happening
 - Anything that removes learning as a consequence
 - Whether there is a route back for a student who has had a bad day
@@ -6009,9 +6022,9 @@ Rules — these are not optional:
 - I do not determine guilt in this conversation
 
 If what I described involves harm, abuse, bullying or immediate danger, stop and
-tell me to follow my school&#x27;s safeguarding process instead of continuing.</pre></div>
+tell me to follow my school&#x27;s mandated-reporting process instead of continuing.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>If it flagged safeguarding, stop and use your school's process.</li><li>Is any question really an accusation?</li></ul></article>
+<ul><li>If it flagged child protection, stop and use your school's process.</li><li>Is any question really an accusation?</li></ul></article>
 <article class="card" id="CM-013"><div class="head"><span class="pid">CM-013</span><h3>Create questions that explore impact, needs and possible repair</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Questions that open something rather than extract a confession.</p>
@@ -6024,7 +6037,7 @@ Give me four sets:
 - What could be different next time
 
 Rules:
-- No question beginning &quot;why did you&quot;, which produces defence, not reflection
+- No question beginning &quot;why did you&quot;, which produces defense, not reflection
 - No question a student can only answer by admitting fault
 - Every question answerable by a student who is upset, embarrassed, or
   monosyllabic
@@ -6042,7 +6055,7 @@ Then tell me:
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a repair agreement after a restorative conversation between [GRADE]
 students.
 
-What was discussed: [SUMMARISE — no names]
+What was discussed: [SUMMARIZE — no names]
 What was offered: [BY WHOM]
 
 Give me:
@@ -6062,19 +6075,19 @@ If either student was not genuinely willing, say so and tell me the agreement
 should not be written.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Was every item genuinely offered, not extracted?</li><li>Is there an end date?</li></ul></article>
-<article class="card" id="CM-015"><div class="head"><span class="pid">CM-015</span><h3>Audit a restorative script for coercion, blame and safeguarding limits</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-015"><div class="head"><span class="pid">CM-015</span><h3>Audit a restorative script for coercion, blame and child-protection limits</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Restorative language can carry coercion inside it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this restorative script or plan: [PASTE IT]
 
 Tell me:
 - Any question that assigns blame while appearing neutral, quoted
-- Anywhere a student is required to apologise, forgive, or say they are fine
+- Anywhere a student is required to apologize, forgive, or say they are fine
 - Anywhere disclosure of feelings is compulsory rather than invited
 - Anything that would be unsafe if there is a power imbalance between the
   students
 - Anywhere the process continues when a student clearly wants to stop
-- Anything that belongs in a safeguarding process rather than a classroom
+- Anything that belongs in a child-protection process rather than a classroom
   conversation
 
 Then tell me:
@@ -6103,10 +6116,10 @@ Give me:
 Rules:
 - No student is asked to share a personal feeling or experience
 - Nothing that asks students to rate, chart or report their own mood publicly
-- No language that pathologises ordinary feelings
+- No language that pathologizes ordinary feelings
 - This is teaching vocabulary and strategy, not therapy
 
-If any part of what I have asked for belongs with a counsellor rather than a
+If any part of what I have asked for belongs with a counselor rather than a
 teacher, say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is any student required to disclose anything?</li><li>Is the vocabulary everyday, not clinical?</li></ul></article>
@@ -6119,7 +6132,7 @@ Give me:
 - The strategy, in three steps a student can remember when upset
 - Why it works, in language a [GRADE] student accepts — not neuroscience
 - How I teach it when nobody is upset, which is the only time it can be taught
-- Three fictional scenarios to practise on
+- Three fictional scenarios to practice on
 - The cue I use in the moment that is not &quot;calm down&quot;
 - What I say when a student uses it and it does not work
 
@@ -6148,7 +6161,7 @@ Rules — these define the task:
 
 Give me:
 - The activity
-- The fictional scenarios, written so no student would recognise themselves
+- The fictional scenarios, written so no student would recognize themselves
 - The discussion questions
 - What I do if a student volunteers something personal anyway
 - The closing that does not require anyone to have been moved
@@ -6167,7 +6180,7 @@ Tell me:
 - Anywhere a response would reveal a student&#x27;s home, family or circumstances to
   the class
 - Anything assuming a family shape, faith, culture or way of expressing emotion
-- Anything crossing from teaching into counselling or therapy
+- Anything crossing from teaching into counseling or therapy
 - Any use of clinical language a teacher should not be applying to a child
 - Anything a student could not opt out of without being noticed
 
@@ -6215,7 +6228,7 @@ Give me:
 - How I avoid a check-in becoming a public mood display
 
 Rules:
-- No mood charts, colour cards, or anything the class can see
+- No mood charts, color cards, or anything the class can see
 - No question requiring a student to say they are not fine in order to be heard
 - Opting out must be invisible and unremarkable
 - I am not collecting data on children&#x27;s emotional states
@@ -6266,7 +6279,7 @@ Give me:
 
 Rules:
 - No student named or described in a way that identifies them
-- No seat that is visibly the special seat, the front-for-behaviour seat, or the
+- No seat that is visibly the special seat, the front-for-behavior seat, or the
   isolation seat
 - Everyone can see the board and reach the door</pre></div>
 <p class="lbl">Before you send it</p>
@@ -6364,7 +6377,7 @@ Use only the facts I supplied. Do not invent a date, a policy or a reason.</pre>
 [PASTE YOUR ROUGH NOTES]
 
 Give me:
-- The update, organised so the most important thing is first
+- The update, organized so the most important thing is first
 - What is a decision, what is progress, and what is a problem — kept separate
 - Anything in my notes that is my opinion rather than fact, marked as such
 - Anything I have implied but not stated, so I can decide whether to state it
@@ -6456,7 +6469,7 @@ Items I have been given: [LIST THEM]
 
 Give me:
 - The agenda with minutes per item, adding up to less than the meeting length
-- Each item labelled: decision, discussion, or information
+- Each item labeled: decision, discussion, or information
 - Information items grouped at the end or moved to writing entirely
 - The decision that matters most, placed first
 - What we do if we run out of time on item one
@@ -6623,7 +6636,7 @@ Give me:
 - What I would need to see to justify abandoning this goal entirely
 
 Rules:
-- Write the rules now, so the midpoint me cannot rationalise
+- Write the rules now, so the midpoint me cannot rationalize
 - Abandoning a goal that is not working is a legitimate outcome. Say so
 - Do not build in a rule that always produces &quot;keep going&quot;
 
@@ -6637,7 +6650,7 @@ Then tell me which outcome I am most likely to misread as success.</pre></div>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me write a reflection after a classroom observation.
 
 What happened in the lesson: [DESCRIBE — no student names]
-Feedback I received: [PASTE OR SUMMARISE]
+Feedback I received: [PASTE OR SUMMARIZE]
 How I feel about it: [BE HONEST — this is for my thinking, not the document]
 
 Give me:
@@ -6709,7 +6722,7 @@ Rules:
 
 Destination and activity: [DESCRIBE]
 Date, group size, year group: [STATE THEM]
-My school&#x27;s stated requirements: [PASTE OR SUMMARISE WHAT YOU HAVE]
+My school&#x27;s stated requirements: [PASTE OR SUMMARIZE WHAT YOU HAVE]
 
 Give me a checklist ordered by deadline, working backwards from the trip date,
 covering: approvals, consent, transport, staffing, medical and dietary
@@ -6749,7 +6762,7 @@ Rules:
 - Leave [BLANK] for anything I did not give you, including emergency contacts
 - It must be readable on paper, on a windy pavement, folded in a pocket
 
-I will check the emergency and safeguarding elements against my school&#x27;s
+I will check the emergency and child-protection elements against my school&#x27;s
 procedures.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Fill every <code>[BLANK]</code>, especially contacts.</li><li>Print it. It has to work without a phone.</li></ul></article>
@@ -6772,7 +6785,7 @@ Tell me:
 List the accessibility gaps separately. A trip a student cannot join is a
 problem to solve before booking, not on the day.
 
-I will verify all safeguarding and consent requirements with my school.</pre></div>
+I will verify all child-protection and consent requirements with my school.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Solve the accessibility gaps before booking, not after.</li><li>Every "verify" flag goes to the person who approves trips.</li></ul>
 <h2>Clubs and duty plans</h2></article>
@@ -6878,7 +6891,7 @@ Rules:
 <p>Explaining the numbers so they are believed.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write the budget narrative for a proposal.
 
-Costs: [ITEMISE WHAT YOU HAVE, WITH SOURCES]
+Costs: [ITEMIZE WHAT YOU HAVE, WITH SOURCES]
 Restrictions: [WHAT THE FUNDER WILL AND WILL NOT COVER]
 Total requested: [AMOUNT]
 
@@ -6912,7 +6925,7 @@ Tell me:
 - Any promise about outcomes I cannot guarantee
 - Any requirement from the guidance that the proposal does not address
 - Any arithmetic error
-- Anything a sceptical reader would ask that this does not answer
+- Anything a skeptical reader would ask that this does not answer
 
 Then tell me:
 - The weakest claim, which is where it will be challenged
@@ -7134,7 +7147,7 @@ Then tell me the risk of giving a model at all, and how to reduce it.</pre></div
 
 Separate three passes, in this order, and say why the order matters:
 - Ideas: is there enough here, and is it the right thing
-- Organisation: is it in an order a reader can follow
+- Organization: is it in an order a reader can follow
 - Conventions: sentences, punctuation, spelling
 
 Give me:
@@ -7225,7 +7238,7 @@ not mean it is better supported.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify every date and event it used.</li><li>Are both interpretations genuinely defensible?</li></ul>
 <h2>Arts, PE and electives</h2></article>
-<article class="card" id="SD-013"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modelling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-013"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modeling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Skill teaching where practice is deliberate rather than just repeated.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [SUBJECT] lesson teaching [SKILL] to [GRADE].
@@ -7274,7 +7287,7 @@ Rules:
 <ul><li>Would a student feel singled out by the adapted route?</li><li>Is what you assess genuinely the same?</li></ul></article>
 <article class="card" id="SD-015"><div class="head"><span class="pid">SD-015</span><h3>Build an observable process rubric for an arts, PE or elective task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>Marking the learning rather than the finished performance.</p>
+<p>Grading the learning rather than the finished performance.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a rubric for [TASK] in [SUBJECT] for [GRADE], assessing [OBJECTIVE].
 
 Weight process and technique over the finished product, and say how you have
@@ -7297,7 +7310,7 @@ Give me:
 Then tell me which criterion would advantage a student with outside coaching,
 and how to reduce that.</pre></div>
 <p class="lbl">Before you send it</p>
-<ul><li>Which criterion favours the already-trained student? Fix it.</li><li>Is anything here about the body rather than the learning?</li></ul></article>
+<ul><li>Which criterion favors the already-trained student? Fix it.</li><li>Is anything here about the body rather than the learning?</li></ul></article>
 <h1 class="chap" id="10-multi-step-workflows">Chapter 10 — Multi-step Workflows</h1><p class="lede">12 workflows</p><p>Everything so far does one job. This chapter chains them: the output of step one becomes the input to step two, and by the end you have a finished piece of work rather than a pile of drafts.</p>
 <h2>What's in here</h2>
 <table><thead><tr><th>ID</th><th>Workflow</th><th>You end up with</th></tr></thead><tbody>
@@ -7372,7 +7385,7 @@ Context:
 - Materials: [LIST]
 
 STEP 1 — Build the core lesson.
-Plan the on-level lesson: opening, modelling, guided practice, independent
+Plan the on-level lesson: opening, modeling, guided practice, independent
 work, exit ticket. Build it backward from what would show the objective was
 met. Then stop.</pre></div>
 <p class="lbl">Then, one at a time</p>
@@ -7392,7 +7405,7 @@ contributions, and the shared conclusion. Then stop.</pre></div>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check the dignity.
 Review all three routes. Would the class work out which is the lesser one? Does
 every route have something worth sharing? Tell me the single change that would
-most equalise them.</pre></div>
+most equalize them.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Answer Step 5 honestly yourself before teaching it.</li><li>Could you tell from the shared check which route a student took?</li></ul></article>
 <article class="card" id="WF-003"><div class="head"><span class="pid">WF-003</span><h3>Incident to parent conversation</h3></div><p class="meta">Replaces roughly 1 hour, and a lot of worrying</p>
@@ -7401,7 +7414,7 @@ most equalise them.</pre></div>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me prepare a family conversation, one step at a time. Stop after each step.
 
 Before we start: if what I describe involves harm, abuse, or immediate danger,
-stop and tell me to follow my school&#x27;s safeguarding process instead of
+stop and tell me to follow my school&#x27;s mandated-reporting process instead of
 continuing this workflow.
 
 Context:
@@ -7428,10 +7441,10 @@ A summary email recording what was discussed and agreed, with owners and dates.
 Record disagreement as disagreement. Invite correction. Then stop.</pre></div>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check it.
 Review everything: any claim I cannot evidence, anywhere a family could
-reasonably read blame, anything that belongs in a safeguarding process rather
+reasonably read blame, anything that belongs in a child-protection process rather
 than a conversation with me. Tell me the one sentence to cut.</pre></div>
 <p class="lbl">Before you use it</p>
-<ul><li>If Step 1 flags inference as fact, fix it before Step 2.</li><li>If any step raises safeguarding, stop and use your school's process.</li></ul></article>
+<ul><li>If Step 1 flags inference as fact, fix it before Step 2.</li><li>If any step raises child protection, stop and use your school's process.</li></ul></article>
 <article class="card" id="WF-004"><div class="head"><span class="pid">WF-004</span><h3>Scores to report comments</h3></div><p class="meta">Replaces roughly 3 hours</p>
 <p class="lbl">When you need this</p>
 <p>Report season, a whole class, one sitting.</p>
@@ -7602,7 +7615,7 @@ Any claim I cannot evidence, any suggestion assuming a family has money,
 internet, time, or subject knowledge, and any card that reads as a verdict
 rather than a conversation.</pre></div>
 <p class="lbl">Before you use it</p>
-<ul><li>Fix anything Step 1 flags as impression before it reaches a card.</li><li>Practise the Step 4 openings aloud once.</li></ul></article>
+<ul><li>Fix anything Step 1 flags as impression before it reaches a card.</li><li>Practice the Step 4 openings aloud once.</li></ul></article>
 <article class="card" id="WF-009"><div class="head"><span class="pid">WF-009</span><h3>Evidence to intervention-plan draft</h3></div><p class="meta">Replaces roughly 2 hours</p>
 <p class="lbl">When you need this</p>
 <p>Preparing a draft to take into your school's process — not to act on alone.</p>
@@ -7610,7 +7623,7 @@ rather than a conversation.</pre></div>
 
 Read this first: this is a draft to take into my school&#x27;s own process. It is not
 a decision, a diagnosis, or a referral. If at any step the evidence points
-toward something requiring a specialist, a safeguarding response, or a formal
+toward something requiring a specialist, a mandated report, or a formal
 assessment, say so and tell me to stop and use my school&#x27;s process instead of
 continuing.
 
@@ -7656,7 +7669,7 @@ Context:
 - Destination and activity: [DESCRIBE]
 - Date, year group, number of students: [STATE THEM]
 - Adults available: [NUMBER AND ROLES]
-- My school&#x27;s requirements as I understand them: [PASTE OR SUMMARISE]
+- My school&#x27;s requirements as I understand them: [PASTE OR SUMMARIZE]
 
 STEP 1 — Build the backwards checklist.
 Working back from the trip date: approvals, consent, transport, staffing,

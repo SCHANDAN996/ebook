@@ -21,7 +21,7 @@ everything you cannot actually know.
 
 ## Worth knowing before you start
 
-Describe behaviour, never character. "Three tasks are not recorded as submitted"
+Describe behavior, never character. "Three tasks are not recorded as submitted"
 is a fact. "He is unmotivated" is a guess about a child you are writing to their
 family about.
 
@@ -62,7 +62,7 @@ Rules:
 - Describe what the student did, not what kind of person they are
 - Two to four sentences, readable on a phone
 - No "but", no concern attached, nothing asked of the family
-- Do not generalise one observation into a pattern
+- Do not generalize one observation into a pattern
 
 Give me the message, and a shorter two-sentence version.
 
@@ -270,7 +270,7 @@ What I want from this email: [A MEETING / AWARENESS / A SPECIFIC NEXT STEP]
 Rules:
 - Open with something genuine and specific about the child
 - State the concern as observable fact, not interpretation
-- Describe behaviour, never character
+- Describe behavior, never character
 - Do not name a cause. Do not suggest anything about home, motivation, effort,
   attention or ability
 - Do not promise improvement
@@ -415,7 +415,7 @@ Do not soften it into meaninglessness — the family must still understand there
 is a problem and what happens next.
 
 Show me:
-- Each sentence carrying blame, judgement, or an inference about home,
+- Each sentence carrying blame, judgment, or an inference about home,
   character or motivation — quoted
 - What is factually true in it, and what is my interpretation presented as fact
 - The rewritten message
@@ -449,7 +449,7 @@ Audit this message to a family.
 
 Tell me:
 - Every claim not supported by something I could show — quoted
-- Anywhere I describe character rather than behaviour
+- Anywhere I describe character rather than behavior
 - Anywhere I imply a cause: home, effort, attitude, ability, attention
 - Anywhere a family could reasonably read blame
 - Whether the ask is clear, single, and actually answerable
@@ -531,7 +531,7 @@ Give me the agenda with minutes allocated to each part, including:
 Then tell me:
 - Which part to cut first if we are running over
 - The conversation this agenda does not handle — the one that needs a separate
-  meeting — and how I recognise it early and say so
+  meeting — and how I recognize it early and say so
 ```
 
 **TO HERE**
@@ -589,7 +589,7 @@ So the meeting produces something rather than just happening.
 ```text
 Turn this into a shared action plan after a conference in [GRADE] [SUBJECT]:
 
-What we discussed: [SUMMARISE — no names]
+What we discussed: [SUMMARIZE — no names]
 What was agreed: [LIST IT]
 
 Give me a table with: what will happen, who does it, by when, and how we will
@@ -619,7 +619,7 @@ agreed, list it separately as open.
 *All grades*
 
 **When you need this**
-A record, sent the same day, that both sides recognise.
+A record, sent the same day, that both sides recognize.
 
 **COPY FROM HERE**
 
@@ -831,7 +831,7 @@ Rules:
 
 Give me the notice and the tear-off slip.
 
-I will check this against my school's own consent and safeguarding requirements
+I will check this against my school's own consent and child-protection requirements
 before it goes out.
 ```
 
@@ -900,7 +900,7 @@ Rules:
 - State no policy, procedure or entitlement I have not given you
 - If families will ask something this notice cannot answer, say who to ask
   rather than guessing
-- Do not apologise repeatedly; say it once if warranted
+- Do not apologize repeatedly; say it once if warranted
 - Do not speculate about further changes
 
 Under 100 words, plus a one-line version for a text message.
@@ -939,7 +939,7 @@ Tell me:
 
 Then tell me the single addition that would prevent the most replies.
 
-I will check all consent and safeguarding elements against my school's own
+I will check all consent and child-protection elements against my school's own
 requirements.
 
 MESSAGE:
@@ -950,7 +950,7 @@ MESSAGE:
 
 **Before you send it**
 - Add the missing items before sending, not after the questions arrive.
-- Take the consent and safeguarding flags to your school's process.
+- Take the consent and child-protection flags to your school's process.
 
 ---
 
@@ -1009,7 +1009,7 @@ Rewrite this message for [GRADE] families so it survives machine translation.
 
 Rules:
 - One idea per sentence, under 15 words where possible
-- No idioms, phrasal verbs, metaphors, humour or cultural references
+- No idioms, phrasal verbs, metaphors, humor or cultural references
 - No sarcasm, no understatement
 - Consistent terms — do not call the same thing two different names
 - Dates written in full, unambiguously — not 03/04, which means two different

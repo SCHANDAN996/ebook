@@ -359,7 +359,7 @@ Design a revision lesson for [GRADE] writing on [TASK].
 
 Separate three passes, in this order, and say why the order matters:
 - Ideas: is there enough here, and is it the right thing
-- Organisation: is it in an order a reader can follow
+- Organization: is it in an order a reader can follow
 - Conventions: sentences, punctuation, spelling
 
 Give me:
@@ -506,7 +506,7 @@ not mean it is better supported.
 
 ---
 
-### SD-013 · Create a skill-development lesson with modelling, practice and reflection
+### SD-013 · Create a skill-development lesson with modeling, practice and reflection
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
@@ -585,7 +585,7 @@ Rules:
 *Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-Marking the learning rather than the finished performance.
+Grading the learning rather than the finished performance.
 
 **COPY FROM HERE**
 
@@ -616,5 +616,5 @@ and how to reduce that.
 **TO HERE**
 
 **Before you send it**
-- Which criterion favours the already-trained student? Fix it.
+- Which criterion favors the already-trained student? Fix it.
 - Is anything here about the body rather than the learning?

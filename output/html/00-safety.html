@@ -130,6 +130,8 @@ blockquote strong{color:var(--warn)}
         padding-bottom:9pt; border-bottom:1px solid var(--line)}
   .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
        margin:13pt 0 5pt; color:var(--dim)}
+  /* The screen theme lifts bold text to near-white. On paper that is invisible. */
+  strong{color:#101a26; font-weight:700}
 
   /* The prompt itself stays whole. */
   .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
@@ -154,12 +156,23 @@ blockquote strong{color:var(--warn)}
 <h2>The one-minute version</h2>
 <p>AI writes a <strong>first draft</strong>. You are the teacher. Nothing in this book produces something that goes to a student, a family, or a permanent record without you reading it first.</p>
 <h2>Never paste these into an AI tool</h2>
-<ul><li>Student names, initials or ID numbers</li><li>Contact details for students or families</li><li>Medical information, diagnoses, or protected plans</li><li>Confidential incident or safeguarding records</li><li>Any story detailed enough to identify one child</li></ul>
-<p>Write <strong>"a Year 5 student"</strong> or <strong>"Student A"</strong> instead.</p>
+<ul><li>Student names, initials or ID numbers</li><li>Contact details for students or families</li><li>Medical information, diagnoses, or protected plans</li><li>Confidential incident or child-protection records</li><li>Any story detailed enough to identify one child</li></ul>
+<p>Write <strong>"a 5th grade student"</strong> or <strong>"Student A"</strong> instead.</p>
 <blockquote><p>Taking the name out is not the same as making it anonymous. A class of 28 with</p></blockquote>
 <blockquote><p>one wheelchair user is identifiable without any name at all. If the detail is</p></blockquote>
 <blockquote><p>what makes the request work, that is exactly the detail to leave out.</p></blockquote>
 <p>Use whatever AI tool your school has approved. If your school has not approved one, ask before putting any school information into any of them.</p>
+<h2>Why the rule above is not just good manners</h2>
+<p>Under <strong>FERPA</strong>, a student's education records — and any personally identifiable information taken from them — are protected. A district can share those records with an outside company only under an agreement that binds the company to use the data for the school's purposes and nothing else. A general chat tool you signed up for yourself is not covered by any such agreement.</p>
+<p>So the practical line is simple:</p>
+<table><thead><tr><th>This is fine</th><th>This is not</th></tr></thead><tbody>
+<tr><td>"A 5th grade student who reverses digits"</td><td>The student's name, initials or ID</td></tr>
+<tr><td>"Three anonymous response patterns I saw"</td><td>A screenshot of the gradebook</td></tr>
+<tr><td>Your own wording of a concern</td><td>The text of an IEP, 504 plan or incident report</td></tr>
+</tbody></table>
+<p>Your district may also have its own rules that are stricter than FERPA, and an approved-vendor list that is shorter than you expect. Ask once; it takes a minute and it settles the question for the whole year.</p>
+<p><strong>If students will use a tool themselves</strong>, check their age against the tool's own terms as well — most consumer AI tools set a minimum age, and <strong>COPPA</strong> governs services that collect data from children under 13. That is a district decision, not a classroom one.</p>
+<p>This book is written so you never need to cross any of those lines: every prompt works from your description of the situation, not from the record.</p>
 <h2>What AI may write, and what it may not</h2>
 <p><strong>It may invent:</strong> teaching activities, practice questions, worked examples, fictional scenarios, sentence starters, structures and sequences.</p>
 <p><strong>It must never invent:</strong></p>
@@ -171,15 +184,15 @@ blockquote strong{color:var(--warn)}
 <tr><td>Test scores or measured results</td><td>These are evidence, not text</td></tr>
 </tbody></table>
 <p>If something you need is missing, the prompt is written to <strong>ask you</strong> rather than fill the gap. When it asks, answer — do not let it guess.</p>
-<h2>Judgements that stay with you</h2>
-<p>AI does not decide a final grade, a placement, a disciplinary outcome, or anything to do with safeguarding. It can help you draft the words. The decision is yours, and so is the responsibility.</p>
+<h2>Judgments that stay with you</h2>
+<p>AI does not decide a final grade, a placement, a disciplinary outcome, or anything to do with child protection. It can help you draft the words. The decision is yours, and so is the responsibility.</p>
 <p>Never let it infer a diagnosis, a home situation, a motivation, an identity, or a fixed ability level. It cannot know these, and a confident sentence about them is still a guess.</p>
 <p><strong>Keep any accommodation or constraint you supplied.</strong> If you said a student has extra time, that must survive into the draft.</p>
 <h2>Two habits worth building</h2>
-<p><strong>Check the maths and the facts yourself.</strong> If you ask the model to check its own work it will say it checked. That is not verification.</p>
+<p><strong>Check the math and the facts yourself.</strong> If you ask the model to check its own work it will say it checked. That is not verification.</p>
 <p><strong>Read the draft as the person receiving it.</strong> A parent email that reads fine to you at 9pm may not read fine to a family at 8am.</p>
 <h2>If a request touches harm or danger</h2>
-<p>Stop. Do not work it through with an AI tool. Follow your school's safeguarding or emergency procedure. That process exists for exactly this moment.</p>
+<p>Stop. Do not work it through with an AI tool. Follow your school's mandated-reporting or emergency procedure. That process exists for exactly this moment.</p>
 <h2>Paste this once, at the start of your chat</h2>
 <p>Instead of repeating rules in every prompt, paste this at the top of a new conversation. Everything after it inherits the rules.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>You are helping a classroom teacher draft materials.

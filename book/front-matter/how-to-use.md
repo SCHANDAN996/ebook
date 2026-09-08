@@ -41,7 +41,7 @@ Each chapter is a separate file, so you only open the one you need.
 | Adapting one task for a mixed class | Chapter 4 |
 | Writing to a family | Chapter 5 |
 | Report card season | Chapter 6 |
-| Routines, behaviour, morning meeting | Chapter 7 |
+| Routines, behavior, morning meeting | Chapter 7 |
 | Emails, goals, forms, admin | Chapter 8 |
 | Subject-specific work | Chapter 9 |
 | A whole job, start to finish | Chapter 10 |
@@ -58,9 +58,9 @@ whole thing, brackets included.
 
 > `[GRADE_SUBJECT: exact age/grade and subject]`
 > becomes
-> `Year 7 science`
+> `7th grade science`
 
-**Be specific.** "Year 7 science, mixed ability, 26 students, 50-minute lesson,
+**Be specific.** "7th grade science, mixed ability, 26 students, 50-minute lesson,
 no lab access this week" gets you something usable. "Science" gets you something
 generic.
 
@@ -108,8 +108,8 @@ details. See the safety page.
 **It will not check your subject facts.** Verify content and calculations
 yourself, especially anything a student will be marked on.
 
-**It will not decide anything.** Grades, placements, behaviour outcomes and
-anything touching safeguarding stay with you and your school's process.
+**It will not decide anything.** Grades, placements, behavior outcomes and
+anything touching child protection stay with you and your school's process.
 
 ---
 
