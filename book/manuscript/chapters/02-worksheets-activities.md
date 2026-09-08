@@ -4,24 +4,24 @@
 
 The difference between a worksheet that teaches and one that fills time is
 whether the difficulty is deliberate. These prompts build practice that ramps —
-starting where the class actually is, ending where you want them — and activities
-that run without you standing over them.
+starting where the class actually is, ending where you want them — and
+activities that keep running when you are on the other side of the room.
 
 ## What's in here
 
 | Group | Prompts | Use when |
 |---|---|---|
-| Practice worksheets | 10 | Independent practice that builds properly |
+| Practice worksheets | 13 | Independent practice that builds properly |
 | Learning stations | 8 | Four ways into one topic, one period |
-| Collaborative tasks | 6 | Group work where everyone has to think |
-| Review games | 6 | Before an assessment, without the chaos |
+| Collaborative tasks | 5 | Group work where everyone has to think |
+| Review games | 5 | Before an assessment, without the chaos |
 | Homework sets | 5 | Work that survives leaving your room |
 | Project briefs | 5 | Longer tasks students run themselves |
 
 ## Worth knowing before you start
 
-Ask for the answer key in the same request. Getting it separately produces a key
-that does not quite match the questions.
+Ask for the answer key in the same request. Fetching it separately produces a
+key that does not quite match the questions.
 
 Say how long students have. A worksheet built without a time limit is always
 too long.
@@ -29,1597 +29,1417 @@ too long.
 For anything students do in groups, ask what you should look for while walking
 around. That line is usually the most useful part of the output.
 
-## Every prompt in this chapter
-
-### Practice Worksheets
-
-| ID | Prompt | Grades |
-|---|---|---|
-| WA-001 | Build a focused practice worksheet | 3-5, 6-8, 9-12 |
-| WA-005 | Create practice that moves from a model to independent work | 3-5, 6-8, 9-12 |
-| WA-006 | Write a worksheet that targets one common misconception | 3-5, 6-8, 9-12 |
-| WA-007 | Build mixed practice that requires learners to choose a strategy | 3-5, 6-8, 9-12 |
-| WA-008 | Create a short retrieval worksheet for previously taught skills | 3-5, 6-8, 9-12 |
-| WA-009 | Design an application worksheet using realistic classroom contexts | 3-5, 6-8, 9-12 |
-| WA-010 | Adapt a worksheet for black-and-white printing and limited space | 3-5, 6-8, 9-12 |
-| WA-011 | Create an error-analysis worksheet from fictional student work | 3-5, 6-8, 9-12 |
-| WA-012 | Write a worksheet with foundation, application and reasoning sections | 3-5, 6-8, 9-12 |
-| WA-013 | Audit and repair a worksheet whose questions are repetitive or unclear | 3-5, 6-8, 9-12 |
-
-### Learning Stations
-
-| ID | Prompt | Grades |
-|---|---|---|
-| WA-002 | Design four learning stations | 3-5, 6-8, 9-12 |
-| WA-014 | Create hands-on, reading, discussion and writing stations | 3-5, 6-8, 9-12 |
-| WA-015 | Plan station rotations for a large class and small room | 3-5, 6-8, 9-12 |
-| WA-016 | Build self-checking stations that do not depend on the teacher | 3-5, 6-8, 9-12 |
-| WA-017 | Create one quiet station and three collaborative stations | 3-5, 6-8, 9-12 |
-| WA-018 | Differentiate station access while preserving one shared objective | 3-5, 6-8, 9-12 |
-| WA-019 | Design a teacher-led reteaching station from exit-ticket evidence | 3-5, 6-8, 9-12 |
-| WA-020 | Audit station directions, timing, materials and accountability | 3-5, 6-8, 9-12 |
-
-### Collaborative Tasks
-
-| ID | Prompt | Grades |
-|---|---|---|
-| WA-003 | Create an accountable group task | 3-5, 6-8, 9-12 |
-| WA-021 | Design a jigsaw task where every learner holds essential information | 3-5, 6-8, 9-12 |
-| WA-022 | Build a group investigation with rotating cognitive roles | 3-5, 6-8, 9-12 |
-| WA-023 | Create a consensus task that requires evidence and disagreement | 3-5, 6-8, 9-12 |
-| WA-024 | Turn an individual worksheet into meaningful collaborative reasoning | 3-5, 6-8, 9-12 |
-| WA-025 | Audit a group task for participation, access and individual evidence | 3-5, 6-8, 9-12 |
-
-### Review Games
-
-| ID | Prompt | Grades |
-|---|---|---|
-| WA-004 | Build a review game that measures learning | 3-5, 6-8, 9-12 |
-| WA-026 | Create a no-speed review game using mini-whiteboards | 3-5, 6-8, 9-12 |
-| WA-027 | Design a team review game with individual accountability | 3-5, 6-8, 9-12 |
-| WA-028 | Build a misconception challenge using diagnostic distractors | 3-5, 6-8, 9-12 |
-| WA-029 | Create a low-prep review game with paper question cards | 3-5, 6-8, 9-12 |
-| WA-030 | Audit a review game for fairness, accuracy and useful teacher data | 3-5, 6-8, 9-12 |
-
-### Homework Sets
-
-| ID | Prompt | Grades |
-|---|---|---|
-| WA-031 | Create a short homework set with a clear purpose | 3-5, 6-8, 9-12 |
-| WA-032 | Build homework that mixes retrieval and current learning | 3-5, 6-8, 9-12 |
-| WA-033 | Design homework with a meaningful no-internet option | 3-5, 6-8, 9-12 |
-| WA-034 | Create a family-readable homework guide without requiring family teaching | 3-5, 6-8, 9-12 |
-| WA-035 | Audit a homework set for workload, access and answer-key accuracy | 3-5, 6-8, 9-12 |
-
-### Project Briefs
-
-| ID | Prompt | Grades |
-|---|---|---|
-| WA-036 | Write a student-ready project brief from a supplied objective | 3-5, 6-8, 9-12 |
-| WA-037 | Create project milestones, checkpoints and submission requirements | 3-5, 6-8, 9-12 |
-| WA-038 | Design a choice-based project with equivalent learning demands | 3-5, 6-8, 9-12 |
-| WA-039 | Build a group-project brief with individual evidence of mastery | 3-5, 6-8, 9-12 |
-| WA-040 | Audit a project brief for clarity, feasibility and privacy | 3-5, 6-8, 9-12 |
-
 ---
+
+## Practice worksheets
 
 ---
 
 ### WA-001 · Build a focused practice worksheet
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Students need purposeful practice rather than repetitive filler.
+Independent practice on one skill, that gets harder in the right order.
 
 **COPY FROM HERE**
 
 ```text
-Build a focused practice worksheet.
+Create a practice worksheet on [SKILL] for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ITEM_COUNT: supply verified information; do not leave blank]
-- [SKILL: supply verified information; do not leave blank]
-- [PRINT_LIMIT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Students have [MINUTES] minutes. They have just been taught [WHAT YOU TAUGHT].
 
-Specific requirements:
-Sequence model, application and reasoning items. Include complete worked answers and leave usable writing space.
+Structure it in four blocks:
+- 2 warm-up items anyone who was present can do
+- 5 core items that get harder one step at a time
+- 2 items combining this with [EARLIER TOPIC]
+- 1 challenge item
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+For each block, keep the difficulty change to one thing at a time — do not make
+the numbers harder and the wording harder in the same step.
+
+Give me:
+- The worksheet exactly as students receive it
+- The full answer key, with working where the answer alone is not enough
+- Which single item is the "if they get this, they have it" question
+- The item most students will get wrong, and what that tells me
+
+Do not pad the sheet to fill a page.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Model: 2:3 scaled by 2 becomes 4:6. Items: (1) 4 yellow needs __ blue; (2) __ yellow needs 9 blue; (3) Is 6:8 equivalent? Explain; (4) Draw a ratio table for 1, 2 and 3 batches. Key: 6; 6; no because 6:9 is equivalent; pairs 2:3, 4:6, 6:9. Leave two ruled lines after each explanation. This is a four-item excerpt, not a claimed twelve-item complete worksheet.
-
----
-
-### WA-002 · Design four learning stations
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to design four learning stations.
-
-**COPY FROM HERE**
-
-```text
-Design four learning stations.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CLASS_SIZE: supply verified information; do not leave blank]
-- [ROOM: supply verified information; do not leave blank]
-- [TOTAL_TIME: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Write four distinct station cards, materials per group and a rotation table. Check that all groups can finish within the time.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Stations: draw feeding arrows; read a short supplied chain description quietly; discuss loss of snails; write a conditional prediction. Each produces one individual sentence or diagram. Timing: launch 4; four 9-minute stations; three 2-minute transitions; exit 2 =48. Key: perch directly lose snail food; effects on herons are indirect and conditional. Groups of eight work as four pairs; verify room capacity before using this rotation.
-
----
-
-### WA-003 · Create an accountable group task
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-**When you need this**
-
-You want collaboration where every learner must think and contribute.
-
-**COPY FROM HERE**
-
-```text
-Create an accountable group task.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [GROUP_SIZE: supply verified information; do not leave blank]
-- [SOURCES: supply verified information; do not leave blank]
-- [FINAL_PRODUCT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Give each role meaningful reasoning work and require an independent response. Supply a procedure for evidence-based disagreement.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Rank which source could better support a claim and state missing information. Roles: claim-reader, evidence-checker, limitation-finder, synthesis-writer; all prepare individually first. Shared product: claim-evidence-limit table. Individual check: explain why an unknown sample size limits confidence. Do not equate survey format with automatic reliability. Timing: prepare 5, discuss 12, synthesize 8, individual response 5.
-
----
-
-### WA-004 · Build a review game that measures learning
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to build a review game that measures learning.
-
-**COPY FROM HERE**
-
-```text
-Build a review game that measures learning.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [QUESTION_COUNT: supply verified information; do not leave blank]
-- [TAUGHT_SKILLS: supply verified information; do not leave blank]
-- [SCORING: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Produce actual questions, verified answers and a no-speed scoring alternative. Record individual understanding separately from team points.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Every learner answers silently before discussion. Cards: x+3=8; 2x=14; 3(x-1)=12; x+2=x+5. Key: 5; 7; 5; no solution. Award one point for a correct answer and one for a defensible explanation or corrected explanation. No first-to-answer bonus. Teacher records individual initial responses separately. Timing: rules 3, four 4-minute rounds, reflection 6 =25.
+- Work the answer key yourself before photocopying.
+- Does difficulty rise one step at a time, or jump?
+- Can it honestly be finished in the time you gave?
 
 ---
 
 ### WA-005 · Create practice that moves from a model to independent work
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create practice that moves from a model to independent work.
+The gap between "we did it together" and "now do it alone" keeps losing people.
 
 **COPY FROM HERE**
 
 ```text
-Create practice that moves from a model to independent work.
+Create a [GRADE] [SUBJECT] practice sheet on [SKILL] that fades support across
+the page.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MODEL_ITEM: supply verified information; do not leave blank]
-- [SUPPORT_FADE_STAGES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Four stages, in this order:
+1. A fully worked example with the reasoning written out, to read not to do
+2. The same kind of item with two steps done and the rest blank
+3. The same kind with only the first step given
+4. Three items with nothing given
 
-Specific requirements:
-Provide one worked item, two partially completed items and independent items. Explain exactly which support disappears at each stage.
+The mathematics or content difficulty must stay the same across all four. The
+only thing changing is how much support is on the page.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the sheet as students see it, the answer key, and one line telling me
+what it means if a student can do stage 2 but not stage 4.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Model: 1/2=2/4 because each half becomes two fourths. Faded: 2/3=__/6, since each third is split into __ parts; then 3/4=__/8 with no explanation starter. Independent: 2/5=__/10; explain whether 3/6=1/2. Key: 4, 2; 6; 4; yes, both represent half of an equal whole. Support fades from explanation to numeric cue to independent reasoning.
+- Is the content difficulty genuinely constant across the four stages?
+- Does the worked example show the thinking, or just the steps?
 
 ---
 
 ### WA-006 · Write a worksheet that targets one common misconception
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a worksheet that targets one common misconception.
+You know exactly what they are getting wrong and want to go straight at it.
 
 **COPY FROM HERE**
 
 ```text
-Write a worksheet that targets one common misconception.
+My [GRADE] [SUBJECT] students are making this error on [TOPIC]:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MISCONCEPTION: supply verified information; do not leave blank]
-- [CORRECT_PRINCIPLE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[DESCRIBE THE ERROR — what they do, not what they fail to do]
 
-Specific requirements:
-Start with a tempting wrong response, ask learners to explain it, then contrast a correct example and a fresh diagnostic.
+Build a worksheet that confronts it.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Include:
+- 3 items where the misconception produces a visibly wrong answer
+- 2 items where the misconception happens to give the right answer, so students
+  see that being right is not proof of understanding
+- 1 item asking them to explain why a fictional student's wrong method fails
+- 1 item where they have to decide which of two methods applies
+
+Give me the answer key, and for each item say what a correct answer proves.
+
+Do not simply re-explain the correct method. The sheet should make the wrong
+idea break in front of them.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Fictional wrong claim: 1/8 is greater than 1/4 because 8 is greater than 4. Draw equal bars in fourths and eighths. Ask which unit piece is larger and why. Key: 1/4 is greater; dividing the same whole into more equal pieces makes each smaller. Fresh check: compare 1/3 and 1/6. Key: 1/3 is greater. Do not generalize the unit-fraction rule to unequal numerators without further reasoning.
+- Do the "accidentally right" items genuinely work that way? Check them.
+- Is the fictional student's error the one your class actually makes?
 
 ---
 
 ### WA-007 · Build mixed practice that requires learners to choose a strategy
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build mixed practice that requires learners to choose a strategy.
+They can do each method when told which one. Not when they have to decide.
 
 **COPY FROM HERE**
 
 ```text
-Build mixed practice that requires learners to choose a strategy.
+Create a mixed practice sheet for [GRADE] [SUBJECT] covering these methods:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TAUGHT_STRATEGIES: supply verified information; do not leave blank]
-- [ITEM_COUNT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[LIST THE METHODS OR TOPICS]
 
-Specific requirements:
-Interleave problems so learners choose a strategy. Require a reason for the choice and avoid headings that reveal the method.
+Do not group the items by method and do not label which is which. Students must
+work out what applies.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- 10 items in a deliberately mixed order
+- 2 items where more than one method works, and which is more efficient
+- 1 item where a plausible method does not work, and why
+- The answer key, with the intended method noted for me only
+- A one-line prompt I can put at the top asking students to name their method
+  before solving
+
+Tell me which pair of methods students most often confuse here.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Questions: triple 8; increase 8 by 3; recipe 2:5 scaled to 6 first units; perimeter of square side 8. Keys: 24; 11; 15; 32. For each, learners name multiplication, addition, ratio scaling or perimeter reasoning before calculating. Teacher key explains why the surface presence of 3 or 8 does not determine the operation. Avoid headings that announce the required strategy.
+- Is the order genuinely mixed, or does a pattern creep back in?
+- Does the "more than one works" item actually have two valid routes?
 
 ---
 
 ### WA-008 · Create a short retrieval worksheet for previously taught skills
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a short retrieval worksheet for previously taught skills.
+Keeping older learning alive without spending a lesson on it.
 
 **COPY FROM HERE**
 
 ```text
-Create a short retrieval worksheet for previously taught skills.
+Write a 10-minute retrieval sheet for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PREVIOUSLY_TAUGHT_SKILLS: supply verified information; do not leave blank]
-- [TIME_LIMIT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Pull from:
+- Last week: [TOPIC]
+- Last month: [TOPIC]
+- Last term: [TOPIC]
 
-Specific requirements:
-Use short retrieval items followed by a separate feedback key. Keep first attempts visible before correction.
+Two or three items from each, interleaved rather than grouped by topic.
+Everything must be answerable from memory — no reference material, no notes.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- The sheet
+- The answer key
+- A one-line note per item on why it is worth keeping alive
+- A version I could run next week with the same shape but different items
+
+Do not introduce anything new. If a topic I listed needs something students have
+not been taught, say so instead of including it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Without notes: 7x8; simplify 4/8; perimeter of rectangle 3 by 5 units. After an initial attempt, show key: 56; 1/2; 16 units. Learners correct in a different mark and explain one correction. Teacher records the first response for planning only. A missed fact today is evidence for further practice, not proof of poor effort or permanent inability.
+- Is anything here new content in disguise?
+- Are the older topics ones you genuinely taught this class?
 
 ---
 
 ### WA-009 · Design an application worksheet using realistic classroom contexts
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design an application worksheet using realistic classroom contexts.
+Word problems that do not insult the reader.
 
 **COPY FROM HERE**
 
 ```text
-Design an application worksheet using realistic classroom contexts.
+Create an application worksheet on [SKILL] for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [REALISTIC_CONTEXT: supply verified information; do not leave blank]
-- [VERIFIED_QUANTITIES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Use contexts a [GRADE] student would actually recognise. No talking animals, no
+scenarios where nobody would ever need the answer, and no situations that assume
+money, travel or possessions a family may not have.
 
-Specific requirements:
-Build applications with sufficient data and correct units. Label invented practice contexts and avoid pretending they are measured classroom results.
+Give me:
+- 6 items in realistic contexts, increasing in how much the student has to
+  extract from the wording
+- 1 item containing information that is not needed, so they have to select
+- 1 item where a required piece of information is missing, and the correct
+  response is to say what is missing
+- The answer key
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Keep the reading demand appropriate for [GRADE]. If a context needs background
+knowledge some students may not have, flag it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Do any contexts assume money, travel, or a kind of home life?
+- Is the reading level right for your weakest reader?
 
 ---
 
 ### WA-010 · Adapt a worksheet for black-and-white printing and limited space
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to adapt a worksheet for black-and-white printing and limited space.
+One page, one side, and the colour printer is a fantasy.
 
 **COPY FROM HERE**
 
 ```text
-Adapt a worksheet for black-and-white printing and limited space.
+Rework the worksheet below so it prints on one side of one sheet in black and
+white.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [EXISTING_WORKSHEET: supply verified information; do not leave blank]
-- [PAPER_SIZE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Constraints:
+- Nothing that depends on colour to be understood
+- No shading that turns into a grey block on a school photocopier
+- Enough writing space for a [GRADE] student's handwriting
+- Readable at 100% — do not solve the space problem by shrinking the type
 
-Specific requirements:
-Return a print-layout specification with grayscale-safe cues, legible type and writing space. Never use colour as the only meaning carrier.
+Give me:
+- The reworked sheet
+- What you cut or compressed, and what is lost
+- Anywhere colour was carrying meaning, and what replaces it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+If it genuinely will not fit on one side, say so and tell me the best two-page
+split.
+
+WORKSHEET:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is the writing space enough for actual handwriting?
+- Print one copy on the real photocopier before running thirty.
 
 ---
 
 ### WA-011 · Create an error-analysis worksheet from fictional student work
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create an error-analysis worksheet from fictional student work.
+Finding the mistake teaches more than avoiding it.
 
 **COPY FROM HERE**
 
 ```text
-Create an error-analysis worksheet from fictional student work.
+Create an error-analysis worksheet on [TOPIC] for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VERIFIED_PROBLEMS: supply verified information; do not leave blank]
-- [TARGET_ERRORS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Use fictional students — invented names like "Student A" — and invented work.
+Do not ask me to supply real student work, and do not imply the examples are
+real.
 
-Specific requirements:
-Create deliberately incorrect fictional solutions, clearly labelled. Ask where reasoning first fails and provide corrected solutions separately.
+Give me 4 pieces of fictional work:
+- One with a single clear error
+- One where the method is right and the arithmetic is wrong
+- One where the arithmetic is right and the method is wrong
+- One that is fully correct but looks unusual
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+For each, students must say: what was done, where it goes wrong, and what to do
+instead. Give me the answers.
+
+Then tell me which of the four is hardest to diagnose, and why.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Are the errors realistic ones your students make?
+- Is the "correct but unusual" one genuinely correct? Check it.
 
 ---
 
 ### WA-012 · Write a worksheet with foundation, application and reasoning sections
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a worksheet with foundation, application and reasoning sections.
+One sheet the whole class can work on at their own depth.
 
 **COPY FROM HERE**
 
 ```text
-Write a worksheet with foundation, application and reasoning sections.
+Create a three-section worksheet on [TOPIC] for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBJECTIVE: supply verified information; do not leave blank]
-- [ITEM_COUNT_PER_SECTION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Section 1 — Foundation: can the student do the procedure
+Section 2 — Application: can they use it in a context
+Section 3 — Reasoning: can they explain, justify, or spot when it does not apply
 
-Specific requirements:
-Divide work into foundation, application and reasoning without equating longer text with greater difficulty. Verify every answer.
+Every student attempts all three sections. The sections are not ability groups
+and must not be labelled as such.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- 4 items in section 1, 3 in section 2, 2 in section 3
+- The answer key
+- What it means if a student is fine in section 1 and stuck in section 3
+- A single reasoning item I could put on the board for the whole class
+
+Keep section 3 accessible to a student who found section 1 hard — it should
+demand different thinking, not more of the same.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could a student who struggled in section 1 still attempt section 3?
+- Do the sections test different things, or the same thing three times?
 
 ---
 
 ### WA-013 · Audit and repair a worksheet whose questions are repetitive or unclear
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit and repair a worksheet whose questions are repetitive or unclear.
+The sheet exists. It is not working and you are not sure why.
 
 **COPY FROM HERE**
 
 ```text
-Audit and repair a worksheet whose questions are repetitive or unclear.
+Audit this [GRADE] [SUBJECT] worksheet.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [DRAFT_WORKSHEET: supply verified information; do not leave blank]
-- [OBJECTIVE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+For each item tell me:
+- What it actually asks the student to do
+- Whether it adds anything the previous items did not already test
+- Any wording open to more than one reading, quoted exactly
+- Whether the reading demand is higher than the subject demand
 
-Specific requirements:
-Identify repetitive or ambiguous items by number. Explain the problem and provide replacements that add distinct evidence.
+Then:
+- Name the items I could delete without losing anything
+- Rewrite the two worst-worded items
+- Tell me what the sheet never tests but should
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be direct. If the sheet is ten versions of the same question, say so.
+
+WORKSHEET:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Do you agree the flagged items are genuinely redundant?
+- Do the rewrites still test what you wanted?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+### WA-002 · Design four learning stations
+*Grades 3-5, 6-8, 9-12*
+
+**When you need this**
+One topic, four ways in, one period.
+
+**COPY FROM HERE**
+
+```text
+Design 4 stations on [TOPIC] for [GRADE] [SUBJECT], [MINUTES] minutes each.
+
+Class size: [NUMBER]. Materials available: [LIST].
+
+Each station uses a different mode — one hands-on, one reading, one talking,
+one writing — and must run without me standing at it.
+
+For each station give me:
+- The instruction card exactly as students read it, under 40 words
+- Materials, using only what I listed
+- What students leave behind as evidence
+- What I check in the three seconds I walk past
+- What the group does if they finish early
+
+Then give me the rotation table and what I say to start each rotation.
+
+Flag anything needing materials I have not listed.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Can a group genuinely run each station without you?
+- Do the four stations fit the materials you actually have?
+
+---
+
+## Learning stations
 
 ---
 
 ### WA-014 · Create hands-on, reading, discussion and writing stations
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create hands-on, reading, discussion and writing stations.
+You want four genuinely different kinds of thinking, not four worksheets.
 
 **COPY FROM HERE**
 
 ```text
-Create hands-on, reading, discussion and writing stations.
+Build 4 stations on [TOPIC] for [GRADE] [SUBJECT] where each demands a
+different kind of thinking, not just a different activity.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBJECTIVE: supply verified information; do not leave blank]
-- [SOURCES: supply verified information; do not leave blank]
-- [MATERIALS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+- Hands-on: students manipulate something and notice a pattern
+- Reading: students extract specific information from a short text
+- Discussion: students must disagree productively about something
+- Writing: students explain or justify in their own words
 
-Specific requirements:
-Use four modes with the same learning goal. Require a meaningful product at every station rather than an activity checklist.
+For each: the instruction card, materials, the evidence left behind, and the
+one thing that usually goes wrong there.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me which station is the hardest to run well, and what to do about it.
+
+The four should build on each other in any order — a student should not need to
+do the reading station before the hands-on one.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Do the four genuinely demand different thinking?
+- Does any station secretly depend on doing another one first?
 
 ---
 
 ### WA-015 · Plan station rotations for a large class and small room
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to plan station rotations for a large class and small room.
+Thirty-two students, a room built for twenty-four, and you still want stations.
 
 **COPY FROM HERE**
 
 ```text
-Plan station rotations for a large class and small room.
+I have [NUMBER] students in a room that is [DESCRIBE THE SPACE — desks fixed or
+movable, floor space, how many can stand at once].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CLASS_SIZE: supply verified information; do not leave blank]
-- [ROOM_LAYOUT: supply verified information; do not leave blank]
-- [MOVEMENT_LIMITS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Plan station rotations for [NUMBER OF STATIONS] stations in [MINUTES] minutes.
 
-Specific requirements:
-Calculate group sizes, transitions and bottlenecks. Offer materials-rotate/student-stay as an alternative for limited space.
+Give me:
+- Group sizes and how many groups
+- The physical layout, described so I could sketch it
+- The rotation order, and the route each group walks so paths do not cross
+- What I say to move them, under 15 seconds
+- The realistic transition time, counted into the total
+- What changes if two students are absent, or two extra arrive
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not assume I can move furniture. If the plan needs a bigger room, say so and
+give me the best version that fits this one.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Do the walking routes actually work in your room?
+- Is transition time counted in, or bolted on at the end?
 
 ---
 
 ### WA-016 · Build self-checking stations that do not depend on the teacher
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build self-checking stations that do not depend on the teacher.
+You want to be at one station, not answering "is this right?" from four.
 
 **COPY FROM HERE**
 
 ```text
-Build self-checking stations that do not depend on the teacher.
+Design [NUMBER] stations on [TOPIC] for [GRADE] [SUBJECT] where students can
+check their own work.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [STATION_TASKS: supply verified information; do not leave blank]
-- [VERIFIED_KEYS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Each station needs a self-check that does not simply hand over the answer — for
+example a total that must match, a pattern that only appears if the work is
+right, or a card that gives the answer only after a written attempt.
 
-Specific requirements:
-Separate task cards from self-check cards. Add a retry step and an escalation signal when the key does not resolve confusion.
+For each station:
+- The task
+- The self-check mechanism, described so I can build it from paper
+- What students do when the check fails
+- What stops a student skipping to the answer
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me which station will still generate questions for me, and what those
+questions will be.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Can a student get the answer without doing the work?
+- Can you build every check from paper this week?
 
 ---
 
 ### WA-017 · Create one quiet station and three collaborative stations
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create one quiet station and three collaborative stations.
+Some students need to work in silence, and that should not be a punishment.
 
 **COPY FROM HERE**
 
 ```text
-Create one quiet station and three collaborative stations.
+Design 4 stations on [TOPIC] for [GRADE] [SUBJECT]: three collaborative and one
+where students work alone in silence.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [NOISE_LIMIT: supply verified information; do not leave blank]
-- [FOUR_TASKS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+The quiet station must be as interesting as the others — not the leftover
+worksheet. A student choosing quiet should not be choosing less.
 
-Specific requirements:
-Specify one silent accessible station and three low-volume collaborative stations. Provide equivalent non-speaking participation routes.
+Give me:
+- All four station cards
+- What makes the quiet station genuinely worth doing
+- How a student ends up at the quiet station without announcing anything about
+  themselves
+- How I keep the noise from the other three from reaching it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not label it as being for anyone in particular.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Would a student see the quiet station as a downgrade?
+- Can a student choose it without drawing attention?
 
 ---
 
 ### WA-018 · Differentiate station access while preserving one shared objective
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to differentiate station access while preserving one shared objective.
+Same destination, different entry points, one discussion at the end.
 
 **COPY FROM HERE**
 
 ```text
-Differentiate station access while preserving one shared objective.
+For these [GRADE] [SUBJECT] stations on [TOPIC], build in different entry points
+while keeping one shared objective.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [COMMON_OBJECTIVE: supply verified information; do not leave blank]
-- [OBSERVED_BARRIERS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+For each station give me:
+- The core task
+- A supported version — more scaffolding, same thinking
+- An extended version — same topic, harder thinking, not more questions
+- What every version produces, so they all feed one closing discussion
 
-Specific requirements:
-Adapt access at stations without changing the assessed construct. State what remains identical across routes.
+The versions must not be labelled by ability, and a student should be able to
+move between them without asking permission.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Tell me how the closing discussion works when different students did different
+versions.
+
+STATIONS:
+[PASTE THEM, or describe the topic and I will design them]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could the class decode which version is "the easy one"?
+- Does the closing discussion genuinely include all three?
 
 ---
 
 ### WA-019 · Design a teacher-led reteaching station from exit-ticket evidence
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design a teacher-led reteaching station from exit-ticket evidence.
+You have ten minutes with the group that needs you, while the rest run stations.
 
 **COPY FROM HERE**
 
 ```text
-Design a teacher-led reteaching station from exit-ticket evidence.
+Last lesson's exit ticket on [TOPIC] showed this pattern in [GRADE] [SUBJECT]:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [EXIT_PATTERNS: supply verified information; do not leave blank]
-- [RETEACH_MINUTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[DESCRIBE WHAT YOU SAW — no student names]
 
-Specific requirements:
-Choose one misconception for the teacher station, model it and check again. Give other groups independent tasks with answer guidance.
+Design a 10-minute teacher-led station that addresses it, to run while other
+groups work independently.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- What I do in the first two minutes to find out where each student actually is
+- The reteach, aimed at the thinking rather than the procedure
+- Two questions I ask that reveal whether it has landed
+- What each student takes away to try alone
+- How I keep it to 10 minutes when it wants to run to 20
+
+Assume I cannot see the rest of the room properly while I am doing this — tell
+me what to set up beforehand so it survives my not looking.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is ten minutes realistic for this reteach?
+- Is the rest of the room genuinely self-sufficient for that long?
 
 ---
 
 ### WA-020 · Audit station directions, timing, materials and accountability
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit station directions, timing, materials and accountability.
+Before you laminate eight cards and find out on the day.
 
 **COPY FROM HERE**
 
 ```text
-Audit station directions, timing, materials and accountability.
+Audit these [GRADE] [SUBJECT] stations.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [STATION_CARDS: supply verified information; do not leave blank]
-- [ROOM_CONSTRAINTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Check each one for:
+- Instructions a student could misread, quoted exactly
+- Whether the task fits the time given, honestly
+- Materials assumed but never listed
+- Whether anything is produced that I could actually look at afterwards
+- Whether a student could sit through the whole rotation doing nothing
 
-Specific requirements:
-Audit instructions, timing, materials and evidence collection by station. Return a prioritized correction table, not a new unrelated activity.
+Then tell me:
+- Which station will fail first, and why
+- The smallest fix for it
+- Which station is doing the least work for the time it takes
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be blunt about the weak one.
+
+STATIONS:
+[PASTE THEM]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Do you agree with which station it called weakest?
+- Is the timing judgement based on your class, or an ideal one?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Collaborative tasks
+
+---
+
+### WA-003 · Create an accountable group task
+*Grades 3-5, 6-8, 9-12*
+
+**When you need this**
+Group work where one student cannot carry the other three.
+
+**COPY FROM HERE**
+
+```text
+Design a [MINUTES]-minute group task on [TOPIC] for [GRADE] [SUBJECT], groups
+of [NUMBER].
+
+Build the accountability into the task itself, not into a peer-rating form.
+
+Give me:
+- A task that genuinely needs more than one person — not one job split up
+- What each student personally produces, identifiable as theirs
+- A group product that cannot be completed unless every part arrives
+- One question I ask any individual at the end to check they understood the
+  whole thing, not only their piece
+- What I do about the group where one student did most of it
+
+Tell me plainly whether a passenger could still get through this task. If yes,
+fix it before giving me the final version.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Could one strong student do the whole thing alone? Redesign if so.
+- Does every student leave something with their own name on it?
 
 ---
 
 ### WA-021 · Design a jigsaw task where every learner holds essential information
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design a jigsaw task where every learner holds essential information.
+Everyone is necessary, and the task proves it.
 
 **COPY FROM HERE**
 
 ```text
-Design a jigsaw task where every learner holds essential information.
+Design a jigsaw task on [TOPIC] for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [SOURCE_PARTS: supply verified information; do not leave blank]
-- [GROUP_SIZE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Groups of [NUMBER]. Each student gets a different piece, and the final task is
+impossible without all of them.
 
-Specific requirements:
-Assign complementary evidence to expert groups, then require synthesis in home groups. Provide missing-reader and absence contingencies.
+Give me:
+- The [NUMBER] information pieces, written out in full and roughly equal in
+  difficulty and length
+- The final task, which cannot be done from any one piece
+- The expert-group step: what students with the same piece do together first
+- The exact instruction for teaching your piece to your group
+- What I check to know a piece was genuinely taught rather than handed over
+- What happens when a student is absent and their piece is missing
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+No piece should be obviously the easy one or obviously the important one.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Are the pieces genuinely equal in difficulty?
+- Is the final task truly impossible from one piece? Try it.
 
 ---
 
 ### WA-022 · Build a group investigation with rotating cognitive roles
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a group investigation with rotating cognitive roles.
+Roles that mean thinking, not roles that mean stationery.
 
 **COPY FROM HERE**
 
 ```text
-Build a group investigation with rotating cognitive roles.
+Design a group investigation into [QUESTION] for [GRADE] [SUBJECT], groups of
+[NUMBER], over [MINUTES] minutes.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [INVESTIGATION_QUESTION: supply verified information; do not leave blank]
-- [ROLE_COUNT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give each student a role defined by the thinking it demands — for example the
+one who challenges every claim, the one who checks the evidence, the one who
+tracks what is still unknown. No timekeepers, no material-fetchers, no
+scribes-as-a-role.
 
-Specific requirements:
-Rotate predictor, evidence-checker, challenger and recorder roles. Require each learner to explain one inference independently.
+For each role give me:
+- What that student is responsible for thinking about
+- Two sentences they can say to do their job when they get stuck
+- What goes wrong in the group when nobody does it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me when roles rotate, and what students carry over when they change.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is every role about thinking, or is one just admin?
+- Would a shy student be able to perform their role?
 
 ---
 
 ### WA-023 · Create a consensus task that requires evidence and disagreement
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a consensus task that requires evidence and disagreement.
+You want them to argue about the content, properly.
 
 **COPY FROM HERE**
 
 ```text
-Create a consensus task that requires evidence and disagreement.
+Design a consensus task on [TOPIC] for [GRADE] [SUBJECT] where groups must
+reach agreement they can defend.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [COMPETING_CLAIMS: supply verified information; do not leave blank]
-- [SOURCES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Requirements:
+- A genuinely arguable question with more than one defensible answer
+- Evidence provided in the task, so students argue from something rather than
+  from opinion
+- A rule that a group cannot agree until they can state the strongest case
+  against their own answer
+- What a group records, including where they disagreed and how it resolved
 
-Specific requirements:
-Define consensus as a reasoned position with dissent recorded. Do not require agreement when evidence remains genuinely inconclusive.
+Give me the task, the evidence, sentence starters for disagreeing without it
+becoming personal, and what I look for while circulating.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not choose a question where one answer is obviously right.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is the question genuinely arguable, or is there a right answer?
+- Is the supplied evidence enough to argue from?
 
 ---
 
 ### WA-024 · Turn an individual worksheet into meaningful collaborative reasoning
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to turn an individual worksheet into meaningful collaborative reasoning.
+The worksheet is fine. Doing it in pairs would be better than doing it twice.
 
 **COPY FROM HERE**
 
 ```text
-Turn an individual worksheet into meaningful collaborative reasoning.
+Convert this [GRADE] [SUBJECT] worksheet into a task worth doing in pairs.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [INDIVIDUAL_WORKSHEET: supply verified information; do not leave blank]
-- [COLLABORATION_GOAL: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+The point is not to halve the work. Restructure it so two people thinking
+produce something one person could not.
 
-Specific requirements:
-Choose items that benefit from comparing methods. Add individual preparation, joint reasoning and an independent exit response.
+Options to consider: each student gets different items and must explain theirs;
+one solves while the other predicts and they compare; both attempt separately
+then reconcile differences.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- The restructured task
+- The exact instruction pairs receive
+- What each student still produces individually
+- The one moment in the task where they genuinely have to talk
+
+If this worksheet is better done alone, say so rather than forcing it.
+
+WORKSHEET:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is the pair version better, or just louder?
+- Does each student still leave individual evidence?
 
 ---
 
 ### WA-025 · Audit a group task for participation, access and individual evidence
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a group task for participation, access and individual evidence.
+It looked collaborative. You are not sure it was.
 
 **COPY FROM HERE**
 
 ```text
-Audit a group task for participation, access and individual evidence.
+Audit this [GRADE] [SUBJECT] group task.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [GROUP_TASK: supply verified information; do not leave blank]
-- [ACCESS_OPTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Whether one student could complete it alone while the others watch
+- Where a quiet student can contribute without having to compete for airtime
+- What evidence I get about each individual, and what I only get about the group
+- Anything that assumes a skill unrelated to the objective — presenting,
+  drawing, reading quickly — and whether that is fair here
+- Whether the task actually needs a group
 
-Specific requirements:
-Audit whose thinking is visible and who can be excluded. Repair roles and evidence collection without rewarding talk volume.
+End with the single change that would most improve it. If the honest answer is
+that this should be individual work, say that.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+TASK:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Do you agree with what it said about passengers?
+- Are you comfortable with how little individual evidence there is?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Review games
+
+---
+
+### WA-004 · Build a review game that measures learning
+*Grades 3-5, 6-8, 9-12*
+
+**When you need this**
+A game that also tells you who is ready for the test.
+
+**COPY FROM HERE**
+
+```text
+Design a [MINUTES]-minute review game on [TOPIC] for [GRADE] [SUBJECT],
+[NUMBER] students.
+
+It must give me usable information about who knows what — not just a winner.
+
+Give me:
+- The rules, in under 60 words, as I would say them
+- [NUMBER] questions covering the whole topic, with answers
+- How every student answers every question, so I am not sampling the confident
+- What I record while it runs, without stopping the game
+- How points work so a team that is behind can still catch up, and nobody is
+  eliminated
+- What I do with what I learned, next lesson
+
+No speed-based scoring — it rewards the fast, not the correct.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Does every student answer every question, or only the loud ones?
+- Can you actually record anything while running it?
 
 ---
 
 ### WA-026 · Create a no-speed review game using mini-whiteboards
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a no-speed review game using mini-whiteboards.
+Everyone answers, you see all thirty at once, nobody is racing.
 
 **COPY FROM HERE**
 
 ```text
-Create a no-speed review game using mini-whiteboards.
+Design a mini-whiteboard review game on [TOPIC] for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TAUGHT_CONTENT: supply verified information; do not leave blank]
-- [BOARD_COUNT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+All students answer every question and hold up on a signal, so nobody is
+rewarded for being fast.
 
-Specific requirements:
-Use simultaneous responses after sufficient thinking time. Score explanation or revision, not the fastest raised board.
+Give me:
+- The signal routine, in the words I use
+- 12 questions with short answers I can read across a room at a glance
+- The answers
+- What I do when I see a wrong answer held up — the exact words, not shaming
+- Two questions designed so the wrong answers tell me something specific
+- How I keep score without making a slower student the reason a team lost
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Tell me which questions to keep if I only get through half.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Are the answers short enough to read at a distance?
+- Does your response to a wrong board avoid singling anyone out?
 
 ---
 
 ### WA-027 · Design a team review game with individual accountability
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design a team review game with individual accountability.
+Teams, but the strong student cannot answer for everyone.
 
 **COPY FROM HERE**
 
 ```text
-Design a team review game with individual accountability.
+Design a team review game on [TOPIC] for [GRADE] [SUBJECT], teams of [NUMBER].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TEAM_SIZE: supply verified information; do not leave blank]
-- [QUESTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Build in a rule that means any team member might have to answer, so the whole
+team has to make sure everyone understands.
 
-Specific requirements:
-Collect an individual response before team discussion. Keep team scoring separate from the teacher's learning evidence.
+Give me:
+- The rules, in under 60 words
+- How the answering student is chosen so it is unpredictable but not
+  frightening
+- [NUMBER] questions with answers, mixed in difficulty
+- Team discussion time before answering, and how long
+- What stops one student from simply telling the others the answer
+- How I handle a team that leaves a member behind
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Nobody is eliminated and no team is out of the running before the end.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Would a struggling student find the selection method frightening?
+- Is there real reason for teams to teach each other?
 
 ---
 
 ### WA-028 · Build a misconception challenge using diagnostic distractors
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a misconception challenge using diagnostic distractors.
+A game where the wrong answers are the whole point.
 
 **COPY FROM HERE**
 
 ```text
-Build a misconception challenge using diagnostic distractors.
+Design a review activity on [TOPIC] for [GRADE] [SUBJECT] built from
+multiple-choice questions where every wrong option is a real misconception.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MISCONCEPTIONS: supply verified information; do not leave blank]
-- [ITEM_COUNT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me 10 questions. For each:
+- The question and four options
+- The correct answer
+- What a student choosing each wrong option is thinking
+- Whether that misconception is common enough to be worth teaching into
 
-Specific requirements:
-Write plausible distractors tied to known errors, then reveal explanations after commitment. Treat choices as hypotheses, not diagnoses.
+No throwaway distractors. If I cannot name the thinking behind an option, it
+should not be there.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me the three misconceptions most worth a follow-up lesson, and what
+that lesson would open with.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Can you name the thinking behind every wrong option?
+- Are these misconceptions your class actually has?
 
 ---
 
 ### WA-029 · Create a low-prep review game with paper question cards
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a low-prep review game with paper question cards.
+Tomorrow morning, scissors, and nothing else.
 
 **COPY FROM HERE**
 
 ```text
-Create a low-prep review game with paper question cards.
+Design a review game on [TOPIC] for [GRADE] [SUBJECT] needing nothing but
+paper I print and cut tonight.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PAPER_LIMIT: supply verified information; do not leave blank]
-- [QUESTION_COUNT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+No devices, no board, no buying anything, no laminating.
 
-Specific requirements:
-Produce cut-apart cards and a separate verified key. Include reusable rules with no equipment beyond the stated supplies.
+Give me:
+- The cards, laid out so I can print and cut them in one pass
+- How many sets I need for [NUMBER] students, and how many students per set
+- The rules, under 50 words, printable on a card students keep
+- How students check answers without me
+- What I do with the sets afterwards so they are reusable
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Tell me exactly how long the printing and cutting will take. If it is more than
+fifteen minutes, simplify it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is the prep honestly under fifteen minutes?
+- Can students check answers without you?
 
 ---
 
 ### WA-030 · Audit a review game for fairness, accuracy and useful teacher data
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a review game for fairness, accuracy and useful teacher data.
+It was fun. You are not sure it taught or told you anything.
 
 **COPY FROM HERE**
 
 ```text
-Audit a review game for fairness, accuracy and useful teacher data.
+Audit this [GRADE] [SUBJECT] review game.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [GAME_RULES: supply verified information; do not leave blank]
-- [ITEMS: supply verified information; do not leave blank]
-- [SCORING: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Whether every student participates, or only the confident ones
+- Whether it rewards speed, luck or volume over knowing the answer
+- Whether a student can be eliminated or publicly wrong, and what that costs
+- What information I actually get about who knows what
+- Whether any question is wrong, ambiguous, or tests something else
 
-Specific requirements:
-Check ambiguity, luck, speed advantage and access. Revise scoring so the resulting teacher data has instructional meaning.
+Then give me the single change that would make it most useful to me as
+assessment, without making it less enjoyable.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+GAME:
+[PASTE THE RULES AND QUESTIONS]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Check any question it flagged as wrong, yourself.
+- Are you willing to lose some of the fun for the information?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Homework sets
 
 ---
 
 ### WA-031 · Create a short homework set with a clear purpose
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a short homework set with a clear purpose.
+Homework that is worth the argument it causes at home.
 
 **COPY FROM HERE**
 
 ```text
-Create a short homework set with a clear purpose.
+Create a homework set on [TOPIC] for [GRADE] [SUBJECT], designed to take
+[MINUTES] minutes.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [HOMEWORK_PURPOSE: supply verified information; do not leave blank]
-- [TIME_BUDGET: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+State the purpose first — practice, retrieval, or preparation for next lesson —
+and build only for that.
 
-Specific requirements:
-Write a short assignment with estimated completion range and a stop rule. State what learners should do when stuck without adult help.
+Give me:
+- The purpose in one sentence, printed at the top for the family to read
+- The items, no more than the time allows
+- The answer key
+- The one item I mark first to learn the most
+- What a student does if they get stuck and nobody at home can help
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Nothing that needs the internet, a printer, an adult who knows the subject, or
+materials a household may not have.
+
+If [MINUTES] is not enough for the purpose, tell me rather than overfilling it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Time it honestly. Homework always takes longer than planned.
+- Could a student with no help at home complete this?
 
 ---
 
 ### WA-032 · Build homework that mixes retrieval and current learning
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build homework that mixes retrieval and current learning.
+Keeping the old alive while practising the new.
 
 **COPY FROM HERE**
 
 ```text
-Build homework that mixes retrieval and current learning.
+Create a homework set for [GRADE] [SUBJECT] mixing:
+- Today's learning: [TOPIC]
+- Something from last month: [TOPIC]
+- Something from last term: [TOPIC]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OLD_SKILLS: supply verified information; do not leave blank]
-- [CURRENT_SKILL: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Roughly half on today's work, half on the older material, interleaved rather
+than in sections.
 
-Specific requirements:
-Mix a small retrieval set with current practice and identify each purpose in the teacher key, not in strategy-revealing student labels.
+Give me:
+- The items and answer key
+- Why each older item is worth keeping alive
+- What it tells me if a student gets today's work right and last term's wrong
+- A version for next week with the same structure, so I can see the pattern
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Total time: [MINUTES]. Do not exceed it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is the older material genuinely taught to this class?
+- Does the mix fit the time?
 
 ---
 
 ### WA-033 · Design homework with a meaningful no-internet option
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design homework with a meaningful no-internet option.
+Not every student has a device or a connection, and that is not their fault.
 
 **COPY FROM HERE**
 
 ```text
-Design homework with a meaningful no-internet option.
+Create a homework task on [TOPIC] for [GRADE] [SUBJECT] in two versions of
+equal value: one using a device, one entirely on paper.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ONLINE_ASSIGNMENT: supply verified information; do not leave blank]
-- [OFFLINE_RESOURCES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+The paper version must not be the lesser option. Same learning, same effort,
+same standing.
 
-Specific requirements:
-Create an equivalent offline route using available materials. Keep learning demand comparable and avoid requiring printing at home.
+Give me:
+- Both versions
+- What each produces, so I can mark them the same way
+- How a student chooses without announcing anything about their home
+- The answer key for both
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not put the paper version in brackets as an alternative. Print both as equal
+choices.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Would a student feel marked out by choosing paper?
+- Are the two genuinely equal in demand?
 
 ---
 
 ### WA-034 · Create a family-readable homework guide without requiring family teaching
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades K-2, 3-5*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a family-readable homework guide without requiring family teaching.
+Families want to help, and should not have to teach the method.
 
 **COPY FROM HERE**
 
 ```text
-Create a family-readable homework guide without requiring family teaching.
+Write a short note to families explaining tonight's [GRADE] [SUBJECT] homework
+on [TOPIC].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [HOMEWORK_TASK: supply verified information; do not leave blank]
-- [FAMILY_LANGUAGE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+It must help without asking the family to teach anything.
 
-Specific requirements:
-Explain the purpose and logistics in plain language. Tell families encouragement is enough; do not require them to teach new content.
+Include:
+- What the homework is for, in two sentences and no jargon
+- What "helping" looks like here — the questions to ask rather than the answers
+  to give
+- What to do if the student is stuck for more than [MINUTES] minutes: stop,
+  write a note, and it is fine
+- One line making clear that not finishing is information for me, not a failure
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Under 150 words. Written for any adult, at any reading level, in any home
+situation. Do not assume a parent, a quiet room, or subject knowledge.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does it assume a parent rather than any adult?
+- Is "stop after X minutes" permission clear enough to be believed?
 
 ---
 
 ### WA-035 · Audit a homework set for workload, access and answer-key accuracy
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a homework set for workload, access and answer-key accuracy.
+Before thirty families spend an evening on it.
 
 **COPY FROM HERE**
 
 ```text
-Audit a homework set for workload, access and answer-key accuracy.
+Audit this [GRADE] [SUBJECT] homework set.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [HOMEWORK_DRAFT: supply verified information; do not leave blank]
-- [TIME_LIMIT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- How long it will realistically take a middling student, versus what I claimed
+- Anything needing internet, a printer, materials, or adult subject knowledge
+- Anything a student who was absent could not do
+- Any item where the answer key is wrong or the question is ambiguous — quote it
+- Whether the whole set has a purpose, or is just volume
 
-Specific requirements:
-Check access assumptions, length and every answer. Offer a shorter essential set without hiding which learning evidence is reduced.
+Then tell me what to cut so it fits [MINUTES] minutes, and what is lost.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Check every answer.
+
+HOMEWORK:
+[PASTE IT WITH THE KEY]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Verify any answer it flagged, yourself.
+- Is the realistic timing closer to the truth than yours was?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Project briefs
 
 ---
 
 ### WA-036 · Write a student-ready project brief from a supplied objective
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a student-ready project brief from a supplied objective.
+A brief students can follow without asking you what it means.
 
 **COPY FROM HERE**
 
 ```text
-Write a student-ready project brief from a supplied objective.
+Write a project brief for [GRADE] [SUBJECT], to run over [TIME].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBJECTIVE: supply verified information; do not leave blank]
-- [DELIVERABLE: supply verified information; do not leave blank]
-- [DEADLINE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Objective: [WHAT STUDENTS SHOULD BE ABLE TO DO]
 
-Specific requirements:
-Write a student-facing brief with product, criteria, materials and submission route. Refer to the planning chapter for teacher sequencing.
+Write it for students, not for me. Include:
+- What they are making, in one sentence
+- Why it is worth making
+- What it must contain — the parts that are about the learning, listed first
+- What is up to them
+- Deadlines, with what is due at each
+- How it will be judged, in the words I will actually use
+- The three questions students will ask on day one, answered in advance
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Keep it to one page. If the objective is too large for [TIME], say so.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could a student start without asking you a question?
+- Is the learning listed before the presentation?
 
 ---
 
 ### WA-037 · Create project milestones, checkpoints and submission requirements
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create project milestones, checkpoints and submission requirements.
+So you find out in week two, not the night before it is due.
 
 **COPY FROM HERE**
 
 ```text
-Create project milestones, checkpoints and submission requirements.
+Break this [TIME] [GRADE] [SUBJECT] project into milestones.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PROJECT_BRIEF: supply verified information; do not leave blank]
-- [MILESTONES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- A milestone per [WEEK/LESSON], each producing something I can look at
+- What "on track" and "behind" look like at each
+- The specific intervention for a group behind at each point
+- The checkpoint that catches a project heading for failure earliest
+- What students see, so they can self-monitor without me chasing them
+- The final submission requirements, listed as a checklist students tick
 
-Specific requirements:
-Create a student checklist with due dates only when supplied. Separate draft feedback, revision and final submission requirements.
+Each checkpoint must be checkable in under two minutes per student or group.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+PROJECT:
+[PASTE THE BRIEF]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Two minutes per group — is that honest for your class size?
+- Is the first checkpoint early enough to rescue a bad start?
 
 ---
 
 ### WA-038 · Design a choice-based project with equivalent learning demands
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design a choice-based project with equivalent learning demands.
+Real choice, without one option being obviously the easy one.
 
 **COPY FROM HERE**
 
 ```text
-Design a choice-based project with equivalent learning demands.
+Design [NUMBER] project options on [TOPIC] for [GRADE] [SUBJECT], all evidencing
+the same objective: [OBJECTIVE]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [COMMON_CRITERIA: supply verified information; do not leave blank]
-- [CHOICE_OPTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+They must be genuinely equivalent in demand. Not one written, one poster, one
+video where the poster is clearly least work.
 
-Specific requirements:
-Compare options for time, resources and intellectual demand. Repair choices that buy higher scores through costly materials.
+For each option give me:
+- What the student produces
+- How the objective is evidenced through it
+- The time it honestly takes
+- What makes it hard — the thinking, not the format
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me which option students will pick expecting it to be easier, and
+whether they are right. If they are, fix that option.
+
+None should need resources a student may not have at home.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Which would you pick if you wanted to do least? Fix that one.
+- Does any option need equipment from home?
 
 ---
 
 ### WA-039 · Build a group-project brief with individual evidence of mastery
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a group-project brief with individual evidence of mastery.
+A group grade that does not hide who learned what.
 
 **COPY FROM HERE**
 
 ```text
-Build a group-project brief with individual evidence of mastery.
+Write a group project brief for [GRADE] [SUBJECT] on [TOPIC], groups of
+[NUMBER], over [TIME].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [GROUP_BRIEF: supply verified information; do not leave blank]
-- [INDIVIDUAL_EVIDENCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Every student must leave individual evidence of the objective, separate from the
+group product.
 
-Specific requirements:
-Add an individual explanation and role record to the student brief. Do not allocate marks solely from peer popularity ratings.
+Give me:
+- The brief as students receive it
+- The group product
+- The individual component each student produces, which cannot be done by
+  someone else on their behalf
+- How the two are marked separately
+- What I do about a group where one student did most of the work
+- What happens when a group member is absent for a week
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Tell me honestly whether a passenger could pass. If yes, change the design.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could a passenger pass? That is the whole test of this brief.
+- Is the individual component quick enough to mark for every student?
 
 ---
 
 ### WA-040 · Audit a project brief for clarity, feasibility and privacy
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a project brief for clarity, feasibility and privacy.
+Before you hand it out and spend three weeks answering questions.
 
 **COPY FROM HERE**
 
 ```text
-Audit a project brief for clarity, feasibility and privacy.
+Audit this [GRADE] [SUBJECT] project brief.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PROJECT_BRIEF: supply verified information; do not leave blank]
-- [SHARING_RULES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Anything a student could reasonably misread, quoted exactly
+- Whether it fits the time given, honestly
+- Anything requiring money, internet, transport, adult help, or equipment a
+  household may not have
+- Whether the marking rewards the learning or the presentation
+- Anything that would put a student's name, image, work or personal details in
+  front of an audience, and what needs consent first
+- The three questions students will ask on day one that the brief does not answer
 
-Specific requirements:
-Audit feasibility, copyright, public audience and accessibility. Return exact wording corrections plus unresolved authorization items.
+Give me the single change that would help most.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+I will check anything involving consent or sharing against my school's policy.
+
+BRIEF:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
+- Check consent and sharing against your school's policy, not this draft.
+- Are the day-one questions ones you can answer now?
