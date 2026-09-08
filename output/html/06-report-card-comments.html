@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 6 — Report Card Comments</h1><p class="lede">30 prompts</p><p>Twenty-eight comments in one sitting is the job nobody plans for and everybody dreads. These prompts do the drafting so you can do the judging — every comment tied to something you actually recorded, with one next step the student can act on.</p>
 <h2>What's in here</h2>
@@ -139,7 +165,7 @@ blockquote strong{color:var(--warn)}
 <p>Do not let it invent a strength to balance the structure. A manufactured compliment is the fastest way for a family to stop trusting the rest.</p>
 <p>Vary the openings. Twenty-eight comments that all begin the same way are recognisable as generated, and parents compare.</p>
 <h2>Comment banks</h2>
-<article class="card"><div class="head"><span class="pid">RC-001</span><h3>Build an evidence-safe comment bank</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-001"><div class="head"><span class="pid">RC-001</span><h3>Build an evidence-safe comment bank</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Build it once in January and use it every term after.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a report comment bank for [GRADE] [SUBJECT].
@@ -163,7 +189,7 @@ Rules:
 Then tell me which band is hardest to write honestly, and why.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could any comment be sent without filling the evidence blank? Tighten it.</li><li>Do the openings genuinely differ?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-004</span><h3>Create comment starters for four levels of demonstrated mastery</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-004"><div class="head"><span class="pid">RC-004</span><h3>Create comment starters for four levels of demonstrated mastery</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Openings that describe the learning rather than rank the child.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write comment openings for [GRADE] [SUBJECT] at four levels of demonstrated
@@ -184,7 +210,7 @@ Then tell me which openings would sound wrong if a family read four of them in
 a row from different teachers.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Would you be comfortable if a family compared four of these?</li><li>Any fixed-ability words left?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-005</span><h3>Build modular strength, evidence and next-step sentence parts</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-005"><div class="head"><span class="pid">RC-005</span><h3>Build modular strength, evidence and next-step sentence parts</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Mix and match, so thirty comments do not read as one.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build modular comment parts for [GRADE] [SUBJECT] that I can combine.
@@ -206,7 +232,7 @@ Rules:
 Then tell me which combinations sound wrong together, so I avoid them at 10pm.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Assemble three at random. Do they read naturally?</li><li>Do any parts carry a claim you have not verified?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-006</span><h3>Create a comment bank that avoids fixed-ability labels</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-006"><div class="head"><span class="pid">RC-006</span><h3>Create a comment bank that avoids fixed-ability labels</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Language that describes this term, not the child's ceiling.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a comment bank for [GRADE] [SUBJECT] that describes learning as it stands
@@ -226,7 +252,7 @@ Give me:
 That last one is the point of this prompt. Do not avoid it by being vague.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the far-behind comment honest, or has it gone vague to be kind?</li><li>Check your own habitual phrases against the list of three.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-007</span><h3>Write concise comments within a strict character limit</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-007"><div class="head"><span class="pid">RC-007</span><h3>Write concise comments within a strict character limit</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The reporting system allows 250 characters and no argument.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write [GRADE] [SUBJECT] report comments within [NUMBER] characters including
@@ -248,7 +274,7 @@ If the evidence genuinely cannot be said in [NUMBER] characters without becoming
 meaningless, say so rather than producing something empty.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify the character counts yourself. They are often wrong.</li><li>Did the next step survive?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-008</span><h3>Create neutral pronoun variants without changing the evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-008"><div class="head"><span class="pid">RC-008</span><h3>Create neutral pronoun variants without changing the evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>One comment, correct for any student, no rewriting at 11pm.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite these [GRADE] [SUBJECT] comments so pronouns are not baked in.
@@ -271,7 +297,7 @@ COMMENTS:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Read one aloud. Does the name repeat too often?</li><li>Is the evidence identical across versions?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-009</span><h3>Build a comment bank with visible placeholders for supporting evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-009"><div class="head"><span class="pid">RC-009</span><h3>Build a comment bank with visible placeholders for supporting evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>So the blank cannot be skipped when you are tired.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a [GRADE] [SUBJECT] comment bank where the evidence blanks are impossible
@@ -293,7 +319,7 @@ Do not fill any placeholder with a plausible example. That is exactly how an
 invented detail ends up in a permanent record.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Search the final file for <code>[[</code>. Every one must be gone.</li><li>Has any placeholder been helpfully pre-filled?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-010</span><h3>Audit a comment bank for repetition, vagueness and invented claims</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-010"><div class="head"><span class="pid">RC-010</span><h3>Audit a comment bank for repetition, vagueness and invented claims</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before it goes into use for three years.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] comment bank.
@@ -316,7 +342,7 @@ BANK:
 <p class="lbl">Before you send it</p>
 <ul><li>Delete what it said to delete. A bank of 30 good comments beats 60 mixed.</li><li>Is the vaguest phrase one you use often?</li></ul>
 <h2>Strengths and next steps</h2></article>
-<article class="card"><div class="head"><span class="pid">RC-002</span><h3>Turn evidence into a balanced report comment</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-002"><div class="head"><span class="pid">RC-002</span><h3>Turn evidence into a balanced report comment</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The core shape: what they can do, what comes next, both evidenced.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a report comment for a [GRADE] [SUBJECT] student.
@@ -340,7 +366,7 @@ Rules:
 Give me the comment, plus a note on which clause rests on the thinnest evidence.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Trace every clause to your own records.</li><li>If it said the evidence shows no strength, do not add one.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-011</span><h3>Write a strength statement tied to a specific learning objective</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-011"><div class="head"><span class="pid">RC-011</span><h3>Write a strength statement tied to a specific learning objective</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>"Doing well" means nothing. This says in what.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a strength statement for a [GRADE] [SUBJECT] student.
@@ -362,7 +388,7 @@ Do not broaden the claim beyond my evidence. One good piece of work is not a
 consistent pattern, and should not be described as one.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Has one instance been described as a pattern?</li><li>Would a family understand the objective as written?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-012</span><h3>Convert an error pattern into one achievable next step</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-012"><div class="head"><span class="pid">RC-012</span><h3>Convert an error pattern into one achievable next step</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>One next step. Not four, and not a wish.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn this [GRADE] [SUBJECT] error pattern into a single next step:
@@ -385,7 +411,7 @@ Do not write &quot;should continue to practise&quot; or &quot;needs to focus mor
 not next steps. If the pattern needs teaching rather than practice, say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could the student start this tomorrow, alone?</li><li>Is it one thing?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-013</span><h3>Build a balanced comment from assessment and classroom evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-013"><div class="head"><span class="pid">RC-013</span><h3>Build a balanced comment from assessment and classroom evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The test score and what you see daily do not agree.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a report comment combining assessment and classroom evidence for a
@@ -406,7 +432,7 @@ If the two sources disagree strongly enough that I should gather more evidence
 before reporting, tell me that instead of writing the comment.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do you agree with which evidence it weighted?</li><li>Can you answer the family question it prepared you for?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-014</span><h3>Write a comment when evidence is limited or inconsistent</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-014"><div class="head"><span class="pid">RC-014</span><h3>Write a comment when evidence is limited or inconsistent</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Long absence, arrived late in the term, or the evidence simply is not there.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] [SUBJECT] report comment where I have limited evidence.
@@ -427,7 +453,7 @@ without sounding defensive.
 Tell me if the honest answer is that I cannot write a meaningful comment yet.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Has thin evidence quietly become a judgement?</li><li>Is the limitation stated plainly?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-015</span><h3>Create a learner-friendly next step that families can understand</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-015"><div class="head"><span class="pid">RC-015</span><h3>Create a learner-friendly next step that families can understand</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The next step should mean something to the child it is about.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this next step so a [GRADE] student and their family both understand it:
@@ -450,7 +476,7 @@ Rules:
 Flag anything in the original the student could not act on alone.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the family suggestion require any teaching? Cut it if so.</li><li>Is the demand unchanged?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-016</span><h3>Add an instructional strategy without promising a future result</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-016"><div class="head"><span class="pid">RC-016</span><h3>Add an instructional strategy without promising a future result</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Saying what you will do, without guaranteeing what will happen.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Add to this [GRADE] [SUBJECT] comment a line about what I will do in class:
@@ -471,7 +497,7 @@ safest to put in a permanent record.
 Then flag any sentence in my original comment that already promises a result.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Will you actually do it? It is now on a record.</li><li>Any promises left in the original?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-017</span><h3>Audit a report comment using a sentence-by-sentence fact trace</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-017"><div class="head"><span class="pid">RC-017</span><h3>Audit a report comment using a sentence-by-sentence fact trace</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The last check before it becomes permanent.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Trace this [GRADE] [SUBJECT] report comment against my evidence.
@@ -495,7 +521,7 @@ Do not accept a sentence as supported because it sounds reasonable.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Cut what it said to cut.</li><li>Anything unsupported goes, however true it feels.</li></ul>
 <h2>Subject-specific comments</h2></article>
-<article class="card"><div class="head"><span class="pid">RC-018</span><h3>Write a mathematics comment about concepts, procedures and reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="RC-018"><div class="head"><span class="pid">RC-018</span><h3>Write a mathematics comment about concepts, procedures and reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>"Good at maths" hides which of the three is actually strong.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] mathematics report comment.
@@ -519,7 +545,7 @@ If my evidence only covers one of the three, say so rather than commenting on
 all three.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does your evidence actually cover what the comment claims?</li><li>Would a family understand the distinction as written?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-019</span><h3>Write a science comment about investigation, evidence and explanation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="RC-019"><div class="head"><span class="pid">RC-019</span><h3>Write a science comment about investigation, evidence and explanation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Practical work and written explanation are different skills.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] science report comment.
@@ -541,7 +567,7 @@ Give me:
 Do not credit understanding from a neat write-up alone.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are you crediting understanding, or presentation?</li><li>Is the next step more than "write more"?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-020</span><h3>Write an English language arts comment about reading and writing evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="RC-020"><div class="head"><span class="pid">RC-020</span><h3>Write an English language arts comment about reading and writing evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Reading and writing are separate, and so is talking about them.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] English report comment.
@@ -565,7 +591,7 @@ Do not describe a student as a &quot;reluctant&quot; or &quot;confident&quot; re
 Those are dispositions, not evidence.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Has technical accuracy swamped everything else?</li><li>Any disposition language left?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-021</span><h3>Write a social studies comment about sources, claims and perspective</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="RC-021"><div class="head"><span class="pid">RC-021</span><h3>Write a social studies comment about sources, claims and perspective</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Content recall and historical thinking are not the same achievement.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] social studies report comment.
@@ -587,7 +613,7 @@ Where the subject matter is contested or sensitive, keep the comment about the
 student&#x27;s reasoning, not about the positions they took.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is it commenting on reasoning, or on views?</li><li>Does your evidence cover source work at all?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-022</span><h3>Write an arts comment about process, technique and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="RC-022"><div class="head"><span class="pid">RC-022</span><h3>Write an arts comment about process, technique and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The finished piece is not the whole of the learning.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] [ART FORM] report comment.
@@ -609,7 +635,7 @@ Do not comment on talent, flair, or natural ability. Comment on what was done
 and what was learned.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the developing-technique version read as consolation?</li><li>Any talent language left?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-023</span><h3>Write a physical education comment using observable skill evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="RC-023"><div class="head"><span class="pid">RC-023</span><h3>Write a physical education comment using observable skill evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Comment on the learning, not on the body.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [GRADE] physical education report comment.
@@ -632,7 +658,7 @@ Flag any phrase in this that could read as a comment on the child rather than
 the learning.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Read it as the child. Is any of it about their body?</li><li>Would it work for a student with a restriction?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-024</span><h3>Audit subject-specific terminology for accuracy and family clarity</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-024"><div class="head"><span class="pid">RC-024</span><h3>Audit subject-specific terminology for accuracy and family clarity</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The words are correct and the family has no idea what they mean.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit the subject terminology in these [GRADE] [SUBJECT] comments.
@@ -654,7 +680,7 @@ COMMENTS:
 <p class="lbl">Before you send it</p>
 <ul><li>The "sounds more serious than intended" flag matters most. Act on it.</li><li>Is your terminology consistent across the whole set?</li></ul>
 <h2>Bulk drafts from evidence</h2></article>
-<article class="card"><div class="head"><span class="pid">RC-025</span><h3>Create distinct comment drafts from a fictional evidence table</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-025"><div class="head"><span class="pid">RC-025</span><h3>Create distinct comment drafts from a fictional evidence table</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Testing your evidence format before you use it on a real class.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a worked example of bulk comment drafting for [GRADE] [SUBJECT].
@@ -677,7 +703,7 @@ This is a template test, not real reporting. Do not present the fictional
 students as real.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the recommended evidence format match what you can realistically collect?</li><li>Are the six genuinely different in shape?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-026</span><h3>Generate bulk comments without mixing one learner&#x27;s evidence with another</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-026"><div class="head"><span class="pid">RC-026</span><h3>Generate bulk comments without mixing one learner&#x27;s evidence with another</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Thirty comments in one pass, and nothing may cross between them.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Draft report comments from this evidence table for [GRADE] [SUBJECT].
@@ -698,7 +724,7 @@ Then flag any two comments similar enough that a family comparing them would
 notice.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check the used-facts list against your table, row by row.</li><li>This is where evidence leaks between students. Do not skip this check.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-027</span><h3>Vary sentence structure while preserving every supplied fact</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-027"><div class="head"><span class="pid">RC-027</span><h3>Vary sentence structure while preserving every supplied fact</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Thirty accurate comments that do not read as one comment thirty times.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite these [GRADE] [SUBJECT] comments so they vary in structure, without
@@ -720,7 +746,7 @@ COMMENTS:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Spot-check three rewrites against the originals for changed emphasis.</li><li>Do the openings genuinely differ?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-028</span><h3>Audit a bulk comment set for duplicates, contradictions and evidence leakage</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-028"><div class="head"><span class="pid">RC-028</span><h3>Audit a bulk comment set for duplicates, contradictions and evidence leakage</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The final pass before thirty comments go on thirty permanent records.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this set of [GRADE] [SUBJECT] report comments against the evidence table.
@@ -742,7 +768,7 @@ COMMENTS: [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify every leakage claim against your table yourself.</li><li>Search for unfilled placeholders one more time.</li></ul>
 <h2>Tone and rewriting</h2></article>
-<article class="card"><div class="head"><span class="pid">RC-003</span><h3>Rewrite a comment for clarity and fairness</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-003"><div class="head"><span class="pid">RC-003</span><h3>Rewrite a comment for clarity and fairness</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>You know what you mean. This makes it survivable for a family to read.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this [GRADE] [SUBJECT] report comment so it is honest but not
@@ -765,7 +791,7 @@ COMMENT:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are all the facts still present in the version you pick?</li><li>Read it as the student. Would you keep going after reading it?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-029</span><h3>Replace harsh or vague judgments with verified learning evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-029"><div class="head"><span class="pid">RC-029</span><h3>Replace harsh or vague judgments with verified learning evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The comment says something about the child that the evidence does not.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this [GRADE] [SUBJECT] comment, replacing judgement with evidence.
@@ -788,7 +814,7 @@ unsupported claim is still an unsupported claim on a permanent record.
 Then tell me what the comment says once every unsupported claim is gone.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>If little is left, that is the finding. Gather evidence rather than rewording.</li><li>Any attitude language surviving?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">RC-030</span><h3>Shorten a report comment without removing the material concern</h3></div><p class="meta">All grades</p>
+<article class="card" id="RC-030"><div class="head"><span class="pid">RC-030</span><h3>Shorten a report comment without removing the material concern</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Over the limit, and the concern is the part that must not go.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Shorten this [GRADE] [SUBJECT] comment to [NUMBER] characters or [NUMBER] words.

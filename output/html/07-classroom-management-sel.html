@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 7 — Classroom Management and SEL</h1><p class="lede">25 prompts</p><p>Most behaviour problems are routine problems wearing a disguise. These prompts work on the structures — how a transition runs, what you say in the first ten seconds, how a conversation gets repaired afterwards — rather than on the student.</p>
 <h2>What's in here</h2>
@@ -140,7 +166,7 @@ blockquote strong{color:var(--warn)}
 <p>A restorative conversation is not a forced apology. If a draft demands one, change it — several prompts rule it out explicitly.</p>
 <p>Keep in-the-moment scripts under fifteen words. Anything longer becomes an audience.</p>
 <h2>Routines and transitions</h2>
-<article class="card"><div class="head"><span class="pid">CM-001</span><h3>Design and teach a classroom routine</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-001"><div class="head"><span class="pid">CM-001</span><h3>Design and teach a classroom routine</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The same four minutes disappear every day at the same point.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a routine for [WHAT — entry, packing up, handing work in, moving to the
@@ -163,7 +189,7 @@ work because it is clear, not because it is incentivised.
 Keep it to steps a [GRADE] student can hold in their head.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can a student hold all the steps at once? Cut one if not.</li><li>Would these words sound like you saying them?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-003</span><h3>Teach an efficient entry routine with an immediate learning start</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-003"><div class="head"><span class="pid">CM-003</span><h3>Teach an efficient entry routine with an immediate learning start</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The first five minutes are the ones you never get back.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an entry routine for [GRADE] [SUBJECT] where learning starts before I
@@ -185,7 +211,7 @@ who missed the last lesson.
 Tell me what to change if my room is entered through a single narrow door.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a student who missed yesterday still start?</li><li>Does the late arrival keep their dignity?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-004</span><h3>Create a calm transition between whole-group and independent work</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-004"><div class="head"><span class="pid">CM-004</span><h3>Create a calm transition between whole-group and independent work</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The moment the noise doubles and half the class stops working.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design the transition from whole-group teaching to independent work in [GRADE]
@@ -206,7 +232,7 @@ accordingly.
 Then tell me the single most common reason this transition fails.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is each instruction one action?</li><li>Are materials handed out after the instructions, not during?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-005</span><h3>Build a materials routine that reduces waiting and lost equipment</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
+<article class="card" id="CM-005"><div class="head"><span class="pid">CM-005</span><h3>Build a materials routine that reduces waiting and lost equipment</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
 <p class="lbl">When you need this</p>
 <p>Handing out and collecting eats more time than anyone admits.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a materials routine for [GRADE] [SUBJECT].
@@ -227,7 +253,7 @@ Do not build a system that requires students to pay, replace, or be publicly
 recorded as having lost something.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the no-pen student handled quietly?</li><li>Do the jobs rotate, or become a privilege?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-006</span><h3>Plan a dismissal routine that protects safety and learning time</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-006"><div class="head"><span class="pid">CM-006</span><h3>Plan a dismissal routine that protects safety and learning time</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The last four minutes, which are also the least safe four minutes.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a dismissal routine for [GRADE].
@@ -248,7 +274,7 @@ my school&#x27;s own procedures.
 Do not use leaving early as a reward, or leaving last as a consequence.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check supervision arrangements against your school's policy.</li><li>Would holding one student back be noticed by the class?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-007</span><h3>Audit a routine using timing, participation and independence evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-007"><div class="head"><span class="pid">CM-007</span><h3>Audit a routine using timing, participation and independence evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The routine exists. You are not sure it is earning its place.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] routine: [DESCRIBE IT]
@@ -271,7 +297,7 @@ Be blunt about a routine that has become habit rather than function.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Time it honestly next lesson before deciding.</li><li>Does it work when you are tired? That is the real test.</li></ul>
 <h2>Behaviour reset support</h2></article>
-<article class="card"><div class="head"><span class="pid">CM-008</span><h3>Create a brief private behaviour-reset conversation</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-008"><div class="head"><span class="pid">CM-008</span><h3>Create a brief private behaviour-reset conversation</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Something needs saying, and it must not become a performance.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare a brief private conversation with a [GRADE] student about a classroom
@@ -297,7 +323,7 @@ If what I described suggests harm, danger or a safeguarding concern, stop and
 tell me to follow my school&#x27;s process instead.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the in-the-moment line short enough to say without a pause?</li><li>Is anything here about the child rather than what they did?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-009</span><h3>Write neutral redirection language for a recurring disruption</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-009"><div class="head"><span class="pid">CM-009</span><h3>Write neutral redirection language for a recurring disruption</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The twelfth time today, and your tone is starting to show.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write redirection language for this recurring [GRADE] classroom behaviour:
@@ -321,7 +347,7 @@ Then tell me what the behaviour might be communicating that redirection cannot
 address.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Say them aloud. Any sarcasm you did not intend?</li><li>Do they name the wanted action rather than the problem?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-010</span><h3>Plan a re-entry routine after a learner leaves the classroom</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-010"><div class="head"><span class="pid">CM-010</span><h3>Plan a re-entry routine after a learner leaves the classroom</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>They come back, and how that goes decides the rest of the lesson.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan how a [GRADE] student returns to the classroom after leaving it.
@@ -344,7 +370,7 @@ I will follow my school&#x27;s procedures for anything involving where a student
 and who supervised them.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does re-entry stay separate from the conversation?</li><li>Would the class notice anything?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-011</span><h3>Create a reset menu that preserves dignity and instructional access</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-011"><div class="head"><span class="pid">CM-011</span><h3>Create a reset menu that preserves dignity and instructional access</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Options a student can take before things escalate.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a short menu of reset options for [GRADE] students who need a moment.
@@ -369,7 +395,7 @@ Then tell me which option is most likely to be misused, and how to handle that
 without withdrawing it from everyone.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does any option cost the student the lesson?</li><li>Can a student take one privately?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-012</span><h3>Audit a response plan for escalation, shame and inconsistent expectations</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-012"><div class="head"><span class="pid">CM-012</span><h3>Audit a response plan for escalation, shame and inconsistent expectations</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before the plan is in place for a term.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] behaviour response plan: [PASTE OR DESCRIBE IT]
@@ -391,7 +417,7 @@ Be direct about anything that shames a child, whatever it is called.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is anything public that should be private?</li><li>Is there a genuine route back?</li></ul>
 <h2>Restorative conversations</h2></article>
-<article class="card"><div class="head"><span class="pid">CM-002</span><h3>Prepare a restorative conversation</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-002"><div class="head"><span class="pid">CM-002</span><h3>Prepare a restorative conversation</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Something happened between students, and it needs repair rather than a verdict.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare a restorative conversation between [GRADE] students.
@@ -416,7 +442,7 @@ If what I described involves harm, abuse, bullying or immediate danger, stop and
 tell me to follow my school&#x27;s safeguarding process instead of continuing.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>If it flagged safeguarding, stop and use your school's process.</li><li>Is any question really an accusation?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-013</span><h3>Create questions that explore impact, needs and possible repair</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="CM-013"><div class="head"><span class="pid">CM-013</span><h3>Create questions that explore impact, needs and possible repair</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Questions that open something rather than extract a confession.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write restorative questions for a [GRADE] situation: [DESCRIBE IT NEUTRALLY]
@@ -440,7 +466,7 @@ Then tell me:
 - Which question I should skip if the student is not ready</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Any "why did you" left?</li><li>Could an embarrassed student answer these?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-014</span><h3>Build a voluntary repair agreement with a scheduled follow-up</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="CM-014"><div class="head"><span class="pid">CM-014</span><h3>Build a voluntary repair agreement with a scheduled follow-up</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Something agreed, that both students actually agreed to.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a repair agreement after a restorative conversation between [GRADE]
@@ -466,7 +492,7 @@ If either student was not genuinely willing, say so and tell me the agreement
 should not be written.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Was every item genuinely offered, not extracted?</li><li>Is there an end date?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-015</span><h3>Audit a restorative script for coercion, blame and safeguarding limits</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-015"><div class="head"><span class="pid">CM-015</span><h3>Audit a restorative script for coercion, blame and safeguarding limits</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Restorative language can carry coercion inside it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this restorative script or plan: [PASTE IT]
@@ -490,7 +516,7 @@ worse than no script.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Act on the power-imbalance flag before running the conversation.</li><li>Where it says stop being yours to handle — take that to your school.</li></ul>
 <h2>Social-emotional learning</h2></article>
-<article class="card"><div class="head"><span class="pid">CM-016</span><h3>Create an age-appropriate lesson on naming and managing emotions</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
+<article class="card" id="CM-016"><div class="head"><span class="pid">CM-016</span><h3>Create an age-appropriate lesson on naming and managing emotions</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
 <p class="lbl">When you need this</p>
 <p>Teaching the vocabulary before it is needed in an argument.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] lesson on naming and managing emotions.
@@ -514,7 +540,7 @@ If any part of what I have asked for belongs with a counsellor rather than a
 teacher, say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is any student required to disclose anything?</li><li>Is the vocabulary everyday, not clinical?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-017</span><h3>Teach a practical strategy for pausing before responding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="CM-017"><div class="head"><span class="pid">CM-017</span><h3>Teach a practical strategy for pausing before responding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>One strategy, taught well enough to be used under pressure.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Teach [GRADE] students one strategy for pausing before responding.
@@ -535,7 +561,7 @@ Rules:
 Then tell me what this strategy cannot do, so I do not expect too much of it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can a student use it without anyone noticing?</li><li>Is "why it works" believable to a student, or a lecture?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-018</span><h3>Build an empathy activity without requiring personal disclosure</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="CM-018"><div class="head"><span class="pid">CM-018</span><h3>Build an empathy activity without requiring personal disclosure</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Empathy work that does not turn into an exercise in exposure.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [MINUTES]-minute [GRADE] empathy activity.
@@ -561,7 +587,7 @@ Then tell me what could go wrong with this activity in a class where I do not
 know everyone&#x27;s circumstances.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a scenario be someone's actual life? Change it if so.</li><li>Do you know what to do if a student discloses?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-019</span><h3>Audit an SEL activity for privacy, culture and clinical overreach</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-019"><div class="head"><span class="pid">CM-019</span><h3>Audit an SEL activity for privacy, culture and clinical overreach</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>SEL work goes wrong quietly, and usually with good intentions.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] SEL activity: [PASTE OR DESCRIBE IT]
@@ -583,7 +609,7 @@ Be direct. Good intentions are not the standard here.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>If it says this is not yours to run, take that seriously.</li><li>Can a student opt out invisibly?</li></ul>
 <h2>Morning meetings</h2></article>
-<article class="card"><div class="head"><span class="pid">CM-020</span><h3>Plan a 10-minute morning meeting with a clear community goal</h3></div><p class="meta">Grades K-2, 3-5</p>
+<article class="card" id="CM-020"><div class="head"><span class="pid">CM-020</span><h3>Plan a 10-minute morning meeting with a clear community goal</h3></div><p class="meta">Grades K-2, 3-5</p>
 <p class="lbl">When you need this</p>
 <p>Ten minutes that set the day, rather than filling it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a 10-minute morning meeting for [GRADE].
@@ -605,7 +631,7 @@ Rules:
 Then tell me what to cut when the meeting has to be six minutes.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does any prompt touch home, money, or family?</li><li>Can a silent student take part?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-021</span><h3>Create inclusive check-in options that do not force disclosure</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-021"><div class="head"><span class="pid">CM-021</span><h3>Create inclusive check-in options that do not force disclosure</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Checking in without requiring anyone to perform being fine.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design check-in options for a [GRADE] class that do not require disclosure.
@@ -627,7 +653,7 @@ Rules:
 Then tell me what a check-in cannot tell me, so I do not read too much into it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is opting out genuinely invisible?</li><li>What are you doing with what you notice? Decide before you start.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-022</span><h3>Build a weekly morning-meeting sequence without repetitive prompts</h3></div><p class="meta">Grades K-2, 3-5</p>
+<article class="card" id="CM-022"><div class="head"><span class="pid">CM-022</span><h3>Build a weekly morning-meeting sequence without repetitive prompts</h3></div><p class="meta">Grades K-2, 3-5</p>
 <p class="lbl">When you need this</p>
 <p>Five days that build, rather than five days of the same question.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan five morning meetings for [GRADE], 10 minutes each, threaded around
@@ -650,7 +676,7 @@ something ready.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do the five genuinely differ in kind?</li><li>Could a student having a bad morning answer each one?</li></ul>
 <h2>Seating and grouping</h2></article>
-<article class="card"><div class="head"><span class="pid">CM-023</span><h3>Create a seating plan from classroom access and learning constraints</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-023"><div class="head"><span class="pid">CM-023</span><h3>Create a seating plan from classroom access and learning constraints</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>A plan built on needs, not on who annoys whom.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a seating plan for [GRADE] [SUBJECT].
@@ -675,7 +701,7 @@ Rules:
 - Everyone can see the board and reach the door</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does any seat read as a designation?</li><li>Can everyone genuinely see and exit?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-024</span><h3>Build a transparent regrouping plan using temporary learning evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="CM-024"><div class="head"><span class="pid">CM-024</span><h3>Build a transparent regrouping plan using temporary learning evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Groups that change, and are seen to change.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a regrouping plan for [GRADE] [SUBJECT] based on this evidence:
@@ -698,7 +724,7 @@ Rules:
 Then tell me the sign that these have quietly become fixed ability groups.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is there a stated end date?</li><li>Would the class decode the group names?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">CM-025</span><h3>Audit seating and grouping decisions for labels, isolation and accessibility</h3></div><p class="meta">All grades</p>
+<article class="card" id="CM-025"><div class="head"><span class="pid">CM-025</span><h3>Audit seating and grouping decisions for labels, isolation and accessibility</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before the arrangement becomes permanent by inertia.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] seating and grouping arrangement: [DESCRIBE IT]

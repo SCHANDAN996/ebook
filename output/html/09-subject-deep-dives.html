@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 9 — Subject Deep Dives</h1><p class="lede">15 prompts</p><p>The rest of the book works across subjects. This chapter does not — each prompt is built around how one subject actually behaves, and what goes wrong when a general tool is pointed at it.</p>
 <h2>What's in here</h2>
@@ -139,7 +165,7 @@ blockquote strong{color:var(--warn)}
 <p>For social studies, ask for the contested question rather than the settled summary. That is where the thinking is.</p>
 <p>For arts and PE, be specific about equipment and space. Generic plans assume a room you do not have.</p>
 <h2>Mathematics</h2>
-<article class="card"><div class="head"><span class="pid">SD-001</span><h3>Create a concept-first mathematics explanation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-001"><div class="head"><span class="pid">SD-001</span><h3>Create a concept-first mathematics explanation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>They can do the procedure and have no idea what it means.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Explain [MATHEMATICAL CONCEPT] for [GRADE], starting from what it means rather
@@ -160,7 +186,7 @@ Check every calculation you use. Flag anything you are not certain of rather
 than stating it confidently.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Work every example yourself.</li><li>Does the notation arrive after the need for it?</li><li>Any "just" or "simply" left?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-003</span><h3>Connect concrete, visual and symbolic mathematics representations</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
+<article class="card" id="SD-003"><div class="head"><span class="pid">SD-003</span><h3>Connect concrete, visual and symbolic mathematics representations</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
 <p class="lbl">When you need this</p>
 <p>Three representations that students never connect to each other.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Show [MATHEMATICAL IDEA] for [GRADE] across three representations.
@@ -182,7 +208,7 @@ Do not present the three as three ways to get the answer. They are one idea seen
 three times.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the concrete model use materials you actually have?</li><li>Is the limit of the model named honestly?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-004</span><h3>Build a mathematics error-analysis lesson with verified solutions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-004"><div class="head"><span class="pid">SD-004</span><h3>Build a mathematics error-analysis lesson with verified solutions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Finding the mistake teaches more than avoiding it — if the mistakes are real.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build an error-analysis lesson on [TOPIC] for [GRADE] mathematics.
@@ -208,7 +234,7 @@ wrong would teach the opposite of what I want.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Recompute all four yourself, especially the "correct but unusual" one.</li><li>Does the method-that-fails-in-general genuinely work for this case?</li></ul>
 <h2>Science</h2></article>
-<article class="card"><div class="head"><span class="pid">SD-002</span><h3>Design an evidence-based science investigation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-002"><div class="head"><span class="pid">SD-002</span><h3>Design an evidence-based science investigation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Practical work where the thinking is in the design, not the worksheet.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an investigation into [QUESTION] for [GRADE] science.
@@ -236,7 +262,7 @@ or running water unless I said so.
 I will check all safety guidance against my school&#x27;s own procedures.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check every safety point against your school's policy, not this draft.</li><li>Does it tell students what to expect? Remove that if so.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-008</span><h3>Build a claim-evidence-reasoning task from supplied observations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-008"><div class="head"><span class="pid">SD-008</span><h3>Build a claim-evidence-reasoning task from supplied observations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Students who write conclusions that are really restatements.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a claim-evidence-reasoning task for [GRADE] science.
@@ -259,7 +285,7 @@ the results were if I have not told you.
 Then tell me what a student could legitimately claim that I might mark wrong.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Has it added any data you did not give it?</li><li>Consider the legitimate-but-unexpected claim before you mark.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-009</span><h3>Audit a science explanation for causation, uncertainty and safety</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-009"><div class="head"><span class="pid">SD-009</span><h3>Audit a science explanation for causation, uncertainty and safety</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Explanations that are nearly right, which is the hardest kind to spot.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] science explanation: [PASTE IT]
@@ -284,7 +310,7 @@ I will check safety statements against my school&#x27;s procedures.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify any correction it offers. It can be wrong about being right.</li><li>The unlearn-later simplifications: decide which you accept.</li></ul>
 <h2>English language arts</h2></article>
-<article class="card"><div class="head"><span class="pid">SD-005</span><h3>Build a close-reading lesson from an authorized supplied text</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-005"><div class="head"><span class="pid">SD-005</span><h3>Build a close-reading lesson from an authorized supplied text</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>One text, worked properly, in its own words.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a close-reading lesson on the text below for [GRADE], [MINUTES] minutes.
@@ -307,7 +333,7 @@ TEXT:
 [PASTE THE FULL TEXT — only text I am permitted to use]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check every quoted line appears in your text, exactly.</li><li>Is the second read deeper, or just more?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-006</span><h3>Create an evidence-based writing task with a clear mentor model</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-006"><div class="head"><span class="pid">SD-006</span><h3>Create an evidence-based writing task with a clear mentor model</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Students who cannot picture what you are asking for.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a writing task for [GRADE] on [TOPIC OR TEXT].
@@ -329,7 +355,7 @@ Rules:
 Then tell me the risk of giving a model at all, and how to reduce it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a strong student in your class write this? If not, lower it.</li><li>Is the model original?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-007</span><h3>Design a revision lesson that separates ideas, organization and conventions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-007"><div class="head"><span class="pid">SD-007</span><h3>Design a revision lesson that separates ideas, organization and conventions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Revision that is currently just checking spelling.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a revision lesson for [GRADE] writing on [TASK].
@@ -354,7 +380,7 @@ Rules:
 <p class="lbl">Before you send it</p>
 <ul><li>Does the ideas pass get real time, or a token minute?</li><li>Is the partner looking for one thing, or everything?</li></ul>
 <h2>Social studies</h2></article>
-<article class="card"><div class="head"><span class="pid">SD-010</span><h3>Create a source-analysis lesson using origin, purpose and context</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="SD-010"><div class="head"><span class="pid">SD-010</span><h3>Create a source-analysis lesson using origin, purpose and context</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Students who read a source as information rather than as evidence.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a source-analysis lesson for [GRADE] on this source: [PASTE IT, WITH ITS
@@ -376,7 +402,7 @@ Do not treat the source as simply true or simply biased. Both are ways of not
 reading it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Supply the context it asked for rather than letting it fill in.</li><li>Check any date or fact it did use against a real reference.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-011</span><h3>Build a corroboration task with multiple supplied perspectives</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="SD-011"><div class="head"><span class="pid">SD-011</span><h3>Build a corroboration task with multiple supplied perspectives</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Two accounts that disagree, which is where history actually is.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a corroboration task for [GRADE] using these sources:
@@ -400,7 +426,7 @@ Do not resolve the disagreement for students, and do not present one source as
 the reliable one unless the sources themselves support that.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check every quotation against your source text.</li><li>Has it quietly picked a winner?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-012</span><h3>Design a historical claim task that distinguishes evidence from interpretation</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="SD-012"><div class="head"><span class="pid">SD-012</span><h3>Design a historical claim task that distinguishes evidence from interpretation</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The difference between what happened and what it meant.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a task for [GRADE] on [HISTORICAL QUESTION] using the evidence below.
@@ -427,7 +453,7 @@ not mean it is better supported.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify every date and event it used.</li><li>Are both interpretations genuinely defensible?</li></ul>
 <h2>Arts, PE and electives</h2></article>
-<article class="card"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modelling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-013"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modelling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Skill teaching where practice is deliberate rather than just repeated.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [SUBJECT] lesson teaching [SKILL] to [GRADE].
@@ -451,7 +477,7 @@ Rules:
 - Do not comment on natural ability anywhere</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Count the actual attempts each student gets. Is it enough?</li><li>Is the cue short enough to shout across a hall?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-014</span><h3>Adapt a performance task for space, equipment and physical access</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-014"><div class="head"><span class="pid">SD-014</span><h3>Adapt a performance task for space, equipment and physical access</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The task assumes a room, equipment or a body that not everyone has.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Adapt this [SUBJECT] task for my actual conditions: [PASTE THE TASK]
@@ -474,7 +500,7 @@ Rules:
 - Do not name or describe any student</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Would a student feel singled out by the adapted route?</li><li>Is what you assess genuinely the same?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">SD-015</span><h3>Build an observable process rubric for an arts, PE or elective task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="SD-015"><div class="head"><span class="pid">SD-015</span><h3>Build an observable process rubric for an arts, PE or elective task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Marking the learning rather than the finished performance.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a rubric for [TASK] in [SUBJECT] for [GRADE], assessing [OBJECTIVE].

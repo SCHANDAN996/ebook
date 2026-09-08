@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 10 — Multi-step Workflows</h1><p class="lede">12 workflows</p><p>Everything so far does one job. This chapter chains them: the output of step one becomes the input to step two, and by the end you have a finished piece of work rather than a pile of drafts.</p>
 <h2>What's in here</h2>
@@ -145,7 +171,7 @@ blockquote strong{color:var(--warn)}
 <p><strong>Read each step's output before running the next one.</strong> An error in step one becomes the foundation of steps two through six. This is the one place in the book where skipping the check is genuinely expensive.</p>
 <p><strong>If a step asks you something, answer it.</strong> Pushing on with a gap makes every later step guess.</p>
 <p><strong>Stop between steps whenever you want.</strong> A workflow is a suggested route, not a contract. Several of these end by telling you what they could not do — that is the workflow working, not failing.</p>
-<article class="card"><div class="head"><span class="pid">WF-001</span><h3>Standard to complete unit</h3></div><p class="meta">Replaces roughly 3-4 hours</p>
+<article class="card" id="WF-001"><div class="head"><span class="pid">WF-001</span><h3>Standard to complete unit</h3></div><p class="meta">Replaces roughly 3-4 hours</p>
 <p class="lbl">When you need this</p>
 <p>A standard, a number of lessons, and nothing in between.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are going to build a unit together, one step at a time. Do only the step I
@@ -184,7 +210,7 @@ Audit what we have built: gaps, repetition, whether demand rises, and the two
 lessons most likely to go wrong. Be blunt. Tell me what you would change.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Check the Step 1 unpacking against the standard's real wording before Step 2.</li><li>If Step 5 finds a real problem, go back rather than teaching around it.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-002</span><h3>Mixed-ability lesson pack</h3></div><p class="meta">Replaces roughly 2 hours</p>
+<article class="card" id="WF-002"><div class="head"><span class="pid">WF-002</span><h3>Mixed-ability lesson pack</h3></div><p class="meta">Replaces roughly 2 hours</p>
 <p class="lbl">When you need this</p>
 <p>One lesson that works for a class with a wide spread.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are building a differentiated lesson in steps. Do one step at a time and
@@ -221,7 +247,7 @@ every route have something worth sharing? Tell me the single change that would
 most equalise them.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Answer Step 5 honestly yourself before teaching it.</li><li>Could you tell from the shared check which route a student took?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-003</span><h3>Incident to parent conversation</h3></div><p class="meta">Replaces roughly 1 hour, and a lot of worrying</p>
+<article class="card" id="WF-003"><div class="head"><span class="pid">WF-003</span><h3>Incident to parent conversation</h3></div><p class="meta">Replaces roughly 1 hour, and a lot of worrying</p>
 <p class="lbl">When you need this</p>
 <p>Something happened, and the conversation has to be right.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me prepare a family conversation, one step at a time. Stop after each step.
@@ -258,7 +284,7 @@ reasonably read blame, anything that belongs in a safeguarding process rather
 than a conversation with me. Tell me the one sentence to cut.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>If Step 1 flags inference as fact, fix it before Step 2.</li><li>If any step raises safeguarding, stop and use your school's process.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-004</span><h3>Scores to report comments</h3></div><p class="meta">Replaces roughly 3 hours</p>
+<article class="card" id="WF-004"><div class="head"><span class="pid">WF-004</span><h3>Scores to report comments</h3></div><p class="meta">Replaces roughly 3 hours</p>
 <p class="lbl">When you need this</p>
 <p>Report season, a whole class, one sitting.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are drafting report comments in steps. Stop after each step.
@@ -292,7 +318,7 @@ performance, and repeated openings. List what needs my attention.</pre></div>
 <p class="lbl">Before you use it</p>
 <p>error that does real damage.</p>
 <ul><li>Verify Step 4's leakage findings against your table yourself. This is the</li><li>Fill every placeholder before submitting.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-005</span><h3>Standard to aligned assessment</h3></div><p class="meta">Replaces roughly 2-3 hours</p>
+<article class="card" id="WF-005"><div class="head"><span class="pid">WF-005</span><h3>Standard to aligned assessment</h3></div><p class="meta">Replaces roughly 2-3 hours</p>
 <p class="lbl">When you need this</p>
 <p>A paper that tests what you taught, with a key you can trust.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are building an assessment in steps. Stop after each.
@@ -327,7 +353,7 @@ Compare with the time I have. Tell me what to cut if it does not fit, and what
 evidence I lose by cutting it.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Work the entire key yourself. Step 3 flags what it doubts; check the rest too.</li><li>Take Step 5's timing seriously. Papers always run long.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-006</span><h3>Emergency substitute pack</h3></div><p class="meta">Replaces roughly 90 minutes, usually at 6am</p>
+<article class="card" id="WF-006"><div class="head"><span class="pid">WF-006</span><h3>Emergency substitute pack</h3></div><p class="meta">Replaces roughly 90 minutes, usually at 6am</p>
 <p class="lbl">When you need this</p>
 <p>You are ill, and someone else has your classes today.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build me a substitute pack in steps. Stop after each. Keep it fast — I am
@@ -360,7 +386,7 @@ Read the whole pack as someone who has never taught this subject and never met
 this class. Tell me every point where they would have to guess.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Fix every guess-point Step 5 finds. That is the whole value of this pack.</li><li>Check the answer key, even at 6am.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-007</span><h3>Project launch pack</h3></div><p class="meta">Replaces roughly 3 hours</p>
+<article class="card" id="WF-007"><div class="head"><span class="pid">WF-007</span><h3>Project launch pack</h3></div><p class="meta">Replaces roughly 3 hours</p>
 <p class="lbl">When you need this</p>
 <p>A project where the brief, the milestones and the rubric actually agree.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are building a project pack in steps. Stop after each.
@@ -395,7 +421,7 @@ the brief asks for? Do the milestones lead to it? Could a student follow the
 brief exactly and still score badly? Tell me every mismatch.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Step 5 is the point of this workflow. Fix every mismatch before handing it out.</li><li>Could a beautiful project with weak thinking score well? Fix the rubric if so.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-008</span><h3>Parent conference pack</h3></div><p class="meta">Replaces roughly 2-3 hours</p>
+<article class="card" id="WF-008"><div class="head"><span class="pid">WF-008</span><h3>Parent conference pack</h3></div><p class="meta">Replaces roughly 2-3 hours</p>
 <p class="lbl">When you need this</p>
 <p>Twenty-four families in one evening, ten minutes each.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are preparing conference cards in steps. Stop after each.
@@ -429,7 +455,7 @@ internet, time, or subject knowledge, and any card that reads as a verdict
 rather than a conversation.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Fix anything Step 1 flags as impression before it reaches a card.</li><li>Practise the Step 4 openings aloud once.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-009</span><h3>Evidence to intervention-plan draft</h3></div><p class="meta">Replaces roughly 2 hours</p>
+<article class="card" id="WF-009"><div class="head"><span class="pid">WF-009</span><h3>Evidence to intervention-plan draft</h3></div><p class="meta">Replaces roughly 2 hours</p>
 <p class="lbl">When you need this</p>
 <p>Preparing a draft to take into your school's process — not to act on alone.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me draft an intervention plan in steps. Stop after each.
@@ -468,7 +494,7 @@ a class teacher should decide alone, and anything that belongs in my school&#x27
 formal process now rather than after a review cycle.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Take this draft to your school's process. It is not a plan you own alone.</li><li>If any step says stop and escalate, do that.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-010</span><h3>Field-trip planning pack</h3></div><p class="meta">Replaces roughly 2 hours</p>
+<article class="card" id="WF-010"><div class="head"><span class="pid">WF-010</span><h3>Field-trip planning pack</h3></div><p class="meta">Replaces roughly 2 hours</p>
 <p class="lbl">When you need this</p>
 <p>A trip plan with its gaps named rather than filled in.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a trip planning pack in steps. Stop after each.
@@ -508,7 +534,7 @@ everything still marked [CHECK WITH SCHOOL], as one list I can take to whoever
 approves trips.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Step 5's list is what you take to the approver. Do not shorten it.</li><li>Solve the accessibility gaps before booking.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-011</span><h3>Weekly teacher admin pack</h3></div><p class="meta">Replaces roughly 90 minutes</p>
+<article class="card" id="WF-011"><div class="head"><span class="pid">WF-011</span><h3>Weekly teacher admin pack</h3></div><p class="meta">Replaces roughly 90 minutes</p>
 <p class="lbl">When you need this</p>
 <p>Friday afternoon, and the paperwork has stacked up.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me clear this week&#x27;s admin in steps. Stop after each.
@@ -538,7 +564,7 @@ From everything I dumped, which item have I clearly been putting off, and what
 is the smallest first step on it.</pre></div>
 <p class="lbl">Before you use it</p>
 <ul><li>Fill every <code>[OWNER?]</code> and <code>[DATE?]</code> before circulating minutes.</li><li>Step 5 is usually right. Do the smallest step today.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WF-012</span><h3>Class data reflection</h3></div><p class="meta">Replaces roughly 90 minutes</p>
+<article class="card" id="WF-012"><div class="head"><span class="pid">WF-012</span><h3>Class data reflection</h3></div><p class="meta">Replaces roughly 90 minutes</p>
 <p class="lbl">When you need this</p>
 <p>A set of results, and a decision to make about what to do next.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me read this class data in steps. Stop after each.

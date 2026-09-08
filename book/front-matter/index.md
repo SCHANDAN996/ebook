@@ -7,15 +7,15 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | # | Chapter | Prompts | File |
 |---|---|---|---|
 | 1 | Lesson Planning | 60 | `01-lesson-planning.pdf` |
-| 2 | Worksheets Activities | 40 | `02-worksheets-activities.pdf` |
-| 3 | Assessment Rubrics Quizzes | 40 | `03-assessment-rubrics-quizzes.pdf` |
-| 4 | Differentiation Mixed Ability | 35 | `04-differentiation-mixed-ability.pdf` |
+| 2 | Worksheets and Activities | 40 | `02-worksheets-activities.pdf` |
+| 3 | Assessment, Rubrics and Quizzes | 40 | `03-assessment-rubrics-quizzes.pdf` |
+| 4 | Differentiation and Mixed Ability | 35 | `04-differentiation-mixed-ability.pdf` |
 | 5 | Parent Communication | 30 | `05-parent-communication.pdf` |
 | 6 | Report Card Comments | 30 | `06-report-card-comments.pdf` |
-| 7 | Classroom Management Sel | 25 | `07-classroom-management-sel.pdf` |
-| 8 | Teacher Admin Paperwork | 25 | `08-teacher-admin-paperwork.pdf` |
+| 7 | Classroom Management and SEL | 25 | `07-classroom-management-sel.pdf` |
+| 8 | Teacher Admin and Paperwork | 25 | `08-teacher-admin-paperwork.pdf` |
 | 9 | Subject Deep Dives | 15 | `09-subject-deep-dives.pdf` |
-| 10 | Multi Step Workflows | 12 | `10-multi-step-workflows.pdf` |
+| 10 | Multi-step Workflows | 12 | `10-multi-step-workflows.pdf` |
 
 ---
 
@@ -86,7 +86,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | LP-059 | Plan targeted follow-up for three anonymous response patterns |
 | LP-060 | Compare the intended lesson with what learners actually demonstrated |
 
-### Worksheets Activities
+### Worksheets and Activities
 
 | ID | Prompt |
 |---|---|
@@ -131,7 +131,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | WA-039 | Build a group-project brief with individual evidence of mastery |
 | WA-040 | Audit a project brief for clarity, feasibility and privacy |
 
-### Assessment Rubrics Quizzes
+### Assessment, Rubrics and Quizzes
 
 | ID | Prompt |
 |---|---|
@@ -176,7 +176,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | AS-039 | Summarize class mastery without averaging unrelated skills |
 | AS-040 | Audit a standards-based grade summary for missing or weak evidence |
 
-### Differentiation Mixed Ability
+### Differentiation and Mixed Ability
 
 | ID | Prompt |
 |---|---|
@@ -286,7 +286,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | RC-029 | Replace harsh or vague judgments with verified learning evidence |
 | RC-030 | Shorten a report comment without removing the material concern |
 
-### Classroom Management Sel
+### Classroom Management and SEL
 
 | ID | Prompt |
 |---|---|
@@ -316,7 +316,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | CM-024 | Build a transparent regrouping plan using temporary learning evidence |
 | CM-025 | Audit seating and grouping decisions for labels, isolation and accessibility |
 
-### Teacher Admin Paperwork
+### Teacher Admin and Paperwork
 
 | ID | Prompt |
 |---|---|
@@ -366,7 +366,7 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 | SD-014 | Adapt a performance task for space, equipment and physical access |
 | SD-015 | Build an observable process rubric for an arts, PE or elective task |
 
-### Multi Step Workflows
+### Multi-step Workflows
 
 | ID | Prompt |
 |---|---|
@@ -387,31 +387,52 @@ Every prompt has an ID like `LP-002`. Find the ID here, then open that chapter f
 
 ## By grade band
 
-### 3-5  (285 prompts)
+Most prompts carry no age of their own — the wording you fill in sets that.
+Those are marked *All grades* and they work in every band.
 
-AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040
+| Band | Prompts you can use |
+|---|---|
+| K-2 | 125 |
+| 3-5 | 290 |
+| 6-8 | 296 |
+| 9-12 | 293 |
 
-### 6-8  (285 prompts)
+**All grades (118 prompts)** — every prompt not listed below.
 
-AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040
+The rest assume a reading level or a stage of schooling:
 
-### 9-12  (285 prompts)
+**Grades 3-5, 6-8, 9-12**  (165) — AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-008, AS-009, AS-011, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-021, AS-022, AS-023, AS-024, AS-026, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-036, AS-037, AS-038, AS-039, CM-013, CM-014, CM-017, CM-018, CM-024, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-024, DF-025, DF-026, DF-028, DF-029, DF-032, DF-033, DF-034, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-046, LP-047, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-058, LP-059, LP-060, PC-008, PC-010, PC-011, PC-017, PC-019, RC-018, RC-019, RC-020, RC-022, RC-023, SD-001, SD-002, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-011, WA-012, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-021, WA-024, WA-026, WA-027, WA-028, WA-031, WA-032, WA-033, WA-036, WA-037, WA-038, WA-039
 
-AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040
+**Grades 6-8, 9-12**  (10) — AS-007, DF-023, DF-030, LP-015, RC-021, SD-010, SD-011, SD-012, WA-022, WA-023
+
+**Grades K-2, 3-5**  (4) — CM-020, CM-022, PC-004, WA-034
+
+**Grades K-2, 3-5, 6-8**  (3) — CM-005, CM-016, SD-003
+
+The 12 workflows in Chapter 10 follow the grade band of the prompt you
+start them with.
 
 ---
 
 ## By subject
 
-**Any**  (295) — AD-001, AD-002, AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-001, CM-002, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-001, DF-002, DF-003, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-003, LP-004, LP-005, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-001, PC-002, PC-003, PC-004, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-001, RC-002, RC-003, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040, WF-001, WF-002, WF-003, WF-004, WF-005, WF-006, WF-007, WF-008, WF-009, WF-010, WF-011, WF-012
+Every prompt outside this list is subject-neutral — you name the subject
+when you fill the prompt in. These are the ones written for one subject:
 
-**Arts / PE / electives**  (3) — SD-013, SD-014, SD-015
-
-**English language arts**  (3) — SD-005, SD-006, SD-007
-
-**Mathematics**  (4) — LP-002, SD-001, SD-003, SD-004
-
-**Science**  (4) — LP-001, SD-002, SD-008, SD-009
-
-**Social studies**  (3) — SD-010, SD-011, SD-012
-
+| ID | Prompt |
+|---|---|
+| SD-001 | Create a concept-first mathematics explanation |
+| SD-003 | Connect concrete, visual and symbolic mathematics representations |
+| SD-004 | Build a mathematics error-analysis lesson with verified solutions |
+| SD-002 | Design an evidence-based science investigation |
+| SD-008 | Build a claim-evidence-reasoning task from supplied observations |
+| SD-009 | Audit a science explanation for causation, uncertainty and safety |
+| SD-005 | Build a close-reading lesson from an authorized supplied text |
+| SD-006 | Create an evidence-based writing task with a clear mentor model |
+| SD-007 | Design a revision lesson that separates ideas, organization and conventions |
+| SD-010 | Create a source-analysis lesson using origin, purpose and context |
+| SD-011 | Build a corroboration task with multiple supplied perspectives |
+| SD-012 | Design a historical claim task that distinguishes evidence from interpretation |
+| SD-013 | Create a skill-development lesson with modelling, practice and reflection |
+| SD-014 | Adapt a performance task for space, equipment and physical access |
+| SD-015 | Build an observable process rubric for an arts, PE or elective task |

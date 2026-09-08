@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 8 — Teacher Admin and Paperwork</h1><p class="lede">25 prompts</p><p>None of this is teaching, and all of it takes teaching time. These prompts clear the paperwork quickly and in a professional register — brief, specific, and asking plainly for what you need.</p>
 <h2>What's in here</h2>
@@ -141,7 +167,7 @@ blockquote strong{color:var(--warn)}
 <p>Anything with a date, an approval, a cost or a policy reference — check it against the real document. The model will produce a plausible date.</p>
 <p>Ask for the one-line hallway version alongside the email. You will use it more.</p>
 <h2>Staff emails</h2>
-<article class="card"><div class="head"><span class="pid">AD-003</span><h3>Write a concise staff email with one clear action</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-003"><div class="head"><span class="pid">AD-003</span><h3>Write a concise staff email with one clear action</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>An email that gets done rather than filed.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a staff email.
@@ -165,7 +191,7 @@ conversation.
 Use only the facts I supplied. Do not invent a date, a policy or a reason.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the ask genuinely in the first line?</li><li>Is it one action?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-004</span><h3>Turn rough notes into a professional colleague update</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-004"><div class="head"><span class="pid">AD-004</span><h3>Turn rough notes into a professional colleague update</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Bullet points in your head, something readable out.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn these notes into an update for [WHO]:
@@ -185,7 +211,7 @@ it back and ask.
 Then tell me what a reader would still not know after reading this.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Has anything been added that you did not write?</li><li>Is opinion clearly separated from fact?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-005</span><h3>Draft a meeting request with purpose, preparation and time limit</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-005"><div class="head"><span class="pid">AD-005</span><h3>Draft a meeting request with purpose, preparation and time limit</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>So the meeting is short and the right people come prepared.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a meeting request.
@@ -209,7 +235,7 @@ Rules:
 - No agenda longer than the meeting can hold</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>If it said this could be an email, it probably could.</li><li>Is the preparation realistic for people's actual week?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-006</span><h3>Write a follow-up email that separates decisions from open questions</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-006"><div class="head"><span class="pid">AD-006</span><h3>Write a follow-up email that separates decisions from open questions</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>So nobody leaves the meeting with a different version of what happened.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a follow-up after a meeting.
@@ -234,7 +260,7 @@ Flag anything in my notes that I have recorded as agreed but reads as
 unresolved.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Has anything moved from "discussed" to "decided"?</li><li>Does every item have an owner?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-007</span><h3>Audit a staff email for tone, recipients, dates and unnecessary detail</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-007"><div class="head"><span class="pid">AD-007</span><h3>Audit a staff email for tone, recipients, dates and unnecessary detail</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before you send it to twelve people, one of whom will forward it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this staff email: [PASTE IT]
@@ -254,7 +280,7 @@ Be direct about tone. I wrote it and cannot hear it any more.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>The tone flags: trust them over your own ear.</li><li>Verify every date and figure.</li></ul>
 <h2>Agendas and minutes</h2></article>
-<article class="card"><div class="head"><span class="pid">AD-008</span><h3>Build a timed agenda around decisions that must be made</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-008"><div class="head"><span class="pid">AD-008</span><h3>Build a timed agenda around decisions that must be made</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>A meeting that ends on time because it was built to.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build an agenda for a [MINUTES]-minute meeting.
@@ -278,7 +304,7 @@ Rules:
 - Anything purely informational should not be in a meeting; say so</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do the minutes add up with slack, or exactly?</li><li>Are the information items really necessary in the room?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-001</span><h3>Turn notes into accountable meeting minutes</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-001"><div class="head"><span class="pid">AD-001</span><h3>Turn notes into accountable meeting minutes</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Minutes people can act on rather than skim.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn these meeting notes into minutes:
@@ -302,7 +328,7 @@ Rules:
 Then list every point where my notes were ambiguous about who agreed to what.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Fill in every <code>[OWNER?]</code> and <code>[DATE?]</code> before circulating.</li><li>Has any disagreement been smoothed over?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-009</span><h3>Convert discussion notes into decisions, actions and a parking lot</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-009"><div class="head"><span class="pid">AD-009</span><h3>Convert discussion notes into decisions, actions and a parking lot</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>An hour of discussion, and you need to know what actually came of it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Sort these discussion notes into three piles:
@@ -324,7 +350,7 @@ Then tell me:
 - Anything that will come back at the next meeting because it was not settled</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is anything in DECIDED that was only discussed?</li><li>Does the parking lot have a revisit date, or should it be dropped?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-010</span><h3>Audit meeting minutes for invented consensus, owners or deadlines</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-010"><div class="head"><span class="pid">AD-010</span><h3>Audit meeting minutes for invented consensus, owners or deadlines</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Minutes become the record. Getting them wrong is expensive later.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit these minutes against my notes.
@@ -347,7 +373,7 @@ wrong.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Anything it flagged as invented: remove it, do not soften it.</li><li>Circulate for correction before treating these as final.</li></ul>
 <h2>Professional goals</h2></article>
-<article class="card"><div class="head"><span class="pid">AD-002</span><h3>Draft a measurable professional growth goal</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-002"><div class="head"><span class="pid">AD-002</span><h3>Draft a measurable professional growth goal</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>A goal you control, not a wish about your students.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Draft a professional growth goal for this year.
@@ -372,7 +398,7 @@ Give me:
 Then tell me what this goal will cost me, honestly.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is it about your practice or students' scores?</li><li>Could you actually gather that evidence in a normal week?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-011</span><h3>Turn baseline evidence into a realistic semester action plan</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-011"><div class="head"><span class="pid">AD-011</span><h3>Turn baseline evidence into a realistic semester action plan</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Starting from where you actually are.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a semester action plan from this baseline:
@@ -394,7 +420,7 @@ Then tell me the week this plan is most likely to be abandoned, and what would
 keep it alive.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does it say what you stop doing? If not, it will not survive.</li><li>Is the smallest version still worth doing?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-012</span><h3>Create leading and outcome indicators for a teaching goal</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-012"><div class="head"><span class="pid">AD-012</span><h3>Create leading and outcome indicators for a teaching goal</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Knowing in week four whether this is working.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this professional goal — [PASTE IT] — give me indicators.
@@ -418,7 +444,7 @@ Then tell me which indicator I will stop tracking first, and whether that
 matters.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Which will you stop tracking? Be honest, then drop it now.</li><li>Is the attribution claim honest?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-013</span><h3>Build midpoint decision rules for revising a professional goal</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-013"><div class="head"><span class="pid">AD-013</span><h3>Build midpoint decision rules for revising a professional goal</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Deciding in advance what would make you change course.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this goal — [PASTE IT] — write midpoint decision rules.
@@ -440,7 +466,7 @@ Then tell me which outcome I am most likely to misread as success.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is "not working" described concretely enough to be undeniable?</li><li>Would you accept stopping as an outcome?</li></ul>
 <h2>Observation reflections</h2></article>
-<article class="card"><div class="head"><span class="pid">AD-014</span><h3>Write an evidence-based reflection after a classroom observation</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-014"><div class="head"><span class="pid">AD-014</span><h3>Write an evidence-based reflection after a classroom observation</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>After the observation, before the meeting.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me write a reflection after a classroom observation.
@@ -463,7 +489,7 @@ Rules:
   at something worth examining</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the disagreement read as professional or defensive?</li><li>Is the "one thing" small enough to actually do?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-015</span><h3>Separate observed events, interpretation and next action</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-015"><div class="head"><span class="pid">AD-015</span><h3>Separate observed events, interpretation and next action</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Feedback that mixes what happened with what it meant.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Sort this observation feedback into three columns:
@@ -488,7 +514,7 @@ Then tell me:
 Do not dismiss feedback because an alternative interpretation exists.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are you questioning an interpretation, or avoiding the feedback?</li><li>Does the observer's missing context actually change it?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-016</span><h3>Turn observer feedback into one measurable instructional experiment</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-016"><div class="head"><span class="pid">AD-016</span><h3>Turn observer feedback into one measurable instructional experiment</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Six suggestions, and you have room for one.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn this feedback into one small experiment I can run:
@@ -511,7 +537,7 @@ Rules:
 <p class="lbl">Before you send it</p>
 <ul><li>Is it genuinely one change?</li><li>Could you sustain it after the novelty wears off?</li></ul>
 <h2>Field trip logistics</h2></article>
-<article class="card"><div class="head"><span class="pid">AD-017</span><h3>Build a field-trip planning checklist from official requirements</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-017"><div class="head"><span class="pid">AD-017</span><h3>Build a field-trip planning checklist from official requirements</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The list you will otherwise forget one item from.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a planning checklist for a trip.
@@ -536,7 +562,7 @@ I will verify every item against my school&#x27;s own procedures before relying 
 this.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Take every <code>[CHECK WITH SCHOOL]</code> to the person who actually knows.</li><li>Do not treat any stated ratio or timescale as authoritative.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-018</span><h3>Create a trip-day schedule with owners, counts and contingency fields</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-018"><div class="head"><span class="pid">AD-018</span><h3>Create a trip-day schedule with owners, counts and contingency fields</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The single sheet every adult carries on the day.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a trip-day schedule.
@@ -562,7 +588,7 @@ I will check the emergency and safeguarding elements against my school&#x27;s
 procedures.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Fill every <code>[BLANK]</code>, especially contacts.</li><li>Print it. It has to work without a phone.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-019</span><h3>Audit a field-trip draft for permissions, access, safety and unknowns</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-019"><div class="head"><span class="pid">AD-019</span><h3>Audit a field-trip draft for permissions, access, safety and unknowns</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before it goes to whoever approves trips.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this trip plan: [PASTE IT]
@@ -585,7 +611,7 @@ I will verify all safeguarding and consent requirements with my school.</pre></d
 <p class="lbl">Before you send it</p>
 <ul><li>Solve the accessibility gaps before booking, not after.</li><li>Every "verify" flag goes to the person who approves trips.</li></ul>
 <h2>Clubs and duty plans</h2></article>
-<article class="card"><div class="head"><span class="pid">AD-020</span><h3>Create a club launch plan with purpose, routines and supervision fields</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-020"><div class="head"><span class="pid">AD-020</span><h3>Create a club launch plan with purpose, routines and supervision fields</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Starting something that will still be running in March.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan the launch of a [CLUB OR ACTIVITY] for [GRADE] students.
@@ -608,7 +634,7 @@ Do not state a supervision requirement or ratio. Mark it [CONFIRM WITH SCHOOL].
 Then tell me the most likely reason this club stops running.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Every <code>[CONFIRM]</code> before session one, not after.</li><li>Is the week-ten answer honest?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-021</span><h3>Build a fair duty rota from supplied availability and policy</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-021"><div class="head"><span class="pid">AD-021</span><h3>Build a fair duty rota from supplied availability and policy</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>A rota nobody can reasonably call unfair.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a duty rota.
@@ -634,7 +660,7 @@ Rules:
 Then tell me who will feel hardest done by, and whether they would be right.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Check the duty counts yourself.</li><li>If it says it cannot be filled fairly, take that upward.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-022</span><h3>Audit a club or duty plan for gaps, overload and unclear responsibility</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-022"><div class="head"><span class="pid">AD-022</span><h3>Audit a club or duty plan for gaps, overload and unclear responsibility</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before it runs and the gap becomes obvious.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this club or duty plan: [PASTE IT]
@@ -657,7 +683,7 @@ I will confirm all supervision requirements with my school.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Close the riskiest gap before it runs.</li><li>Does it survive two absences?</li></ul>
 <h2>Grants and proposals</h2></article>
-<article class="card"><div class="head"><span class="pid">AD-023</span><h3>Turn a verified classroom need into a concise proposal outline</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-023"><div class="head"><span class="pid">AD-023</span><h3>Turn a verified classroom need into a concise proposal outline</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Asking for something, briefly and credibly.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Outline a proposal for [WHAT YOU WANT].
@@ -682,7 +708,7 @@ Rules:
   gather first</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>If it said the evidence is thin, gather more before asking.</li><li>Any statistic in there that you did not supply? Remove it.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-024</span><h3>Build a grant budget narrative from supplied costs and restrictions</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-024"><div class="head"><span class="pid">AD-024</span><h3>Build a grant budget narrative from supplied costs and restrictions</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Explaining the numbers so they are believed.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write the budget narrative for a proposal.
@@ -707,7 +733,7 @@ Rules:
 I will verify all figures and the funder&#x27;s terms myself before submitting.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Re-add every column yourself.</li><li>Check the restrictions against the funder's actual terms.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AD-025</span><h3>Audit a proposal for unsupported claims, missing evidence and compliance</h3></div><p class="meta">All grades</p>
+<article class="card" id="AD-025"><div class="head"><span class="pid">AD-025</span><h3>Audit a proposal for unsupported claims, missing evidence and compliance</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The last read before it is submitted.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this proposal: [PASTE IT]

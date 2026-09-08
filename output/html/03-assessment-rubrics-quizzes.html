@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 3 — Assessment, Rubrics and Quizzes</h1><p class="lede">40 prompts</p><p>A good question does more than sort right from wrong — it tells you *what* the student misunderstood. That is the idea running through this whole chapter: distractors that mean something, rubrics a student can act on, and checks that separate real understanding from having copied the method.</p>
 <h2>What's in here</h2>
@@ -139,7 +165,7 @@ blockquote strong{color:var(--warn)}
 <p>Ask what each wrong option reveals. That turns marking into diagnosis and costs you nothing extra.</p>
 <p>Single-point rubrics — one column describing proficient — are faster to write and far faster to mark than a full grid. Several prompts here use them.</p>
 <h2>Quizzes and tests</h2>
-<article class="card"><div class="head"><span class="pid">AS-001</span><h3>Create a balanced classroom assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-001"><div class="head"><span class="pid">AS-001</span><h3>Create a balanced classroom assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>An end-of-unit test that covers the unit rather than the last two lessons.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an assessment on [TOPIC] for [GRADE] [SUBJECT], to be sat in [MINUTES]
@@ -162,7 +188,7 @@ Check every calculation and factual claim. Flag anything you are unsure of
 rather than presenting it as verified.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Work the whole key yourself before printing.</li><li>Does the blueprint match what you actually taught?</li><li>Sit the paper against a clock. Papers always run long.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-005</span><h3>Build a short quiz across recall, application and reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-005"><div class="head"><span class="pid">AS-005</span><h3>Build a short quiz across recall, application and reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Ten minutes, and you want to know more than whether they revised.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a [MINUTES]-minute quiz on [TOPIC] for [GRADE] [SUBJECT].
@@ -181,7 +207,7 @@ weak performance there tells me.
 Keep it to one side of paper.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a memoriser pass the reasoning section? Redesign if so.</li><li>Does it fit on one side at a readable size?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-006</span><h3>Write diagnostic multiple-choice questions with purposeful distractors</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-006"><div class="head"><span class="pid">AS-006</span><h3>Write diagnostic multiple-choice questions with purposeful distractors</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Multiple choice where the wrong answers do the teaching.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write [NUMBER] multiple-choice questions on [TOPIC] for [GRADE] [SUBJECT].
@@ -202,7 +228,7 @@ whole-class discussion, and what I would ask about them.
 If you cannot name the thinking behind an option, do not include it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can you name the thinking behind every wrong option?</li><li>Could a confused student eliminate their way to the answer?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-007</span><h3>Create a constructed-response assessment with a scoring guide</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="AS-007"><div class="head"><span class="pid">AS-007</span><h3>Create a constructed-response assessment with a scoring guide</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Extended answers, marked consistently, without three hours of agonising.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create [NUMBER] constructed-response questions on [TOPIC] for [GRADE] [SUBJECT].
@@ -221,7 +247,7 @@ criterion cannot be pointed at in the writing, take it out.
 Then tell me the fastest order to mark these in, and why.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could two teachers apply this guide and agree?</li><li>Is anything being marked that is not the learning?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-008</span><h3>Design a pre-assessment that separates prerequisite and grade-level skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-008"><div class="head"><span class="pid">AS-008</span><h3>Design a pre-assessment that separates prerequisite and grade-level skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Before a unit, to find out what is actually missing.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [MINUTES]-minute pre-assessment before a [GRADE] [SUBJECT] unit on
@@ -243,7 +269,7 @@ Students should not be able to tell which part is which from looking at it. Do
 not make the prerequisite section feel like a test of last year.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are the prerequisites genuinely required by this unit?</li><li>Would a student feel judged on last year's teaching?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-009</span><h3>Build a cumulative assessment without over-weighting recent lessons</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-009"><div class="head"><span class="pid">AS-009</span><h3>Build a cumulative assessment without over-weighting recent lessons</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A term test, where the first half of term deserves to appear.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a cumulative assessment for [GRADE] [SUBJECT] covering:
@@ -264,7 +290,7 @@ Give me:
 Total time: [MINUTES]. Say if the coverage cannot fit honestly.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do you agree with the weighting it chose?</li><li>Is any older topic represented by only one question it could fluke?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-010</span><h3>Adapt an assessment for a shorter testing period</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-010"><div class="head"><span class="pid">AS-010</span><h3>Adapt an assessment for a shorter testing period</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The period got cut and the test still has to happen.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Cut this [GRADE] [SUBJECT] assessment from [ORIGINAL] to [NEW] minutes.
@@ -286,7 +312,7 @@ ASSESSMENT:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are you comfortable with the objectives it dropped?</li><li>Does the merged question actually test both things?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-011</span><h3>Create parallel assessment forms with equivalent demand</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-011"><div class="head"><span class="pid">AS-011</span><h3>Create parallel assessment forms with equivalent demand</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Two versions, and neither class should be able to claim theirs was harder.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create two parallel forms of an assessment on [TOPIC] for [GRADE] [SUBJECT].
@@ -305,7 +331,7 @@ Do not change the numbers in a way that changes the method needed. If a
 substitution makes one version harder, say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Work both keys. Substitutions often change the method needed.</li><li>Do you agree the flagged pair is the risky one?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-012</span><h3>Audit a test for alignment, ambiguity and answer-key errors</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-012"><div class="head"><span class="pid">AS-012</span><h3>Audit a test for alignment, ambiguity and answer-key errors</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before thirty students sit it and one of them is right and marked wrong.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] assessment against its objectives.
@@ -328,7 +354,7 @@ OBJECTIVES: [PASTE THEM]
 ASSESSMENT AND KEY: [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify every key error it claims, yourself. It can be wrong about being right.</li><li>Would you concede the challengeable question?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-013</span><h3>Turn a supplied objective list into a complete assessment blueprint</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-013"><div class="head"><span class="pid">AS-013</span><h3>Turn a supplied objective list into a complete assessment blueprint</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Planning what to assess before writing a single question.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build an assessment blueprint for [GRADE] [SUBJECT] from these objectives:
@@ -352,7 +378,7 @@ Then tell me:
 Do not write the questions yet. This is the plan.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the weighting match what you actually value?</li><li>Is the "assess another way" suggestion practical for you?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-003</span><h3>Build a student-readable analytic rubric</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-003"><div class="head"><span class="pid">AS-003</span><h3>Build a student-readable analytic rubric</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A rubric students read before they start, not after they are marked.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build an analytic rubric for [TASK] in [GRADE] [SUBJECT], assessing [OBJECTIVE].
@@ -373,7 +399,7 @@ differently, and how to tighten it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a student read this and know what to do?</li><li>Is the same weakness costing marks twice anywhere?</li></ul>
 <h2>Formative checks and exit tickets</h2></article>
-<article class="card"><div class="head"><span class="pid">AS-002</span><h3>Create hinge questions for live teaching</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-002"><div class="head"><span class="pid">AS-002</span><h3>Create hinge questions for live teaching</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The moment mid-lesson when you decide whether to move on.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write [NUMBER] hinge questions for a [GRADE] [SUBJECT] lesson on [TOPIC], to
@@ -395,7 +421,7 @@ Do not give me a mastery percentage. Describe what the responses show; the
 decision is mine.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is each next move concrete enough to do immediately?</li><li>Could a confused student guess right?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-014</span><h3>Build a five-minute check for understanding during instruction</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-014"><div class="head"><span class="pid">AS-014</span><h3>Build a five-minute check for understanding during instruction</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Halfway through, before you build anything else on top.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a 5-minute check to run midway through a [GRADE] [SUBJECT] lesson on
@@ -415,7 +441,7 @@ If the check needs more than five minutes to be useful, say so and tell me what
 a five-minute version can and cannot tell me.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can you genuinely read thirty responses at a glance?</li><li>Is each next move something you can do in the same lesson?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-015</span><h3>Write an exit ticket that distinguishes three levels of understanding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-015"><div class="head"><span class="pid">AS-015</span><h3>Write an exit ticket that distinguishes three levels of understanding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Three piles by the time you reach the staffroom.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write an exit ticket for a [GRADE] [SUBJECT] lesson on [OBJECTIVE].
@@ -434,7 +460,7 @@ Give me:
 No marks and no percentages. I am sorting, not scoring.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are the three sample responses realistically distinct?</li><li>Is the sorting feature visible without reading every word?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-016</span><h3>Create a misconception poll with actionable response options</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-016"><div class="head"><span class="pid">AS-016</span><h3>Create a misconception poll with actionable response options</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A show of hands that actually tells you something.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a quick poll on [TOPIC] for [GRADE] [SUBJECT] that I can run with a show
@@ -453,7 +479,7 @@ Students must not be able to read the right answer off my face or off which
 option I said last.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do the follow-up questions avoid giving the answer away?</li><li>Would students be honest, or copy the hands going up first?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-017</span><h3>Design a show-me task using mini-whiteboards or paper</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-017"><div class="head"><span class="pid">AS-017</span><h3>Design a show-me task using mini-whiteboards or paper</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Every student answers, and you see all of it at once.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a show-me task on [TOPIC] for [GRADE] [SUBJECT] using mini-whiteboards
@@ -472,7 +498,7 @@ Answers must be short. If the task needs a paragraph, it is the wrong task for
 this format — say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the answer readable from four metres away?</li><li>Would your response to a wrong board embarrass anyone?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-019</span><h3>Create a transfer question that reveals reasoning rather than recall</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-019"><div class="head"><span class="pid">AS-019</span><h3>Create a transfer question that reveals reasoning rather than recall</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>They can do the board examples. You want to know what that is worth.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a transfer question on [TOPIC] for [GRADE] [SUBJECT] that cannot be
@@ -492,7 +518,7 @@ Give me:
 It must not require anything I have not taught. Tell me if it does.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is it a different shape, or the same question with new numbers?</li><li>Is everything needed to answer it actually taught?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-020</span><h3>Audit a formative check for speed, reading load and decision usefulness</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-020"><div class="head"><span class="pid">AS-020</span><h3>Audit a formative check for speed, reading load and decision usefulness</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The check took ten minutes and told you nothing.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] formative check.
@@ -511,7 +537,7 @@ CHECK:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>If it says the check is not worth the time, do you agree?</li><li>Is the reading demand fair for your weakest reader?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-018</span><h3>Turn anonymous responses into a next-day formative check</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-018"><div class="head"><span class="pid">AS-018</span><h3>Turn anonymous responses into a next-day formative check</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Yesterday's responses are in front of you and tomorrow needs planning.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Yesterday&#x27;s [GRADE] [SUBJECT] check on [TOPIC] produced these patterns:
@@ -531,7 +557,7 @@ Do not build anything that lets the class work out who was in which group.</pre>
 <p class="lbl">Before you send it</p>
 <ul><li>Could students decode who struggled? Redesign if so.</li><li>Do the secure students have something real to do?</li></ul>
 <h2>Rubrics</h2></article>
-<article class="card"><div class="head"><span class="pid">AS-021</span><h3>Create observable descriptors for four performance levels</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-021"><div class="head"><span class="pid">AS-021</span><h3>Create observable descriptors for four performance levels</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Four levels that mean something more than "good, quite good, not good".</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write four-level descriptors for this criterion in [GRADE] [SUBJECT]:
@@ -553,7 +579,7 @@ Do not use &quot;sometimes&quot;, &quot;usually&quot;, &quot;adequate&quot;, &qu
 without saying exactly what would count.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the 2/3 boundary something you could defend to a parent?</li><li>Any vague words left?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-022</span><h3>Turn an objective and task into aligned rubric criteria</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-022"><div class="head"><span class="pid">AS-022</span><h3>Turn an objective and task into aligned rubric criteria</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The rubric should measure the objective, not the artefact.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Derive rubric criteria for this [GRADE] [SUBJECT] task.
@@ -572,7 +598,7 @@ If the task cannot evidence the objective, say so plainly and tell me the
 smallest change to the task that would fix it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are you marking the learning or the artefact?</li><li>Do you agree with what it said the task cannot evidence?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-023</span><h3>Build a single-point rubric with feedback space</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-023"><div class="head"><span class="pid">AS-023</span><h3>Build a single-point rubric with feedback space</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Faster to write, far faster to mark, and the feedback is specific.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a single-point rubric for [TASK] in [GRADE] [SUBJECT].
@@ -591,7 +617,7 @@ The blank columns stay blank in the template — I fill them per student. Do not
 pre-fill them with generic levels.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are the reusable sentences specific enough to be worth reusing?</li><li>Could a student self-assess against the centre column?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-024</span><h3>Create a rubric for collaborative work with individual evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-024"><div class="head"><span class="pid">AS-024</span><h3>Create a rubric for collaborative work with individual evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A group mark that does not hide who learned what.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a rubric for this [GRADE] [SUBJECT] group task assessing [OBJECTIVE].
@@ -612,7 +638,7 @@ Give me:
 Do not include peer-rating scores as a criterion. Tell me why if you disagree.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can you mark the individual part without relying on memory?</li><li>Is a quiet student penalised anywhere here?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-025</span><h3>Rewrite vague rubric words as observable evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-025"><div class="head"><span class="pid">AS-025</span><h3>Rewrite vague rubric words as observable evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Your rubric says "shows good understanding" and nobody knows what that means.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this [GRADE] [SUBJECT] rubric so every descriptor points at something
@@ -633,7 +659,7 @@ RUBRIC:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could two teachers now agree on a borderline piece?</li><li>Are you willing to drop the effort criteria it flagged?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-026</span><h3>Calibrate a rubric using fictional work samples</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-026"><div class="head"><span class="pid">AS-026</span><h3>Calibrate a rubric using fictional work samples</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Testing the rubric before it meets real work.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write fictional student work samples to test this [GRADE] [SUBJECT] rubric.
@@ -657,7 +683,7 @@ RUBRIC:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do you score the borderline samples the same way it did?</li><li>Is the wording problem it found a real one?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-027</span><h3>Audit a rubric for double penalties, bias and irrelevant criteria</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-027"><div class="head"><span class="pid">AS-027</span><h3>Audit a rubric for double penalties, bias and irrelevant criteria</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before it decides anyone's grade.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] rubric.
@@ -679,7 +705,7 @@ RUBRIC:
 <p class="lbl">Before you send it</p>
 <ul><li>Is the double penalty it found real? That one matters most.</li><li>Would you defend every remaining criterion to a parent?</li></ul>
 <h2>Diagnosis and misconceptions</h2></article>
-<article class="card"><div class="head"><span class="pid">AS-004</span><h3>Diagnose errors from anonymous work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-004"><div class="head"><span class="pid">AS-004</span><h3>Diagnose errors from anonymous work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A pile of wrong answers, and you want the reason rather than the count.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Here are the errors from a [GRADE] [SUBJECT] task on [TOPIC]. No names.
@@ -700,7 +726,7 @@ Where my description is not enough to tell two causes apart, say so and tell me
 what to look for rather than guessing.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the explanation of their thinking match what you saw?</li><li>Where it said it could not tell, do you know how to find out?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-028</span><h3>Code anonymous responses by misconception rather than score alone</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-028"><div class="head"><span class="pid">AS-028</span><h3>Code anonymous responses by misconception rather than score alone</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Turning a stack of scripts into groups you can teach.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me sort a set of [GRADE] [SUBJECT] responses on [TOPIC] by what students
@@ -720,7 +746,7 @@ Give me:
 Keep the codes few enough to hold in my head while marking.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can you assign a script in a few seconds using these markers?</li><li>Is the same-score-different-code example one you recognise?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-030</span><h3>Distinguish a careless slip from a conceptual misunderstanding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-030"><div class="head"><span class="pid">AS-030</span><h3>Distinguish a careless slip from a conceptual misunderstanding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Reteaching a concept someone already understands wastes everyone's time.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] error on [TOPIC] — [DESCRIBE IT] — help me tell
@@ -740,7 +766,7 @@ me what else to look at in the work.
 Do not assume it is a slip because the student is usually strong.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does the thirty-second question avoid leading them?</li><li>Are the written signs ones you can actually see in the work?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-029</span><h3>Build flexible reteaching groups from response patterns</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-029"><div class="head"><span class="pid">AS-029</span><h3>Build flexible reteaching groups from response patterns</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Three groups, one lesson, and no permanent labels.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>From these [GRADE] [SUBJECT] response patterns on [TOPIC], build reteaching
@@ -762,7 +788,7 @@ These groups exist for one lesson. Tell me what would make me dissolve them.
 No student names anywhere in this.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could the class decode the grouping? Change it if so.</li><li>Does the group you leave alone have real work?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-031</span><h3>Create targeted mini-tasks for three misconception groups</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-031"><div class="head"><span class="pid">AS-031</span><h3>Create targeted mini-tasks for three misconception groups</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Fifteen minutes, three different problems, one room.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write three 15-minute mini-tasks, one for each of these [GRADE] [SUBJECT]
@@ -786,7 +812,7 @@ All three should be startable without me explaining them, since I can only be
 in one place.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does each task genuinely break the wrong idea?</li><li>Can students start all three without you?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-032</span><h3>Plan a reassessment that shows whether reteaching worked</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-032"><div class="head"><span class="pid">AS-032</span><h3>Plan a reassessment that shows whether reteaching worked</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You retaught it. Now you need to know if that changed anything.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a reassessment after reteaching [TOPIC] to [GRADE] [SUBJECT].
@@ -806,7 +832,7 @@ assessments is too short for the result to mean anything.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a student pass by remembering your reteaching examples?</li><li>Is the timing gap it recommended workable for you?</li></ul>
 <h2>Answer keys and feedback</h2></article>
-<article class="card"><div class="head"><span class="pid">AS-033</span><h3>Create a complete worked answer key from verified questions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-033"><div class="head"><span class="pid">AS-033</span><h3>Create a complete worked answer key from verified questions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A key you could hand to a cover teacher or a student.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a full worked answer key for the [GRADE] [SUBJECT] questions below.
@@ -828,7 +854,7 @@ QUESTIONS:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Work every answer yourself. This is the highest-risk prompt in the chapter.</li><li>Take the flagged uncertain items seriously.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-034</span><h3>Write actionable feedback matched to common response patterns</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-034"><div class="head"><span class="pid">AS-034</span><h3>Write actionable feedback matched to common response patterns</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Thirty pieces of feedback that are specific without writing thirty essays.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] task on [TOPIC], write reusable feedback matched to
@@ -848,7 +874,7 @@ only, and never a comment a student cannot act on by themselves.
 Then tell me which pattern needs a conversation rather than written feedback.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could the student act on this alone?</li><li>Is anything here about effort rather than the work?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-035</span><h3>Audit an answer key for mathematical, factual and scoring errors</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-035"><div class="head"><span class="pid">AS-035</span><h3>Audit an answer key for mathematical, factual and scoring errors</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before you mark thirty papers against it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Check this [GRADE] [SUBJECT] answer key against its questions.
@@ -870,7 +896,7 @@ QUESTIONS AND KEY:
 [PASTE THEM]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Verify anything it calls an error, yourself. It can be wrong too.</li><li>Decide the arguable answers before you start marking, not during.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-036</span><h3>Create learner-friendly solution explanations without hiding reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-036"><div class="head"><span class="pid">AS-036</span><h3>Create learner-friendly solution explanations without hiding reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Solutions a student can learn from, rather than copy.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite these [GRADE] [SUBJECT] solutions so a student can learn from them.
@@ -892,7 +918,7 @@ SOLUTIONS:
 <p class="lbl">Before you send it</p>
 <ul><li>Any "obviously" left in?</li><li>Would a stuck student get unstuck from this, or just copy it?</li></ul>
 <h2>Standards-based grading</h2></article>
-<article class="card"><div class="head"><span class="pid">AS-037</span><h3>Map assessment evidence to supplied standards and objectives</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-037"><div class="head"><span class="pid">AS-037</span><h3>Map assessment evidence to supplied standards and objectives</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Reporting against standards, from work you already have.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Map this [GRADE] [SUBJECT] assessment to the standards below.
@@ -915,7 +941,7 @@ STANDARDS: [PASTE THE EXACT WORDING]
 ASSESSMENT: [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are you reporting on any standard it called thinly evidenced?</li><li>Does the mapping use your standard's real wording?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-038</span><h3>Create a standards-based proficiency scale with observable evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-038"><div class="head"><span class="pid">AS-038</span><h3>Create a standards-based proficiency scale with observable evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A scale that describes learning rather than counting marks.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a proficiency scale for this [GRADE] [SUBJECT] standard:
@@ -935,7 +961,7 @@ Then tell me the level most often assigned too generously, and what to look for
 to avoid that.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could you place a real student using only these descriptions?</li><li>Is the over-generous level one you recognise in your own marking?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-039</span><h3>Summarize class mastery without averaging unrelated skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="AS-039"><div class="head"><span class="pid">AS-039</span><h3>Summarize class mastery without averaging unrelated skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A single average hides everything that matters.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Summarise where my [GRADE] [SUBJECT] class stands on these standards, from this
@@ -957,7 +983,7 @@ Give me:
 Say plainly where the evidence is too thin to report on at all.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do you agree with teaching problem versus assessment problem?</li><li>Are you reporting anything it called too thin?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">AS-040</span><h3>Audit a standards-based grade summary for missing or weak evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="AS-040"><div class="head"><span class="pid">AS-040</span><h3>Audit a standards-based grade summary for missing or weak evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before the grades go out and someone asks how you decided.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] standards-based summary.

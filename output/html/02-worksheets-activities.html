@@ -4,12 +4,15 @@
   --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
   --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
   --pad:26px; --radius:10px;
+  --serif:'Bitstream Charter','Charter',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Liberation Sans',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,'DejaVu Sans Mono',Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font:16px/1.7 var(--sans);
   font-feature-settings:"kern","liga";
 }
 .wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
@@ -41,6 +44,7 @@ th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
    text-transform:uppercase; border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+td:first-child a{text-decoration:none}
 
 /* ---- prompt card ------------------------------------------------------- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -48,7 +52,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
 .card > *:last-child{margin-bottom:0}
 .head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
       flex-wrap:wrap}
-.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+.pid{font:600 .78rem/1 var(--mono); letter-spacing:.06em;
      color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
      flex:none}
 .meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
@@ -74,7 +78,7 @@ td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tab
    measure reaches the right edge of the box instead of stopping short. */
 .box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
          word-break:break-word; color:#d5dfe9;
-         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+         font:14.6px/1.6 var(--mono)}
 
 blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
   background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
@@ -89,40 +93,62 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
-        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
-        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
-  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee8;
+        --ink:#172033; --dim:#5b6775; --faint:#6d7883;
+        --accent:#0f6e68; --accent-dim:#a8ccc6; --warn:#8a6510}
+  @page{size:A4; margin:20mm 17mm 18mm}
+  body{font-size:10.6pt; line-height:1.58; color:var(--ink); background:#fff;
+       font-family:var(--serif)}
   .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
-  h3{font-size:11.2pt; break-after:avoid}
   p,li{orphans:3; widows:3}
+
+  /* The chapter opener sits on the first body page, under the cover. */
+  h1{font-family:var(--serif); font-size:19pt; font-weight:700; letter-spacing:-.01em;
+     color:var(--navy,#183153); margin:0 0 3pt}
+  .lede{font-family:var(--sans); font-size:8.5pt; letter-spacing:.13em; max-width:none;
+        text-transform:uppercase; color:var(--accent); margin:0 0 16pt;
+        padding-bottom:10pt; border-bottom:2px solid var(--accent)}
+  h2{font-family:var(--sans); font-size:8pt; letter-spacing:.15em; margin:22pt 0 9pt;
+     break-after:avoid; padding-bottom:5pt; border-bottom:1px solid var(--line)}
+  h3{font-family:var(--serif); font-size:12.5pt; font-weight:700; break-after:avoid;
+     color:#101a26}
 
   /* One prompt per page: you look a prompt up, you get a clean page.
      The section heading shares its page with the first prompt under it. */
   .card{break-before:page; page-break-before:always; break-inside:auto;
         padding:0; border:0; border-radius:0; margin:0}
-  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
-        page-break-before:auto}
-  .head{break-after:avoid}
+  /* A group heading starts a fresh page and keeps its first prompt with it.
+     :has() limits this to headings that actually introduce a prompt, so the
+     chapter opener's own headings stay where they are. */
+  h2:has(+ .card){break-before:page; page-break-before:always; margin-top:0}
+  h2 + .card{break-before:auto; page-break-before:auto}
+  .head{break-inside:avoid; break-after:avoid; display:block; margin-bottom:2pt}
+  .pid{display:block; background:none; color:var(--accent); padding:0;
+       font:700 8.4pt/1 var(--sans); letter-spacing:.16em; margin-bottom:3pt}
+  .meta{font-family:var(--sans); font-size:8pt; color:var(--faint); margin:0 0 12pt;
+        padding-bottom:9pt; border-bottom:1px solid var(--line)}
+  .lbl{font-family:var(--sans); font-size:7pt; letter-spacing:.15em;
+       margin:13pt 0 5pt; color:var(--dim)}
 
   /* The prompt itself stays whole. */
-  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
-       border:1px solid #c9d6d3; margin-bottom:10pt}
-  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
-  .bar span{font-size:7pt; color:var(--accent)}
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f5f8f8;
+       border:1px solid #cfe0dd; border-left:3pt solid var(--accent);
+       border-radius:3pt; margin-bottom:10pt}
+  .bar{background:#e6f0ee; padding:5pt 10pt; border-bottom:1px solid #cfe0dd}
+  .bar span{font-family:var(--sans); font-size:6.8pt; color:var(--accent)}
   /* 78-character measure sized to reach the right margin */
   .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
-           white-space:pre-wrap; overflow:visible}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
-       letter-spacing:.05em}
-  .meta{font-size:8pt; margin-bottom:9pt}
-  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+           white-space:pre-wrap; overflow:visible; font-family:var(--mono)}
+
   blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
-             break-inside:avoid; color:#4a3a12}
-  table{font-size:8.8pt; break-inside:avoid}
+             border-radius:3pt; break-inside:avoid; color:#4a3a12;
+             font-family:var(--sans); font-size:9pt}
+  table{font-size:8.8pt; break-inside:avoid; font-family:var(--sans)}
   th,td{padding:5pt 8pt}
+  th{font-size:6.8pt}
+  code{background:#eef2f5; border:1px solid var(--line); font-family:var(--mono)}
+  a{color:var(--accent); text-decoration:none}
 }
 </style></head><body><div class="wrap"><h1>Chapter 2 — Worksheets and Activities</h1><p class="lede">40 prompts</p><p>The difference between a worksheet that teaches and one that fills time is whether the difficulty is deliberate. These prompts build practice that ramps — starting where the class actually is, ending where you want them — and activities that keep running when you are on the other side of the room.</p>
 <h2>What's in here</h2>
@@ -139,7 +165,7 @@ blockquote strong{color:var(--warn)}
 <p>Say how long students have. A worksheet built without a time limit is always too long.</p>
 <p>For anything students do in groups, ask what you should look for while walking around. That line is usually the most useful part of the output.</p>
 <h2>Practice worksheets</h2>
-<article class="card"><div class="head"><span class="pid">WA-001</span><h3>Build a focused practice worksheet</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-001"><div class="head"><span class="pid">WA-001</span><h3>Build a focused practice worksheet</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Independent practice on one skill, that gets harder in the right order.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a practice worksheet on [SKILL] for [GRADE] [SUBJECT].
@@ -164,7 +190,7 @@ Give me:
 Do not pad the sheet to fill a page.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Work the answer key yourself before photocopying.</li><li>Does difficulty rise one step at a time, or jump?</li><li>Can it honestly be finished in the time you gave?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-005</span><h3>Create practice that moves from a model to independent work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-005"><div class="head"><span class="pid">WA-005</span><h3>Create practice that moves from a model to independent work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The gap between "we did it together" and "now do it alone" keeps losing people.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a [GRADE] [SUBJECT] practice sheet on [SKILL] that fades support across
@@ -183,7 +209,7 @@ Give me the sheet as students see it, the answer key, and one line telling me
 what it means if a student can do stage 2 but not stage 4.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the content difficulty genuinely constant across the four stages?</li><li>Does the worked example show the thinking, or just the steps?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-006</span><h3>Write a worksheet that targets one common misconception</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-006"><div class="head"><span class="pid">WA-006</span><h3>Write a worksheet that targets one common misconception</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You know exactly what they are getting wrong and want to go straight at it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>My [GRADE] [SUBJECT] students are making this error on [TOPIC]:
@@ -205,7 +231,7 @@ Do not simply re-explain the correct method. The sheet should make the wrong
 idea break in front of them.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do the "accidentally right" items genuinely work that way? Check them.</li><li>Is the fictional student's error the one your class actually makes?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-007</span><h3>Build mixed practice that requires learners to choose a strategy</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-007"><div class="head"><span class="pid">WA-007</span><h3>Build mixed practice that requires learners to choose a strategy</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>They can do each method when told which one. Not when they have to decide.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a mixed practice sheet for [GRADE] [SUBJECT] covering these methods:
@@ -226,7 +252,7 @@ Give me:
 Tell me which pair of methods students most often confuse here.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the order genuinely mixed, or does a pattern creep back in?</li><li>Does the "more than one works" item actually have two valid routes?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-008</span><h3>Create a short retrieval worksheet for previously taught skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-008"><div class="head"><span class="pid">WA-008</span><h3>Create a short retrieval worksheet for previously taught skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Keeping older learning alive without spending a lesson on it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a 10-minute retrieval sheet for [GRADE] [SUBJECT].
@@ -249,7 +275,7 @@ Do not introduce anything new. If a topic I listed needs something students have
 not been taught, say so instead of including it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is anything here new content in disguise?</li><li>Are the older topics ones you genuinely taught this class?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-009</span><h3>Design an application worksheet using realistic classroom contexts</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-009"><div class="head"><span class="pid">WA-009</span><h3>Design an application worksheet using realistic classroom contexts</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Word problems that do not insult the reader.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an application worksheet on [SKILL] for [GRADE] [SUBJECT].
@@ -270,7 +296,7 @@ Keep the reading demand appropriate for [GRADE]. If a context needs background
 knowledge some students may not have, flag it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do any contexts assume money, travel, or a kind of home life?</li><li>Is the reading level right for your weakest reader?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-010</span><h3>Adapt a worksheet for black-and-white printing and limited space</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-010"><div class="head"><span class="pid">WA-010</span><h3>Adapt a worksheet for black-and-white printing and limited space</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>One page, one side, and the colour printer is a fantasy.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rework the worksheet below so it prints on one side of one sheet in black and
@@ -294,7 +320,7 @@ WORKSHEET:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the writing space enough for actual handwriting?</li><li>Print one copy on the real photocopier before running thirty.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-011</span><h3>Create an error-analysis worksheet from fictional student work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-011"><div class="head"><span class="pid">WA-011</span><h3>Create an error-analysis worksheet from fictional student work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Finding the mistake teaches more than avoiding it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an error-analysis worksheet on [TOPIC] for [GRADE] [SUBJECT].
@@ -315,7 +341,7 @@ instead. Give me the answers.
 Then tell me which of the four is hardest to diagnose, and why.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are the errors realistic ones your students make?</li><li>Is the "correct but unusual" one genuinely correct? Check it.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-012</span><h3>Write a worksheet with foundation, application and reasoning sections</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-012"><div class="head"><span class="pid">WA-012</span><h3>Write a worksheet with foundation, application and reasoning sections</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>One sheet the whole class can work on at their own depth.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a three-section worksheet on [TOPIC] for [GRADE] [SUBJECT].
@@ -337,7 +363,7 @@ Keep section 3 accessible to a student who found section 1 hard — it should
 demand different thinking, not more of the same.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a student who struggled in section 1 still attempt section 3?</li><li>Do the sections test different things, or the same thing three times?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-013</span><h3>Audit and repair a worksheet whose questions are repetitive or unclear</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-013"><div class="head"><span class="pid">WA-013</span><h3>Audit and repair a worksheet whose questions are repetitive or unclear</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The sheet exists. It is not working and you are not sure why.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] worksheet.
@@ -359,7 +385,7 @@ WORKSHEET:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do you agree the flagged items are genuinely redundant?</li><li>Do the rewrites still test what you wanted?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-002</span><h3>Design four learning stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-002"><div class="head"><span class="pid">WA-002</span><h3>Design four learning stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>One topic, four ways in, one period.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design 4 stations on [TOPIC] for [GRADE] [SUBJECT], [MINUTES] minutes each.
@@ -382,7 +408,7 @@ Flag anything needing materials I have not listed.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can a group genuinely run each station without you?</li><li>Do the four stations fit the materials you actually have?</li></ul>
 <h2>Learning stations</h2></article>
-<article class="card"><div class="head"><span class="pid">WA-014</span><h3>Create hands-on, reading, discussion and writing stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-014"><div class="head"><span class="pid">WA-014</span><h3>Create hands-on, reading, discussion and writing stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want four genuinely different kinds of thinking, not four worksheets.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build 4 stations on [TOPIC] for [GRADE] [SUBJECT] where each demands a
@@ -402,7 +428,7 @@ The four should build on each other in any order — a student should not need t
 do the reading station before the hands-on one.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do the four genuinely demand different thinking?</li><li>Does any station secretly depend on doing another one first?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-015</span><h3>Plan station rotations for a large class and small room</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-015"><div class="head"><span class="pid">WA-015</span><h3>Plan station rotations for a large class and small room</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Thirty-two students, a room built for twenty-four, and you still want stations.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>I have [NUMBER] students in a room that is [DESCRIBE THE SPACE — desks fixed or
@@ -422,7 +448,7 @@ Do not assume I can move furniture. If the plan needs a bigger room, say so and
 give me the best version that fits this one.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Do the walking routes actually work in your room?</li><li>Is transition time counted in, or bolted on at the end?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-016</span><h3>Build self-checking stations that do not depend on the teacher</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-016"><div class="head"><span class="pid">WA-016</span><h3>Build self-checking stations that do not depend on the teacher</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want to be at one station, not answering "is this right?" from four.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design [NUMBER] stations on [TOPIC] for [GRADE] [SUBJECT] where students can
@@ -442,7 +468,7 @@ Then tell me which station will still generate questions for me, and what those
 questions will be.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can a student get the answer without doing the work?</li><li>Can you build every check from paper this week?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-017</span><h3>Create one quiet station and three collaborative stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-017"><div class="head"><span class="pid">WA-017</span><h3>Create one quiet station and three collaborative stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Some students need to work in silence, and that should not be a punishment.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design 4 stations on [TOPIC] for [GRADE] [SUBJECT]: three collaborative and one
@@ -461,7 +487,7 @@ Give me:
 Do not label it as being for anyone in particular.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Would a student see the quiet station as a downgrade?</li><li>Can a student choose it without drawing attention?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-018</span><h3>Differentiate station access while preserving one shared objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-018"><div class="head"><span class="pid">WA-018</span><h3>Differentiate station access while preserving one shared objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Same destination, different entry points, one discussion at the end.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For these [GRADE] [SUBJECT] stations on [TOPIC], build in different entry points
@@ -483,7 +509,7 @@ STATIONS:
 [PASTE THEM, or describe the topic and I will design them]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could the class decode which version is "the easy one"?</li><li>Does the closing discussion genuinely include all three?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-019</span><h3>Design a teacher-led reteaching station from exit-ticket evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-019"><div class="head"><span class="pid">WA-019</span><h3>Design a teacher-led reteaching station from exit-ticket evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You have ten minutes with the group that needs you, while the rest run stations.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Last lesson&#x27;s exit ticket on [TOPIC] showed this pattern in [GRADE] [SUBJECT]:
@@ -504,7 +530,7 @@ Assume I cannot see the rest of the room properly while I am doing this — tell
 me what to set up beforehand so it survives my not looking.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is ten minutes realistic for this reteach?</li><li>Is the rest of the room genuinely self-sufficient for that long?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-020</span><h3>Audit station directions, timing, materials and accountability</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-020"><div class="head"><span class="pid">WA-020</span><h3>Audit station directions, timing, materials and accountability</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before you laminate eight cards and find out on the day.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit these [GRADE] [SUBJECT] stations.
@@ -528,7 +554,7 @@ STATIONS:
 <p class="lbl">Before you send it</p>
 <ul><li>Do you agree with which station it called weakest?</li><li>Is the timing judgement based on your class, or an ideal one?</li></ul>
 <h2>Collaborative tasks</h2></article>
-<article class="card"><div class="head"><span class="pid">WA-003</span><h3>Create an accountable group task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-003"><div class="head"><span class="pid">WA-003</span><h3>Create an accountable group task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Group work where one student cannot carry the other three.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [MINUTES]-minute group task on [TOPIC] for [GRADE] [SUBJECT], groups
@@ -548,7 +574,7 @@ Tell me plainly whether a passenger could still get through this task. If yes,
 fix it before giving me the final version.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could one strong student do the whole thing alone? Redesign if so.</li><li>Does every student leave something with their own name on it?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-021</span><h3>Design a jigsaw task where every learner holds essential information</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-021"><div class="head"><span class="pid">WA-021</span><h3>Design a jigsaw task where every learner holds essential information</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Everyone is necessary, and the task proves it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a jigsaw task on [TOPIC] for [GRADE] [SUBJECT].
@@ -568,7 +594,7 @@ Give me:
 No piece should be obviously the easy one or obviously the important one.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are the pieces genuinely equal in difficulty?</li><li>Is the final task truly impossible from one piece? Try it.</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-022</span><h3>Build a group investigation with rotating cognitive roles</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="WA-022"><div class="head"><span class="pid">WA-022</span><h3>Build a group investigation with rotating cognitive roles</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Roles that mean thinking, not roles that mean stationery.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a group investigation into [QUESTION] for [GRADE] [SUBJECT], groups of
@@ -587,7 +613,7 @@ For each role give me:
 Then tell me when roles rotate, and what students carry over when they change.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is every role about thinking, or is one just admin?</li><li>Would a shy student be able to perform their role?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-023</span><h3>Create a consensus task that requires evidence and disagreement</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<article class="card" id="WA-023"><div class="head"><span class="pid">WA-023</span><h3>Create a consensus task that requires evidence and disagreement</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want them to argue about the content, properly.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a consensus task on [TOPIC] for [GRADE] [SUBJECT] where groups must
@@ -607,7 +633,7 @@ becoming personal, and what I look for while circulating.
 Do not choose a question where one answer is obviously right.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the question genuinely arguable, or is there a right answer?</li><li>Is the supplied evidence enough to argue from?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-024</span><h3>Turn an individual worksheet into meaningful collaborative reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-024"><div class="head"><span class="pid">WA-024</span><h3>Turn an individual worksheet into meaningful collaborative reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The worksheet is fine. Doing it in pairs would be better than doing it twice.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Convert this [GRADE] [SUBJECT] worksheet into a task worth doing in pairs.
@@ -631,7 +657,7 @@ WORKSHEET:
 [PASTE IT]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the pair version better, or just louder?</li><li>Does each student still leave individual evidence?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-025</span><h3>Audit a group task for participation, access and individual evidence</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-025"><div class="head"><span class="pid">WA-025</span><h3>Audit a group task for participation, access and individual evidence</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>It looked collaborative. You are not sure it was.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] group task.
@@ -652,7 +678,7 @@ TASK:
 <p class="lbl">Before you send it</p>
 <ul><li>Do you agree with what it said about passengers?</li><li>Are you comfortable with how little individual evidence there is?</li></ul>
 <h2>Review games</h2></article>
-<article class="card"><div class="head"><span class="pid">WA-004</span><h3>Build a review game that measures learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-004"><div class="head"><span class="pid">WA-004</span><h3>Build a review game that measures learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A game that also tells you who is ready for the test.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [MINUTES]-minute review game on [TOPIC] for [GRADE] [SUBJECT],
@@ -672,7 +698,7 @@ Give me:
 No speed-based scoring — it rewards the fast, not the correct.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does every student answer every question, or only the loud ones?</li><li>Can you actually record anything while running it?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-026</span><h3>Create a no-speed review game using mini-whiteboards</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-026"><div class="head"><span class="pid">WA-026</span><h3>Create a no-speed review game using mini-whiteboards</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Everyone answers, you see all thirty at once, nobody is racing.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a mini-whiteboard review game on [TOPIC] for [GRADE] [SUBJECT].
@@ -691,7 +717,7 @@ Give me:
 Tell me which questions to keep if I only get through half.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Are the answers short enough to read at a distance?</li><li>Does your response to a wrong board avoid singling anyone out?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-027</span><h3>Design a team review game with individual accountability</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-027"><div class="head"><span class="pid">WA-027</span><h3>Design a team review game with individual accountability</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Teams, but the strong student cannot answer for everyone.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a team review game on [TOPIC] for [GRADE] [SUBJECT], teams of [NUMBER].
@@ -711,7 +737,7 @@ Give me:
 Nobody is eliminated and no team is out of the running before the end.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Would a struggling student find the selection method frightening?</li><li>Is there real reason for teams to teach each other?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-028</span><h3>Build a misconception challenge using diagnostic distractors</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-028"><div class="head"><span class="pid">WA-028</span><h3>Build a misconception challenge using diagnostic distractors</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A game where the wrong answers are the whole point.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a review activity on [TOPIC] for [GRADE] [SUBJECT] built from
@@ -730,7 +756,7 @@ Then tell me the three misconceptions most worth a follow-up lesson, and what
 that lesson would open with.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Can you name the thinking behind every wrong option?</li><li>Are these misconceptions your class actually has?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-029</span><h3>Create a low-prep review game with paper question cards</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-029"><div class="head"><span class="pid">WA-029</span><h3>Create a low-prep review game with paper question cards</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Tomorrow morning, scissors, and nothing else.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a review game on [TOPIC] for [GRADE] [SUBJECT] needing nothing but
@@ -749,7 +775,7 @@ Tell me exactly how long the printing and cutting will take. If it is more than
 fifteen minutes, simplify it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the prep honestly under fifteen minutes?</li><li>Can students check answers without you?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-030</span><h3>Audit a review game for fairness, accuracy and useful teacher data</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-030"><div class="head"><span class="pid">WA-030</span><h3>Audit a review game for fairness, accuracy and useful teacher data</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>It was fun. You are not sure it taught or told you anything.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] review game.
@@ -769,7 +795,7 @@ GAME:
 <p class="lbl">Before you send it</p>
 <ul><li>Check any question it flagged as wrong, yourself.</li><li>Are you willing to lose some of the fun for the information?</li></ul>
 <h2>Homework sets</h2></article>
-<article class="card"><div class="head"><span class="pid">WA-031</span><h3>Create a short homework set with a clear purpose</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-031"><div class="head"><span class="pid">WA-031</span><h3>Create a short homework set with a clear purpose</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Homework that is worth the argument it causes at home.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a homework set on [TOPIC] for [GRADE] [SUBJECT], designed to take
@@ -791,7 +817,7 @@ materials a household may not have.
 If [MINUTES] is not enough for the purpose, tell me rather than overfilling it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Time it honestly. Homework always takes longer than planned.</li><li>Could a student with no help at home complete this?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-032</span><h3>Build homework that mixes retrieval and current learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-032"><div class="head"><span class="pid">WA-032</span><h3>Build homework that mixes retrieval and current learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Keeping the old alive while practising the new.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a homework set for [GRADE] [SUBJECT] mixing:
@@ -811,7 +837,7 @@ Give me:
 Total time: [MINUTES]. Do not exceed it.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Is the older material genuinely taught to this class?</li><li>Does the mix fit the time?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-033</span><h3>Design homework with a meaningful no-internet option</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-033"><div class="head"><span class="pid">WA-033</span><h3>Design homework with a meaningful no-internet option</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Not every student has a device or a connection, and that is not their fault.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a homework task on [TOPIC] for [GRADE] [SUBJECT] in two versions of
@@ -830,7 +856,7 @@ Do not put the paper version in brackets as an alternative. Print both as equal
 choices.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Would a student feel marked out by choosing paper?</li><li>Are the two genuinely equal in demand?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-034</span><h3>Create a family-readable homework guide without requiring family teaching</h3></div><p class="meta">Grades K-2, 3-5</p>
+<article class="card" id="WA-034"><div class="head"><span class="pid">WA-034</span><h3>Create a family-readable homework guide without requiring family teaching</h3></div><p class="meta">Grades K-2, 3-5</p>
 <p class="lbl">When you need this</p>
 <p>Families want to help, and should not have to teach the method.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a short note to families explaining tonight&#x27;s [GRADE] [SUBJECT] homework
@@ -850,7 +876,7 @@ Under 150 words. Written for any adult, at any reading level, in any home
 situation. Do not assume a parent, a quiet room, or subject knowledge.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Does it assume a parent rather than any adult?</li><li>Is "stop after X minutes" permission clear enough to be believed?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-035</span><h3>Audit a homework set for workload, access and answer-key accuracy</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-035"><div class="head"><span class="pid">WA-035</span><h3>Audit a homework set for workload, access and answer-key accuracy</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before thirty families spend an evening on it.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] homework set.
@@ -871,7 +897,7 @@ HOMEWORK:
 <p class="lbl">Before you send it</p>
 <ul><li>Verify any answer it flagged, yourself.</li><li>Is the realistic timing closer to the truth than yours was?</li></ul>
 <h2>Project briefs</h2></article>
-<article class="card"><div class="head"><span class="pid">WA-036</span><h3>Write a student-ready project brief from a supplied objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-036"><div class="head"><span class="pid">WA-036</span><h3>Write a student-ready project brief from a supplied objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A brief students can follow without asking you what it means.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a project brief for [GRADE] [SUBJECT], to run over [TIME].
@@ -890,7 +916,7 @@ Write it for students, not for me. Include:
 Keep it to one page. If the objective is too large for [TIME], say so.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a student start without asking you a question?</li><li>Is the learning listed before the presentation?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-037</span><h3>Create project milestones, checkpoints and submission requirements</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-037"><div class="head"><span class="pid">WA-037</span><h3>Create project milestones, checkpoints and submission requirements</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>So you find out in week two, not the night before it is due.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Break this [TIME] [GRADE] [SUBJECT] project into milestones.
@@ -909,7 +935,7 @@ PROJECT:
 [PASTE THE BRIEF]</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Two minutes per group — is that honest for your class size?</li><li>Is the first checkpoint early enough to rescue a bad start?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-038</span><h3>Design a choice-based project with equivalent learning demands</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-038"><div class="head"><span class="pid">WA-038</span><h3>Design a choice-based project with equivalent learning demands</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Real choice, without one option being obviously the easy one.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design [NUMBER] project options on [TOPIC] for [GRADE] [SUBJECT], all evidencing
@@ -930,7 +956,7 @@ whether they are right. If they are, fix that option.
 None should need resources a student may not have at home.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Which would you pick if you wanted to do least? Fix that one.</li><li>Does any option need equipment from home?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-039</span><h3>Build a group-project brief with individual evidence of mastery</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card" id="WA-039"><div class="head"><span class="pid">WA-039</span><h3>Build a group-project brief with individual evidence of mastery</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A group grade that does not hide who learned what.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a group project brief for [GRADE] [SUBJECT] on [TOPIC], groups of
@@ -951,7 +977,7 @@ Give me:
 Tell me honestly whether a passenger could pass. If yes, change the design.</pre></div>
 <p class="lbl">Before you send it</p>
 <ul><li>Could a passenger pass? That is the whole test of this brief.</li><li>Is the individual component quick enough to mark for every student?</li></ul></article>
-<article class="card"><div class="head"><span class="pid">WA-040</span><h3>Audit a project brief for clarity, feasibility and privacy</h3></div><p class="meta">All grades</p>
+<article class="card" id="WA-040"><div class="head"><span class="pid">WA-040</span><h3>Audit a project brief for clarity, feasibility and privacy</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before you hand it out and spend three weeks answering questions.</p>
 <div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] project brief.
