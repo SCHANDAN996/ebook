@@ -11,6 +11,34 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
+TITLE = "The Teacher AI Toolkit"
+
+COVER = """
+<section class="cover">
+  <h1 class="covertitle">The Teacher AI Toolkit</h1>
+  <p class="coversub">300 copy-paste prompts and 12 multi-step workflows<br>
+     for K-12 classroom teachers</p>
+  <p class="coverline">Works in ChatGPT, Claude and Gemini.<br>
+     Ten chapters. Open only the one you need.</p>
+</section>
+"""
+
+COMPLETE_CSS = """
+.cover{min-height:88vh; display:flex; flex-direction:column; justify-content:center;
+  border-bottom:1px solid var(--line); margin-bottom:3rem; padding-bottom:3rem}
+.covertitle{font-size:3rem; line-height:1.08; letter-spacing:-.03em; margin:0 0 1.2rem}
+.coversub{font-size:1.15rem; color:var(--accent); margin:0 0 2.4rem; text-align:left}
+.coverline{color:var(--dim); font-size:.95rem; text-align:left; margin:0}
+h1.chap{font-size:2rem; margin:0 0 .4rem}
+@media print{
+  .cover{min-height:auto; height:210mm; break-after:page; page-break-after:always;
+         border:0; margin:0; padding:0; justify-content:center}
+  .covertitle{font-size:32pt} .coversub{font-size:13pt} .coverline{font-size:10pt}
+  h1.chap{font-size:22pt; break-before:page; page-break-before:always}
+  .cover + h1.chap{break-before:auto; page-break-before:auto}
+}
+"""
+
 
 CSS = """
 :root{
@@ -320,6 +348,27 @@ def preflight():
     return bad
 
 
+def build_complete(pages):
+    """One file with everything, for buyers who want a single download."""
+    parts = []
+    for name, src in pages:
+        text = src.read_text()
+        title = re.search(r"^# (.+)", text).group(1)
+        body = text.split("\n", 1)[1]
+        m = re.match(r"\s*\*\*(.+?)\*\*\s*\n", body)
+        lede = m.group(1) if m else ""
+        if m:
+            body = body[m.end():]
+        parts.append(f'<h1 class="chap">{html.escape(title)}</h1>'
+                     + (f'<p class="lede">{html.escape(lede)}</p>' if lede else "")
+                     + render_page(body))
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            f'<title>{html.escape(TITLE)}</title><style>{CSS}{COMPLETE_CSS}</style>'
+            f'</head><body><div class="wrap">{COVER}'
+            + "\n".join(parts) + f"</div><script>{JS}</script></body></html>")
+
+
 def main():
     for problem in preflight():
         print("  ! %s" % problem)
@@ -344,7 +393,9 @@ def main():
             + (f'<p class="lede">{html.escape(lede)}</p>' if lede else "")
             + render_page(body)
             + f"</div><script>{JS}</script></body></html>", encoding="utf-8")
-    print(f"  {len(pages)} HTML pages (dark)")
+    (ROOT / "output/html/teacher-ai-toolkit-complete.html").write_text(
+        build_complete(pages), encoding="utf-8")
+    print(f"  {len(pages)} HTML pages + 1 complete edition")
 
     try:
         from playwright.sync_api import sync_playwright
