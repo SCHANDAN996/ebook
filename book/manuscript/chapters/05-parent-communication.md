@@ -1,2704 +1,1305 @@
-# Chapter 5: Parent Communication
+# Chapter 5 — Parent Communication
 
-Family communication works best when it is specific, respectful and actionable. These 30
-prompts cover positive notes, academic concerns, conference preparation, newsletters,
-permissions, logistics and difficult conversations. They are drafting tools—not permission
-to send unverified text.
+**30 prompts**
 
-## How to use this chapter
+The email you have been putting off is usually the one where the facts are clear
+but the tone is not. These prompts separate the two: state what happened, describe
+what you have already tried, make one specific ask — and leave out everything you
+cannot actually know.
 
-Provide only facts you are authorized to use. Separate observation from interpretation:
-“two of four tasks were submitted” is evidence; “does not care” is an unsupported judgment.
-Include a genuine strength where relevant, explain the concern plainly and offer one
-manageable next step. Preserve exact dates and availability rather than allowing the model
-to improvise them.
+## What's in here
 
-## Before sending
+| Group | Prompts | Use when |
+|---|---|---|
+| Positive notes | 6 | The highest-return five minutes in teaching |
+| Concern emails | 6 | Something needs saying, carefully |
+| Conference preparation | 5 | Ten minutes each, twenty-four families |
+| Newsletters | 4 | Rough notes into something readable |
+| Permissions and logistics | 4 | Trips, forms, deadlines |
+| Clear and accessible language | 3 | Plain wording, any reading level |
+| Difficult conversations | 2 | When it is already tense |
 
-Confirm the recipient, student name, pronouns, dates, attachments, time zone and school
-policy. Read the message aloud to check tone. Remove diagnoses, threats and promises outside
-your authority. Never paste confidential student records into an AI system unless your
-school has explicitly approved that system and workflow.
+## Worth knowing before you start
 
+Describe behaviour, never character. "Three tasks are not recorded as submitted"
+is a fact. "He is unmotivated" is a guess about a child you are writing to their
+family about.
+
+Do not let it infer a home cause. If it writes "with support at home this will
+improve", cut that line — you do not know what home looks like.
+
+Read the draft as the parent, at 8am, on a phone. Anything that reads as blame
+will be answered as blame.
+
+Ask for a shorter version too. Many families will not read past four lines.
+
+## Every prompt in this chapter
+
+### Positive Notes
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-001 | Write a specific positive family message | All |
+| PC-005 | Share academic growth using one concrete classroom example | 3-5, 6-8, 9-12 |
+| PC-006 | Recognize a learner's helpful contribution without using labels | 3-5, 6-8, 9-12 |
+| PC-007 | Write a brief celebration message suitable for a mobile screen | 3-5, 6-8, 9-12 |
+| PC-008 | Create a positive note that invites the learner's own reflection | 3-5, 6-8, 9-12 |
+| PC-009 | Build a reusable strength-note template with visible evidence fields | 3-5, 6-8, 9-12 |
+
+### Concern Emails
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-002 | Communicate an academic concern with a next step | All |
+| PC-010 | Write a missing-work message using dates and verified counts | 3-5, 6-8, 9-12 |
+| PC-011 | Explain a recurring learning difficulty without diagnosing its cause | 3-5, 6-8, 9-12 |
+| PC-012 | Request a brief family check-in with two exact scheduling options | 3-5, 6-8, 9-12 |
+| PC-013 | Revise a blaming concern email into factual collaborative language | 3-5, 6-8, 9-12 |
+| PC-014 | Audit a concern message for evidence, tone and unsupported claims | 3-5, 6-8, 9-12 |
+
+### Conference Preparation
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-003 | Prepare a balanced family conference | All |
+| PC-015 | Build a 15-minute conference agenda around learning evidence | 3-5, 6-8, 9-12 |
+| PC-016 | Prepare questions that invite family and student perspective | 3-5, 6-8, 9-12 |
+| PC-017 | Turn classroom evidence into a shared action-plan table | 3-5, 6-8, 9-12 |
+| PC-018 | Write a factual post-conference summary with owners and dates | 3-5, 6-8, 9-12 |
+
+### Newsletters
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-004 | Draft a useful class newsletter | All |
+| PC-019 | Create a concise weekly learning update for families | 3-5, 6-8, 9-12 |
+| PC-020 | Rewrite a newsletter as a mobile-friendly plain-text version | 3-5, 6-8, 9-12 |
+| PC-021 | Audit a class newsletter for dates, jargon, access and action items | 3-5, 6-8, 9-12 |
+
+### Permissions And Logistics
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-022 | Draft a permission notice from verified trip or event details | 3-5, 6-8, 9-12 |
+| PC-023 | Create a clear family checklist for materials, dates and return forms | 3-5, 6-8, 9-12 |
+| PC-024 | Write a schedule-change notice without inventing school policy | 3-5, 6-8, 9-12 |
+| PC-025 | Audit a logistics message for missing consent, safety and contact details | 3-5, 6-8, 9-12 |
+
+### Clear And Accessible Language
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-026 | Rewrite school language in plain family-friendly English | 3-5, 6-8, 9-12 |
+| PC-027 | Create a translation-ready message using short unambiguous sentences | 3-5, 6-8, 9-12 |
+| PC-028 | Audit a family message for jargon, idioms and hidden assumptions | 3-5, 6-8, 9-12 |
+
+### Difficult Conversations
+
+| ID | Prompt | Grades |
+|---|---|---|
+| PC-029 | Prepare a calm conversation about a repeated classroom concern | 3-5, 6-8, 9-12 |
+| PC-030 | Create a fact-based communication plan for disagreement with a family | 3-5, 6-8, 9-12 |
 
 ---
 
-
----
-{
-  "id": "PC-001",
-  "slug": "write-a-specific-positive-family-message",
-  "chapter": "parent-communication",
-  "subtopic": "positive-notes",
-  "title": "Write a specific positive family message",
-  "grade_bands": ["K-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
 ---
 
-# Write a specific positive family message
+### PC-001 · Write a specific positive family message
 
-## Use this when
+*All grades  ·  Any subject*
+
+> **Handle with care.** Read the safety page before using this one.
+
+**When you need this**
 
 You want to share genuine, evidence-based progress.
 
-## Teacher inputs
-
-- `[STUDENT_LABEL_OR_PLACEHOLDER]`
-- `[GRADE_AND_SUBJECT]`
-- `[OBSERVED_ACTION]`
-- `[LEARNING_OR_COMMUNITY_IMPACT]`
-- `[TONE]`
-- `[LENGTH]`
-- `[LANGUAGE]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Write a specific positive family message.
 
-Teacher inputs:
-- `[STUDENT_LABEL_OR_PLACEHOLDER]`
-- `[GRADE_AND_SUBJECT]`
-- `[OBSERVED_ACTION]`
-- `[LEARNING_OR_COMMUNITY_IMPACT]`
-- `[TONE]`
-- `[LENGTH]`
-- `[LANGUAGE]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [OBSERVED_STRENGTH: supply verified information; do not leave blank]
+- [SPECIFIC_EVIDENCE: supply verified information; do not leave blank]
+- [CHANNEL: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Draft a warm message grounded only in supplied evidence.
+Specific requirements:
+Write a brief positive message anchored to one observation. Avoid adding a concern or unsupported personality claim.
 
-Required output:
-Return: subject line; full message; 50-word version. Keep praise specific, avoid labels, preserve placeholders, and invite—not require—a reply.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Entirely fictional case: Learner A; Grade 7 science; connected two classmates' ideas during a food-web discussion; helped the group revise its model; warm; under 140 words.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative email — all names and details are fictional**
+**Example** — an editorial illustration, not a logged AI run
 
-**Subject: Science progress and brief check-in**
-
-Dear Family,
-
-In this entirely fictional example, Learner A regularly contributes thoughtful ideas
-during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
-four invented practice tasks. Written reminders and additional classroom time were also
-part of this invented scenario; two fictional tasks remain.
-
-Could we arrange a 10-minute call to make a manageable completion plan? I am available
-at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
-
-Sincerely,
-
-[TEACHER NAME]
-
-[SCHOOL CONTACT]
-
-**Teacher check:** Verify recipients, dates, assignment record, time zone and school
-communication policy before sending.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Dear Family, Today, [LEARNER] supported a science discussion claim with two details from the class text. This is a useful step toward explaining ideas with evidence. You could invite them to tell you which detail they found most convincing. Best, [TEACHER]. Add identities only in the approved local system. This positive note does not invent a recurring pattern from one observation.
 
 ---
 
+### PC-002 · Communicate an academic concern with a next step
 
----
-{
-  "id": "PC-002",
-  "slug": "communicate-an-academic-concern-with-a-next-step",
-  "chapter": "parent-communication",
-  "subtopic": "concern-emails",
-  "title": "Communicate an academic concern with a next step",
-  "grade_bands": ["K-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*All grades  ·  Any subject*
 
-# Communicate an academic concern with a next step
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
 A family needs clear facts and a manageable path forward.
 
-## Teacher inputs
-
-- `[STUDENT_LABEL_OR_PLACEHOLDER]`
-- `[GRADE_AND_SUBJECT]`
-- `[STRENGTH_EVIDENCE]`
-- `[CONCERN_EVIDENCE_AND_DATES]`
-- `[SUPPORT_ALREADY_OFFERED]`
-- `[REQUESTED_NEXT_STEP]`
-- `[AVAILABLE_CONTACT_OPTIONS]`
-- `[TONE_AND_LENGTH]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Communicate an academic concern with a next step.
 
-Teacher inputs:
-- `[STUDENT_LABEL_OR_PLACEHOLDER]`
-- `[GRADE_AND_SUBJECT]`
-- `[STRENGTH_EVIDENCE]`
-- `[CONCERN_EVIDENCE_AND_DATES]`
-- `[SUPPORT_ALREADY_OFFERED]`
-- `[REQUESTED_NEXT_STEP]`
-- `[AVAILABLE_CONTACT_OPTIONS]`
-- `[TONE_AND_LENGTH]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [VERIFIED_CONCERN: supply verified information; do not leave blank]
+- [SUPPORT_TRIED: supply verified information; do not leave blank]
+- [NEXT_STEP: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Write a factual, collaborative message without blame, diagnosis or invented context.
+Specific requirements:
+State the concern factually, describe support and invite collaboration. Do not infer home causes or promise improvement.
 
-Required output:
-Return: neutral subject; full email; brief version; factual consistency check. Separate observation from interpretation and retain all scheduling details exactly.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Entirely fictional case: Learner A; Grade 7 science; thoughtful discussion contributions; 2 of 4 invented practice tasks submitted over two weeks; fictional written reminders and extra class time; 10-minute call; [OPTION 1] or [OPTION 2].
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative email — all names and details are fictional**
+**Example** — an editorial illustration, not a logged AI run
 
-**Subject: Science progress and brief check-in**
-
-Dear Family,
-
-In this entirely fictional example, Learner A regularly contributes thoughtful ideas
-during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
-four invented practice tasks. Written reminders and additional classroom time were also
-part of this invented scenario; two fictional tasks remain.
-
-Could we arrange a 10-minute call to make a manageable completion plan? I am available
-at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
-
-Sincerely,
-
-[TEACHER NAME]
-
-[SCHOOL CONTACT]
-
-**Teacher check:** Verify recipients, dates, assignment record, time zone and school
-communication policy before sending.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Dear Family, Two practice tasks, dated September 1 and September 3, are not yet recorded as submitted. I have offered a ten-minute in-class catch-up opportunity. Could you let me know if there is information that would help us plan the next step? Best, [TEACHER]. Verify the submission record before sending. Do not infer refusal, home support or motivation.
 
 ---
 
+### PC-003 · Prepare a balanced family conference
 
----
-{
-  "id": "PC-003",
-  "slug": "prepare-a-balanced-family-conference",
-  "chapter": "parent-communication",
-  "subtopic": "conference-preparation",
-  "title": "Prepare a balanced family conference",
-  "grade_bands": ["K-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*All grades  ·  Any subject*
 
-# Prepare a balanced family conference
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an evidence-led conversation that ends with shared actions.
+Choose this focused tool when your immediate task is to prepare a balanced family conference.
 
-## Teacher inputs
-
-- `[GRADE_AND_SUBJECT]`
-- `[STRENGTH_EVIDENCE]`
-- `[LEARNING_EVIDENCE]`
-- `[ATTENDANCE_OR_BEHAVIOR_FACTS_IF_RELEVANT]`
-- `[SUPPORTS_TRIED]`
-- `[FAMILY_INPUT_TO_SEEK]`
-- `[MEETING_LENGTH]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Prepare a balanced family conference.
 
-Teacher inputs:
-- `[GRADE_AND_SUBJECT]`
-- `[STRENGTH_EVIDENCE]`
-- `[LEARNING_EVIDENCE]`
-- `[ATTENDANCE_OR_BEHAVIOR_FACTS_IF_RELEVANT]`
-- `[SUPPORTS_TRIED]`
-- `[FAMILY_INPUT_TO_SEEK]`
-- `[MEETING_LENGTH]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [STRENGTH: supply verified information; do not leave blank]
+- [CONCERN: supply verified information; do not leave blank]
+- [CONFERENCE_MINUTES: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Create a conference agenda and talking points without speculating about causes.
+Specific requirements:
+Build an agenda that balances evidence and family perspective. Leave agreed actions blank until agreement actually occurs.
 
-Required output:
-Return: opening; evidence summary; work samples to bring; 3 family questions; student-voice question; shared plan table with owner/date/evidence; follow-up message; statements to avoid.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Grade 5 mathematics; accurate computation but explanations incomplete; three anonymized work samples; 15-minute conference.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative email — all names and details are fictional**
+**Example** — an editorial illustration, not a logged AI run
 
-**Subject: Science progress and brief check-in**
-
-Dear Family,
-
-In this entirely fictional example, Learner A regularly contributes thoughtful ideas
-during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
-four invented practice tasks. Written reminders and additional classroom time were also
-part of this invented scenario; two fictional tasks remain.
-
-Could we arrange a 10-minute call to make a manageable completion plan? I am available
-at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
-
-Sincerely,
-
-[TEACHER NAME]
-
-[SCHOOL CONTACT]
-
-**Teacher check:** Verify recipients, dates, assignment record, time zone and school
-communication policy before sending.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Agenda: welcome and purpose 2 minutes; review one diagram and explanation 4; listen to family and learner perspective 4; discuss one support 3; confirm next step 2. Proposed support: use an evidence-linking sentence frame in class. Agreement, owner and review date remain blank until discussed. Do not present a proposed plan as already accepted by the family.
 
 ---
 
+### PC-004 · Draft a useful class newsletter
 
----
-{
-  "id": "PC-004",
-  "slug": "draft-a-useful-class-newsletter",
-  "chapter": "parent-communication",
-  "subtopic": "newsletters",
-  "title": "Draft a useful class newsletter",
-  "grade_bands": ["K-8"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*All grades  ·  Any subject*
 
-# Draft a useful class newsletter
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
 Families need a concise update they can act on.
 
-## Teacher inputs
-
-- `[GRADE_AND_CLASS]`
-- `[DATE_RANGE]`
-- `[LEARNING_HIGHLIGHTS]`
-- `[UPCOMING_DATES]`
-- `[AT_HOME_OPTION]`
-- `[MATERIALS_OR_PERMISSION_NEEDED]`
-- `[CONTACT_PLACEHOLDER]`
-- `[LANGUAGE_AND_LENGTH]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Draft a useful class newsletter.
 
-Teacher inputs:
-- `[GRADE_AND_CLASS]`
-- `[DATE_RANGE]`
-- `[LEARNING_HIGHLIGHTS]`
-- `[UPCOMING_DATES]`
-- `[AT_HOME_OPTION]`
-- `[MATERIALS_OR_PERMISSION_NEEDED]`
-- `[CONTACT_PLACEHOLDER]`
-- `[LANGUAGE_AND_LENGTH]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [VERIFIED_CLASS_NEWS: supply verified information; do not leave blank]
+- [DATES: supply verified information; do not leave blank]
+- [ACTIONS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Draft an accessible newsletter with no invented dates or requirements.
+Specific requirements:
+Organize learning highlights, upcoming dates and required actions. Exclude individual student information from a class-wide newsletter.
 
-Required output:
-Return: scannable newsletter; plain-text mobile version; translation-ready version with short sentences; missing-information flags; final date/links checklist.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Grade 3; October 5-9; multiplication arrays and plant needs; museum form due [DATE]; optional array hunt at home; under 300 words.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative email — all names and details are fictional**
+**Example** — an editorial illustration, not a logged AI run
 
-**Subject: Science progress and brief check-in**
-
-Dear Family,
-
-In this entirely fictional example, Learner A regularly contributes thoughtful ideas
-during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
-four invented practice tasks. Written reminders and additional classroom time were also
-part of this invented scenario; two fictional tasks remain.
-
-Could we arrange a 10-minute call to make a manageable completion plan? I am available
-at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
-
-Sincerely,
-
-[TEACHER NAME]
-
-[SCHOOL CONTACT]
-
-**Teacher check:** Verify recipients, dates, assignment record, time zone and school
-communication policy before sending.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+This week: We used equal-sized models to explore fractions. Next week: We will compare fractions and explain our choices. Action: Please return class library books on Friday. Optional conversation: Ask your learner why the size of the whole matters. Confirm the actual calendar date before sending. No learner names, scores or identifiable stories belong in the class-wide version.
 
 ---
 
+### PC-005 · Share academic growth using one concrete classroom example
 
----
-{
-  "id": "PC-005",
-  "slug": "share-academic-growth-using-one-concrete-classroom-example",
-  "chapter": "parent-communication",
-  "subtopic": "positive-notes",
-  "title": "Share academic growth using one concrete classroom example",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Share academic growth using one concrete classroom example
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on positive notes.
+Choose this focused tool when your immediate task is to share academic growth using one concrete classroom example.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Share academic growth using one concrete classroom example.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [EARLIER_EVIDENCE: supply verified information; do not leave blank]
+- [LATER_EVIDENCE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Share academic growth using one concrete classroom example. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Describe growth only where observations are comparable. State the specific change without extrapolating overall progress.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], positive notes; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative email — all names and details are fictional**
+**Example** — an editorial illustration, not a logged AI run
 
-**Subject: Science progress and brief check-in**
-
-Dear Family,
-
-In this entirely fictional example, Learner A regularly contributes thoughtful ideas
-during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
-four invented practice tasks. Written reminders and additional classroom time were also
-part of this invented scenario; two fictional tasks remain.
-
-Could we arrange a 10-minute call to make a manageable completion plan? I am available
-at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
-
-Sincerely,
-
-[TEACHER NAME]
-
-[SCHOOL CONTACT]
-
-**Teacher check:** Verify recipients, dates, assignment record, time zone and school
-communication policy before sending.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Dear Family, In the later writing task, [LEARNER] explained how two source details supported the claim. In the earlier comparable task, the explanation listed a detail without explaining the connection. The next classroom step is to evaluate which evidence is strongest. This describes a specific change in these tasks, not a claim about every piece of writing.
 
 ---
 
+### PC-006 · Recognize a learner's helpful contribution without using labels
 
----
-{
-  "id": "PC-006",
-  "slug": "recognize-a-learner-s-helpful-contribution-without-using-labels",
-  "chapter": "parent-communication",
-  "subtopic": "positive-notes",
-  "title": "Recognize a learner's helpful contribution without using labels",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Recognize a learner's helpful contribution without using labels
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on positive notes.
+Choose this focused tool when your immediate task is to recognize a learner's helpful contribution without using labels.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Recognize a learner's helpful contribution without using labels.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [HELPFUL_ACTION: supply verified information; do not leave blank]
+- [OBSERVED_IMPACT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Recognize a learner's helpful contribution without using labels. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Recognize the action and its classroom impact. Avoid labels such as natural leader or best student.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], positive notes; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative email — all names and details are fictional**
+**Example** — an editorial illustration, not a logged AI run
 
-**Subject: Science progress and brief check-in**
-
-Dear Family,
-
-In this entirely fictional example, Learner A regularly contributes thoughtful ideas
-during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
-four invented practice tasks. Written reminders and additional classroom time were also
-part of this invented scenario; two fictional tasks remain.
-
-Could we arrange a 10-minute call to make a manageable completion plan? I am available
-at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
-
-Sincerely,
-
-[TEACHER NAME]
-
-[SCHOOL CONTACT]
-
-**Teacher check:** Verify recipients, dates, assignment record, time zone and school
-communication policy before sending.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Dear Family, Today, [LEARNER] explained our materials-return routine to a partner, and the pair was then able to begin the next task. I wanted to recognize that helpful action. Best, [TEACHER]. The note names an observed contribution without labelling the learner a natural leader, always helpful or better than classmates.
 
 ---
 
+### PC-007 · Write a brief celebration message suitable for a mobile screen
 
----
-{
-  "id": "PC-007",
-  "slug": "write-a-brief-celebration-message-suitable-for-a-mobile-screen",
-  "chapter": "parent-communication",
-  "subtopic": "positive-notes",
-  "title": "Write a brief celebration message suitable for a mobile screen",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Write a brief celebration message suitable for a mobile screen
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on positive notes.
+Choose this focused tool when your immediate task is to write a brief celebration message suitable for a mobile screen.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Write a brief celebration message suitable for a mobile screen.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [POSITIVE_EVENT: supply verified information; do not leave blank]
+- [CHARACTER_LIMIT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Write a brief celebration message suitable for a mobile screen. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Write one mobile-sized celebration with the supplied fact and a clear closing. Report character count without changing evidence.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], positive notes; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-008 · Create a positive note that invites the learner's own reflection
 
----
-{
-  "id": "PC-008",
-  "slug": "create-a-positive-note-that-invites-the-learner-s-own-reflection",
-  "chapter": "parent-communication",
-  "subtopic": "positive-notes",
-  "title": "Create a positive note that invites the learner's own reflection",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a positive note that invites the learner's own reflection
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on positive notes.
+Choose this focused tool when your immediate task is to create a positive note that invites the learner's own reflection.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a positive note that invites the learner's own reflection.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [OBSERVATION: supply verified information; do not leave blank]
+- [REFLECTION_INVITATION: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a positive note that invites the learner's own reflection. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Pair a positive observation with an optional learner reflection question. Do not invent what the learner feels or thinks.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], positive notes; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-009 · Build a reusable strength-note template with visible evidence fields
 
----
-{
-  "id": "PC-009",
-  "slug": "build-a-reusable-strength-note-template-with-visible-evidence-fields",
-  "chapter": "parent-communication",
-  "subtopic": "positive-notes",
-  "title": "Build a reusable strength-note template with visible evidence fields",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Build a reusable strength-note template with visible evidence fields
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on positive notes.
+Choose this focused tool when your immediate task is to build a reusable strength-note template with visible evidence fields.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Build a reusable strength-note template with visible evidence fields.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [STRENGTH_CATEGORIES: supply verified information; do not leave blank]
+- [EVIDENCE_FIELDS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Build a reusable strength-note template with visible evidence fields. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Build reusable sentence slots, not ready-to-send claims. Keep evidence placeholders mandatory and visibly unresolved.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], positive notes; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-010 · Write a missing-work message using dates and verified counts
 
----
-{
-  "id": "PC-010",
-  "slug": "write-a-missing-work-message-using-dates-and-verified-counts",
-  "chapter": "parent-communication",
-  "subtopic": "concern-emails",
-  "title": "Write a missing-work message using dates and verified counts",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Write a missing-work message using dates and verified counts
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on concern emails.
+Choose this focused tool when your immediate task is to write a missing-work message using dates and verified counts.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Write a missing-work message using dates and verified counts.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [VERIFIED_COUNTS: supply verified information; do not leave blank]
+- [ASSIGNMENT_DATES: supply verified information; do not leave blank]
+- [RECOVERY_OPTION: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Write a missing-work message using dates and verified counts. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Separate missing, late and ungraded work. Verify totals and avoid treating absence of submission as proof of refusal.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], concern emails; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-011 · Explain a recurring learning difficulty without diagnosing its cause
 
----
-{
-  "id": "PC-011",
-  "slug": "explain-a-recurring-learning-difficulty-without-diagnosing-its-cause",
-  "chapter": "parent-communication",
-  "subtopic": "concern-emails",
-  "title": "Explain a recurring learning difficulty without diagnosing its cause",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Explain a recurring learning difficulty without diagnosing its cause
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on concern emails.
+Choose this focused tool when your immediate task is to explain a recurring learning difficulty without diagnosing its cause.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Explain a recurring learning difficulty without diagnosing its cause.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [REPEATED_OBSERVATIONS: supply verified information; do not leave blank]
+- [SUPPORTS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Explain a recurring learning difficulty without diagnosing its cause. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Describe the learning difficulty and response to support. Do not name a disability or explain a cause from limited evidence.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], concern emails; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-012 · Request a brief family check-in with two exact scheduling options
 
----
-{
-  "id": "PC-012",
-  "slug": "request-a-brief-family-check-in-with-two-exact-scheduling-options",
-  "chapter": "parent-communication",
-  "subtopic": "concern-emails",
-  "title": "Request a brief family check-in with two exact scheduling options",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Request a brief family check-in with two exact scheduling options
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on concern emails.
+Choose this focused tool when your immediate task is to request a brief family check-in with two exact scheduling options.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Request a brief family check-in with two exact scheduling options.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [TWO_CONFIRMED_SLOTS: supply verified information; do not leave blank]
+- [TIMEZONE: supply verified information; do not leave blank]
+- [CHANNEL: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Request a brief family check-in with two exact scheduling options. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Offer exactly the supplied slots with timezone and response route. Leave dates unfilled when availability is not confirmed.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], concern emails; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-013 · Revise a blaming concern email into factual collaborative language
 
----
-{
-  "id": "PC-013",
-  "slug": "revise-a-blaming-concern-email-into-factual-collaborative-language",
-  "chapter": "parent-communication",
-  "subtopic": "concern-emails",
-  "title": "Revise a blaming concern email into factual collaborative language",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Revise a blaming concern email into factual collaborative language
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on concern emails.
+Choose this focused tool when your immediate task is to revise a blaming concern email into factual collaborative language.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Revise a blaming concern email into factual collaborative language.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [DRAFT_EMAIL: supply verified information; do not leave blank]
+- [VERIFIED_FACTS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Revise a blaming concern email into factual collaborative language. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Remove blame while retaining the material concern. Return original phrase, revision and reason; do not soften away important facts.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], concern emails; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-014 · Audit a concern message for evidence, tone and unsupported claims
 
----
-{
-  "id": "PC-014",
-  "slug": "audit-a-concern-message-for-evidence-tone-and-unsupported-claims",
-  "chapter": "parent-communication",
-  "subtopic": "concern-emails",
-  "title": "Audit a concern message for evidence, tone and unsupported claims",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit a concern message for evidence, tone and unsupported claims
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on concern emails.
+Choose this focused tool when your immediate task is to audit a concern message for evidence, tone and unsupported claims.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit a concern message for evidence, tone and unsupported claims.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [MESSAGE: supply verified information; do not leave blank]
+- [EVIDENCE_RECORD: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit a concern message for evidence, tone and unsupported claims. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Trace factual sentences to evidence and flag assumptions. Return send/hold recommendation with specific unresolved details.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], concern emails; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-015 · Build a 15-minute conference agenda around learning evidence
 
----
-{
-  "id": "PC-015",
-  "slug": "build-a-15-minute-conference-agenda-around-learning-evidence",
-  "chapter": "parent-communication",
-  "subtopic": "conference-preparation",
-  "title": "Build a 15-minute conference agenda around learning evidence",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Build a 15-minute conference agenda around learning evidence
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on conference preparation.
+Choose this focused tool when your immediate task is to build a 15-minute conference agenda around learning evidence.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Build a 15-minute conference agenda around learning evidence.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CONFERENCE_PRIORITY: supply verified information; do not leave blank]
+- [FIFTEEN_MINUTES: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Build a 15-minute conference agenda around learning evidence. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Allocate 15 minutes among evidence, listening and next steps. Include a follow-up route for issues that cannot fit.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], conference preparation; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-016 · Prepare questions that invite family and student perspective
 
----
-{
-  "id": "PC-016",
-  "slug": "prepare-questions-that-invite-family-and-student-perspective",
-  "chapter": "parent-communication",
-  "subtopic": "conference-preparation",
-  "title": "Prepare questions that invite family and student perspective",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Prepare questions that invite family and student perspective
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on conference preparation.
+Choose this focused tool when your immediate task is to prepare questions that invite family and student perspective.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Prepare questions that invite family and student perspective.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CONFERENCE_TOPIC: supply verified information; do not leave blank]
+- [KNOWN_EVIDENCE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Prepare questions that invite family and student perspective. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Write open, non-leading questions for family and student voice. Offer a right to decline personal disclosure.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], conference preparation; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-017 · Turn classroom evidence into a shared action-plan table
 
----
-{
-  "id": "PC-017",
-  "slug": "turn-classroom-evidence-into-a-shared-action-plan-table",
-  "chapter": "parent-communication",
-  "subtopic": "conference-preparation",
-  "title": "Turn classroom evidence into a shared action-plan table",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Turn classroom evidence into a shared action-plan table
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on conference preparation.
+Choose this focused tool when your immediate task is to turn classroom evidence into a shared action-plan table.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Turn classroom evidence into a shared action-plan table.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [PROPOSED_ACTIONS: supply verified information; do not leave blank]
+- [CONFIRMED_OWNERS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Turn classroom evidence into a shared action-plan table. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Create an action table with proposed versus agreed status. Do not present suggestions as family commitments.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], conference preparation; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-018 · Write a factual post-conference summary with owners and dates
 
----
-{
-  "id": "PC-018",
-  "slug": "write-a-factual-post-conference-summary-with-owners-and-dates",
-  "chapter": "parent-communication",
-  "subtopic": "conference-preparation",
-  "title": "Write a factual post-conference summary with owners and dates",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Write a factual post-conference summary with owners and dates
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on conference preparation.
+Choose this focused tool when your immediate task is to write a factual post-conference summary with owners and dates.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Write a factual post-conference summary with owners and dates.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [MEETING_NOTES: supply verified information; do not leave blank]
+- [AGREEMENTS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Write a factual post-conference summary with owners and dates. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Separate agreed actions, open questions and follow-up dates. Ask for corrections without claiming unanimous agreement.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], conference preparation; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-019 · Create a concise weekly learning update for families
 
----
-{
-  "id": "PC-019",
-  "slug": "create-a-concise-weekly-learning-update-for-families",
-  "chapter": "parent-communication",
-  "subtopic": "newsletters",
-  "title": "Create a concise weekly learning update for families",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a concise weekly learning update for families
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on newsletters.
+Choose this focused tool when your immediate task is to create a concise weekly learning update for families.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a concise weekly learning update for families.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [WEEKLY_LEARNING: supply verified information; do not leave blank]
+- [NEXT_WEEK_ACTIONS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a concise weekly learning update for families. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Create a concise class update with three sections and no individual results. Prioritize actions over promotional adjectives.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], newsletters; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-020 · Rewrite a newsletter as a mobile-friendly plain-text version
 
----
-{
-  "id": "PC-020",
-  "slug": "rewrite-a-newsletter-as-a-mobile-friendly-plain-text-version",
-  "chapter": "parent-communication",
-  "subtopic": "newsletters",
-  "title": "Rewrite a newsletter as a mobile-friendly plain-text version",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Rewrite a newsletter as a mobile-friendly plain-text version
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on newsletters.
+Choose this focused tool when your immediate task is to rewrite a newsletter as a mobile-friendly plain-text version.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Rewrite a newsletter as a mobile-friendly plain-text version.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [NEWSLETTER: supply verified information; do not leave blank]
+- [MOBILE_LIMIT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Rewrite a newsletter as a mobile-friendly plain-text version. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Rewrite for a small screen using short sections. Preserve dates, costs and required actions exactly.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], newsletters; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-021 · Audit a class newsletter for dates, jargon, access and action items
 
----
-{
-  "id": "PC-021",
-  "slug": "audit-a-class-newsletter-for-dates-jargon-access-and-action-items",
-  "chapter": "parent-communication",
-  "subtopic": "newsletters",
-  "title": "Audit a class newsletter for dates, jargon, access and action items",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit a class newsletter for dates, jargon, access and action items
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on newsletters.
+Choose this focused tool when your immediate task is to audit a class newsletter for dates, jargon, access and action items.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit a class newsletter for dates, jargon, access and action items.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [NEWSLETTER: supply verified information; do not leave blank]
+- [VERIFIED_CALENDAR: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit a class newsletter for dates, jargon, access and action items. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Audit conflicting dates, jargon, inaccessible formats and hidden action requests. Return corrections and unresolved confirmations.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], newsletters; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-022 · Draft a permission notice from verified trip or event details
 
----
-{
-  "id": "PC-022",
-  "slug": "draft-a-permission-notice-from-verified-trip-or-event-details",
-  "chapter": "parent-communication",
-  "subtopic": "permissions-and-logistics",
-  "title": "Draft a permission notice from verified trip or event details",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Draft a permission notice from verified trip or event details
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on permissions & logistics.
+Choose this focused tool when your immediate task is to draft a permission notice from verified trip or event details.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Draft a permission notice from verified trip or event details.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [OFFICIAL_EVENT_DETAILS: supply verified information; do not leave blank]
+- [APPROVED_FORM: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Draft a permission notice from verified trip or event details. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Draft the notice, not a legally sufficient consent form. Refer to the school's approved permission process and leave unknowns flagged.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], permissions & logistics; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-023 · Create a clear family checklist for materials, dates and return forms
 
----
-{
-  "id": "PC-023",
-  "slug": "create-a-clear-family-checklist-for-materials-dates-and-return-forms",
-  "chapter": "parent-communication",
-  "subtopic": "permissions-and-logistics",
-  "title": "Create a clear family checklist for materials, dates and return forms",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a clear family checklist for materials, dates and return forms
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on permissions & logistics.
+Choose this focused tool when your immediate task is to create a clear family checklist for materials, dates and return forms.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a clear family checklist for materials, dates and return forms.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [MATERIALS: supply verified information; do not leave blank]
+- [DEADLINES: supply verified information; do not leave blank]
+- [RETURN_ITEMS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a clear family checklist for materials, dates and return forms. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Make an action checklist ordered by deadline. Offer a contact route for access needs without requesting medical details in replies to public AI.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], permissions & logistics; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-024 · Write a schedule-change notice without inventing school policy
 
----
-{
-  "id": "PC-024",
-  "slug": "write-a-schedule-change-notice-without-inventing-school-policy",
-  "chapter": "parent-communication",
-  "subtopic": "permissions-and-logistics",
-  "title": "Write a schedule-change notice without inventing school policy",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Write a schedule-change notice without inventing school policy
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on permissions & logistics.
+Choose this focused tool when your immediate task is to write a schedule-change notice without inventing school policy.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Write a schedule-change notice without inventing school policy.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [OLD_SCHEDULE: supply verified information; do not leave blank]
+- [CONFIRMED_NEW_SCHEDULE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Write a schedule-change notice without inventing school policy. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Explain exactly what changed, what did not and what families must do. Never invent the reason or school policy.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], permissions & logistics; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-025 · Audit a logistics message for missing consent, safety and contact details
 
----
-{
-  "id": "PC-025",
-  "slug": "audit-a-logistics-message-for-missing-consent-safety-and-contact-details",
-  "chapter": "parent-communication",
-  "subtopic": "permissions-and-logistics",
-  "title": "Audit a logistics message for missing consent, safety and contact details",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit a logistics message for missing consent, safety and contact details
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on permissions & logistics.
+Choose this focused tool when your immediate task is to audit a logistics message for missing consent, safety and contact details.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit a logistics message for missing consent, safety and contact details.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [LOGISTICS_DRAFT: supply verified information; do not leave blank]
+- [OFFICIAL_REQUIREMENTS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit a logistics message for missing consent, safety and contact details. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Check consent references, safety contacts, cost and dates. Hold the message if essential authorization is missing.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], permissions & logistics; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-026 · Rewrite school language in plain family-friendly English
 
----
-{
-  "id": "PC-026",
-  "slug": "rewrite-school-language-in-plain-family-friendly-english",
-  "chapter": "parent-communication",
-  "subtopic": "clear-and-accessible-language",
-  "title": "Rewrite school language in plain family-friendly English",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Rewrite school language in plain family-friendly English
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on clear & accessible language.
+Choose this focused tool when your immediate task is to rewrite school language in plain family-friendly English.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Rewrite school language in plain family-friendly English.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [SCHOOL_MESSAGE: supply verified information; do not leave blank]
+- [READING_NEEDS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Rewrite school language in plain family-friendly English. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Replace jargon with plain language and define unavoidable terms. Preserve obligations and conditions without adding policy.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], clear & accessible language; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-027 · Create a translation-ready message using short unambiguous sentences
 
----
-{
-  "id": "PC-027",
-  "slug": "create-a-translation-ready-message-using-short-unambiguous-sentences",
-  "chapter": "parent-communication",
-  "subtopic": "clear-and-accessible-language",
-  "title": "Create a translation-ready message using short unambiguous sentences",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a translation-ready message using short unambiguous sentences
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on clear & accessible language.
+Choose this focused tool when your immediate task is to create a translation-ready message using short unambiguous sentences.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a translation-ready message using short unambiguous sentences.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [MESSAGE: supply verified information; do not leave blank]
+- [TARGET_LANGUAGE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a translation-ready message using short unambiguous sentences. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Prepare short unambiguous source sentences plus a terminology list. Require competent human translation review before sending.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], clear & accessible language; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-028 · Audit a family message for jargon, idioms and hidden assumptions
 
----
-{
-  "id": "PC-028",
-  "slug": "audit-a-family-message-for-jargon-idioms-and-hidden-assumptions",
-  "chapter": "parent-communication",
-  "subtopic": "clear-and-accessible-language",
-  "title": "Audit a family message for jargon, idioms and hidden assumptions",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit a family message for jargon, idioms and hidden assumptions
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on clear & accessible language.
+Choose this focused tool when your immediate task is to audit a family message for jargon, idioms and hidden assumptions.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit a family message for jargon, idioms and hidden assumptions.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [MESSAGE: supply verified information; do not leave blank]
+- [AUDIENCE_CONTEXT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit a family message for jargon, idioms and hidden assumptions. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Find idioms, assumptions about home resources and unexplained terminology. Suggest inclusive alternatives without stereotyping families.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], clear & accessible language; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-029 · Prepare a calm conversation about a repeated classroom concern
 
----
-{
-  "id": "PC-029",
-  "slug": "prepare-a-calm-conversation-about-a-repeated-classroom-concern",
-  "chapter": "parent-communication",
-  "subtopic": "difficult-conversations",
-  "title": "Prepare a calm conversation about a repeated classroom concern",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Prepare a calm conversation about a repeated classroom concern
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on difficult conversations.
+Choose this focused tool when your immediate task is to prepare a calm conversation about a repeated classroom concern.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Prepare a calm conversation about a repeated classroom concern.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [OBSERVABLE_CONCERN: supply verified information; do not leave blank]
+- [SCHOOL_PROCEDURE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Prepare a calm conversation about a repeated classroom concern. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Draft a calm opening, listening questions and proposed support. Stop for safeguarding concerns and follow the approved local process.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], difficult conversations; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### PC-030 · Create a fact-based communication plan for disagreement with a family
 
----
-{
-  "id": "PC-030",
-  "slug": "create-a-fact-based-communication-plan-for-disagreement-with-a-family",
-  "chapter": "parent-communication",
-  "subtopic": "difficult-conversations",
-  "title": "Create a fact-based communication plan for disagreement with a family",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a fact-based communication plan for disagreement with a family
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need a factual, respectful family communication draft focused on difficult conversations.
+Choose this focused tool when your immediate task is to create a fact-based communication plan for disagreement with a family.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a fact-based communication plan for disagreement with a family.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [POINTS_OF_DISAGREEMENT: supply verified information; do not leave blank]
+- [VERIFIED_RECORD: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a fact-based communication plan for disagreement with a family. Create a factual, respectful family communication draft using only the supplied inputs.
+Specific requirements:
+Separate facts, disputed accounts and requested decisions. Avoid legal advice, admissions or promises on behalf of the school.
 
-Required output:
-Return: subject line; full version; brief mobile version; supplied evidence; clear next step; invitation to respond; missing-information flags; tone and privacy audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], difficult conversations; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
-
----

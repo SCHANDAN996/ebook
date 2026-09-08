@@ -43,11 +43,11 @@ BATCH_DISCOUNT = 0.5
 # ---------------------------------------------------------------- product
 PRODUCT = {
     "title": "The Teacher AI Toolkit",
-    "subtitle": "Teacher-reviewed workflows: development edition",
-    "promise": "AI drafts require a teacher's review before classroom use.",
+    "subtitle": "300 copy-paste prompts and 12 multi-step workflows",
+    "promise": "Ten chapter files. Open only the one you need.",
     "audience": "K-12 classroom teachers",
     "support_email": "",
-    "support_url": "https://github.com/SCHANDAN996/ebook/issues",
+    "support_url": "CHANGE_ME - your landing page URL",
 }
 
 GRADE_BANDS = ["K-2", "3-5", "6-8", "9-12"]

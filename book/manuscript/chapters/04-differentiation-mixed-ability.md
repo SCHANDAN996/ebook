@@ -1,3086 +1,1498 @@
-# Chapter 4: Differentiation & Mixed Ability
+# Chapter 4 — Differentiation and Mixed Ability
 
-Differentiation should widen access without quietly replacing the learning goal. The 35
-prompts here help create temporary scaffolds, tiered routes, multilingual support, readable
-materials, extensions and flexible groups. They begin with observed barriers and classroom
-evidence—not assumptions about ability, motivation, disability or home language.
+**35 prompts**
 
-## How to use this chapter
+Differentiation fails when it becomes three separate lessons running in one room.
+These prompts keep one destination and change the route: same objective, same
+final discussion, different ways in.
 
-Name the common objective and the evidence every learner must ultimately produce. Describe
-what you observed: for example, learners can explain an idea orally but lose meaning in a
-dense paragraph. Ask for a support that addresses that barrier, plus a plan to fade it when
-independence grows.
+## What's in here
 
-## Equity check
+| Group | Prompts | Use when |
+|---|---|---|
+| Scaffolds | 8 | Same task, more support |
+| Tiered tasks | 7 | Three versions, one objective |
+| Multilingual support | 6 | Language load down, expectation unchanged |
+| Reading and accessibility | 6 | The text is the barrier, not the idea |
+| Extensions | 4 | Real work for early finishers |
+| Flexible grouping | 4 | Who sits with whom, and why |
 
-Compare the intellectual work across versions. A scaffold may reduce unnecessary language,
-organize steps or add a representation; it should not remove the essential reasoning.
-Extensions should deepen connection, justification or transfer instead of simply adding
-more questions. Grouping remains flexible and should change when new evidence changes the
-instructional need.
+## Worth knowing before you start
 
+**Never name a student.** Describe the need — "students reading about two years
+below grade level" — not the person.
+
+Ask for neutral names for the routes. "Route A, B, C" works; anything that reads
+as a ranking will be decoded by the class within one lesson.
+
+Push back if the extension is just more questions. Extension means harder
+thinking, not extra volume, and several prompts here say so explicitly.
+
+Whatever accommodation you supply must survive into the draft. Check that it did.
+
+## Every prompt in this chapter
+
+### Scaffolds
+
+| ID | Prompt | Grades |
+|---|---|---|
+| DF-001 | Add temporary scaffolds without lowering the goal | All |
+| DF-005 | Turn an observed barrier into a targeted support plan | 3-5, 6-8, 9-12 |
+| DF-006 | Create a graphic organizer that preserves essential reasoning | 3-5, 6-8, 9-12 |
+| DF-007 | Write sentence frames at three levels of language support | 3-5, 6-8, 9-12 |
+| DF-008 | Break a complex task into checkpoints without doing the thinking | 3-5, 6-8, 9-12 |
+| DF-009 | Add worked examples and prompts with a clear fade plan | 3-5, 6-8, 9-12 |
+| DF-010 | Create a scaffold menu learners can choose from responsibly | 3-5, 6-8, 9-12 |
+| DF-011 | Audit classroom supports for dependence and hidden lower expectations | 3-5, 6-8, 9-12 |
+
+### Tiered Tasks
+
+| ID | Prompt | Grades |
+|---|---|---|
+| DF-002 | Create three routes to the same objective | 3-5, 6-8, 9-12 |
+| DF-012 | Build scaffolded, on-level and extension versions of one task | 3-5, 6-8, 9-12 |
+| DF-013 | Tier a task by representation rather than by easier content | 3-5, 6-8, 9-12 |
+| DF-014 | Create three entry points with one common mastery product | 3-5, 6-8, 9-12 |
+| DF-015 | Design tiered questions that move from access to transfer | 3-5, 6-8, 9-12 |
+| DF-016 | Check that every tier carries equal curricular dignity | 3-5, 6-8, 9-12 |
+| DF-017 | Create a whole-class debrief that reconnects three task versions | 3-5, 6-8, 9-12 |
+
+### Multilingual Support
+
+| ID | Prompt | Grades |
+|---|---|---|
+| DF-003 | Make a task accessible to multilingual learners | All |
+| DF-018 | Identify the language demands hidden inside a subject task | 3-5, 6-8, 9-12 |
+| DF-019 | Build an essential vocabulary preview with visuals and examples | 3-5, 6-8, 9-12 |
+| DF-020 | Create structured partner rehearsal before independent writing | 3-5, 6-8, 9-12 |
+| DF-021 | Plan purposeful home-language use without assuming proficiency | 3-5, 6-8, 9-12 |
+| DF-022 | Separate content evidence from English-language evidence | 3-5, 6-8, 9-12 |
+
+### Reading And Accessibility
+
+| ID | Prompt | Grades |
+|---|---|---|
+| DF-004 | Adapt text access while preserving meaning | 3-5, 6-8, 9-12 |
+| DF-023 | Chunk a demanding source without rewriting its claims | 3-5, 6-8, 9-12 |
+| DF-024 | Create a plain-language companion beside the original text | 3-5, 6-8, 9-12 |
+| DF-025 | Add glossary, guiding questions and audio-access suggestions | 3-5, 6-8, 9-12 |
+| DF-026 | Reduce unnecessary reading load in a non-reading assessment | 3-5, 6-8, 9-12 |
+| DF-027 | Audit adapted materials for lost meaning or unsupported simplification | 3-5, 6-8, 9-12 |
+
+### Extensions
+
+| ID | Prompt | Grades |
+|---|---|---|
+| DF-028 | Create an extension that deepens reasoning instead of adding more work | 3-5, 6-8, 9-12 |
+| DF-029 | Build a transfer challenge using a new context | 3-5, 6-8, 9-12 |
+| DF-030 | Design an open-ended investigation with clear evidence expectations | 3-5, 6-8, 9-12 |
+| DF-031 | Audit an extension for novelty, rigor and connection to the objective | 3-5, 6-8, 9-12 |
+
+### Flexible Grouping
+
+| ID | Prompt | Grades |
+|---|---|---|
+| DF-032 | Build temporary groups from anonymous learning evidence | 3-5, 6-8, 9-12 |
+| DF-033 | Create a rotation plan for three changing instructional needs | 3-5, 6-8, 9-12 |
+| DF-034 | Plan mixed-readiness groups with meaningful roles and accountability | 3-5, 6-8, 9-12 |
+| DF-035 | Audit a grouping plan for labels, access, movement and regrouping triggers | 3-5, 6-8, 9-12 |
 
 ---
 
-
----
-{
-  "id": "DF-001",
-  "slug": "add-temporary-scaffolds-without-lowering-the-goal",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Add temporary scaffolds without lowering the goal",
-  "grade_bands": ["K-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
 ---
 
-# Add temporary scaffolds without lowering the goal
+### DF-001 · Add temporary scaffolds without lowering the goal
 
-## Use this when
+*All grades  ·  Any subject*
+
+> **Handle with care.** Read the safety page before using this one.
+
+**When you need this**
 
 Some learners need access support while keeping the same objective.
 
-## Teacher inputs
-
-- `[GRADE_BAND]`
-- `[SUBJECT_AND_TASK]`
-- `[UNCHANGED_OBJECTIVE]`
-- `[OBSERVED_BARRIERS: evidence only]`
-- `[AVAILABLE_SUPPORTS]`
-- `[TIME]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Add temporary scaffolds without lowering the goal.
 
-Teacher inputs:
-- `[GRADE_BAND]`
-- `[SUBJECT_AND_TASK]`
-- `[UNCHANGED_OBJECTIVE]`
-- `[OBSERVED_BARRIERS: evidence only]`
-- `[AVAILABLE_SUPPORTS]`
-- `[TIME]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [OBSERVED_BARRIER: supply verified information; do not leave blank]
+- [UNCHANGED_GOAL: supply verified information; do not leave blank]
+- [AVAILABLE_SUPPORT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Create fading scaffolds that preserve cognitive demand.
+Specific requirements:
+Map a temporary scaffold to the observed barrier and define evidence for fading it. Do not replace the target reasoning with completed answers.
 
-Required output:
-Return: barrier-to-support map; before/during/after scaffolds; teacher language; visual or sentence supports; checks for independence; fade plan; same-goal success criteria; warning if evidence is insufficient.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Grade 7 science; explain photosynthesis model; language load and diagram organization barriers; word bank and graphic organizer available.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Keep the goal: explain matter inputs and products with light as energy. Support: colour-independent arrow labels and a frame, Water and carbon dioxide are used to... . Learner supplies the explanation. Fade the frame on the next diagram when the learner can explain independently. Keep any required accommodation. Common check: identify one matter input and explain what light contributes.
 
 ---
 
+### DF-002 · Create three routes to the same objective
 
----
-{
-  "id": "DF-002",
-  "slug": "create-three-routes-to-the-same-objective",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Create three routes to the same objective",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create three routes to the same objective
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
 A mixed-readiness class needs different entry points and one shared destination.
 
-## Teacher inputs
-
-- `[GRADE_BAND]`
-- `[SUBJECT_AND_CORE_TASK]`
-- `[COMMON_OBJECTIVE]`
-- `[EVIDENCE_OF_MASTERY]`
-- `[READINESS_EVIDENCE]`
-- `[TIME_AND_MATERIALS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create three routes to the same objective.
 
-Teacher inputs:
-- `[GRADE_BAND]`
-- `[SUBJECT_AND_CORE_TASK]`
-- `[COMMON_OBJECTIVE]`
-- `[EVIDENCE_OF_MASTERY]`
-- `[READINESS_EVIDENCE]`
-- `[TIME_AND_MATERIALS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [COMMON_GOAL: supply verified information; do not leave blank]
+- [ACCESS_OPTIONS: supply verified information; do not leave blank]
+- [CORE_EVIDENCE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Create scaffolded, on-level and extension versions with equal curricular dignity.
+Specific requirements:
+Create three neutral-named routes with one common mastery check. Compare demand explicitly; do not assign routes by fixed ability labels.
 
-Required output:
-Return all three student-facing tasks; what changes and what stays fixed; success criteria; likely misconception and teacher check-question for each; flexible assignment guidance; whole-class discussion bridge.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Grade 5 mathematics; compare fractions; justify using distance from one; fraction strips available.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Route Strips: show equal wholes with missing 1/4 and 1/6. Route Line: mark both values on equal 0-1 lines. Route Symbols: compare the missing unit fractions. All submit the same explanation: 5/6 is closer to one because 1/6 is smaller than 1/4. Optional stretch: order 2/3, 7/8, 11/12. Key: ascending as written. Do not publicly label routes by ability.
 
 ---
 
+### DF-003 · Make a task accessible to multilingual learners
 
----
-{
-  "id": "DF-003",
-  "slug": "make-a-task-accessible-to-multilingual-learners",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "multilingual-support",
-  "title": "Make a task accessible to multilingual learners",
-  "grade_bands": ["K-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*All grades  ·  Any subject*
 
-# Make a task accessible to multilingual learners
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
 Language demands may hide subject understanding.
 
-## Teacher inputs
-
-- `[GRADE_BAND]`
-- `[SUBJECT_AND_TASK]`
-- `[CONTENT_OBJECTIVE]`
-- `[LANGUAGE_FUNCTION]`
-- `[LEARNER_LANGUAGE_PROFILES: no names]`
-- `[WORDS_THAT_MUST_REMAIN]`
-- `[AVAILABLE_TRANSLATION_SUPPORT]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Make a task accessible to multilingual learners.
 
-Teacher inputs:
-- `[GRADE_BAND]`
-- `[SUBJECT_AND_TASK]`
-- `[CONTENT_OBJECTIVE]`
-- `[LANGUAGE_FUNCTION]`
-- `[LEARNER_LANGUAGE_PROFILES: no names]`
-- `[WORDS_THAT_MUST_REMAIN]`
-- `[AVAILABLE_TRANSLATION_SUPPORT]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CONTENT_GOAL: supply verified information; do not leave blank]
+- [LANGUAGE_DEMANDS: supply verified information; do not leave blank]
+- [KNOWN_LANGUAGE_RESOURCES: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Add language support without replacing content learning or assuming proficiency.
+Specific requirements:
+Separate content from language demands. Provide vocabulary and rehearsal support without inferring proficiency from a home language.
 
-Required output:
-Return: essential vocabulary with plain definitions; visuals to provide; sentence frames at three support levels; partner rehearsal; model response; home-language use options; content-versus-language observation checklist; fade plan.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Grade 6 social studies; explain cause and effect in migration; newcomers and intermediate English learners; terms push factor and pull factor must remain.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Vocabulary: solid, liquid, heat, melt, freeze; teacher supplies a verified diagram. Rehearsal: describe the change using words, arrows or an approved home-language resource. Frame: When ice gains heat, it changes from __ to __. Key: solid to liquid. Score the phase-change idea separately from sentence fluency where appropriate. A competent speaker checks any translation; do not infer language skills from a name.
 
 ---
 
+### DF-004 · Adapt text access while preserving meaning
 
----
-{
-  "id": "DF-004",
-  "slug": "adapt-text-access-while-preserving-meaning",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "reading-and-accessibility",
-  "title": "Adapt text access while preserving meaning",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Adapt text access while preserving meaning
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
 Learners need a more accessible route into a demanding source.
 
-## Teacher inputs
-
-- `[GRADE_BAND]`
-- `[ORIGINAL_TEXT]`
-- `[PURPOSE_FOR_READING]`
-- `[TERMS_TO_PRESERVE]`
-- `[ACCESS_NEEDS]`
-- `[MAX_LENGTH]`
-- `[ASSESSMENT_BOUNDARY]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Adapt text access while preserving meaning.
 
-Teacher inputs:
-- `[GRADE_BAND]`
-- `[ORIGINAL_TEXT]`
-- `[PURPOSE_FOR_READING]`
-- `[TERMS_TO_PRESERVE]`
-- `[ACCESS_NEEDS]`
-- `[MAX_LENGTH]`
-- `[ASSESSMENT_BOUNDARY]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [AUTHORIZED_TEXT: supply verified information; do not leave blank]
+- [TARGET_CONSTRUCT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Create access supports while clearly separating any adapted text from the original.
+Specific requirements:
+Keep original meaning visible beside an access adaptation. If reading itself is assessed, flag changes that would alter the construct.
 
-Required output:
-Return: difficulty analysis; chunked original with headings; glossary; optional plain-language companion; guiding questions; audio/visual suggestions; comprehension checks; statement of what was not changed. Do not claim a reading level without a defined measure.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Grade 9 biology source passage; identify evidence for natural selection; preserve adaptation, variation and selection pressure.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Companion: The young plants drooped after several days without rain. The pots in shade lost less water. Preserve although by explaining the contrast. Glossary: wilted = drooped; moisture = water present. Keep the original next to the companion. Do not change the claim into all shaded plants survived; that result was not supplied. If reading complexity is the assessed construct, teacher review is required before adapting.
 
 ---
 
+### DF-005 · Turn an observed barrier into a targeted support plan
 
----
-{
-  "id": "DF-005",
-  "slug": "turn-an-observed-barrier-into-a-targeted-support-plan",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Turn an observed barrier into a targeted support plan",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Turn an observed barrier into a targeted support plan
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to turn an observed barrier into a targeted support plan.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Turn an observed barrier into a targeted support plan.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [BARRIER_OBSERVATION: supply verified information; do not leave blank]
+- [SUPPORTS_TRIED: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Turn an observed barrier into a targeted support plan. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Distinguish observed obstacle from guessed cause. Propose one support, a trial duration and an observable independence check.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Hypothesis: task organization may be an access barrier; no diagnosis is implied. Trial support: number each step and let the learner tick completed lines. Measure whether the learner resumes accurately after a pause. Keep the same arithmetic and reasoning. After two successful attempts, try a shorter checklist and compare independence. Two attempts are an illustrative trial design, not a validated intervention threshold.
 
 ---
 
+### DF-006 · Create a graphic organizer that preserves essential reasoning
 
----
-{
-  "id": "DF-006",
-  "slug": "create-a-graphic-organizer-that-preserves-essential-reasoning",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Create a graphic organizer that preserves essential reasoning",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a graphic organizer that preserves essential reasoning
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to create a graphic organizer that preserves essential reasoning.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a graphic organizer that preserves essential reasoning.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [REASONING_STEPS: supply verified information; do not leave blank]
+- [ORGANIZER_FORMAT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a graphic organizer that preserves essential reasoning. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Create an organizer that structures thinking but does not supply the conclusion. Explain which prompts can later be removed.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Organizer fields: My claim; Exact supplied evidence; Why this evidence matters; A limitation or alternative; Revised claim. Leave the claim and reasoning blank. Teacher model fills a separate fictional example, not the learner's assessed organizer. Fade the Why this matters question once the learner can independently link evidence to a claim. The organizer supports structure without providing the conclusion.
 
 ---
 
+### DF-007 · Write sentence frames at three levels of language support
 
----
-{
-  "id": "DF-007",
-  "slug": "write-sentence-frames-at-three-levels-of-language-support",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Write sentence frames at three levels of language support",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": true,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Write sentence frames at three levels of language support
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to write sentence frames at three levels of language support.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Write sentence frames at three levels of language support.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [LANGUAGE_FUNCTION: supply verified information; do not leave blank]
+- [CONTENT_TARGET: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Write sentence frames at three levels of language support. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Write light, medium and substantial sentence support for the same reasoning move. Leave the evidence and conclusion for the learner.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-**Illustrative excerpt — one goal, three access routes**
+**Example** — an editorial illustration, not a logged AI run
 
-**Common goal:** Compare 3/4 and 5/6 and justify the comparison using distance from one.
-
-**Scaffolded route:** Use equal-length fraction strips, label each missing piece, and
-complete: “___ is closer to one because it is missing ___.”
-**On-level route:** Prove the comparison using both missing pieces and twelfths.
-**Extension route:** Generalize the comparison of `(n−1)/n` and explain what happens as
-`n` increases.
-
-All routes require the same conclusion and justification: `5/6 > 3/4`; `3/4` is `1/4`
-from one while `5/6` is `1/6` from one. Supports change representation and language,
-not the mathematical target. Remove the sentence frame once the learner explains the
-relationship independently.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+Light: Explain the pattern and its limitation. Medium: As __ changed, __ changed; this may suggest __. Substantial: The measured temperature was __ before and __ after. One possible explanation is __. We cannot yet conclude __. Every route requires the same evidence-based inference. Do not fill measurement slots with invented numbers. Learners may move among supports without public labels.
 
 ---
 
+### DF-008 · Break a complex task into checkpoints without doing the thinking
 
----
-{
-  "id": "DF-008",
-  "slug": "break-a-complex-task-into-checkpoints-without-doing-the-thinking",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Break a complex task into checkpoints without doing the thinking",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Break a complex task into checkpoints without doing the thinking
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to break a complex task into checkpoints without doing the thinking.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Break a complex task into checkpoints without doing the thinking.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [COMPLEX_TASK: supply verified information; do not leave blank]
+- [CHECKPOINT_COUNT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Break a complex task into checkpoints without doing the thinking. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Chunk procedural demands while retaining the difficult thinking. Include a self-monitoring check at each boundary.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-009 · Add worked examples and prompts with a clear fade plan
 
----
-{
-  "id": "DF-009",
-  "slug": "add-worked-examples-and-prompts-with-a-clear-fade-plan",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Add worked examples and prompts with a clear fade plan",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Add worked examples and prompts with a clear fade plan
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to add worked examples and prompts with a clear fade plan.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Add worked examples and prompts with a clear fade plan.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [WORKED_EXAMPLE: supply verified information; do not leave blank]
+- [TARGET_INDEPENDENCE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Add worked examples and prompts with a clear fade plan. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Alternate model, incomplete example and independent attempt. Define a support-fade decision based on evidence, not a fixed learner category.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-010 · Create a scaffold menu learners can choose from responsibly
 
----
-{
-  "id": "DF-010",
-  "slug": "create-a-scaffold-menu-learners-can-choose-from-responsibly",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Create a scaffold menu learners can choose from responsibly",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a scaffold menu learners can choose from responsibly
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to create a scaffold menu learners can choose from responsibly.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a scaffold menu learners can choose from responsibly.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [AVAILABLE_SCAFFOLDS: supply verified information; do not leave blank]
+- [STUDENT_CHOICE_LIMITS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a scaffold menu learners can choose from responsibly. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Create a student-readable support menu with purpose and exit condition. Keep supports available without public labels or penalties.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-011 · Audit classroom supports for dependence and hidden lower expectations
 
----
-{
-  "id": "DF-011",
-  "slug": "audit-classroom-supports-for-dependence-and-hidden-lower-expectations",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "scaffolds",
-  "title": "Audit classroom supports for dependence and hidden lower expectations",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit classroom supports for dependence and hidden lower expectations
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on scaffolds.
+Choose this focused tool when your immediate task is to audit classroom supports for dependence and hidden lower expectations.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit classroom supports for dependence and hidden lower expectations.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CURRENT_SUPPORT_PLAN: supply verified information; do not leave blank]
+- [OBSERVATIONS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit classroom supports for dependence and hidden lower expectations. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Identify where adults or tools do the assessed thinking. Recommend one reduced-support trial while preserving required accommodations.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], scaffolds; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-012 · Build scaffolded, on-level and extension versions of one task
 
----
-{
-  "id": "DF-012",
-  "slug": "build-scaffolded-on-level-and-extension-versions-of-one-task",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Build scaffolded, on-level and extension versions of one task",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Build scaffolded, on-level and extension versions of one task
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on tiered tasks.
+Choose this focused tool when your immediate task is to build scaffolded, on-level and extension versions of one task.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Build scaffolded, on-level and extension versions of one task.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CORE_TASK: supply verified information; do not leave blank]
+- [EXTENSION_GOAL: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Build scaffolded, on-level and extension versions of one task. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Provide support, core and stretch routes with shared evidence. State that stretch is optional depth, not the only route to full credit.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], tiered tasks; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-013 · Tier a task by representation rather than by easier content
 
----
-{
-  "id": "DF-013",
-  "slug": "tier-a-task-by-representation-rather-than-by-easier-content",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Tier a task by representation rather than by easier content",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Tier a task by representation rather than by easier content
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on tiered tasks.
+Choose this focused tool when your immediate task is to tier a task by representation rather than by easier content.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Tier a task by representation rather than by easier content.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ALLOWED_REPRESENTATIONS: supply verified information; do not leave blank]
+- [CORE_CONCEPT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Tier a task by representation rather than by easier content. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Offer concrete, visual and symbolic routes. Verify that each requires the same conceptual decision rather than merely different decoration.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], tiered tasks; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-014 · Create three entry points with one common mastery product
 
----
-{
-  "id": "DF-014",
-  "slug": "create-three-entry-points-with-one-common-mastery-product",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Create three entry points with one common mastery product",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create three entry points with one common mastery product
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on tiered tasks.
+Choose this focused tool when your immediate task is to create three entry points with one common mastery product.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create three entry points with one common mastery product.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ENTRY_BARRIERS: supply verified information; do not leave blank]
+- [COMMON_PRODUCT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create three entry points with one common mastery product. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Design three starting activities that converge on the same final task. Include a bridge so entry support does not become a separate curriculum.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], tiered tasks; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-015 · Design tiered questions that move from access to transfer
 
----
-{
-  "id": "DF-015",
-  "slug": "design-tiered-questions-that-move-from-access-to-transfer",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Design tiered questions that move from access to transfer",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Design tiered questions that move from access to transfer
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on tiered tasks.
+Choose this focused tool when your immediate task is to design tiered questions that move from access to transfer.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Design tiered questions that move from access to transfer.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ACCESS_KNOWLEDGE: supply verified information; do not leave blank]
+- [TRANSFER_TARGET: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Design tiered questions that move from access to transfer. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Sequence questions from access to explanation to transfer. Keep every learner invited to higher-demand questions with needed support.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], tiered tasks; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-016 · Check that every tier carries equal curricular dignity
 
----
-{
-  "id": "DF-016",
-  "slug": "check-that-every-tier-carries-equal-curricular-dignity",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Check that every tier carries equal curricular dignity",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Check that every tier carries equal curricular dignity
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on tiered tasks.
+Choose this focused tool when your immediate task is to check that every tier carries equal curricular dignity.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Check that every tier carries equal curricular dignity.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [TIERED_TASK_SET: supply verified information; do not leave blank]
+- [CRITERIA: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Check that every tier carries equal curricular dignity. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Compare challenge, dignity, choice and credit across routes. Flag a route that prevents learners from demonstrating the stated goal.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], tiered tasks; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-017 · Create a whole-class debrief that reconnects three task versions
 
----
-{
-  "id": "DF-017",
-  "slug": "create-a-whole-class-debrief-that-reconnects-three-task-versions",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "tiered-tasks",
-  "title": "Create a whole-class debrief that reconnects three task versions",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a whole-class debrief that reconnects three task versions
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on tiered tasks.
+Choose this focused tool when your immediate task is to create a whole-class debrief that reconnects three task versions.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a whole-class debrief that reconnects three task versions.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [THREE_TASK_VERSIONS: supply verified information; do not leave blank]
+- [SHARED_CONCEPT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a whole-class debrief that reconnects three task versions. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Write a debrief that compares representations and reconnects every route. Include an individual synthesis question.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], tiered tasks; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-018 · Identify the language demands hidden inside a subject task
 
----
-{
-  "id": "DF-018",
-  "slug": "identify-the-language-demands-hidden-inside-a-subject-task",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "multilingual-support",
-  "title": "Identify the language demands hidden inside a subject task",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Identify the language demands hidden inside a subject task
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on multilingual support.
+Choose this focused tool when your immediate task is to identify the language demands hidden inside a subject task.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Identify the language demands hidden inside a subject task.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [SUBJECT_TASK: supply verified information; do not leave blank]
+- [RESPONSE_FORMAT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Identify the language demands hidden inside a subject task. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Identify vocabulary, syntax and discourse demands separately from subject knowledge. Select only supports relevant to the actual task.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], multilingual support; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-019 · Build an essential vocabulary preview with visuals and examples
 
----
-{
-  "id": "DF-019",
-  "slug": "build-an-essential-vocabulary-preview-with-visuals-and-examples",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "multilingual-support",
-  "title": "Build an essential vocabulary preview with visuals and examples",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Build an essential vocabulary preview with visuals and examples
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on multilingual support.
+Choose this focused tool when your immediate task is to build an essential vocabulary preview with visuals and examples.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Build an essential vocabulary preview with visuals and examples.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ESSENTIAL_TERMS: supply verified information; do not leave blank]
+- [SOURCE_CONTEXT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Build an essential vocabulary preview with visuals and examples. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Create plain definitions, text-described visuals, examples and non-examples. Require human review of translations and avoid invented etymology.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], multilingual support; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-020 · Create structured partner rehearsal before independent writing
 
----
-{
-  "id": "DF-020",
-  "slug": "create-structured-partner-rehearsal-before-independent-writing",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "multilingual-support",
-  "title": "Create structured partner rehearsal before independent writing",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create structured partner rehearsal before independent writing
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on multilingual support.
+Choose this focused tool when your immediate task is to create structured partner rehearsal before independent writing.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create structured partner rehearsal before independent writing.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [WRITING_GOAL: supply verified information; do not leave blank]
+- [PARTNER_OPTIONS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create structured partner rehearsal before independent writing. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Plan think, rehearse, listen and revise steps before writing. Offer private recorded or written rehearsal where speaking is inaccessible.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], multilingual support; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-021 · Plan purposeful home-language use without assuming proficiency
 
----
-{
-  "id": "DF-021",
-  "slug": "plan-purposeful-home-language-use-without-assuming-proficiency",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "multilingual-support",
-  "title": "Plan purposeful home-language use without assuming proficiency",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Plan purposeful home-language use without assuming proficiency
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on multilingual support.
+Choose this focused tool when your immediate task is to plan purposeful home-language use without assuming proficiency.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Plan purposeful home-language use without assuming proficiency.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [AVAILABLE_LANGUAGE_RESOURCES: supply verified information; do not leave blank]
+- [LEARNER_CHOICE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Plan purposeful home-language use without assuming proficiency. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Allow purposeful home-language thinking without assuming literacy or translation accuracy. Keep the final content evidence criteria explicit.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], multilingual support; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-022 · Separate content evidence from English-language evidence
 
----
-{
-  "id": "DF-022",
-  "slug": "separate-content-evidence-from-english-language-evidence",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "multilingual-support",
-  "title": "Separate content evidence from English-language evidence",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Separate content evidence from English-language evidence
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on multilingual support.
+Choose this focused tool when your immediate task is to separate content evidence from English-language evidence.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Separate content evidence from English-language evidence.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CONTENT_CRITERIA: supply verified information; do not leave blank]
+- [LANGUAGE_CRITERIA: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Separate content evidence from English-language evidence. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Score content evidence and language evidence separately where policy permits. Do not equate limited English output with limited subject understanding.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], multilingual support; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-023 · Chunk a demanding source without rewriting its claims
 
----
-{
-  "id": "DF-023",
-  "slug": "chunk-a-demanding-source-without-rewriting-its-claims",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "reading-and-accessibility",
-  "title": "Chunk a demanding source without rewriting its claims",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Chunk a demanding source without rewriting its claims
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on reading & accessibility.
+Choose this focused tool when your immediate task is to chunk a demanding source without rewriting its claims.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Chunk a demanding source without rewriting its claims.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [AUTHORIZED_SOURCE: supply verified information; do not leave blank]
+- [CHUNK_BOUNDARIES: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Chunk a demanding source without rewriting its claims. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Chunk by meaning, keep source order and label omissions. Preserve qualifiers and uncertainty in every extracted section.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], reading & accessibility; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-024 · Create a plain-language companion beside the original text
 
----
-{
-  "id": "DF-024",
-  "slug": "create-a-plain-language-companion-beside-the-original-text",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "reading-and-accessibility",
-  "title": "Create a plain-language companion beside the original text",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a plain-language companion beside the original text
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on reading & accessibility.
+Choose this focused tool when your immediate task is to create a plain-language companion beside the original text.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a plain-language companion beside the original text.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ORIGINAL_TEXT: supply verified information; do not leave blank]
+- [TARGET_READING_ACCESS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a plain-language companion beside the original text. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Place a plain-language companion beside the source. Flag simplifications that lose technical meaning and avoid claiming identical reading difficulty.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], reading & accessibility; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-025 · Add glossary, guiding questions and audio-access suggestions
 
----
-{
-  "id": "DF-025",
-  "slug": "add-glossary-guiding-questions-and-audio-access-suggestions",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "reading-and-accessibility",
-  "title": "Add glossary, guiding questions and audio-access suggestions",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Add glossary, guiding questions and audio-access suggestions
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on reading & accessibility.
+Choose this focused tool when your immediate task is to add glossary, guiding questions and audio-access suggestions.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Add glossary, guiding questions and audio-access suggestions.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [SOURCE: supply verified information; do not leave blank]
+- [GLOSSARY_NEEDS: supply verified information; do not leave blank]
+- [AUDIO_OPTIONS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Add glossary, guiding questions and audio-access suggestions. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Add an essential glossary and guiding questions. Describe approved audio access without uploading protected texts or learner recordings.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], reading & accessibility; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-026 · Reduce unnecessary reading load in a non-reading assessment
 
----
-{
-  "id": "DF-026",
-  "slug": "reduce-unnecessary-reading-load-in-a-non-reading-assessment",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "reading-and-accessibility",
-  "title": "Reduce unnecessary reading load in a non-reading assessment",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Reduce unnecessary reading load in a non-reading assessment
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on reading & accessibility.
+Choose this focused tool when your immediate task is to reduce unnecessary reading load in a non-reading assessment.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Reduce unnecessary reading load in a non-reading assessment.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ASSESSMENT: supply verified information; do not leave blank]
+- [TARGET_CONSTRUCT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Reduce unnecessary reading load in a non-reading assessment. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Reduce incidental reading only when reading is not the assessed skill. Document changes and preserve required technical vocabulary.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], reading & accessibility; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-027 · Audit adapted materials for lost meaning or unsupported simplification
 
----
-{
-  "id": "DF-027",
-  "slug": "audit-adapted-materials-for-lost-meaning-or-unsupported-simplification",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "reading-and-accessibility",
-  "title": "Audit adapted materials for lost meaning or unsupported simplification",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit adapted materials for lost meaning or unsupported simplification
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on reading & accessibility.
+Choose this focused tool when your immediate task is to audit adapted materials for lost meaning or unsupported simplification.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit adapted materials for lost meaning or unsupported simplification.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ORIGINAL: supply verified information; do not leave blank]
+- [ADAPTATION: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit adapted materials for lost meaning or unsupported simplification. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Compare claims, qualifiers and evidence sentence by sentence. Restore lost meaning and label any unresolved interpretation.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], reading & accessibility; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-028 · Create an extension that deepens reasoning instead of adding more work
 
----
-{
-  "id": "DF-028",
-  "slug": "create-an-extension-that-deepens-reasoning-instead-of-adding-more-work",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "extensions",
-  "title": "Create an extension that deepens reasoning instead of adding more work",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create an extension that deepens reasoning instead of adding more work
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on extensions.
+Choose this focused tool when your immediate task is to create an extension that deepens reasoning instead of adding more work.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create an extension that deepens reasoning instead of adding more work.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [CORE_OBJECTIVE: supply verified information; do not leave blank]
+- [AVAILABLE_TIME: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create an extension that deepens reasoning instead of adding more work. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Create an extension requiring explanation, generalization or evaluation. Avoid more routine items or extra work as a reward for finishing.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], extensions; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-029 · Build a transfer challenge using a new context
 
----
-{
-  "id": "DF-029",
-  "slug": "build-a-transfer-challenge-using-a-new-context",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "extensions",
-  "title": "Build a transfer challenge using a new context",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Build a transfer challenge using a new context
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on extensions.
+Choose this focused tool when your immediate task is to build a transfer challenge using a new context.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Build a transfer challenge using a new context.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [TAUGHT_CONTEXT: supply verified information; do not leave blank]
+- [NEW_CONTEXT: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Build a transfer challenge using a new context. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Design a transfer challenge with one meaningful changed condition. Provide a key explaining what transfers and what does not.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], extensions; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-030 · Design an open-ended investigation with clear evidence expectations
 
----
-{
-  "id": "DF-030",
-  "slug": "design-an-open-ended-investigation-with-clear-evidence-expectations",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "extensions",
-  "title": "Design an open-ended investigation with clear evidence expectations",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Design an open-ended investigation with clear evidence expectations
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on extensions.
+Choose this focused tool when your immediate task is to design an open-ended investigation with clear evidence expectations.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Design an open-ended investigation with clear evidence expectations.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [INVESTIGABLE_QUESTION: supply verified information; do not leave blank]
+- [EVIDENCE_LIMITS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Design an open-ended investigation with clear evidence expectations. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Define an open investigation with bounded resources, evidence expectations and several defensible outcomes. Do not invent observations.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], extensions; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-031 · Audit an extension for novelty, rigor and connection to the objective
 
----
-{
-  "id": "DF-031",
-  "slug": "audit-an-extension-for-novelty-rigor-and-connection-to-the-objective",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "extensions",
-  "title": "Audit an extension for novelty, rigor and connection to the objective",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit an extension for novelty, rigor and connection to the objective
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on extensions.
+Choose this focused tool when your immediate task is to audit an extension for novelty, rigor and connection to the objective.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit an extension for novelty, rigor and connection to the objective.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [EXTENSION_TASK: supply verified information; do not leave blank]
+- [CORE_OBJECTIVE: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit an extension for novelty, rigor and connection to the objective. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Audit whether the challenge deepens the same learning. Replace novelty that is unrelated or dependent on expensive home resources.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], extensions; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-032 · Build temporary groups from anonymous learning evidence
 
----
-{
-  "id": "DF-032",
-  "slug": "build-temporary-groups-from-anonymous-learning-evidence",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "flexible-grouping",
-  "title": "Build temporary groups from anonymous learning evidence",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Build temporary groups from anonymous learning evidence
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on flexible grouping.
+Choose this focused tool when your immediate task is to build temporary groups from anonymous learning evidence.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Build temporary groups from anonymous learning evidence.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [ANONYMOUS_PATTERNS: supply verified information; do not leave blank]
+- [CAPACITY: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Build temporary groups from anonymous learning evidence. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Group by current task needs with private neutral labels. Include an unassigned category when evidence is insufficient.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], flexible grouping; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-033 · Create a rotation plan for three changing instructional needs
 
----
-{
-  "id": "DF-033",
-  "slug": "create-a-rotation-plan-for-three-changing-instructional-needs",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "flexible-grouping",
-  "title": "Create a rotation plan for three changing instructional needs",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Create a rotation plan for three changing instructional needs
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on flexible grouping.
+Choose this focused tool when your immediate task is to create a rotation plan for three changing instructional needs.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Create a rotation plan for three changing instructional needs.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [THREE_NEEDS: supply verified information; do not leave blank]
+- [ROTATION_MINUTES: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Create a rotation plan for three changing instructional needs. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Create a feasible teacher-attention schedule and independent work for other groups. State transition and regrouping rules.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], flexible grouping; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-034 · Plan mixed-readiness groups with meaningful roles and accountability
 
----
-{
-  "id": "DF-034",
-  "slug": "plan-mixed-readiness-groups-with-meaningful-roles-and-accountability",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "flexible-grouping",
-  "title": "Plan mixed-readiness groups with meaningful roles and accountability",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Plan mixed-readiness groups with meaningful roles and accountability
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on flexible grouping.
+Choose this focused tool when your immediate task is to plan mixed-readiness groups with meaningful roles and accountability.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Plan mixed-readiness groups with meaningful roles and accountability.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [MIXED_GROUP_TASK: supply verified information; do not leave blank]
+- [ROLE_OPTIONS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Plan mixed-readiness groups with meaningful roles and accountability. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Give every learner a reasoning role and independent evidence. Do not make one learner the permanent tutor or scribe.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], flexible grouping; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
-
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
 ---
 
+### DF-035 · Audit a grouping plan for labels, access, movement and regrouping triggers
 
----
-{
-  "id": "DF-035",
-  "slug": "audit-a-grouping-plan-for-labels-access-movement-and-regrouping-triggers",
-  "chapter": "differentiation-mixed-ability",
-  "subtopic": "flexible-grouping",
-  "title": "Audit a grouping plan for labels, access, movement and regrouping triggers",
-  "grade_bands": ["3-12"],
-  "subjects": ["Any"],
-  "sensitivity": "standard",
-  "sample_output": false,
-  "review_status": "draft",
-  "content_version": 1
-}
----
+*Grades 3-5, 6-8, 9-12  ·  Any subject*
 
-# Audit a grouping plan for labels, access, movement and regrouping triggers
+> **Handle with care.** Read the safety page before using this one.
 
-## Use this when
+**When you need this**
 
-You need an access plan that preserves the same learning goal focused on flexible grouping.
+Choose this focused tool when your immediate task is to audit a grouping plan for labels, access, movement and regrouping triggers.
 
-## Teacher inputs
-
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
-
-## Copy-paste prompt
+**COPY FROM HERE**
 
 ```text
-You are an experienced K-12 instructional planning assistant.
+Audit a grouping plan for labels, access, movement and regrouping triggers.
 
-Teacher inputs:
-- `[GRADE_BAND: learner age or grade]`
-- `[SUBJECT_AND_CONTEXT: exact course, unit or situation]`
-- `[GOAL_OR_REQUIRED_OUTCOME: paste verbatim where applicable]`
-- `[VERIFIED_EVIDENCE_OR_SOURCE_TEXT: use non-identifying information]`
-- `[TIME_LENGTH_AND_FORMAT_CONSTRAINTS]`
-- `[AVAILABLE_MATERIALS_OR_SUPPORTS]`
-- `[SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS]`
+Required inputs:
+- [GRADE_SUBJECT: exact age/grade and subject]
+- [GOAL: the learning or communication purpose]
+- [GROUP_PLAN: supply verified information; do not leave blank]
+- [ACCESS_CONSTRAINTS: supply verified information; do not leave blank]
+- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
 
-Task:
-Complete this teacher task: Audit a grouping plan for labels, access, movement and regrouping triggers. Create an access plan that preserves the same learning goal using only the supplied inputs.
+Specific requirements:
+Check isolation, labelling, movement and regrouping triggers. Keep accommodation details in approved local records, not public prompts.
 
-Required output:
-Return: unchanged objective; observed barrier map; temporary supports; student-facing version; teacher prompts; success evidence; fade plan; equity and accessibility audit.
-
-Rules:
-- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].
-- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.
-- Keep the named grade, time, materials, objective, and policy constraints unchanged.
-- Make student-facing language clear and age-appropriate.
-- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.
-- End with a short TEACHER VERIFICATION checklist.
+Output:
+Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
 ```
 
-## Fictional test case
+**TO HERE**
 
-Fictional case: [GRADE], [SUBJECT], flexible grouping; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.
+**Before you send it**
 
-## Sample output
+- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
+- [ ] Answers and subject content checked independently; access and local policy preserved.
+- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
 
-Not included in this edition.
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-
-
----
