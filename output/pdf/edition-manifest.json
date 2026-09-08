@@ -1,0 +1,10 @@
+{
+  "edition": "editorial-review-v2",
+  "prompts": 300,
+  "workflows": 12,
+  "distinct_example_excerpts": 60,
+  "human_approval": false,
+  "model_execution_testing": false,
+  "source_sha256": "19192cee7139c685abcd50d1564ef6068e0a7e9cbd31f8b8e5594e2aa76ab4f1",
+  "pdf": "teacher-ai-toolkit-review.pdf"
+}

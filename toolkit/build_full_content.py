@@ -879,67 +879,6 @@ def slug(title: str) -> str:
     return "-".join("".join(ch.lower() if ch.isalnum() else " " for ch in title).split())
 
 
-def prompt_markdown(p: Prompt) -> str:
-    inputs = "\n".join(f"- `[{value}]`" for value in p.inputs)
-    sample = (
-        PROMPT_SAMPLE_OUTPUTS.get(p.id, SAMPLE_OUTPUTS[p.folder])
-        if p.sample else "Not included in this edition."
-    )
-    prompt_text = f"""You are an experienced K-12 instructional planning assistant.\n\nTeacher inputs:\n{inputs}\n\nTask:\n{p.deliverable}\n\nRequired output:\n{p.sections}\n\nRules:\n- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].\n- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.\n- Keep the named grade, time, materials, objective, and policy constraints unchanged.\n- Make student-facing language clear and age-appropriate.\n- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.\n- End with a short TEACHER VERIFICATION checklist."""
-    return f'''---
-{{
-  "id": "{p.id}",
-  "slug": "{slug(p.title)}",
-  "chapter": "{p.folder.split('-', 1)[1]}",
-  "subtopic": "{p.subtopic}",
-  "title": "{p.title}",
-  "grade_bands": ["{p.grades}"],
-  "subjects": ["{p.subjects}"],
-  "sensitivity": "standard",
-  "sample_output": {str(p.sample).lower()},
-  "review_status": "draft",
-  "content_version": 1
-}}
----
-
-# {p.title}
-
-## Use this when
-
-{p.use}
-
-## Teacher inputs
-
-{inputs}
-
-## Copy-paste prompt
-
-```text
-{prompt_text}
-```
-
-## Fictional test case
-
-{p.test_case}
-
-## Sample output
-
-{sample}
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-'''
-
-
 WORKFLOW_EXAMPLES = {
     "standard-to-complete-unit": "An entirely fictional Grade 7 ecosystem standard becomes four mastery criteria, a verified model-and-explanation assessment, six sequenced lessons, three hinge checks and a final alignment table.",
     "mixed-ability-lesson": "An entirely fictional fraction-comparison lesson keeps one justification goal while offering fraction strips, a common-denominator route and a transfer extension; all learners submit the same core evidence.",
@@ -954,70 +893,6 @@ WORKFLOW_EXAMPLES = {
     "weekly-admin-pack": "An invented weekly note list is sorted into four priorities, two meetings and three communications. Conflicting dates are flagged rather than resolved by guessing, and each action receives an owner and evidence of completion.",
     "class-data-reflection": "A fictional anonymous response set is checked for missing entries, summarized by objective and grouped by misconception. The teacher creates targeted next tasks and one common reassessment without assigning fixed learner labels.",
 }
-
-
-def workflow_markdown(item: tuple[str, str, str, str, tuple[str, ...]]) -> str:
-    wid, subtopic, title, purpose, steps = item
-    rendered_steps = "\n".join(f"{i}. {step}" for i, step in enumerate(steps, 1))
-    return f'''---
-{{
-  "id": "{wid}",
-  "slug": "{slug(title)}",
-  "chapter": "multi-step-workflows",
-  "subtopic": "{subtopic}",
-  "title": "{title}",
-  "sensitivity": "standard",
-  "review_status": "draft",
-  "content_version": 1
-}}
----
-
-# {title}
-
-## Outcome
-
-{purpose}
-
-## Teacher inputs
-
-- `[VERBATIM_SOURCE_MATERIAL]`
-- `[GRADE_SUBJECT_AND_CONTEXT]`
-- `[TIME_MATERIALS_AND_POLICY_CONSTRAINTS]`
-- `[NON_IDENTIFYING_EVIDENCE]`
-
-## Workflow
-
-{rendered_steps}
-
-At every step, paste the previous **reviewed** output into the next prompt. Correct errors
-before continuing; never allow the model to silently replace supplied facts.
-
-## Copy-paste controller prompt
-
-```text
-Guide me through this workflow one step at a time. At each step: state the required
-inputs, produce only the requested artifact, list uncertainties, and stop for teacher
-review. Do not continue until I reply APPROVED or provide corrections. Preserve source
-wording where requested, never invent school policy or student facts, and finish with
-an alignment, privacy, accuracy and feasibility audit.
-```
-
-## Fictional end-to-end example
-
-{WORKFLOW_EXAMPLES[subtopic]}
-
-This example demonstrates the process only. The teacher reviews every intermediate
-artifact and approves the final pack only after checking accuracy, alignment,
-accessibility, privacy and applicable school policy.
-
-## Review checklist
-
-- [ ] Every stage uses the previous reviewed output.
-- [ ] Unknown facts remain visible placeholders.
-- [ ] No identifiable student information is present.
-- [ ] Final artifacts align to one another and to the supplied goal.
-- [ ] A qualified teacher has approved the current content fingerprint.
-'''
 
 
 def generated_prompt(
@@ -1124,6 +999,11 @@ def main() -> None:
 
     print(f"Built {len(prompts)} prompts and {len(workflows)} workflows.")
 
+
+try:
+    from .editorial_engine import prompt_markdown, workflow_markdown
+except ImportError:
+    from editorial_engine import prompt_markdown, workflow_markdown
 
 if __name__ == "__main__":
     main()
