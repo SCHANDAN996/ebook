@@ -1,99 +1,154 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 9 — Subject Deep Dives</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
 *{box-sizing:border-box}
-body{font:16px/1.65 -apple-system,'Segoe UI',Roboto,sans-serif;color:#1b2733;
- max-width:820px;margin:0 auto;padding:32px 20px 80px;background:#fff}
-h1{font-size:2em;letter-spacing:-.02em;margin:0 0 .3em}
-h2{font-size:1.35em;margin:2.2em 0 .6em;padding-top:1em;border-top:1px solid #e4e9ee}
-h3{font-size:1.12em;margin:1.6em 0 .2em;letter-spacing:-.01em}
-table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.93em}
-th,td{border:1px solid #e4e9ee;padding:7px 10px;text-align:left}
-th{background:#f6f8fa;font-weight:600}
-blockquote{margin:1em 0;padding:.7em 1em;background:#fdf7e8;
- border-left:3px solid #ddae58;font-size:.94em}
-.meta{font-size:.83em;color:#6b7885;margin:0 0 1em}
-.lbl{font-size:.73em;letter-spacing:.09em;text-transform:uppercase;color:#6b7885;
- font-weight:600;margin:1.4em 0 .4em}
-.box{position:relative;background:#f6f8fa;border:1px solid #dde3e9;border-radius:8px;
- padding:16px 18px;margin:.4em 0 1em}
-.box pre{margin:0;white-space:pre-wrap;color:#243240;
- font:13.5px/1.55 ui-monospace,Menlo,Consolas,monospace}
-.copy{position:absolute;top:10px;right:10px;border:1px solid #cdd5dd;background:#fff;
- border-radius:6px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:#33414f}
-.copy:hover{background:#eef2f6}
-.copy.ok{background:#167d8d;border-color:#167d8d;color:#fff}
-hr{border:0;border-top:1px solid #e4e9ee;margin:2.4em 0}
-ul{padding-left:1.3em;margin:.4em 0}
-code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:.9em}
-a{color:#167d8d}
-@media(max-width:600px){body{padding:18px 14px 60px}}
-</style></head><body><h1>Chapter 9 — Subject Deep Dives</h1>
-<p><strong>15 prompts</strong></p>
-<p>The rest of the book works across subjects. This chapter does not — each prompt</p>
-<p>is built around how one subject actually behaves, and what goes wrong when a</p>
-<p>general tool is pointed at it.</p>
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; max-width:66ch}
+ul{margin:0 0 1.1rem; padding-left:1.15rem; max-width:66ch}
+li{margin:.3rem 0}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+.box pre{margin:0; padding:18px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#cfd9e3;
+         font:13px/1.62 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#dde3e9;
+        --ink:#18202a; --dim:#5b6673; --faint:#78838f;
+        --accent:#0f7d70; --accent-dim:#bcd9d4; --warn:#9a7314}
+  body{font-size:10.5pt}
+  .wrap{max-width:none; padding:0}
+  .copy{display:none}
+  .card{break-inside:avoid; page-break-inside:avoid; padding:0 0 14pt;
+        border:0; border-bottom:1px solid var(--line); border-radius:0;
+        margin-bottom:14pt}
+  .box{background:#f7f9fa}
+  .bar{background:#eef3f4}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.9em}
+  h2{break-after:avoid} h3{break-after:avoid}
+  blockquote{background:#fdf8ec}
+}
+</style></head><body><div class="wrap"><h1>Chapter 9 — Subject Deep Dives</h1><p class="lede">15 prompts</p><p>The rest of the book works across subjects. This chapter does not — each prompt is built around how one subject actually behaves, and what goes wrong when a general tool is pointed at it.</p>
 <h2>What's in here</h2>
-<table>
-<tr><th>Group</th><th>Prompts</th><th>Use when</th></tr>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
 <tr><td>Mathematics</td><td>3</td><td>Word problems, worked examples, error analysis</td></tr>
 <tr><td>Science</td><td>3</td><td>Investigations, controls, lab write-ups</td></tr>
 <tr><td>English language arts</td><td>3</td><td>Close reading, writing tasks, text sets</td></tr>
 <tr><td>Social studies</td><td>3</td><td>Sources, chronology, contested questions</td></tr>
 <tr><td>Arts, PE and electives</td><td>3</td><td>The subjects general tools ignore</td></tr>
-</table>
+</tbody></table>
 <h2>Worth knowing before you start</h2>
-<p><strong>Verify everything factual in this chapter.</strong> Historical dates, scientific</p>
-<p>values, quotations from texts — this is where a confident wrong answer does the</p>
-<p>most damage, because it looks exactly like a right one.</p>
-<p>For science, never accept invented data. Predicted patterns and measured results</p>
-<p>are different things, and the prompts here keep them separate.</p>
-<p>For social studies, ask for the contested question rather than the settled</p>
-<p>summary. That is where the thinking is.</p>
-<p>For arts and PE, be specific about equipment and space. Generic plans assume a</p>
-<p>room you do not have.</p>
+<p><strong>Verify everything factual in this chapter.</strong> Historical dates, scientific values, quotations from texts — this is where a confident wrong answer does the most damage, because it looks exactly like a right one.</p>
+<p>For science, never accept invented data. Predicted patterns and measured results are different things, and the prompts here keep them separate.</p>
+<p>For social studies, ask for the contested question rather than the settled summary. That is where the thinking is.</p>
+<p>For arts and PE, be specific about equipment and space. Generic plans assume a room you do not have.</p>
 <h2>Every prompt in this chapter</h2>
 <h3>Mathematics</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>SD-001</td><td>Create a concept-first mathematics explanation</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-003</td><td>Connect concrete, visual and symbolic mathematics representations</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-004</td><td>Build a mathematics error-analysis lesson with verified solutions</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Science</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>SD-002</td><td>Design an evidence-based science investigation</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-008</td><td>Build a claim-evidence-reasoning task from supplied observations</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-009</td><td>Audit a science explanation for causation, uncertainty and safety</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>English Language Arts</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>SD-005</td><td>Build a close-reading lesson from an authorized supplied text</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-006</td><td>Create an evidence-based writing task with a clear mentor model</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-007</td><td>Design a revision lesson that separates ideas, organization and conventions</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Social Studies</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>SD-010</td><td>Create a source-analysis lesson using origin, purpose and context</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-011</td><td>Build a corroboration task with multiple supplied perspectives</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-012</td><td>Design a historical claim task that distinguishes evidence from interpretation</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Arts Physical Education And Electives</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>SD-013</td><td>Create a skill-development lesson with modelling, practice and reflection</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-014</td><td>Adapt a performance task for space, equipment and physical access</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>SD-015</td><td>Build an observable process rubric for an arts, PE or elective task</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
-<hr>
-<hr>
-<h3>SD-001 · Create a concept-first mathematics explanation</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Mathematics</p>
+</tbody></table>
+<article class="card"><div class="head"><span class="pid">SD-001</span><h3>Create a concept-first mathematics explanation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Mathematics</p>
 <p class="lbl">When you need this</p>
 <p>Students can follow a procedure but need the underlying idea.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a concept-first mathematics explanation.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a concept-first mathematics explanation.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -108,19 +163,14 @@ Connect quantities, diagrams and symbols with equal wholes. Verify comparisons a
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Both are one unit fraction short of one. Since 1/4 is larger than 1/6, subtracting 1/6 leaves more: 5/6>3/4. Confirm with twelfths: 10/12>9/12. Draw equal 0-1 number lines; different whole sizes would invalidate a direct amount comparison. Transfer: order 2/3, 7/8, 11/12. Answer: 2/3<7/8<11/12 because their missing unit fractions decrease.</p>
-<hr>
-<h3>SD-002 · Design an evidence-based science investigation</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Science</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Both are one unit fraction short of one. Since 1/4 is larger than 1/6, subtracting 1/6 leaves more: 5/6>3/4. Confirm with twelfths: 10/12>9/12. Draw equal 0-1 number lines; different whole sizes would invalidate a direct amount comparison. Transfer: order 2/3, 7/8, 11/12. Answer: 2/3<7/8<11/12 because their missing unit fractions decrease.</p></article>
+<article class="card"><div class="head"><span class="pid">SD-002</span><h3>Design an evidence-based science investigation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Science</p>
 <p class="lbl">When you need this</p>
 <p>Students need to investigate a testable question safely.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design an evidence-based science investigation.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an evidence-based science investigation.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -135,19 +185,14 @@ Write controls, repeated observations, units and limitations. Separate predicted
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Change water temperature and measure time until visible sugar disappears. Keep sugar amount, water volume, cup type and stirring pattern constant. Repeat conditions if time allows. Record actual seconds in a blank table; no data are supplied here. Predicted pattern: warmer water may dissolve sugar faster under these conditions. Limits: judging disappearance and inconsistent stirring. Teacher verifies safe handling and cleanup before use.</p>
-<hr>
-<h3>SD-003 · Connect concrete, visual and symbolic mathematics representations</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Mathematics</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Change water temperature and measure time until visible sugar disappears. Keep sugar amount, water volume, cup type and stirring pattern constant. Repeat conditions if time allows. Record actual seconds in a blank table; no data are supplied here. Predicted pattern: warmer water may dissolve sugar faster under these conditions. Limits: judging disappearance and inconsistent stirring. Teacher verifies safe handling and cleanup before use.</p></article>
+<article class="card"><div class="head"><span class="pid">SD-003</span><h3>Connect concrete, visual and symbolic mathematics representations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Mathematics</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to connect concrete, visual and symbolic mathematics representations.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Connect concrete, visual and symbolic mathematics representations.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Connect concrete, visual and symbolic mathematics representations.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -162,19 +207,14 @@ Explain the mapping between each physical action, diagram element and symbolic o
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Concrete model: three groups of two tens and three ones. Visual model: six tens and nine ones. Symbolic model: 3x(20+3)=60+9=69. Connect each group in the drawing to one addend rather than treating the picture as decoration. Transfer: 14x2=28. The model assumes positive whole-number groups; it does not by itself explain multiplication by a negative number.</p>
-<hr>
-<h3>SD-004 · Build a mathematics error-analysis lesson with verified solutions</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Mathematics</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Concrete model: three groups of two tens and three ones. Visual model: six tens and nine ones. Symbolic model: 3x(20+3)=60+9=69. Connect each group in the drawing to one addend rather than treating the picture as decoration. Transfer: 14x2=28. The model assumes positive whole-number groups; it does not by itself explain multiplication by a negative number.</p></article>
+<article class="card"><div class="head"><span class="pid">SD-004</span><h3>Build a mathematics error-analysis lesson with verified solutions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Mathematics</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a mathematics error-analysis lesson with verified solutions.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a mathematics error-analysis lesson with verified solutions.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a mathematics error-analysis lesson with verified solutions.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -188,19 +228,14 @@ Create clearly fictional wrong solutions with the first invalid step identified.
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>First invalid step: distributing 2 to x but not to 3. Correct: 2x+6=14; 2x=8; x=4. Check: 2(4+3)=14. Ask learners why 5.5 fails substitution: 2(5.5+3)=17. Fresh item: 3(y+2)=18 gives y=4. Label the initial work deliberately incorrect; do not present it as an actual learner record.</p>
-<hr>
-<h3>SD-005 · Build a close-reading lesson from an authorized supplied text</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  English language arts</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>First invalid step: distributing 2 to x but not to 3. Correct: 2x+6=14; 2x=8; x=4. Check: 2(4+3)=14. Ask learners why 5.5 fails substitution: 2(5.5+3)=17. Fresh item: 3(y+2)=18 gives y=4. Label the initial work deliberately incorrect; do not present it as an actual learner record.</p></article>
+<article class="card"><div class="head"><span class="pid">SD-005</span><h3>Build a close-reading lesson from an authorized supplied text</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  English language arts</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a close-reading lesson from an authorized supplied text.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a close-reading lesson from an authorized supplied text.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a close-reading lesson from an authorized supplied text.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -214,17 +249,12 @@ Quote only supplied passages and anchor questions to them. Distinguish text evid
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-006 · Create an evidence-based writing task with a clear mentor model</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  English language arts</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-006</span><h3>Create an evidence-based writing task with a clear mentor model</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  English language arts</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create an evidence-based writing task with a clear mentor model.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create an evidence-based writing task with a clear mentor model.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an evidence-based writing task with a clear mentor model.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -239,17 +269,12 @@ Build a writing task and annotated mentor model using authorized or original tex
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-007 · Design a revision lesson that separates ideas, organization and conventions</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  English language arts</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-007</span><h3>Design a revision lesson that separates ideas, organization and conventions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  English language arts</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design a revision lesson that separates ideas, organization and conventions.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a revision lesson that separates ideas, organization and conventions.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a revision lesson that separates ideas, organization and conventions.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -263,17 +288,12 @@ Separate idea development, organization and conventions. Focus revision on one p
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-008 · Build a claim-evidence-reasoning task from supplied observations</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Science</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-008</span><h3>Build a claim-evidence-reasoning task from supplied observations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Science</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a claim-evidence-reasoning task from supplied observations.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a claim-evidence-reasoning task from supplied observations.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a claim-evidence-reasoning task from supplied observations.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -287,17 +307,12 @@ Build a claim-evidence-reasoning task with uncertainty and alternative explanati
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-009 · Audit a science explanation for causation, uncertainty and safety</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Science</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-009</span><h3>Audit a science explanation for causation, uncertainty and safety</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Science</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit a science explanation for causation, uncertainty and safety.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit a science explanation for causation, uncertainty and safety.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit a science explanation for causation, uncertainty and safety.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -311,17 +326,12 @@ Check mechanism, correlation versus causation, uncertainty and procedure safety.
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-010 · Create a source-analysis lesson using origin, purpose and context</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Social studies</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-010</span><h3>Create a source-analysis lesson using origin, purpose and context</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Social studies</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a source-analysis lesson using origin, purpose and context.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a source-analysis lesson using origin, purpose and context.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a source-analysis lesson using origin, purpose and context.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -335,17 +345,12 @@ Analyze origin, purpose, context and limits. Mark unknown provenance explicitly 
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-011 · Build a corroboration task with multiple supplied perspectives</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Social studies</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-011</span><h3>Build a corroboration task with multiple supplied perspectives</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Social studies</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a corroboration task with multiple supplied perspectives.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a corroboration task with multiple supplied perspectives.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a corroboration task with multiple supplied perspectives.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -359,17 +364,12 @@ Compare agreement, contradiction and independence of sources. Do not treat multi
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-012 · Design a historical claim task that distinguishes evidence from interpretation</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Social studies</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-012</span><h3>Design a historical claim task that distinguishes evidence from interpretation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Social studies</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design a historical claim task that distinguishes evidence from interpretation.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a historical claim task that distinguishes evidence from interpretation.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a historical claim task that distinguishes evidence from interpretation.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -383,17 +383,12 @@ Separate supported claims, interpretations and unresolved questions. Avoid inven
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-013 · Create a skill-development lesson with modelling, practice and reflection</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modelling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a skill-development lesson with modelling, practice and reflection.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a skill-development lesson with modelling, practice and reflection.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a skill-development lesson with modelling, practice and reflection.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -407,17 +402,12 @@ Sequence model, focused practice and reflection with observable criteria. Avoid 
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-014 · Adapt a performance task for space, equipment and physical access</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-014</span><h3>Adapt a performance task for space, equipment and physical access</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to adapt a performance task for space, equipment and physical access.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Adapt a performance task for space, equipment and physical access.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Adapt a performance task for space, equipment and physical access.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -433,17 +423,12 @@ Adapt performance access while preserving the learning goal. Offer equivalent ev
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>SD-015 · Build an observable process rubric for an arts, PE or elective task</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-015</span><h3>Build an observable process rubric for an arts, PE or elective task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build an observable process rubric for an arts, PE or elective task.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build an observable process rubric for an arts, PE or elective task.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build an observable process rubric for an arts, PE or elective task.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -457,12 +442,36 @@ Create a rubric for process, technique and reflection. Do not score body type, i
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><script>document.querySelectorAll(".copy").forEach(function(b){b.onclick=function(){
-var t=b.parentNode.querySelector("pre").innerText;
-navigator.clipboard.writeText(t).then(function(){b.textContent="Copied";
-b.classList.add("ok");setTimeout(function(){b.textContent="Copy";
-b.classList.remove("ok")},1600)})}})</script></body></html>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

@@ -1,58 +1,122 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 2 — Worksheets and Activities</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
 *{box-sizing:border-box}
-body{font:16px/1.65 -apple-system,'Segoe UI',Roboto,sans-serif;color:#1b2733;
- max-width:820px;margin:0 auto;padding:32px 20px 80px;background:#fff}
-h1{font-size:2em;letter-spacing:-.02em;margin:0 0 .3em}
-h2{font-size:1.35em;margin:2.2em 0 .6em;padding-top:1em;border-top:1px solid #e4e9ee}
-h3{font-size:1.12em;margin:1.6em 0 .2em;letter-spacing:-.01em}
-table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.93em}
-th,td{border:1px solid #e4e9ee;padding:7px 10px;text-align:left}
-th{background:#f6f8fa;font-weight:600}
-blockquote{margin:1em 0;padding:.7em 1em;background:#fdf7e8;
- border-left:3px solid #ddae58;font-size:.94em}
-.meta{font-size:.83em;color:#6b7885;margin:0 0 1em}
-.lbl{font-size:.73em;letter-spacing:.09em;text-transform:uppercase;color:#6b7885;
- font-weight:600;margin:1.4em 0 .4em}
-.box{position:relative;background:#f6f8fa;border:1px solid #dde3e9;border-radius:8px;
- padding:16px 18px;margin:.4em 0 1em}
-.box pre{margin:0;white-space:pre-wrap;color:#243240;
- font:13.5px/1.55 ui-monospace,Menlo,Consolas,monospace}
-.copy{position:absolute;top:10px;right:10px;border:1px solid #cdd5dd;background:#fff;
- border-radius:6px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:#33414f}
-.copy:hover{background:#eef2f6}
-.copy.ok{background:#167d8d;border-color:#167d8d;color:#fff}
-hr{border:0;border-top:1px solid #e4e9ee;margin:2.4em 0}
-ul{padding-left:1.3em;margin:.4em 0}
-code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:.9em}
-a{color:#167d8d}
-@media(max-width:600px){body{padding:18px 14px 60px}}
-</style></head><body><h1>Chapter 2 — Worksheets and Activities</h1>
-<p><strong>40 prompts</strong></p>
-<p>The difference between a worksheet that teaches and one that fills time is</p>
-<p>whether the difficulty is deliberate. These prompts build practice that ramps —</p>
-<p>starting where the class actually is, ending where you want them — and activities</p>
-<p>that run without you standing over them.</p>
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; max-width:66ch}
+ul{margin:0 0 1.1rem; padding-left:1.15rem; max-width:66ch}
+li{margin:.3rem 0}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+.box pre{margin:0; padding:18px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#cfd9e3;
+         font:13px/1.62 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#dde3e9;
+        --ink:#18202a; --dim:#5b6673; --faint:#78838f;
+        --accent:#0f7d70; --accent-dim:#bcd9d4; --warn:#9a7314}
+  body{font-size:10.5pt}
+  .wrap{max-width:none; padding:0}
+  .copy{display:none}
+  .card{break-inside:avoid; page-break-inside:avoid; padding:0 0 14pt;
+        border:0; border-bottom:1px solid var(--line); border-radius:0;
+        margin-bottom:14pt}
+  .box{background:#f7f9fa}
+  .bar{background:#eef3f4}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.9em}
+  h2{break-after:avoid} h3{break-after:avoid}
+  blockquote{background:#fdf8ec}
+}
+</style></head><body><div class="wrap"><h1>Chapter 2 — Worksheets and Activities</h1><p class="lede">40 prompts</p><p>The difference between a worksheet that teaches and one that fills time is whether the difficulty is deliberate. These prompts build practice that ramps — starting where the class actually is, ending where you want them — and activities that run without you standing over them.</p>
 <h2>What's in here</h2>
-<table>
-<tr><th>Group</th><th>Prompts</th><th>Use when</th></tr>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
 <tr><td>Practice worksheets</td><td>10</td><td>Independent practice that builds properly</td></tr>
 <tr><td>Learning stations</td><td>8</td><td>Four ways into one topic, one period</td></tr>
 <tr><td>Collaborative tasks</td><td>6</td><td>Group work where everyone has to think</td></tr>
 <tr><td>Review games</td><td>6</td><td>Before an assessment, without the chaos</td></tr>
 <tr><td>Homework sets</td><td>5</td><td>Work that survives leaving your room</td></tr>
 <tr><td>Project briefs</td><td>5</td><td>Longer tasks students run themselves</td></tr>
-</table>
+</tbody></table>
 <h2>Worth knowing before you start</h2>
-<p>Ask for the answer key in the same request. Getting it separately produces a key</p>
-<p>that does not quite match the questions.</p>
-<p>Say how long students have. A worksheet built without a time limit is always</p>
-<p>too long.</p>
-<p>For anything students do in groups, ask what you should look for while walking</p>
-<p>around. That line is usually the most useful part of the output.</p>
+<p>Ask for the answer key in the same request. Getting it separately produces a key that does not quite match the questions.</p>
+<p>Say how long students have. A worksheet built without a time limit is always too long.</p>
+<p>For anything students do in groups, ask what you should look for while walking around. That line is usually the most useful part of the output.</p>
 <h2>Every prompt in this chapter</h2>
 <h3>Practice Worksheets</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>WA-001</td><td>Build a focused practice worksheet</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-005</td><td>Create practice that moves from a model to independent work</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-006</td><td>Write a worksheet that targets one common misconception</td><td>3-5, 6-8, 9-12</td></tr>
@@ -63,10 +127,9 @@ a{color:#167d8d}
 <tr><td>WA-011</td><td>Create an error-analysis worksheet from fictional student work</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-012</td><td>Write a worksheet with foundation, application and reasoning sections</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-013</td><td>Audit and repair a worksheet whose questions are repetitive or unclear</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Learning Stations</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>WA-002</td><td>Design four learning stations</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-014</td><td>Create hands-on, reading, discussion and writing stations</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-015</td><td>Plan station rotations for a large class and small room</td><td>3-5, 6-8, 9-12</td></tr>
@@ -75,53 +138,45 @@ a{color:#167d8d}
 <tr><td>WA-018</td><td>Differentiate station access while preserving one shared objective</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-019</td><td>Design a teacher-led reteaching station from exit-ticket evidence</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-020</td><td>Audit station directions, timing, materials and accountability</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Collaborative Tasks</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>WA-003</td><td>Create an accountable group task</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-021</td><td>Design a jigsaw task where every learner holds essential information</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-022</td><td>Build a group investigation with rotating cognitive roles</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-023</td><td>Create a consensus task that requires evidence and disagreement</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-024</td><td>Turn an individual worksheet into meaningful collaborative reasoning</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-025</td><td>Audit a group task for participation, access and individual evidence</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Review Games</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>WA-004</td><td>Build a review game that measures learning</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-026</td><td>Create a no-speed review game using mini-whiteboards</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-027</td><td>Design a team review game with individual accountability</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-028</td><td>Build a misconception challenge using diagnostic distractors</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-029</td><td>Create a low-prep review game with paper question cards</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-030</td><td>Audit a review game for fairness, accuracy and useful teacher data</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Homework Sets</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>WA-031</td><td>Create a short homework set with a clear purpose</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-032</td><td>Build homework that mixes retrieval and current learning</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-033</td><td>Design homework with a meaningful no-internet option</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-034</td><td>Create a family-readable homework guide without requiring family teaching</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-035</td><td>Audit a homework set for workload, access and answer-key accuracy</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
+</tbody></table>
 <h3>Project Briefs</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th><th>Grades</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th><th>Grades</th></tr></thead><tbody>
 <tr><td>WA-036</td><td>Write a student-ready project brief from a supplied objective</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-037</td><td>Create project milestones, checkpoints and submission requirements</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-038</td><td>Design a choice-based project with equivalent learning demands</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-039</td><td>Build a group-project brief with individual evidence of mastery</td><td>3-5, 6-8, 9-12</td></tr>
 <tr><td>WA-040</td><td>Audit a project brief for clarity, feasibility and privacy</td><td>3-5, 6-8, 9-12</td></tr>
-</table>
-<hr>
-<hr>
-<h3>WA-001 · Build a focused practice worksheet</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+</tbody></table>
+<article class="card"><div class="head"><span class="pid">WA-001</span><h3>Build a focused practice worksheet</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Students need purposeful practice rather than repetitive filler.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a focused practice worksheet.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a focused practice worksheet.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -136,19 +191,14 @@ Sequence model, application and reasoning items. Include complete worked answers
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Model: 2:3 scaled by 2 becomes 4:6. Items: (1) 4 yellow needs __ blue; (2) __ yellow needs 9 blue; (3) Is 6:8 equivalent? Explain; (4) Draw a ratio table for 1, 2 and 3 batches. Key: 6; 6; no because 6:9 is equivalent; pairs 2:3, 4:6, 6:9. Leave two ruled lines after each explanation. This is a four-item excerpt, not a claimed twelve-item complete worksheet.</p>
-<hr>
-<h3>WA-002 · Design four learning stations</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Model: 2:3 scaled by 2 becomes 4:6. Items: (1) 4 yellow needs __ blue; (2) __ yellow needs 9 blue; (3) Is 6:8 equivalent? Explain; (4) Draw a ratio table for 1, 2 and 3 batches. Key: 6; 6; no because 6:9 is equivalent; pairs 2:3, 4:6, 6:9. Leave two ruled lines after each explanation. This is a four-item excerpt, not a claimed twelve-item complete worksheet.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-002</span><h3>Design four learning stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design four learning stations.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design four learning stations.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design four learning stations.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -163,19 +213,14 @@ Write four distinct station cards, materials per group and a rotation table. Che
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Stations: draw feeding arrows; read a short supplied chain description quietly; discuss loss of snails; write a conditional prediction. Each produces one individual sentence or diagram. Timing: launch 4; four 9-minute stations; three 2-minute transitions; exit 2 =48. Key: perch directly lose snail food; effects on herons are indirect and conditional. Groups of eight work as four pairs; verify room capacity before using this rotation.</p>
-<hr>
-<h3>WA-003 · Create an accountable group task</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Stations: draw feeding arrows; read a short supplied chain description quietly; discuss loss of snails; write a conditional prediction. Each produces one individual sentence or diagram. Timing: launch 4; four 9-minute stations; three 2-minute transitions; exit 2 =48. Key: perch directly lose snail food; effects on herons are indirect and conditional. Groups of eight work as four pairs; verify room capacity before using this rotation.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-003</span><h3>Create an accountable group task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>You want collaboration where every learner must think and contribute.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create an accountable group task.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an accountable group task.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -190,19 +235,14 @@ Give each role meaningful reasoning work and require an independent response. Su
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Rank which source could better support a claim and state missing information. Roles: claim-reader, evidence-checker, limitation-finder, synthesis-writer; all prepare individually first. Shared product: claim-evidence-limit table. Individual check: explain why an unknown sample size limits confidence. Do not equate survey format with automatic reliability. Timing: prepare 5, discuss 12, synthesize 8, individual response 5.</p>
-<hr>
-<h3>WA-004 · Build a review game that measures learning</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Rank which source could better support a claim and state missing information. Roles: claim-reader, evidence-checker, limitation-finder, synthesis-writer; all prepare individually first. Shared product: claim-evidence-limit table. Individual check: explain why an unknown sample size limits confidence. Do not equate survey format with automatic reliability. Timing: prepare 5, discuss 12, synthesize 8, individual response 5.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-004</span><h3>Build a review game that measures learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a review game that measures learning.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a review game that measures learning.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a review game that measures learning.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -217,19 +257,14 @@ Produce actual questions, verified answers and a no-speed scoring alternative. R
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Every learner answers silently before discussion. Cards: x+3=8; 2x=14; 3(x-1)=12; x+2=x+5. Key: 5; 7; 5; no solution. Award one point for a correct answer and one for a defensible explanation or corrected explanation. No first-to-answer bonus. Teacher records individual initial responses separately. Timing: rules 3, four 4-minute rounds, reflection 6 =25.</p>
-<hr>
-<h3>WA-005 · Create practice that moves from a model to independent work</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Every learner answers silently before discussion. Cards: x+3=8; 2x=14; 3(x-1)=12; x+2=x+5. Key: 5; 7; 5; no solution. Award one point for a correct answer and one for a defensible explanation or corrected explanation. No first-to-answer bonus. Teacher records individual initial responses separately. Timing: rules 3, four 4-minute rounds, reflection 6 =25.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-005</span><h3>Create practice that moves from a model to independent work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create practice that moves from a model to independent work.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create practice that moves from a model to independent work.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create practice that moves from a model to independent work.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -243,19 +278,14 @@ Provide one worked item, two partially completed items and independent items. Ex
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Model: 1/2=2/4 because each half becomes two fourths. Faded: 2/3=__/6, since each third is split into __ parts; then 3/4=__/8 with no explanation starter. Independent: 2/5=__/10; explain whether 3/6=1/2. Key: 4, 2; 6; 4; yes, both represent half of an equal whole. Support fades from explanation to numeric cue to independent reasoning.</p>
-<hr>
-<h3>WA-006 · Write a worksheet that targets one common misconception</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Model: 1/2=2/4 because each half becomes two fourths. Faded: 2/3=__/6, since each third is split into __ parts; then 3/4=__/8 with no explanation starter. Independent: 2/5=__/10; explain whether 3/6=1/2. Key: 4, 2; 6; 4; yes, both represent half of an equal whole. Support fades from explanation to numeric cue to independent reasoning.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-006</span><h3>Write a worksheet that targets one common misconception</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to write a worksheet that targets one common misconception.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a worksheet that targets one common misconception.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a worksheet that targets one common misconception.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -269,19 +299,14 @@ Start with a tempting wrong response, ask learners to explain it, then contrast 
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Fictional wrong claim: 1/8 is greater than 1/4 because 8 is greater than 4. Draw equal bars in fourths and eighths. Ask which unit piece is larger and why. Key: 1/4 is greater; dividing the same whole into more equal pieces makes each smaller. Fresh check: compare 1/3 and 1/6. Key: 1/3 is greater. Do not generalize the unit-fraction rule to unequal numerators without further reasoning.</p>
-<hr>
-<h3>WA-007 · Build mixed practice that requires learners to choose a strategy</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Fictional wrong claim: 1/8 is greater than 1/4 because 8 is greater than 4. Draw equal bars in fourths and eighths. Ask which unit piece is larger and why. Key: 1/4 is greater; dividing the same whole into more equal pieces makes each smaller. Fresh check: compare 1/3 and 1/6. Key: 1/3 is greater. Do not generalize the unit-fraction rule to unequal numerators without further reasoning.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-007</span><h3>Build mixed practice that requires learners to choose a strategy</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build mixed practice that requires learners to choose a strategy.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build mixed practice that requires learners to choose a strategy.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build mixed practice that requires learners to choose a strategy.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -295,19 +320,14 @@ Interleave problems so learners choose a strategy. Require a reason for the choi
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Questions: triple 8; increase 8 by 3; recipe 2:5 scaled to 6 first units; perimeter of square side 8. Keys: 24; 11; 15; 32. For each, learners name multiplication, addition, ratio scaling or perimeter reasoning before calculating. Teacher key explains why the surface presence of 3 or 8 does not determine the operation. Avoid headings that announce the required strategy.</p>
-<hr>
-<h3>WA-008 · Create a short retrieval worksheet for previously taught skills</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Questions: triple 8; increase 8 by 3; recipe 2:5 scaled to 6 first units; perimeter of square side 8. Keys: 24; 11; 15; 32. For each, learners name multiplication, addition, ratio scaling or perimeter reasoning before calculating. Teacher key explains why the surface presence of 3 or 8 does not determine the operation. Avoid headings that announce the required strategy.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-008</span><h3>Create a short retrieval worksheet for previously taught skills</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a short retrieval worksheet for previously taught skills.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a short retrieval worksheet for previously taught skills.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a short retrieval worksheet for previously taught skills.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -321,19 +341,14 @@ Use short retrieval items followed by a separate feedback key. Keep first attemp
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
-<p>Without notes: 7x8; simplify 4/8; perimeter of rectangle 3 by 5 units. After an initial attempt, show key: 56; 1/2; 16 units. Learners correct in a different mark and explain one correction. Teacher records the first response for planning only. A missed fact today is evidence for further practice, not proof of poor effort or permanent inability.</p>
-<hr>
-<h3>WA-009 · Design an application worksheet using realistic classroom contexts</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul>
+<p><strong>Example</strong> — an editorial illustration, not a logged AI run</p>
+<p>Without notes: 7x8; simplify 4/8; perimeter of rectangle 3 by 5 units. After an initial attempt, show key: 56; 1/2; 16 units. Learners correct in a different mark and explain one correction. Teacher records the first response for planning only. A missed fact today is evidence for further practice, not proof of poor effort or permanent inability.</p></article>
+<article class="card"><div class="head"><span class="pid">WA-009</span><h3>Design an application worksheet using realistic classroom contexts</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design an application worksheet using realistic classroom contexts.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design an application worksheet using realistic classroom contexts.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an application worksheet using realistic classroom contexts.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -347,17 +362,12 @@ Build applications with sufficient data and correct units. Label invented practi
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-010 · Adapt a worksheet for black-and-white printing and limited space</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-010</span><h3>Adapt a worksheet for black-and-white printing and limited space</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to adapt a worksheet for black-and-white printing and limited space.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Adapt a worksheet for black-and-white printing and limited space.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Adapt a worksheet for black-and-white printing and limited space.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -371,17 +381,12 @@ Return a print-layout specification with grayscale-safe cues, legible type and w
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-011 · Create an error-analysis worksheet from fictional student work</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-011</span><h3>Create an error-analysis worksheet from fictional student work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create an error-analysis worksheet from fictional student work.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create an error-analysis worksheet from fictional student work.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create an error-analysis worksheet from fictional student work.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -395,17 +400,12 @@ Create deliberately incorrect fictional solutions, clearly labelled. Ask where r
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-012 · Write a worksheet with foundation, application and reasoning sections</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-012</span><h3>Write a worksheet with foundation, application and reasoning sections</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to write a worksheet with foundation, application and reasoning sections.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a worksheet with foundation, application and reasoning sections.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a worksheet with foundation, application and reasoning sections.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -419,17 +419,12 @@ Divide work into foundation, application and reasoning without equating longer t
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-013 · Audit and repair a worksheet whose questions are repetitive or unclear</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-013</span><h3>Audit and repair a worksheet whose questions are repetitive or unclear</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit and repair a worksheet whose questions are repetitive or unclear.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit and repair a worksheet whose questions are repetitive or unclear.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit and repair a worksheet whose questions are repetitive or unclear.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -443,17 +438,12 @@ Identify repetitive or ambiguous items by number. Explain the problem and provid
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-014 · Create hands-on, reading, discussion and writing stations</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-014</span><h3>Create hands-on, reading, discussion and writing stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create hands-on, reading, discussion and writing stations.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create hands-on, reading, discussion and writing stations.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create hands-on, reading, discussion and writing stations.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -468,17 +458,12 @@ Use four modes with the same learning goal. Require a meaningful product at ever
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-015 · Plan station rotations for a large class and small room</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-015</span><h3>Plan station rotations for a large class and small room</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to plan station rotations for a large class and small room.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan station rotations for a large class and small room.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan station rotations for a large class and small room.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -493,17 +478,12 @@ Calculate group sizes, transitions and bottlenecks. Offer materials-rotate/stude
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-016 · Build self-checking stations that do not depend on the teacher</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-016</span><h3>Build self-checking stations that do not depend on the teacher</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build self-checking stations that do not depend on the teacher.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build self-checking stations that do not depend on the teacher.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build self-checking stations that do not depend on the teacher.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -517,17 +497,12 @@ Separate task cards from self-check cards. Add a retry step and an escalation si
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-017 · Create one quiet station and three collaborative stations</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-017</span><h3>Create one quiet station and three collaborative stations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create one quiet station and three collaborative stations.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create one quiet station and three collaborative stations.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create one quiet station and three collaborative stations.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -541,17 +516,12 @@ Specify one silent accessible station and three low-volume collaborative station
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-018 · Differentiate station access while preserving one shared objective</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-018</span><h3>Differentiate station access while preserving one shared objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to differentiate station access while preserving one shared objective.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Differentiate station access while preserving one shared objective.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Differentiate station access while preserving one shared objective.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -565,17 +535,12 @@ Adapt access at stations without changing the assessed construct. State what rem
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-019 · Design a teacher-led reteaching station from exit-ticket evidence</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-019</span><h3>Design a teacher-led reteaching station from exit-ticket evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design a teacher-led reteaching station from exit-ticket evidence.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a teacher-led reteaching station from exit-ticket evidence.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a teacher-led reteaching station from exit-ticket evidence.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -589,17 +554,12 @@ Choose one misconception for the teacher station, model it and check again. Give
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-020 · Audit station directions, timing, materials and accountability</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-020</span><h3>Audit station directions, timing, materials and accountability</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit station directions, timing, materials and accountability.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit station directions, timing, materials and accountability.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit station directions, timing, materials and accountability.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -613,17 +573,12 @@ Audit instructions, timing, materials and evidence collection by station. Return
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-021 · Design a jigsaw task where every learner holds essential information</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-021</span><h3>Design a jigsaw task where every learner holds essential information</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design a jigsaw task where every learner holds essential information.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a jigsaw task where every learner holds essential information.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a jigsaw task where every learner holds essential information.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -637,17 +592,12 @@ Assign complementary evidence to expert groups, then require synthesis in home g
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-022 · Build a group investigation with rotating cognitive roles</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-022</span><h3>Build a group investigation with rotating cognitive roles</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a group investigation with rotating cognitive roles.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a group investigation with rotating cognitive roles.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a group investigation with rotating cognitive roles.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -661,17 +611,12 @@ Rotate predictor, evidence-checker, challenger and recorder roles. Require each 
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-023 · Create a consensus task that requires evidence and disagreement</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-023</span><h3>Create a consensus task that requires evidence and disagreement</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a consensus task that requires evidence and disagreement.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a consensus task that requires evidence and disagreement.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a consensus task that requires evidence and disagreement.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -685,17 +630,12 @@ Define consensus as a reasoned position with dissent recorded. Do not require ag
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-024 · Turn an individual worksheet into meaningful collaborative reasoning</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-024</span><h3>Turn an individual worksheet into meaningful collaborative reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to turn an individual worksheet into meaningful collaborative reasoning.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Turn an individual worksheet into meaningful collaborative reasoning.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn an individual worksheet into meaningful collaborative reasoning.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -709,17 +649,12 @@ Choose items that benefit from comparing methods. Add individual preparation, jo
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-025 · Audit a group task for participation, access and individual evidence</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-025</span><h3>Audit a group task for participation, access and individual evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit a group task for participation, access and individual evidence.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit a group task for participation, access and individual evidence.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit a group task for participation, access and individual evidence.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -733,17 +668,12 @@ Audit whose thinking is visible and who can be excluded. Repair roles and eviden
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-026 · Create a no-speed review game using mini-whiteboards</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-026</span><h3>Create a no-speed review game using mini-whiteboards</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a no-speed review game using mini-whiteboards.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a no-speed review game using mini-whiteboards.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a no-speed review game using mini-whiteboards.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -757,17 +687,12 @@ Use simultaneous responses after sufficient thinking time. Score explanation or 
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-027 · Design a team review game with individual accountability</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-027</span><h3>Design a team review game with individual accountability</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design a team review game with individual accountability.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a team review game with individual accountability.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a team review game with individual accountability.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -781,17 +706,12 @@ Collect an individual response before team discussion. Keep team scoring separat
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-028 · Build a misconception challenge using diagnostic distractors</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-028</span><h3>Build a misconception challenge using diagnostic distractors</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a misconception challenge using diagnostic distractors.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a misconception challenge using diagnostic distractors.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a misconception challenge using diagnostic distractors.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -805,17 +725,12 @@ Write plausible distractors tied to known errors, then reveal explanations after
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-029 · Create a low-prep review game with paper question cards</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-029</span><h3>Create a low-prep review game with paper question cards</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a low-prep review game with paper question cards.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a low-prep review game with paper question cards.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a low-prep review game with paper question cards.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -829,17 +744,12 @@ Produce cut-apart cards and a separate verified key. Include reusable rules with
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-030 · Audit a review game for fairness, accuracy and useful teacher data</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-030</span><h3>Audit a review game for fairness, accuracy and useful teacher data</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit a review game for fairness, accuracy and useful teacher data.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit a review game for fairness, accuracy and useful teacher data.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit a review game for fairness, accuracy and useful teacher data.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -854,17 +764,12 @@ Check ambiguity, luck, speed advantage and access. Revise scoring so the resulti
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-031 · Create a short homework set with a clear purpose</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-031</span><h3>Create a short homework set with a clear purpose</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a short homework set with a clear purpose.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a short homework set with a clear purpose.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a short homework set with a clear purpose.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -878,17 +783,12 @@ Write a short assignment with estimated completion range and a stop rule. State 
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-032 · Build homework that mixes retrieval and current learning</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-032</span><h3>Build homework that mixes retrieval and current learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build homework that mixes retrieval and current learning.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build homework that mixes retrieval and current learning.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build homework that mixes retrieval and current learning.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -902,17 +802,12 @@ Mix a small retrieval set with current practice and identify each purpose in the
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-033 · Design homework with a meaningful no-internet option</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-033</span><h3>Design homework with a meaningful no-internet option</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design homework with a meaningful no-internet option.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design homework with a meaningful no-internet option.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design homework with a meaningful no-internet option.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -926,17 +821,12 @@ Create an equivalent offline route using available materials. Keep learning dema
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-034 · Create a family-readable homework guide without requiring family teaching</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-034</span><h3>Create a family-readable homework guide without requiring family teaching</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create a family-readable homework guide without requiring family teaching.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create a family-readable homework guide without requiring family teaching.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a family-readable homework guide without requiring family teaching.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -950,17 +840,12 @@ Explain the purpose and logistics in plain language. Tell families encouragement
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-035 · Audit a homework set for workload, access and answer-key accuracy</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-035</span><h3>Audit a homework set for workload, access and answer-key accuracy</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit a homework set for workload, access and answer-key accuracy.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit a homework set for workload, access and answer-key accuracy.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit a homework set for workload, access and answer-key accuracy.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -974,17 +859,12 @@ Check access assumptions, length and every answer. Offer a shorter essential set
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-036 · Write a student-ready project brief from a supplied objective</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-036</span><h3>Write a student-ready project brief from a supplied objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to write a student-ready project brief from a supplied objective.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a student-ready project brief from a supplied objective.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a student-ready project brief from a supplied objective.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -999,17 +879,12 @@ Write a student-facing brief with product, criteria, materials and submission ro
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-037 · Create project milestones, checkpoints and submission requirements</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-037</span><h3>Create project milestones, checkpoints and submission requirements</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to create project milestones, checkpoints and submission requirements.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Create project milestones, checkpoints and submission requirements.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create project milestones, checkpoints and submission requirements.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -1023,17 +898,12 @@ Create a student checklist with due dates only when supplied. Separate draft fee
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-038 · Design a choice-based project with equivalent learning demands</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-038</span><h3>Design a choice-based project with equivalent learning demands</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to design a choice-based project with equivalent learning demands.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a choice-based project with equivalent learning demands.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a choice-based project with equivalent learning demands.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -1047,17 +917,12 @@ Compare options for time, resources and intellectual demand. Repair choices that
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-039 · Build a group-project brief with individual evidence of mastery</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-039</span><h3>Build a group-project brief with individual evidence of mastery</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to build a group-project brief with individual evidence of mastery.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a group-project brief with individual evidence of mastery.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a group-project brief with individual evidence of mastery.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -1071,17 +936,12 @@ Add an individual explanation and role record to the student brief. Do not alloc
 
 Output:
 Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><hr>
-<h3>WA-040 · Audit a project brief for clarity, feasibility and privacy</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WA-040</span><h3>Audit a project brief for clarity, feasibility and privacy</h3></div><p class="meta">Grades 3-5, 6-8, 9-12  ·  Any subject</p>
 <p class="lbl">When you need this</p>
 <p>Choose this focused tool when your immediate task is to audit a project brief for clarity, feasibility and privacy.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit a project brief for clarity, feasibility and privacy.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit a project brief for clarity, feasibility and privacy.
 
 Required inputs:
 - [GRADE_SUBJECT: exact age/grade and subject]
@@ -1095,12 +955,36 @@ Audit feasibility, copyright, public audience and accessibility. Return exact wo
 
 Output:
 Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li>
-<li>[ ] Answers and subject content checked independently; access and local policy preserved.</li>
-<li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul><script>document.querySelectorAll(".copy").forEach(function(b){b.onclick=function(){
-var t=b.parentNode.querySelector("pre").innerText;
-navigator.clipboard.writeText(t).then(function(){b.textContent="Copied";
-b.classList.add("ok");setTimeout(function(){b.textContent="Copy";
-b.classList.remove("ok")},1600)})}})</script></body></html>
+<ul><li>[ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.</li><li>[ ] Answers and subject content checked independently; access and local policy preserved.</li><li>[ ] No identifying or sensitive records were shared; final recipient/content checked locally.</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

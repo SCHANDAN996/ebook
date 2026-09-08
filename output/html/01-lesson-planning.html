@@ -1,40 +1,108 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 1 — Lesson Planning</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
 *{box-sizing:border-box}
-body{font:16px/1.65 -apple-system,'Segoe UI',Roboto,sans-serif;color:#1b2733;
- max-width:820px;margin:0 auto;padding:32px 20px 80px;background:#fff}
-h1{font-size:2em;letter-spacing:-.02em;margin:0 0 .3em}
-h2{font-size:1.35em;margin:2.2em 0 .6em;padding-top:1em;border-top:1px solid #e4e9ee}
-h3{font-size:1.12em;margin:1.6em 0 .2em;letter-spacing:-.01em}
-table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.93em}
-th,td{border:1px solid #e4e9ee;padding:7px 10px;text-align:left}
-th{background:#f6f8fa;font-weight:600}
-blockquote{margin:1em 0;padding:.7em 1em;background:#fdf7e8;
- border-left:3px solid #ddae58;font-size:.94em}
-.meta{font-size:.83em;color:#6b7885;margin:0 0 1em}
-.lbl{font-size:.73em;letter-spacing:.09em;text-transform:uppercase;color:#6b7885;
- font-weight:600;margin:1.4em 0 .4em}
-.box{position:relative;background:#f6f8fa;border:1px solid #dde3e9;border-radius:8px;
- padding:16px 18px;margin:.4em 0 1em}
-.box pre{margin:0;white-space:pre-wrap;color:#243240;
- font:13.5px/1.55 ui-monospace,Menlo,Consolas,monospace}
-.copy{position:absolute;top:10px;right:10px;border:1px solid #cdd5dd;background:#fff;
- border-radius:6px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:#33414f}
-.copy:hover{background:#eef2f6}
-.copy.ok{background:#167d8d;border-color:#167d8d;color:#fff}
-hr{border:0;border-top:1px solid #e4e9ee;margin:2.4em 0}
-ul{padding-left:1.3em;margin:.4em 0}
-code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:.9em}
-a{color:#167d8d}
-@media(max-width:600px){body{padding:18px 14px 60px}}
-</style></head><body><h1>Chapter 1 — Lesson Planning</h1>
-<p><strong>60 prompts</strong></p>
-<p>Most lesson planning goes wrong in the same place: you start listing activities</p>
-<p>before deciding what would count as proof the lesson worked. These prompts push</p>
-<p>the evidence to the front — what will you actually see in the room that tells</p>
-<p>you they got it — and build backward from there.</p>
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; max-width:66ch}
+ul{margin:0 0 1.1rem; padding-left:1.15rem; max-width:66ch}
+li{margin:.3rem 0}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+.box pre{margin:0; padding:18px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#cfd9e3;
+         font:13px/1.62 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#dde3e9;
+        --ink:#18202a; --dim:#5b6673; --faint:#78838f;
+        --accent:#0f7d70; --accent-dim:#bcd9d4; --warn:#9a7314}
+  body{font-size:10.5pt}
+  .wrap{max-width:none; padding:0}
+  .copy{display:none}
+  .card{break-inside:avoid; page-break-inside:avoid; padding:0 0 14pt;
+        border:0; border-bottom:1px solid var(--line); border-radius:0;
+        margin-bottom:14pt}
+  .box{background:#f7f9fa}
+  .bar{background:#eef3f4}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.9em}
+  h2{break-after:avoid} h3{break-after:avoid}
+  blockquote{background:#fdf8ec}
+}
+</style></head><body><div class="wrap"><h1>Chapter 1 — Lesson Planning</h1><p class="lede">60 prompts</p><p>Most lesson planning goes wrong in the same place: you start listing activities before deciding what would count as proof the lesson worked. These prompts push the evidence to the front — what will you actually see in the room that tells you they got it — and build backward from there.</p>
 <h2>What's in here</h2>
-<table>
-<tr><th>Group</th><th>Prompts</th><th>Use when</th></tr>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
 <tr><td>Complete lessons</td><td>12</td><td>You need the whole thing, start to finish</td></tr>
 <tr><td>Backward unit planning</td><td>8</td><td>You have three weeks and an end assessment</td></tr>
 <tr><td>Standards and objectives</td><td>8</td><td>Turning official wording into something teachable</td></tr>
@@ -43,22 +111,16 @@ a{color:#167d8d}
 <tr><td>Substitute and emergency plans</td><td>6</td><td>You are ill at 6am</td></tr>
 <tr><td>Projects and interdisciplinary</td><td>6</td><td>Longer work, more than one subject</td></tr>
 <tr><td>Reflection and adaptation</td><td>6</td><td>It did not go as planned; now what</td></tr>
-</table>
+</tbody></table>
 <h2>Worth knowing before you start</h2>
-<p>Give it the real constraints — 50 minutes, 26 students, no lab this week. Vague</p>
-<p>input produces a plan for a class that does not exist.</p>
-<p>If a standard has to be followed, paste its exact wording. Never ask the model to</p>
-<p>recall a standard code; it will produce something that looks right.</p>
+<p>Give it the real constraints — 50 minutes, 26 students, no lab this week. Vague input produces a plan for a class that does not exist.</p>
+<p>If a standard has to be followed, paste its exact wording. Never ask the model to recall a standard code; it will produce something that looks right.</p>
 <p>Treat every suggested timing as optimistic. Handing out paper takes four minutes.</p>
-<hr>
 <h2>Complete lessons</h2>
-<hr>
-<h3>LP-001 · Build a complete evidence-led lesson</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<article class="card"><div class="head"><span class="pid">LP-001</span><h3>Build a complete evidence-led lesson</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You have an objective and a slot in the timetable, and nothing else yet.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC].
 
 Objective: [OBJECTIVE — what students should be able to do by the end]
 Class: [CLASS SIZE, anything I should know about the group]
@@ -80,17 +142,12 @@ Give me:
 
 Keep every section short enough to read at a glance while teaching. If any of
 my inputs are missing or too vague to plan from, ask me before drafting.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does every activity produce evidence about the objective?</li>
-<li>Could a student who understood nothing still answer the exit ticket?</li>
-<li>Are the materials ones you genuinely have this week?</li></ul><hr>
-<h3>LP-006 · Plan a concept-development lesson from prior knowledge</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does every activity produce evidence about the objective?</li><li>Could a student who understood nothing still answer the exit ticket?</li><li>Are the materials ones you genuinely have this week?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-006</span><h3>Plan a concept-development lesson from prior knowledge</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The concept is new, but they already hold pieces of it without knowing.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson that develops the concept of
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson that develops the concept of
 [CONCEPT], starting from what students already know.
 
 Already taught: [PRIOR LEARNING]
@@ -107,16 +164,12 @@ I can hear it while circulating.
 
 End with a check that distinguishes a student who has the new concept from one
 who has memorised the new vocabulary.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the "cannot explain" example genuinely unexplainable with prior knowledge?</li>
-<li>Does the definition arrive after the need for it, not before?</li></ul><hr>
-<h3>LP-007 · Plan an inquiry lesson around a puzzling phenomenon</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the "cannot explain" example genuinely unexplainable with prior knowledge?</li><li>Does the definition arrive after the need for it, not before?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-007</span><h3>Plan an inquiry lesson around a puzzling phenomenon</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want them asking the question rather than answering yours.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] inquiry lesson about [TOPIC].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] inquiry lesson about [TOPIC].
 
 Available materials: [MATERIALS — say if this must be paper only]
 
@@ -134,16 +187,12 @@ Give me:
 
 If the phenomenon needs equipment I have not listed, say so rather than
 assuming I have it.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the phenomenon actually puzzling, or just unfamiliar?</li>
-<li>Is there a point where you teach directly? Pure discovery rarely works.</li></ul><hr>
-<h3>LP-008 · Create an explicit-instruction lesson with guided release</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the phenomenon actually puzzling, or just unfamiliar?</li><li>Is there a point where you teach directly? Pure discovery rarely works.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-008</span><h3>Create an explicit-instruction lesson with guided release</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A procedure where practising it wrong first would be costly.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson teaching [SKILL OR PROCEDURE]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson teaching [SKILL OR PROCEDURE]
 using explicit instruction with gradual release.
 
 Structure it as I do it / we do it / you do it together / you do it alone, with
@@ -161,16 +210,12 @@ For &quot;you do it alone&quot;: three items increasing in difficulty, with answ
 
 Between each phase, tell me the checkpoint — what I need to see before moving
 on, and what I do if I do not see it.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does the worked example include the thinking, or only the steps?</li>
-<li>Is there a stated checkpoint before each release?</li></ul><hr>
-<h3>LP-009 · Design a discussion-centered lesson with equitable participation</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does the worked example include the thinking, or only the steps?</li><li>Is there a stated checkpoint before each release?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-009</span><h3>Design a discussion-centered lesson with equitable participation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The same six students answer everything and you want that to change.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] discussion lesson on [TOPIC OR TEXT]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] discussion lesson on [TOPIC OR TEXT]
 for [NUMBER] students.
 
 Design it so a quiet student has a real route in.
@@ -187,16 +232,12 @@ Give me:
   evidence I get
 
 Do not suggest cold-calling as the main participation strategy.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is there thinking time before talking time?</li>
-<li>Does a student who says nothing still leave evidence you can read?</li></ul><hr>
-<h3>LP-010 · Build a no-technology lesson using basic classroom materials</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is there thinking time before talking time?</li><li>Does a student who says nothing still leave evidence you can read?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-010</span><h3>Build a no-technology lesson using basic classroom materials</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The wifi is down, the trolley is booked, or you simply do not want screens.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC] using nothing but
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC] using nothing but
 paper, pens, a board, and what is already in an ordinary classroom.
 
 No printing — assume I cannot photocopy anything this morning. Anything students
@@ -211,16 +252,12 @@ Give me:
 
 This should not feel like a downgraded technology lesson. Use the constraint —
 physical grouping, movement, talk — as an advantage.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could this actually run with zero preparation this morning?</li>
-<li>Is anything here secretly assuming a printer?</li></ul><hr>
-<h3>LP-011 · Create a lesson around one complex text or source</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could this actually run with zero preparation this morning?</li><li>Is anything here secretly assuming a printer?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-011</span><h3>Create a lesson around one complex text or source</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>One difficult text, and you want them to work through it rather than survive it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson built around the text below.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] lesson built around the text below.
 
 Do not summarise the text for students. Design a lesson that makes them work
 through it.
@@ -238,16 +275,12 @@ Give me:
 
 TEXT:
 [PASTE THE FULL TEXT HERE]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do the quoted sticking points actually appear in your text?</li>
-<li>Is the second read deeper, or just more of the same?</li></ul><hr>
-<h3>LP-012 · Plan a safe hands-on investigation lesson</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Do the quoted sticking points actually appear in your text?</li><li>Is the second read deeper, or just more of the same?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-012</span><h3>Plan a safe hands-on investigation lesson</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Practical work, where safety is part of the plan and not an afterthought.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] hands-on investigation into
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] [SUBJECT] hands-on investigation into
 [QUESTION OR PHENOMENON].
 
 Equipment I actually have: [LIST]
@@ -266,16 +299,12 @@ Flag anything needing equipment I have not listed, or that my room as described
 cannot support. Do not assume a fume hood, gas or running water unless I said so.
 
 I will check all safety guidance against my school&#x27;s own procedures.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Check every safety point against your school's policy, not this draft.</li>
-<li>Is the equipment list what you actually have on the day?</li></ul><hr>
-<h3>LP-013 · Design a problem-based mathematics lesson</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Check every safety point against your school's policy, not this draft.</li><li>Is the equipment list what you actually have on the day?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-013</span><h3>Design a problem-based mathematics lesson</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want them to need the method before you teach it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [MINUTES]-minute [GRADE] mathematics lesson on [TOPIC].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] mathematics lesson on [TOPIC].
 
 Open with a problem students can start without being taught the method — one
 where an inefficient approach works but becomes painful, so the method answers
@@ -292,16 +321,12 @@ Give me:
 - Answers, with working shown
 
 Check every calculation. State any assumption you made about the numbers.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Work all the numbers yourself. This is where wrong answers hide.</li>
-<li>Does the inefficient route genuinely work, or break immediately?</li></ul><hr>
-<h3>LP-014 · Compress a full lesson into a purposeful 30-minute period</h3>
-<p class="meta">All grades</p>
+<ul><li>Work all the numbers yourself. This is where wrong answers hide.</li><li>Does the inefficient route genuinely work, or break immediately?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-014</span><h3>Compress a full lesson into a purposeful 30-minute period</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>An assembly, a fire drill, a shortened day — and the lesson still has to land.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Cut the lesson below down to [MINUTES] minutes for [GRADE] [SUBJECT].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Cut the lesson below down to [MINUTES] minutes for [GRADE] [SUBJECT].
 
 Do not trim every section evenly. Decide what the lesson is really for, protect
 that, and cut the rest properly.
@@ -318,16 +343,12 @@ say so and tell me what a better use of the [MINUTES] minutes would be.
 
 LESSON:
 [PASTE YOUR PLAN]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do you agree with what it decided was essential?</li>
-<li>Is the timing realistic, or does it assume instant transitions?</li></ul><hr>
-<h3>LP-015 · Expand a lesson for a 90-minute block without filler</h3>
-<p class="meta">Grades 6-8, 9-12</p>
+<ul><li>Do you agree with what it decided was essential?</li><li>Is the timing realistic, or does it assume instant transitions?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-015</span><h3>Expand a lesson for a 90-minute block without filler</h3></div><p class="meta">Grades 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A double period, and you refuse to fill it with extra questions.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Extend the [GRADE] [SUBJECT] lesson below to fill [MINUTES] minutes.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Extend the [GRADE] [SUBJECT] lesson below to fill [MINUTES] minutes.
 
 Do not add more practice items of the same kind. Add depth: application,
 transfer, comparison, or students producing something rather than answering.
@@ -343,16 +364,12 @@ Do not extend by simply increasing the number of questions.
 
 LESSON:
 [PASTE YOUR PLAN]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the extra time depth or volume?</li>
-<li>Is anything needing attention placed in the low-attention slot?</li></ul><hr>
-<h3>LP-016 · Repair a draft lesson whose activities do not match its objective</h3>
-<p class="meta">All grades</p>
+<ul><li>Is the extra time depth or volume?</li><li>Is anything needing attention placed in the low-attention slot?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-016</span><h3>Repair a draft lesson whose activities do not match its objective</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The plan looks fine, but something about it is not adding up.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit the [GRADE] [SUBJECT] lesson below against its stated objective.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit the [GRADE] [SUBJECT] lesson below against its stated objective.
 
 For each activity, tell me:
 - What it actually asks students to do, cognitively
@@ -369,18 +386,13 @@ OBJECTIVE: [PASTE IT]
 
 LESSON:
 [PASTE YOUR PLAN]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do you agree with the mismatch it identified?</li>
-<li>Does the replacement fit your actual time and materials?</li></ul><hr>
-<h2>Backward unit planning</h2>
-<hr>
-<h3>LP-002 · Plan a unit backward from mastery</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Do you agree with the mismatch it identified?</li><li>Does the replacement fit your actual time and materials?</li></ul>
+<h2>Backward unit planning</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-002</span><h3>Plan a unit backward from mastery</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Three weeks, an assessment at the end, and no clear path between them.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Plan a [NUMBER]-lesson [GRADE] [SUBJECT] unit on [TOPIC].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [NUMBER]-lesson [GRADE] [SUBJECT] unit on [TOPIC].
 
 The unit ends with: [FINAL ASSESSMENT OR PERFORMANCE]
 Already taught: [PRIOR LEARNING]
@@ -397,16 +409,12 @@ Give me:
 
 Mark optional extensions separately from the core sequence, so I can see at a
 glance what is expendable.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does each lesson clearly serve the final assessment?</li>
-<li>Are the checkpoints early enough to act on?</li></ul><hr>
-<h3>LP-017 · Unpack final mastery into a prerequisite learning map</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does each lesson clearly serve the final assessment?</li><li>Are the checkpoints early enough to act on?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-017</span><h3>Unpack final mastery into a prerequisite learning map</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You know the destination; you are not sure what has to come first.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For this [GRADE] [SUBJECT] end goal — [END GOAL] — map what has to be in place
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] end goal — [END GOAL] — map what has to be in place
 first.
 
 Give me:
@@ -418,16 +426,12 @@ Give me:
 
 Do not include anything students do not actually need for this goal. A shorter
 honest list is more useful than a complete-looking one.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is each component small enough to teach in one lesson?</li>
-<li>Are the dependencies real, or just a plausible-looking order?</li></ul><hr>
-<h3>LP-018 · Design a final performance task before planning daily lessons</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is each component small enough to teach in one lesson?</li><li>Are the dependencies real, or just a plausible-looking order?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-018</span><h3>Design a final performance task before planning daily lessons</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Writing the ending first, so the middle has somewhere to go.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design the final performance task for a [GRADE] [SUBJECT] unit on [TOPIC].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design the final performance task for a [GRADE] [SUBJECT] unit on [TOPIC].
 
 Learning it must evidence: [WHAT STUDENTS SHOULD BE ABLE TO DO]
 Time available: [MINUTES OR LESSONS]
@@ -441,16 +445,12 @@ Give me:
   presentation — so I do not accidentally grade the poster
 
 Keep it completable in the time given, with the materials a normal classroom has.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could a student do well on this without the learning? Redesign if so.</li>
-<li>Is presentation separated from substance?</li></ul><hr>
-<h3>LP-019 · Create a coherent lesson sequence from an approved assessment</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could a student do well on this without the learning? Redesign if so.</li><li>Is presentation separated from substance?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-019</span><h3>Create a coherent lesson sequence from an approved assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The assessment is fixed and handed to you; the teaching is yours.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Below is the assessment my [GRADE] [SUBJECT] students sit at the end of this
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Below is the assessment my [GRADE] [SUBJECT] students sit at the end of this
 unit. I have [NUMBER] lessons before it.
 
 Work out what it actually demands, then plan the sequence.
@@ -466,16 +466,12 @@ Give me:
 
 ASSESSMENT:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is it teaching the learning or teaching the paper?</li>
-<li>Do students meet the format early enough that it is not a surprise?</li></ul><hr>
-<h3>LP-020 · Place formative checkpoints and reteaching decisions across a unit</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is it teaching the learning or teaching the paper?</li><li>Do students meet the format early enough that it is not a surprise?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-020</span><h3>Place formative checkpoints and reteaching decisions across a unit</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want to find out who is lost before the end of the unit.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For the [GRADE] [SUBJECT] unit below, place formative checkpoints.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For the [GRADE] [SUBJECT] unit below, place formative checkpoints.
 
 Give me:
 - Where they go, and why there specifically
@@ -491,16 +487,12 @@ decision about moving on is mine.
 
 UNIT:
 [PASTE YOUR OUTLINE]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is each reteach concrete enough to teach tomorrow?</li>
-<li>Can you genuinely mark each checkpoint in ten minutes?</li></ul><hr>
-<h3>LP-021 · Audit a unit for gaps, repetition and cognitive progression</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is each reteach concrete enough to teach tomorrow?</li><li>Can you genuinely mark each checkpoint in ten minutes?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-021</span><h3>Audit a unit for gaps, repetition and cognitive progression</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The unit exists. You want to know what is wrong with it before you teach it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit this [GRADE] [SUBJECT] unit.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] unit.
 
 Tell me:
 - Where a lesson assumes something never taught
@@ -515,16 +507,12 @@ list of strengths.
 
 UNIT:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do you agree with the gaps, or is it missing context you hold in your head?</li>
-<li>Is the flat-demand judgement fair?</li></ul><hr>
-<h3>LP-022 · Shorten a unit while protecting its essential learning</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Do you agree with the gaps, or is it missing context you hold in your head?</li><li>Is the flat-demand judgement fair?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-022</span><h3>Shorten a unit while protecting its essential learning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Snow days, assemblies, a lost week — and the unit still has to finish.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>I have lost [NUMBER] lessons from this [GRADE] [SUBJECT] unit. Cut it down.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>I have lost [NUMBER] lessons from this [GRADE] [SUBJECT] unit. Cut it down.
 
 Give me:
 - What must survive, and why each item is non-negotiable
@@ -538,16 +526,12 @@ what a better plan would be — including teaching less content properly.
 
 UNIT:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Are you comfortable with what it cut? You know the class; it does not.</li>
-<li>Does the shortened version still reach the final assessment?</li></ul><hr>
-<h3>LP-023 · Add transfer and reflection to the end of a unit</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Are you comfortable with what it cut? You know the class; it does not.</li><li>Does the shortened version still reach the final assessment?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-023</span><h3>Add transfer and reflection to the end of a unit</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>They can do it in the unit's context and nowhere else.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a closing lesson for this [GRADE] [SUBJECT] unit on [TOPIC] that tests
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a closing lesson for this [GRADE] [SUBJECT] unit on [TOPIC] that tests
 whether the learning transfers.
 
 Give me:
@@ -559,18 +543,13 @@ Give me:
 - What I should look for in their answers as evidence of real transfer
 
 Do not make the closing lesson a review of what we already did.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the new context genuinely new, or a cosmetic change?</li>
-<li>Does the reflection ask about thinking rather than feeling?</li></ul><hr>
-<h2>Standards and objectives</h2>
-<hr>
-<h3>LP-003 · Turn a standard into measurable objectives</h3>
-<p class="meta">All grades</p>
+<ul><li>Is the new context genuinely new, or a cosmetic change?</li><li>Does the reflection ask about thinking rather than feeling?</li></ul>
+<h2>Standards and objectives</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-003</span><h3>Turn a standard into measurable objectives</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>The standard is a paragraph. You need something you can teach on Tuesday.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Break the standard below into teachable objectives for [GRADE] [SUBJECT].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Break the standard below into teachable objectives for [GRADE] [SUBJECT].
 
 Give me:
 - 3-5 objectives, each small enough to teach and check in one lesson
@@ -586,16 +565,12 @@ says.
 
 STANDARD:
 [PASTE THE EXACT WORDING]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Check the objectives against the standard's real wording, not a paraphrase.</li>
-<li>Is every verb observable?</li></ul><hr>
-<h3>LP-024 · Separate knowledge, skill and reasoning within a standard</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Check the objectives against the standard's real wording, not a paraphrase.</li><li>Is every verb observable?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-024</span><h3>Separate knowledge, skill and reasoning within a standard</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Students can recite it but cannot use it, or use it but cannot explain it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For the [GRADE] [SUBJECT] standard below, separate what students must know,
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For the [GRADE] [SUBJECT] standard below, separate what students must know,
 what they must be able to do, and what they must be able to reason about.
 
 For each of the three:
@@ -609,16 +584,12 @@ usually over-taught at the expense of the others.
 
 STANDARD:
 [PASTE THE EXACT WORDING]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do the three checks genuinely test different things?</li>
-<li>Does the emphasis match what the standard actually says?</li></ul><hr>
-<h3>LP-025 · Rewrite a technical objective as a student-friendly I-can statement</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Do the three checks genuinely test different things?</li><li>Does the emphasis match what the standard actually says?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-025</span><h3>Rewrite a technical objective as a student-friendly I-can statement</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The objective on your board means nothing to the students reading it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Rewrite the objective below as an &quot;I can&quot; statement for [GRADE] students.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite the objective below as an &quot;I can&quot; statement for [GRADE] students.
 
 Rules:
 - Keep the full demand. Do not make it easier to state by making it easier.
@@ -634,16 +605,12 @@ student could check themselves against.
 
 OBJECTIVE:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the demand intact, or has it quietly been lowered?</li>
-<li>Could a student self-check against those criteria without asking you?</li></ul><hr>
-<h3>LP-026 · Create observable success criteria for an existing objective</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the demand intact, or has it quietly been lowered?</li><li>Could a student self-check against those criteria without asking you?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-026</span><h3>Create observable success criteria for an existing objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You know what good looks like. You have never written it down.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write success criteria for this [GRADE] [SUBJECT] objective: [OBJECTIVE]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write success criteria for this [GRADE] [SUBJECT] objective: [OBJECTIVE]
 
 The task students will do: [TASK]
 
@@ -656,16 +623,12 @@ For each criterion:
 - The feedback sentence I would give for the nearly-met version
 
 Order them so the first is the one that matters most.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could two teachers apply these and agree?</li>
-<li>Is anything here about effort rather than the work?</li></ul><hr>
-<h3>LP-027 · Check whether an activity truly aligns to a supplied standard</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could two teachers apply these and agree?</li><li>Is anything here about effort rather than the work?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-027</span><h3>Check whether an activity truly aligns to a supplied standard</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>It is a good activity. You are not sure it is the right one.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Check whether this activity addresses the standard below.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Check whether this activity addresses the standard below.
 
 Tell me:
 - What the standard actually demands, in plain words
@@ -683,16 +646,12 @@ STANDARD:
 
 ACTIVITY:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the verdict based on your standard's real wording?</li>
-<li>Is the "smallest change" actually small?</li></ul><hr>
-<h3>LP-028 · Map several objectives into a logical teaching order</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the verdict based on your standard's real wording?</li><li>Is the "smallest change" actually small?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-028</span><h3>Map several objectives into a logical teaching order</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A list of objectives with no indication of what comes first.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Put these [GRADE] [SUBJECT] objectives into a teaching order.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Put these [GRADE] [SUBJECT] objectives into a teaching order.
 
 For each position, tell me why it sits there — what it needs from what came
 before, or what it sets up for what follows.
@@ -707,16 +666,12 @@ If two objectives are actually the same thing worded differently, say so.
 
 OBJECTIVES:
 [PASTE THE LIST]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do the stated dependencies hold up when you think through a lesson?</li>
-<li>Does the total lesson count fit the time you have?</li></ul><hr>
-<h3>LP-029 · Identify prerequisite skills without lowering the grade-level target</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Do the stated dependencies hold up when you think through a lesson?</li><li>Does the total lesson count fit the time you have?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-029</span><h3>Identify prerequisite skills without lowering the grade-level target</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Some of the class is not ready, and the target is not moving.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For this [GRADE] objective — [OBJECTIVE] — identify the prerequisite skills.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] objective — [OBJECTIVE] — identify the prerequisite skills.
 
 Give me:
 - The prerequisites, ordered from most to least likely to be missing at [GRADE]
@@ -728,16 +683,12 @@ The grade-level target does not change. I want what to scaffold alongside it,
 not what to substitute for it.
 
 Do not suggest teaching a lower-grade version of the objective instead.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the target intact?</li>
-<li>Can the scaffolds run inside a normal lesson, or do they need extra time?</li></ul><hr>
-<h3>LP-030 · Write evidence statements showing what mastery would look like</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the target intact?</li><li>Can the scaffolds run inside a normal lesson, or do they need extra time?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-030</span><h3>Write evidence statements showing what mastery would look like</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Before planning the teaching, you want the finish line described precisely.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For this [GRADE] [SUBJECT] objective — [OBJECTIVE] — write evidence statements.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] objective — [OBJECTIVE] — write evidence statements.
 
 Each should describe something a student produces, says or does that would
 convince a colleague they have met the objective.
@@ -749,18 +700,13 @@ Give me:
 - Two things students often produce that look like evidence but are not, and why
 
 Do not attach grades or percentages to these.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Would a colleague reading these agree the student met the objective?</li>
-<li>Are the false-positive examples ones you actually see?</li></ul><hr>
-<h2>Warm-ups and exit tickets</h2>
-<hr>
-<h3>LP-004 · Create a matched warm-up and exit ticket</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Would a colleague reading these agree the student met the objective?</li><li>Are the false-positive examples ones you actually see?</li></ul>
+<h2>Warm-ups and exit tickets</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-004</span><h3>Create a matched warm-up and exit ticket</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want the first five minutes and the last five to answer the same question.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For a [GRADE] [SUBJECT] lesson on [TOPIC] with the objective [OBJECTIVE], write
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For a [GRADE] [SUBJECT] lesson on [TOPIC] with the objective [OBJECTIVE], write
 a matched pair: a warm-up and an exit ticket.
 
 They must test the same thing, so that comparing them tells me what the lesson
@@ -777,17 +723,12 @@ Give me:
   lesson was needed
 
 Both should fit on a quarter sheet of paper.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the exit ticket a genuine variant, not a copy?</li>
-<li>Could you mark thirty of these in ten minutes?</li></ul><hr>
-<h3>LP-031 · Design a warm-up that exposes prior knowledge in five minutes</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the exit ticket a genuine variant, not a copy?</li><li>Could you mark thirty of these in ten minutes?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-031</span><h3>Design a warm-up that exposes prior knowledge in five minutes</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>You are about to teach something that depends on last year, and you are not sure</p>
-<p>last year happened.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a 5-minute [GRADE] [SUBJECT] warm-up that tells me what students already
+<p>You are about to teach something that depends on last year, and you are not sure last year happened.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a 5-minute [GRADE] [SUBJECT] warm-up that tells me what students already
 know about [PRIOR TOPIC] before I teach [NEW TOPIC].
 
 It should surface what they know without feeling like a test.
@@ -799,16 +740,12 @@ Give me:
 - A version I can run entirely verbally if paper is not practical
 
 Do not include anything from the new topic. This is diagnosis, not a preview.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does it genuinely avoid the new content?</li>
-<li>Can you sort thirty responses into the three levels while walking around?</li></ul><hr>
-<h3>LP-032 · Write a misconception-revealing hinge question</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does it genuinely avoid the new content?</li><li>Can you sort thirty responses into the three levels while walking around?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-032</span><h3>Write a misconception-revealing hinge question</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The moment mid-lesson where you decide whether to move on.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a hinge question for a [GRADE] [SUBJECT] lesson on [TOPIC], to use at the
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a hinge question for a [GRADE] [SUBJECT] lesson on [TOPIC], to use at the
 point where I decide whether to move on.
 
 Requirements:
@@ -823,16 +760,12 @@ Give me:
 - The correct answer
 - For each wrong option, exactly what the student is thinking
 - What I do next for each: if most choose A, if most choose B, and so on</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is every distractor a real misconception you have seen?</li>
-<li>Could a confused student guess right? If so, it is not a hinge question.</li></ul><hr>
-<h3>LP-033 · Create an exit ticket with secure, developing and not-yet response bands</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is every distractor a real misconception you have seen?</li><li>Could a confused student guess right? If so, it is not a hinge question.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-033</span><h3>Create an exit ticket with secure, developing and not-yet response bands</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You want sorting, not scoring — three piles by the end of the corridor.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write an exit ticket for a [GRADE] [SUBJECT] lesson on [OBJECTIVE].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write an exit ticket for a [GRADE] [SUBJECT] lesson on [OBJECTIVE].
 
 Design it so responses fall into three visibly different groups, sortable in
 under five minutes.
@@ -846,17 +779,12 @@ Give me:
 - What I do tomorrow with each group
 
 Do not use percentages or marks. I am sorting, not scoring.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Are the three sample responses realistically different?</li>
-<li>Is the sorting feature visible at a glance?</li></ul><hr>
-<h3>LP-034 · Turn yesterday's exit-ticket patterns into today's opening task</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Are the three sample responses realistically different?</li><li>Is the sorting feature visible at a glance?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-034</span><h3>Turn yesterday&#x27;s exit-ticket patterns into today&#x27;s opening task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
-<p>You read the exit tickets last night and want to act on them in the first</p>
-<p>five minutes.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Yesterday&#x27;s [GRADE] [SUBJECT] exit ticket on [TOPIC] produced these patterns:
+<p>You read the exit tickets last night and want to act on them in the first five minutes.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Yesterday&#x27;s [GRADE] [SUBJECT] exit ticket on [TOPIC] produced these patterns:
 
 [DESCRIBE WHAT YOU SAW — e.g. &quot;about half stopped after the first step; four
 reversed the operation; the rest were fine&quot;]
@@ -872,16 +800,12 @@ Give me:
 
 Do not use any student names, and do not build anything that reveals who was in
 which group.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could a student work out who got it wrong? Redesign if so.</li>
-<li>Do the secure students have something real to do?</li></ul><hr>
-<h3>LP-035 · Build a retrieval-practice warm-up without introducing new content</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could a student work out who got it wrong? Redesign if so.</li><li>Do the secure students have something real to do?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-035</span><h3>Build a retrieval-practice warm-up without introducing new content</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Spacing things out so they stay learned, not just met.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a 5-minute retrieval warm-up for [GRADE] [SUBJECT].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a 5-minute retrieval warm-up for [GRADE] [SUBJECT].
 
 Pull from:
 - Last lesson: [TOPIC]
@@ -897,16 +821,12 @@ keeping alive.
 
 Then give me the version I would use next week, with the same structure but
 different items, so I can see the pattern and build my own.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is anything here actually new content in disguise?</li>
-<li>Are the older items ones you genuinely taught?</li></ul><hr>
-<h3>LP-036 · Create a transfer exit ticket that cannot be answered by copying</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is anything here actually new content in disguise?</li><li>Are the older items ones you genuinely taught?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-036</span><h3>Create a transfer exit ticket that cannot be answered by copying</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>They can do the examples from the board. You want to know if that means anything.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write an exit ticket for a [GRADE] [SUBJECT] lesson on [TOPIC] that a student
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write an exit ticket for a [GRADE] [SUBJECT] lesson on [TOPIC] that a student
 cannot answer by copying the pattern from today&#x27;s examples.
 
 Today&#x27;s examples were: [DESCRIBE OR PASTE THEM]
@@ -922,16 +842,12 @@ Give me:
   than the answer
 
 Keep it to one question, answerable in four minutes.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is it genuinely different, or the same question with new numbers?</li>
-<li>Is it still fair — solvable from today's lesson, not tomorrow's?</li></ul><hr>
-<h3>LP-037 · Audit an exit ticket for alignment, ambiguity and reading load</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is it genuinely different, or the same question with new numbers?</li><li>Is it still fair — solvable from today's lesson, not tomorrow's?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-037</span><h3>Audit an exit ticket for alignment, ambiguity and reading load</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The results were confusing and you suspect the question, not the students.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit this [GRADE] [SUBJECT] exit ticket against the objective [OBJECTIVE].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] exit ticket against the objective [OBJECTIVE].
 
 Tell me:
 - Whether a correct answer actually demonstrates the objective
@@ -946,18 +862,13 @@ changed and why.
 
 EXIT TICKET:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does the rewrite still test the same objective?</li>
-<li>Is the reading level right for your actual class?</li></ul><hr>
-<h2>Pacing and transitions</h2>
-<hr>
-<h3>LP-038 · Build a realistic minute-by-minute lesson timeline</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does the rewrite still test the same objective?</li><li>Is the reading level right for your actual class?</li></ul>
+<h2>Pacing and transitions</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-038</span><h3>Build a realistic minute-by-minute lesson timeline</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The plan is good and you keep running out of time at the same point.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Build a realistic minute-by-minute timeline for this [MINUTES]-minute [GRADE]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a realistic minute-by-minute timeline for this [MINUTES]-minute [GRADE]
 [SUBJECT] lesson.
 
 Class size: [NUMBER]. Room: [DESCRIBE].
@@ -973,16 +884,12 @@ Give me:
 - What comes out if I am five minutes behind at the halfway point
 
 Do not compress the overheads to make it fit. If it does not fit, tell me.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Are the overhead estimates realistic for your class?</li>
-<li>Does the total actually fit the period?</li></ul><hr>
-<h3>LP-039 · Diagnose where a lesson is likely to run out of time</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Are the overhead estimates realistic for your class?</li><li>Does the total actually fit the period?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-039</span><h3>Diagnose where a lesson is likely to run out of time</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Before you teach it, not after.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Look at this [GRADE] [SUBJECT] lesson plan for [MINUTES] minutes and tell me
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Look at this [GRADE] [SUBJECT] lesson plan for [MINUTES] minutes and tell me
 where it will run out of time.
 
 For each risk point:
@@ -997,16 +904,12 @@ Assume a normal class, not an ideal one.
 
 LESSON:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do the risk points match where you have run over before?</li>
-<li>Is the suggested cut one you can live with?</li></ul><hr>
-<h3>LP-040 · Write concise transitions between lesson segments</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Do the risk points match where you have run over before?</li><li>Is the suggested cut one you can live with?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-040</span><h3>Write concise transitions between lesson segments</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Each changeover costs three minutes and you have four of them.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write the transitions for this [GRADE] [SUBJECT] lesson.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write the transitions for this [GRADE] [SUBJECT] lesson.
 
 For each changeover, give me:
 - The exact words I say, under 15 seconds
@@ -1022,16 +925,12 @@ minute of negotiation.
 
 LESSON:
 [PASTE THE SEGMENTS]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is each instruction one action, or a list?</li>
-<li>Would these words sound like you saying them?</li></ul><hr>
-<h3>LP-041 · Create a pacing contingency when discussion runs long</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is each instruction one action, or a list?</li><li>Would these words sound like you saying them?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-041</span><h3>Create a pacing contingency when discussion runs long</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The discussion is going well and you do not want to kill it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For this [GRADE] [SUBJECT] lesson, give me a contingency for when the
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] lesson, give me a contingency for when the
 discussion is genuinely productive and running over.
 
 Give me:
@@ -1046,16 +945,12 @@ productive, versus running long because it has drifted.
 
 LESSON:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the decision point early enough to act on?</li>
-<li>Does the shortest version still produce evidence?</li></ul><hr>
-<h3>LP-042 · Plan meaningful early-finisher work connected to the objective</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the decision point early enough to act on?</li><li>Does the shortest version still produce evidence?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-042</span><h3>Plan meaningful early-finisher work connected to the objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Six students are done and you have eleven minutes left.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Students finishing [TASK] early in [GRADE] [SUBJECT] need work that extends the
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Students finishing [TASK] early in [GRADE] [SUBJECT] need work that extends the
 same thinking, not filler.
 
 Give me five options that:
@@ -1069,16 +964,12 @@ For each, say in one line what deeper thinking it demands.
 No word searches, no colouring, and nothing that is simply more of the same
 questions. If a student would experience it as a punishment for working
 quickly, do not include it.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Would a student see these as reward or punishment?</li>
-<li>Do they genuinely need no explanation from you?</li></ul><hr>
-<h3>LP-043 · Adapt one lesson for both a regular period and a shortened schedule</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Would a student see these as reward or punishment?</li><li>Do they genuinely need no explanation from you?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-043</span><h3>Adapt one lesson for both a regular period and a shortened schedule</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You teach the same lesson to two classes with different period lengths.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Adapt this [GRADE] [SUBJECT] lesson so it works at both [LONGER] minutes and
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Adapt this [GRADE] [SUBJECT] lesson so it works at both [LONGER] minutes and
 [SHORTER] minutes.
 
 Give me:
@@ -1093,18 +984,13 @@ in both.
 
 LESSON:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does the short version have a real ending?</li>
-<li>Is the shared check truly identical?</li></ul><hr>
-<h2>Substitute and emergency plans</h2>
-<hr>
-<h3>LP-005 · Create a no-surprises substitute lesson</h3>
-<p class="meta">All grades</p>
+<ul><li>Does the short version have a real ending?</li><li>Is the shared check truly identical?</li></ul>
+<h2>Substitute and emergency plans</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-005</span><h3>Create a no-surprises substitute lesson</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>You are ill at 6am and someone who does not know your subject is covering.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a substitute plan for [GRADE] [SUBJECT], [NUMBER] periods of [MINUTES]
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a substitute plan for [GRADE] [SUBJECT], [NUMBER] periods of [MINUTES]
 minutes.
 
 Assume the substitute does not know the subject and has never met the class.
@@ -1120,16 +1006,12 @@ Give me:
 - What to leave me a note about
 
 Write it as one page a stranger can follow top to bottom without asking anyone.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could someone who has never taught your subject run this?</li>
-<li>Is anything here dependent on knowing your routines?</li></ul><hr>
-<h3>LP-044 · Build an emergency no-print lesson from materials already in the room</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could someone who has never taught your subject run this?</li><li>Is anything here dependent on knowing your routines?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-044</span><h3>Build an emergency no-print lesson from materials already in the room</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>No warning, no photocopier, whatever is in the cupboard.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write an emergency [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC] using
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write an emergency [MINUTES]-minute [GRADE] [SUBJECT] lesson on [TOPIC] using
 only a board, students&#x27; own paper and pens, and their exercise books.
 
 Nothing printed. Nothing prepared in advance. Nothing that needs a device.
@@ -1143,16 +1025,12 @@ Give me:
 
 Assume the substitute or I have had zero minutes to prepare. If the topic
 genuinely cannot be taught this way, say so and suggest a related one that can.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is there truly nothing needing preparation?</li>
-<li>Is dictating the task realistic for your class?</li></ul><hr>
-<h3>LP-045 · Write exact substitute directions that require no subject guessing</h3>
-<p class="meta">All grades</p>
+<ul><li>Is there truly nothing needing preparation?</li><li>Is dictating the task realistic for your class?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-045</span><h3>Write exact substitute directions that require no subject guessing</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Your plan is good but the cover teacher filled the gaps wrong.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Rewrite these directions so a substitute who does not know [SUBJECT] can follow
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite these directions so a substitute who does not know [SUBJECT] can follow
 them without making any judgement calls.
 
 For every step, replace anything requiring subject knowledge with an explicit
@@ -1169,16 +1047,12 @@ subject.
 
 DIRECTIONS:
 [PASTE THEM]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does anything still assume subject knowledge?</li>
-<li>Are the answers correct? Check them yourself.</li></ul><hr>
-<h3>LP-046 · Create a technology-failure backup for a digital lesson</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does anything still assume subject knowledge?</li><li>Are the answers correct? Check them yourself.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-046</span><h3>Create a technology-failure backup for a digital lesson</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The lesson depends on devices and the devices are a gamble.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>This [GRADE] [SUBJECT] lesson depends on [TECHNOLOGY]. Write the backup for
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>This [GRADE] [SUBJECT] lesson depends on [TECHNOLOGY]. Write the backup for
 when it does not work.
 
 Give me:
@@ -1193,16 +1067,12 @@ period ends.
 
 LESSON:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Can you actually prepare the backup in advance and keep it to hand?</li>
-<li>Is the decision point early enough?</li></ul><hr>
-<h3>LP-047 · Prepare an independent catch-up lesson for an unexpected absence</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Can you actually prepare the backup in advance and keep it to hand?</li><li>Is the decision point early enough?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-047</span><h3>Prepare an independent catch-up lesson for an unexpected absence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>A student missed the lesson and you cannot reteach it one-to-one.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>A [GRADE] student missed a [SUBJECT] lesson on [TOPIC]. Write something they can
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>A [GRADE] student missed a [SUBJECT] lesson on [TOPIC]. Write something they can
 work through alone to catch up.
 
 Give me:
@@ -1214,16 +1084,12 @@ Give me:
 
 Write it so a student reads it and works, without needing me to explain the
 explanation. Assume they may be doing this at home with no one to ask.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could a student genuinely follow this alone?</li>
-<li>Is the reading level right for the student who missed it?</li></ul><hr>
-<h3>LP-048 · Audit a substitute plan for safety, clarity and collection procedures</h3>
-<p class="meta">All grades</p>
+<ul><li>Could a student genuinely follow this alone?</li><li>Is the reading level right for the student who missed it?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-048</span><h3>Audit a substitute plan for safety, clarity and collection procedures</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>Before you file it in the emergency folder and forget about it.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Audit this substitute plan for [GRADE] [SUBJECT].
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this substitute plan for [GRADE] [SUBJECT].
 
 Check for:
 - Any step needing subject knowledge the substitute may not have
@@ -1240,18 +1106,13 @@ I will check anything safety-related against my school&#x27;s own procedures.
 
 PLAN:
 [PASTE IT]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Check safety and emergency procedures against your school's policy.</li>
-<li>Is the collection procedure something the office would recognise?</li></ul><hr>
-<h2>Projects and interdisciplinary</h2>
-<hr>
-<h3>LP-049 · Launch a project with a clear driving question and final product</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Check safety and emergency procedures against your school's policy.</li><li>Is the collection procedure something the office would recognise?</li></ul>
+<h2>Projects and interdisciplinary</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-049</span><h3>Launch a project with a clear driving question and final product</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The first lesson of a project, which decides whether the rest works.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design the launch lesson for a [NUMBER]-week [GRADE] [SUBJECT] project on
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design the launch lesson for a [NUMBER]-week [GRADE] [SUBJECT] project on
 [TOPIC].
 
 Give me:
@@ -1265,16 +1126,12 @@ Give me:
 
 Be honest about scope. If [NUMBER] weeks is not enough for this product, say so
 and suggest one that fits.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the driving question genuinely open, or a quiz question in disguise?</li>
-<li>Is the product achievable in the weeks you have?</li></ul><hr>
-<h3>LP-050 · Connect two subjects around one authentic problem</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the driving question genuinely open, or a quiz question in disguise?</li><li>Is the product achievable in the weeks you have?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-050</span><h3>Connect two subjects around one authentic problem</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Cross-curricular work that is more than a shared theme word.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Design a [GRADE] project connecting [SUBJECT A] and [SUBJECT B] around a real
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [GRADE] project connecting [SUBJECT A] and [SUBJECT B] around a real
 problem.
 
 The connection must be structural: the problem should be unsolvable using only
@@ -1290,16 +1147,12 @@ Give me:
 
 If the honest connection is thin, say so rather than manufacturing one. A
 shared topic word is not a connection.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Is the connection structural or decorative?</li>
-<li>Can you separate the two subjects when marking?</li></ul><hr>
-<h3>LP-051 · Break a multiweek project into milestones and checkpoints</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Is the connection structural or decorative?</li><li>Can you separate the two subjects when marking?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-051</span><h3>Break a multiweek project into milestones and checkpoints</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>So you find out in week two, not week five.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Break this [NUMBER]-week [GRADE] [SUBJECT] project into milestones.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Break this [NUMBER]-week [GRADE] [SUBJECT] project into milestones.
 
 Give me:
 - A milestone per week, each producing something I can actually look at
@@ -1313,16 +1166,12 @@ Each milestone should be checkable in under two minutes per group.
 
 PROJECT:
 [PASTE THE OUTLINE]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Can you really check each milestone in two minutes per group?</li>
-<li>Is the first checkpoint early enough to rescue a bad start?</li></ul><hr>
-<h3>LP-052 · Create individual accountability inside a group project</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Can you really check each milestone in two minutes per group?</li><li>Is the first checkpoint early enough to rescue a bad start?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-052</span><h3>Create individual accountability inside a group project</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>One student does everything and three collect the grade.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For this [GRADE] [SUBJECT] group project, build in individual accountability.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] group project, build in individual accountability.
 
 Give me:
 - A structure where each student produces something identifiably theirs
@@ -1337,16 +1186,12 @@ into the task itself.
 
 PROJECT:
 [PASTE THE OUTLINE]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could a passenger still pass? Redesign if so.</li>
-<li>Is the individual check quick enough to run for every student?</li></ul><hr>
-<h3>LP-053 · Design a project rubric that measures learning rather than decoration</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could a passenger still pass? Redesign if so.</li><li>Is the individual check quick enough to run for every student?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-053</span><h3>Design a project rubric that measures learning rather than decoration</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The best-looking poster keeps getting the best grade.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Write a rubric for this [GRADE] [SUBJECT] project.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a rubric for this [GRADE] [SUBJECT] project.
 
 Learning it should evidence: [WHAT STUDENTS SHOULD BE ABLE TO DO]
 
@@ -1361,16 +1206,12 @@ Give me the criteria, what each looks like at proficient, and one sentence of
 feedback I could reuse for the most common near-miss on each.
 
 Then tell me which criterion a student could game with effort but no learning.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could a beautiful project with weak thinking score well? Fix if so.</li>
-<li>Does anything advantage students with better resources at home?</li></ul><hr>
-<h3>LP-054 · Plan a public-product option that protects student privacy</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could a beautiful project with weak thinking score well? Fix if so.</li><li>Does anything advantage students with better resources at home?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-054</span><h3>Plan a public-product option that protects student privacy</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Real audience, real stakes — without putting children online.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>For this [GRADE] [SUBJECT] project, design an option where students present to a
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] project, design an option where students present to a
 real audience without exposing their identities or personal information.
 
 Give me:
@@ -1386,18 +1227,13 @@ platforms.
 
 I will confirm all of this against my school&#x27;s own consent and safeguarding
 policy.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Check against your school's consent policy before anything is shared.</li>
-<li>Is the alternative genuinely equivalent, or obviously the lesser option?</li></ul><hr>
-<h2>Reflection and adaptation</h2>
-<hr>
-<h3>LP-055 · Turn lesson evidence into a next-day adjustment</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Check against your school's consent policy before anything is shared.</li><li>Is the alternative genuinely equivalent, or obviously the lesser option?</li></ul>
+<h2>Reflection and adaptation</h2></article>
+<article class="card"><div class="head"><span class="pid">LP-055</span><h3>Turn lesson evidence into a next-day adjustment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>You have the exit tickets in front of you and tomorrow to plan.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Here is what I saw in [GRADE] [SUBJECT] today on [TOPIC]:
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Here is what I saw in [GRADE] [SUBJECT] today on [TOPIC]:
 
 [DESCRIBE THE EVIDENCE — exit ticket patterns, what you heard while
 circulating, what students got stuck on. No names.]
@@ -1411,16 +1247,12 @@ Tell me:
   observed
 
 Do not recommend reteaching the whole lesson unless the evidence supports it.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does the conclusion actually follow from what you saw?</li>
-<li>Is the adjustment small enough to do tonight?</li></ul><hr>
-<h3>LP-056 · Write a post-lesson reflection based on observations rather than feelings alone</h3>
-<p class="meta">All grades</p>
+<ul><li>Does the conclusion actually follow from what you saw?</li><li>Is the adjustment small enough to do tonight?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-056</span><h3>Write a post-lesson reflection based on observations rather than feelings alone</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>"It went badly" is not something you can act on next week.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Help me turn this into a useful reflection on a [GRADE] [SUBJECT] lesson.
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me turn this into a useful reflection on a [GRADE] [SUBJECT] lesson.
 
 What happened: [DESCRIBE IT, INCLUDING HOW IT FELT]
 
@@ -1433,16 +1265,12 @@ Give me:
 - What was fine, so I do not change something that was working
 
 Do not reassure me. I want the analysis.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Are the alternative explanations ones you had not considered?</li>
-<li>Is the "next time" specific enough to actually do?</li></ul><hr>
-<h3>LP-057 · Identify what to keep, change and investigate after a lesson</h3>
-<p class="meta">All grades</p>
+<ul><li>Are the alternative explanations ones you had not considered?</li><li>Is the "next time" specific enough to actually do?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-057</span><h3>Identify what to keep, change and investigate after a lesson</h3></div><p class="meta">All grades</p>
 <p class="lbl">When you need this</p>
 <p>A quick sort, five minutes after the class leaves.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>From this account of a [GRADE] [SUBJECT] lesson, sort it into three lists:
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>From this account of a [GRADE] [SUBJECT] lesson, sort it into three lists:
 
 KEEP — worked, and I know why
 CHANGE — did not work, and the fix is clear
@@ -1457,16 +1285,12 @@ cause. Say plainly that the cause is unknown.
 
 LESSON ACCOUNT:
 [DESCRIBE WHAT HAPPENED — no student names]</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Has anything been moved to CHANGE that you do not actually understand yet?</li>
-<li>Is the KEEP list honest, or padded?</li></ul><hr>
-<h3>LP-058 · Adapt a lesson after most learners miss the same misconception</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Has anything been moved to CHANGE that you do not actually understand yet?</li><li>Is the KEEP list honest, or padded?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-058</span><h3>Adapt a lesson after most learners miss the same misconception</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>It is not a few students. It is most of the class, making the same error.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>In [GRADE] [SUBJECT], most of the class made this error on [TOPIC]:
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>In [GRADE] [SUBJECT], most of the class made this error on [TOPIC]:
 
 [DESCRIBE THE ERROR PRECISELY — what they did, not what they failed to do]
 
@@ -1481,16 +1305,12 @@ Tell me:
   gone quiet
 
 Re-teaching the same way more slowly is not the answer I am looking for.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Does the explanation of their thinking ring true?</li>
-<li>Does the confronting example genuinely break under the misconception?</li></ul><hr>
-<h3>LP-059 · Plan targeted follow-up for three anonymous response patterns</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Does the explanation of their thinking ring true?</li><li>Does the confronting example genuinely break under the misconception?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-059</span><h3>Plan targeted follow-up for three anonymous response patterns</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>Three distinct groups, one lesson, no way to run three lessons.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>After a [GRADE] [SUBJECT] check on [TOPIC], responses fell into three patterns:
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>After a [GRADE] [SUBJECT] check on [TOPIC], responses fell into three patterns:
 
 Pattern A: [DESCRIBE]  — roughly [NUMBER] students
 Pattern B: [DESCRIBE]  — roughly [NUMBER] students
@@ -1507,16 +1327,12 @@ Give me:
 - How groups are formed without labelling anyone
 
 No student names, and nothing that makes the grouping visible as ability.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Could students decode the grouping? Change it if so.</li>
-<li>Does the group you are not sitting with have work they can do alone?</li></ul><hr>
-<h3>LP-060 · Compare the intended lesson with what learners actually demonstrated</h3>
-<p class="meta">Grades 3-5, 6-8, 9-12</p>
+<ul><li>Could students decode the grouping? Change it if so.</li><li>Does the group you are not sitting with have work they can do alone?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">LP-060</span><h3>Compare the intended lesson with what learners actually demonstrated</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
 <p class="lbl">When you need this</p>
 <p>The lesson happened. Whether the learning did is a separate question.</p>
-<p class="lbl">COPY FROM HERE</p>
-<div class="box"><button class="copy">Copy</button><pre>Compare what this [GRADE] [SUBJECT] lesson intended with what students actually
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Compare what this [GRADE] [SUBJECT] lesson intended with what students actually
 demonstrated.
 
 INTENDED: [THE OBJECTIVE]
@@ -1531,11 +1347,36 @@ Tell me:
 
 Be specific about which of the four is the problem. &quot;A bit of everything&quot; is
 not useful to me.</pre></div>
-<p class="lbl">TO HERE</p>
 <p class="lbl">Before you send it</p>
-<ul><li>Do you agree with where it located the gap?</li>
-<li>Was your check ever capable of showing the objective?</li></ul><script>document.querySelectorAll(".copy").forEach(function(b){b.onclick=function(){
-var t=b.parentNode.querySelector("pre").innerText;
-navigator.clipboard.writeText(t).then(function(){b.textContent="Copied";
-b.classList.add("ok");setTimeout(function(){b.textContent="Copy";
-b.classList.remove("ok")},1600)})}})</script></body></html>
+<ul><li>Do you agree with where it located the gap?</li><li>Was your check ever capable of showing the objective?</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

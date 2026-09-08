@@ -1,7 +1,6 @@
-"""Markdown -> HTML (with a Copy button on every prompt) -> PDF.
+"""Markdown -> HTML (dark, with a working Copy button) -> PDF (light, for print).
 
-Content lives in book/. This file only renders it. Run after editing any
-markdown source:
+Content lives in book/. This file only renders it.
 
     python3 toolkit/build_book.py
 """
@@ -13,45 +12,155 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 CSS = """
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
 *{box-sizing:border-box}
-body{font:16px/1.65 -apple-system,'Segoe UI',Roboto,sans-serif;color:#1b2733;
- max-width:820px;margin:0 auto;padding:32px 20px 80px;background:#fff}
-h1{font-size:2em;letter-spacing:-.02em;margin:0 0 .3em}
-h2{font-size:1.35em;margin:2.2em 0 .6em;padding-top:1em;border-top:1px solid #e4e9ee}
-h3{font-size:1.12em;margin:1.6em 0 .2em;letter-spacing:-.01em}
-table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.93em}
-th,td{border:1px solid #e4e9ee;padding:7px 10px;text-align:left}
-th{background:#f6f8fa;font-weight:600}
-blockquote{margin:1em 0;padding:.7em 1em;background:#fdf7e8;
- border-left:3px solid #ddae58;font-size:.94em}
-.meta{font-size:.83em;color:#6b7885;margin:0 0 1em}
-.lbl{font-size:.73em;letter-spacing:.09em;text-transform:uppercase;color:#6b7885;
- font-weight:600;margin:1.4em 0 .4em}
-.box{position:relative;background:#f6f8fa;border:1px solid #dde3e9;border-radius:8px;
- padding:16px 18px;margin:.4em 0 1em}
-.box pre{margin:0;white-space:pre-wrap;color:#243240;
- font:13.5px/1.55 ui-monospace,Menlo,Consolas,monospace}
-.copy{position:absolute;top:10px;right:10px;border:1px solid #cdd5dd;background:#fff;
- border-radius:6px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:#33414f}
-.copy:hover{background:#eef2f6}
-.copy.ok{background:#167d8d;border-color:#167d8d;color:#fff}
-hr{border:0;border-top:1px solid #e4e9ee;margin:2.4em 0}
-ul{padding-left:1.3em;margin:.4em 0}
-code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:.9em}
-a{color:#167d8d}
-@media(max-width:600px){body{padding:18px 14px 60px}}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; max-width:66ch}
+ul{margin:0 0 1.1rem; padding-left:1.15rem; max-width:66ch}
+li{margin:.3rem 0}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+.box pre{margin:0; padding:18px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#cfd9e3;
+         font:13px/1.62 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#dde3e9;
+        --ink:#18202a; --dim:#5b6673; --faint:#78838f;
+        --accent:#0f7d70; --accent-dim:#bcd9d4; --warn:#9a7314}
+  body{font-size:10.5pt}
+  .wrap{max-width:none; padding:0}
+  .copy{display:none}
+  .card{break-inside:avoid; page-break-inside:avoid; padding:0 0 14pt;
+        border:0; border-bottom:1px solid var(--line); border-radius:0;
+        margin-bottom:14pt}
+  .box{background:#f7f9fa}
+  .bar{background:#eef3f4}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.9em}
+  h2{break-after:avoid} h3{break-after:avoid}
+  blockquote{background:#fdf8ec}
+}
 """
 
-JS = """document.querySelectorAll(".copy").forEach(function(b){b.onclick=function(){
-var t=b.parentNode.querySelector("pre").innerText;
-navigator.clipboard.writeText(t).then(function(){b.textContent="Copied";
-b.classList.add("ok");setTimeout(function(){b.textContent="Copy";
-b.classList.remove("ok")},1600)})}})"""
+# Clipboard API only works over https/localhost. Opened from disk (file://) it
+# fails silently, so fall back to execCommand, which does work there.
+JS = """
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+"""
 
-LABELS = r"COPY FROM HERE|TO HERE|When you need this|Before you send it"
+LABELS = ("When you need this", "Before you send it", "Fill in", "Example")
 
 
-def to_html(text):
+def inline(s):
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"(?<!\w)`([^`]+)`", r"<code>\1</code>", s)
+    return s
+
+
+def render_body(text):
+    """Markdown block -> HTML. Consecutive lines join into one paragraph."""
     blocks = []
 
     def stash(m):
@@ -60,59 +169,103 @@ def to_html(text):
 
     text = re.sub(r"```text\n(.*?)\n```", stash, text, flags=re.S)
 
-    out, table = [], []
+    out, para, table, items = [], [], [], []
+
+    def flush_para():
+        if para:
+            out.append("<p>" + inline(" ".join(para)) + "</p>")
+            para.clear()
+
+    def flush_items():
+        if items:
+            out.append("<ul>" + "".join(f"<li>{inline(i)}</li>" for i in items) + "</ul>")
+            items.clear()
+
+    def flush_table():
+        if table:
+            # keep every row except the |---|---| separator
+            rows = [r for r in table if not set("".join(r)) <= set("-: ")]
+            if not rows:
+                table.clear()
+                return
+            out.append("<table><thead><tr>"
+                       + "".join(f"<th>{inline(c)}</th>" for c in rows[0])
+                       + "</tr></thead><tbody>")
+            for r in rows[1:]:
+                out.append("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>")
+            out.append("</tbody></table>")
+            table.clear()
+
     for line in text.split("\n"):
         s = line.strip()
         if s.startswith("|"):
+            flush_para(); flush_items()
             table.append([c.strip() for c in s.strip("|").split("|")])
             continue
-        if table:
-            out.append("<table>")
-            for i, row in enumerate(table):
-                if set("".join(row)) <= set("-: "):
-                    continue
-                tag = "th" if i == 0 else "td"
-                out.append("<tr>" + "".join(f"<{tag}>{c}</{tag}>" for c in row) + "</tr>")
-            out.append("</table>")
-            table = []
+        flush_table()
+
         if not s:
+            flush_para(); flush_items()
             continue
         if s.startswith("\x00B"):
-            out.append(s)
-            continue
-        m = re.match(r"(#{1,4}) (.+)", s)
+            flush_para(); flush_items(); out.append(s); continue
+        if s == "---" or s == "**TO HERE**":
+            flush_para(); flush_items(); continue
+
+        m = re.match(r"(#{2,4}) (.+)", s)
         if m:
-            n = len(m.group(1))
-            out.append(f"<h{n}>{m.group(2)}</h{n}>")
+            flush_para(); flush_items()
+            n = min(len(m.group(1)), 4)
+            out.append(f"<h{n}>{inline(m.group(2))}</h{n}>")
             continue
         if s.startswith("> "):
-            out.append("<blockquote>" + s[2:] + "</blockquote>")
+            flush_para(); flush_items()
+            out.append("<blockquote><p>" + inline(s[2:]) + "</p></blockquote>")
             continue
         if s.startswith("- "):
-            out.append("<li>" + s[2:] + "</li>")
-            continue
-        if s == "---":
-            out.append("<hr>")
+            flush_para()
+            items.append(s[2:])
             continue
         if s.startswith("*") and s.endswith("*") and not s.startswith("**"):
-            out.append(f'<p class="meta">{s[1:-1]}</p>')
+            flush_para(); flush_items()
+            out.append(f'<p class="meta">{inline(s[1:-1])}</p>')
             continue
-        if re.fullmatch(rf"\*\*({LABELS})\*\*", s):
-            out.append(f'<p class="lbl">{s.strip("*")}</p>')
+        stripped = s.strip("*")
+        if s.startswith("**") and s.endswith("**") and stripped in LABELS:
+            flush_para(); flush_items()
+            out.append(f'<p class="lbl">{stripped}</p>')
             continue
-        out.append("<p>" + s + "</p>")
+        if s == "**COPY FROM HERE**":
+            flush_para(); flush_items(); continue
 
+        para.append(s)
+
+    flush_para(); flush_items(); flush_table()
     h = "\n".join(out)
-    h = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", h)
-    h = re.sub(r"(?<!\w)`([^`]+)`", r"<code>\1</code>", h)
-    h = re.sub(r"(<li>.*?</li>\n?)+",
-               lambda m: "<ul>" + m.group(0).rstrip("\n") + "</ul>", h, flags=re.S)
     for i, b in enumerate(blocks):
         h = h.replace(
             f"\x00B{i}\x00",
-            '<div class="box"><button class="copy">Copy</button><pre>'
+            '<div class="box"><div class="bar"><span>Copy this prompt</span>'
+            '<button class="copy">Copy</button></div><pre>'
             + html.escape(b) + "</pre></div>")
     return h
+
+
+def render_page(text):
+    """Split on prompt headings so each prompt becomes its own card."""
+    parts = re.split(r"\n(?=### )", text)
+    out = [render_body(parts[0])]
+    for part in parts[1:]:
+        m = re.match(r"### (\S+) · (.+)", part)
+        if not m:
+            out.append(render_body(part))
+            continue
+        rest = part.split("\n", 1)[1] if "\n" in part else ""
+        out.append(
+            '<article class="card"><div class="head">'
+            f'<span class="pid">{html.escape(m.group(1))}</span>'
+            f"<h3>{html.escape(m.group(2))}</h3></div>" + render_body(rest) + "</article>")
+    return "\n".join(out)
 
 
 def sources():
@@ -129,16 +282,25 @@ def main():
     (ROOT / "output/html").mkdir(parents=True, exist_ok=True)
     (ROOT / "output/pdf").mkdir(parents=True, exist_ok=True)
 
-    for name, src in sources():
+    pages = sources()
+    for name, src in pages:
         text = src.read_text()
         title = re.search(r"^# (.+)", text).group(1)
+        body = text.split("\n", 1)[1]
+        lede = ""
+        m = re.match(r"\s*\*\*(.+?)\*\*\s*\n", body)
+        if m:
+            lede = m.group(1)
+            body = body[m.end():]
         (ROOT / f"output/html/{name}.html").write_text(
             '<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             f"<title>{html.escape(title)}</title><style>{CSS}</style></head><body>"
-            + to_html(text) + f"<script>{JS}</script></body></html>",
-            encoding="utf-8")
-    print(f"  {len(sources())} HTML pages")
+            f'<div class="wrap"><h1>{html.escape(title)}</h1>'
+            + (f'<p class="lede">{html.escape(lede)}</p>' if lede else "")
+            + render_page(body)
+            + f"</div><script>{JS}</script></body></html>", encoding="utf-8")
+    print(f"  {len(pages)} HTML pages (dark)")
 
     try:
         from playwright.sync_api import sync_playwright
@@ -155,15 +317,13 @@ def main():
                 pg = b.new_page()
                 for h in sorted((ROOT / "output/html").glob("*.html")):
                     pg.goto(h.resolve().as_uri(), wait_until="load")
-                    pg.add_style_tag(content=".copy{display:none}"
-                                             "h3,blockquote{page-break-after:avoid}"
-                                             ".box{page-break-inside:avoid}")
+                    pg.emulate_media(media="print")
                     pg.pdf(path=str(ROOT / f"output/pdf/{h.stem}.pdf"), format="A4",
-                           print_background=True,
-                           margin={"top": "16mm", "bottom": "18mm",
-                                   "left": "15mm", "right": "15mm"})
+                           print_background=True, prefer_css_page_size=False,
+                           margin={"top": "17mm", "bottom": "18mm",
+                                   "left": "17mm", "right": "17mm"})
                 b.close()
-            print("  PDFs built")
+            print("  PDFs built (light, for print)")
             return
         except Exception:
             continue

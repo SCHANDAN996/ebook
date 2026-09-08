@@ -1,36 +1,108 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Index — all 300 prompts and 12 workflows</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
 *{box-sizing:border-box}
-body{font:16px/1.65 -apple-system,'Segoe UI',Roboto,sans-serif;color:#1b2733;
- max-width:820px;margin:0 auto;padding:32px 20px 80px;background:#fff}
-h1{font-size:2em;letter-spacing:-.02em;margin:0 0 .3em}
-h2{font-size:1.35em;margin:2.2em 0 .6em;padding-top:1em;border-top:1px solid #e4e9ee}
-h3{font-size:1.12em;margin:1.6em 0 .2em;letter-spacing:-.01em}
-table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.93em}
-th,td{border:1px solid #e4e9ee;padding:7px 10px;text-align:left}
-th{background:#f6f8fa;font-weight:600}
-blockquote{margin:1em 0;padding:.7em 1em;background:#fdf7e8;
- border-left:3px solid #ddae58;font-size:.94em}
-.meta{font-size:.83em;color:#6b7885;margin:0 0 1em}
-.lbl{font-size:.73em;letter-spacing:.09em;text-transform:uppercase;color:#6b7885;
- font-weight:600;margin:1.4em 0 .4em}
-.box{position:relative;background:#f6f8fa;border:1px solid #dde3e9;border-radius:8px;
- padding:16px 18px;margin:.4em 0 1em}
-.box pre{margin:0;white-space:pre-wrap;color:#243240;
- font:13.5px/1.55 ui-monospace,Menlo,Consolas,monospace}
-.copy{position:absolute;top:10px;right:10px;border:1px solid #cdd5dd;background:#fff;
- border-radius:6px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:#33414f}
-.copy:hover{background:#eef2f6}
-.copy.ok{background:#167d8d;border-color:#167d8d;color:#fff}
-hr{border:0;border-top:1px solid #e4e9ee;margin:2.4em 0}
-ul{padding-left:1.3em;margin:.4em 0}
-code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:.9em}
-a{color:#167d8d}
-@media(max-width:600px){body{padding:18px 14px 60px}}
-</style></head><body><h1>Index — all 300 prompts and 12 workflows</h1>
-<p>Every prompt has an ID like <code>LP-002</code>. Find the ID here, then open that chapter file.</p>
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; max-width:66ch}
+ul{margin:0 0 1.1rem; padding-left:1.15rem; max-width:66ch}
+li{margin:.3rem 0}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+.box pre{margin:0; padding:18px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#cfd9e3;
+         font:13px/1.62 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#dde3e9;
+        --ink:#18202a; --dim:#5b6673; --faint:#78838f;
+        --accent:#0f7d70; --accent-dim:#bcd9d4; --warn:#9a7314}
+  body{font-size:10.5pt}
+  .wrap{max-width:none; padding:0}
+  .copy{display:none}
+  .card{break-inside:avoid; page-break-inside:avoid; padding:0 0 14pt;
+        border:0; border-bottom:1px solid var(--line); border-radius:0;
+        margin-bottom:14pt}
+  .box{background:#f7f9fa}
+  .bar{background:#eef3f4}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.9em}
+  h2{break-after:avoid} h3{break-after:avoid}
+  blockquote{background:#fdf8ec}
+}
+</style></head><body><div class="wrap"><h1>Index — all 300 prompts and 12 workflows</h1><p>Every prompt has an ID like <code>LP-002</code>. Find the ID here, then open that chapter file.</p>
 <h2>Chapters</h2>
-<table>
-<tr><th>#</th><th>Chapter</th><th>Prompts</th><th>File</th></tr>
+<table><thead><tr><th>#</th><th>Chapter</th><th>Prompts</th><th>File</th></tr></thead><tbody>
 <tr><td>1</td><td>Lesson Planning</td><td>60</td><td><code>01-lesson-planning.pdf</code></td></tr>
 <tr><td>2</td><td>Worksheets Activities</td><td>40</td><td><code>02-worksheets-activities.pdf</code></td></tr>
 <tr><td>3</td><td>Assessment Rubrics Quizzes</td><td>40</td><td><code>03-assessment-rubrics-quizzes.pdf</code></td></tr>
@@ -41,12 +113,10 @@ a{color:#167d8d}
 <tr><td>8</td><td>Teacher Admin Paperwork</td><td>25</td><td><code>08-teacher-admin-paperwork.pdf</code></td></tr>
 <tr><td>9</td><td>Subject Deep Dives</td><td>15</td><td><code>09-subject-deep-dives.pdf</code></td></tr>
 <tr><td>10</td><td>Multi Step Workflows</td><td>12</td><td><code>10-multi-step-workflows.pdf</code></td></tr>
-</table>
-<hr>
+</tbody></table>
 <h2>By name</h2>
 <h3>Lesson Planning</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>LP-001</td><td>Build a complete evidence-led lesson</td></tr>
 <tr><td>LP-002</td><td>Plan a unit backward from mastery</td></tr>
 <tr><td>LP-003</td><td>Turn a standard into measurable objectives</td></tr>
@@ -107,10 +177,9 @@ a{color:#167d8d}
 <tr><td>LP-058</td><td>Adapt a lesson after most learners miss the same misconception</td></tr>
 <tr><td>LP-059</td><td>Plan targeted follow-up for three anonymous response patterns</td></tr>
 <tr><td>LP-060</td><td>Compare the intended lesson with what learners actually demonstrated</td></tr>
-</table>
+</tbody></table>
 <h3>Worksheets Activities</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>WA-001</td><td>Build a focused practice worksheet</td></tr>
 <tr><td>WA-002</td><td>Design four learning stations</td></tr>
 <tr><td>WA-003</td><td>Create an accountable group task</td></tr>
@@ -151,10 +220,9 @@ a{color:#167d8d}
 <tr><td>WA-038</td><td>Design a choice-based project with equivalent learning demands</td></tr>
 <tr><td>WA-039</td><td>Build a group-project brief with individual evidence of mastery</td></tr>
 <tr><td>WA-040</td><td>Audit a project brief for clarity, feasibility and privacy</td></tr>
-</table>
+</tbody></table>
 <h3>Assessment Rubrics Quizzes</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>AS-001</td><td>Create a balanced classroom assessment</td></tr>
 <tr><td>AS-002</td><td>Create hinge questions for live teaching</td></tr>
 <tr><td>AS-003</td><td>Build a student-readable analytic rubric</td></tr>
@@ -195,10 +263,9 @@ a{color:#167d8d}
 <tr><td>AS-038</td><td>Create a standards-based proficiency scale with observable evidence</td></tr>
 <tr><td>AS-039</td><td>Summarize class mastery without averaging unrelated skills</td></tr>
 <tr><td>AS-040</td><td>Audit a standards-based grade summary for missing or weak evidence</td></tr>
-</table>
+</tbody></table>
 <h3>Differentiation Mixed Ability</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>DF-001</td><td>Add temporary scaffolds without lowering the goal</td></tr>
 <tr><td>DF-002</td><td>Create three routes to the same objective</td></tr>
 <tr><td>DF-003</td><td>Make a task accessible to multilingual learners</td></tr>
@@ -234,10 +301,9 @@ a{color:#167d8d}
 <tr><td>DF-033</td><td>Create a rotation plan for three changing instructional needs</td></tr>
 <tr><td>DF-034</td><td>Plan mixed-readiness groups with meaningful roles and accountability</td></tr>
 <tr><td>DF-035</td><td>Audit a grouping plan for labels, access, movement and regrouping triggers</td></tr>
-</table>
+</tbody></table>
 <h3>Parent Communication</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>PC-001</td><td>Write a specific positive family message</td></tr>
 <tr><td>PC-002</td><td>Communicate an academic concern with a next step</td></tr>
 <tr><td>PC-003</td><td>Prepare a balanced family conference</td></tr>
@@ -268,10 +334,9 @@ a{color:#167d8d}
 <tr><td>PC-028</td><td>Audit a family message for jargon, idioms and hidden assumptions</td></tr>
 <tr><td>PC-029</td><td>Prepare a calm conversation about a repeated classroom concern</td></tr>
 <tr><td>PC-030</td><td>Create a fact-based communication plan for disagreement with a family</td></tr>
-</table>
+</tbody></table>
 <h3>Report Card Comments</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>RC-001</td><td>Build an evidence-safe comment bank</td></tr>
 <tr><td>RC-002</td><td>Turn evidence into a balanced report comment</td></tr>
 <tr><td>RC-003</td><td>Rewrite a comment for clarity and fairness</td></tr>
@@ -302,10 +367,9 @@ a{color:#167d8d}
 <tr><td>RC-028</td><td>Audit a bulk comment set for duplicates, contradictions and evidence leakage</td></tr>
 <tr><td>RC-029</td><td>Replace harsh or vague judgments with verified learning evidence</td></tr>
 <tr><td>RC-030</td><td>Shorten a report comment without removing the material concern</td></tr>
-</table>
+</tbody></table>
 <h3>Classroom Management Sel</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>CM-001</td><td>Design and teach a classroom routine</td></tr>
 <tr><td>CM-002</td><td>Prepare a restorative conversation</td></tr>
 <tr><td>CM-003</td><td>Teach an efficient entry routine with an immediate learning start</td></tr>
@@ -331,10 +395,9 @@ a{color:#167d8d}
 <tr><td>CM-023</td><td>Create a seating plan from classroom access and learning constraints</td></tr>
 <tr><td>CM-024</td><td>Build a transparent regrouping plan using temporary learning evidence</td></tr>
 <tr><td>CM-025</td><td>Audit seating and grouping decisions for labels, isolation and accessibility</td></tr>
-</table>
+</tbody></table>
 <h3>Teacher Admin Paperwork</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>AD-001</td><td>Turn notes into accountable meeting minutes</td></tr>
 <tr><td>AD-002</td><td>Draft a measurable professional growth goal</td></tr>
 <tr><td>AD-003</td><td>Write a concise staff email with one clear action</td></tr>
@@ -360,10 +423,9 @@ a{color:#167d8d}
 <tr><td>AD-023</td><td>Turn a verified classroom need into a concise proposal outline</td></tr>
 <tr><td>AD-024</td><td>Build a grant budget narrative from supplied costs and restrictions</td></tr>
 <tr><td>AD-025</td><td>Audit a proposal for unsupported claims, missing evidence and compliance</td></tr>
-</table>
+</tbody></table>
 <h3>Subject Deep Dives</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>SD-001</td><td>Create a concept-first mathematics explanation</td></tr>
 <tr><td>SD-002</td><td>Design an evidence-based science investigation</td></tr>
 <tr><td>SD-003</td><td>Connect concrete, visual and symbolic mathematics representations</td></tr>
@@ -379,10 +441,9 @@ a{color:#167d8d}
 <tr><td>SD-013</td><td>Create a skill-development lesson with modelling, practice and reflection</td></tr>
 <tr><td>SD-014</td><td>Adapt a performance task for space, equipment and physical access</td></tr>
 <tr><td>SD-015</td><td>Build an observable process rubric for an arts, PE or elective task</td></tr>
-</table>
+</tbody></table>
 <h3>Multi Step Workflows</h3>
-<table>
-<tr><th>ID</th><th>Prompt</th></tr>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
 <tr><td>WF-001</td><td>Standard to complete unit</td></tr>
 <tr><td>WF-002</td><td>Mixed-ability lesson pack</td></tr>
 <tr><td>WF-003</td><td>Incident to parent conversation</td></tr>
@@ -395,8 +456,7 @@ a{color:#167d8d}
 <tr><td>WF-010</td><td>Field-trip planning pack</td></tr>
 <tr><td>WF-011</td><td>Weekly teacher admin pack</td></tr>
 <tr><td>WF-012</td><td>Class data reflection</td></tr>
-</table>
-<hr>
+</tbody></table>
 <h2>By grade band</h2>
 <h3>3-5  (285 prompts)</h3>
 <p>AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040</p>
@@ -404,15 +464,41 @@ a{color:#167d8d}
 <p>AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040</p>
 <h3>9-12  (285 prompts)</h3>
 <p>AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040</p>
-<hr>
 <h2>By subject</h2>
 <p><strong>Any</strong>  (295) — AD-001, AD-002, AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-001, CM-002, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-001, DF-002, DF-003, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-003, LP-004, LP-005, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-001, PC-002, PC-003, PC-004, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-001, RC-002, RC-003, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040, WF-001, WF-002, WF-003, WF-004, WF-005, WF-006, WF-007, WF-008, WF-009, WF-010, WF-011, WF-012</p>
 <p><strong>Arts / PE / electives</strong>  (3) — SD-013, SD-014, SD-015</p>
 <p><strong>English language arts</strong>  (3) — SD-005, SD-006, SD-007</p>
 <p><strong>Mathematics</strong>  (4) — LP-002, SD-001, SD-003, SD-004</p>
 <p><strong>Science</strong>  (4) — LP-001, SD-002, SD-008, SD-009</p>
-<p><strong>Social studies</strong>  (3) — SD-010, SD-011, SD-012</p><script>document.querySelectorAll(".copy").forEach(function(b){b.onclick=function(){
-var t=b.parentNode.querySelector("pre").innerText;
-navigator.clipboard.writeText(t).then(function(){b.textContent="Copied";
-b.classList.add("ok");setTimeout(function(){b.textContent="Copy";
-b.classList.remove("ok")},1600)})}})</script></body></html>
+<p><strong>Social studies</strong>  (3) — SD-010, SD-011, SD-012</p></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>
