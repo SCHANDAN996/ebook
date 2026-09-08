@@ -22,9 +22,11 @@ h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:upper
    color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
    border-bottom:1px solid var(--line)}
 h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
-p{margin:0 0 1.1rem; max-width:66ch}
-ul{margin:0 0 1.1rem; padding-left:1.15rem; max-width:66ch}
-li{margin:.3rem 0}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
 strong{font-weight:640; color:#f2f6fa}
 code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
      padding:1px 6px; border-radius:5px; font-size:.85em}
@@ -85,20 +87,37 @@ blockquote strong{color:var(--warn)}
 
 /* ---- print: flip to light, drop the buttons ---------------------------- */
 @media print{
-  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#dde3e9;
-        --ink:#18202a; --dim:#5b6673; --faint:#78838f;
-        --accent:#0f7d70; --accent-dim:#bcd9d4; --warn:#9a7314}
-  body{font-size:10.5pt}
-  .wrap{max-width:none; padding:0}
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
   .copy{display:none}
-  .card{break-inside:avoid; page-break-inside:avoid; padding:0 0 14pt;
-        border:0; border-bottom:1px solid var(--line); border-radius:0;
-        margin-bottom:14pt}
-  .box{background:#f7f9fa}
-  .bar{background:#eef3f4}
-  .pid{background:none; color:var(--accent); padding:0; font-size:.9em}
-  h2{break-after:avoid} h3{break-after:avoid}
-  blockquote{background:#fdf8ec}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* A tall card must be allowed to split, or every one that does not fit
+     jumps to the next page and leaves half a page blank. */
+  .card{break-inside:auto; padding:0 0 12pt; border:0;
+        border-bottom:1px solid var(--line); border-radius:0; margin-bottom:12pt}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:8pt}
+  .bar{background:#e8f1ef; padding:5pt 9pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:6.6pt; color:var(--accent)}
+  .box pre{color:#131c26; font-size:8.6pt; line-height:1.5; padding:9pt 11pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
 }
 </style></head><body><div class="wrap"><h1>Chapter 1 — Lesson Planning</h1><p class="lede">60 prompts</p><p>Most lesson planning goes wrong in the same place: you start listing activities before deciding what would count as proof the lesson worked. These prompts push the evidence to the front — what will you actually see in the room that tells you they got it — and build backward from there.</p>
 <h2>What's in here</h2>
