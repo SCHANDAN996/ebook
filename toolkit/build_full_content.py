@@ -49,13 +49,13 @@ PROMPTS = (
     Prompt("DF-002", "04-differentiation-mixed-ability", "tiered-tasks", "Create three routes to the same objective", "A mixed-readiness class needs different entry points and one shared destination.", ("GRADE_BAND", "SUBJECT_AND_CORE_TASK", "COMMON_OBJECTIVE", "EVIDENCE_OF_MASTERY", "READINESS_EVIDENCE", "TIME_AND_MATERIALS"), "Create scaffolded, on-level and extension versions with equal curricular dignity.", "Return all three student-facing tasks; what changes and what stays fixed; success criteria; likely misconception and teacher check-question for each; flexible assignment guidance; whole-class discussion bridge.", "Grade 5 mathematics; compare fractions; justify using distance from one; fraction strips available.", "3-12", "Any", True),
     Prompt("DF-003", "04-differentiation-mixed-ability", "multilingual-support", "Make a task accessible to multilingual learners", "Language demands may hide subject understanding.", ("GRADE_BAND", "SUBJECT_AND_TASK", "CONTENT_OBJECTIVE", "LANGUAGE_FUNCTION", "LEARNER_LANGUAGE_PROFILES: no names", "WORDS_THAT_MUST_REMAIN", "AVAILABLE_TRANSLATION_SUPPORT"), "Add language support without replacing content learning or assuming proficiency.", "Return: essential vocabulary with plain definitions; visuals to provide; sentence frames at three support levels; partner rehearsal; model response; home-language use options; content-versus-language observation checklist; fade plan.", "Grade 6 social studies; explain cause and effect in migration; newcomers and intermediate English learners; terms push factor and pull factor must remain.", "K-12", "Any"),
     Prompt("DF-004", "04-differentiation-mixed-ability", "reading-and-accessibility", "Adapt text access while preserving meaning", "Learners need a more accessible route into a demanding source.", ("GRADE_BAND", "ORIGINAL_TEXT", "PURPOSE_FOR_READING", "TERMS_TO_PRESERVE", "ACCESS_NEEDS", "MAX_LENGTH", "ASSESSMENT_BOUNDARY"), "Create access supports while clearly separating any adapted text from the original.", "Return: difficulty analysis; chunked original with headings; glossary; optional plain-language companion; guiding questions; audio/visual suggestions; comprehension checks; statement of what was not changed. Do not claim a reading level without a defined measure.", "Grade 9 biology source passage; identify evidence for natural selection; preserve adaptation, variation and selection pressure.", "3-12", "Any"),
-    Prompt("PC-001", "05-parent-communication", "positive-notes", "Write a specific positive family message", "You want to share genuine, evidence-based progress.", ("STUDENT_FIRST_NAME_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "OBSERVED_ACTION", "LEARNING_OR_COMMUNITY_IMPACT", "TONE", "LENGTH", "LANGUAGE"), "Draft a warm message grounded only in supplied evidence.", "Return: subject line; full message; 50-word version. Keep praise specific, avoid labels, preserve placeholders, and invite—not require—a reply.", "Jordan; Grade 7 science; connected two classmates' ideas during a food-web discussion; helped the group revise its model; warm; under 140 words.", "K-12", "Any"),
-    Prompt("PC-002", "05-parent-communication", "concern-emails", "Communicate an academic concern with a next step", "A family needs clear facts and a manageable path forward.", ("STUDENT_FIRST_NAME_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "STRENGTH_EVIDENCE", "CONCERN_EVIDENCE_AND_DATES", "SUPPORT_ALREADY_OFFERED", "REQUESTED_NEXT_STEP", "AVAILABLE_CONTACT_OPTIONS", "TONE_AND_LENGTH"), "Write a factual, collaborative message without blame, diagnosis or invented context.", "Return: neutral subject; full email; brief version; factual consistency check. Separate observation from interpretation and retain all scheduling details exactly.", "Jordan; Grade 7 science; thoughtful discussion contributions; 2 of 4 tasks submitted over two weeks; written reminders and extra class time; 10-minute call; Thursday 3:30 PM or Friday 8:00 AM.", "K-12", "Any", True),
+    Prompt("PC-001", "05-parent-communication", "positive-notes", "Write a specific positive family message", "You want to share genuine, evidence-based progress.", ("STUDENT_LABEL_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "OBSERVED_ACTION", "LEARNING_OR_COMMUNITY_IMPACT", "TONE", "LENGTH", "LANGUAGE"), "Draft a warm message grounded only in supplied evidence.", "Return: subject line; full message; 50-word version. Keep praise specific, avoid labels, preserve placeholders, and invite—not require—a reply.", "Entirely fictional case: Learner A; Grade 7 science; connected two classmates' ideas during a food-web discussion; helped the group revise its model; warm; under 140 words.", "K-12", "Any"),
+    Prompt("PC-002", "05-parent-communication", "concern-emails", "Communicate an academic concern with a next step", "A family needs clear facts and a manageable path forward.", ("STUDENT_LABEL_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "STRENGTH_EVIDENCE", "CONCERN_EVIDENCE_AND_DATES", "SUPPORT_ALREADY_OFFERED", "REQUESTED_NEXT_STEP", "AVAILABLE_CONTACT_OPTIONS", "TONE_AND_LENGTH"), "Write a factual, collaborative message without blame, diagnosis or invented context.", "Return: neutral subject; full email; brief version; factual consistency check. Separate observation from interpretation and retain all scheduling details exactly.", "Entirely fictional case: Learner A; Grade 7 science; thoughtful discussion contributions; 2 of 4 invented practice tasks submitted over two weeks; fictional written reminders and extra class time; 10-minute call; [OPTION 1] or [OPTION 2].", "K-12", "Any", True),
     Prompt("PC-003", "05-parent-communication", "conference-preparation", "Prepare a balanced family conference", "You need an evidence-led conversation that ends with shared actions.", ("GRADE_AND_SUBJECT", "STRENGTH_EVIDENCE", "LEARNING_EVIDENCE", "ATTENDANCE_OR_BEHAVIOR_FACTS_IF_RELEVANT", "SUPPORTS_TRIED", "FAMILY_INPUT_TO_SEEK", "MEETING_LENGTH"), "Create a conference agenda and talking points without speculating about causes.", "Return: opening; evidence summary; work samples to bring; 3 family questions; student-voice question; shared plan table with owner/date/evidence; follow-up message; statements to avoid.", "Grade 5 mathematics; accurate computation but explanations incomplete; three anonymized work samples; 15-minute conference.", "K-12", "Any"),
     Prompt("PC-004", "05-parent-communication", "newsletters", "Draft a useful class newsletter", "Families need a concise update they can act on.", ("GRADE_AND_CLASS", "DATE_RANGE", "LEARNING_HIGHLIGHTS", "UPCOMING_DATES", "AT_HOME_OPTION", "MATERIALS_OR_PERMISSION_NEEDED", "CONTACT_PLACEHOLDER", "LANGUAGE_AND_LENGTH"), "Draft an accessible newsletter with no invented dates or requirements.", "Return: scannable newsletter; plain-text mobile version; translation-ready version with short sentences; missing-information flags; final date/links checklist.", "Grade 3; October 5-9; multiplication arrays and plant needs; museum form due [DATE]; optional array hunt at home; under 300 words.", "K-8", "Any"),
     Prompt("RC-001", "06-report-card-comments", "comment-banks", "Build an evidence-safe comment bank", "You need reusable comments that still sound specific and humane.", ("GRADE_AND_SUBJECT", "LEARNING_OBJECTIVES", "PERFORMANCE_CATEGORIES", "TONE", "LENGTH_RANGE", "RESTRICTED_WORDS_OR_POLICIES"), "Create modular comments with visible evidence placeholders rather than invented claims.", "Return comments for exceeding/meeting/developing/beginning; each includes strength, evidence placeholder and next step; neutral pronoun variants; repetition audit; prohibited-inference checklist.", "Grade 6 science; model systems and explain evidence; four performance categories; 45-65 words; avoid fixed-ability labels.", "K-12", "Any", True),
     Prompt("RC-002", "06-report-card-comments", "strengths-and-next-steps", "Turn evidence into a balanced report comment", "You have assessment evidence and need a concise, defensible comment.", ("STUDENT_NAME_OR_PLACEHOLDER", "GRADE_AND_SUBJECT", "OBSERVED_STRENGTHS", "SPECIFIC_EVIDENCE", "NEXT_LEARNING_PRIORITY", "SUPPORT_OR_STRATEGY", "WORD_LIMIT"), "Write a report comment using only supplied evidence.", "Return one comment and a fact trace showing which input supports each sentence. Include one actionable next step; avoid personality, effort or home-support claims unless explicitly evidenced.", "[STUDENT]; Grade 8 mathematics; solves two-step equations accurately; 8/10 on quiz; sign errors with distribution; annotate negative signs; 70 words.", "K-12", "Any"),
-    Prompt("RC-003", "06-report-card-comments", "tone-and-rewriting", "Rewrite a comment for clarity and fairness", "A draft comment may be vague, harsh or unsupported.", ("ORIGINAL_COMMENT", "VERIFIED_EVIDENCE", "GRADE_AND_SUBJECT", "DESIRED_TONE", "WORD_LIMIT", "SCHOOL_POLICY_NOTES"), "Rewrite the comment while preserving verified facts and removing unsupported judgments.", "Return: revised comment; change log categorized as clarity/tone/evidence/actionability; any claim that cannot be retained; one next-step sentence. Do not soften away a material concern.", "Original: 'Jordan is lazy and never finishes anything.' Evidence: 2 of 4 tasks submitted in two weeks after reminders; Grade 7 science; calm and direct; 60 words.", "K-12", "Any"),
+    Prompt("RC-003", "06-report-card-comments", "tone-and-rewriting", "Rewrite a comment for clarity and fairness", "A draft comment may be vague, harsh or unsupported.", ("ORIGINAL_COMMENT", "VERIFIED_EVIDENCE", "GRADE_AND_SUBJECT", "DESIRED_TONE", "WORD_LIMIT", "SCHOOL_POLICY_NOTES"), "Rewrite the comment while preserving verified facts and removing unsupported judgments.", "Return: revised comment; change log categorized as clarity/tone/evidence/actionability; any claim that cannot be retained; one next-step sentence. Do not soften away a material concern.", "Entirely fictional case: 'Learner A is lazy and never finishes anything.' Invented evidence: 2 of 4 practice tasks submitted over two weeks after reminders; Grade 7 science; calm and direct; 60 words.", "K-12", "Any"),
     Prompt("CM-001", "07-classroom-management-sel", "routines-and-transitions", "Design and teach a classroom routine", "A recurring transition is costing time or creating confusion.", ("GRADE_BAND", "ROUTINE_OR_TRANSITION", "CURRENT_OBSERVATIONS", "DESIRED_BEHAVIOR", "TIME_TARGET", "ROOM_CONSTRAINTS", "SCHOOL_EXPECTATIONS"), "Create an explicitly taught routine, not a punishment system.", "Return: observable steps; teacher script; visual cue; model/non-model practice; feedback language; 5-day rehearsal plan; simple time/data tracker; reset procedure; accessibility considerations.", "Grade 4; move from carpet to tables; takes 4 minutes with materials forgotten; goal 90 seconds; narrow aisle.", "K-12", "Any", True),
     Prompt("CM-002", "07-classroom-management-sel", "restorative-conversations", "Prepare a restorative conversation", "A classroom harm needs acknowledgment, repair and reintegration.", ("AGE_OR_GRADE", "OBSERVABLE_INCIDENT_FACTS", "PEOPLE_INVOLVED_AS_ROLES", "IMMEDIATE_SAFETY_ACTIONS", "POLICY_REQUIREMENTS", "CONVERSATION_LENGTH", "KNOWN_NEEDS_OR_ACCOMMODATIONS"), "Create a voluntary, developmentally appropriate conversation guide; do not determine guilt or replace required safeguarding.", "Return: readiness check; private opening; neutral fact statement; questions about impact and needs; repair options; agreement template; follow-up; escalation/safeguarding boundaries; phrases to avoid.", "Grade 8; one student mocked another's presentation; teacher stopped comments and separated seating; school incident log required; 10 minutes.", "K-12", "Any"),
     Prompt("AD-001", "08-teacher-admin-paperwork", "agendas-and-minutes", "Turn notes into accountable meeting minutes", "A team needs concise decisions and next actions from rough notes.", ("MEETING_NAME_AND_DATE", "ATTENDEE_ROLES", "AGENDA", "ROUGH_NOTES", "CONFIRMED_DECISIONS", "ACTION_OWNERS_AND_DATES", "CONFIDENTIALITY_RULES"), "Produce factual minutes without inventing consensus, owners or deadlines.", "Return: attendees; agenda summary; decisions; action table; parking lot; unresolved questions; next meeting placeholder; verification flags. Mark unclear statements as [CONFIRM].", "Grade-level planning meeting; anonymized notes; three confirmed decisions; two tentative actions missing owners.", "K-12", "Any", True),
@@ -66,9 +66,18 @@ PROMPTS = (
 
 
 WORKFLOWS = (
-    ("WF-001", "standard-to-complete-unit", "Standard to complete unit", "Turn one supplied standard into an aligned unit, assessment and daily sequence.", ("Paste the standard verbatim and list constraints.", "Unpack knowledge, skills and mastery criteria; teacher reviews.", "Draft the final assessment and rubric; teacher corrects content and accessibility.", "Build the lesson sequence backward from the approved assessment.", "Run an alignment audit and produce the final unit pack.")),
-    ("WF-002", "mixed-ability-lesson", "Mixed-ability lesson pack", "Create one common-goal lesson with evidence-based access routes.", ("Define the unchanged objective and mastery evidence.", "Describe observed barriers without names or labels.", "Create core lesson and formative checks.", "Create scaffolded, on-level and extension routes; teacher reviews parity.", "Add grouping, fade plan and next-day decision rules.")),
-    ("WF-003", "incident-to-parent-conversation", "Incident to parent conversation", "Move from verified classroom facts to a calm, policy-aligned family conversation.", ("Record observable facts, immediate actions and applicable policy.", "Separate facts, unknowns and interpretations; teacher verifies.", "Draft neutral contact message with placeholders.", "Prepare questions, support options and an action-plan table.", "Document agreed actions and schedule follow-up without adding new claims.")),
+    ("WF-001", "standard-to-complete-unit", "Standard to complete unit", "Turn one supplied standard into an aligned unit, assessment and daily sequence.", ("Paste the standard verbatim; add grade, duration, schedule, resources and required curriculum boundaries.", "Unpack knowledge, skills, reasoning, prerequisites and observable mastery; pause for teacher correction.", "Design the final assessment and rubric before lessons; independently verify content and scoring.", "Build the lesson sequence backward from the approved evidence, adding formative checkpoints and reteaching triggers.", "Audit every objective, lesson and item for alignment; assemble the unit overview, daily plans, assessment and answer materials.")),
+    ("WF-002", "mixed-ability-lesson", "Mixed-ability lesson pack", "Create one common-goal lesson with evidence-based access routes.", ("Define the unchanged objective and common evidence of mastery.", "Describe observed barriers and current evidence without names, diagnoses or fixed labels.", "Create the core lesson, model, guided practice, independent evidence and formative checks.", "Build scaffolded, on-level and extension routes; compare intellectual demand and correct hidden lower expectations.", "Add flexible grouping, support-fade rules, accessibility checks and next-day instructional decisions.")),
+    ("WF-003", "incident-to-parent-conversation", "Incident to parent conversation", "Move from verified classroom facts to a calm, policy-aligned family conversation.", ("Record observable facts, time, place, roles, immediate safety actions and applicable school procedure.", "Separate confirmed facts, reported information, interpretation and unknowns; teacher verifies the record.", "Draft a neutral initial contact message using placeholders and no determination of motive or guilt.", "Prepare the conversation opening, family questions, support options and an action table with owners and dates.", "Document only agreed actions, preserve unresolved items and schedule policy-aligned follow-up.")),
+    ("WF-004", "scores-to-report-comments", "Scores to report comments", "Turn verified assessment evidence into individualized, defensible report comments.", ("Prepare a de-identified evidence table with objectives, results, observed strengths, error patterns and next priorities.", "Check that every row belongs to the correct fictional learner label and flag missing or inconsistent evidence.", "Draft one comment at a time with strength, evidence and achievable next step; do not infer effort or personality.", "Run a sentence-level fact trace and audit for repetition, pronouns, tone, length and evidence leakage.", "Export approved drafts for secure insertion into the official system; names are added only inside an authorized workflow.")),
+    ("WF-005", "standard-to-assessment", "Standard to aligned assessment", "Build a verified assessment and scoring system from an exact supplied standard.", ("Paste the standard and define grade, taught content, time, formats and accessibility requirements.", "Unpack assessable knowledge, skills and reasoning; create an assessment blueprint with weightings.", "Write items and purposeful distractors mapped to the blueprint; stop for subject-matter review.", "Create worked answers, rubric or point rules, misconception codes and instructional decision thresholds.", "Solve every item independently and audit alignment, ambiguity, accessibility, total points and answer accuracy.")),
+    ("WF-006", "emergency-substitute-pack", "Emergency substitute pack", "Create a self-contained, safe lesson pack another adult can run without guessing.", ("List the schedule, subject, learner routines, materials already available, prohibited activities and policy placeholders.", "Choose a realistic objective and create a no-technology core lesson with exact read-aloud directions.", "Add student task pages, answer guide, early-finisher option and collection instructions.", "Create contingencies for missing materials, shortened time and learners needing established supports.", "Audit safety, supervision, timing and unknown procedures; assemble the one-page overview and attachments.")),
+    ("WF-007", "project-launch-pack", "Project launch pack", "Turn a learning goal into a clear project brief, milestone plan and assessment pack.", ("Define the objective, final evidence, duration, resources, audience and privacy boundaries.", "Create the driving question, authentic scenario, final-product requirements and student choice limits.", "Build milestones, mini-deadlines, teacher checkpoints and a recovery path for missed work.", "Create the rubric, individual-accountability evidence and peer-feedback protocol.", "Audit workload, group equity, accessibility, copyright and public-sharing risk; assemble the launch pack.")),
+    ("WF-008", "parent-conference-pack", "Parent conference pack", "Prepare and document a brief, balanced family conference from verified evidence.", ("Gather authorized strengths, learning evidence, work samples, supports tried and the priority concern.", "Build a timed agenda that separates evidence, interpretation, family perspective and student voice.", "Draft neutral talking points, three open questions and explanations of relevant classroom evidence.", "Create a shared action plan with owner, action, date and evidence of progress.", "Write the factual follow-up summary; verify recipients, dates, consent, privacy and school policy before sending.")),
+    ("WF-009", "intervention-plan-draft", "Evidence to intervention-plan draft", "Organize anonymous learning evidence into a time-bound instructional support draft.", ("Define the exact skill, baseline measure, prior instruction and non-identifying evidence; do not diagnose causes.", "Analyze patterns, identify a narrow instructional target and state uncertainty or missing information.", "Choose an evidence-aligned teaching strategy, dosage, materials and implementation owner.", "Define progress checks, graphing or tally method, review date and decision rules for continue/change/escalate.", "Audit feasibility, access, policy and data privacy; label the result a draft requiring qualified team approval.")),
+    ("WF-010", "field-trip-pack", "Field-trip planning pack", "Organize verified trip requirements into a usable logistics and communication pack.", ("Collect the official venue, date, transport, cost, supervision, medical, accessibility and permission requirements.", "Create the master timeline, approval checklist and unresolved-information register.", "Build the trip-day schedule, group counts, adult responsibilities, contacts and contingency fields.", "Draft family notice, permission checklist and student preparation information from verified details only.", "Reconcile every date, count and cost; complete school safety, accessibility and authorization review.")),
+    ("WF-011", "weekly-admin-pack", "Weekly teacher admin pack", "Turn a teacher's verified weekly notes into a concise set of plans and communications.", ("Sort supplied notes into teaching priorities, deadlines, meetings, communications and items awaiting confirmation.", "Create a realistic weekly priority list that distinguishes essential, scheduled, delegated and deferred work.", "Draft the agenda, staff updates and family notices needed that week using placeholders for unknown details.", "Build action tables with owners, dates and completion evidence; remove duplicates and conflicts.", "Run a privacy, recipient, calendar and policy audit before anything is copied into official systems.")),
+    ("WF-012", "class-data-reflection", "Class data reflection", "Turn de-identified class evidence into instructional conclusions and next actions.", ("Provide the objective, assessment conditions, scoring rules and anonymous response-level evidence.", "Check data quality and summarize distributions without hiding missing, incomparable or weak evidence.", "Identify secure learning, common misconceptions and questions the evidence cannot answer.", "Create flexible next-step groups, targeted tasks and a common reassessment aligned to the same objective.", "Record the instructional hypothesis, decision thresholds and review date; avoid claims about learner traits or causes.")),
 )
 
 
@@ -198,16 +207,17 @@ not the mathematical target. Remove the sentence frame once the learner explains
 relationship independently.""",
     "05-parent-communication": """**Illustrative email — all names and details are fictional**
 
-**Subject: Science progress and brief check-in for Jordan**
+**Subject: Science progress and brief check-in**
 
-Dear Mr. and Mrs. Lee,
+Dear Family,
 
-Jordan regularly contributes thoughtful ideas during our Grade 7 science discussions.
-Over the past two weeks, Jordan has submitted two of four assigned classwork tasks. I
-have provided written reminders and additional classroom time; two tasks remain.
+In this entirely fictional example, Learner A regularly contributes thoughtful ideas
+during Grade 7 science discussions. Over two fictional weeks, Learner A submitted two of
+four invented practice tasks. Written reminders and additional classroom time were also
+part of this invented scenario; two fictional tasks remain.
 
 Could we arrange a 10-minute call to make a manageable completion plan? I am available
-Thursday at 3:30 PM or Friday at 8:00 AM. Please let me know whether either time works.
+at [OPTION 1] or [OPTION 2]. Please let me know whether either time works.
 
 Sincerely,
 
@@ -217,13 +227,13 @@ Sincerely,
 
 **Teacher check:** Verify recipients, dates, assignment record, time zone and school
 communication policy before sending.""",
-    "06-report-card-comments": """**Illustrative comment — fictional evidence**
+    "06-report-card-comments": """**Illustrative comment — entirely fictional, non-identifying evidence**
 
-Jordan accurately solves one- and two-step equations and demonstrated this on 8 of 10
-items in the latest classroom assessment. Written work is clearest when each inverse
-operation is shown on a separate line. The next priority is distributing negative signs
-consistently across parentheses. Annotating the sign before simplifying will help Jordan
-check this step independently.
+Fictional Learner A accurately solves one- and two-step equations and demonstrated this
+on 8 of 10 invented practice items. The fictional work is clearest when each inverse
+operation is shown on a separate line. The next practice priority is distributing negative
+signs consistently across parentheses. Annotating the sign before simplifying is the
+suggested next strategy in this invented example.
 
 **Fact trace:** “8 of 10” comes from the supplied assessment record; “negative signs”
 comes from the supplied error pattern; the suggested annotation is the teacher-provided
@@ -267,142 +277,622 @@ size. **Transfer:** Order 2/3, 7/8 and 11/12 without common denominators. Answer
 `2/3 < 7/8 < 11/12`, because the missing unit fractions decrease.""",
 }
 
-WORKFLOW_TITLES = {
-    "standard-to-assessment": "Standard to aligned assessment",
-    "emergency-substitute-pack": "Emergency substitute pack",
-    "project-launch-pack": "Project launch pack",
-    "parent-conference-pack": "Parent conference pack",
-    "intervention-plan-draft": "Evidence to intervention-plan draft",
-    "field-trip-pack": "Field-trip planning pack",
-    "weekly-admin-pack": "Weekly teacher admin pack",
-    "class-data-reflection": "Class data reflection",
-    "scores-to-report-comments": "Scores to report comments",
+PROMPT_SAMPLE_OUTPUTS = {
+    "LP-001": """**Illustrative output — complete Grade 6 science lesson**
+
+**Objective:** I can model how sunlight, water and carbon dioxide help a plant make sugar
+and release oxygen. **Success evidence:** A labelled diagram shows three inputs entering,
+two products in the correct locations and one accurate explanatory sentence.
+
+**50-minute sequence:** 0-5 prior-knowledge write; 5-15 teacher model of a plant as a
+solar-powered food factory; 15-28 pairs sort input/output cards; 28-43 learners create an
+independent arrow model; 43-50 exit ticket. Ask throughout: “Is sunlight matter or the
+energy source?” **Misconception response:** If sugar is labelled as coming from soil, use a
+carbon-tracing example before independent work. **Exit ticket:** Can a watered plant make
+sugar without carbon dioxide? Explain using *input*.""",
+    "LP-002": """**Illustrative output — backward-planned Grade 8 equations unit**
+
+**Final mastery:** Solve and justify one-variable linear equations, including distribution
+and variables on both sides. **Final evidence:** Six-item assessment: two procedural items,
+two error analyses, one no-solution/infinite-solutions comparison and one written model.
+
+**Eight-lesson sequence:** (1) inverse operations and equality; (2) two-step equations;
+(3) distribution; (4) combining like terms; (5) variables on both sides; (6) special
+solutions; (7) mixed reasoning clinic; (8) assessment and reflection. Hinge checks follow
+Lessons 2, 4 and 6. If fewer than 75% justify the same operation on both sides, reteach with
+a balance representation before continuing. Extension asks learners to create and verify
+an equation with no solution.""",
+    "LP-003": """**Illustrative output — unpacking a supplied informational-text standard**
+
+**Key actions:** identify a claim, select relevant evidence, explain how evidence supports
+the claim and distinguish strong from weak support. **Prerequisites:** locate explicit
+details and paraphrase without changing meaning.
+
+**Objectives:** (1) I can identify the author's central claim. (2) I can select two details
+that directly support it. (3) I can explain the connection between each detail and the
+claim. **Mastery evidence:** Given a new 500-word text, the learner states the claim,
+quotes or paraphrases two accurate details and writes one reasoning sentence per detail.
+The teacher must paste and verify the exact local standard before using this sequence; no
+standard wording is invented in this example.""",
+    "LP-004": """**Illustrative output — matched food-web warm-up and exit ticket**
+
+**Warm-up (5 minutes):** “Algae → snails → perch → herons. If snails suddenly decline,
+which population changes first? What might happen later?” Learners write, pair-share and
+mark direct versus indirect effects. Responses reveal whether they stop reasoning after one
+link.
+
+**Exit ticket (5 minutes):** “A pollutant reduces algae but does not directly poison fish.
+Explain two ways herons could still be affected.” **Answer guide:** Less algae can reduce
+snails, then perch, leaving less prey for herons; other defensible food-web routes require
+stated evidence. **Decision:** secure = two connected steps; developing = one correct step;
+not yet = only direct poisoning. Begin the next lesson with chain tracing if over 25% are
+not yet.""",
+    "LP-005": """**Illustrative output — no-surprises Grade 4 map-skills substitute plan**
+
+**Goal:** Use a map key and compass rose to describe locations. **Materials:** atlases,
+paper and pencils; no devices. **55 minutes:** attendance and posted starter (5); model one
+example from the instruction card (8); independent atlas hunt (22); partner comparison
+using established routines (10); exit question and collection (10).
+
+**Read aloud:** “Use the key exactly as printed. If you disagree, point to the map evidence.”
+The answer sheet includes page references and acceptable direction language. Early finishers
+write three accurate clues for a partner. If atlases are unavailable, use the printed room
+map task. Attendance, emergency and dismissal procedures remain `[NEEDS TEACHER INPUT]`.""",
+    "LP-006": """**Illustrative output — concept-development lesson on equivalent fractions**
+
+Begin with two equal paper strips showing 1/2 and 2/4. Learners silently decide whether the
+amounts are equal and explain what stays constant when partitions change. The teacher then
+connects folding, a number line and multiplication of numerator and denominator.
+
+Guided examples use 2/3 = 4/6 and one non-example, 2/3 ≠ 3/4. Partners create an equivalent
+fraction and prove it with two representations. Independent evidence asks learners to fill
+`3/5 = ?/20` and explain why multiplying only the denominator changes the value. The exit
+ticket contrasts “more pieces” with “more amount.” If learners rely only on a memorized
+rule, return to equal-length strips before symbolic practice.""",
+    "LP-007": """**Illustrative output — inquiry lesson around condensation**
+
+**Phenomenon:** Water appears outside a sealed cup of ice water. Learners first observe
+without explanation, then record two competing ideas: leakage or water from surrounding
+air. Groups design a comparison using a sealed cold cup and room-temperature control.
+
+The teacher approves safety and variables before materials are distributed. Learners record
+where droplets form, compare controls and write a claim-evidence-reasoning response.
+Expected pattern: droplets form outside the cold cup; this is not a promised result. Ask,
+“What evidence would distinguish a leak from condensation?” Independent transfer explains
+fog on a bathroom mirror. The lesson ends by listing evidence still needed, preventing the
+model explanation from being presented as experimental proof.""",
+    "LP-008": """**Illustrative output — explicit instruction with guided release**
+
+**Skill:** Identify and punctuate an introductory phrase. **I do:** The teacher thinks aloud,
+finds the sentence opening, checks whether it can move and inserts a comma. **We do:** The
+class annotates three examples, including one sentence with no introductory phrase. **You
+do together:** Pairs correct four sentences and justify each decision. **You do alone:**
+Learners edit a six-sentence paragraph and write one original example.
+
+After every stage, a two-item check determines release. If fewer than 80% identify the
+boundary, add bracketed phrase models before independent work. The exit ticket includes one
+correct sentence and one tempting over-comma error. The teacher verifies local terminology
+and style guidance before use.""",
+    "LP-009": """**Illustrative output — equitable discussion lesson**
+
+**Question:** Should a fictional town replace a vacant lot with housing or a public park?
+Learners receive two short authorized sources with different evidence. Silent preparation
+requires one claim, two pieces of evidence and one question before anyone speaks.
+
+In groups of four, roles rotate: facilitator invites, evidence tracker records sources,
+connector links ideas and challenger asks for reasoning. Use stems: “The source supports
+that because…” and “What evidence would change your view?” No learner must disclose personal
+housing experience. Individual evidence is a final 120-word position that addresses one
+counterargument. The teacher tracks whose ideas enter the discussion and pauses if two
+voices dominate.""",
+    "LP-010": """**Illustrative output — no-technology lesson on ratios**
+
+Materials are a board, scrap paper and pencils. Start with the fictional recipe “2 cups rice
+for 3 cups water.” Learners draw double number lines for 1, 2 and 4 batches, then compare
+strategies. The teacher models scaling both quantities and contrasts the non-example of
+adding the same number to each.
+
+Pairs solve three ratio situations on folded paper and exchange one explanation for checking.
+Independent evidence asks for a missing value and a written justification. The exit ticket:
+“A learner changes 2:3 to 4:5. Is the ratio equivalent? Prove it.” Answer: no; 2:3 scaled by
+2 is 4:6. No printing, projector, internet or purchased material is required.""",
+    "LP-011": """**Illustrative output — lesson around one supplied complex text**
+
+Before reading, preview only three essential terms and ask learners to predict the author's
+purpose from the title and source. First read: gist in one sentence. Second read: annotate
+the claim, supporting evidence and one unresolved question. Third read: compare which detail
+most strongly supports the claim.
+
+The teacher models annotation on the first paragraph but does not paraphrase the entire
+text. Pairs rehearse explanations; independent evidence is a claim-evidence-reasoning
+paragraph using the authorized passage. A plain-language companion may sit beside the
+original, but quoted evidence must come from the original. Insert `[AUTHORIZED TEXT]` and
+verify copyright permission, factual accuracy and vocabulary before teaching.""",
+    "LP-012": """**Illustrative output — safe investigation of dissolving rate**
+
+**Question:** How does water temperature affect the time for one teaspoon of sugar to
+dissolve? **Variables:** change water temperature; measure seconds; keep cup, water volume,
+sugar amount and stirring pattern constant. **Safety:** teacher handles hot water; use warm,
+not boiling, water; no tasting; wipe spills immediately.
+
+Groups predict, run three conditions and record results in a supplied table. They graph time
+against temperature and write a claim supported by their own data. The guide states an
+expected pattern—warmer water often dissolves sugar faster—but never fabricates results.
+Learners name one limitation and one improvement. The teacher verifies temperatures,
+equipment and local laboratory rules before approval.""",
 }
 
+# Chapter 1 is written as 60 distinct teacher jobs rather than repeated variations of
+# one generic shell. Indexes match the manifest allocation within each subtopic.
+LESSON_PLANNING_TITLES = {
+    "complete-lessons": (
+        "Build a complete evidence-led lesson",
+        "Plan a concept-development lesson from prior knowledge",
+        "Plan an inquiry lesson around a puzzling phenomenon",
+        "Create an explicit-instruction lesson with guided release",
+        "Design a discussion-centered lesson with equitable participation",
+        "Build a no-technology lesson using basic classroom materials",
+        "Create a lesson around one complex text or source",
+        "Plan a safe hands-on investigation lesson",
+        "Design a problem-based mathematics lesson",
+        "Compress a full lesson into a purposeful 30-minute period",
+        "Expand a lesson for a 90-minute block without filler",
+        "Repair a draft lesson whose activities do not match its objective",
+    ),
+    "backward-unit-planning": (
+        "Plan a unit backward from mastery",
+        "Unpack final mastery into a prerequisite learning map",
+        "Design a final performance task before planning daily lessons",
+        "Create a coherent lesson sequence from an approved assessment",
+        "Place formative checkpoints and reteaching decisions across a unit",
+        "Audit a unit for gaps, repetition and cognitive progression",
+        "Shorten a unit while protecting its essential learning",
+        "Add transfer and reflection to the end of a unit",
+    ),
+    "standards-and-objectives": (
+        "Turn a standard into measurable objectives",
+        "Separate knowledge, skill and reasoning within a standard",
+        "Rewrite a technical objective as a student-friendly I-can statement",
+        "Create observable success criteria for an existing objective",
+        "Check whether an activity truly aligns to a supplied standard",
+        "Map several objectives into a logical teaching order",
+        "Identify prerequisite skills without lowering the grade-level target",
+        "Write evidence statements showing what mastery would look like",
+    ),
+    "warm-ups-and-exit-tickets": (
+        "Create a matched warm-up and exit ticket",
+        "Design a warm-up that exposes prior knowledge in five minutes",
+        "Write a misconception-revealing hinge question",
+        "Create an exit ticket with secure, developing and not-yet response bands",
+        "Turn yesterday's exit-ticket patterns into today's opening task",
+        "Build a retrieval-practice warm-up without introducing new content",
+        "Create a transfer exit ticket that cannot be answered by copying",
+        "Audit an exit ticket for alignment, ambiguity and reading load",
+    ),
+    "pacing-and-transitions": (
+        "Build a realistic minute-by-minute lesson timeline",
+        "Diagnose where a lesson is likely to run out of time",
+        "Write concise transitions between lesson segments",
+        "Create a pacing contingency when discussion runs long",
+        "Plan meaningful early-finisher work connected to the objective",
+        "Adapt one lesson for both a regular period and a shortened schedule",
+    ),
+    "substitute-and-emergency-plans": (
+        "Create a no-surprises substitute lesson",
+        "Build an emergency no-print lesson from materials already in the room",
+        "Write exact substitute directions that require no subject guessing",
+        "Create a technology-failure backup for a digital lesson",
+        "Prepare an independent catch-up lesson for an unexpected absence",
+        "Audit a substitute plan for safety, clarity and collection procedures",
+    ),
+    "projects-and-interdisciplinary-lessons": (
+        "Launch a project with a clear driving question and final product",
+        "Connect two subjects around one authentic problem",
+        "Break a multiweek project into milestones and checkpoints",
+        "Create individual accountability inside a group project",
+        "Design a project rubric that measures learning rather than decoration",
+        "Plan a public-product option that protects student privacy",
+    ),
+    "reflection-and-adaptation": (
+        "Turn lesson evidence into a next-day adjustment",
+        "Write a post-lesson reflection based on observations rather than feelings alone",
+        "Identify what to keep, change and investigate after a lesson",
+        "Adapt a lesson after most learners miss the same misconception",
+        "Plan targeted follow-up for three anonymous response patterns",
+        "Compare the intended lesson with what learners actually demonstrated",
+    ),
+}
+
+WORKSHEET_ACTIVITY_TITLES = {
+    "practice-worksheets": (
+        "Build a focused practice worksheet",
+        "Create practice that moves from a model to independent work",
+        "Write a worksheet that targets one common misconception",
+        "Build mixed practice that requires learners to choose a strategy",
+        "Create a short retrieval worksheet for previously taught skills",
+        "Design an application worksheet using realistic classroom contexts",
+        "Adapt a worksheet for black-and-white printing and limited space",
+        "Create an error-analysis worksheet from fictional student work",
+        "Write a worksheet with foundation, application and reasoning sections",
+        "Audit and repair a worksheet whose questions are repetitive or unclear",
+    ),
+    "learning-stations": (
+        "Design four learning stations",
+        "Create hands-on, reading, discussion and writing stations",
+        "Plan station rotations for a large class and small room",
+        "Build self-checking stations that do not depend on the teacher",
+        "Create one quiet station and three collaborative stations",
+        "Differentiate station access while preserving one shared objective",
+        "Design a teacher-led reteaching station from exit-ticket evidence",
+        "Audit station directions, timing, materials and accountability",
+    ),
+    "collaborative-tasks": (
+        "Create an accountable group task",
+        "Design a jigsaw task where every learner holds essential information",
+        "Build a group investigation with rotating cognitive roles",
+        "Create a consensus task that requires evidence and disagreement",
+        "Turn an individual worksheet into meaningful collaborative reasoning",
+        "Audit a group task for participation, access and individual evidence",
+    ),
+    "review-games": (
+        "Build a review game that measures learning",
+        "Create a no-speed review game using mini-whiteboards",
+        "Design a team review game with individual accountability",
+        "Build a misconception challenge using diagnostic distractors",
+        "Create a low-prep review game with paper question cards",
+        "Audit a review game for fairness, accuracy and useful teacher data",
+    ),
+    "homework-sets": (
+        "Create a short homework set with a clear purpose",
+        "Build homework that mixes retrieval and current learning",
+        "Design homework with a meaningful no-internet option",
+        "Create a family-readable homework guide without requiring family teaching",
+        "Audit a homework set for workload, access and answer-key accuracy",
+    ),
+    "project-briefs": (
+        "Write a student-ready project brief from a supplied objective",
+        "Create project milestones, checkpoints and submission requirements",
+        "Design a choice-based project with equivalent learning demands",
+        "Build a group-project brief with individual evidence of mastery",
+        "Audit a project brief for clarity, feasibility and privacy",
+    ),
+}
+
+ASSESSMENT_TITLES = {
+    "quizzes-and-tests": (
+        "Create a balanced classroom assessment",
+        "Build a short quiz across recall, application and reasoning",
+        "Write diagnostic multiple-choice questions with purposeful distractors",
+        "Create a constructed-response assessment with a scoring guide",
+        "Design a pre-assessment that separates prerequisite and grade-level skills",
+        "Build a cumulative assessment without over-weighting recent lessons",
+        "Adapt an assessment for a shorter testing period",
+        "Create parallel assessment forms with equivalent demand",
+        "Audit a test for alignment, ambiguity and answer-key errors",
+        "Turn a supplied objective list into a complete assessment blueprint",
+    ),
+    "formative-checks-and-exit-tickets": (
+        "Create hinge questions for live teaching",
+        "Build a five-minute check for understanding during instruction",
+        "Write an exit ticket that distinguishes three levels of understanding",
+        "Create a misconception poll with actionable response options",
+        "Design a show-me task using mini-whiteboards or paper",
+        "Turn anonymous responses into a next-day formative check",
+        "Create a transfer question that reveals reasoning rather than recall",
+        "Audit a formative check for speed, reading load and decision usefulness",
+    ),
+    "rubrics": (
+        "Build a student-readable analytic rubric",
+        "Create observable descriptors for four performance levels",
+        "Turn an objective and task into aligned rubric criteria",
+        "Build a single-point rubric with feedback space",
+        "Create a rubric for collaborative work with individual evidence",
+        "Rewrite vague rubric words as observable evidence",
+        "Calibrate a rubric using fictional work samples",
+        "Audit a rubric for double penalties, bias and irrelevant criteria",
+    ),
+    "diagnosis-and-misconceptions": (
+        "Diagnose errors from anonymous work",
+        "Code anonymous responses by misconception rather than score alone",
+        "Build flexible reteaching groups from response patterns",
+        "Distinguish a careless slip from a conceptual misunderstanding",
+        "Create targeted mini-tasks for three misconception groups",
+        "Plan a reassessment that shows whether reteaching worked",
+    ),
+    "answer-keys-and-feedback": (
+        "Create a complete worked answer key from verified questions",
+        "Write actionable feedback matched to common response patterns",
+        "Audit an answer key for mathematical, factual and scoring errors",
+        "Create learner-friendly solution explanations without hiding reasoning",
+    ),
+    "standards-based-grading": (
+        "Map assessment evidence to supplied standards and objectives",
+        "Create a standards-based proficiency scale with observable evidence",
+        "Summarize class mastery without averaging unrelated skills",
+        "Audit a standards-based grade summary for missing or weak evidence",
+    ),
+}
+
+DIFFERENTIATION_TITLES = {
+    "scaffolds": (
+        "Add temporary scaffolds without lowering the goal",
+        "Turn an observed barrier into a targeted support plan",
+        "Create a graphic organizer that preserves essential reasoning",
+        "Write sentence frames at three levels of language support",
+        "Break a complex task into checkpoints without doing the thinking",
+        "Add worked examples and prompts with a clear fade plan",
+        "Create a scaffold menu learners can choose from responsibly",
+        "Audit classroom supports for dependence and hidden lower expectations",
+    ),
+    "tiered-tasks": (
+        "Create three routes to the same objective",
+        "Build scaffolded, on-level and extension versions of one task",
+        "Tier a task by representation rather than by easier content",
+        "Create three entry points with one common mastery product",
+        "Design tiered questions that move from access to transfer",
+        "Check that every tier carries equal curricular dignity",
+        "Create a whole-class debrief that reconnects three task versions",
+    ),
+    "multilingual-support": (
+        "Make a task accessible to multilingual learners",
+        "Identify the language demands hidden inside a subject task",
+        "Build an essential vocabulary preview with visuals and examples",
+        "Create structured partner rehearsal before independent writing",
+        "Plan purposeful home-language use without assuming proficiency",
+        "Separate content evidence from English-language evidence",
+    ),
+    "reading-and-accessibility": (
+        "Adapt text access while preserving meaning",
+        "Chunk a demanding source without rewriting its claims",
+        "Create a plain-language companion beside the original text",
+        "Add glossary, guiding questions and audio-access suggestions",
+        "Reduce unnecessary reading load in a non-reading assessment",
+        "Audit adapted materials for lost meaning or unsupported simplification",
+    ),
+    "extensions": (
+        "Create an extension that deepens reasoning instead of adding more work",
+        "Build a transfer challenge using a new context",
+        "Design an open-ended investigation with clear evidence expectations",
+        "Audit an extension for novelty, rigor and connection to the objective",
+    ),
+    "flexible-grouping": (
+        "Build temporary groups from anonymous learning evidence",
+        "Create a rotation plan for three changing instructional needs",
+        "Plan mixed-readiness groups with meaningful roles and accountability",
+        "Audit a grouping plan for labels, access, movement and regrouping triggers",
+    ),
+}
+
+PARENT_COMMUNICATION_TITLES = {
+    "positive-notes": (
+        "Write a specific positive family message",
+        "Share academic growth using one concrete classroom example",
+        "Recognize a learner's helpful contribution without using labels",
+        "Write a brief celebration message suitable for a mobile screen",
+        "Create a positive note that invites the learner's own reflection",
+        "Build a reusable strength-note template with visible evidence fields",
+    ),
+    "concern-emails": (
+        "Communicate an academic concern with a next step",
+        "Write a missing-work message using dates and verified counts",
+        "Explain a recurring learning difficulty without diagnosing its cause",
+        "Request a brief family check-in with two exact scheduling options",
+        "Revise a blaming concern email into factual collaborative language",
+        "Audit a concern message for evidence, tone and unsupported claims",
+    ),
+    "conference-preparation": (
+        "Prepare a balanced family conference",
+        "Build a 15-minute conference agenda around learning evidence",
+        "Prepare questions that invite family and student perspective",
+        "Turn classroom evidence into a shared action-plan table",
+        "Write a factual post-conference summary with owners and dates",
+    ),
+    "newsletters": (
+        "Draft a useful class newsletter",
+        "Create a concise weekly learning update for families",
+        "Rewrite a newsletter as a mobile-friendly plain-text version",
+        "Audit a class newsletter for dates, jargon, access and action items",
+    ),
+    "permissions-and-logistics": (
+        "Draft a permission notice from verified trip or event details",
+        "Create a clear family checklist for materials, dates and return forms",
+        "Write a schedule-change notice without inventing school policy",
+        "Audit a logistics message for missing consent, safety and contact details",
+    ),
+    "clear-and-accessible-language": (
+        "Rewrite school language in plain family-friendly English",
+        "Create a translation-ready message using short unambiguous sentences",
+        "Audit a family message for jargon, idioms and hidden assumptions",
+    ),
+    "difficult-conversations": (
+        "Prepare a calm conversation about a repeated classroom concern",
+        "Create a fact-based communication plan for disagreement with a family",
+    ),
+}
+
+REPORT_COMMENT_TITLES = {
+    "comment-banks": (
+        "Build an evidence-safe comment bank",
+        "Create comment starters for four levels of demonstrated mastery",
+        "Build modular strength, evidence and next-step sentence parts",
+        "Create a comment bank that avoids fixed-ability labels",
+        "Write concise comments within a strict character limit",
+        "Create neutral pronoun variants without changing the evidence",
+        "Build a comment bank with visible placeholders for supporting evidence",
+        "Audit a comment bank for repetition, vagueness and invented claims",
+    ),
+    "strengths-and-next-steps": (
+        "Turn evidence into a balanced report comment",
+        "Write a strength statement tied to a specific learning objective",
+        "Convert an error pattern into one achievable next step",
+        "Build a balanced comment from assessment and classroom evidence",
+        "Write a comment when evidence is limited or inconsistent",
+        "Create a learner-friendly next step that families can understand",
+        "Add an instructional strategy without promising a future result",
+        "Audit a report comment using a sentence-by-sentence fact trace",
+    ),
+    "subject-specific-comments": (
+        "Write a mathematics comment about concepts, procedures and reasoning",
+        "Write a science comment about investigation, evidence and explanation",
+        "Write an English language arts comment about reading and writing evidence",
+        "Write a social studies comment about sources, claims and perspective",
+        "Write an arts comment about process, technique and reflection",
+        "Write a physical education comment using observable skill evidence",
+        "Audit subject-specific terminology for accuracy and family clarity",
+    ),
+    "bulk-drafts-from-fictional-evidence": (
+        "Create distinct comment drafts from a fictional evidence table",
+        "Generate bulk comments without mixing one learner's evidence with another",
+        "Vary sentence structure while preserving every supplied fact",
+        "Audit a bulk comment set for duplicates, contradictions and evidence leakage",
+    ),
+    "tone-and-rewriting": (
+        "Rewrite a comment for clarity and fairness",
+        "Replace harsh or vague judgments with verified learning evidence",
+        "Shorten a report comment without removing the material concern",
+    ),
+}
+
+CLASSROOM_MANAGEMENT_TITLES = {
+    "routines-and-transitions": (
+        "Design and teach a classroom routine",
+        "Teach an efficient entry routine with an immediate learning start",
+        "Create a calm transition between whole-group and independent work",
+        "Build a materials routine that reduces waiting and lost equipment",
+        "Plan a dismissal routine that protects safety and learning time",
+        "Audit a routine using timing, participation and independence evidence",
+    ),
+    "behaviour-reset-support": (
+        "Create a brief private behaviour-reset conversation",
+        "Write neutral redirection language for a recurring disruption",
+        "Plan a re-entry routine after a learner leaves the classroom",
+        "Create a reset menu that preserves dignity and instructional access",
+        "Audit a response plan for escalation, shame and inconsistent expectations",
+    ),
+    "restorative-conversations": (
+        "Prepare a restorative conversation",
+        "Create questions that explore impact, needs and possible repair",
+        "Build a voluntary repair agreement with a scheduled follow-up",
+        "Audit a restorative script for coercion, blame and safeguarding limits",
+    ),
+    "social-emotional-learning": (
+        "Create an age-appropriate lesson on naming and managing emotions",
+        "Teach a practical strategy for pausing before responding",
+        "Build an empathy activity without requiring personal disclosure",
+        "Audit an SEL activity for privacy, culture and clinical overreach",
+    ),
+    "morning-meetings": (
+        "Plan a 10-minute morning meeting with a clear community goal",
+        "Create inclusive check-in options that do not force disclosure",
+        "Build a weekly morning-meeting sequence without repetitive prompts",
+    ),
+    "seating-and-grouping": (
+        "Create a seating plan from classroom access and learning constraints",
+        "Build a transparent regrouping plan using temporary learning evidence",
+        "Audit seating and grouping decisions for labels, isolation and accessibility",
+    ),
+}
+
+TEACHER_ADMIN_TITLES = {
+    "staff-emails": (
+        "Write a concise staff email with one clear action",
+        "Turn rough notes into a professional colleague update",
+        "Draft a meeting request with purpose, preparation and time limit",
+        "Write a follow-up email that separates decisions from open questions",
+        "Audit a staff email for tone, recipients, dates and unnecessary detail",
+    ),
+    "agendas-and-minutes": (
+        "Turn notes into accountable meeting minutes",
+        "Build a timed agenda around decisions that must be made",
+        "Convert discussion notes into decisions, actions and a parking lot",
+        "Audit meeting minutes for invented consensus, owners or deadlines",
+    ),
+    "professional-goals": (
+        "Draft a measurable professional growth goal",
+        "Turn baseline evidence into a realistic semester action plan",
+        "Create leading and outcome indicators for a teaching goal",
+        "Build midpoint decision rules for revising a professional goal",
+    ),
+    "observation-reflections": (
+        "Write an evidence-based reflection after a classroom observation",
+        "Separate observed events, interpretation and next action",
+        "Turn observer feedback into one measurable instructional experiment",
+    ),
+    "field-trip-logistics": (
+        "Build a field-trip planning checklist from official requirements",
+        "Create a trip-day schedule with owners, counts and contingency fields",
+        "Audit a field-trip draft for permissions, access, safety and unknowns",
+    ),
+    "clubs-and-duty-plans": (
+        "Create a club launch plan with purpose, routines and supervision fields",
+        "Build a fair duty rota from supplied availability and policy",
+        "Audit a club or duty plan for gaps, overload and unclear responsibility",
+    ),
+    "grants-and-proposals": (
+        "Turn a verified classroom need into a concise proposal outline",
+        "Build a grant budget narrative from supplied costs and restrictions",
+        "Audit a proposal for unsupported claims, missing evidence and compliance",
+    ),
+}
+
+SUBJECT_DEEP_DIVE_TITLES = {
+    "mathematics": (
+        "Create a concept-first mathematics explanation",
+        "Connect concrete, visual and symbolic mathematics representations",
+        "Build a mathematics error-analysis lesson with verified solutions",
+    ),
+    "english-language-arts": (
+        "Build a close-reading lesson from an authorized supplied text",
+        "Create an evidence-based writing task with a clear mentor model",
+        "Design a revision lesson that separates ideas, organization and conventions",
+    ),
+    "science": (
+        "Design an evidence-based science investigation",
+        "Build a claim-evidence-reasoning task from supplied observations",
+        "Audit a science explanation for causation, uncertainty and safety",
+    ),
+    "social-studies": (
+        "Create a source-analysis lesson using origin, purpose and context",
+        "Build a corroboration task with multiple supplied perspectives",
+        "Design a historical claim task that distinguishes evidence from interpretation",
+    ),
+    "arts-physical-education-and-electives": (
+        "Create a skill-development lesson with modelling, practice and reflection",
+        "Adapt a performance task for space, equipment and physical access",
+        "Build an observable process rubric for an arts, PE or elective task",
+    ),
+}
+
+TITLE_CATALOGS = {
+    "01-lesson-planning": LESSON_PLANNING_TITLES,
+    "02-worksheets-activities": WORKSHEET_ACTIVITY_TITLES,
+    "03-assessment-rubrics-quizzes": ASSESSMENT_TITLES,
+    "04-differentiation-mixed-ability": DIFFERENTIATION_TITLES,
+    "05-parent-communication": PARENT_COMMUNICATION_TITLES,
+    "06-report-card-comments": REPORT_COMMENT_TITLES,
+    "07-classroom-management-sel": CLASSROOM_MANAGEMENT_TITLES,
+    "08-teacher-admin-paperwork": TEACHER_ADMIN_TITLES,
+    "09-subject-deep-dives": SUBJECT_DEEP_DIVE_TITLES,
+}
 
 def slug(title: str) -> str:
     return "-".join("".join(ch.lower() if ch.isalnum() else " " for ch in title).split())
 
 
-def prompt_markdown(p: Prompt) -> str:
-    inputs = "\n".join(f"- `[{value}]`" for value in p.inputs)
-    sample = SAMPLE_OUTPUTS[p.folder] if p.sample else "Not included in this edition."
-    prompt_text = f"""You are an experienced K-12 instructional planning assistant.\n\nTeacher inputs:\n{inputs}\n\nTask:\n{p.deliverable}\n\nRequired output:\n{p.sections}\n\nRules:\n- Use only the facts supplied. Mark missing essentials as [NEEDS TEACHER INPUT].\n- Do not include identifiable student data or infer disability, motivation, family circumstances, or diagnosis.\n- Keep the named grade, time, materials, objective, and policy constraints unchanged.\n- Make student-facing language clear and age-appropriate.\n- Check subject accuracy, feasibility, accessibility, and alignment before the final answer.\n- End with a short TEACHER VERIFICATION checklist."""
-    return f'''---
-{{
-  "id": "{p.id}",
-  "slug": "{slug(p.title)}",
-  "chapter": "{p.folder.split('-', 1)[1]}",
-  "subtopic": "{p.subtopic}",
-  "title": "{p.title}",
-  "grade_bands": ["{p.grades}"],
-  "subjects": ["{p.subjects}"],
-  "sensitivity": "standard",
-  "sample_output": {str(p.sample).lower()},
-  "review_status": "draft",
-  "content_version": 1
-}}
----
-
-# {p.title}
-
-## Use this when
-
-{p.use}
-
-## Teacher inputs
-
-{inputs}
-
-## Copy-paste prompt
-
-```text
-{prompt_text}
-```
-
-## Fictional test case
-
-{p.test_case}
-
-## Sample output
-
-{sample}
-
-## Teacher verification checklist
-
-- [ ] Every fact can be traced to the teacher inputs.
-- [ ] Content, answers and examples are accurate.
-- [ ] Timing, materials and difficulty are feasible.
-- [ ] Accessibility supports preserve the learning goal.
-- [ ] A teacher reviews the result before classroom or family use.
-
-## Editorial notes
-
-Full-book content draft. Final editorial review is pending.
-'''
-
-
-def workflow_markdown(item: tuple[str, str, str, str, tuple[str, ...]]) -> str:
-    wid, subtopic, title, purpose, steps = item
-    rendered_steps = "\n".join(f"{i}. {step}" for i, step in enumerate(steps, 1))
-    return f'''---
-{{
-  "id": "{wid}",
-  "slug": "{slug(title)}",
-  "chapter": "multi-step-workflows",
-  "subtopic": "{subtopic}",
-  "title": "{title}",
-  "sensitivity": "standard",
-  "review_status": "draft",
-  "content_version": 1
-}}
----
-
-# {title}
-
-## Outcome
-
-{purpose}
-
-## Teacher inputs
-
-- `[VERBATIM_SOURCE_MATERIAL]`
-- `[GRADE_SUBJECT_AND_CONTEXT]`
-- `[TIME_MATERIALS_AND_POLICY_CONSTRAINTS]`
-- `[NON_IDENTIFYING_EVIDENCE]`
-
-## Workflow
-
-{rendered_steps}
-
-At every step, paste the previous **reviewed** output into the next prompt. Correct errors
-before continuing; never allow the model to silently replace supplied facts.
-
-## Copy-paste controller prompt
-
-```text
-Guide me through this workflow one step at a time. At each step: state the required
-inputs, produce only the requested artifact, list uncertainties, and stop for teacher
-review. Do not continue until I reply APPROVED or provide corrections. Preserve source
-wording where requested, never invent school policy or student facts, and finish with
-an alignment, privacy, accuracy and feasibility audit.
-```
-
-## Fictional end-to-end example
-
-Context: Grade 7 science, a fictional ecosystem unit, 45-minute lessons, paper-based
-materials, and anonymous evidence only. The teacher supplies the objective and constraints,
-reviews each intermediate artifact, corrects any science or timing issue, and approves the
-final pack only after checking alignment, accessibility, privacy and school policy.
-
-## Review checklist
-
-- [ ] Every stage uses the previous reviewed output.
-- [ ] Unknown facts remain visible placeholders.
-- [ ] No identifiable student information is present.
-- [ ] Final artifacts align to one another and to the supplied goal.
-- [ ] A qualified teacher has approved the current content fingerprint.
-'''
+WORKFLOW_EXAMPLES = {
+    "standard-to-complete-unit": "An entirely fictional Grade 7 ecosystem standard becomes four mastery criteria, a verified model-and-explanation assessment, six sequenced lessons, three hinge checks and a final alignment table.",
+    "mixed-ability-lesson": "An entirely fictional fraction-comparison lesson keeps one justification goal while offering fraction strips, a common-denominator route and a transfer extension; all learners submit the same core evidence.",
+    "incident-to-parent-conversation": "An invented classroom interruption is recorded with role labels only. The teacher separates what was observed from what was reported, follows school procedure and drafts a neutral family check-in with unresolved facts marked.",
+    "scores-to-report-comments": "A fictional table uses Learner A, B and C labels. Each draft traces to the correct objectives and invented evidence; the final export contains placeholders so names are added only inside the authorized school system.",
+    "standard-to-assessment": "A fictional Grade 8 equation standard is unpacked into a blueprint, eight items, worked solutions, diagnostic distractors and a three-level decision rule; every equation is solved independently before approval.",
+    "emergency-substitute-pack": "A fictional Grade 4 map-skills day uses atlases, paper and a board. The pack contains exact directions, an independent task, key, early-finisher option and a no-atlas contingency, with local procedures left as placeholders.",
+    "project-launch-pack": "A fictional Grade 6 water-use project becomes a driving question, three milestones, individual reflection evidence, a content-focused rubric and a private in-class audience option.",
+    "parent-conference-pack": "Fictional Learner A has invented mathematics evidence. A 15-minute agenda balances strength, priority and family perspective, then records two agreed actions with owners, dates and follow-up evidence.",
+    "intervention-plan-draft": "Anonymous fictional exit-ticket responses reveal one narrow fraction misconception. The draft specifies a two-week teaching strategy, twice-weekly checks and decision thresholds, without diagnosing why learners made the error.",
+    "field-trip-pack": "A fictional museum visit uses placeholders for all official details. Confirmed requirements feed one timeline, group-count sheet, adult-role table and family checklist; missing approval and medical procedures remain flagged.",
+    "weekly-admin-pack": "An invented weekly note list is sorted into four priorities, two meetings and three communications. Conflicting dates are flagged rather than resolved by guessing, and each action receives an owner and evidence of completion.",
+    "class-data-reflection": "A fictional anonymous response set is checked for missing entries, summarized by objective and grouped by misconception. The teacher creates targeted next tasks and one common reassessment without assigning fixed learner labels.",
+}
 
 
 def generated_prompt(
@@ -411,7 +901,10 @@ def generated_prompt(
     display = subtopic.replace("-and-", " & ").replace("-", " ")
     action, qualifier = VARIANTS[(ordinal - 1) % len(VARIANTS)]
     product, sections = CHAPTER_GUIDANCE[folder]
-    title = f"{action} {display} {qualifier}"
+    if folder in TITLE_CATALOGS:
+        title = TITLE_CATALOGS[folder][subtopic][ordinal - 1]
+    else:
+        title = f"{action} {display} {qualifier}"
     return Prompt(
         pid,
         folder,
@@ -427,7 +920,7 @@ def generated_prompt(
             "AVAILABLE_MATERIALS_OR_SUPPORTS",
             "SCHOOL_POLICY_OR_ACCESSIBILITY_REQUIREMENTS",
         ),
-        f"Create {product} for the supplied {display} task.",
+        f"Complete this teacher task: {title}. Create {product} using only the supplied inputs.",
         f"Return: {sections}.",
         f"Fictional case: [GRADE], [SUBJECT], {display}; the teacher supplies the exact goal, constraints, resources and anonymous evidence before use.",
     )
@@ -457,28 +950,7 @@ def all_prompts() -> tuple[Prompt, ...]:
 
 
 def all_workflows() -> tuple[tuple[str, str, str, str, tuple[str, ...]], ...]:
-    existing = list(WORKFLOWS)
-    used = {w[1] for w in existing}
-    manifest = json.loads((BOOK / "manifest.json").read_text(encoding="utf-8"))
-    workflow_subtopics = manifest["chapters"][9]["subtopics"]
-    next_id = len(existing) + 1
-    for subtopic in workflow_subtopics:
-        if subtopic in used:
-            continue
-        title = WORKFLOW_TITLES[subtopic]
-        existing.append((
-            f"WF-{next_id:03d}", subtopic, title,
-            f"Produce a reviewed, internally consistent {title.lower()} from supplied source material.",
-            (
-                "Collect the exact source material, goal, constraints and required policy; flag gaps.",
-                "Organize verified facts and create the first artifact; teacher reviews accuracy.",
-                "Create the connected supporting artifact from the approved output only.",
-                "Check alignment, feasibility, accessibility, tone and privacy; revise identified issues.",
-                "Assemble the final pack with action owners, dates and unknowns visibly marked.",
-            ),
-        ))
-        next_id += 1
-    return tuple(existing)
+    return WORKFLOWS
 
 
 def main() -> None:
@@ -505,8 +977,33 @@ def main() -> None:
         target = workflow_dir / f"{workflow[0].lower()}-{slug(workflow[2])}.md"
         target.write_text(workflow_markdown(workflow), encoding="utf-8")
 
+    manuscript = BOOK / "manuscript" / "chapters"
+    manuscript.mkdir(parents=True, exist_ok=True)
+    for folder in PREFIXES:
+        source_dir = BOOK / "chapters" / folder / "prompts"
+        intro = (BOOK / "chapters" / folder / "chapter.md").read_text(encoding="utf-8").rstrip()
+        parts = [intro, "\n---\n"]
+        for source in sorted(source_dir.glob("*.md")):
+            parts.append(source.read_text(encoding="utf-8").strip())
+            parts.append("\n---\n")
+        (manuscript / f"{folder}.md").write_text("\n\n".join(parts).rstrip() + "\n", encoding="utf-8")
+
+    workflow_intro = (BOOK / "chapters" / "10-multi-step-workflows" / "chapter.md").read_text(encoding="utf-8").rstrip()
+    workflow_parts = [workflow_intro, "\n---\n"]
+    for source in sorted(workflow_dir.glob("*.md")):
+        workflow_parts.append(source.read_text(encoding="utf-8").strip())
+        workflow_parts.append("\n---\n")
+    (manuscript / "10-multi-step-workflows.md").write_text(
+        "\n\n".join(workflow_parts).rstrip() + "\n", encoding="utf-8"
+    )
+
     print(f"Built {len(prompts)} prompts and {len(workflows)} workflows.")
 
+
+try:
+    from .editorial_engine import prompt_markdown, workflow_markdown
+except ImportError:
+    from editorial_engine import prompt_markdown, workflow_markdown
 
 if __name__ == "__main__":
     main()

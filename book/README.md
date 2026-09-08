@@ -45,3 +45,6 @@ records or unlicensed source material anywhere in this public repository.
 Run `python toolkit/build_full_content.py` to deterministically rebuild the complete
 300-prompt, 12-workflow source, then `python toolkit/run.py content-check`. There is no
 separate 30-prompt beta gate. Every item remains `draft` until final editorial review.
+The same command also writes ten review-friendly compiled chapter files under
+`book/manuscript/chapters/`; these mirror the individual source files and are convenient
+for GitHub review, export and final layout.

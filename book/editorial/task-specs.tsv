@@ -1,0 +1,301 @@
+ID|Task-specific required inputs|Task-specific design and acceptance criteria
+LP-001|MATERIALS; OBJECTIVE; LESSON_MINUTES|Map each lesson segment to observable evidence. Include actual exit questions and answers, not just an instruction to write them.
+LP-002|LESSON_COUNT; FINAL_PERFORMANCE; PREREQUISITES|Plan the final evidence first, then sequence prerequisites. Explain why each lesson is needed; mark optional extensions separately.
+LP-003|EXACT_STANDARD; LESSON_COUNT|Quote the standard unchanged. Separate its verbs, content and conditions, and connect each objective to an observable response.
+LP-004|PRIOR_CONCEPT; TARGET_CONCEPT; MINUTES_PER_CHECK|Use different questions before and after instruction while measuring the same concept. Explain what can and cannot be inferred about progress.
+LP-005|ESTABLISHED_ROUTINES; AVAILABLE_MATERIALS; LOCAL_SAFETY_PROCEDURES|Write a substitute script, independent task and answer key. Leave attendance and emergency procedures for local completion; never invent them.
+LP-006|PRIOR_EXAMPLES; TARGET_CONCEPT; KNOWN_CONFUSION|Sequence examples and non-examples before naming the concept. Include a question that tests the boundary of the new idea.
+LP-007|OBSERVABLE_PHENOMENON; AVAILABLE_EVIDENCE|Start with observation before explanation. Compare two competing explanations and identify evidence that would distinguish them; allow uncertainty.
+LP-008|TARGET_PROCEDURE; PREREQUISITE_CHECK|Write one complete think-aloud, guided practice and independent item. Use demonstrated readiness, not elapsed time alone, to release support.
+LP-009|DISCUSSION_QUESTION; AUTHORIZED_SOURCES; PARTICIPATION_OPTIONS|Allow silent preparation and written participation. Require a claim with evidence and a response to a counterargument, not compulsory public speaking.
+LP-010|BASIC_MATERIALS; NO_TECH_CONSTRAINT|Use only the listed physical materials. Replace every digital action with a concrete classroom action and a collectible evidence product.
+LP-011|AUTHORIZED_TEXT; READING_GOAL; ESSENTIAL_VOCABULARY|Anchor questions to supplied passages. Distinguish literal evidence from interpretation and do not invent quotations or page references.
+LP-012|APPROVED_PROCEDURE; VARIABLES; SAFETY_LIMITS|Identify changed, measured and controlled variables; include units and repeated measurements. Stop if the proposed procedure exceeds supplied safety limits.
+LP-013|PROBLEM_CONTEXT; VERIFIED_SOLUTION; REPRESENTATIONS|Offer two valid solution routes and compare their assumptions. Verify calculations and explain why a tempting incorrect route fails.
+LP-014|ORIGINAL_PLAN; ESSENTIAL_EVIDENCE; THIRTY_MINUTE_LIMIT|Produce a 30-minute timeline whose durations sum correctly. State what is removed and why the core assessment remains valid.
+LP-015|ORIGINAL_PLAN; NINETY_MINUTE_LIMIT; BREAK_REQUIREMENTS|Use the extra time for practice, feedback and transfer. Include transitions and a break where required, not a longer lecture by default.
+LP-016|DRAFT_LESSON; OBJECTIVE; ASSESSMENT|Return keep/change/remove decisions with evidence of alignment. Repair only mismatched segments and show the revised assessment.
+LP-017|MASTERY_TASK; KNOWN_PREREQUISITES|Create prerequisite dependencies, a diagnostic for each and a short repair activity. Label unverified prerequisite assumptions for teacher confirmation.
+LP-018|FINAL_OBJECTIVE; AUTHENTIC_CONTEXT; PRODUCT_LIMITS|Specify the final task, criteria and acceptable evidence before activities. Separate subject learning from presentation or decoration.
+LP-019|APPROVED_ASSESSMENT; TEACHING_DAYS|Map assessment demands backward into daily learning. Flag objectives not represented in the assessment instead of silently adding scored content.
+LP-020|UNIT_SEQUENCE; CHECKPOINT_EVIDENCE; RESPONSE_OPTIONS|Place checkpoints before dependent learning. For each response pattern propose a teacher-adjustable reteaching decision, not a universal percentage rule.
+LP-021|UNIT_MAP; STANDARDS; ASSESSMENTS|List uncovered objectives, repeated demands and unsupported jumps. Explain when repetition is purposeful retrieval rather than unnecessary duplication.
+LP-022|ORIGINAL_UNIT; REMAINING_DAYS; NONNEGOTIABLE_GOALS|Rank essential and optional learning, then propose cuts. State explicitly which goals can no longer be claimed as taught or assessed.
+LP-023|COMPLETED_UNIT; TRANSFER_CONTEXT|Create a new-context problem plus reflection questions linking strategy to evidence. Do not treat confidence ratings as proof of mastery.
+LP-024|VERBATIM_STANDARD|Separate knowledge, performance and reasoning demands. Explain overlaps instead of forcing every phrase into only one category.
+LP-025|TECHNICAL_OBJECTIVE; LEARNER_AGE|Write an accessible I-can statement and explain any technical term that must remain. Preserve the original cognitive demand.
+LP-026|OBJECTIVE; EXEMPLAR_OR_CRITERIA|Produce observable success criteria, a matching example and a near miss. Avoid vague descriptors such as good or excellent.
+LP-027|ACTIVITY; EXACT_STANDARD|Return evidence-for/evidence-against alignment and a minimal repair. Do not declare alignment from shared vocabulary alone.
+LP-028|OBJECTIVE_LIST; PRIOR_LEARNING|Order objectives by genuine prerequisite dependencies. Explain which can run in parallel and flag uncertain dependencies.
+LP-029|GRADE_LEVEL_TARGET; CURRENT_EVIDENCE|Identify missing prerequisite moves and just-in-time support while preserving access to the target. Avoid a permanent remedial track.
+LP-030|OBJECTIVE; ACCEPTABLE_RESPONSE_MODES|Write examples of secure, partial and insufficient evidence with reasons. Separate what was observed from what remains unmeasured.
+LP-031|PREVIOUSLY_TAUGHT_CONTENT; FIVE_MINUTE_LIMIT|Use no more than three short diagnostic tasks and provide the key. State how each response changes the opening teacher move.
+LP-032|ONE_MISCONCEPTION; RESPONSE_METHOD|Write one hinge item with mutually distinguishable options. Map each wrong option to a tentative explanation and a follow-up question.
+LP-033|OBJECTIVE; EXIT_MINUTES|Give an exit item and three annotated response examples. Define response bands by evidence, not learner labels.
+LP-034|YESTERDAY_AGGREGATE_PATTERNS; TODAY_OBJECTIVE|Choose an opening that addresses the observed error. Include one new check to see whether the adjustment helped.
+LP-035|TAUGHT_CONTENT; LAST_PRACTISED_DATES|Select retrieval questions across previous learning and supply corrective feedback. Do not introduce new content or grade forgetting as effort.
+LP-036|TAUGHT_EXAMPLE; NEW_CONTEXT|Change the surface context while preserving the underlying principle. Explain why successful transfer needs reasoning rather than copied wording.
+LP-037|EXISTING_EXIT_TICKET; OBJECTIVE; TIME_LIMIT|Audit every item for ambiguity, reading load and decision value. Return a shortened corrected version and answer guide.
+LP-038|SEGMENTS; TOTAL_MINUTES; TRANSITION_COSTS|Calculate a complete timeline including distribution and collection. Provide a buffer and a final total equal to the available time.
+LP-039|DRAFT_TIMELINE; CLASSROOM_CONSTRAINTS|Identify the three most likely bottlenecks with observable warning signs. Estimate ranges, not falsely precise guaranteed durations.
+LP-040|ADJACENT_SEGMENTS; ROUTINE_SIGNAL|Write short transition scripts naming movement, materials and first action. Include a non-auditory cue where needed.
+LP-041|DISCUSSION_GOAL; TIME_REMAINING; ESSENTIAL_EXIT|Give a respectful closing script and parking-lot method. Preserve the final evidence task instead of letting discussion consume it.
+LP-042|CORE_TASK; EARLY_FINISHER_TIME|Create an optional depth challenge linked to the objective, with self-check guidance. Avoid more of the same work as a penalty.
+LP-043|REGULAR_MINUTES; SHORTENED_MINUTES; CORE_EVIDENCE|Return two complete schedules with matching core learning evidence. State precisely which optional activity changes.
+LP-044|ROOM_MATERIALS; NO_PRINT_LIMIT; OBJECTIVE|Design board-based directions and a paper response task requiring no new copies. Include collection and an answer guide.
+LP-045|SUBSTITUTE_EXPERTISE; STUDENT_TASK; LOCAL_ROUTINES|Write verbatim directions and worked answers a non-specialist can use. Escalate unknown content or procedures rather than requiring improvisation.
+LP-046|DIGITAL_LESSON; OFFLINE_MATERIALS|List each digital dependency and its offline replacement. Preserve the objective and name any evidence that cannot be collected offline.
+LP-047|MISSED_LEARNING; AVAILABLE_HOME_RESOURCES|Create a short self-contained catch-up sequence with a model, practice and return check. Do not assume adult help or internet access.
+LP-048|SUBSTITUTE_DRAFT; VERIFIED_LOCAL_PROCEDURES|Audit supervision, movement, collection and emergency placeholders. Block use until critical safety details are completed locally.
+LP-049|PROJECT_GOAL; AUDIENCE; PRODUCT|Write a driving question, launch scenario and final evidence criteria. Distinguish an authentic problem from merely decorating a poster.
+LP-050|TWO_SUBJECT_OBJECTIVES; SHARED_PROBLEM|Map each subject to distinct evidence within one project. Flag decorative connections that do not assess either subject's learning.
+LP-051|PROJECT_DURATION; FINAL_PRODUCT; CHECKPOINTS|Build milestones with dependencies and recovery actions. Include teacher feedback before irreversible final-production work.
+LP-052|GROUP_PRODUCT; INDIVIDUAL_OBJECTIVES|Specify individual reasoning records, rotating roles and a brief independent check. Do not infer individual mastery from the group product.
+LP-053|PROJECT_OBJECTIVES; SCORING_WEIGHTS|Create criteria that measure content and reasoning. Score decoration only when design itself is an explicit taught objective.
+LP-054|PROPOSED_AUDIENCE; SHARING_POLICY|Offer private in-class and permission-dependent public routes with equal academic credit. Exclude identifiable work from public AI prompts.
+LP-055|LESSON_EVIDENCE; NEXT_DAY_TIME|Separate what worked, what remains uncertain and one priority adjustment. Pair the adjustment with a new evidence check.
+LP-056|OBSERVATION_NOTES; INTENDED_GOAL|Write observation, interpretation and next action separately. Avoid attributing outcomes to motivation without supporting evidence.
+LP-057|LESSON_ARTIFACTS; RESPONSE_PATTERNS|Return keep/change/investigate decisions, each tied to a supplied observation. Keep unresolved hypotheses visible.
+LP-058|COMMON_ERROR; ORIGINAL_EXPLANATION|Offer an alternative representation and a contrasting example. Recheck the misconception without repeating the identical assessment item.
+LP-059|THREE_RESPONSE_PATTERNS; SUPPORT_TIME|Create one brief follow-up per pattern and a common reassessment. Group temporarily by evidence, not presumed ability.
+LP-060|INTENDED_PLAN; ACTUAL_EVIDENCE|Compare intended and observed learning side by side. Distinguish implementation differences from evidence of student understanding.
+WA-001|ITEM_COUNT; SKILL; PRINT_LIMIT|Sequence model, application and reasoning items. Include complete worked answers and leave usable writing space.
+WA-002|CLASS_SIZE; ROOM; TOTAL_TIME|Write four distinct station cards, materials per group and a rotation table. Check that all groups can finish within the time.
+WA-003|GROUP_SIZE; SOURCES; FINAL_PRODUCT|Give each role meaningful reasoning work and require an independent response. Supply a procedure for evidence-based disagreement.
+WA-004|QUESTION_COUNT; TAUGHT_SKILLS; SCORING|Produce actual questions, verified answers and a no-speed scoring alternative. Record individual understanding separately from team points.
+WA-005|MODEL_ITEM; SUPPORT_FADE_STAGES|Provide one worked item, two partially completed items and independent items. Explain exactly which support disappears at each stage.
+WA-006|MISCONCEPTION; CORRECT_PRINCIPLE|Start with a tempting wrong response, ask learners to explain it, then contrast a correct example and a fresh diagnostic.
+WA-007|TAUGHT_STRATEGIES; ITEM_COUNT|Interleave problems so learners choose a strategy. Require a reason for the choice and avoid headings that reveal the method.
+WA-008|PREVIOUSLY_TAUGHT_SKILLS; TIME_LIMIT|Use short retrieval items followed by a separate feedback key. Keep first attempts visible before correction.
+WA-009|REALISTIC_CONTEXT; VERIFIED_QUANTITIES|Build applications with sufficient data and correct units. Label invented practice contexts and avoid pretending they are measured classroom results.
+WA-010|EXISTING_WORKSHEET; PAPER_SIZE|Return a print-layout specification with grayscale-safe cues, legible type and writing space. Never use colour as the only meaning carrier.
+WA-011|VERIFIED_PROBLEMS; TARGET_ERRORS|Create deliberately incorrect fictional solutions, clearly labelled. Ask where reasoning first fails and provide corrected solutions separately.
+WA-012|OBJECTIVE; ITEM_COUNT_PER_SECTION|Divide work into foundation, application and reasoning without equating longer text with greater difficulty. Verify every answer.
+WA-013|DRAFT_WORKSHEET; OBJECTIVE|Identify repetitive or ambiguous items by number. Explain the problem and provide replacements that add distinct evidence.
+WA-014|OBJECTIVE; SOURCES; MATERIALS|Use four modes with the same learning goal. Require a meaningful product at every station rather than an activity checklist.
+WA-015|CLASS_SIZE; ROOM_LAYOUT; MOVEMENT_LIMITS|Calculate group sizes, transitions and bottlenecks. Offer materials-rotate/student-stay as an alternative for limited space.
+WA-016|STATION_TASKS; VERIFIED_KEYS|Separate task cards from self-check cards. Add a retry step and an escalation signal when the key does not resolve confusion.
+WA-017|NOISE_LIMIT; FOUR_TASKS|Specify one silent accessible station and three low-volume collaborative stations. Provide equivalent non-speaking participation routes.
+WA-018|COMMON_OBJECTIVE; OBSERVED_BARRIERS|Adapt access at stations without changing the assessed construct. State what remains identical across routes.
+WA-019|EXIT_PATTERNS; RETEACH_MINUTES|Choose one misconception for the teacher station, model it and check again. Give other groups independent tasks with answer guidance.
+WA-020|STATION_CARDS; ROOM_CONSTRAINTS|Audit instructions, timing, materials and evidence collection by station. Return a prioritized correction table, not a new unrelated activity.
+WA-021|SOURCE_PARTS; GROUP_SIZE|Assign complementary evidence to expert groups, then require synthesis in home groups. Provide missing-reader and absence contingencies.
+WA-022|INVESTIGATION_QUESTION; ROLE_COUNT|Rotate predictor, evidence-checker, challenger and recorder roles. Require each learner to explain one inference independently.
+WA-023|COMPETING_CLAIMS; SOURCES|Define consensus as a reasoned position with dissent recorded. Do not require agreement when evidence remains genuinely inconclusive.
+WA-024|INDIVIDUAL_WORKSHEET; COLLABORATION_GOAL|Choose items that benefit from comparing methods. Add individual preparation, joint reasoning and an independent exit response.
+WA-025|GROUP_TASK; ACCESS_OPTIONS|Audit whose thinking is visible and who can be excluded. Repair roles and evidence collection without rewarding talk volume.
+WA-026|TAUGHT_CONTENT; BOARD_COUNT|Use simultaneous responses after sufficient thinking time. Score explanation or revision, not the fastest raised board.
+WA-027|TEAM_SIZE; QUESTIONS|Collect an individual response before team discussion. Keep team scoring separate from the teacher's learning evidence.
+WA-028|MISCONCEPTIONS; ITEM_COUNT|Write plausible distractors tied to known errors, then reveal explanations after commitment. Treat choices as hypotheses, not diagnoses.
+WA-029|PAPER_LIMIT; QUESTION_COUNT|Produce cut-apart cards and a separate verified key. Include reusable rules with no equipment beyond the stated supplies.
+WA-030|GAME_RULES; ITEMS; SCORING|Check ambiguity, luck, speed advantage and access. Revise scoring so the resulting teacher data has instructional meaning.
+WA-031|HOMEWORK_PURPOSE; TIME_BUDGET|Write a short assignment with estimated completion range and a stop rule. State what learners should do when stuck without adult help.
+WA-032|OLD_SKILLS; CURRENT_SKILL|Mix a small retrieval set with current practice and identify each purpose in the teacher key, not in strategy-revealing student labels.
+WA-033|ONLINE_ASSIGNMENT; OFFLINE_RESOURCES|Create an equivalent offline route using available materials. Keep learning demand comparable and avoid requiring printing at home.
+WA-034|HOMEWORK_TASK; FAMILY_LANGUAGE|Explain the purpose and logistics in plain language. Tell families encouragement is enough; do not require them to teach new content.
+WA-035|HOMEWORK_DRAFT; TIME_LIMIT|Check access assumptions, length and every answer. Offer a shorter essential set without hiding which learning evidence is reduced.
+WA-036|OBJECTIVE; DELIVERABLE; DEADLINE|Write a student-facing brief with product, criteria, materials and submission route. Refer to the planning chapter for teacher sequencing.
+WA-037|PROJECT_BRIEF; MILESTONES|Create a student checklist with due dates only when supplied. Separate draft feedback, revision and final submission requirements.
+WA-038|COMMON_CRITERIA; CHOICE_OPTIONS|Compare options for time, resources and intellectual demand. Repair choices that buy higher scores through costly materials.
+WA-039|GROUP_BRIEF; INDIVIDUAL_EVIDENCE|Add an individual explanation and role record to the student brief. Do not allocate marks solely from peer popularity ratings.
+WA-040|PROJECT_BRIEF; SHARING_RULES|Audit feasibility, copyright, public audience and accessibility. Return exact wording corrections plus unresolved authorization items.
+AS-001|OBJECTIVES; ITEM_COUNT; TIME|Build an assessment blueprint before items. Verify solutions and distinguish diagnostic classroom use from validated high-stakes measurement.
+AS-002|CONCEPT; KNOWN_ERRORS; RESPONSE_METHOD|Write concept-discriminating questions with distractor explanations. Offer adjustable next-step rules, not an evidence-free mastery cutoff.
+AS-003|TASK; CRITERIA; PERFORMANCE_LEVELS|Create observable descriptors for every cell, score calculation and two calibration samples. Avoid double penalties for one error.
+AS-004|TASK; CORRECT_ANSWER; ANONYMOUS_RESPONSES|Preserve response text and code only visible errors. State alternative explanations and the follow-up question needed before grouping.
+AS-005|RECALL_APPLICATION_REASONING_COUNTS|Allocate items to the supplied balance and explain each classification. Include a key and check total points and timing.
+AS-006|MISCONCEPTIONS; CHOICE_COUNT|Give one defensible correct answer per item and plausible distinct distractors. Avoid unintended grammar or option-length clues.
+AS-007|OBJECTIVE; POINTS; EXPECTED_REASONING|Write constructed-response items, worked answers and partial-credit rules. State acceptable alternative methods and boundary cases.
+AS-008|PREREQUISITES; GRADE_TARGETS|Keep prerequisite and target evidence separate in reporting. Do not convert a pre-assessment into a fixed ability label.
+AS-009|TAUGHT_UNITS; COVERAGE_WEIGHTS|Sample across the taught period according to explicit weights. Flag missing coverage rather than overusing recently taught material.
+AS-010|ORIGINAL_TEST; NEW_TIME_LIMIT|Remove redundant items while preserving essential coverage. State the resulting loss of precision instead of claiming unchanged reliability.
+AS-011|FORM_A; BLUEPRINT|Create Form B with matched content, format and estimated demand. Label equivalence provisional until checked with real response evidence.
+AS-012|TEST; KEY; OBJECTIVES|Independently solve each item, identify ambiguous keys and check point totals. Keep the original numbering in the correction log.
+AS-013|OBJECTIVE_LIST; WEIGHTS; ITEM_COUNT|Return a blueprint mapping every item slot to objective, demand, format and points. Flag objectives with no evidence.
+AS-014|CURRENT_CONCEPT; FIVE_MINUTES|Use a brief response plus reasoning probe and state immediate instructional choices. Avoid collecting more information than can be acted upon.
+AS-015|OBJECTIVE; TIME_LIMIT|Write one item with secure, partial and insufficient evidence examples. Focus on scoring interpretation; refer to LP-033 for lesson placement.
+AS-016|MISCONCEPTION_OPTIONS; RESPONSE_CHANNEL|Create a poll with one conceptual distinction per option. Follow uncertain patterns with an explanation request, not a learner diagnosis.
+AS-017|SKILL; MATERIALS|Ask for a visible model, calculation or arrangement simultaneously. Include what the teacher should notice and a private alternative response mode.
+AS-018|PRIOR_RESPONSE_PATTERNS; RETEACH_CONTENT|Write a fresh matched check that tests the same underlying misconception. Explain differences from the previous question.
+AS-019|TAUGHT_PRINCIPLE; NEW_CONTEXT|Require explanation of how the principle transfers. Include a near-transfer and a farther-transfer version with keys.
+AS-020|FORMATIVE_CHECK; AVAILABLE_ACTIONS|Audit whether each response produces a usable decision within the lesson. Remove reading complexity unrelated to the target.
+AS-021|CRITERIA; EXEMPLARS|Write four evidence-based descriptors per criterion. Ensure adjacent levels are distinguishable without words like often or excellent alone.
+AS-022|OBJECTIVE; TASK|Derive criteria from learning demands, not available rubric templates. Show the objective-to-criterion mapping and remove irrelevant traits.
+AS-023|SUCCESS_CRITERIA; FEEDBACK_SPACE|Create a single-point rubric with target descriptors and separate evidence below/beyond target. Do not disguise it as a four-level scale.
+AS-024|GROUP_TASK; INDIVIDUAL_TARGETS|Separate collaboration-process evidence from individual subject mastery. Make each score traceable to the appropriate source.
+AS-025|VAGUE_RUBRIC|Replace vague cells with observable indicators while preserving the intended construct. Flag criteria that cannot be fairly observed.
+AS-026|RUBRIC; FICTIONAL_SAMPLES|Score each sample criterion by criterion, cite evidence and show a borderline case. Ask reviewers to resolve disagreements before live scoring.
+AS-027|RUBRIC; ACCESS_REQUIREMENTS|Check double penalties, language bias and irrelevant presentation demands. Propose narrowly targeted corrections, not an unexplained new rubric.
+AS-028|RESPONSES; CODING_SCHEME|Build a codebook with inclusion, exclusion and uncertain examples. Allow multiple codes and report denominators transparently.
+AS-029|ERROR_FREQUENCIES; GROUP_CAPACITY|Build temporary instructional groups linked to specific tasks. Include a regrouping trigger and an unclassified-evidence category.
+AS-030|WORK_SAMPLE; FOLLOWUP_OPPORTUNITY|Do not declare carelessness from one response. Offer competing explanations and a short think-aloud probe to distinguish them.
+AS-031|THREE_MISCONCEPTIONS; TEACHING_MINUTES|Write a different model-and-practice mini-task for each misconception. Finish with one common check of the shared goal.
+AS-032|ORIGINAL_TARGET; RETEACHING_RECORD|Create fresh aligned reassessment items with solutions. Keep conditions comparable and avoid interpreting one retry as permanent mastery.
+AS-033|VERIFIED_QUESTIONS; SCORING_RULES|Solve every question fully and include alternative valid methods. Flag underspecified questions rather than inventing missing conditions.
+AS-034|RESPONSE_PATTERNS; FEEDBACK_LENGTH|Write feedback naming evidence, one actionable move and a retry question. Avoid personality praise or a list of unrelated corrections.
+AS-035|QUESTIONS; ANSWER_KEY|Recompute solutions and totals independently, then list item-level discrepancies. Do not use the existing key as proof of correctness.
+AS-036|VERIFIED_SOLUTIONS; LEARNER_AGE|Explain why each step is valid and include a self-check. Preserve reasoning while simplifying vocabulary.
+AS-037|EXACT_STANDARDS; ASSESSMENT_EVIDENCE|Map only demonstrated evidence to standards. Mark partial, absent and incomparable evidence explicitly.
+AS-038|STANDARD; LOCAL_PROFICIENCY_POLICY|Draft observable levels consistent with the supplied policy. Do not invent official grading thresholds or claim a validated scale.
+AS-039|OBJECTIVE_LEVEL_DATA; MISSING_ENTRIES|Summarize each skill separately with denominators and missingness. Do not average unlike skills into a misleading mastery percentage.
+AS-040|GRADE_SUMMARY; EVIDENCE_RULES|Trace every proficiency claim to evidence and flag sparse or contradictory records. Leave final grades to the authorized teacher.
+DF-001|OBSERVED_BARRIER; UNCHANGED_GOAL; AVAILABLE_SUPPORT|Map a temporary scaffold to the observed barrier and define evidence for fading it. Do not replace the target reasoning with completed answers.
+DF-002|COMMON_GOAL; ACCESS_OPTIONS; CORE_EVIDENCE|Create three neutral-named routes with one common mastery check. Compare demand explicitly; do not assign routes by fixed ability labels.
+DF-003|CONTENT_GOAL; LANGUAGE_DEMANDS; KNOWN_LANGUAGE_RESOURCES|Separate content from language demands. Provide vocabulary and rehearsal support without inferring proficiency from a home language.
+DF-004|AUTHORIZED_TEXT; TARGET_CONSTRUCT|Keep original meaning visible beside an access adaptation. If reading itself is assessed, flag changes that would alter the construct.
+DF-005|BARRIER_OBSERVATION; SUPPORTS_TRIED|Distinguish observed obstacle from guessed cause. Propose one support, a trial duration and an observable independence check.
+DF-006|REASONING_STEPS; ORGANIZER_FORMAT|Create an organizer that structures thinking but does not supply the conclusion. Explain which prompts can later be removed.
+DF-007|LANGUAGE_FUNCTION; CONTENT_TARGET|Write light, medium and substantial sentence support for the same reasoning move. Leave the evidence and conclusion for the learner.
+DF-008|COMPLEX_TASK; CHECKPOINT_COUNT|Chunk procedural demands while retaining the difficult thinking. Include a self-monitoring check at each boundary.
+DF-009|WORKED_EXAMPLE; TARGET_INDEPENDENCE|Alternate model, incomplete example and independent attempt. Define a support-fade decision based on evidence, not a fixed learner category.
+DF-010|AVAILABLE_SCAFFOLDS; STUDENT_CHOICE_LIMITS|Create a student-readable support menu with purpose and exit condition. Keep supports available without public labels or penalties.
+DF-011|CURRENT_SUPPORT_PLAN; OBSERVATIONS|Identify where adults or tools do the assessed thinking. Recommend one reduced-support trial while preserving required accommodations.
+DF-012|CORE_TASK; EXTENSION_GOAL|Provide support, core and stretch routes with shared evidence. State that stretch is optional depth, not the only route to full credit.
+DF-013|ALLOWED_REPRESENTATIONS; CORE_CONCEPT|Offer concrete, visual and symbolic routes. Verify that each requires the same conceptual decision rather than merely different decoration.
+DF-014|ENTRY_BARRIERS; COMMON_PRODUCT|Design three starting activities that converge on the same final task. Include a bridge so entry support does not become a separate curriculum.
+DF-015|ACCESS_KNOWLEDGE; TRANSFER_TARGET|Sequence questions from access to explanation to transfer. Keep every learner invited to higher-demand questions with needed support.
+DF-016|TIERED_TASK_SET; CRITERIA|Compare challenge, dignity, choice and credit across routes. Flag a route that prevents learners from demonstrating the stated goal.
+DF-017|THREE_TASK_VERSIONS; SHARED_CONCEPT|Write a debrief that compares representations and reconnects every route. Include an individual synthesis question.
+DF-018|SUBJECT_TASK; RESPONSE_FORMAT|Identify vocabulary, syntax and discourse demands separately from subject knowledge. Select only supports relevant to the actual task.
+DF-019|ESSENTIAL_TERMS; SOURCE_CONTEXT|Create plain definitions, text-described visuals, examples and non-examples. Require human review of translations and avoid invented etymology.
+DF-020|WRITING_GOAL; PARTNER_OPTIONS|Plan think, rehearse, listen and revise steps before writing. Offer private recorded or written rehearsal where speaking is inaccessible.
+DF-021|AVAILABLE_LANGUAGE_RESOURCES; LEARNER_CHOICE|Allow purposeful home-language thinking without assuming literacy or translation accuracy. Keep the final content evidence criteria explicit.
+DF-022|CONTENT_CRITERIA; LANGUAGE_CRITERIA|Score content evidence and language evidence separately where policy permits. Do not equate limited English output with limited subject understanding.
+DF-023|AUTHORIZED_SOURCE; CHUNK_BOUNDARIES|Chunk by meaning, keep source order and label omissions. Preserve qualifiers and uncertainty in every extracted section.
+DF-024|ORIGINAL_TEXT; TARGET_READING_ACCESS|Place a plain-language companion beside the source. Flag simplifications that lose technical meaning and avoid claiming identical reading difficulty.
+DF-025|SOURCE; GLOSSARY_NEEDS; AUDIO_OPTIONS|Add an essential glossary and guiding questions. Describe approved audio access without uploading protected texts or learner recordings.
+DF-026|ASSESSMENT; TARGET_CONSTRUCT|Reduce incidental reading only when reading is not the assessed skill. Document changes and preserve required technical vocabulary.
+DF-027|ORIGINAL; ADAPTATION|Compare claims, qualifiers and evidence sentence by sentence. Restore lost meaning and label any unresolved interpretation.
+DF-028|CORE_OBJECTIVE; AVAILABLE_TIME|Create an extension requiring explanation, generalization or evaluation. Avoid more routine items or extra work as a reward for finishing.
+DF-029|TAUGHT_CONTEXT; NEW_CONTEXT|Design a transfer challenge with one meaningful changed condition. Provide a key explaining what transfers and what does not.
+DF-030|INVESTIGABLE_QUESTION; EVIDENCE_LIMITS|Define an open investigation with bounded resources, evidence expectations and several defensible outcomes. Do not invent observations.
+DF-031|EXTENSION_TASK; CORE_OBJECTIVE|Audit whether the challenge deepens the same learning. Replace novelty that is unrelated or dependent on expensive home resources.
+DF-032|ANONYMOUS_PATTERNS; CAPACITY|Group by current task needs with private neutral labels. Include an unassigned category when evidence is insufficient.
+DF-033|THREE_NEEDS; ROTATION_MINUTES|Create a feasible teacher-attention schedule and independent work for other groups. State transition and regrouping rules.
+DF-034|MIXED_GROUP_TASK; ROLE_OPTIONS|Give every learner a reasoning role and independent evidence. Do not make one learner the permanent tutor or scribe.
+DF-035|GROUP_PLAN; ACCESS_CONSTRAINTS|Check isolation, labelling, movement and regrouping triggers. Keep accommodation details in approved local records, not public prompts.
+PC-001|OBSERVED_STRENGTH; SPECIFIC_EVIDENCE; CHANNEL|Write a brief positive message anchored to one observation. Avoid adding a concern or unsupported personality claim.
+PC-002|VERIFIED_CONCERN; SUPPORT_TRIED; NEXT_STEP|State the concern factually, describe support and invite collaboration. Do not infer home causes or promise improvement.
+PC-003|STRENGTH; CONCERN; CONFERENCE_MINUTES|Build an agenda that balances evidence and family perspective. Leave agreed actions blank until agreement actually occurs.
+PC-004|VERIFIED_CLASS_NEWS; DATES; ACTIONS|Organize learning highlights, upcoming dates and required actions. Exclude individual student information from a class-wide newsletter.
+PC-005|EARLIER_EVIDENCE; LATER_EVIDENCE|Describe growth only where observations are comparable. State the specific change without extrapolating overall progress.
+PC-006|HELPFUL_ACTION; OBSERVED_IMPACT|Recognize the action and its classroom impact. Avoid labels such as natural leader or best student.
+PC-007|POSITIVE_EVENT; CHARACTER_LIMIT|Write one mobile-sized celebration with the supplied fact and a clear closing. Report character count without changing evidence.
+PC-008|OBSERVATION; REFLECTION_INVITATION|Pair a positive observation with an optional learner reflection question. Do not invent what the learner feels or thinks.
+PC-009|STRENGTH_CATEGORIES; EVIDENCE_FIELDS|Build reusable sentence slots, not ready-to-send claims. Keep evidence placeholders mandatory and visibly unresolved.
+PC-010|VERIFIED_COUNTS; ASSIGNMENT_DATES; RECOVERY_OPTION|Separate missing, late and ungraded work. Verify totals and avoid treating absence of submission as proof of refusal.
+PC-011|REPEATED_OBSERVATIONS; SUPPORTS|Describe the learning difficulty and response to support. Do not name a disability or explain a cause from limited evidence.
+PC-012|TWO_CONFIRMED_SLOTS; TIMEZONE; CHANNEL|Offer exactly the supplied slots with timezone and response route. Leave dates unfilled when availability is not confirmed.
+PC-013|DRAFT_EMAIL; VERIFIED_FACTS|Remove blame while retaining the material concern. Return original phrase, revision and reason; do not soften away important facts.
+PC-014|MESSAGE; EVIDENCE_RECORD|Trace factual sentences to evidence and flag assumptions. Return send/hold recommendation with specific unresolved details.
+PC-015|CONFERENCE_PRIORITY; FIFTEEN_MINUTES|Allocate 15 minutes among evidence, listening and next steps. Include a follow-up route for issues that cannot fit.
+PC-016|CONFERENCE_TOPIC; KNOWN_EVIDENCE|Write open, non-leading questions for family and student voice. Offer a right to decline personal disclosure.
+PC-017|PROPOSED_ACTIONS; CONFIRMED_OWNERS|Create an action table with proposed versus agreed status. Do not present suggestions as family commitments.
+PC-018|MEETING_NOTES; AGREEMENTS|Separate agreed actions, open questions and follow-up dates. Ask for corrections without claiming unanimous agreement.
+PC-019|WEEKLY_LEARNING; NEXT_WEEK_ACTIONS|Create a concise class update with three sections and no individual results. Prioritize actions over promotional adjectives.
+PC-020|NEWSLETTER; MOBILE_LIMIT|Rewrite for a small screen using short sections. Preserve dates, costs and required actions exactly.
+PC-021|NEWSLETTER; VERIFIED_CALENDAR|Audit conflicting dates, jargon, inaccessible formats and hidden action requests. Return corrections and unresolved confirmations.
+PC-022|OFFICIAL_EVENT_DETAILS; APPROVED_FORM|Draft the notice, not a legally sufficient consent form. Refer to the school's approved permission process and leave unknowns flagged.
+PC-023|MATERIALS; DEADLINES; RETURN_ITEMS|Make an action checklist ordered by deadline. Offer a contact route for access needs without requesting medical details in replies to public AI.
+PC-024|OLD_SCHEDULE; CONFIRMED_NEW_SCHEDULE|Explain exactly what changed, what did not and what families must do. Never invent the reason or school policy.
+PC-025|LOGISTICS_DRAFT; OFFICIAL_REQUIREMENTS|Check consent references, safety contacts, cost and dates. Hold the message if essential authorization is missing.
+PC-026|SCHOOL_MESSAGE; READING_NEEDS|Replace jargon with plain language and define unavoidable terms. Preserve obligations and conditions without adding policy.
+PC-027|MESSAGE; TARGET_LANGUAGE|Prepare short unambiguous source sentences plus a terminology list. Require competent human translation review before sending.
+PC-028|MESSAGE; AUDIENCE_CONTEXT|Find idioms, assumptions about home resources and unexplained terminology. Suggest inclusive alternatives without stereotyping families.
+PC-029|OBSERVABLE_CONCERN; SCHOOL_PROCEDURE|Draft a calm opening, listening questions and proposed support. Stop for safeguarding concerns and follow the approved local process.
+PC-030|POINTS_OF_DISAGREEMENT; VERIFIED_RECORD|Separate facts, disputed accounts and requested decisions. Avoid legal advice, admissions or promises on behalf of the school.
+RC-001|APPROVED_CRITERIA; BANK_SIZE|Create evidence-required comment frames with next-step slots. Mark every invented illustration as fictional and never prefill real learner claims.
+RC-002|ONE_RECORD; LEARNING_EVIDENCE; LENGTH|Draft one balanced comment and map each factual clause to that record. Do not manufacture a strength to satisfy a formula.
+RC-003|EXISTING_COMMENT; VERIFIED_EVIDENCE|Improve clarity and fairness without changing the factual meaning. Flag claims lacking evidence instead of replacing them with invented positives.
+RC-004|LOCAL_MASTERY_LEVELS; CRITERIA|Write level-specific starters describing demonstrated evidence. Leave learner-specific evidence blank and preserve local terminology.
+RC-005|STRENGTHS; NEXT_STEP_OPTIONS|Build compatible modular sentence parts and explain how to combine them. Warn against combinations that contradict the evidence.
+RC-006|COMMENT_BANK; PROHIBITED_LABELS|Replace fixed-ability and personality labels with observable learning. Keep uncertainty visible when no evidence supports a replacement.
+RC-007|COMMENT; CHARACTER_LIMIT|Shorten to the exact limit while preserving concern and next step. Include a character count and verify it locally before use.
+RC-008|COMMENT; CONFIRMED_PRONOUN_FORM|Use only the supplied pronoun form or neutral name placeholders. Do not guess gender from names or change achievement evidence.
+RC-009|OBJECTIVE; EVIDENCE_FIELDS|Create templates with explicit evidence, date-window and next-step slots. Block export while required factual slots remain empty.
+RC-010|COMMENT_BANK; REQUIRED_CRITERIA|Identify duplicate meaning, vague praise and invented claims. Keep a smaller differentiated set with clear selection rules.
+RC-011|OBJECTIVE; OBSERVED_SUCCESS|Write a precise strength sentence tied to that objective. Do not infer broad mastery from a single successful item.
+RC-012|ERROR_PATTERN; AVAILABLE_SUPPORT|Translate the error into one achievable instructional next step. Avoid blaming effort or assigning home teaching duties.
+RC-013|ASSESSMENT_EVIDENCE; CLASSROOM_EVIDENCE|Reconcile evidence sources explicitly and flag contradictions. Do not average conflicting observations into an unsupported confident statement.
+RC-014|LIMITED_RECORD; REPORT_POLICY|State what is known and the evidence limitation respectfully. Do not invent results or use absence of evidence as evidence of low ability.
+RC-015|TECHNICAL_NEXT_STEP; FAMILY_LANGUAGE|Explain one actionable learning move in plain language. Keep the action realistic without requiring family subject expertise.
+RC-016|CURRENT_NEED; PLANNED_STRATEGY|Describe the proposed support as a plan, not a guarantee. Distinguish school action from optional home encouragement.
+RC-017|COMMENT; SOURCE_RECORD|Return a sentence-by-sentence fact trace, unsupported claims and corrected draft. Verify that no evidence from another learner appears.
+RC-018|MATH_CRITERIA; VERIFIED_WORK|Distinguish concepts, procedures and reasoning in the comment. Refer only to strands supported by the supplied evidence.
+RC-019|SCIENCE_WORK; INVESTIGATION_CRITERIA|Describe observation, evidence and explanation separately. Never claim safe practical competence without relevant observations.
+RC-020|READING_EVIDENCE; WRITING_EVIDENCE|Distinguish reading and writing strengths. Do not generalize one text or genre to overall language proficiency.
+RC-021|SOURCE_ANALYSIS_WORK; CRITERIA|Describe claims, corroboration and perspective using actual work evidence. Avoid judging political agreement as achievement.
+RC-022|ART_PROCESS_EVIDENCE; TECHNIQUE_CRITERIA|Describe process, technique and reflection without ranking innate talent or aesthetic taste as a personal trait.
+RC-023|OBSERVED_PE_SKILL; ACCESS_ADAPTATIONS|Report taught observable skill and reflection, not body size, health or presumed athletic ability. Preserve approved adapted criteria.
+RC-024|SUBJECT_COMMENT; APPROVED_TERMS|Check technical correctness and family readability. Define essential terminology instead of substituting misleading simplifications.
+RC-025|SYNTHETIC_EVIDENCE_TABLE; LENGTH_LIMIT|Process each fictional row independently and return row IDs with fact traces. Include a deliberately sparse row to test restraint.
+RC-026|ONE_DEIDENTIFIED_RECORD_AT_A_TIME|Reset context between records and export drafts with local placeholders. Reconcile row IDs and prevent merging evidence across learners.
+RC-027|VERIFIED_COMMENT; VARIANT_COUNT|Vary syntax only; preserve every factual claim and uncertainty. Compare variants against the original evidence clause by clause.
+RC-028|COMMENT_SET; MATCHED_RECORDS|Check duplicate text, contradictions and cross-record leakage. Hold any draft whose evidence cannot be matched to exactly one record.
+RC-029|HARSH_COMMENT; OBSERVATIONS|Remove judgments about character or intent. Preserve the concern using supported observations and flag gaps instead of guessing.
+RC-030|COMMENT; STRICT_LIMIT|Keep the material concern and actionable next step while shortening. Return removed wording and a verified count.
+CM-001|ROUTINE_GOAL; ROOM_CONSTRAINTS|Write teach, model, rehearse and feedback steps with observable success. Include accessible cues and realistic movement time.
+CM-002|LOW_STAKES_EVENT; VOLUNTARY_PARTICIPATION|Prepare neutral restorative questions without forced apology or disclosure. Defer harm, abuse or immediate danger to local safeguarding procedures.
+CM-003|ENTRY_TASK; ROOM_ACCESS|Specify greeting, materials and first learning action. Provide a quiet accessible route for late arrival without public shame.
+CM-004|NEXT_TASK; TRANSITION_SIGNAL|Give a short stop, move, begin script and visual alternative. Rehearse safely and adjust timing from observation.
+CM-005|MATERIALS; DISTRIBUTION_LAYOUT|Assign predictable collection and return routines with backups. Avoid public penalties for unavailable supplies.
+CM-006|DISMISSAL_POLICY; TRANSPORT_ROUTINES|Use only approved local dismissal procedures. Keep identity and transport records outside AI and flag missing supervision details.
+CM-007|ROUTINE_OBSERVATIONS; TARGET_TIME|Compare duration, participation and independence without blaming learners. Suggest one teachable change and a repeat observation.
+CM-008|OBSERVABLE_DISRUPTION; APPROVED_RESPONSE|Write a brief private reset naming the behavior, expected action and return to learning. Avoid threats or psychological interpretations.
+CM-009|RECURRING_ACTION; TAUGHT_EXPECTATION|Offer neutral concise redirections and a choice within established boundaries. Do not escalate automatically because a script fails.
+CM-010|APPROVED_REENTRY_PROCESS; MISSED_TASK|Plan a discreet return, access to missed work and optional check-in. Never invent reasons for leaving or override a safety plan.
+CM-011|APPROVED_RESET_OPTIONS; ACCESS_NEEDS|Provide dignified temporary reset choices and re-entry steps. Never use isolation or withholding learning as an invented intervention.
+CM-012|RESPONSE_PLAN; SCHOOL_POLICY|Identify shame, coercion, escalation and inconsistent expectations. Route safety concerns to the authorized staff process.
+CM-013|NEUTRAL_EVENT_SUMMARY; PARTICIPATION_CHOICE|Ask what happened, impact and possible repair without presuming guilt. Permit uncertainty and declining a question.
+CM-014|VOLUNTARY_ACTIONS; REVIEW_DATE|Distinguish proposed and agreed repair actions. Record consent and follow-up without requiring reconciliation or public apologies.
+CM-015|RESTORATIVE_SCRIPT; SAFEGUARDING_RULES|Check leading questions, coercion and pressure on affected learners. State when the conversation must stop and be referred.
+CM-016|AGE; EMOTION_VOCABULARY; OPT_OUT|Create an educational emotion-naming lesson using fictional situations. Avoid therapy, diagnosis or compulsory personal disclosure.
+CM-017|AGE; APPROVED_PAUSE_STRATEGY|Model a simple pause-and-choice routine with an accessible alternative. Do not promise it will prevent distress or substitute for support.
+CM-018|FICTIONAL_SCENARIO; PARTICIPATION_OPTIONS|Explore multiple perspectives without asking learners to disclose personal trauma. Allow written or silent participation.
+CM-019|SEL_ACTIVITY; SCHOOL_BOUNDARIES|Check disclosure pressure, cultural assumptions and clinical claims. Replace personal case sharing with clearly fictional scenarios.
+CM-020|COMMUNITY_GOAL; TEN_MINUTES|Allocate greeting, optional check-in, activity and close within ten minutes. Provide a pass option and avoid public emotion tracking.
+CM-021|CHECKIN_PURPOSE; RESPONSE_OPTIONS|Offer private, written and pass options. Do not collect sensitive disclosures in shared AI systems or display individual results.
+CM-022|FIVE_DAYS; COMMUNITY_THEMES|Vary the participation mode and purpose across the week. Avoid repetitive emotional disclosure prompts.
+CM-023|ROOM_PLAN; NONIDENTIFYING_ACCESS_CONSTRAINTS|Propose a seating layout based on access and learning requirements. Keep identity mapping local and avoid punitive isolation.
+CM-024|CURRENT_LEARNING_PATTERNS; REGROUP_DATE|Explain temporary grouping criteria and movement triggers. Do not disclose private evidence to classmates.
+CM-025|SEATING_OR_GROUP_PLAN; ACCESS_RULES|Audit visibility, movement, stigma and isolation. Show a revised neutral layout and unresolved local constraints.
+AD-001|AUTHORIZED_NOTES; CONFIRMED_DECISIONS|Separate decisions, proposed actions and open questions. Never invent attendees, consensus, owners or deadlines.
+AD-002|BASELINE; TEACHING_GOAL; TERM_LENGTH|Draft a measurable professional goal with a feasible action and evidence source. Do not guarantee a student-outcome improvement.
+AD-003|MESSAGE_PURPOSE; CONFIRMED_ACTION|Write a concise email with one clear request and verified deadline. Minimize recipients and confidential detail.
+AD-004|ROUGH_NOTES; AUDIENCE|Distinguish completed work, current status and next action. Preserve uncertainty rather than making unfinished work sound complete.
+AD-005|PURPOSE; AVAILABLE_SLOTS; PREPARATION|Offer a meeting request with decision goal and time limit. Use only confirmed scheduling options and timezone.
+AD-006|MEETING_RECORD; OPEN_ITEMS|Separate decisions from suggestions and unresolved questions. Assign owners only when explicitly agreed.
+AD-007|EMAIL; VERIFIED_CALENDAR; RECIPIENT_ROLES|Check recipient scope, tone, dates and attachments. Keep private addresses out of shared prompts and verify them locally before sending.
+AD-008|DECISIONS_NEEDED; MEETING_MINUTES|Build a timed agenda prioritizing decisions and pre-reading. Keep information-only items separate and show total duration.
+AD-009|DISCUSSION_NOTES|Return decision, action, owner, due date and parking-lot fields. Use unknown markers where the notes do not establish agreement.
+AD-010|MINUTES; ORIGINAL_NOTES|Trace each decision and deadline to the notes. Flag invented consensus and preserve dissent or unresolved questions.
+AD-011|BASELINE_EVIDENCE; TERM_DATES; RESOURCES|Create a semester sequence with feasible actions and review points. Label targets as proposed until approved.
+AD-012|TEACHING_GOAL; MEASURES|Separate implementation indicators from student outcomes. Describe collection burden and limitations of each measure.
+AD-013|GOAL; MIDPOINT_EVIDENCE|Define continue, adapt and stop rules using supplied priorities. Avoid arbitrary thresholds presented as research-established cutoffs.
+AD-014|OBSERVATION_NOTES; LESSON_GOAL|Reflect on observed events, possible explanations and next steps separately. Do not invent student reactions or observer judgments.
+AD-015|EVENT_NOTES|Build three columns: observation, interpretation and next action. Retain multiple plausible interpretations where evidence is weak.
+AD-016|OBSERVER_FEEDBACK; CHANGEABLE_PRACTICE|Design one small instructional trial with baseline, measure and review date. Do not claim causality from a single lesson.
+AD-017|OFFICIAL_TRIP_REQUIREMENTS; APPROVAL_STATUS|Create a checklist from supplied requirements only. Keep medical and emergency identities in approved local systems.
+AD-018|CONFIRMED_TIMES; GROUP_COUNTS; STAFF_ROLES|Reconcile counts and build a trip-day timeline with contingency fields. Do not invent supervision ratios or emergency contacts.
+AD-019|TRIP_DRAFT; APPROVED_REQUIREMENTS|Audit permissions, access, safety and unresolved facts. Block operational use while a critical approval is missing.
+AD-020|CLUB_PURPOSE; SUPERVISION_POLICY|Draft routines, access options and a supervision checklist. Do not invent staffing authorization or eligibility rules.
+AD-021|AVAILABILITY; DUTY_RULES; LOAD_LIMITS|Create a rota satisfying explicit constraints and show workload totals. Flag infeasibility instead of silently violating a rule.
+AD-022|DUTY_OR_CLUB_PLAN; ROLE_REQUIREMENTS|Check coverage, overload, breaks and unclear ownership. Preserve contractual or local requirements supplied by the teacher.
+AD-023|VERIFIED_NEED; EVIDENCE; PROPOSAL_CRITERIA|Build a concise need-action-evidence outline. Keep unsupported statistics, endorsements and impact claims out.
+AD-024|COSTS; QUANTITIES; FUNDING_RESTRICTIONS|Recalculate line items and totals, explain each expense and flag restricted costs. Leave vendor quotes as supplied, not invented.
+AD-025|PROPOSAL; FUNDER_RULES; SOURCES|Trace claims to evidence and check eligibility, budget and missing documents. Do not fabricate citations or approval likelihood.
+SD-001|FRACTION_EXAMPLES; REPRESENTATIONS; PRIOR_KNOWLEDGE|Connect quantities, diagrams and symbols with equal wholes. Verify comparisons and state the conditions under which the explanation works.
+SD-002|APPROVED_INVESTIGATION; VARIABLES; SAFETY_LIMITS|Write controls, repeated observations, units and limitations. Separate predicted patterns from measured results and prohibit fabricated data.
+SD-003|CONCEPT; CONCRETE_MATERIALS; SYMBOLS|Explain the mapping between each physical action, diagram element and symbolic operation. State where the analogy breaks down.
+SD-004|VERIFIED_PROBLEMS; DELIBERATE_ERRORS|Create clearly fictional wrong solutions with the first invalid step identified. Supply corrected reasoning and a fresh transfer problem.
+SD-005|AUTHORIZED_TEXT; READING_OBJECTIVE|Quote only supplied passages and anchor questions to them. Distinguish text evidence from reasonable interpretation.
+SD-006|WRITING_PURPOSE; SOURCE_EVIDENCE; MENTOR_TEXT|Build a writing task and annotated mentor model using authorized or original text. Do not invent quotations, authors or research findings.
+SD-007|WRITING_SAMPLE; REVISION_PRIORITY|Separate idea development, organization and conventions. Focus revision on one priority before surface editing.
+SD-008|ACTUAL_OBSERVATIONS; QUESTION|Build a claim-evidence-reasoning task with uncertainty and alternative explanations. Never strengthen a claim beyond the supplied data.
+SD-009|SCIENCE_EXPLANATION; VERIFIED_SOURCE|Check mechanism, correlation versus causation, uncertainty and procedure safety. Cite the supplied source location for corrections where possible.
+SD-010|SOURCE_TEXT; KNOWN_ORIGIN|Analyze origin, purpose, context and limits. Mark unknown provenance explicitly and avoid filling gaps from stereotypes.
+SD-011|TWO_OR_MORE_SOURCES; INQUIRY_QUESTION|Compare agreement, contradiction and independence of sources. Do not treat multiple copies of one account as independent corroboration.
+SD-012|HISTORICAL_QUESTION; AUTHORIZED_SOURCES|Separate supported claims, interpretations and unresolved questions. Avoid invented quotations, dates or false equivalence among evidence quality.
+SD-013|PERFORMANCE_SKILL; APPROVED_EQUIPMENT|Sequence model, focused practice and reflection with observable criteria. Avoid medical or physical-training advice beyond teacher-approved activities.
+SD-014|TASK; SPACE; EQUIPMENT; ACCESS_CONSTRAINTS|Adapt performance access while preserving the learning goal. Offer equivalent evidence modes without inferring diagnoses.
+SD-015|PROCESS_OBJECTIVE; OBSERVABLE_EVIDENCE|Create a rubric for process, technique and reflection. Do not score body type, innate talent or expensive equipment.

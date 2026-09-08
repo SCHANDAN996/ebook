@@ -1,5 +1,17 @@
 # Teacher AI Toolkit - development project
 
+## Editorial revision v2
+
+The current branch includes 300 task-specific specifications, 60 distinct illustrative
+excerpts, 12 workflow controllers, a review PDF, an offline copy companion and a sales plan.
+Build with `python toolkit/build_full_content.py`, `python toolkit/publish_edition.py`
+and `python toolkit/verify_edition.py`. See `docs/SALES-LAUNCH-PLAN.md` and
+`docs/PUBLISHER-REVIEW-CHECKLIST.md`. Automated checks are not teacher approval.
+
+The owner explicitly authorized public publication of this edition on 2026-09-07,
+despite the public-copy risk. This overrides the earlier private-only recommendation
+for these ebook assets, not the ban on credentials or real student records.
+
 A pipeline for building and checking teacher-facing prompt/workflow resources.
 **Not a launch-ready paid product.** Demand, teaching quality, time savings and
 cross-tool compatibility have not yet been validated.

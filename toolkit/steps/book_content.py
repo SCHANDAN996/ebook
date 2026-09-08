@@ -12,7 +12,7 @@ HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 REQUIRED_PROMPT_SECTIONS = (
     "## Use this when", "## Teacher inputs", "## Copy-paste prompt",
-    "## Fictional test case", "## Sample output",
+    "## Fictional test case",
     "## Teacher verification checklist", "## Editorial notes",
 )
 
@@ -133,6 +133,11 @@ def full_content_issues(root: Path = BOOK_ROOT) -> list[str]:
             issues.append(f"{path.relative_to(root)}: missing unknown-facts safeguard")
         if "```text" not in text:
             issues.append(f"{path.relative_to(root)}: copy-paste prompt is not fenced")
+        has_sample = '"sample_output": true' in text
+        if has_sample != ('## Sample output' in text):
+            issues.append(f"{path.relative_to(root)}: sample flag/section mismatch")
+        if 'Not included in this edition.' in text:
+            issues.append(f"{path.relative_to(root)}: empty sample section")
     if len(ids) != len(set(ids)):
         issues.append("prompt IDs must be unique")
 
