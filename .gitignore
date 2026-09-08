@@ -4,4 +4,3 @@ __pycache__/
 .venv/
 .env
 tmp/
-dist/

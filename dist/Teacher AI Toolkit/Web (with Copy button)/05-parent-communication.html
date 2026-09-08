@@ -1,0 +1,841 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 5 — Parent Communication</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>Chapter 5 — Parent Communication</h1><p class="lede">30 prompts</p><p>The email you have been putting off is usually the one where the facts are clear but the tone is not. These prompts separate the two: state what happened, describe what you have already tried, make one specific ask — and leave out everything you cannot actually know.</p>
+<h2>What's in here</h2>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
+<tr><td>Positive notes</td><td>6</td><td>The highest-return five minutes in teaching</td></tr>
+<tr><td>Concern emails</td><td>5</td><td>Something needs saying, carefully</td></tr>
+<tr><td>Conference preparation</td><td>4</td><td>Ten minutes each, twenty-four families</td></tr>
+<tr><td>Newsletters</td><td>3</td><td>Rough notes into something readable</td></tr>
+<tr><td>Permissions and logistics</td><td>4</td><td>Trips, forms, deadlines</td></tr>
+<tr><td>Clear and accessible language</td><td>3</td><td>Plain wording, any reading level</td></tr>
+<tr><td>Difficult conversations</td><td>2</td><td>When it is already tense</td></tr>
+</tbody></table>
+<h2>Worth knowing before you start</h2>
+<p>Describe behaviour, never character. "Three tasks are not recorded as submitted" is a fact. "He is unmotivated" is a guess about a child you are writing to their family about.</p>
+<p>Do not let it infer a home cause. If a draft says "with support at home this will improve", cut that line — you do not know what home looks like.</p>
+<p>Read the draft as the parent, at 8am, on a phone. Anything that reads as blame will be answered as blame.</p>
+<p>Ask for a shorter version too. Many families will not read past four lines.</p>
+<p><strong>Use initials or "your child".</strong> These messages leave your classroom.</p>
+<h2>Positive notes</h2>
+<article class="card"><div class="head"><span class="pid">PC-001</span><h3>Write a specific positive family message</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Five minutes that change how a family hears everything you send afterwards.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a short positive message to a family about their child in [GRADE]
+[SUBJECT].
+
+What I actually observed: [DESCRIBE THE SPECIFIC MOMENT OR WORK. Use &quot;your
+child&quot; — no names.]
+When: [DATE OR LESSON]
+
+Rules:
+- Name the specific thing. &quot;A pleasure to teach&quot; tells a family nothing.
+- Describe what the student did, not what kind of person they are
+- Two to four sentences, readable on a phone
+- No &quot;but&quot;, no concern attached, nothing asked of the family
+- Do not generalise one observation into a pattern
+
+Give me the message, and a shorter two-sentence version.
+
+If what I described is too vague to write from, ask me what happened rather
+than inventing a detail.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the specific detail genuinely yours, or has it been filled in?</li><li>Any hidden "but" at the end?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-005</span><h3>Share academic growth using one concrete classroom example</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Progress a family can picture, not a grade they cannot interpret.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a message to a family about academic growth in [GRADE] [SUBJECT].
+
+Where they were: [DESCRIBE, with the evidence and roughly when]
+Where they are now: [DESCRIBE, with the evidence]
+
+Build it around one concrete before-and-after that a family can picture. Not
+&quot;improved in fractions&quot; — the actual thing that changed in the work.
+
+Give me:
+- The message, under 120 words
+- One sentence the family could say to their child about it
+- The shorter version for a family that reads four lines
+
+Use only what I gave you. Do not attribute the growth to effort, attitude, or
+anything happening at home — you do not know what caused it, and neither do I.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Would a family picture the change from this?</li><li>Has it credited a cause you cannot actually know?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-006</span><h3>Recognize a learner&#x27;s helpful contribution without using labels</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Praising what they did, not who you have decided they are.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a short message about something helpful a [GRADE] student did:
+
+[DESCRIBE WHAT HAPPENED. No names.]
+
+Describe the action and its effect. Do not use character labels — not &quot;kind&quot;,
+&quot;a leader&quot;, &quot;mature&quot;, &quot;a role model&quot;, &quot;responsible&quot; or &quot;well-behaved&quot;. A child
+who is told they are kind has been given something to live up to or fall short
+of; a child told what they did has been given something to repeat.
+
+Give me:
+- The message, three sentences
+- The one line naming the effect their action had on someone else
+- A version I could say aloud to the student
+
+If my description does not contain an actual action, ask me what they did.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Any character labels left?</li><li>Does it name a real effect, or a vague good?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-007</span><h3>Write a brief celebration message suitable for a mobile screen</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>It will be read while walking, on a phone, in about six seconds.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a message for a family about [WHAT HAPPENED] in [GRADE] [SUBJECT],
+designed to be read on a phone.
+
+Constraints:
+- Under 50 words
+- First line carries the whole message, in case they read nothing else
+- No greeting longer than two words, no sign-off longer than my name
+- One idea only
+- No attachment, no link, nothing to click
+
+Give me the message, plus the subject line — under 8 words, saying what it is
+so nobody opens it braced for bad news.
+
+Then give me a version with one extra sentence, for the family who will read more.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the first line stand alone?</li><li>Does the subject line look like good news?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-008</span><h3>Create a positive note that invites the learner&#x27;s own reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>The student should be in this conversation, not the subject of it.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a positive message about [WHAT HAPPENED] in [GRADE] [SUBJECT] that
+includes the student rather than talking over them.
+
+Give me:
+- A short note to the family
+- One question the family could ask their child about it, that has more than a
+  yes or no answer
+- One question I could ask the student directly
+- A line the student could write themselves about what they did
+
+The questions must be answerable by a student who is not sure what they did
+differently — many are not. Do not assume they can articulate it.
+
+Keep the whole thing under 100 words.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a student who does not know why it went well still answer?</li><li>Does it talk to the student, or about them?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-009</span><h3>Build a reusable strength-note template with visible evidence fields</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>So sending ten of these takes twenty minutes, not an evening.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a reusable template for positive notes home in [GRADE] [SUBJECT].
+
+It must have blanks I fill with something real, so the note cannot be sent
+generic:
+- [WHAT THEY DID] — a specific observed action
+- [WHEN]
+- [WHY IT MATTERED]
+
+Give me:
+- The template
+- Four openings and four closings I can rotate, so ten notes do not read as
+  one note sent ten times
+- A worked example, filled in
+- The rule for what goes in each blank, so I do not slip into vagueness at 9pm
+
+Then tell me what makes these stop working if I send too many, and how often is
+too often.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could the template be sent without filling a real detail? Tighten it.</li><li>Do ten of these read as ten different notes?</li></ul>
+<h2>Concern emails</h2></article>
+<article class="card"><div class="head"><span class="pid">PC-002</span><h3>Communicate an academic concern with a next step</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The email you have been putting off since Tuesday.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write an email to a family about an academic concern in [GRADE] [SUBJECT].
+
+The concern, factually: [WHAT IS HAPPENING — observable, with dates or counts]
+What I have already tried: [LIST IT]
+What I want from this email: [A MEETING / AWARENESS / A SPECIFIC NEXT STEP]
+
+Rules:
+- Open with something genuine and specific about the child
+- State the concern as observable fact, not interpretation
+- Describe behaviour, never character
+- Do not name a cause. Do not suggest anything about home, motivation, effort,
+  attention or ability
+- Do not promise improvement
+- End with one clear ask
+- Under 200 words, no jargon, no emoji
+
+Give me the email, then a four-line version for a family that will not read
+further.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Has it inferred a cause anywhere? Cut that line.</li><li>Read it as the parent at 8am. Does it read as blame?</li><li>Is there exactly one ask?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-010</span><h3>Write a missing-work message using dates and verified counts</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Facts, not a feeling that they are behind.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a message to a family about missing work in [GRADE] [SUBJECT].
+
+The record: [LIST WHAT IS MISSING AND THE DATES — only what I have verified]
+What I have already done: [LIST IT]
+
+Rules:
+- Use only the dates and counts I gave you. Do not round, estimate, or add
+  anything I did not state
+- Do not describe the pattern as a habit, an attitude, or a choice
+- Say plainly what happens next and by when
+- Include how the work can be caught up, specifically
+- Ask whether there is something I should know, without speculating about what
+
+Give me the message and a short version.
+
+Before I send this, tell me which of my stated facts I should double-check
+against the record — this is the kind of message where being wrong on one date
+loses the family&#x27;s trust entirely.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Verify every date and count against your actual record.</li><li>Has it added a number you did not give it?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-011</span><h3>Explain a recurring learning difficulty without diagnosing its cause</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Something keeps happening, and it is not yours to name.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a message to a family about a recurring difficulty in [GRADE] [SUBJECT].
+
+What I observe, repeatedly: [DESCRIBE THE PATTERN IN THE WORK — what happens,
+how often, in what situations]
+
+Rules — these matter more than the wording:
+- Describe only what I have observed in the classroom
+- Name no cause. Do not suggest a diagnosis, a condition, a difficulty by name,
+  or anything about attention, processing, ability or home
+- Do not recommend an assessment or referral — that is not mine to initiate in
+  an email
+- Ask what the family notices, rather than telling them what to look for
+- Say what I am doing about it in the classroom already
+
+Give me the message under 180 words.
+
+If anything in my description is already a diagnosis in disguise, tell me and
+rewrite it as an observation.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Any language that hints at a diagnosis? Cut it.</li><li>Follow your school's process for anything beyond an observation.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-012</span><h3>Request a brief family check-in with two exact scheduling options</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Making it easy to say yes.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a short message asking a family for a brief conversation about [TOPIC].
+
+My availability: [TWO SPECIFIC OPTIONS — day, date, time, duration]
+How: [PHONE / IN PERSON / VIDEO]
+
+Rules:
+- Say why in one sentence, without loading it
+- Offer exactly the two options I gave, plus an invitation to suggest another
+- Say how long it will take
+- Make clear this is not an emergency, if it is not
+- Do not make attendance sound compulsory unless it is
+
+Under 100 words.
+
+Then give me a second version for a family who has not responded to two previous
+messages — same content, different approach, no reproach about the silence.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does it read as urgent when it is not?</li><li>Is the non-response version free of any hint of blame?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-013</span><h3>Revise a blaming concern email into factual collaborative language</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>You wrote it angry. Do not send that one.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this message so it is factual and collaborative, keeping every fact
+intact.
+
+Do not soften it into meaninglessness — the family must still understand there
+is a problem and what happens next.
+
+Show me:
+- Each sentence carrying blame, judgement, or an inference about home,
+  character or motivation — quoted
+- What is factually true in it, and what is my interpretation presented as fact
+- The rewritten message
+- Anything I claimed that I should verify before sending
+
+Give me three versions: gentle, direct, and firm. Tell me which fits what I
+described, and when I would use each of the others.
+
+DRAFT:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Are all the facts still there, or did softening remove one?</li><li>Verify anything it flagged as unchecked.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-014</span><h3>Audit a concern message for evidence, tone and unsupported claims</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Before it becomes the email that gets forwarded to the head.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this message to a family.
+
+Tell me:
+- Every claim not supported by something I could show — quoted
+- Anywhere I describe character rather than behaviour
+- Anywhere I imply a cause: home, effort, attitude, ability, attention
+- Anywhere a family could reasonably read blame
+- Whether the ask is clear, single, and actually answerable
+- What a defensive family would seize on first
+- Anything a family might reasonably ask that the message does not answer
+
+Then give me the one sentence I should cut, and why.
+
+MESSAGE:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Cut the sentence it named. That is the one.</li><li>Could you evidence every remaining claim if asked?</li></ul>
+<h2>Conference preparation</h2></article>
+<article class="card"><div class="head"><span class="pid">PC-003</span><h3>Prepare a balanced family conference</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Ten minutes, and you want them to leave knowing three things.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare me for a [MINUTES]-minute conference with a family in [GRADE] [SUBJECT].
+
+What I know: [STRENGTHS WITH EVIDENCE, GROWTH AREA WITH EVIDENCE, ANYTHING
+ELSE — no names]
+
+Give me a single card I can glance at:
+- One strength, with the evidence in a phrase
+- One growth area, with the evidence in a phrase
+- One question to ask the family, that is genuinely open
+- One thing they could do at home that costs under ten minutes and does not
+  require them to teach anything
+- The sentence I open with, and the sentence I close with
+
+Keep it to what fits on half a page. I will be reading it while they sit down.
+
+Do not include anything I did not give you, and do not invent an evidence detail
+to make a point land better.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is every piece of evidence something you actually have?</li><li>Could you deliver this in ten minutes with the family talking too?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-015</span><h3>Build a 15-minute conference agenda around learning evidence</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Structure, so the ten minutes do not disappear into small talk.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a [MINUTES]-minute conference agenda for [GRADE] [SUBJECT].
+
+Give me the agenda with minutes allocated to each part, including:
+- Time for the family to talk, which is the part that always gets squeezed
+- Where I show actual work rather than describe it
+- Where the student&#x27;s own view comes in, if they are present
+- The point at which I stop and check whether we agree on what we are seeing
+- What I do when we reach the last two minutes and nothing is settled
+
+Then tell me:
+- Which part to cut first if we are running over
+- The conversation this agenda does not handle — the one that needs a separate
+  meeting — and how I recognise it early and say so</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the family get real time, or a token minute?</li><li>Could you say "this needs a longer conversation" comfortably?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-016</span><h3>Prepare questions that invite family and student perspective</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>You do most of the talking. That is the wrong way round.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write questions for a [GRADE] conference that get the family and the student
+talking.
+
+Give me:
+- Three questions for the family, open, none of which can be answered &quot;fine&quot;
+- Three for the student, answerable by a student who is nervous or monosyllabic
+- One question I ask when the family disagrees with something I have said
+- One I ask when the family says nothing at all
+
+Rules:
+- No question assuming a particular home setup, language, work schedule,
+  resources or family structure
+- Nothing that reads as checking whether they are doing enough at home
+- Nothing that puts a child on the spot in front of an adult
+
+Then tell me which question is most likely to open something I am not prepared
+for, and how to hold that well.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does any question assume a kind of household?</li><li>Would a nervous 9-year-old manage the student questions?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-017</span><h3>Turn classroom evidence into a shared action-plan table</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>So the meeting produces something rather than just happening.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn this into a shared action plan after a conference in [GRADE] [SUBJECT]:
+
+What we discussed: [SUMMARISE — no names]
+What was agreed: [LIST IT]
+
+Give me a table with: what will happen, who does it, by when, and how we will
+know it worked.
+
+Rules:
+- Every row has a named owner — me, the family, or the student. No unowned rows
+- Nothing asks a family to teach subject content
+- Nothing requires resources, internet, or an adult free at a fixed time,
+  unless the family offered it
+- The student owns at least one row
+- Include a date to check back, and who initiates that
+
+Only include what was actually agreed. If something was discussed but not
+agreed, list it separately as open.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does every row have an owner?</li><li>Is anything here the family did not actually agree to?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-018</span><h3>Write a factual post-conference summary with owners and dates</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>A record, sent the same day, that both sides recognise.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a summary email after a family conference in [GRADE] [SUBJECT].
+
+What was discussed: [YOUR NOTES — no names]
+What was agreed: [LIST IT]
+
+Rules:
+- Record only what was said and agreed. Do not smooth over a disagreement, and
+  do not record agreement that was not given
+- Where the family and I saw it differently, record both views neutrally
+- Every action has an owner and a date
+- No new information, no new concerns — this is a record, not a second email
+- Invite correction: they may remember it differently, and that is fine
+
+Under 200 words.
+
+Then tell me what to do if the family replies disputing the summary.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Send it the same day. Memory diverges fast.</li><li>Have you recorded agreement that was not actually given?</li></ul>
+<h2>Newsletters</h2></article>
+<article class="card"><div class="head"><span class="pid">PC-004</span><h3>Draft a useful class newsletter</h3></div><p class="meta">Grades K-2, 3-5</p>
+<p class="lbl">When you need this</p>
+<p>Bullet points in, something families actually read out.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn these notes into a class newsletter for [GRADE] families, week of [DATE]:
+
+[PASTE YOUR ROUGH NOTES]
+
+Sections: what we learned, what is coming, dates to remember, one thing to do
+at home.
+
+Rules:
+- Under 300 words, headings, scannable in thirty seconds
+- Dates in full — day, date, month — never &quot;next Tuesday&quot;
+- The home suggestion takes under ten minutes and needs no printing, internet,
+  or subject knowledge
+- No school jargon, no acronyms
+- Written for any adult at any reading level
+
+Give me the newsletter, then a five-line version for families who will not read
+the full one.
+
+Use only what is in my notes. If a date or detail is missing, ask rather than
+filling it in.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check every date against the calendar yourself.</li><li>Has anything been invented to fill a section?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-019</span><h3>Create a concise weekly learning update for families</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Same shape every week, so families know where to look.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a repeatable weekly update format for [GRADE] [SUBJECT] families.
+
+Give me:
+- A fixed structure, four sections maximum, in the same order every week
+- What goes in each, written as a rule so I can fill it in five minutes
+- This week&#x27;s version, using: [YOUR NOTES]
+- The one section families will actually read, placed first
+- What to do in a week where little happened, without padding
+
+Under 200 words.
+
+Then tell me what makes families stop reading a weekly update, so I can avoid
+building that in from the start.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could you fill this in five minutes every week? If not, simplify it.</li><li>Is the most-read section first?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-021</span><h3>Audit a class newsletter for dates, jargon, access and action items</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Before three families turn up on the wrong day.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this newsletter for [GRADE] families.
+
+Check:
+- Every date and day-of-week — flag any that is ambiguous, relative, or that I
+  should verify
+- School jargon, acronyms and internal shorthand, quoted
+- Anything assuming internet, a printer, money, transport, or a free adult
+- Anything a family is being asked to do that is not stated clearly as an ask
+- Whether the reading level suits every family, not most of them
+- Whether the most important item is buried
+
+Then tell me the three items to move to the top, and everything I could cut
+without loss.
+
+NEWSLETTER:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Verify every flagged date against the school calendar.</li><li>Are the asks unmistakably asks?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-020</span><h3>Rewrite a newsletter as a mobile-friendly plain-text version</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Most families will open this on a phone, in a queue, with one thumb.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this newsletter as plain text for a phone screen.
+
+Rules:
+- No formatting that depends on a wide screen — no columns, no tables, no
+  boxes, no indentation carrying meaning
+- Most important item first, in the first two lines
+- Short paragraphs, two or three lines each, with a blank line between
+- Dates in full, on their own line, so they survive being screenshotted
+- No attachment and no link required to understand the message
+- Under 200 words
+
+Give me:
+- The plain-text version
+- A three-line version for a text message or messaging app
+- Which items I should send separately instead, because they will be lost in a
+  long message
+
+Keep every date and deadline exactly as written.
+
+NEWSLETTER:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Read it on your own phone before sending.</li><li>Did any date change in the rewrite?</li></ul>
+<h2>Permissions and logistics</h2></article>
+<article class="card"><div class="head"><span class="pid">PC-022</span><h3>Draft a permission notice from verified trip or event details</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>A form that comes back complete, first time.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a permission notice for [EVENT] for [GRADE] families.
+
+Verified details: [DATE, TIMES, LOCATION, TRANSPORT, COST, WHAT TO BRING, WHAT
+TO WEAR, RETURN DEADLINE, WHO TO CONTACT]
+
+Rules:
+- Use only the details I supplied. Invent nothing — not a cost, not a time, not
+  a policy, not a supervision ratio
+- If something a permission notice normally contains is missing from my list,
+  list it as missing rather than filling it in
+- Plain language, short sentences, translation-ready
+- Say clearly what happens if a family cannot pay or cannot consent, without
+  requiring them to explain why
+- One clear return deadline and one place to return it
+
+Give me the notice and the tear-off slip.
+
+I will check this against my school&#x27;s own consent and safeguarding requirements
+before it goes out.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check every detail against the actual arrangements.</li><li>Check the form against your school's required consent wording.</li><li>Fill in anything it listed as missing — do not send it with gaps.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-023</span><h3>Create a clear family checklist for materials, dates and return forms</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>One list, so nothing arrives on the wrong day.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Turn these into a family checklist for [GRADE]:
+
+[LIST WHAT IS NEEDED, WITH DATES]
+
+Rules:
+- Grouped by date, earliest first, with the full date each time
+- Each item says what, by when, and where it goes
+- Say which items are essential and which are optional — families need to know
+  what they can skip
+- For anything costing money or needing a purchase, note the school&#x27;s route for
+  families who cannot
+- Nothing requiring a printer at home
+
+Give me the checklist as one page, plus a two-line phone summary of the most
+urgent items.
+
+Use only my list. If a date is missing, ask.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is essential versus optional actually accurate?</li><li>Is your school's support route stated correctly?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-024</span><h3>Write a schedule-change notice without inventing school policy</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Something moved, and families need to know today.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a notice about a schedule change for [GRADE] families.
+
+What changed: [OLD ARRANGEMENT → NEW ARRANGEMENT]
+Effective: [DATE]
+Reason I am permitted to share: [STATE IT, or say none]
+
+Rules:
+- Lead with the change. The reason, if any, comes second
+- State no policy, procedure or entitlement I have not given you
+- If families will ask something this notice cannot answer, say who to ask
+  rather than guessing
+- Do not apologise repeatedly; say it once if warranted
+- Do not speculate about further changes
+
+Under 100 words, plus a one-line version for a text message.
+
+If the reason I gave should not be shared with families, say so.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Has it stated a policy you did not give it?</li><li>Is the reason yours to share?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-025</span><h3>Audit a logistics message for missing consent, safety and contact details</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The message that will generate forty replies asking the same question.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this logistics message to [GRADE] families.
+
+Tell me:
+- What a family needs to know that is missing — timing, location, cost,
+  supervision, what to bring, what to do if they cannot
+- Any consent, medical or emergency-contact element that appears incomplete
+- Every ambiguous date, time or place, quoted
+- Anything stated as policy that I should verify before sending
+- The three questions families will email me about after reading this
+- Anything assuming a family has a car, a smartphone, spare money, or a free
+  weekday
+
+Then tell me the single addition that would prevent the most replies.
+
+I will check all consent and safeguarding elements against my school&#x27;s own
+requirements.
+
+MESSAGE:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Add the missing items before sending, not after the questions arrive.</li><li>Take the consent and safeguarding flags to your school's process.</li></ul>
+<h2>Clear and accessible language</h2></article>
+<article class="card"><div class="head"><span class="pid">PC-026</span><h3>Rewrite school language in plain family-friendly English</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The message is accurate and nobody outside the staffroom understands it.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this message for [GRADE] families in plain English.
+
+Rules:
+- Replace every acronym, initialism and piece of school jargon with what it
+  actually means
+- Short sentences, one idea each
+- Active voice — say who does what, rather than &quot;it has been decided&quot;
+- Keep every fact and every deadline exactly as they are
+- Do not make it warmer by making it vaguer
+
+Give me:
+- The rewritten message
+- A table of what you changed and why
+- Any term I must keep for accuracy, with a plain gloss beside it
+- Anywhere the original was ambiguous, so I can decide what it meant rather than
+  you guessing
+
+MESSAGE:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Did any fact or deadline shift in the rewrite?</li><li>Where it flagged ambiguity, decide it yourself.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-027</span><h3>Create a translation-ready message using short unambiguous sentences</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>It will go through machine translation, and idioms do not survive that.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Rewrite this message for [GRADE] families so it survives machine translation.
+
+Rules:
+- One idea per sentence, under 15 words where possible
+- No idioms, phrasal verbs, metaphors, humour or cultural references
+- No sarcasm, no understatement
+- Consistent terms — do not call the same thing two different names
+- Dates written in full, unambiguously — not 03/04, which means two different
+  days in two countries
+- Avoid words with several meanings where a plainer word exists
+
+Give me the rewritten message, and a list of anything I should have a person
+check rather than trusting to translation.
+
+Do not lose any fact in the simplification.
+
+MESSAGE:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is every date unambiguous?</li><li>Have the facts survived intact?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-028</span><h3>Audit a family message for jargon, idioms and hidden assumptions</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Checking what the message quietly assumes about a family.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this message to families.
+
+Flag and quote:
+- Jargon, acronyms and school shorthand
+- Idioms and phrasal verbs that will not translate
+- Assumptions about the family: two parents, English at home, a car, internet,
+  a printer, spare money, someone free during the school day, a quiet room, a
+  parent who can help with the subject
+- Anything implying a family is not doing enough
+- Any sentence with two possible readings
+- Anything requiring a reading level above straightforward everyday English
+
+Then give me the single sentence most likely to make a family feel judged, and
+a replacement.
+
+MESSAGE:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>The judged-feeling sentence: replace it, do not defend it.</li><li>Which assumption surprised you? That is the useful one.</li></ul>
+<h2>Difficult conversations</h2></article>
+<article class="card"><div class="head"><span class="pid">PC-029</span><h3>Prepare a calm conversation about a repeated classroom concern</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>It has come up before, and this conversation needs to go better than the last.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare me for a conversation with a family about a repeated concern in [GRADE].
+
+What keeps happening: [OBSERVABLE FACTS, WITH DATES]
+What has already been tried: [BY ME, AND BY THE FAMILY IF I KNOW]
+What I want from this conversation: [STATE IT]
+
+Give me:
+- My opening, under 30 seconds, that states the concern without a preamble that
+  makes it sound worse
+- The facts in the order I say them
+- What I say when the family disagrees with the facts
+- What I say when the family becomes upset
+- What I say when the family says it is my responsibility, or the school&#x27;s
+- The point at which I stop and listen rather than continuing
+- How I close if nothing is resolved
+
+Do not script the family&#x27;s side. Do not assume they will be difficult.
+
+Nothing here should involve me guessing at causes at home.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Are the facts verified, with dates?</li><li>Are you prepared to actually stop and listen at that point?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">PC-030</span><h3>Create a fact-based communication plan for disagreement with a family</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>You and the family see it differently, and it needs handling rather than winning.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me plan communication with a family who disagrees with me about [ISSUE] in
+[GRADE].
+
+Their position, as I understand it: [DESCRIBE IT FAIRLY]
+My position, and the evidence: [DESCRIBE IT]
+
+Give me:
+- What we actually agree on, which is usually more than it feels like
+- Where the disagreement genuinely sits — fact, interpretation, or what should
+  happen next. These need different handling and I want to know which this is
+- What I would need to see to change my view, stated honestly
+- What is not negotiable, and why, in one sentence a family can accept
+- What I put in writing and what stays a conversation
+- When this stops being mine to handle alone, and who I involve
+
+Do not tell me how to win this. If the family may be right, say so.
+
+I will follow my school&#x27;s procedures for anything formal.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>If it said the family may be right, sit with that before replying.</li><li>Involve your school's process at the point it named, not later.</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

@@ -1,0 +1,603 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 10 — Multi-step Workflows</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>Chapter 10 — Multi-step Workflows</h1><p class="lede">12 workflows</p><p>Everything so far does one job. This chapter chains them: the output of step one becomes the input to step two, and by the end you have a finished piece of work rather than a pile of drafts.</p>
+<h2>What's in here</h2>
+<table><thead><tr><th>ID</th><th>Workflow</th><th>You end up with</th></tr></thead><tbody>
+<tr><td>WF-001</td><td>Standard to complete unit</td><td>A sequenced unit with checkpoints</td></tr>
+<tr><td>WF-002</td><td>Mixed-ability lesson pack</td><td>One lesson, three routes, one discussion</td></tr>
+<tr><td>WF-003</td><td>Incident to parent conversation</td><td>A documented, careful conversation</td></tr>
+<tr><td>WF-004</td><td>Scores to report comments</td><td>A whole class of comments, traced to evidence</td></tr>
+<tr><td>WF-005</td><td>Standard to aligned assessment</td><td>A paper with a blueprint and a checked key</td></tr>
+<tr><td>WF-006</td><td>Emergency substitute pack</td><td>A day another adult can teach</td></tr>
+<tr><td>WF-007</td><td>Project launch pack</td><td>Brief, milestones and rubric that agree</td></tr>
+<tr><td>WF-008</td><td>Parent conference pack</td><td>Cards for a whole evening of conferences</td></tr>
+<tr><td>WF-009</td><td>Evidence to intervention-plan draft</td><td>A draft to take to your school's process</td></tr>
+<tr><td>WF-010</td><td>Field-trip planning pack</td><td>A plan with its gaps named</td></tr>
+<tr><td>WF-011</td><td>Weekly teacher admin pack</td><td>A week of paperwork cleared</td></tr>
+<tr><td>WF-012</td><td>Class data reflection</td><td>What the data supports, and what it does not</td></tr>
+</tbody></table>
+<h2>How to run these</h2>
+<p><strong>Keep each workflow in one conversation.</strong> Steps say things like "using the unit plan above" — that only works if the plan is above. Do not start a fresh chat between steps.</p>
+<p><strong>Read each step's output before running the next one.</strong> An error in step one becomes the foundation of steps two through six. This is the one place in the book where skipping the check is genuinely expensive.</p>
+<p><strong>If a step asks you something, answer it.</strong> Pushing on with a gap makes every later step guess.</p>
+<p><strong>Stop between steps whenever you want.</strong> A workflow is a suggested route, not a contract. Several of these end by telling you what they could not do — that is the workflow working, not failing.</p>
+<article class="card"><div class="head"><span class="pid">WF-001</span><h3>Standard to complete unit</h3></div><p class="meta">Replaces roughly 3-4 hours</p>
+<p class="lbl">When you need this</p>
+<p>A standard, a number of lessons, and nothing in between.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are going to build a unit together, one step at a time. Do only the step I
+ask for, then stop and wait. Do not run ahead.
+
+Context for all steps:
+- Grade and subject: [GRADE] [SUBJECT]
+- Standard, exact wording: [PASTE IT]
+- Number of lessons: [NUMBER]
+- Already taught: [PRIOR LEARNING]
+- Constraints: [TIME, MATERIALS, ANYTHING ELSE]
+
+STEP 1 — Unpack the standard.
+Break it into 4-6 things students must be able to do, each teachable and
+checkable in one lesson. Use only my wording; do not add requirements from
+other versions of this standard. Say what part of the standard your list does
+not cover.
+
+Then stop. I will read it and confirm before you continue.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Design the final assessment.
+Using the components from Step 1, design what students do at the end to show
+they have met the standard. Give me the task, what a strong response contains,
+and what a response looks like when the knowledge is there but the skill is not.
+Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Sequence the lessons.
+Working backward from the Step 2 assessment, sequence the [NUMBER] lessons.
+One line per lesson on what it does and why it sits there. Mark which lessons
+are load-bearing and which could be cut if we lose time. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Place the checkpoints.
+Add a checkpoint roughly every third lesson. For each: the actual question,
+what a poor result would look like, and the specific reteach for the next
+lesson. No pass percentages. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Review the whole thing.
+Audit what we have built: gaps, repetition, whether demand rises, and the two
+lessons most likely to go wrong. Be blunt. Tell me what you would change.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Check the Step 1 unpacking against the standard's real wording before Step 2.</li><li>If Step 5 finds a real problem, go back rather than teaching around it.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-002</span><h3>Mixed-ability lesson pack</h3></div><p class="meta">Replaces roughly 2 hours</p>
+<p class="lbl">When you need this</p>
+<p>One lesson that works for a class with a wide spread.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are building a differentiated lesson in steps. Do one step at a time and
+stop after each.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- Objective: [OBJECTIVE]
+- Lesson length: [MINUTES]. Class size: [NUMBER]
+- The spread, described as needs not students: [DESCRIBE]
+- Materials: [LIST]
+
+STEP 1 — Build the core lesson.
+Plan the on-level lesson: opening, modelling, guided practice, independent
+work, exit ticket. Build it backward from what would show the objective was
+met. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Add the two other routes.
+From the Step 1 lesson, create a scaffolded route and an extension route. Same
+thinking, same materials, same finishing time. The extension must be harder
+thinking, not more items. Name the routes neutrally, in no order that reads as
+a ranking. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Write the shared check.
+One check every student completes, regardless of route, from which I cannot
+tell which route they took. Give me what each level of response looks like.
+Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Plan the closing discussion.
+A discussion that works for all three routes without anyone announcing which
+they did. An opening question everyone can answer, the order I take
+contributions, and the shared conclusion. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check the dignity.
+Review all three routes. Would the class work out which is the lesser one? Does
+every route have something worth sharing? Tell me the single change that would
+most equalise them.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Answer Step 5 honestly yourself before teaching it.</li><li>Could you tell from the shared check which route a student took?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-003</span><h3>Incident to parent conversation</h3></div><p class="meta">Replaces roughly 1 hour, and a lot of worrying</p>
+<p class="lbl">When you need this</p>
+<p>Something happened, and the conversation has to be right.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me prepare a family conversation, one step at a time. Stop after each step.
+
+Before we start: if what I describe involves harm, abuse, or immediate danger,
+stop and tell me to follow my school&#x27;s safeguarding process instead of
+continuing this workflow.
+
+Context:
+- Grade: [GRADE]
+- What happened, observably, with dates: [DESCRIBE. No student names.]
+- What I have already done: [LIST IT]
+- What I want from the conversation: [STATE IT]
+
+STEP 1 — Separate fact from interpretation.
+Go through what I wrote. List what I observed, and separately what I have
+concluded or assumed. Flag anything I have written as fact that is actually
+inference. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Build the factual account.
+Using only the observed facts from Step 1, write the account I would give the
+family: what happened, when, what I did. No character description, no cause, no
+speculation about home. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Prepare the conversation.
+My opening under 30 seconds, the facts in the order I say them, and what I say
+when the family disagrees, becomes upset, or says it is the school&#x27;s
+responsibility. Include the point where I stop and listen. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Write the follow-up.
+A summary email recording what was discussed and agreed, with owners and dates.
+Record disagreement as disagreement. Invite correction. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check it.
+Review everything: any claim I cannot evidence, anywhere a family could
+reasonably read blame, anything that belongs in a safeguarding process rather
+than a conversation with me. Tell me the one sentence to cut.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>If Step 1 flags inference as fact, fix it before Step 2.</li><li>If any step raises safeguarding, stop and use your school's process.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-004</span><h3>Scores to report comments</h3></div><p class="meta">Replaces roughly 3 hours</p>
+<p class="lbl">When you need this</p>
+<p>Report season, a whole class, one sitting.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are drafting report comments in steps. Stop after each step.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- Character limit: [NUMBER, or none]
+- Evidence table: [PASTE IT. Use initials or Student A, B, C. No full names.]
+
+STEP 1 — Check my evidence.
+Look at my table. Tell me which rows have enough to write a meaningful comment,
+which are thin, and which are so thin that I should write a shorter comment
+rather than a padded one. Do not draft anything yet. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Build the comment structure.
+A structure: strength with evidence, then one next step. Give me 6 openings and
+6 closings I can rotate so thirty comments do not read as one. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Draft the comments.
+Draft one comment per row. Every clause must come from that student&#x27;s own row.
+Never carry a detail, phrase or achievement from one row into another. For a
+thin row, write shorter — do not borrow to fill it. Mark any clause you could
+not source. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Check for leakage.
+Go back over the drafts against the table. Report separately: any detail
+appearing in the wrong student&#x27;s comment, any two comments similar enough that
+a family comparing them would notice, any claim not in the table. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Final pass.
+Check every comment for: unfilled placeholders, fixed-ability language, comment
+on effort or personality rather than learning, promises about future
+performance, and repeated openings. List what needs my attention.</pre></div>
+<p class="lbl">Before you use it</p>
+<p>error that does real damage.</p>
+<ul><li>Verify Step 4's leakage findings against your table yourself. This is the</li><li>Fill every placeholder before submitting.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-005</span><h3>Standard to aligned assessment</h3></div><p class="meta">Replaces roughly 2-3 hours</p>
+<p class="lbl">When you need this</p>
+<p>A paper that tests what you taught, with a key you can trust.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are building an assessment in steps. Stop after each.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- Objectives or standard, exact wording: [PASTE THEM]
+- Time available: [MINUTES]. Total marks: [NUMBER]
+- What was actually taught: [LIST IT]
+
+STEP 1 — Build the blueprint.
+A table: each objective, marks allocated with a reason, the type of question
+that suits it, and how many questions. Say which objectives cannot be assessed
+in writing and should be assessed another way. Do not write questions yet.
+Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Write the questions.
+Using the blueprint, write the paper. Marks shown per question. For any
+multiple choice, every wrong option must be a real misconception you can name.
+Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Write the key.
+A full worked key: answers, working, the most likely wrong answer for each and
+where it comes from. Check every calculation and show it. Flag anything you
+cannot verify independently rather than presenting it as checked. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Audit the paper.
+Against the blueprint: does each question test what it should, is any wording
+ambiguous, is the reading demand higher than the subject demand, and does any
+question allow a second defensible answer? Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Time it.
+Estimate honestly how long a middling student needs, question by question.
+Compare with the time I have. Tell me what to cut if it does not fit, and what
+evidence I lose by cutting it.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Work the entire key yourself. Step 3 flags what it doubts; check the rest too.</li><li>Take Step 5's timing seriously. Papers always run long.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-006</span><h3>Emergency substitute pack</h3></div><p class="meta">Replaces roughly 90 minutes, usually at 6am</p>
+<p class="lbl">When you need this</p>
+<p>You are ill, and someone else has your classes today.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build me a substitute pack in steps. Stop after each. Keep it fast — I am
+writing this while unwell.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- Periods to cover: [NUMBER], each [MINUTES]
+- Where the class is up to: [TOPIC]
+- What is in the room: [MATERIALS. Say if nothing can be printed.]
+
+STEP 1 — Choose the work.
+Propose work that is meaningful, needs no subject knowledge from the
+substitute, requires no preparation, and does not depend on knowing the class.
+Tell me why each choice survives a stranger teaching it. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Write the student task.
+Write it out in full, ready to photocopy or dictate, with everything students
+need on the page. Include the answer key. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Write the substitute directions.
+Minute by minute. Exactly what goes on the board. What to say. What to do when
+students say we have done this, when someone finishes early, and when someone
+refuses. No step requiring subject knowledge. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Write the class note.
+Three lines on what this class is like and what to watch for, without
+describing any individual student. Plus what to leave me a note about, and where
+work gets collected. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check it.
+Read the whole pack as someone who has never taught this subject and never met
+this class. Tell me every point where they would have to guess.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Fix every guess-point Step 5 finds. That is the whole value of this pack.</li><li>Check the answer key, even at 6am.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-007</span><h3>Project launch pack</h3></div><p class="meta">Replaces roughly 3 hours</p>
+<p class="lbl">When you need this</p>
+<p>A project where the brief, the milestones and the rubric actually agree.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are building a project pack in steps. Stop after each.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- Objective: [WHAT STUDENTS SHOULD BE ABLE TO DO]
+- Duration: [WEEKS OR LESSONS]
+- Constraints: [CLASS SIZE, RESOURCES, WHETHER GROUPS]
+
+STEP 1 — Define the outcome.
+The driving question and the final product. The question must be open enough to
+sustain the work and narrow enough to finish. Be honest about scope: if the
+duration is not enough for this product, say so and propose one that fits. Then
+stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Write the student brief.
+One page, written for students. What they are making, why, what it must
+contain with the learning listed first, what is up to them, and the three
+questions students will ask on day one, answered in advance. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Build the milestones.
+One per week, each producing something I can look at in under two minutes per
+student or group. What on track and behind look like at each, and the specific
+intervention for behind. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Write the rubric.
+Criteria drawn from the objective, not from the format. Most weight on thinking
+and subject learning; presentation as one small criterion. Nothing rewarding
+resources a student may not have at home. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check the three agree.
+Compare the brief, the milestones and the rubric. Does the rubric reward what
+the brief asks for? Do the milestones lead to it? Could a student follow the
+brief exactly and still score badly? Tell me every mismatch.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Step 5 is the point of this workflow. Fix every mismatch before handing it out.</li><li>Could a beautiful project with weak thinking score well? Fix the rubric if so.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-008</span><h3>Parent conference pack</h3></div><p class="meta">Replaces roughly 2-3 hours</p>
+<p class="lbl">When you need this</p>
+<p>Twenty-four families in one evening, ten minutes each.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>We are preparing conference cards in steps. Stop after each.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- Minutes per family: [NUMBER]
+- My notes: [PASTE THEM. Initials or Student A. No full names.]
+
+STEP 1 — Sort my notes.
+For each student, tell me what my notes support saying, and where they are too
+thin. Flag anywhere I have written an impression as though it were evidence.
+Do not draft cards yet. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Build the card format.
+Half a page I can scan while a family sits down: one strength with evidence,
+one growth area with evidence, one open question for the family, one thing they
+could do at home in under ten minutes needing no subject knowledge, and my
+opening and closing sentences. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Fill the cards.
+One card per student, using only that student&#x27;s notes. Never carry a detail
+between students. Where my notes are thin, write a shorter card and say what I
+should observe before the conference. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Prepare for the hard ones.
+From my notes, identify which conversations are likely to be difficult. For
+each: my opening, what I say if the family disagrees, and the point where I say
+this needs a longer separate meeting. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check the cards.
+Any claim I cannot evidence, any suggestion assuming a family has money,
+internet, time, or subject knowledge, and any card that reads as a verdict
+rather than a conversation.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Fix anything Step 1 flags as impression before it reaches a card.</li><li>Practise the Step 4 openings aloud once.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-009</span><h3>Evidence to intervention-plan draft</h3></div><p class="meta">Replaces roughly 2 hours</p>
+<p class="lbl">When you need this</p>
+<p>Preparing a draft to take into your school's process — not to act on alone.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me draft an intervention plan in steps. Stop after each.
+
+Read this first: this is a draft to take into my school&#x27;s own process. It is not
+a decision, a diagnosis, or a referral. If at any step the evidence points
+toward something requiring a specialist, a safeguarding response, or a formal
+assessment, say so and tell me to stop and use my school&#x27;s process instead of
+continuing.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- What I observe, with dates and frequency: [DESCRIBE. No names.]
+- What I have already tried, and what happened: [LIST IT]
+- What my school&#x27;s process expects at this stage: [DESCRIBE IT, or say unknown]
+
+STEP 1 — Sort the evidence.
+Separate what I have observed from what I have concluded. Give me three
+possible explanations consistent with the observations, and what would
+distinguish them. Name no cause. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Identify what I do not know.
+List what I would need to observe or check to tell those explanations apart,
+and the quickest classroom way to find each out. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Draft the classroom actions.
+Specific things I do in the classroom, each small enough to sustain. For each:
+what I do, how often, and what I record. Nothing requiring resources or staffing
+I have not mentioned. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Set the review.
+What I look at, when, and the three outcomes: working, partly working, not
+working. For each, the decision — including escalating to my school&#x27;s process,
+which is a legitimate outcome and not a failure. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Check the draft.
+Anywhere I have named a cause I cannot know, anywhere this reaches beyond what
+a class teacher should decide alone, and anything that belongs in my school&#x27;s
+formal process now rather than after a review cycle.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Take this draft to your school's process. It is not a plan you own alone.</li><li>If any step says stop and escalate, do that.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-010</span><h3>Field-trip planning pack</h3></div><p class="meta">Replaces roughly 2 hours</p>
+<p class="lbl">When you need this</p>
+<p>A trip plan with its gaps named rather than filled in.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a trip planning pack in steps. Stop after each.
+
+Read this first: do not state any ratio, form, timescale, insurance
+requirement or policy I have not given you. Where a standard requirement is
+missing from what I supply, write [CHECK WITH SCHOOL] rather than filling it in.
+I will verify everything against my school&#x27;s own procedures.
+
+Context:
+- Destination and activity: [DESCRIBE]
+- Date, year group, number of students: [STATE THEM]
+- Adults available: [NUMBER AND ROLES]
+- My school&#x27;s requirements as I understand them: [PASTE OR SUMMARISE]
+
+STEP 1 — Build the backwards checklist.
+Working back from the trip date: approvals, consent, transport, staffing,
+medical and dietary information, money, communication. Mark every item I did
+not supply as [CHECK WITH SCHOOL]. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Check accessibility.
+Go through the activity and the day. Anything assuming a student can walk far,
+climb, tolerate noise or crowds, eat a standard meal, or afford a cost. List
+these separately — a trip a student cannot join is a problem to solve before
+booking. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Build the day schedule.
+One page for every adult: each time slot, the responsible adult by name, head
+count points with boxes to write the number and time, and blank fields for
+contacts and the meeting point. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Plan the contingencies.
+Late coach, bad weather, a student unwell, a student separated from the group,
+a return after the school day ends. Who is told, in what order. Mark anything
+that depends on school procedure as [CHECK WITH SCHOOL]. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — List the unknowns.
+Everything in this pack I have written as settled that is actually assumed, and
+everything still marked [CHECK WITH SCHOOL], as one list I can take to whoever
+approves trips.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Step 5's list is what you take to the approver. Do not shorten it.</li><li>Solve the accessibility gaps before booking.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-011</span><h3>Weekly teacher admin pack</h3></div><p class="meta">Replaces roughly 90 minutes</p>
+<p class="lbl">When you need this</p>
+<p>Friday afternoon, and the paperwork has stacked up.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me clear this week&#x27;s admin in steps. Stop after each.
+
+Here is everything, unsorted: [DUMP YOUR NOTES, EMAILS TO WRITE, MEETING NOTES,
+DEADLINES, THINGS YOU PROMISED SOMEONE. No student names.]
+
+STEP 1 — Sort it.
+Into four piles: needs an email, needs a decision from me, needs someone else,
+and can be dropped. For the drop pile, say why each can go. Tell me which item
+is most overdue and which has the largest consequence if missed — they are
+often not the same. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Draft the emails.
+For each item needing an email: the ask in the first line, under 120 words, one
+action each, with a subject line naming the action and deadline. Use only facts
+from my notes; mark anything I need to verify. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Turn the meeting notes into minutes.
+Decisions, actions with owners and dates, and open items. Write [OWNER?] or
+[DATE?] where my notes do not say — do not assign either yourself. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Build next week&#x27;s list.
+What is genuinely due next week, ordered by deadline. Separately, what I have
+carried for more than two weeks — those need deciding or dropping, not carrying
+again. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Tell me what I am avoiding.
+From everything I dumped, which item have I clearly been putting off, and what
+is the smallest first step on it.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Fill every <code>[OWNER?]</code> and <code>[DATE?]</code> before circulating minutes.</li><li>Step 5 is usually right. Do the smallest step today.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">WF-012</span><h3>Class data reflection</h3></div><p class="meta">Replaces roughly 90 minutes</p>
+<p class="lbl">When you need this</p>
+<p>A set of results, and a decision to make about what to do next.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Help me read this class data in steps. Stop after each.
+
+Context:
+- Grade and subject: [GRADE] [SUBJECT]
+- What the assessment covered: [DESCRIBE]
+- The data: [PASTE IT — no student names]
+- What I taught, and how: [DESCRIBE BRIEFLY]
+
+STEP 1 — Describe what is there.
+Only what the data shows. Patterns, spread, which items were missed most. No
+explanations yet, no conclusions about students. If the data is too thin to
+support a pattern, say so. Then stop.</pre></div>
+<p class="lbl">Then, one at a time</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 2 — Explain it, several ways.
+For each main pattern, give me three possible explanations — including ones
+that are not about my teaching, and ones about the assessment itself rather
+than the learning. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 3 — Test the explanations.
+For each, what evidence would confirm or rule it out, and how I would get that
+in a normal week. Tell me which explanation I am most likely to reach for
+without checking. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 4 — Decide the action.
+Based on what the data actually supports: what I reteach, what I move on from,
+and what I gather more evidence on before deciding. For each, why. Then stop.</pre></div>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>STEP 5 — Say what this cannot tell me.
+What I would be over-reading if I drew it from this data, and what I should not
+conclude about any individual student from a single assessment.</pre></div>
+<p class="lbl">Before you use it</p>
+<ul><li>Step 3 names your own bias. Sit with that one.</li><li>Step 5 matters most. Do not carry an over-reading into a report comment.</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

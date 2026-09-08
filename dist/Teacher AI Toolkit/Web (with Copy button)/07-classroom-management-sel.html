@@ -1,0 +1,752 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 7 — Classroom Management and SEL</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>Chapter 7 — Classroom Management and SEL</h1><p class="lede">25 prompts</p><p>Most behaviour problems are routine problems wearing a disguise. These prompts work on the structures — how a transition runs, what you say in the first ten seconds, how a conversation gets repaired afterwards — rather than on the student.</p>
+<h2>What's in here</h2>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
+<tr><td>Routines and transitions</td><td>6</td><td>The same four minutes lost, every day</td></tr>
+<tr><td>Behaviour reset support</td><td>5</td><td>It went wrong; you want it back</td></tr>
+<tr><td>Restorative conversations</td><td>4</td><td>Repair, not punishment</td></tr>
+<tr><td>Social-emotional learning</td><td>4</td><td>Building it into normal lessons</td></tr>
+<tr><td>Morning meetings</td><td>3</td><td>Openings a shy student can join</td></tr>
+<tr><td>Seating and grouping</td><td>3</td><td>Who sits where, on purpose</td></tr>
+</tbody></table>
+<h2>Worth knowing before you start</h2>
+<p><strong>This chapter has the firmest limit in the book.</strong> If a situation involves harm, abuse, or immediate danger, stop and follow your school's safeguarding procedure. Do not work it through with an AI tool. Nothing here is a substitute for that process, and several prompts are written to say so and stop.</p>
+<p>Focus on the behaviour and the repair. Nothing here should produce a judgement about a child's character, home life or motivation.</p>
+<p>A restorative conversation is not a forced apology. If a draft demands one, change it — several prompts rule it out explicitly.</p>
+<p>Keep in-the-moment scripts under fifteen words. Anything longer becomes an audience.</p>
+<h2>Routines and transitions</h2>
+<article class="card"><div class="head"><span class="pid">CM-001</span><h3>Design and teach a classroom routine</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The same four minutes disappear every day at the same point.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a routine for [WHAT — entry, packing up, handing work in, moving to the
+carpet] in [GRADE].
+
+Class size: [NUMBER]. Room: [DESCRIBE].
+What currently happens: [DESCRIBE THE MESS]
+
+Give me:
+- The routine as a sequence of steps, one action per step
+- The exact words I say to start it, under 10 seconds
+- The signal that tells me everyone has finished
+- How I teach it in the first week: what I model, what they practise, what I
+  correct
+- What I do on day 20 when it starts to slip
+
+Do not build in a reward, a points system, or a competition. The routine should
+work because it is clear, not because it is incentivised.
+
+Keep it to steps a [GRADE] student can hold in their head.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Can a student hold all the steps at once? Cut one if not.</li><li>Would these words sound like you saying them?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-003</span><h3>Teach an efficient entry routine with an immediate learning start</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The first five minutes are the ones you never get back.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an entry routine for [GRADE] [SUBJECT] where learning starts before I
+have finished the register.
+
+Constraints: [DESCRIBE — do they queue outside, arrive from different lessons,
+need equipment handed out]
+
+Give me:
+- What is on the board or on desks before they arrive
+- What a student does in their first 60 seconds without being told
+- What I do during that time
+- How a late arrival joins without disrupting or being announced
+- What I do about the student who arrives with nothing
+
+Do not make the opening task new content — it must be startable by a student
+who missed the last lesson.
+
+Tell me what to change if my room is entered through a single narrow door.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a student who missed yesterday still start?</li><li>Does the late arrival keep their dignity?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-004</span><h3>Create a calm transition between whole-group and independent work</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The moment the noise doubles and half the class stops working.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design the transition from whole-group teaching to independent work in [GRADE]
+[SUBJECT].
+
+Give me:
+- The exact words, under 15 seconds, one instruction at a time
+- The order things happen in — instructions before materials, always
+- How students know what to do if they are stuck in the first minute, without
+  queuing at my desk
+- What I do in the first 90 seconds, and where I stand
+- The signal for a student who needs me, that does not involve a raised hand
+  held for four minutes
+
+A [GRADE] class will do the first thing you say and forget the rest. Write
+accordingly.
+
+Then tell me the single most common reason this transition fails.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is each instruction one action?</li><li>Are materials handed out after the instructions, not during?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-005</span><h3>Build a materials routine that reduces waiting and lost equipment</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
+<p class="lbl">When you need this</p>
+<p>Handing out and collecting eats more time than anyone admits.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a materials routine for [GRADE] [SUBJECT].
+
+What gets distributed: [LIST IT]
+Class size: [NUMBER]. Layout: [DESCRIBE]
+
+Give me:
+- How materials get to students without me walking to every desk
+- Who does what, and how those jobs rotate so they are not a status
+- The collection routine, and how I know instantly what is missing
+- What happens when something is missing, that does not turn into an
+  investigation
+- What I do about the student who never has a pen, without making it a public
+  event
+
+Do not build a system that requires students to pay, replace, or be publicly
+recorded as having lost something.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the no-pen student handled quietly?</li><li>Do the jobs rotate, or become a privilege?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-006</span><h3>Plan a dismissal routine that protects safety and learning time</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The last four minutes, which are also the least safe four minutes.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a dismissal routine for [GRADE].
+
+Context: [WHERE THEY GO NEXT, WHETHER THEY COLLECT BAGS, CORRIDOR OR PLAYGROUND]
+
+Give me:
+- When packing up starts, and why not earlier
+- The order students leave in, and how that is decided fairly
+- The 30-second closing that means the lesson ends rather than stops
+- What I do if the bell goes mid-sentence
+- How I hold back one student for a word without the class registering it as
+  trouble
+
+I will check anything about supervision, corridors or leaving the site against
+my school&#x27;s own procedures.
+
+Do not use leaving early as a reward, or leaving last as a consequence.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check supervision arrangements against your school's policy.</li><li>Would holding one student back be noticed by the class?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-007</span><h3>Audit a routine using timing, participation and independence evidence</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The routine exists. You are not sure it is earning its place.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] routine: [DESCRIBE IT]
+
+What actually happens: [DESCRIBE, INCLUDING HOW LONG IT TAKES]
+
+Tell me:
+- Where the time actually goes, step by step
+- Which step needs me, and whether it should
+- Where students wait with nothing to do
+- Whether a student who joined this term would know what to do
+- Whether it depends on my presence, my voice, or my mood on the day
+- Whether any part singles a student out
+
+Then tell me:
+- The one step to remove
+- Whether this routine is worth its time at all
+
+Be blunt about a routine that has become habit rather than function.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Time it honestly next lesson before deciding.</li><li>Does it work when you are tired? That is the real test.</li></ul>
+<h2>Behaviour reset support</h2></article>
+<article class="card"><div class="head"><span class="pid">CM-008</span><h3>Create a brief private behaviour-reset conversation</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Something needs saying, and it must not become a performance.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare a brief private conversation with a [GRADE] student about a classroom
+behaviour.
+
+What happened, observably: [DESCRIBE THE BEHAVIOUR — not the student]
+What I want: [THE SPECIFIC CHANGE]
+
+Give me:
+- What I say in the moment, under 15 words, with no audience
+- What I say one-to-one afterwards — opening, the point, the ask
+- One question that gives the student a chance to say something I do not know
+- How I close so the student can return without a face to save
+- Three things NOT to say, and why each makes it worse
+
+Rules:
+- Address the behaviour and its effect, never the character
+- Do not ask a student to explain themselves in front of others
+- Do not require an apology
+- Do not speculate about home, mood, or what is going on for them
+
+If what I described suggests harm, danger or a safeguarding concern, stop and
+tell me to follow my school&#x27;s process instead.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the in-the-moment line short enough to say without a pause?</li><li>Is anything here about the child rather than what they did?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-009</span><h3>Write neutral redirection language for a recurring disruption</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The twelfth time today, and your tone is starting to show.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write redirection language for this recurring [GRADE] classroom behaviour:
+
+[DESCRIBE IT — what happens, how often, in what part of the lesson]
+
+Give me:
+- Four redirections, escalating in directness, each under 12 words
+- A non-verbal option for the first level
+- The exact wording that names the expected action rather than the problem —
+  &quot;pen in your hand&quot; rather than &quot;stop fiddling&quot;
+- What I say the fifth time in one lesson, that is not the fourth said louder
+- The point at which continuing to redirect is the wrong response, and what
+  replaces it
+
+Rules: no sarcasm, no rhetorical questions, no comparisons to other students,
+no public countdowns, and nothing that requires the student to respond verbally
+in front of the class.
+
+Then tell me what the behaviour might be communicating that redirection cannot
+address.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Say them aloud. Any sarcasm you did not intend?</li><li>Do they name the wanted action rather than the problem?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-010</span><h3>Plan a re-entry routine after a learner leaves the classroom</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>They come back, and how that goes decides the rest of the lesson.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan how a [GRADE] student returns to the classroom after leaving it.
+
+Context: [WHY THEY LEFT, HOW LONG, WHERE THEY WENT]
+
+Give me:
+- What I say as they come in, under 10 words, that does not restart the incident
+- How they rejoin the work without needing a long explanation
+- When the conversation about what happened takes place — not now
+- What the rest of the class sees, and how I keep it unremarkable
+- What I do if they return still upset
+
+Rules:
+- Re-entry is not the moment for consequences or a conversation about behaviour
+- Do not require the student to apologise before rejoining
+- Do not have them stand at the door waiting for permission in front of everyone
+
+I will follow my school&#x27;s procedures for anything involving where a student went
+and who supervised them.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does re-entry stay separate from the conversation?</li><li>Would the class notice anything?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-011</span><h3>Create a reset menu that preserves dignity and instructional access</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Options a student can take before things escalate.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a short menu of reset options for [GRADE] students who need a moment.
+
+Room and supervision constraints: [DESCRIBE]
+
+Give me:
+- 4-5 options, from smallest to largest — a change of position, a task with
+  hands, a short walk with a purpose
+- How a student takes one without asking in front of the class
+- How each keeps the student in the room and in the lesson where possible
+- What each is not: not a reward, not a punishment, not time out
+- How the student returns to work afterwards
+
+Rules:
+- Nothing that removes access to the learning
+- Nothing visible enough to mark a student out
+- Nothing requiring supervision I do not have
+- Nothing that can be earned or lost
+
+Then tell me which option is most likely to be misused, and how to handle that
+without withdrawing it from everyone.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does any option cost the student the lesson?</li><li>Can a student take one privately?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-012</span><h3>Audit a response plan for escalation, shame and inconsistent expectations</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Before the plan is in place for a term.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] behaviour response plan: [PASTE OR DESCRIBE IT]
+
+Tell me:
+- Where a step escalates rather than de-escalates
+- Anything that makes a student&#x27;s behaviour visible to the class — a chart, a
+  name on the board, a public warning, a colour change
+- Anywhere the response depends on my mood, energy, or how the day has gone
+- Where the same behaviour would get different responses from different
+  students, and why that might be happening
+- Anything that removes learning as a consequence
+- Whether there is a route back for a student who has had a bad day
+
+Then tell me the single step most likely to make a situation worse, and what
+replaces it.
+
+Be direct about anything that shames a child, whatever it is called.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is anything public that should be private?</li><li>Is there a genuine route back?</li></ul>
+<h2>Restorative conversations</h2></article>
+<article class="card"><div class="head"><span class="pid">CM-002</span><h3>Prepare a restorative conversation</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Something happened between students, and it needs repair rather than a verdict.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Prepare a restorative conversation between [GRADE] students.
+
+What happened, observably: [DESCRIBE — no names, no interpretation]
+Who is involved: [ROLES ONLY, e.g. two students, one affected]
+
+Give me:
+- How I open, so nobody arrives expecting a trial
+- Neutral questions for each person, in order
+- The question that moves it from what happened to what it did to someone
+- How the affected student says what they need, without being put on the spot
+- How we close, whether or not agreement is reached
+
+Rules — these are not optional:
+- No forced apology, and no requirement that anyone accept one
+- No requirement that anyone disclose feelings they do not want to share
+- Either student may stop, and stopping is not a failure
+- I do not determine guilt in this conversation
+
+If what I described involves harm, abuse, bullying or immediate danger, stop and
+tell me to follow my school&#x27;s safeguarding process instead of continuing.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>If it flagged safeguarding, stop and use your school's process.</li><li>Is any question really an accusation?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-013</span><h3>Create questions that explore impact, needs and possible repair</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Questions that open something rather than extract a confession.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write restorative questions for a [GRADE] situation: [DESCRIBE IT NEUTRALLY]
+
+Give me four sets:
+- What happened — factual, without inviting justification
+- Who was affected and how
+- What is needed now
+- What could be different next time
+
+Rules:
+- No question beginning &quot;why did you&quot;, which produces defence, not reflection
+- No question a student can only answer by admitting fault
+- Every question answerable by a student who is upset, embarrassed, or
+  monosyllabic
+- Include the shorter version of each for a student who cannot manage the full
+  question
+
+Then tell me:
+- Which question most often gets a shrug, and what to do with a shrug
+- Which question I should skip if the student is not ready</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Any "why did you" left?</li><li>Could an embarrassed student answer these?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-014</span><h3>Build a voluntary repair agreement with a scheduled follow-up</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Something agreed, that both students actually agreed to.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a repair agreement after a restorative conversation between [GRADE]
+students.
+
+What was discussed: [SUMMARISE — no names]
+What was offered: [BY WHOM]
+
+Give me:
+- The agreement in the students&#x27; own kind of language, not mine
+- What each person will do, only where they offered it
+- A follow-up date, and who initiates it
+- What happens if it does not hold — which is not a punishment
+- How the agreement ends, so it is not open forever
+
+Rules:
+- Nothing in it that was not voluntarily offered
+- No apology as a required item
+- No public element — nothing performed in front of the class
+- The affected student is not required to forgive, accept, or be satisfied
+
+If either student was not genuinely willing, say so and tell me the agreement
+should not be written.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Was every item genuinely offered, not extracted?</li><li>Is there an end date?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-015</span><h3>Audit a restorative script for coercion, blame and safeguarding limits</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Restorative language can carry coercion inside it.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this restorative script or plan: [PASTE IT]
+
+Tell me:
+- Any question that assigns blame while appearing neutral, quoted
+- Anywhere a student is required to apologise, forgive, or say they are fine
+- Anywhere disclosure of feelings is compulsory rather than invited
+- Anything that would be unsafe if there is a power imbalance between the
+  students
+- Anywhere the process continues when a student clearly wants to stop
+- Anything that belongs in a safeguarding process rather than a classroom
+  conversation
+
+Then tell me:
+- The single most coercive element, however gently worded
+- The point at which this should stop being handled by me
+
+Be direct. A script that pressures a child into performing reconciliation is
+worse than no script.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Act on the power-imbalance flag before running the conversation.</li><li>Where it says stop being yours to handle — take that to your school.</li></ul>
+<h2>Social-emotional learning</h2></article>
+<article class="card"><div class="head"><span class="pid">CM-016</span><h3>Create an age-appropriate lesson on naming and managing emotions</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
+<p class="lbl">When you need this</p>
+<p>Teaching the vocabulary before it is needed in an argument.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [GRADE] lesson on naming and managing emotions.
+
+Give me:
+- The emotion vocabulary appropriate for [GRADE], and the words to leave out
+  because they are clinical rather than everyday
+- A way in that uses fictional characters or scenarios, never students&#x27; own
+  experiences
+- One strategy taught properly rather than five mentioned
+- Practice using the strategy on a fictional situation
+- What students take away that they could use tomorrow
+
+Rules:
+- No student is asked to share a personal feeling or experience
+- Nothing that asks students to rate, chart or report their own mood publicly
+- No language that pathologises ordinary feelings
+- This is teaching vocabulary and strategy, not therapy
+
+If any part of what I have asked for belongs with a counsellor rather than a
+teacher, say so.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is any student required to disclose anything?</li><li>Is the vocabulary everyday, not clinical?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-017</span><h3>Teach a practical strategy for pausing before responding</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>One strategy, taught well enough to be used under pressure.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Teach [GRADE] students one strategy for pausing before responding.
+
+Give me:
+- The strategy, in three steps a student can remember when upset
+- Why it works, in language a [GRADE] student accepts — not neuroscience
+- How I teach it when nobody is upset, which is the only time it can be taught
+- Three fictional scenarios to practise on
+- The cue I use in the moment that is not &quot;calm down&quot;
+- What I say when a student uses it and it does not work
+
+Rules:
+- Nothing requiring a student to breathe in a particular way in front of others
+- Nothing visible enough to mark a student out as needing it
+- The strategy belongs to the student, not to me — they choose to use it
+
+Then tell me what this strategy cannot do, so I do not expect too much of it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Can a student use it without anyone noticing?</li><li>Is "why it works" believable to a student, or a lecture?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-018</span><h3>Build an empathy activity without requiring personal disclosure</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Empathy work that does not turn into an exercise in exposure.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [MINUTES]-minute [GRADE] empathy activity.
+
+Topic or context: [DESCRIBE]
+
+Rules — these define the task:
+- Students work with fictional characters or scenarios only
+- No student is asked to share a personal experience, feeling, or family
+  circumstance
+- No activity where students imagine being someone with a specific identity,
+  disability or circumstance as a simulation
+- Nothing that could expose a student&#x27;s own situation by how they respond
+
+Give me:
+- The activity
+- The fictional scenarios, written so no student would recognise themselves
+- The discussion questions
+- What I do if a student volunteers something personal anyway
+- The closing that does not require anyone to have been moved
+
+Then tell me what could go wrong with this activity in a class where I do not
+know everyone&#x27;s circumstances.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a scenario be someone's actual life? Change it if so.</li><li>Do you know what to do if a student discloses?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-019</span><h3>Audit an SEL activity for privacy, culture and clinical overreach</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>SEL work goes wrong quietly, and usually with good intentions.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] SEL activity: [PASTE OR DESCRIBE IT]
+
+Tell me:
+- Anywhere a student is asked or nudged to disclose something personal
+- Anywhere a response would reveal a student&#x27;s home, family or circumstances to
+  the class
+- Anything assuming a family shape, faith, culture or way of expressing emotion
+- Anything crossing from teaching into counselling or therapy
+- Any use of clinical language a teacher should not be applying to a child
+- Anything a student could not opt out of without being noticed
+
+Then tell me:
+- The single element most likely to harm a child who is already struggling
+- Whether this activity should be run by me at all
+
+Be direct. Good intentions are not the standard here.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>If it says this is not yours to run, take that seriously.</li><li>Can a student opt out invisibly?</li></ul>
+<h2>Morning meetings</h2></article>
+<article class="card"><div class="head"><span class="pid">CM-020</span><h3>Plan a 10-minute morning meeting with a clear community goal</h3></div><p class="meta">Grades K-2, 3-5</p>
+<p class="lbl">When you need this</p>
+<p>Ten minutes that set the day, rather than filling it.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a 10-minute morning meeting for [GRADE].
+
+This week&#x27;s focus: [WHAT YOU WANT TO BUILD]
+
+Give me:
+- A greeting that works for [NUMBER] students in the time available
+- A share prompt about something students choose, never about home or feelings
+- A short activity, 2-3 minutes, needing no materials
+- The closing line that sends them into the day
+- Realistic timing — greetings take longer than anyone plans
+
+Rules:
+- Every part is joinable by a student who does not want to speak
+- No prompt about family, home, weekend, holidays, possessions or feelings
+- No student is the focus unless they chose to be
+
+Then tell me what to cut when the meeting has to be six minutes.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does any prompt touch home, money, or family?</li><li>Can a silent student take part?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-021</span><h3>Create inclusive check-in options that do not force disclosure</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Checking in without requiring anyone to perform being fine.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design check-in options for a [GRADE] class that do not require disclosure.
+
+Give me:
+- 4 ways a student can check in, including at least one entirely non-verbal and
+  one that involves no signal at all
+- What I actually learn from each, honestly
+- How a student signals they want to talk later, privately
+- What I do with what I notice, and what I do not do with it
+- How I avoid a check-in becoming a public mood display
+
+Rules:
+- No mood charts, colour cards, or anything the class can see
+- No question requiring a student to say they are not fine in order to be heard
+- Opting out must be invisible and unremarkable
+- I am not collecting data on children&#x27;s emotional states
+
+Then tell me what a check-in cannot tell me, so I do not read too much into it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is opting out genuinely invisible?</li><li>What are you doing with what you notice? Decide before you start.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-022</span><h3>Build a weekly morning-meeting sequence without repetitive prompts</h3></div><p class="meta">Grades K-2, 3-5</p>
+<p class="lbl">When you need this</p>
+<p>Five days that build, rather than five days of the same question.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan five morning meetings for [GRADE], 10 minutes each, threaded around
+[THEME].
+
+Give me:
+- Five days, each with a greeting, a share prompt, and a short activity
+- How Friday connects back to Monday, so the week is one thing
+- Prompts that vary in kind, not just in wording — one about noticing, one
+  about choosing, one about explaining
+- The day most likely to fall flat, and the backup for it
+
+Rules:
+- No prompt about home, family, feelings, possessions or weekend activities
+- Nothing requiring a student to speak
+- No prompt that a student who has had a bad morning cannot answer
+
+Then give me the three prompts I could reuse in any week, so I always have
+something ready.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Do the five genuinely differ in kind?</li><li>Could a student having a bad morning answer each one?</li></ul>
+<h2>Seating and grouping</h2></article>
+<article class="card"><div class="head"><span class="pid">CM-023</span><h3>Create a seating plan from classroom access and learning constraints</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>A plan built on needs, not on who annoys whom.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a seating plan for [GRADE] [SUBJECT].
+
+Room: [LAYOUT, NUMBER OF DESKS, WHERE THE BOARD AND DOOR ARE]
+Class size: [NUMBER]
+Constraints, described as needs not students: [e.g. two students need to be
+near the front for vision, one needs a clear exit route, three should not be
+adjacent]
+
+Give me:
+- The plan, described so I could draw it
+- Why each constrained position is where it is
+- How the plan looks unremarkable, so no seat reads as a designation
+- What I say when a student asks why they are sitting there
+- What changes when two students are absent
+
+Rules:
+- No student named or described in a way that identifies them
+- No seat that is visibly the special seat, the front-for-behaviour seat, or the
+  isolation seat
+- Everyone can see the board and reach the door</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does any seat read as a designation?</li><li>Can everyone genuinely see and exit?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-024</span><h3>Build a transparent regrouping plan using temporary learning evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Groups that change, and are seen to change.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a regrouping plan for [GRADE] [SUBJECT] based on this evidence:
+
+[DESCRIBE THE LEARNING PATTERNS — no names]
+
+Give me:
+- The groups, defined by what they are working on rather than by level
+- What I tell students about why groups change, in one sentence
+- How often groups change, and what triggers a change
+- How a student moves group without it being an event
+- The evidence I gather that would move someone
+
+Rules:
+- Groups are named after the work, not after a level or an animal that everyone
+  decodes within a week
+- No group is permanent, and the plan states when they end
+- No student stays in the same group all term by default
+
+Then tell me the sign that these have quietly become fixed ability groups.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is there a stated end date?</li><li>Would the class decode the group names?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">CM-025</span><h3>Audit seating and grouping decisions for labels, isolation and accessibility</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Before the arrangement becomes permanent by inertia.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] seating and grouping arrangement: [DESCRIBE IT]
+
+Tell me:
+- Whether any seat or group is identifiable as being for a particular kind of
+  student
+- Whether anyone is isolated — physically apart, or the only one of something
+- Whether every student can see, hear, reach the door, and access materials
+- Whether the arrangement is doing what it was set up to do, or is just habit
+- Whether any student has been in the same position or group all term
+- What a student in the least desirable position would say about it
+
+Then tell me:
+- The one change that would most improve it
+- Whether this arrangement should be rebuilt from scratch
+
+Be direct about anything that isolates a child, however practical the reason.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Answer the "least desirable position" question honestly yourself.</li><li>When did you last change it?</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

@@ -1,0 +1,533 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 9 — Subject Deep Dives</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>Chapter 9 — Subject Deep Dives</h1><p class="lede">15 prompts</p><p>The rest of the book works across subjects. This chapter does not — each prompt is built around how one subject actually behaves, and what goes wrong when a general tool is pointed at it.</p>
+<h2>What's in here</h2>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
+<tr><td>Mathematics</td><td>3</td><td>Concepts, representations, error analysis</td></tr>
+<tr><td>Science</td><td>3</td><td>Investigations, evidence, explanation</td></tr>
+<tr><td>English language arts</td><td>3</td><td>Close reading, writing, revision</td></tr>
+<tr><td>Social studies</td><td>3</td><td>Sources, corroboration, claims</td></tr>
+<tr><td>Arts, PE and electives</td><td>3</td><td>The subjects general tools ignore</td></tr>
+</tbody></table>
+<h2>Worth knowing before you start</h2>
+<p><strong>Verify everything factual in this chapter.</strong> Historical dates, scientific values, quotations from texts, worked calculations — this is where a confident wrong answer does the most damage, because it looks exactly like a right one.</p>
+<p>For science, never accept invented data. Predicted patterns and measured results are different things, and these prompts keep them apart.</p>
+<p>For social studies, ask for the contested question rather than the settled summary. That is where the thinking is.</p>
+<p>For arts and PE, be specific about equipment and space. Generic plans assume a room you do not have.</p>
+<h2>Mathematics</h2>
+<article class="card"><div class="head"><span class="pid">SD-001</span><h3>Create a concept-first mathematics explanation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>They can do the procedure and have no idea what it means.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Explain [MATHEMATICAL CONCEPT] for [GRADE], starting from what it means rather
+than how to do it.
+
+Give me:
+- What the concept actually is, in a sentence I could say to a [GRADE] student
+- Why it exists — the problem it solves that could not be solved without it
+- A concrete situation where the idea is visible before any notation appears
+- Where the notation comes in, and what each part of it is standing for
+- The moment students typically stop understanding and start following steps,
+  and the question I ask to catch that
+- Two misconceptions this explanation should prevent, and one it might create
+
+Do not open with a definition or a rule. Do not use &quot;just&quot; or &quot;simply&quot; anywhere.
+
+Check every calculation you use. Flag anything you are not certain of rather
+than stating it confidently.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Work every example yourself.</li><li>Does the notation arrive after the need for it?</li><li>Any "just" or "simply" left?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-003</span><h3>Connect concrete, visual and symbolic mathematics representations</h3></div><p class="meta">Grades K-2, 3-5, 6-8</p>
+<p class="lbl">When you need this</p>
+<p>Three representations that students never connect to each other.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Show [MATHEMATICAL IDEA] for [GRADE] across three representations.
+
+Give me:
+- Concrete: what students physically handle, using ordinary classroom materials
+- Visual: what they draw, described so I can draw it on a board
+- Symbolic: the notation
+
+Then the part that matters most:
+- The explicit link between each pair — what in the drawing corresponds to what
+  in the objects, and what in the notation corresponds to what in the drawing
+- The exact question I ask to make a student point at the correspondence
+- Where the concrete representation breaks down, because every model has a limit
+- What a student who can do all three separately but has not connected them
+  looks like
+
+Do not present the three as three ways to get the answer. They are one idea seen
+three times.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the concrete model use materials you actually have?</li><li>Is the limit of the model named honestly?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-004</span><h3>Build a mathematics error-analysis lesson with verified solutions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Finding the mistake teaches more than avoiding it — if the mistakes are real.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build an error-analysis lesson on [TOPIC] for [GRADE] mathematics.
+
+Use fictional students — Student A, Student B — and invented work. State clearly
+that the work is fabricated for teaching.
+
+Give me four pieces of work:
+- A single conceptual error carried consistently through
+- A correct method with an arithmetic slip
+- A method that works here but fails in the general case
+- A correct solution using an unusual but valid approach
+
+For each: the work, what went wrong, where exactly, and what the student was
+thinking. Then the answer students should give.
+
+Then verify: recompute every piece of work and every correct answer, show your
+working, and state explicitly that you have checked. Flag anything you are not
+certain about.
+
+The fourth one must be genuinely correct. An &quot;unusual&quot; method that is actually
+wrong would teach the opposite of what I want.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Recompute all four yourself, especially the "correct but unusual" one.</li><li>Does the method-that-fails-in-general genuinely work for this case?</li></ul>
+<h2>Science</h2></article>
+<article class="card"><div class="head"><span class="pid">SD-002</span><h3>Design an evidence-based science investigation</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Practical work where the thinking is in the design, not the worksheet.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an investigation into [QUESTION] for [GRADE] science.
+
+Equipment I actually have: [LIST]
+Room: [DESCRIBE — benches, sinks, space, class size]
+Time: [MINUTES]
+
+Give me:
+- The question in student words, answerable with what I have
+- What is varied, what is measured, and what must be held constant — with the
+  ones students usually forget
+- How many measurements, and why repeats matter here specifically
+- The recording table, laid out exactly
+- What students do with anomalous results, which is not &quot;ignore them&quot;
+- The safety points specific to this activity, as instructions rather than
+  warnings
+- What we can and cannot conclude from this design
+
+Do not invent results. Do not tell students what they should find.
+
+Flag anything needing equipment I did not list. Do not assume a fume hood, gas,
+or running water unless I said so.
+
+I will check all safety guidance against my school&#x27;s own procedures.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check every safety point against your school's policy, not this draft.</li><li>Does it tell students what to expect? Remove that if so.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-008</span><h3>Build a claim-evidence-reasoning task from supplied observations</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Students who write conclusions that are really restatements.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a claim-evidence-reasoning task for [GRADE] science.
+
+The observations students will have: [DESCRIBE OR PASTE THE DATA]
+
+Give me:
+- The question their claim answers
+- What a strong claim looks like, and what a restatement of the data looks like
+  — students confuse these constantly
+- What counts as evidence here, and which observations are relevant
+- The reasoning step: the scientific idea linking evidence to claim, which is
+  the part almost always missing
+- A model response, and a response with good evidence and no reasoning
+- Sentence frames for the reasoning step only
+
+Use only the observations I supplied. Do not add data, and do not assume what
+the results were if I have not told you.
+
+Then tell me what a student could legitimately claim that I might mark wrong.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Has it added any data you did not give it?</li><li>Consider the legitimate-but-unexpected claim before you mark.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-009</span><h3>Audit a science explanation for causation, uncertainty and safety</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Explanations that are nearly right, which is the hardest kind to spot.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] science explanation: [PASTE IT]
+
+Tell me:
+- Anywhere correlation is presented as causation
+- Anywhere a hedged scientific claim has been stated as certain
+- Any factual or numerical error — recompute anything computable and show your
+  working
+- Any simplification that will become a misconception students must later unlearn
+- Whether the level of certainty matches what the evidence supports
+- Any safety-relevant statement that is incomplete or wrong
+- Any anthropomorphism that will cause trouble later — atoms that &quot;want&quot;,
+  organisms that &quot;try to&quot;
+
+For each, quote it and give the correction.
+
+Where you cannot verify something independently, say so rather than agreeing
+with it by default.
+
+I will check safety statements against my school&#x27;s procedures.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Verify any correction it offers. It can be wrong about being right.</li><li>The unlearn-later simplifications: decide which you accept.</li></ul>
+<h2>English language arts</h2></article>
+<article class="card"><div class="head"><span class="pid">SD-005</span><h3>Build a close-reading lesson from an authorized supplied text</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>One text, worked properly, in its own words.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a close-reading lesson on the text below for [GRADE], [MINUTES] minutes.
+
+Use only the text I paste. Do not quote from memory, do not add lines, and do
+not reference a version of this text other than the one here.
+
+Give me:
+- A first read with a single narrow purpose
+- A second read that goes deeper, not wider
+- Four text-dependent questions from literal to inferential, each with the exact
+  lines that answer it — quoted from my text
+- The two or three places students will get stuck, quoted
+- The vocabulary that genuinely blocks meaning, with a gloss
+- A writing or discussion task using evidence from the text
+
+If a question cannot be answered from the text alone, say so and cut it.
+
+TEXT:
+[PASTE THE FULL TEXT — only text I am permitted to use]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check every quoted line appears in your text, exactly.</li><li>Is the second read deeper, or just more?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-006</span><h3>Create an evidence-based writing task with a clear mentor model</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Students who cannot picture what you are asking for.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Create a writing task for [GRADE] on [TOPIC OR TEXT].
+
+Give me:
+- The task, with the command word doing real work and the audience named
+- A mentor model of the exact kind I am asking for, written at [GRADE] level —
+  good but achievable, not a polished adult piece
+- An annotation of the model: what each part does, and why it is there
+- What a competent piece that misses the point looks like
+- The success criteria, drawn from the model
+- One sentence frame for the move students find hardest here
+
+Rules:
+- The model must be original, not a real published piece
+- It should be a piece a strong student in this class could plausibly write
+- Do not make it impressive at the cost of being imitable
+
+Then tell me the risk of giving a model at all, and how to reduce it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a strong student in your class write this? If not, lower it.</li><li>Is the model original?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-007</span><h3>Design a revision lesson that separates ideas, organization and conventions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Revision that is currently just checking spelling.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a revision lesson for [GRADE] writing on [TASK].
+
+Separate three passes, in this order, and say why the order matters:
+- Ideas: is there enough here, and is it the right thing
+- Organisation: is it in an order a reader can follow
+- Conventions: sentences, punctuation, spelling
+
+Give me:
+- What students do in each pass, and how long each gets
+- One specific question per pass, not &quot;does it make sense&quot;
+- Why conventions come last, in words I can say to a student who wants to fix
+  spelling first
+- What I do about the student who changes nothing
+- A partner step, with what the partner is looking for — one thing only
+
+Rules:
+- Do not let conventions dominate. If the ideas are thin, spelling is not the
+  problem
+- Revision means changing something, not recopying it neatly</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the ideas pass get real time, or a token minute?</li><li>Is the partner looking for one thing, or everything?</li></ul>
+<h2>Social studies</h2></article>
+<article class="card"><div class="head"><span class="pid">SD-010</span><h3>Create a source-analysis lesson using origin, purpose and context</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Students who read a source as information rather than as evidence.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a source-analysis lesson for [GRADE] on this source: [PASTE IT, WITH ITS
+ATTRIBUTION]
+
+Use only the source and attribution I supplied. Do not add historical facts,
+dates or context I have not given you — if context is needed, say what I should
+supply.
+
+Give me:
+- Questions on origin: who made this, when, and how we know
+- Questions on purpose: who was it for, what was it trying to do
+- Questions on context: what was happening that this responds to
+- What this source is good evidence for, and what it is not
+- The most common misreading of a source like this
+- A task where students state a claim this source supports, with its limits
+
+Do not treat the source as simply true or simply biased. Both are ways of not
+reading it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Supply the context it asked for rather than letting it fill in.</li><li>Check any date or fact it did use against a real reference.</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-011</span><h3>Build a corroboration task with multiple supplied perspectives</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Two accounts that disagree, which is where history actually is.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a corroboration task for [GRADE] using these sources:
+
+[PASTE EACH SOURCE WITH ITS ATTRIBUTION]
+
+Use only what I supplied. Do not add a source, and do not supply facts from
+outside these documents.
+
+Give me:
+- What the sources agree on
+- Where they disagree, quoted precisely
+- Questions that make students account for the disagreement rather than pick a
+  winner
+- What would help resolve it, and whether we have it
+- A task where students write what can be said with confidence, what is
+  contested, and what is unknown
+- Sentence frames for writing about contested claims
+
+Do not resolve the disagreement for students, and do not present one source as
+the reliable one unless the sources themselves support that.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check every quotation against your source text.</li><li>Has it quietly picked a winner?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-012</span><h3>Design a historical claim task that distinguishes evidence from interpretation</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>The difference between what happened and what it meant.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a task for [GRADE] on [HISTORICAL QUESTION] using the evidence below.
+
+EVIDENCE: [PASTE WHAT STUDENTS WILL HAVE]
+
+Give me:
+- The question, genuinely open — one where historians differ
+- What the evidence establishes as fact
+- What is interpretation, including interpretations I might hold without
+  noticing
+- Two defensible answers to the question, each with its strongest evidence
+- The weakest point in each
+- A task where students argue one and acknowledge the other
+
+Rules:
+- Use only the supplied evidence. Do not add facts, dates or events
+- Do not present the interpretation most common in textbooks as the neutral one
+- Where the topic touches on people alive today or on contested identity, keep
+  the task about the reasoning and the evidence
+
+Then tell me which interpretation students will find easier, and why that may
+not mean it is better supported.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Verify every date and event it used.</li><li>Are both interpretations genuinely defensible?</li></ul>
+<h2>Arts, PE and electives</h2></article>
+<article class="card"><div class="head"><span class="pid">SD-013</span><h3>Create a skill-development lesson with modelling, practice and reflection</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Skill teaching where practice is deliberate rather than just repeated.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a [MINUTES]-minute [SUBJECT] lesson teaching [SKILL] to [GRADE].
+
+Space and equipment I actually have: [DESCRIBE]
+Class size: [NUMBER]
+
+Give me:
+- The skill broken into its components, and which one to work on today
+- What I model, and the specific thing students should watch for — not &quot;watch
+  me do it&quot;
+- Practice designed so students get many attempts, not many queues
+- The one cue I repeat, under five words
+- What good and not-yet look like, observably, so students can self-check
+- A reflection question about the process, not about enjoyment
+
+Rules:
+- No component that needs equipment I did not list
+- Practice must give every student attempts, not one student demonstrating while
+  the rest watch
+- Do not comment on natural ability anywhere</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Count the actual attempts each student gets. Is it enough?</li><li>Is the cue short enough to shout across a hall?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-014</span><h3>Adapt a performance task for space, equipment and physical access</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>The task assumes a room, equipment or a body that not everyone has.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Adapt this [SUBJECT] task for my actual conditions: [PASTE THE TASK]
+
+What I have: [SPACE, EQUIPMENT, TIME, CLASS SIZE]
+Access needs, described as needs not students: [e.g. one student uses a
+wheelchair, one has limited grip strength, one cannot be in a loud space]
+
+Give me:
+- The adapted task, achieving the same learning
+- What changes, and what deliberately does not
+- How a student meets the objective by a different route, with the same standing
+  — not a lesser version
+- How the adaptation is unremarkable, so nobody is marked out by doing it
+- What I assess, which must be identical across routes
+
+Rules:
+- Adapt the task, not the expectation
+- No adaptation that removes a student from the group activity
+- Do not name or describe any student</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Would a student feel singled out by the adapted route?</li><li>Is what you assess genuinely the same?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">SD-015</span><h3>Build an observable process rubric for an arts, PE or elective task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Marking the learning rather than the finished performance.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a rubric for [TASK] in [SUBJECT] for [GRADE], assessing [OBJECTIVE].
+
+Weight process and technique over the finished product, and say how you have
+weighted them.
+
+Rules — these define the rubric:
+- Every criterion must be observable in what the student does, not inferred
+  from what they produce
+- Nothing about talent, flair, natural ability, or how much they seem to enjoy it
+- Nothing about a student&#x27;s body, size, or physical attributes
+- Nothing requiring equipment, coaching or resources outside school
+- Nothing rewarding a student who arrived already able
+
+Give me:
+- The criteria, with descriptors at proficient
+- What each looks like for a student who has improved a great deal but is still
+  behind, and how that is credited
+- One criterion I could observe during the lesson rather than after it
+
+Then tell me which criterion would advantage a student with outside coaching,
+and how to reduce that.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Which criterion favours the already-trained student? Fix it.</li><li>Is anything here about the body rather than the learning?</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

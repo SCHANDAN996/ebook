@@ -1,0 +1,528 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Index — all 300 prompts and 12 workflows</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>Index — all 300 prompts and 12 workflows</h1><p>Every prompt has an ID like <code>LP-002</code>. Find the ID here, then open that chapter file.</p>
+<h2>Chapters</h2>
+<table><thead><tr><th>#</th><th>Chapter</th><th>Prompts</th><th>File</th></tr></thead><tbody>
+<tr><td>1</td><td>Lesson Planning</td><td>60</td><td><code>01-lesson-planning.pdf</code></td></tr>
+<tr><td>2</td><td>Worksheets Activities</td><td>40</td><td><code>02-worksheets-activities.pdf</code></td></tr>
+<tr><td>3</td><td>Assessment Rubrics Quizzes</td><td>40</td><td><code>03-assessment-rubrics-quizzes.pdf</code></td></tr>
+<tr><td>4</td><td>Differentiation Mixed Ability</td><td>35</td><td><code>04-differentiation-mixed-ability.pdf</code></td></tr>
+<tr><td>5</td><td>Parent Communication</td><td>30</td><td><code>05-parent-communication.pdf</code></td></tr>
+<tr><td>6</td><td>Report Card Comments</td><td>30</td><td><code>06-report-card-comments.pdf</code></td></tr>
+<tr><td>7</td><td>Classroom Management Sel</td><td>25</td><td><code>07-classroom-management-sel.pdf</code></td></tr>
+<tr><td>8</td><td>Teacher Admin Paperwork</td><td>25</td><td><code>08-teacher-admin-paperwork.pdf</code></td></tr>
+<tr><td>9</td><td>Subject Deep Dives</td><td>15</td><td><code>09-subject-deep-dives.pdf</code></td></tr>
+<tr><td>10</td><td>Multi Step Workflows</td><td>12</td><td><code>10-multi-step-workflows.pdf</code></td></tr>
+</tbody></table>
+<h2>By name</h2>
+<h3>Lesson Planning</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>LP-001</td><td>Build a complete evidence-led lesson</td></tr>
+<tr><td>LP-002</td><td>Plan a unit backward from mastery</td></tr>
+<tr><td>LP-003</td><td>Turn a standard into measurable objectives</td></tr>
+<tr><td>LP-004</td><td>Create a matched warm-up and exit ticket</td></tr>
+<tr><td>LP-005</td><td>Create a no-surprises substitute lesson</td></tr>
+<tr><td>LP-006</td><td>Plan a concept-development lesson from prior knowledge</td></tr>
+<tr><td>LP-007</td><td>Plan an inquiry lesson around a puzzling phenomenon</td></tr>
+<tr><td>LP-008</td><td>Create an explicit-instruction lesson with guided release</td></tr>
+<tr><td>LP-009</td><td>Design a discussion-centered lesson with equitable participation</td></tr>
+<tr><td>LP-010</td><td>Build a no-technology lesson using basic classroom materials</td></tr>
+<tr><td>LP-011</td><td>Create a lesson around one complex text or source</td></tr>
+<tr><td>LP-012</td><td>Plan a safe hands-on investigation lesson</td></tr>
+<tr><td>LP-013</td><td>Design a problem-based mathematics lesson</td></tr>
+<tr><td>LP-014</td><td>Compress a full lesson into a purposeful 30-minute period</td></tr>
+<tr><td>LP-015</td><td>Expand a lesson for a 90-minute block without filler</td></tr>
+<tr><td>LP-016</td><td>Repair a draft lesson whose activities do not match its objective</td></tr>
+<tr><td>LP-017</td><td>Unpack final mastery into a prerequisite learning map</td></tr>
+<tr><td>LP-018</td><td>Design a final performance task before planning daily lessons</td></tr>
+<tr><td>LP-019</td><td>Create a coherent lesson sequence from an approved assessment</td></tr>
+<tr><td>LP-020</td><td>Place formative checkpoints and reteaching decisions across a unit</td></tr>
+<tr><td>LP-021</td><td>Audit a unit for gaps, repetition and cognitive progression</td></tr>
+<tr><td>LP-022</td><td>Shorten a unit while protecting its essential learning</td></tr>
+<tr><td>LP-023</td><td>Add transfer and reflection to the end of a unit</td></tr>
+<tr><td>LP-024</td><td>Separate knowledge, skill and reasoning within a standard</td></tr>
+<tr><td>LP-025</td><td>Rewrite a technical objective as a student-friendly I-can statement</td></tr>
+<tr><td>LP-026</td><td>Create observable success criteria for an existing objective</td></tr>
+<tr><td>LP-027</td><td>Check whether an activity truly aligns to a supplied standard</td></tr>
+<tr><td>LP-028</td><td>Map several objectives into a logical teaching order</td></tr>
+<tr><td>LP-029</td><td>Identify prerequisite skills without lowering the grade-level target</td></tr>
+<tr><td>LP-030</td><td>Write evidence statements showing what mastery would look like</td></tr>
+<tr><td>LP-031</td><td>Design a warm-up that exposes prior knowledge in five minutes</td></tr>
+<tr><td>LP-032</td><td>Write a misconception-revealing hinge question</td></tr>
+<tr><td>LP-033</td><td>Create an exit ticket with secure, developing and not-yet response bands</td></tr>
+<tr><td>LP-034</td><td>Turn yesterday's exit-ticket patterns into today's opening task</td></tr>
+<tr><td>LP-035</td><td>Build a retrieval-practice warm-up without introducing new content</td></tr>
+<tr><td>LP-036</td><td>Create a transfer exit ticket that cannot be answered by copying</td></tr>
+<tr><td>LP-037</td><td>Audit an exit ticket for alignment, ambiguity and reading load</td></tr>
+<tr><td>LP-038</td><td>Build a realistic minute-by-minute lesson timeline</td></tr>
+<tr><td>LP-039</td><td>Diagnose where a lesson is likely to run out of time</td></tr>
+<tr><td>LP-040</td><td>Write concise transitions between lesson segments</td></tr>
+<tr><td>LP-041</td><td>Create a pacing contingency when discussion runs long</td></tr>
+<tr><td>LP-042</td><td>Plan meaningful early-finisher work connected to the objective</td></tr>
+<tr><td>LP-043</td><td>Adapt one lesson for both a regular period and a shortened schedule</td></tr>
+<tr><td>LP-044</td><td>Build an emergency no-print lesson from materials already in the room</td></tr>
+<tr><td>LP-045</td><td>Write exact substitute directions that require no subject guessing</td></tr>
+<tr><td>LP-046</td><td>Create a technology-failure backup for a digital lesson</td></tr>
+<tr><td>LP-047</td><td>Prepare an independent catch-up lesson for an unexpected absence</td></tr>
+<tr><td>LP-048</td><td>Audit a substitute plan for safety, clarity and collection procedures</td></tr>
+<tr><td>LP-049</td><td>Launch a project with a clear driving question and final product</td></tr>
+<tr><td>LP-050</td><td>Connect two subjects around one authentic problem</td></tr>
+<tr><td>LP-051</td><td>Break a multiweek project into milestones and checkpoints</td></tr>
+<tr><td>LP-052</td><td>Create individual accountability inside a group project</td></tr>
+<tr><td>LP-053</td><td>Design a project rubric that measures learning rather than decoration</td></tr>
+<tr><td>LP-054</td><td>Plan a public-product option that protects student privacy</td></tr>
+<tr><td>LP-055</td><td>Turn lesson evidence into a next-day adjustment</td></tr>
+<tr><td>LP-056</td><td>Write a post-lesson reflection based on observations rather than feelings alone</td></tr>
+<tr><td>LP-057</td><td>Identify what to keep, change and investigate after a lesson</td></tr>
+<tr><td>LP-058</td><td>Adapt a lesson after most learners miss the same misconception</td></tr>
+<tr><td>LP-059</td><td>Plan targeted follow-up for three anonymous response patterns</td></tr>
+<tr><td>LP-060</td><td>Compare the intended lesson with what learners actually demonstrated</td></tr>
+</tbody></table>
+<h3>Worksheets Activities</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>WA-001</td><td>Build a focused practice worksheet</td></tr>
+<tr><td>WA-002</td><td>Design four learning stations</td></tr>
+<tr><td>WA-003</td><td>Create an accountable group task</td></tr>
+<tr><td>WA-004</td><td>Build a review game that measures learning</td></tr>
+<tr><td>WA-005</td><td>Create practice that moves from a model to independent work</td></tr>
+<tr><td>WA-006</td><td>Write a worksheet that targets one common misconception</td></tr>
+<tr><td>WA-007</td><td>Build mixed practice that requires learners to choose a strategy</td></tr>
+<tr><td>WA-008</td><td>Create a short retrieval worksheet for previously taught skills</td></tr>
+<tr><td>WA-009</td><td>Design an application worksheet using realistic classroom contexts</td></tr>
+<tr><td>WA-010</td><td>Adapt a worksheet for black-and-white printing and limited space</td></tr>
+<tr><td>WA-011</td><td>Create an error-analysis worksheet from fictional student work</td></tr>
+<tr><td>WA-012</td><td>Write a worksheet with foundation, application and reasoning sections</td></tr>
+<tr><td>WA-013</td><td>Audit and repair a worksheet whose questions are repetitive or unclear</td></tr>
+<tr><td>WA-014</td><td>Create hands-on, reading, discussion and writing stations</td></tr>
+<tr><td>WA-015</td><td>Plan station rotations for a large class and small room</td></tr>
+<tr><td>WA-016</td><td>Build self-checking stations that do not depend on the teacher</td></tr>
+<tr><td>WA-017</td><td>Create one quiet station and three collaborative stations</td></tr>
+<tr><td>WA-018</td><td>Differentiate station access while preserving one shared objective</td></tr>
+<tr><td>WA-019</td><td>Design a teacher-led reteaching station from exit-ticket evidence</td></tr>
+<tr><td>WA-020</td><td>Audit station directions, timing, materials and accountability</td></tr>
+<tr><td>WA-021</td><td>Design a jigsaw task where every learner holds essential information</td></tr>
+<tr><td>WA-022</td><td>Build a group investigation with rotating cognitive roles</td></tr>
+<tr><td>WA-023</td><td>Create a consensus task that requires evidence and disagreement</td></tr>
+<tr><td>WA-024</td><td>Turn an individual worksheet into meaningful collaborative reasoning</td></tr>
+<tr><td>WA-025</td><td>Audit a group task for participation, access and individual evidence</td></tr>
+<tr><td>WA-026</td><td>Create a no-speed review game using mini-whiteboards</td></tr>
+<tr><td>WA-027</td><td>Design a team review game with individual accountability</td></tr>
+<tr><td>WA-028</td><td>Build a misconception challenge using diagnostic distractors</td></tr>
+<tr><td>WA-029</td><td>Create a low-prep review game with paper question cards</td></tr>
+<tr><td>WA-030</td><td>Audit a review game for fairness, accuracy and useful teacher data</td></tr>
+<tr><td>WA-031</td><td>Create a short homework set with a clear purpose</td></tr>
+<tr><td>WA-032</td><td>Build homework that mixes retrieval and current learning</td></tr>
+<tr><td>WA-033</td><td>Design homework with a meaningful no-internet option</td></tr>
+<tr><td>WA-034</td><td>Create a family-readable homework guide without requiring family teaching</td></tr>
+<tr><td>WA-035</td><td>Audit a homework set for workload, access and answer-key accuracy</td></tr>
+<tr><td>WA-036</td><td>Write a student-ready project brief from a supplied objective</td></tr>
+<tr><td>WA-037</td><td>Create project milestones, checkpoints and submission requirements</td></tr>
+<tr><td>WA-038</td><td>Design a choice-based project with equivalent learning demands</td></tr>
+<tr><td>WA-039</td><td>Build a group-project brief with individual evidence of mastery</td></tr>
+<tr><td>WA-040</td><td>Audit a project brief for clarity, feasibility and privacy</td></tr>
+</tbody></table>
+<h3>Assessment Rubrics Quizzes</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>AS-001</td><td>Create a balanced classroom assessment</td></tr>
+<tr><td>AS-002</td><td>Create hinge questions for live teaching</td></tr>
+<tr><td>AS-003</td><td>Build a student-readable analytic rubric</td></tr>
+<tr><td>AS-004</td><td>Diagnose errors from anonymous work</td></tr>
+<tr><td>AS-005</td><td>Build a short quiz across recall, application and reasoning</td></tr>
+<tr><td>AS-006</td><td>Write diagnostic multiple-choice questions with purposeful distractors</td></tr>
+<tr><td>AS-007</td><td>Create a constructed-response assessment with a scoring guide</td></tr>
+<tr><td>AS-008</td><td>Design a pre-assessment that separates prerequisite and grade-level skills</td></tr>
+<tr><td>AS-009</td><td>Build a cumulative assessment without over-weighting recent lessons</td></tr>
+<tr><td>AS-010</td><td>Adapt an assessment for a shorter testing period</td></tr>
+<tr><td>AS-011</td><td>Create parallel assessment forms with equivalent demand</td></tr>
+<tr><td>AS-012</td><td>Audit a test for alignment, ambiguity and answer-key errors</td></tr>
+<tr><td>AS-013</td><td>Turn a supplied objective list into a complete assessment blueprint</td></tr>
+<tr><td>AS-014</td><td>Build a five-minute check for understanding during instruction</td></tr>
+<tr><td>AS-015</td><td>Write an exit ticket that distinguishes three levels of understanding</td></tr>
+<tr><td>AS-016</td><td>Create a misconception poll with actionable response options</td></tr>
+<tr><td>AS-017</td><td>Design a show-me task using mini-whiteboards or paper</td></tr>
+<tr><td>AS-018</td><td>Turn anonymous responses into a next-day formative check</td></tr>
+<tr><td>AS-019</td><td>Create a transfer question that reveals reasoning rather than recall</td></tr>
+<tr><td>AS-020</td><td>Audit a formative check for speed, reading load and decision usefulness</td></tr>
+<tr><td>AS-021</td><td>Create observable descriptors for four performance levels</td></tr>
+<tr><td>AS-022</td><td>Turn an objective and task into aligned rubric criteria</td></tr>
+<tr><td>AS-023</td><td>Build a single-point rubric with feedback space</td></tr>
+<tr><td>AS-024</td><td>Create a rubric for collaborative work with individual evidence</td></tr>
+<tr><td>AS-025</td><td>Rewrite vague rubric words as observable evidence</td></tr>
+<tr><td>AS-026</td><td>Calibrate a rubric using fictional work samples</td></tr>
+<tr><td>AS-027</td><td>Audit a rubric for double penalties, bias and irrelevant criteria</td></tr>
+<tr><td>AS-028</td><td>Code anonymous responses by misconception rather than score alone</td></tr>
+<tr><td>AS-029</td><td>Build flexible reteaching groups from response patterns</td></tr>
+<tr><td>AS-030</td><td>Distinguish a careless slip from a conceptual misunderstanding</td></tr>
+<tr><td>AS-031</td><td>Create targeted mini-tasks for three misconception groups</td></tr>
+<tr><td>AS-032</td><td>Plan a reassessment that shows whether reteaching worked</td></tr>
+<tr><td>AS-033</td><td>Create a complete worked answer key from verified questions</td></tr>
+<tr><td>AS-034</td><td>Write actionable feedback matched to common response patterns</td></tr>
+<tr><td>AS-035</td><td>Audit an answer key for mathematical, factual and scoring errors</td></tr>
+<tr><td>AS-036</td><td>Create learner-friendly solution explanations without hiding reasoning</td></tr>
+<tr><td>AS-037</td><td>Map assessment evidence to supplied standards and objectives</td></tr>
+<tr><td>AS-038</td><td>Create a standards-based proficiency scale with observable evidence</td></tr>
+<tr><td>AS-039</td><td>Summarize class mastery without averaging unrelated skills</td></tr>
+<tr><td>AS-040</td><td>Audit a standards-based grade summary for missing or weak evidence</td></tr>
+</tbody></table>
+<h3>Differentiation Mixed Ability</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>DF-001</td><td>Add temporary scaffolds without lowering the goal</td></tr>
+<tr><td>DF-002</td><td>Create three routes to the same objective</td></tr>
+<tr><td>DF-003</td><td>Make a task accessible to multilingual learners</td></tr>
+<tr><td>DF-004</td><td>Adapt text access while preserving meaning</td></tr>
+<tr><td>DF-005</td><td>Turn an observed barrier into a targeted support plan</td></tr>
+<tr><td>DF-006</td><td>Create a graphic organizer that preserves essential reasoning</td></tr>
+<tr><td>DF-007</td><td>Write sentence frames at three levels of language support</td></tr>
+<tr><td>DF-008</td><td>Break a complex task into checkpoints without doing the thinking</td></tr>
+<tr><td>DF-009</td><td>Add worked examples and prompts with a clear fade plan</td></tr>
+<tr><td>DF-010</td><td>Create a scaffold menu learners can choose from responsibly</td></tr>
+<tr><td>DF-011</td><td>Audit classroom supports for dependence and hidden lower expectations</td></tr>
+<tr><td>DF-012</td><td>Build scaffolded, on-level and extension versions of one task</td></tr>
+<tr><td>DF-013</td><td>Tier a task by representation rather than by easier content</td></tr>
+<tr><td>DF-014</td><td>Create three entry points with one common mastery product</td></tr>
+<tr><td>DF-015</td><td>Design tiered questions that move from access to transfer</td></tr>
+<tr><td>DF-016</td><td>Check that every tier carries equal curricular dignity</td></tr>
+<tr><td>DF-017</td><td>Create a whole-class debrief that reconnects three task versions</td></tr>
+<tr><td>DF-018</td><td>Identify the language demands hidden inside a subject task</td></tr>
+<tr><td>DF-019</td><td>Build an essential vocabulary preview with visuals and examples</td></tr>
+<tr><td>DF-020</td><td>Create structured partner rehearsal before independent writing</td></tr>
+<tr><td>DF-021</td><td>Plan purposeful home-language use without assuming proficiency</td></tr>
+<tr><td>DF-022</td><td>Separate content evidence from English-language evidence</td></tr>
+<tr><td>DF-023</td><td>Chunk a demanding source without rewriting its claims</td></tr>
+<tr><td>DF-024</td><td>Create a plain-language companion beside the original text</td></tr>
+<tr><td>DF-025</td><td>Add glossary, guiding questions and audio-access suggestions</td></tr>
+<tr><td>DF-026</td><td>Reduce unnecessary reading load in a non-reading assessment</td></tr>
+<tr><td>DF-027</td><td>Audit adapted materials for lost meaning or unsupported simplification</td></tr>
+<tr><td>DF-028</td><td>Create an extension that deepens reasoning instead of adding more work</td></tr>
+<tr><td>DF-029</td><td>Build a transfer challenge using a new context</td></tr>
+<tr><td>DF-030</td><td>Design an open-ended investigation with clear evidence expectations</td></tr>
+<tr><td>DF-031</td><td>Audit an extension for novelty, rigor and connection to the objective</td></tr>
+<tr><td>DF-032</td><td>Build temporary groups from anonymous learning evidence</td></tr>
+<tr><td>DF-033</td><td>Create a rotation plan for three changing instructional needs</td></tr>
+<tr><td>DF-034</td><td>Plan mixed-readiness groups with meaningful roles and accountability</td></tr>
+<tr><td>DF-035</td><td>Audit a grouping plan for labels, access, movement and regrouping triggers</td></tr>
+</tbody></table>
+<h3>Parent Communication</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>PC-001</td><td>Write a specific positive family message</td></tr>
+<tr><td>PC-002</td><td>Communicate an academic concern with a next step</td></tr>
+<tr><td>PC-003</td><td>Prepare a balanced family conference</td></tr>
+<tr><td>PC-004</td><td>Draft a useful class newsletter</td></tr>
+<tr><td>PC-005</td><td>Share academic growth using one concrete classroom example</td></tr>
+<tr><td>PC-006</td><td>Recognize a learner's helpful contribution without using labels</td></tr>
+<tr><td>PC-007</td><td>Write a brief celebration message suitable for a mobile screen</td></tr>
+<tr><td>PC-008</td><td>Create a positive note that invites the learner's own reflection</td></tr>
+<tr><td>PC-009</td><td>Build a reusable strength-note template with visible evidence fields</td></tr>
+<tr><td>PC-010</td><td>Write a missing-work message using dates and verified counts</td></tr>
+<tr><td>PC-011</td><td>Explain a recurring learning difficulty without diagnosing its cause</td></tr>
+<tr><td>PC-012</td><td>Request a brief family check-in with two exact scheduling options</td></tr>
+<tr><td>PC-013</td><td>Revise a blaming concern email into factual collaborative language</td></tr>
+<tr><td>PC-014</td><td>Audit a concern message for evidence, tone and unsupported claims</td></tr>
+<tr><td>PC-015</td><td>Build a 15-minute conference agenda around learning evidence</td></tr>
+<tr><td>PC-016</td><td>Prepare questions that invite family and student perspective</td></tr>
+<tr><td>PC-017</td><td>Turn classroom evidence into a shared action-plan table</td></tr>
+<tr><td>PC-018</td><td>Write a factual post-conference summary with owners and dates</td></tr>
+<tr><td>PC-019</td><td>Create a concise weekly learning update for families</td></tr>
+<tr><td>PC-020</td><td>Rewrite a newsletter as a mobile-friendly plain-text version</td></tr>
+<tr><td>PC-021</td><td>Audit a class newsletter for dates, jargon, access and action items</td></tr>
+<tr><td>PC-022</td><td>Draft a permission notice from verified trip or event details</td></tr>
+<tr><td>PC-023</td><td>Create a clear family checklist for materials, dates and return forms</td></tr>
+<tr><td>PC-024</td><td>Write a schedule-change notice without inventing school policy</td></tr>
+<tr><td>PC-025</td><td>Audit a logistics message for missing consent, safety and contact details</td></tr>
+<tr><td>PC-026</td><td>Rewrite school language in plain family-friendly English</td></tr>
+<tr><td>PC-027</td><td>Create a translation-ready message using short unambiguous sentences</td></tr>
+<tr><td>PC-028</td><td>Audit a family message for jargon, idioms and hidden assumptions</td></tr>
+<tr><td>PC-029</td><td>Prepare a calm conversation about a repeated classroom concern</td></tr>
+<tr><td>PC-030</td><td>Create a fact-based communication plan for disagreement with a family</td></tr>
+</tbody></table>
+<h3>Report Card Comments</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>RC-001</td><td>Build an evidence-safe comment bank</td></tr>
+<tr><td>RC-002</td><td>Turn evidence into a balanced report comment</td></tr>
+<tr><td>RC-003</td><td>Rewrite a comment for clarity and fairness</td></tr>
+<tr><td>RC-004</td><td>Create comment starters for four levels of demonstrated mastery</td></tr>
+<tr><td>RC-005</td><td>Build modular strength, evidence and next-step sentence parts</td></tr>
+<tr><td>RC-006</td><td>Create a comment bank that avoids fixed-ability labels</td></tr>
+<tr><td>RC-007</td><td>Write concise comments within a strict character limit</td></tr>
+<tr><td>RC-008</td><td>Create neutral pronoun variants without changing the evidence</td></tr>
+<tr><td>RC-009</td><td>Build a comment bank with visible placeholders for supporting evidence</td></tr>
+<tr><td>RC-010</td><td>Audit a comment bank for repetition, vagueness and invented claims</td></tr>
+<tr><td>RC-011</td><td>Write a strength statement tied to a specific learning objective</td></tr>
+<tr><td>RC-012</td><td>Convert an error pattern into one achievable next step</td></tr>
+<tr><td>RC-013</td><td>Build a balanced comment from assessment and classroom evidence</td></tr>
+<tr><td>RC-014</td><td>Write a comment when evidence is limited or inconsistent</td></tr>
+<tr><td>RC-015</td><td>Create a learner-friendly next step that families can understand</td></tr>
+<tr><td>RC-016</td><td>Add an instructional strategy without promising a future result</td></tr>
+<tr><td>RC-017</td><td>Audit a report comment using a sentence-by-sentence fact trace</td></tr>
+<tr><td>RC-018</td><td>Write a mathematics comment about concepts, procedures and reasoning</td></tr>
+<tr><td>RC-019</td><td>Write a science comment about investigation, evidence and explanation</td></tr>
+<tr><td>RC-020</td><td>Write an English language arts comment about reading and writing evidence</td></tr>
+<tr><td>RC-021</td><td>Write a social studies comment about sources, claims and perspective</td></tr>
+<tr><td>RC-022</td><td>Write an arts comment about process, technique and reflection</td></tr>
+<tr><td>RC-023</td><td>Write a physical education comment using observable skill evidence</td></tr>
+<tr><td>RC-024</td><td>Audit subject-specific terminology for accuracy and family clarity</td></tr>
+<tr><td>RC-025</td><td>Create distinct comment drafts from a fictional evidence table</td></tr>
+<tr><td>RC-026</td><td>Generate bulk comments without mixing one learner's evidence with another</td></tr>
+<tr><td>RC-027</td><td>Vary sentence structure while preserving every supplied fact</td></tr>
+<tr><td>RC-028</td><td>Audit a bulk comment set for duplicates, contradictions and evidence leakage</td></tr>
+<tr><td>RC-029</td><td>Replace harsh or vague judgments with verified learning evidence</td></tr>
+<tr><td>RC-030</td><td>Shorten a report comment without removing the material concern</td></tr>
+</tbody></table>
+<h3>Classroom Management Sel</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>CM-001</td><td>Design and teach a classroom routine</td></tr>
+<tr><td>CM-002</td><td>Prepare a restorative conversation</td></tr>
+<tr><td>CM-003</td><td>Teach an efficient entry routine with an immediate learning start</td></tr>
+<tr><td>CM-004</td><td>Create a calm transition between whole-group and independent work</td></tr>
+<tr><td>CM-005</td><td>Build a materials routine that reduces waiting and lost equipment</td></tr>
+<tr><td>CM-006</td><td>Plan a dismissal routine that protects safety and learning time</td></tr>
+<tr><td>CM-007</td><td>Audit a routine using timing, participation and independence evidence</td></tr>
+<tr><td>CM-008</td><td>Create a brief private behaviour-reset conversation</td></tr>
+<tr><td>CM-009</td><td>Write neutral redirection language for a recurring disruption</td></tr>
+<tr><td>CM-010</td><td>Plan a re-entry routine after a learner leaves the classroom</td></tr>
+<tr><td>CM-011</td><td>Create a reset menu that preserves dignity and instructional access</td></tr>
+<tr><td>CM-012</td><td>Audit a response plan for escalation, shame and inconsistent expectations</td></tr>
+<tr><td>CM-013</td><td>Create questions that explore impact, needs and possible repair</td></tr>
+<tr><td>CM-014</td><td>Build a voluntary repair agreement with a scheduled follow-up</td></tr>
+<tr><td>CM-015</td><td>Audit a restorative script for coercion, blame and safeguarding limits</td></tr>
+<tr><td>CM-016</td><td>Create an age-appropriate lesson on naming and managing emotions</td></tr>
+<tr><td>CM-017</td><td>Teach a practical strategy for pausing before responding</td></tr>
+<tr><td>CM-018</td><td>Build an empathy activity without requiring personal disclosure</td></tr>
+<tr><td>CM-019</td><td>Audit an SEL activity for privacy, culture and clinical overreach</td></tr>
+<tr><td>CM-020</td><td>Plan a 10-minute morning meeting with a clear community goal</td></tr>
+<tr><td>CM-021</td><td>Create inclusive check-in options that do not force disclosure</td></tr>
+<tr><td>CM-022</td><td>Build a weekly morning-meeting sequence without repetitive prompts</td></tr>
+<tr><td>CM-023</td><td>Create a seating plan from classroom access and learning constraints</td></tr>
+<tr><td>CM-024</td><td>Build a transparent regrouping plan using temporary learning evidence</td></tr>
+<tr><td>CM-025</td><td>Audit seating and grouping decisions for labels, isolation and accessibility</td></tr>
+</tbody></table>
+<h3>Teacher Admin Paperwork</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>AD-001</td><td>Turn notes into accountable meeting minutes</td></tr>
+<tr><td>AD-002</td><td>Draft a measurable professional growth goal</td></tr>
+<tr><td>AD-003</td><td>Write a concise staff email with one clear action</td></tr>
+<tr><td>AD-004</td><td>Turn rough notes into a professional colleague update</td></tr>
+<tr><td>AD-005</td><td>Draft a meeting request with purpose, preparation and time limit</td></tr>
+<tr><td>AD-006</td><td>Write a follow-up email that separates decisions from open questions</td></tr>
+<tr><td>AD-007</td><td>Audit a staff email for tone, recipients, dates and unnecessary detail</td></tr>
+<tr><td>AD-008</td><td>Build a timed agenda around decisions that must be made</td></tr>
+<tr><td>AD-009</td><td>Convert discussion notes into decisions, actions and a parking lot</td></tr>
+<tr><td>AD-010</td><td>Audit meeting minutes for invented consensus, owners or deadlines</td></tr>
+<tr><td>AD-011</td><td>Turn baseline evidence into a realistic semester action plan</td></tr>
+<tr><td>AD-012</td><td>Create leading and outcome indicators for a teaching goal</td></tr>
+<tr><td>AD-013</td><td>Build midpoint decision rules for revising a professional goal</td></tr>
+<tr><td>AD-014</td><td>Write an evidence-based reflection after a classroom observation</td></tr>
+<tr><td>AD-015</td><td>Separate observed events, interpretation and next action</td></tr>
+<tr><td>AD-016</td><td>Turn observer feedback into one measurable instructional experiment</td></tr>
+<tr><td>AD-017</td><td>Build a field-trip planning checklist from official requirements</td></tr>
+<tr><td>AD-018</td><td>Create a trip-day schedule with owners, counts and contingency fields</td></tr>
+<tr><td>AD-019</td><td>Audit a field-trip draft for permissions, access, safety and unknowns</td></tr>
+<tr><td>AD-020</td><td>Create a club launch plan with purpose, routines and supervision fields</td></tr>
+<tr><td>AD-021</td><td>Build a fair duty rota from supplied availability and policy</td></tr>
+<tr><td>AD-022</td><td>Audit a club or duty plan for gaps, overload and unclear responsibility</td></tr>
+<tr><td>AD-023</td><td>Turn a verified classroom need into a concise proposal outline</td></tr>
+<tr><td>AD-024</td><td>Build a grant budget narrative from supplied costs and restrictions</td></tr>
+<tr><td>AD-025</td><td>Audit a proposal for unsupported claims, missing evidence and compliance</td></tr>
+</tbody></table>
+<h3>Subject Deep Dives</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>SD-001</td><td>Create a concept-first mathematics explanation</td></tr>
+<tr><td>SD-002</td><td>Design an evidence-based science investigation</td></tr>
+<tr><td>SD-003</td><td>Connect concrete, visual and symbolic mathematics representations</td></tr>
+<tr><td>SD-004</td><td>Build a mathematics error-analysis lesson with verified solutions</td></tr>
+<tr><td>SD-005</td><td>Build a close-reading lesson from an authorized supplied text</td></tr>
+<tr><td>SD-006</td><td>Create an evidence-based writing task with a clear mentor model</td></tr>
+<tr><td>SD-007</td><td>Design a revision lesson that separates ideas, organization and conventions</td></tr>
+<tr><td>SD-008</td><td>Build a claim-evidence-reasoning task from supplied observations</td></tr>
+<tr><td>SD-009</td><td>Audit a science explanation for causation, uncertainty and safety</td></tr>
+<tr><td>SD-010</td><td>Create a source-analysis lesson using origin, purpose and context</td></tr>
+<tr><td>SD-011</td><td>Build a corroboration task with multiple supplied perspectives</td></tr>
+<tr><td>SD-012</td><td>Design a historical claim task that distinguishes evidence from interpretation</td></tr>
+<tr><td>SD-013</td><td>Create a skill-development lesson with modelling, practice and reflection</td></tr>
+<tr><td>SD-014</td><td>Adapt a performance task for space, equipment and physical access</td></tr>
+<tr><td>SD-015</td><td>Build an observable process rubric for an arts, PE or elective task</td></tr>
+</tbody></table>
+<h3>Multi Step Workflows</h3>
+<table><thead><tr><th>ID</th><th>Prompt</th></tr></thead><tbody>
+<tr><td>WF-001</td><td>Standard to complete unit</td></tr>
+<tr><td>WF-002</td><td>Mixed-ability lesson pack</td></tr>
+<tr><td>WF-003</td><td>Incident to parent conversation</td></tr>
+<tr><td>WF-004</td><td>Scores to report comments</td></tr>
+<tr><td>WF-005</td><td>Standard to aligned assessment</td></tr>
+<tr><td>WF-006</td><td>Emergency substitute pack</td></tr>
+<tr><td>WF-007</td><td>Project launch pack</td></tr>
+<tr><td>WF-008</td><td>Parent conference pack</td></tr>
+<tr><td>WF-009</td><td>Evidence to intervention-plan draft</td></tr>
+<tr><td>WF-010</td><td>Field-trip planning pack</td></tr>
+<tr><td>WF-011</td><td>Weekly teacher admin pack</td></tr>
+<tr><td>WF-012</td><td>Class data reflection</td></tr>
+</tbody></table>
+<h2>By grade band</h2>
+<h3>3-5  (285 prompts)</h3>
+<p>AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040</p>
+<h3>6-8  (285 prompts)</h3>
+<p>AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040</p>
+<h3>9-12  (285 prompts)</h3>
+<p>AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-002, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-001, LP-002, LP-004, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, SD-001, SD-002, SD-003, SD-004, SD-005, SD-006, SD-007, SD-008, SD-009, SD-010, SD-011, SD-012, SD-013, SD-014, SD-015, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040</p>
+<h2>By subject</h2>
+<p><strong>Any</strong>  (295) — AD-001, AD-002, AD-003, AD-004, AD-005, AD-006, AD-007, AD-008, AD-009, AD-010, AD-011, AD-012, AD-013, AD-014, AD-015, AD-016, AD-017, AD-018, AD-019, AD-020, AD-021, AD-022, AD-023, AD-024, AD-025, AS-001, AS-002, AS-003, AS-004, AS-005, AS-006, AS-007, AS-008, AS-009, AS-010, AS-011, AS-012, AS-013, AS-014, AS-015, AS-016, AS-017, AS-018, AS-019, AS-020, AS-021, AS-022, AS-023, AS-024, AS-025, AS-026, AS-027, AS-028, AS-029, AS-030, AS-031, AS-032, AS-033, AS-034, AS-035, AS-036, AS-037, AS-038, AS-039, AS-040, CM-001, CM-002, CM-003, CM-004, CM-005, CM-006, CM-007, CM-008, CM-009, CM-010, CM-011, CM-012, CM-013, CM-014, CM-015, CM-016, CM-017, CM-018, CM-019, CM-020, CM-021, CM-022, CM-023, CM-024, CM-025, DF-001, DF-002, DF-003, DF-004, DF-005, DF-006, DF-007, DF-008, DF-009, DF-010, DF-011, DF-012, DF-013, DF-014, DF-015, DF-016, DF-017, DF-018, DF-019, DF-020, DF-021, DF-022, DF-023, DF-024, DF-025, DF-026, DF-027, DF-028, DF-029, DF-030, DF-031, DF-032, DF-033, DF-034, DF-035, LP-003, LP-004, LP-005, LP-006, LP-007, LP-008, LP-009, LP-010, LP-011, LP-012, LP-013, LP-014, LP-015, LP-016, LP-017, LP-018, LP-019, LP-020, LP-021, LP-022, LP-023, LP-024, LP-025, LP-026, LP-027, LP-028, LP-029, LP-030, LP-031, LP-032, LP-033, LP-034, LP-035, LP-036, LP-037, LP-038, LP-039, LP-040, LP-041, LP-042, LP-043, LP-044, LP-045, LP-046, LP-047, LP-048, LP-049, LP-050, LP-051, LP-052, LP-053, LP-054, LP-055, LP-056, LP-057, LP-058, LP-059, LP-060, PC-001, PC-002, PC-003, PC-004, PC-005, PC-006, PC-007, PC-008, PC-009, PC-010, PC-011, PC-012, PC-013, PC-014, PC-015, PC-016, PC-017, PC-018, PC-019, PC-020, PC-021, PC-022, PC-023, PC-024, PC-025, PC-026, PC-027, PC-028, PC-029, PC-030, RC-001, RC-002, RC-003, RC-004, RC-005, RC-006, RC-007, RC-008, RC-009, RC-010, RC-011, RC-012, RC-013, RC-014, RC-015, RC-016, RC-017, RC-018, RC-019, RC-020, RC-021, RC-022, RC-023, RC-024, RC-025, RC-026, RC-027, RC-028, RC-029, RC-030, WA-001, WA-002, WA-003, WA-004, WA-005, WA-006, WA-007, WA-008, WA-009, WA-010, WA-011, WA-012, WA-013, WA-014, WA-015, WA-016, WA-017, WA-018, WA-019, WA-020, WA-021, WA-022, WA-023, WA-024, WA-025, WA-026, WA-027, WA-028, WA-029, WA-030, WA-031, WA-032, WA-033, WA-034, WA-035, WA-036, WA-037, WA-038, WA-039, WA-040, WF-001, WF-002, WF-003, WF-004, WF-005, WF-006, WF-007, WF-008, WF-009, WF-010, WF-011, WF-012</p>
+<p><strong>Arts / PE / electives</strong>  (3) — SD-013, SD-014, SD-015</p>
+<p><strong>English language arts</strong>  (3) — SD-005, SD-006, SD-007</p>
+<p><strong>Mathematics</strong>  (4) — LP-002, SD-001, SD-003, SD-004</p>
+<p><strong>Science</strong>  (4) — LP-001, SD-002, SD-008, SD-009</p>
+<p><strong>Social studies</strong>  (3) — SD-010, SD-011, SD-012</p></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

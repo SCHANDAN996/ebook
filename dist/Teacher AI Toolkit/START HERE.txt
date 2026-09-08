@@ -1,0 +1,48 @@
+THE TEACHER AI TOOLKIT
+300 copy-paste prompts and 12 multi-step workflows
+
+--------------------------------------------------------------------
+WHICH FILE DO I OPEN?
+--------------------------------------------------------------------
+
+Working at your desk, about to use a prompt?
+  ->  "Teacher AI Toolkit - COMPLETE.html"
+      Opens in any browser. Every prompt has a Copy button.
+      This is the one to use day to day.
+
+Want just one chapter, or want to print?
+  ->  PDF/  folder. One file per chapter, one prompt per page.
+
+Want the whole book as a single PDF?
+  ->  "Teacher AI Toolkit - COMPLETE.pdf"   (362 pages)
+
+Want one chapter in the browser?
+  ->  "Web (with Copy button)/"  folder.
+
+--------------------------------------------------------------------
+HOW TO USE A PROMPT
+--------------------------------------------------------------------
+
+1. Open 00-index to find what you need - all 312 entries are listed
+   by name, by grade band and by subject.
+2. Copy everything inside the prompt box.
+3. Paste it into ChatGPT, Claude or Gemini.
+4. Replace anything in [SQUARE BRACKETS] with your real details.
+5. Read what comes back before anyone else does.
+
+--------------------------------------------------------------------
+BEFORE YOU START
+--------------------------------------------------------------------
+
+Read 00-safety once. It applies to every prompt in the book.
+
+The short version: never paste a student's name, ID or any
+identifying detail into an AI tool. Everything these prompts produce
+is a first draft - you read it before it reaches a student, a family
+or a permanent record.
+
+--------------------------------------------------------------------
+
+A PDF cannot carry a working copy button - the format allows it, but
+no browser or phone viewer runs it. That is why the HTML version
+exists, and why it is the one to use while you work.

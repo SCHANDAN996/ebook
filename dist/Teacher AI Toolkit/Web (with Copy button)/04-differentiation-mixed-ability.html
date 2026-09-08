@@ -1,0 +1,903 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 4 — Differentiation and Mixed Ability</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>Chapter 4 — Differentiation and Mixed Ability</h1><p class="lede">35 prompts</p><p>Differentiation fails when it quietly becomes three separate lessons running in one room, or when "support" turns into a permanently lower expectation. These prompts keep one destination and change the route: same objective, same closing discussion, different ways in.</p>
+<h2>What's in here</h2>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>Use when</th></tr></thead><tbody>
+<tr><td>Scaffolds</td><td>8</td><td>Same task, more support</td></tr>
+<tr><td>Tiered tasks</td><td>6</td><td>Three versions, one objective</td></tr>
+<tr><td>Multilingual support</td><td>6</td><td>Language load down, expectation unchanged</td></tr>
+<tr><td>Reading and accessibility</td><td>6</td><td>The text is the barrier, not the idea</td></tr>
+<tr><td>Extensions</td><td>4</td><td>Real work for those who finish early</td></tr>
+<tr><td>Flexible grouping</td><td>4</td><td>Who works with whom, and for how long</td></tr>
+</tbody></table>
+<h2>Worth knowing before you start</h2>
+<p><strong>Never name a student.</strong> Describe the need — "students reading about two years below grade level" — not the person.</p>
+<p>Ask for neutral names for the routes. Anything that reads as a ranking will be decoded by the class within one lesson.</p>
+<p>Push back if an extension is just more questions. Extension means harder thinking, not extra volume, and several prompts here say so outright.</p>
+<p>Whatever accommodation you supply must survive into the draft. Check that it did.</p>
+<h2>Scaffolds</h2>
+<article class="card"><div class="head"><span class="pid">DF-001</span><h3>Add temporary scaffolds without lowering the goal</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Some of the class cannot start, and the target is not moving.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Add scaffolds to this [GRADE] [SUBJECT] task so more students can access it,
+without changing what the task demands.
+
+Task: [PASTE IT]
+Objective: [OBJECTIVE]
+The barrier I am seeing: [DESCRIBE IT — not who has it]
+
+Give me:
+- Three scaffolds, each addressing a different barrier
+- For each, exactly what changes on the page or in what I say
+- For each, what the student still has to do themselves — the thinking the
+  scaffold must not take over
+- When and how each scaffold comes off
+
+Do not simplify the content, reduce the number of steps in the reasoning, or
+turn an open question into a closed one. If a scaffold cannot be added without
+doing that, say so.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the student still do the thinking, or has the scaffold done it?</li><li>Is the removal plan real, or "eventually"?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-005</span><h3>Turn an observed barrier into a targeted support plan</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>You have watched them struggle and want to name what is actually in the way.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Here is what I observed in [GRADE] [SUBJECT] on [TOPIC]:
+
+[DESCRIBE WHAT STUDENTS DID AND SAID. No names.]
+
+Help me work out what the barrier actually is.
+
+Give me:
+- Three possible barriers consistent with what I described — for example
+  prerequisite knowledge, reading demand, working memory load, unfamiliar
+  format, or the task being unclear
+- What I would see in each case that I am not seeing in the others
+- A five-minute check that tells them apart
+- The support that follows from each, and the support that would waste time if
+  I picked the wrong one
+
+Do not infer anything about a student&#x27;s ability, home life, motivation or
+attention. Stay with what the work shows.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the check genuinely separate the three?</li><li>Has it stayed with the work rather than the student?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-006</span><h3>Create a graphic organizer that preserves essential reasoning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Organisers often organise the thinking away.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a graphic organiser for this [GRADE] [SUBJECT] task: [TASK]
+
+The organiser must hold the structure while leaving the reasoning to the
+student. Boxes that only need copying are not helping.
+
+Give me:
+- The organiser, described so I could draw it on a board
+- What goes in each section, as the student sees it
+- The one section where the actual thinking happens, and why it stays blank
+- What a completed one looks like when it is done well
+- What a completed one looks like when the student filled boxes without thinking
+
+Then tell me what this organiser makes harder, since every structure closes
+something off.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a student fill this in correctly without understanding?</li><li>Is the thinking still theirs to do?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-007</span><h3>Write sentence frames at three levels of language support</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>They know the answer and cannot get it into a sentence.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write sentence frames for [GRADE] [SUBJECT] students explaining [WHAT THEY MUST
+EXPLAIN].
+
+Three levels of support:
+- Heavy: most of the sentence given, student supplies the content words
+- Medium: the structure given, student supplies the substance
+- Light: a starter only
+
+At every level the student must supply the reasoning. A frame that can be
+completed correctly without understanding is not a frame, it is a fill-in.
+
+Give me 3-4 frames per level, plus one completed example each.
+
+Then tell me how a student moves from heavy to light, and what tells me they
+are ready.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a student complete the heavy frames without understanding?</li><li>Is there a route off the frames, or do they become permanent?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-008</span><h3>Break a complex task into checkpoints without doing the thinking</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>The task is right; its size is what defeats them.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Break this [GRADE] [SUBJECT] task into checkpoints: [PASTE THE TASK]
+
+Chunk it by natural decision points, not into equal-sized pieces. Each
+checkpoint should be somewhere a student could go wrong and not know it.
+
+Give me:
+- The checkpoints, with what the student has at each
+- The self-check at each: how they know to continue rather than asking me
+- What I look at if a student is stuck, to see which checkpoint they lost it at
+- What the student still decides — the chunking must not remove the choices
+
+Do not turn the task into a set of instructions to follow. If splitting it
+would do that, tell me and suggest a different support.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Has it become a recipe? Then the thinking is gone.</li><li>Can a student self-check without you?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-009</span><h3>Add worked examples and prompts with a clear fade plan</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Worked examples help, until they become the only thing students can do.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a faded sequence for [SKILL] in [GRADE] [SUBJECT].
+
+Four stages:
+1. Fully worked example, with the reasoning at each step
+2. Same difficulty, last two steps blank
+3. Same difficulty, only the first step given
+4. Nothing given
+
+The content difficulty must stay constant across all four. The only variable is
+support.
+
+Give me the four stages, the answers, and:
+- What tells me a student is ready to move on
+- What it means if they can do stage 2 but not stage 4
+- The point in this sequence students most often get stuck, and why
+
+Do not make the later stages harder to compensate for having less support.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the difficulty genuinely constant across the four?</li><li>Does the worked example show the thinking, or just the steps?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-010</span><h3>Create a scaffold menu learners can choose from responsibly</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Students choosing their own support, without it becoming a way to avoid work.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a scaffold menu for this [GRADE] [SUBJECT] task: [TASK]
+
+Students choose what support to take. Give me:
+- 4-5 supports, each addressing a different difficulty
+- The one-line description a student reads to decide
+- What each support does not do, so nobody expects it to give the answer
+- How a student takes one without announcing anything about themselves
+- The prompt I use to get them to try without a support first
+
+No support should be so complete that taking it removes the learning. Tell me
+which of yours comes closest to that line.
+
+Do not label supports by level, ability, or in any order that reads as a ranking.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Which support would a student take to avoid thinking? Trim it.</li><li>Can students take one privately?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-011</span><h3>Audit classroom supports for dependence and hidden lower expectations</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The supports have been in place a while and nobody has asked whether they should be.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit the supports I am using in [GRADE] [SUBJECT]:
+
+[DESCRIBE THEM — what they are, who tends to use them, how long they have been
+in place. No names.]
+
+Tell me:
+- Which supports are doing the thinking rather than enabling it
+- Which have quietly become permanent, and what that costs
+- Where a support is really a lower expectation with a friendlier name
+- Which students would now succeed without a support, and what evidence would
+  confirm that
+- Any support that marks out who receives it
+
+Then tell me which one to remove first, how to remove it, and what to watch for
+afterwards.
+
+Be blunt. A support that has been in place all year with no plan to remove it
+is the thing I most need to hear about.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Which support have you never questioned? Start there.</li><li>Is any support visibly marking out who gets it?</li></ul>
+<h2>Tiered tasks</h2></article>
+<article class="card"><div class="head"><span class="pid">DF-002</span><h3>Create three routes to the same objective</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Same destination, three ways in, one discussion at the end.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build three routes to this [GRADE] [SUBJECT] objective: [OBJECTIVE]
+
+Base task: [PASTE IT]
+
+All three end at the same mastery check and feed the same closing discussion.
+
+For each route give me:
+- The task as students receive it
+- What thinking it demands — this must be the same across all three
+- What differs: the support, the representation, or the entry point
+- What it produces for the closing discussion
+
+Rules:
+- Name them neutrally, in no order that reads as a ranking
+- A student can move between routes without asking permission
+- The extension route is harder thinking, not more questions
+
+Then tell me how the closing discussion works when different students took
+different routes.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could the class decode which route is "the easy one"?</li><li>Does the closing discussion genuinely include all three?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-012</span><h3>Build scaffolded, on-level and extension versions of one task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>One task, three versions, running at the same time in one room.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Take this [GRADE] [SUBJECT] task and give me three versions: [PASTE IT]
+
+- Scaffolded: same thinking, more support
+- On-level: as written, tightened if it needs it
+- Extension: same topic, genuinely harder thinking — not more items
+
+All three must run in the same room at the same time, need the same materials,
+and finish in the same time.
+
+Give me the three versions, and:
+- What is identical across all three, and what changes
+- Where I spend my time, and in what order
+- The common check all three students complete
+- What each version tells me that the others do not
+
+If the extension is just more of the same, rewrite it before giving it to me.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the extension harder thinking, or more work?</li><li>Do all three genuinely finish in the same time?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-013</span><h3>Tier a task by representation rather than by easier content</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Changing how the idea is presented, not how demanding it is.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Tier this [GRADE] [SUBJECT] task by changing the representation, keeping the
+content demand identical.
+
+Task: [PASTE IT]
+
+Give me the same task presented:
+- Concretely, with physical or visual materials
+- Pictorially or diagrammatically
+- Abstractly or symbolically
+
+For each:
+- The task as the student sees it
+- What is genuinely the same about the thinking required
+- Which students this representation helps, described by need, not by label
+- How a student moves toward the abstract version
+
+None of these is the easy version. If one has ended up less demanding, tell me
+and fix it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the demand truly equal, or is the concrete one easier?</li><li>Is there a path toward the abstract, or does it stop at concrete?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-014</span><h3>Create three entry points with one common mastery product</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Different starts, identical evidence at the end.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design three entry points into [TOPIC] for [GRADE] [SUBJECT], all producing the
+same final piece of evidence.
+
+Objective: [OBJECTIVE]
+
+Give me:
+- Three openings, differing in how much prior knowledge they assume
+- The point where all three converge
+- The single mastery product every student produces, identical across entries
+- What the product shows, and what it cannot show about the route taken
+- How I mark it the same way regardless of entry point
+
+A student&#x27;s entry point must not be readable from their final product. If it
+would be, change the product.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could you tell from the product which entry a student used?</li><li>Do the three genuinely converge, or run in parallel to the end?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-015</span><h3>Design tiered questions that move from access to transfer</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>A question set where everyone starts and the ceiling stays high.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a tiered question set on [TOPIC] for [GRADE] [SUBJECT].
+
+Structure:
+- 2 access questions anyone who attended the lesson can begin
+- 3 core questions on the objective
+- 2 transfer questions in a context we have not used
+
+Every student attempts every tier. These are not ability groups and must not be
+labelled as such.
+
+Give me the questions, the answers, and:
+- What it means if a student is fine on core and stuck on transfer
+- One transfer question a student who found the access questions hard could
+  still attempt
+- The question I would put on the board for the whole class
+
+Do not make the transfer questions inaccessible to a struggling student. They
+should demand different thinking, not more prior knowledge.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a struggling student attempt at least one transfer question?</li><li>Do the tiers demand different thinking, or the same thing harder?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-016</span><h3>Check that every tier carries equal curricular dignity</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Before students work out which version is the one for "the bottom group".</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit these tiered [GRADE] [SUBJECT] tasks for equal dignity.
+
+Tell me:
+- Whether any version is visibly the lesser one — in length, appearance,
+  interest, or what students get to talk about afterwards
+- Whether any version reduces the actual learning rather than the support
+- What a student on each version would say if asked which group they were in
+- Whether the naming, ordering or layout signals a ranking
+- Whether every version has something worth sharing in the closing discussion
+
+Then tell me the single change that would most equalise them, and whether any
+version should simply be removed.
+
+TASKS:
+[PASTE THEM]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Which version would you least want to be given? That is the answer.</li><li>Does every version get airtime at the end?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-017</span><h3>Create a whole-class debrief that reconnects three task versions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Three versions, and now everyone has to be in one conversation.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a [MINUTES]-minute closing discussion for a [GRADE] [SUBJECT] lesson
+where students worked on three versions of [TASK].
+
+The discussion must work for all three without anyone having to announce which
+version they did.
+
+Give me:
+- An opening question every student can answer from their own version
+- The order I take contributions in, so no version is heard as the authority
+- Two questions that make the versions illuminate each other
+- The shared conclusion everyone leaves with
+- What I say if a student reveals which version they did, so it passes without
+  weight
+
+Do not structure it as the extension group reporting back to the others.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does any version get positioned as the correct one?</li><li>Can everyone answer the opening question?</li></ul>
+<h2>Multilingual support</h2></article>
+<article class="card"><div class="head"><span class="pid">DF-003</span><h3>Make a task accessible to multilingual learners</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>The idea is within reach. The English wrapped around it is not.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Make this [GRADE] [SUBJECT] task accessible to students still developing
+English, without lowering what it demands.
+
+Task: [PASTE IT]
+
+Give me:
+- The 5-6 words that will block comprehension, each with a plain definition and
+  a visual I could sketch in ten seconds
+- Sentence frames for the discussion
+- A way to show understanding that does not require writing a paragraph
+- One thing I should say differently while teaching
+- The subject vocabulary that must stay, defined in place rather than removed
+
+Reduce the language load only. Do not simplify the content, cut a step from the
+reasoning, or lower the expectation.
+
+Do not assume anything about which language a student speaks at home.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Has content been simplified, or only language?</li><li>Is the subject vocabulary still there?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-018</span><h3>Identify the language demands hidden inside a subject task</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>The task is not about language, and language is why it is failing.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Analyse the language demands in this [GRADE] [SUBJECT] task: [PASTE IT]
+
+Tell me:
+- Command words, and what each actually asks for — students often lose marks
+  on &quot;explain&quot; versus &quot;describe&quot; rather than on the content
+- Subject vocabulary that must be understood versus general academic vocabulary
+  that could be simplified
+- Grammatical structures that carry meaning here — conditionals, passives,
+  comparatives — and where a misreading changes the answer
+- Any sentence a student could parse correctly and still misunderstand
+- Cultural or contextual knowledge the task assumes without stating
+
+Then tell me which single demand, if removed, would help most without changing
+what is assessed.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the task assume context knowledge you had not noticed?</li><li>Are the command words used consistently across your papers?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-019</span><h3>Build an essential vocabulary preview with visuals and examples</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Front-loading the words that would otherwise stop the lesson.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a vocabulary preview for a [GRADE] [SUBJECT] lesson on [TOPIC].
+
+Keep it to the words that genuinely block understanding. A long list is a worse
+preview than a short one.
+
+For each word give me:
+- A student-friendly definition, using words simpler than the word itself
+- An example and a non-example
+- A visual I could sketch on the board in ten seconds
+- The everyday meaning it might be confused with, if there is one
+
+Then give me:
+- The 5-minute routine for introducing them
+- Which words students will still need in the moment, and how I support that
+- Which of these words are worth keeping for the rest of the year
+
+Do not include words students can work out from context. Say which ones those are.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Are the definitions genuinely simpler than the words?</li><li>Is the list short enough to actually teach in five minutes?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-020</span><h3>Create structured partner rehearsal before independent writing</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Saying it before writing it makes the writing possible.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design a partner rehearsal step before [GRADE] [SUBJECT] students write about
+[TOPIC].
+
+Give me:
+- The exact instruction pairs hear, under 30 seconds
+- What each partner does — both must speak, not one talking and one listening
+- The frames a student uses if they cannot start
+- How long each turn gets, and the signal to swap
+- What the listening partner is responsible for noticing
+- How the rehearsal connects to what they then write alone
+
+The rehearsal must not become the answer being dictated. Tell me how to stop
+one partner writing the other&#x27;s paragraph for them.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does both students speaking actually happen, or does one dominate?</li><li>Is the writing still their own after this?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-021</span><h3>Plan purposeful home-language use without assuming proficiency</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Thinking in a first language is an asset, and should not be an assignment.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan how students might use a home language during this [GRADE] [SUBJECT]
+lesson on [TOPIC].
+
+Constraints:
+- Do not assume any student is literate in their home language, or wants to use
+  it, or has anyone to use it with
+- Do not assume which language any student speaks
+- Everything must remain optional and unremarkable
+
+Give me:
+- Where in the lesson thinking in another language genuinely helps
+- How I offer that without singling anyone out or making it an instruction
+- What is produced in English regardless, so the assessment stays consistent
+- What I do if a student declines
+
+Then tell me where this would be a bad idea in this lesson, and why.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a student decline without it being noticed?</li><li>Have you assumed anything about who speaks what?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-022</span><h3>Separate content evidence from English-language evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Marking science, and accidentally marking English.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>For this [GRADE] [SUBJECT] task, separate what shows subject understanding from
+what shows English proficiency.
+
+Task: [PASTE IT]
+Objective: [OBJECTIVE]
+
+Tell me:
+- Which parts of a response evidence the subject learning
+- Which evidence language ability rather than the objective
+- Where a student with strong understanding and developing English would lose
+  marks, and whether that is defensible here
+- An alternative way to evidence the same objective with a lower language load
+- What I should not correct, because it is not what I am assessing
+
+Then give me a marking note I could write for myself so I stay consistent
+across thirty scripts.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Would a strong thinker with weak English pass this?</li><li>Is your marking note specific enough to hold you to it?</li></ul>
+<h2>Reading and accessibility</h2></article>
+<article class="card"><div class="head"><span class="pid">DF-004</span><h3>Adapt text access while preserving meaning</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Keep the ideas. Lose the barrier.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Adapt the text below for [GRADE] students reading roughly [NUMBER] years below
+grade level.
+
+Keep every key idea and all subject vocabulary — define the vocabulary in place
+rather than removing it. Shorten sentences, make the structure explicit, and add
+a heading every few paragraphs.
+
+Give me:
+- The adapted text
+- What you changed, and anything nuanced that was lost in simplifying
+- The 5 words a student may still get stuck on, with a student-friendly gloss
+- Anywhere the original&#x27;s meaning is genuinely ambiguous, so I know the
+  simplification made a choice
+
+Do not remove complexity that is the point of the text. If a passage cannot be
+simplified without losing its argument, say so and leave it.
+
+TEXT:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Read both versions. Is the argument intact?</li><li>Did it flag any choice it made on your behalf?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-023</span><h3>Chunk a demanding source without rewriting its claims</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>A primary source or original text that must stay in its own words.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Chunk this [GRADE] [SUBJECT] source for students, without altering its wording.
+
+Give me:
+- The natural chunk boundaries, quoting the first few words of each
+- A one-line purpose for each chunk — what students are reading for
+- A question after each chunk, answerable from that chunk alone
+- The chunk students will find hardest, and the support that goes there
+- The vocabulary gloss for each chunk, alongside rather than replacing the text
+
+Do not paraphrase, modernise or simplify the source itself. The whole point is
+that students meet the original.
+
+SOURCE:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the original wording untouched?</li><li>Is each question answerable from its own chunk?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-024</span><h3>Create a plain-language companion beside the original text</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Both versions on the desk, so students can move between them.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a plain-language companion for this [GRADE] [SUBJECT] text, to sit
+alongside the original rather than replace it.
+
+Give me:
+- A plain-language version, paragraph by paragraph, aligned to the original so
+  students can match them
+- Anything the plain version loses — nuance, tone, hedging, ambiguity
+- Three places where the original says something more precisely than the plain
+  version can
+- A task that requires using both, so students have a reason to go back
+
+Do not present the plain version as equivalent. It is a way in, not a
+replacement.
+
+TEXT:
+[PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the task genuinely require the original?</li><li>Are the losses it named ones you care about?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-025</span><h3>Add glossary, guiding questions and audio-access suggestions</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Three supports around one text, without rewriting it.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build a support pack around this [GRADE] [SUBJECT] text: [PASTE IT]
+
+Give me:
+- A glossary of the words that block meaning, in the order they appear, with
+  student-friendly definitions
+- 4 guiding questions placed at the points where a reader typically loses the
+  thread
+- Suggestions for making this available as audio, using what a school normally
+  has — do not recommend paid tools or anything requiring a personal account
+- What a student does before reading, during, and after
+
+Then tell me which single support would help most if I only had time for one.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Do the audio suggestions work with what your school actually has?</li><li>Are the guiding questions at the right points for your class?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-026</span><h3>Reduce unnecessary reading load in a non-reading assessment</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>A maths test that is secretly a reading test.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Reduce the reading load in this [GRADE] [SUBJECT] assessment without changing
+what it assesses.
+
+Assessment: [PASTE IT]
+What it is meant to assess: [OBJECTIVE]
+
+For each question:
+- Say whether the reading demand is part of what is being assessed or is
+  incidental
+- Where incidental, rewrite it with lower reading demand and identical subject
+  demand
+- Flag anything where cutting the words would change the question
+
+Then tell me:
+- Which question currently disadvantages a weak reader most
+- Whether the paper as a whole tests the objective or tests reading
+
+Do not shorten questions by removing information students need.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Do the rewrites still test the same thing? Check each one.</li><li>Is any information needed to answer now missing?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-027</span><h3>Audit adapted materials for lost meaning or unsupported simplification</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Someone simplified it. You want to know what went with the difficulty.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Compare this adapted [GRADE] [SUBJECT] material against the original.
+
+Tell me:
+- What ideas are missing from the adapted version
+- Where simplifying has changed a claim rather than its wording — a hedged
+  statement made absolute, a cause implied where the original said correlation
+- Where subject vocabulary was removed that students actually need
+- Whether the adapted version now says something the original does not
+- Whether it is still demanding enough to be worth the lesson
+
+Quote the specific places. Then tell me the single change that would restore the
+most meaning.
+
+ORIGINAL: [PASTE IT]
+
+ADAPTED: [PASTE IT]</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Check any changed claim yourself. That is the one that matters.</li><li>Is the adapted version still worth a lesson?</li></ul>
+<h2>Extensions</h2></article>
+<article class="card"><div class="head"><span class="pid">DF-028</span><h3>Create an extension that deepens reasoning instead of adding more work</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>They finished in half the time and deserve better than more questions.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an extension for students who finish this [GRADE] [SUBJECT] task early:
+[PASTE THE TASK]
+
+It must demand harder thinking, not more of the same. Adding items, longer
+numbers or extra examples is not an extension.
+
+Give me:
+- The extension task
+- What deeper thinking it demands, in one line
+- Why a student who found the original easy will not find this trivial
+- What it produces that is worth sharing with the class
+- Something they can do with it if they finish that too
+
+It should need no explanation from me, use only what is on their desk, and take
+10-15 minutes.
+
+If a student would experience this as punishment for working quickly, redesign it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Would a fast finisher see this as reward or punishment?</li><li>Does it genuinely need no explanation?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-029</span><h3>Build a transfer challenge using a new context</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Testing whether the learning travels.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Write a transfer challenge on [TOPIC] for [GRADE] [SUBJECT].
+
+We worked in this context: [DESCRIBE IT]
+
+Give me a task using the same thinking in a context we have never used.
+
+Include:
+- The task
+- What makes the context genuinely different, not cosmetically different
+- What a student who learned the surface pattern will do, and where it fails
+- The answer or range of acceptable answers
+- What the response tells me about whether the learning transferred
+
+The challenge must not require knowledge from the new context that students do
+not have. If it does, say so and change it.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Is the context genuinely new, or the same with new nouns?</li><li>Does it need outside knowledge students lack?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-030</span><h3>Design an open-ended investigation with clear evidence expectations</h3></div><p class="meta">Grades 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Open enough to be interesting, defined enough to be markable.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Design an open-ended investigation on [TOPIC] for [GRADE] [SUBJECT], taking
+[TIME].
+
+It should have several defensible answers, and still be markable.
+
+Give me:
+- The question, open but bounded
+- What students must produce regardless of the direction they take
+- What counts as evidence here, and what does not
+- Three directions a student might reasonably go, and whether each is productive
+- The checkpoint that stops someone spending the whole time on a dead end
+- What I look for to distinguish genuine investigation from wandering
+
+Do not make it so open that a student cannot tell whether they have finished.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could a student tell when they are done?</li><li>Would you accept all three directions it named?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-031</span><h3>Audit an extension for novelty, rigor and connection to the objective</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Before it goes into the folder for fast finishers.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] extension task: [PASTE IT]
+
+Original task and objective: [PASTE THEM]
+
+Tell me:
+- Whether it demands different thinking or just more of the same
+- Whether it connects to the objective or has drifted to a different topic
+- Whether a student who found the original hard could attempt any part of it
+- Whether it needs explanation from me — if so, it fails as an extension
+- Whether a student would read it as reward or punishment
+
+Then tell me the single change that would most improve it, and whether it is
+worth keeping at all.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>If it says the extension is just more work, do you agree?</li><li>Would you want to be given this task?</li></ul>
+<h2>Flexible grouping</h2></article>
+<article class="card"><div class="head"><span class="pid">DF-032</span><h3>Build temporary groups from anonymous learning evidence</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Groups for this lesson, from what the work showed.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Build groups for a [GRADE] [SUBJECT] lesson on [TOPIC] from these response
+patterns:
+
+[DESCRIBE THE PATTERNS AND ROUGHLY HOW MANY STUDENTS. No names.]
+
+Give me:
+- The groups, defined by what each needs rather than by level
+- What each group does, all of it worth doing
+- How groups are formed so the class does not read them as ability
+- Where I go first, and for how long
+- The check at the end that tells me whether to keep or dissolve these groups
+
+These groups last one lesson. Tell me what would make me change them tomorrow.
+
+Do not name students, and do not create a group that is visibly the bottom one.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Could students decode the grouping?</li><li>Does every group have work worth doing?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-033</span><h3>Create a rotation plan for three changing instructional needs</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Three needs, one of you, one period.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan a rotation for a [MINUTES]-minute [GRADE] [SUBJECT] lesson with three
+groups needing different things:
+
+Group 1 needs: [DESCRIBE]
+Group 2 needs: [DESCRIBE]
+Group 3 needs: [DESCRIBE]
+
+Give me:
+- The timing, with transitions counted in
+- Which group I take first and why
+- What the other two do that genuinely does not need me
+- What each group leaves behind as evidence
+- What I do if my group runs over, since it will
+- The two-minute closing that brings all three together
+
+Assume I cannot properly supervise the other two while teaching one. Tell me
+what to set up beforehand so that survives.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Can the unsupervised groups really work without you?</li><li>Is the transition time honest?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-034</span><h3>Plan mixed-readiness groups with meaningful roles and accountability</h3></div><p class="meta">Grades 3-5, 6-8, 9-12</p>
+<p class="lbl">When you need this</p>
+<p>Mixed groups, where the strongest student is not just the answer key.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Plan mixed-readiness groups for this [GRADE] [SUBJECT] task: [PASTE IT]
+
+Groups of [NUMBER].
+
+The task must need everyone. A stronger student explaining to weaker ones is not
+collaboration, and it is not their job.
+
+Give me:
+- How the task is structured so different contributions are genuinely needed
+- Roles defined by the thinking they demand, not by clerical jobs
+- What each student produces individually
+- How I stop one student doing the work for the group
+- What each student can answer at the end, whatever their role
+
+Then tell me honestly whether a stronger student gains anything here. If not,
+say so.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>Does the strongest student gain anything, or just teach?</li><li>Could one student do it all?</li></ul></article>
+<article class="card"><div class="head"><span class="pid">DF-035</span><h3>Audit a grouping plan for labels, access, movement and regrouping triggers</h3></div><p class="meta">All grades</p>
+<p class="lbl">When you need this</p>
+<p>Before the groups quietly become permanent.</p>
+<div class="box"><div class="bar"><span>Copy this prompt</span><button class="copy">Copy</button></div><pre>Audit this [GRADE] [SUBJECT] grouping plan: [PASTE IT]
+
+Tell me:
+- Whether any group is identifiable as the low group — by name, task, seating,
+  or what they get to talk about
+- Whether a student could move between groups, and what would trigger that
+- Whether every group&#x27;s work is worth doing, or one is waiting
+- Whether the physical arrangement works in a normal room
+- What happens when a group member is absent
+- Whether there is any plan to dissolve these groups, or they are now fixed
+
+Then tell me the single change that would most reduce the risk of these
+becoming permanent ability groups.
+
+Be direct. Groups that were formed once and never revisited are the thing I
+most need told.</pre></div>
+<p class="lbl">Before you send it</p>
+<ul><li>When did you last change these groups? That is the real question.</li><li>Is any group waiting rather than working?</li></ul></article></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>

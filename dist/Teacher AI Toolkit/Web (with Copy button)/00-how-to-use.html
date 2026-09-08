@@ -1,0 +1,207 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to use this book</title><style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
+  --ink:#e3e9ef; --dim:#8d97a3; --faint:#5f6a76;
+  --accent:#4dd6c1; --accent-dim:#2a6f66; --warn:#e0b04a;
+  --pad:26px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 120px}
+
+/* ---- headings ---------------------------------------------------------- */
+h1{font-size:2.15rem; line-height:1.2; letter-spacing:-.022em; margin:0 0 .5rem;
+   font-weight:650}
+.lede{color:var(--dim); font-size:1.02rem; margin:0 0 2.6rem; max-width:60ch}
+h2{font-size:.82rem; font-weight:650; letter-spacing:.14em; text-transform:uppercase;
+   color:var(--accent); margin:4rem 0 1.4rem; padding-bottom:.7rem;
+   border-bottom:1px solid var(--line)}
+h3{font-size:1.06rem; font-weight:620; letter-spacing:-.008em; margin:0; color:var(--ink)}
+p{margin:0 0 1.1rem; text-align:justify; text-justify:inter-word;
+  hyphens:auto; -webkit-hyphens:auto}
+ul{margin:0 0 1.1rem; padding-left:1.15rem}
+li{margin:.3rem 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto}
+.lede,.meta,.lbl,th,td{text-align:left; hyphens:manual}
+strong{font-weight:640; color:#f2f6fa}
+code{background:var(--panel-2); border:1px solid var(--line); color:var(--accent);
+     padding:1px 6px; border-radius:5px; font-size:.85em}
+a{color:var(--accent)}
+hr{display:none}
+
+/* ---- tables ------------------------------------------------------------ */
+table{border-collapse:collapse; width:100%; margin:0 0 1.8rem; font-size:.91rem}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line);
+      vertical-align:top}
+th{color:var(--dim); font-weight:600; font-size:.76rem; letter-spacing:.08em;
+   text-transform:uppercase; border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap; color:var(--accent); font-variant-numeric:tabular-nums}
+
+/* ---- prompt card ------------------------------------------------------- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+      padding:var(--pad); margin:0 0 20px}
+.card > *:last-child{margin-bottom:0}
+.head{display:flex; align-items:baseline; gap:.7rem; margin-bottom:.35rem;
+      flex-wrap:wrap}
+.pid{font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.06em;
+     color:#0d1117; background:var(--accent); padding:5px 8px; border-radius:5px;
+     flex:none}
+.meta{color:var(--faint); font-size:.83rem; margin:0 0 1.5rem}
+.lbl{font-size:.72rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+     color:var(--dim); margin:1.6rem 0 .5rem}
+.card .lbl:first-of-type{margin-top:1.2rem}
+
+/* ---- the prompt box ---------------------------------------------------- */
+.box{border:1px solid var(--accent-dim); border-radius:var(--radius);
+     overflow:hidden; margin:0 0 .4rem; background:#0b0f14}
+.bar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+     background:rgba(77,214,193,.09); border-bottom:1px solid var(--accent-dim);
+     padding:9px 14px}
+.bar span{font-size:.7rem; font-weight:650; letter-spacing:.13em;
+          text-transform:uppercase; color:var(--accent)}
+.copy{font:600 .78rem/1 inherit; color:#0d1117; background:var(--accent);
+      border:0; border-radius:6px; padding:7px 15px; cursor:pointer;
+      transition:background .12s, transform .06s}
+.copy:hover{background:#66e6d2}
+.copy:active{transform:translateY(1px)}
+.copy.ok{background:var(--warn)}
+/* Prompts are hard-wrapped at ~78 characters. The type is sized so that
+   measure reaches the right edge of the box instead of stopping short. */
+.box pre{margin:0; padding:18px 20px; overflow-x:auto; white-space:pre-wrap;
+         word-break:break-word; color:#d5dfe9;
+         font:14.6px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+blockquote{margin:0 0 1.4rem; padding:.85rem 1.1rem; border-radius:8px;
+  background:rgba(224,176,74,.09); border-left:3px solid var(--warn);
+  color:#f0e2c4; font-size:.92rem; max-width:66ch}
+blockquote p{margin:0}
+blockquote strong{color:var(--warn)}
+
+@media(max-width:640px){
+  .wrap{padding:34px 16px 80px} :root{--pad:18px}
+  h1{font-size:1.7rem} .box pre{padding:14px; font-size:12.5px}
+}
+
+/* ---- print: flip to light, drop the buttons ---------------------------- */
+@media print{
+  :root{--bg:#fff; --panel:#fff; --panel-2:#f4f6f8; --line:#d7dee5;
+        --ink:#16202b; --dim:#4e5a67; --faint:#6d7883;
+        --accent:#0b6f63; --accent-dim:#a8ccc6; --warn:#8a6510}
+  body{font-size:10.4pt; line-height:1.55; color:var(--ink); background:#fff}
+  .wrap{max-width:100%; padding:0}
+  .copy{display:none}
+  h1{font-size:20pt} h2{font-size:8.5pt; margin:22pt 0 9pt; break-after:avoid}
+  h3{font-size:11.2pt; break-after:avoid}
+  p,li{orphans:3; widows:3}
+
+  /* One prompt per page: you look a prompt up, you get a clean page.
+     The section heading shares its page with the first prompt under it. */
+  .card{break-before:page; page-break-before:always; break-inside:auto;
+        padding:0; border:0; border-radius:0; margin:0}
+  h2 + .card, .wrap > .card:first-of-type{break-before:auto;
+        page-break-before:auto}
+  .head{break-after:avoid}
+
+  /* The prompt itself stays whole. */
+  .box{break-inside:avoid; page-break-inside:avoid; background:#f6f8fa;
+       border:1px solid #c9d6d3; margin-bottom:10pt}
+  .bar{background:#e8f1ef; padding:6pt 10pt; border-bottom:1px solid #c9d6d3}
+  .bar span{font-size:7pt; color:var(--accent)}
+  /* 78-character measure sized to reach the right margin */
+  .box pre{color:#131c26; font-size:10pt; line-height:1.52; padding:11pt 12pt;
+           white-space:pre-wrap; overflow:visible}
+  .pid{background:none; color:var(--accent); padding:0; font-size:.92em;
+       letter-spacing:.05em}
+  .meta{font-size:8pt; margin-bottom:9pt}
+  .lbl{font-size:6.8pt; margin:11pt 0 4pt}
+  blockquote{background:#fdf8ec; border-left:2.5pt solid var(--warn);
+             break-inside:avoid; color:#4a3a12}
+  table{font-size:8.8pt; break-inside:avoid}
+  th,td{padding:5pt 8pt}
+}
+</style></head><body><div class="wrap"><h1>How to use this book</h1><h2>The short version</h2>
+<p>1. Find the prompt for what you are actually doing right now. 2. Copy everything between <strong>COPY FROM HERE</strong> and <strong>TO HERE</strong>. 3. Paste it into ChatGPT, Claude or Gemini. 4. Fill in the parts in <code>[SQUARE BRACKETS]</code> with your real details. 5. Read what comes back before anyone else does.</p>
+<p>That is the whole method. Nothing to install, nothing to learn first.</p>
+<h2>Two files for every chapter</h2>
+<p>Each chapter comes as a <strong>PDF</strong> and an <strong>HTML page</strong>, with the same content.</p>
+<table><thead><tr><th></th><th>PDF</th><th>HTML page</th></tr></thead><tbody>
+<tr><td>Copy button on every prompt</td><td>no</td><td><strong>yes</strong></td></tr>
+<tr><td>Works offline / prints</td><td><strong>yes</strong></td><td>no</td></tr>
+<tr><td>Search inside</td><td>yes</td><td>yes</td></tr>
+<tr><td>On a phone</td><td>fine</td><td><strong>better</strong></td></tr>
+</tbody></table>
+<p>A PDF cannot carry a working copy button — the feature exists in the format, but no browser or phone viewer runs it. So <strong>use the HTML page when you are actually working</strong>, and keep the PDF for printing or reading offline.</p>
+<h2>Which chapter do I open?</h2>
+<p>Each chapter is a separate file, so you only open the one you need.</p>
+<table><thead><tr><th>If you are doing this</th><th>Open</th></tr></thead><tbody>
+<tr><td>Planning a lesson or a unit</td><td>Chapter 1</td></tr>
+<tr><td>Making worksheets, activities, stations</td><td>Chapter 2</td></tr>
+<tr><td>Writing a quiz, test or rubric</td><td>Chapter 3</td></tr>
+<tr><td>Adapting one task for a mixed class</td><td>Chapter 4</td></tr>
+<tr><td>Writing to a family</td><td>Chapter 5</td></tr>
+<tr><td>Report card season</td><td>Chapter 6</td></tr>
+<tr><td>Routines, behaviour, morning meeting</td><td>Chapter 7</td></tr>
+<tr><td>Emails, goals, forms, admin</td><td>Chapter 8</td></tr>
+<tr><td>Subject-specific work</td><td>Chapter 9</td></tr>
+<tr><td>A whole job, start to finish</td><td>Chapter 10</td></tr>
+</tbody></table>
+<p><strong>Start with the index.</strong> It lists all 300 prompts by name, and again by grade band and by subject, so you can find one in about ten seconds.</p>
+<h2>Filling in the brackets</h2>
+<p>Every prompt has parts like <code>[GRADE_SUBJECT]</code> or <code>[UNIT_TOPIC]</code>. Replace the whole thing, brackets included.</p>
+<blockquote><p><code>[GRADE_SUBJECT: exact age/grade and subject]</code></p></blockquote>
+<blockquote><p>becomes</p></blockquote>
+<blockquote><p><code>Year 7 science</code></p></blockquote>
+<p><strong>Be specific.</strong> "Year 7 science, mixed ability, 26 students, 50-minute lesson, no lab access this week" gets you something usable. "Science" gets you something generic.</p>
+<p>If a prompt asks for something you genuinely do not have, say so in the chat rather than inventing it. The prompts are written to ask you back.</p>
+<h2>Getting a better result</h2>
+<p><strong>Answer its questions.</strong> If it comes back asking for the assessment date or the reading level, the prompt is working correctly. Answer, and the next draft will be much closer.</p>
+<p><strong>Ask for a change instead of starting again.</strong> "Same plan, but guided practice is too long for 15 minutes" is faster than a fresh prompt.</p>
+<p><strong>One task at a time.</strong> These prompts are deliberately narrow. Asking for a lesson plan, a worksheet and a parent email in one go gets you three mediocre things.</p>
+<h2>What the sections mean</h2>
+<p><strong>When you need this</strong> — the situation, so you can tell two similar prompts apart.</p>
+<p><strong>Fill in</strong> — what you need to hand before you start.</p>
+<p><strong>COPY FROM HERE / TO HERE</strong> — the prompt. Copy all of it.</p>
+<p><strong>Before you send it</strong> — what usually goes wrong on *this* kind of task. Short, and specific to this prompt.</p>
+<p><strong>Example</strong> — where included, an illustration of the shape of a good answer. It is an editorial illustration, not a logged AI run.</p>
+<h2>Three things this book will not do</h2>
+<p><strong>It will not know your students.</strong> Nothing here should be given identifying details. See the safety page.</p>
+<p><strong>It will not check your subject facts.</strong> Verify content and calculations yourself, especially anything a student will be marked on.</p>
+<p><strong>It will not decide anything.</strong> Grades, placements, behaviour outcomes and anything touching safeguarding stay with you and your school's process.</p>
+<h2>If a prompt does not work</h2>
+<p>Tell us which one — the ID is at the top of every prompt, like <code>LP-002</code> — and what you got instead. That is the fastest way to get it fixed.</p></div><script>
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(t);
+  }
+  return new Promise(function(res,rej){
+    var a=document.createElement('textarea');
+    a.value=t; a.setAttribute('readonly','');
+    a.style.cssText='position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(a);
+    a.select(); a.setSelectionRange(0,a.value.length);
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(a);
+    ok?res():rej();
+  });
+}
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.box').querySelector('pre').innerText;
+    copyText(t).then(function(){
+      b.textContent='Copied'; b.classList.add('ok');
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},1600);
+    }).catch(function(){
+      b.textContent='Select it'; b.classList.add('ok');
+      var r=document.createRange(); r.selectNodeContents(b.closest('.box').querySelector('pre'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      setTimeout(function(){b.textContent='Copy'; b.classList.remove('ok')},2600);
+    });
+  });
+});
+</script></body></html>
