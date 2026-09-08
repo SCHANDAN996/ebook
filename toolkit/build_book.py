@@ -174,7 +174,8 @@ document.querySelectorAll('.copy').forEach(function(b){
 });
 """
 
-LABELS = ("When you need this", "Before you send it", "Fill in", "Example")
+LABELS = ("When you need this", "Before you send it", "Before you use it",
+          "Then, one at a time", "Fill in", "Example")
 
 
 def inline(s):
