@@ -4,7 +4,8 @@
 
 Most behaviour problems are routine problems wearing a disguise. These prompts
 work on the structures — how a transition runs, what you say in the first ten
-seconds, how a conversation gets repaired afterwards — rather than on the student.
+seconds, how a conversation gets repaired afterwards — rather than on the
+student.
 
 ## What's in here
 
@@ -14,1076 +15,969 @@ seconds, how a conversation gets repaired afterwards — rather than on the stud
 | Behaviour reset support | 5 | It went wrong; you want it back |
 | Restorative conversations | 4 | Repair, not punishment |
 | Social-emotional learning | 4 | Building it into normal lessons |
-| Morning meetings | 3 | Openings that a shy student can join |
+| Morning meetings | 3 | Openings a shy student can join |
 | Seating and grouping | 3 | Who sits where, on purpose |
 
 ## Worth knowing before you start
 
-**This chapter has the firmest limit in the book.** If a situation involves harm,
-abuse or immediate danger, stop and follow your school's safeguarding procedure.
-Do not work it through with an AI tool.
+**This chapter has the firmest limit in the book.** If a situation involves
+harm, abuse, or immediate danger, stop and follow your school's safeguarding
+procedure. Do not work it through with an AI tool. Nothing here is a substitute
+for that process, and several prompts are written to say so and stop.
 
 Focus on the behaviour and the repair. Nothing here should produce a judgement
 about a child's character, home life or motivation.
 
-A restorative conversation is not a forced apology. If the draft demands one,
-change it — several prompts here rule it out explicitly.
+A restorative conversation is not a forced apology. If a draft demands one,
+change it — several prompts rule it out explicitly.
 
 Keep in-the-moment scripts under fifteen words. Anything longer becomes an
 audience.
 
-## Every prompt in this chapter
-
-### Routines And Transitions
-
-| ID | Prompt | Grades |
-|---|---|---|
-| CM-001 | Design and teach a classroom routine | All |
-| CM-003 | Teach an efficient entry routine with an immediate learning start | 3-5, 6-8, 9-12 |
-| CM-004 | Create a calm transition between whole-group and independent work | 3-5, 6-8, 9-12 |
-| CM-005 | Build a materials routine that reduces waiting and lost equipment | 3-5, 6-8, 9-12 |
-| CM-006 | Plan a dismissal routine that protects safety and learning time | 3-5, 6-8, 9-12 |
-| CM-007 | Audit a routine using timing, participation and independence evidence | 3-5, 6-8, 9-12 |
-
-### Restorative Conversations
-
-| ID | Prompt | Grades |
-|---|---|---|
-| CM-002 | Prepare a restorative conversation | All |
-| CM-013 | Create questions that explore impact, needs and possible repair | 3-5, 6-8, 9-12 |
-| CM-014 | Build a voluntary repair agreement with a scheduled follow-up | 3-5, 6-8, 9-12 |
-| CM-015 | Audit a restorative script for coercion, blame and safeguarding limits | 3-5, 6-8, 9-12 |
-
-### Behaviour Reset Support
-
-| ID | Prompt | Grades |
-|---|---|---|
-| CM-008 | Create a brief private behaviour-reset conversation | 3-5, 6-8, 9-12 |
-| CM-009 | Write neutral redirection language for a recurring disruption | 3-5, 6-8, 9-12 |
-| CM-010 | Plan a re-entry routine after a learner leaves the classroom | 3-5, 6-8, 9-12 |
-| CM-011 | Create a reset menu that preserves dignity and instructional access | 3-5, 6-8, 9-12 |
-| CM-012 | Audit a response plan for escalation, shame and inconsistent expectations | 3-5, 6-8, 9-12 |
-
-### Social Emotional Learning
-
-| ID | Prompt | Grades |
-|---|---|---|
-| CM-016 | Create an age-appropriate lesson on naming and managing emotions | 3-5, 6-8, 9-12 |
-| CM-017 | Teach a practical strategy for pausing before responding | 3-5, 6-8, 9-12 |
-| CM-018 | Build an empathy activity without requiring personal disclosure | 3-5, 6-8, 9-12 |
-| CM-019 | Audit an SEL activity for privacy, culture and clinical overreach | 3-5, 6-8, 9-12 |
-
-### Morning Meetings
-
-| ID | Prompt | Grades |
-|---|---|---|
-| CM-020 | Plan a 10-minute morning meeting with a clear community goal | 3-5, 6-8, 9-12 |
-| CM-021 | Create inclusive check-in options that do not force disclosure | 3-5, 6-8, 9-12 |
-| CM-022 | Build a weekly morning-meeting sequence without repetitive prompts | 3-5, 6-8, 9-12 |
-
-### Seating And Grouping
-
-| ID | Prompt | Grades |
-|---|---|---|
-| CM-023 | Create a seating plan from classroom access and learning constraints | 3-5, 6-8, 9-12 |
-| CM-024 | Build a transparent regrouping plan using temporary learning evidence | 3-5, 6-8, 9-12 |
-| CM-025 | Audit seating and grouping decisions for labels, isolation and accessibility | 3-5, 6-8, 9-12 |
-
 ---
+
+## Routines and transitions
 
 ---
 
 ### CM-001 · Design and teach a classroom routine
-
-*All grades  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-A recurring transition is costing time or creating confusion.
+The same four minutes disappear every day at the same point.
 
 **COPY FROM HERE**
 
 ```text
-Design and teach a classroom routine.
+Design a routine for [WHAT — entry, packing up, handing work in, moving to the
+carpet] in [GRADE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ROUTINE_GOAL: supply verified information; do not leave blank]
-- [ROOM_CONSTRAINTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Class size: [NUMBER]. Room: [DESCRIBE].
+What currently happens: [DESCRIBE THE MESS]
 
-Specific requirements:
-Write teach, model, rehearse and feedback steps with observable success. Include accessible cues and realistic movement time.
+Give me:
+- The routine as a sequence of steps, one action per step
+- The exact words I say to start it, under 10 seconds
+- The signal that tells me everyone has finished
+- How I teach it in the first week: what I model, what they practise, what I
+  correct
+- What I do on day 20 when it starts to slip
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not build in a reward, a points system, or a competition. The routine should
+work because it is clear, not because it is incentivised.
+
+Keep it to steps a [GRADE] student can hold in their head.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Model: when the cue appears, stand safely, collect the assigned pencil, walk to your table and begin the drawn starter. Rehearse once without timing, then observe a second attempt. Give descriptive feedback about safe movement and readiness. Adjust the 90-second target if access or room conditions require it. Do not penalize a learner for needing an accessible route.
-
----
-
-### CM-002 · Prepare a restorative conversation
-
-*All grades  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
-
-**When you need this**
-
-A classroom harm needs acknowledgment, repair and reintegration.
-
-**COPY FROM HERE**
-
-```text
-Prepare a restorative conversation.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [LOW_STAKES_EVENT: supply verified information; do not leave blank]
-- [VOLUNTARY_PARTICIPATION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Prepare neutral restorative questions without forced apology or disclosure. Defer harm, abuse or immediate danger to local safeguarding procedures.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Opening: We can talk about what happened and what might help next time. You may ask for a pause. Questions: What did you observe? What was the impact? What would a fair next step look like? Record proposed actions separately from agreed actions. Do not require an apology, infer guilt or use this process for an unresolved safeguarding concern.
+- Can a student hold all the steps at once? Cut one if not.
+- Would these words sound like you saying them?
 
 ---
 
 ### CM-003 · Teach an efficient entry routine with an immediate learning start
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to teach an efficient entry routine with an immediate learning start.
+The first five minutes are the ones you never get back.
 
 **COPY FROM HERE**
 
 ```text
-Teach an efficient entry routine with an immediate learning start.
+Design an entry routine for [GRADE] [SUBJECT] where learning starts before I
+have finished the register.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ENTRY_TASK: supply verified information; do not leave blank]
-- [ROOM_ACCESS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Constraints: [DESCRIBE — do they queue outside, arrive from different lessons,
+need equipment handed out]
 
-Specific requirements:
-Specify greeting, materials and first learning action. Provide a quiet accessible route for late arrival without public shame.
+Give me:
+- What is on the board or on desks before they arrive
+- What a student does in their first 60 seconds without being told
+- What I do during that time
+- How a late arrival joins without disrupting or being announced
+- What I do about the student who arrives with nothing
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not make the opening task new content — it must be startable by a student
+who missed the last lesson.
+
+Tell me what to change if my room is entered through a single narrow door.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Greet learners, point to the visual starter and direct them to collect a pencil if needed. First task: write one thing remembered from yesterday's lesson. Late-entry route: collect materials quietly and begin without a public explanation. Teacher checks whether the routine gives all learners access; it is not a timed compliance contest.
+- Could a student who missed yesterday still start?
+- Does the late arrival keep their dignity?
 
 ---
 
 ### CM-004 · Create a calm transition between whole-group and independent work
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a calm transition between whole-group and independent work.
+The moment the noise doubles and half the class stops working.
 
 **COPY FROM HERE**
 
 ```text
-Create a calm transition between whole-group and independent work.
+Design the transition from whole-group teaching to independent work in [GRADE]
+[SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [NEXT_TASK: supply verified information; do not leave blank]
-- [TRANSITION_SIGNAL: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- The exact words, under 15 seconds, one instruction at a time
+- The order things happen in — instructions before materials, always
+- How students know what to do if they are stuck in the first minute, without
+  queuing at my desk
+- What I do in the first 90 seconds, and where I stand
+- The signal for a student who needs me, that does not involve a raised hand
+  held for four minutes
 
-Specific requirements:
-Give a short stop, move, begin script and visual alternative. Rehearse safely and adjust timing from observation.
+A [GRADE] class will do the first thing you say and forget the rest. Write
+accordingly.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me the single most common reason this transition fails.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Script: Look at the task card. Take your pencil, move safely to your place and start question one. If you are unsure, mark a question sign and I will check in. Rehearse the movement and materials steps separately if needed. Success evidence: learners know the first action and can begin with appropriate support, not absolute silence alone.
+- Is each instruction one action?
+- Are materials handed out after the instructions, not during?
 
 ---
 
 ### CM-005 · Build a materials routine that reduces waiting and lost equipment
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades K-2, 3-5, 6-8*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a materials routine that reduces waiting and lost equipment.
+Handing out and collecting eats more time than anyone admits.
 
 **COPY FROM HERE**
 
 ```text
-Build a materials routine that reduces waiting and lost equipment.
+Design a materials routine for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MATERIALS: supply verified information; do not leave blank]
-- [DISTRIBUTION_LAYOUT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What gets distributed: [LIST IT]
+Class size: [NUMBER]. Layout: [DESCRIBE]
 
-Specific requirements:
-Assign predictable collection and return routines with backups. Avoid public penalties for unavailable supplies.
+Give me:
+- How materials get to students without me walking to every desk
+- Who does what, and how those jobs rotate so they are not a status
+- The collection routine, and how I know instantly what is missing
+- What happens when something is missing, that does not turn into an
+  investigation
+- What I do about the student who never has a pen, without making it a public
+  event
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not build a system that requires students to pay, replace, or be publicly
+recorded as having lost something.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Place a labelled ruler tray at each table. One rotating materials helper checks quantity before and after work; every learner returns their own ruler to the tray. Missing-supply route: use the teacher's spare tray without public blame. Observe waiting time and revise tray placement if it blocks movement. Keep personal responsibility distinct from a punitive class reward system.
+- Is the no-pen student handled quietly?
+- Do the jobs rotate, or become a privilege?
 
 ---
 
 ### CM-006 · Plan a dismissal routine that protects safety and learning time
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to plan a dismissal routine that protects safety and learning time.
+The last four minutes, which are also the least safe four minutes.
 
 **COPY FROM HERE**
 
 ```text
-Plan a dismissal routine that protects safety and learning time.
+Design a dismissal routine for [GRADE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [DISMISSAL_POLICY: supply verified information; do not leave blank]
-- [TRANSPORT_ROUTINES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Context: [WHERE THEY GO NEXT, WHETHER THEY COLLECT BAGS, CORRIDOR OR PLAYGROUND]
 
-Specific requirements:
-Use only approved local dismissal procedures. Keep identity and transport records outside AI and flag missing supervision details.
+Give me:
+- When packing up starts, and why not earlier
+- The order students leave in, and how that is decided fairly
+- The 30-second closing that means the lesson ends rather than stops
+- What I do if the bell goes mid-sentence
+- How I hold back one student for a word without the class registering it as
+  trouble
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+I will check anything about supervision, corridors or leaving the site against
+my school's own procedures.
+
+Do not use leaving early as a reward, or leaving last as a consequence.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Check supervision arrangements against your school's policy.
+- Would holding one student back be noticed by the class?
 
 ---
 
 ### CM-007 · Audit a routine using timing, participation and independence evidence
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a routine using timing, participation and independence evidence.
+The routine exists. You are not sure it is earning its place.
 
 **COPY FROM HERE**
 
 ```text
-Audit a routine using timing, participation and independence evidence.
+Audit this [GRADE] routine: [DESCRIBE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ROUTINE_OBSERVATIONS: supply verified information; do not leave blank]
-- [TARGET_TIME: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What actually happens: [DESCRIBE, INCLUDING HOW LONG IT TAKES]
 
-Specific requirements:
-Compare duration, participation and independence without blaming learners. Suggest one teachable change and a repeat observation.
+Tell me:
+- Where the time actually goes, step by step
+- Which step needs me, and whether it should
+- Where students wait with nothing to do
+- Whether a student who joined this term would know what to do
+- Whether it depends on my presence, my voice, or my mood on the day
+- Whether any part singles a student out
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Then tell me:
+- The one step to remove
+- Whether this routine is worth its time at all
+
+Be blunt about a routine that has become habit rather than function.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Time it honestly next lesson before deciding.
+- Does it work when you are tired? That is the real test.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Behaviour reset support
 
 ---
 
 ### CM-008 · Create a brief private behaviour-reset conversation
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a brief private behaviour-reset conversation.
+Something needs saying, and it must not become a performance.
 
 **COPY FROM HERE**
 
 ```text
-Create a brief private behaviour-reset conversation.
+Prepare a brief private conversation with a [GRADE] student about a classroom
+behaviour.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBSERVABLE_DISRUPTION: supply verified information; do not leave blank]
-- [APPROVED_RESPONSE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What happened, observably: [DESCRIBE THE BEHAVIOUR — not the student]
+What I want: [THE SPECIFIC CHANGE]
 
-Specific requirements:
-Write a brief private reset naming the behavior, expected action and return to learning. Avoid threats or psychological interpretations.
+Give me:
+- What I say in the moment, under 15 words, with no audience
+- What I say one-to-one afterwards — opening, the point, the ask
+- One question that gives the student a chance to say something I do not know
+- How I close so the student can return without a face to save
+- Three things NOT to say, and why each makes it worse
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Address the behaviour and its effect, never the character
+- Do not ask a student to explain themselves in front of others
+- Do not require an apology
+- Do not speculate about home, mood, or what is going on for them
+
+If what I described suggests harm, danger or a safeguarding concern, stop and
+tell me to follow my school's process instead.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is the in-the-moment line short enough to say without a pause?
+- Is anything here about the child rather than what they did?
 
 ---
 
 ### CM-009 · Write neutral redirection language for a recurring disruption
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write neutral redirection language for a recurring disruption.
+The twelfth time today, and your tone is starting to show.
 
 **COPY FROM HERE**
 
 ```text
-Write neutral redirection language for a recurring disruption.
+Write redirection language for this recurring [GRADE] classroom behaviour:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [RECURRING_ACTION: supply verified information; do not leave blank]
-- [TAUGHT_EXPECTATION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[DESCRIBE IT — what happens, how often, in what part of the lesson]
 
-Specific requirements:
-Offer neutral concise redirections and a choice within established boundaries. Do not escalate automatically because a script fails.
+Give me:
+- Four redirections, escalating in directness, each under 12 words
+- A non-verbal option for the first level
+- The exact wording that names the expected action rather than the problem —
+  "pen in your hand" rather than "stop fiddling"
+- What I say the fifth time in one lesson, that is not the fourth said louder
+- The point at which continuing to redirect is the wrong response, and what
+  replaces it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules: no sarcasm, no rhetorical questions, no comparisons to other students,
+no public countdowns, and nothing that requires the student to respond verbally
+in front of the class.
+
+Then tell me what the behaviour might be communicating that redirection cannot
+address.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Say them aloud. Any sarcasm you did not intend?
+- Do they name the wanted action rather than the problem?
 
 ---
 
 ### CM-010 · Plan a re-entry routine after a learner leaves the classroom
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to plan a re-entry routine after a learner leaves the classroom.
+They come back, and how that goes decides the rest of the lesson.
 
 **COPY FROM HERE**
 
 ```text
-Plan a re-entry routine after a learner leaves the classroom.
+Plan how a [GRADE] student returns to the classroom after leaving it.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [APPROVED_REENTRY_PROCESS: supply verified information; do not leave blank]
-- [MISSED_TASK: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Context: [WHY THEY LEFT, HOW LONG, WHERE THEY WENT]
 
-Specific requirements:
-Plan a discreet return, access to missed work and optional check-in. Never invent reasons for leaving or override a safety plan.
+Give me:
+- What I say as they come in, under 10 words, that does not restart the incident
+- How they rejoin the work without needing a long explanation
+- When the conversation about what happened takes place — not now
+- What the rest of the class sees, and how I keep it unremarkable
+- What I do if they return still upset
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Re-entry is not the moment for consequences or a conversation about behaviour
+- Do not require the student to apologise before rejoining
+- Do not have them stand at the door waiting for permission in front of everyone
+
+I will follow my school's procedures for anything involving where a student went
+and who supervised them.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does re-entry stay separate from the conversation?
+- Would the class notice anything?
 
 ---
 
 ### CM-011 · Create a reset menu that preserves dignity and instructional access
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a reset menu that preserves dignity and instructional access.
+Options a student can take before things escalate.
 
 **COPY FROM HERE**
 
 ```text
-Create a reset menu that preserves dignity and instructional access.
+Build a short menu of reset options for [GRADE] students who need a moment.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [APPROVED_RESET_OPTIONS: supply verified information; do not leave blank]
-- [ACCESS_NEEDS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Room and supervision constraints: [DESCRIBE]
 
-Specific requirements:
-Provide dignified temporary reset choices and re-entry steps. Never use isolation or withholding learning as an invented intervention.
+Give me:
+- 4-5 options, from smallest to largest — a change of position, a task with
+  hands, a short walk with a purpose
+- How a student takes one without asking in front of the class
+- How each keeps the student in the room and in the lesson where possible
+- What each is not: not a reward, not a punishment, not time out
+- How the student returns to work afterwards
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Nothing that removes access to the learning
+- Nothing visible enough to mark a student out
+- Nothing requiring supervision I do not have
+- Nothing that can be earned or lost
+
+Then tell me which option is most likely to be misused, and how to handle that
+without withdrawing it from everyone.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does any option cost the student the lesson?
+- Can a student take one privately?
 
 ---
 
 ### CM-012 · Audit a response plan for escalation, shame and inconsistent expectations
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a response plan for escalation, shame and inconsistent expectations.
+Before the plan is in place for a term.
 
 **COPY FROM HERE**
 
 ```text
-Audit a response plan for escalation, shame and inconsistent expectations.
+Audit this [GRADE] behaviour response plan: [PASTE OR DESCRIBE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [RESPONSE_PLAN: supply verified information; do not leave blank]
-- [SCHOOL_POLICY: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Where a step escalates rather than de-escalates
+- Anything that makes a student's behaviour visible to the class — a chart, a
+  name on the board, a public warning, a colour change
+- Anywhere the response depends on my mood, energy, or how the day has gone
+- Where the same behaviour would get different responses from different
+  students, and why that might be happening
+- Anything that removes learning as a consequence
+- Whether there is a route back for a student who has had a bad day
 
-Specific requirements:
-Identify shame, coercion, escalation and inconsistent expectations. Route safety concerns to the authorized staff process.
+Then tell me the single step most likely to make a situation worse, and what
+replaces it.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be direct about anything that shames a child, whatever it is called.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Is anything public that should be private?
+- Is there a genuine route back?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Restorative conversations
+
+---
+
+### CM-002 · Prepare a restorative conversation
+*All grades*
+
+**When you need this**
+Something happened between students, and it needs repair rather than a verdict.
+
+**COPY FROM HERE**
+
+```text
+Prepare a restorative conversation between [GRADE] students.
+
+What happened, observably: [DESCRIBE — no names, no interpretation]
+Who is involved: [ROLES ONLY, e.g. two students, one affected]
+
+Give me:
+- How I open, so nobody arrives expecting a trial
+- Neutral questions for each person, in order
+- The question that moves it from what happened to what it did to someone
+- How the affected student says what they need, without being put on the spot
+- How we close, whether or not agreement is reached
+
+Rules — these are not optional:
+- No forced apology, and no requirement that anyone accept one
+- No requirement that anyone disclose feelings they do not want to share
+- Either student may stop, and stopping is not a failure
+- I do not determine guilt in this conversation
+
+If what I described involves harm, abuse, bullying or immediate danger, stop and
+tell me to follow my school's safeguarding process instead of continuing.
+```
+
+**TO HERE**
+
+**Before you send it**
+- If it flagged safeguarding, stop and use your school's process.
+- Is any question really an accusation?
 
 ---
 
 ### CM-013 · Create questions that explore impact, needs and possible repair
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create questions that explore impact, needs and possible repair.
+Questions that open something rather than extract a confession.
 
 **COPY FROM HERE**
 
 ```text
-Create questions that explore impact, needs and possible repair.
+Write restorative questions for a [GRADE] situation: [DESCRIBE IT NEUTRALLY]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [NEUTRAL_EVENT_SUMMARY: supply verified information; do not leave blank]
-- [PARTICIPATION_CHOICE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me four sets:
+- What happened — factual, without inviting justification
+- Who was affected and how
+- What is needed now
+- What could be different next time
 
-Specific requirements:
-Ask what happened, impact and possible repair without presuming guilt. Permit uncertainty and declining a question.
+Rules:
+- No question beginning "why did you", which produces defence, not reflection
+- No question a student can only answer by admitting fault
+- Every question answerable by a student who is upset, embarrassed, or
+  monosyllabic
+- Include the shorter version of each for a student who cannot manage the full
+  question
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me:
+- Which question most often gets a shrug, and what to do with a shrug
+- Which question I should skip if the student is not ready
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Any "why did you" left?
+- Could an embarrassed student answer these?
 
 ---
 
 ### CM-014 · Build a voluntary repair agreement with a scheduled follow-up
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a voluntary repair agreement with a scheduled follow-up.
+Something agreed, that both students actually agreed to.
 
 **COPY FROM HERE**
 
 ```text
-Build a voluntary repair agreement with a scheduled follow-up.
+Build a repair agreement after a restorative conversation between [GRADE]
+students.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VOLUNTARY_ACTIONS: supply verified information; do not leave blank]
-- [REVIEW_DATE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What was discussed: [SUMMARISE — no names]
+What was offered: [BY WHOM]
 
-Specific requirements:
-Distinguish proposed and agreed repair actions. Record consent and follow-up without requiring reconciliation or public apologies.
+Give me:
+- The agreement in the students' own kind of language, not mine
+- What each person will do, only where they offered it
+- A follow-up date, and who initiates it
+- What happens if it does not hold — which is not a punishment
+- How the agreement ends, so it is not open forever
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Nothing in it that was not voluntarily offered
+- No apology as a required item
+- No public element — nothing performed in front of the class
+- The affected student is not required to forgive, accept, or be satisfied
+
+If either student was not genuinely willing, say so and tell me the agreement
+should not be written.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Was every item genuinely offered, not extracted?
+- Is there an end date?
 
 ---
 
 ### CM-015 · Audit a restorative script for coercion, blame and safeguarding limits
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a restorative script for coercion, blame and safeguarding limits.
+Restorative language can carry coercion inside it.
 
 **COPY FROM HERE**
 
 ```text
-Audit a restorative script for coercion, blame and safeguarding limits.
+Audit this restorative script or plan: [PASTE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [RESTORATIVE_SCRIPT: supply verified information; do not leave blank]
-- [SAFEGUARDING_RULES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Any question that assigns blame while appearing neutral, quoted
+- Anywhere a student is required to apologise, forgive, or say they are fine
+- Anywhere disclosure of feelings is compulsory rather than invited
+- Anything that would be unsafe if there is a power imbalance between the
+  students
+- Anywhere the process continues when a student clearly wants to stop
+- Anything that belongs in a safeguarding process rather than a classroom
+  conversation
 
-Specific requirements:
-Check leading questions, coercion and pressure on affected learners. State when the conversation must stop and be referred.
+Then tell me:
+- The single most coercive element, however gently worded
+- The point at which this should stop being handled by me
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be direct. A script that pressures a child into performing reconciliation is
+worse than no script.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Act on the power-imbalance flag before running the conversation.
+- Where it says stop being yours to handle — take that to your school.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Social-emotional learning
 
 ---
 
 ### CM-016 · Create an age-appropriate lesson on naming and managing emotions
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades K-2, 3-5, 6-8*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create an age-appropriate lesson on naming and managing emotions.
+Teaching the vocabulary before it is needed in an argument.
 
 **COPY FROM HERE**
 
 ```text
-Create an age-appropriate lesson on naming and managing emotions.
+Plan a [MINUTES]-minute [GRADE] lesson on naming and managing emotions.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [AGE: supply verified information; do not leave blank]
-- [EMOTION_VOCABULARY: supply verified information; do not leave blank]
-- [OPT_OUT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- The emotion vocabulary appropriate for [GRADE], and the words to leave out
+  because they are clinical rather than everyday
+- A way in that uses fictional characters or scenarios, never students' own
+  experiences
+- One strategy taught properly rather than five mentioned
+- Practice using the strategy on a fictional situation
+- What students take away that they could use tomorrow
 
-Specific requirements:
-Create an educational emotion-naming lesson using fictional situations. Avoid therapy, diagnosis or compulsory personal disclosure.
+Rules:
+- No student is asked to share a personal feeling or experience
+- Nothing that asks students to rate, chart or report their own mood publicly
+- No language that pathologises ordinary feelings
+- This is teaching vocabulary and strategy, not therapy
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+If any part of what I have asked for belongs with a counsellor rather than a
+teacher, say so.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is any student required to disclose anything?
+- Is the vocabulary everyday, not clinical?
 
 ---
 
 ### CM-017 · Teach a practical strategy for pausing before responding
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to teach a practical strategy for pausing before responding.
+One strategy, taught well enough to be used under pressure.
 
 **COPY FROM HERE**
 
 ```text
-Teach a practical strategy for pausing before responding.
+Teach [GRADE] students one strategy for pausing before responding.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [AGE: supply verified information; do not leave blank]
-- [APPROVED_PAUSE_STRATEGY: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- The strategy, in three steps a student can remember when upset
+- Why it works, in language a [GRADE] student accepts — not neuroscience
+- How I teach it when nobody is upset, which is the only time it can be taught
+- Three fictional scenarios to practise on
+- The cue I use in the moment that is not "calm down"
+- What I say when a student uses it and it does not work
 
-Specific requirements:
-Model a simple pause-and-choice routine with an accessible alternative. Do not promise it will prevent distress or substitute for support.
+Rules:
+- Nothing requiring a student to breathe in a particular way in front of others
+- Nothing visible enough to mark a student out as needing it
+- The strategy belongs to the student, not to me — they choose to use it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me what this strategy cannot do, so I do not expect too much of it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Can a student use it without anyone noticing?
+- Is "why it works" believable to a student, or a lecture?
 
 ---
 
 ### CM-018 · Build an empathy activity without requiring personal disclosure
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build an empathy activity without requiring personal disclosure.
+Empathy work that does not turn into an exercise in exposure.
 
 **COPY FROM HERE**
 
 ```text
-Build an empathy activity without requiring personal disclosure.
+Design a [MINUTES]-minute [GRADE] empathy activity.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [FICTIONAL_SCENARIO: supply verified information; do not leave blank]
-- [PARTICIPATION_OPTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Topic or context: [DESCRIBE]
 
-Specific requirements:
-Explore multiple perspectives without asking learners to disclose personal trauma. Allow written or silent participation.
+Rules — these define the task:
+- Students work with fictional characters or scenarios only
+- No student is asked to share a personal experience, feeling, or family
+  circumstance
+- No activity where students imagine being someone with a specific identity,
+  disability or circumstance as a simulation
+- Nothing that could expose a student's own situation by how they respond
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- The activity
+- The fictional scenarios, written so no student would recognise themselves
+- The discussion questions
+- What I do if a student volunteers something personal anyway
+- The closing that does not require anyone to have been moved
+
+Then tell me what could go wrong with this activity in a class where I do not
+know everyone's circumstances.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could a scenario be someone's actual life? Change it if so.
+- Do you know what to do if a student discloses?
 
 ---
 
 ### CM-019 · Audit an SEL activity for privacy, culture and clinical overreach
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit an SEL activity for privacy, culture and clinical overreach.
+SEL work goes wrong quietly, and usually with good intentions.
 
 **COPY FROM HERE**
 
 ```text
-Audit an SEL activity for privacy, culture and clinical overreach.
+Audit this [GRADE] SEL activity: [PASTE OR DESCRIBE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [SEL_ACTIVITY: supply verified information; do not leave blank]
-- [SCHOOL_BOUNDARIES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Anywhere a student is asked or nudged to disclose something personal
+- Anywhere a response would reveal a student's home, family or circumstances to
+  the class
+- Anything assuming a family shape, faith, culture or way of expressing emotion
+- Anything crossing from teaching into counselling or therapy
+- Any use of clinical language a teacher should not be applying to a child
+- Anything a student could not opt out of without being noticed
 
-Specific requirements:
-Check disclosure pressure, cultural assumptions and clinical claims. Replace personal case sharing with clearly fictional scenarios.
+Then tell me:
+- The single element most likely to harm a child who is already struggling
+- Whether this activity should be run by me at all
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be direct. Good intentions are not the standard here.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- If it says this is not yours to run, take that seriously.
+- Can a student opt out invisibly?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Morning meetings
 
 ---
 
 ### CM-020 · Plan a 10-minute morning meeting with a clear community goal
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades K-2, 3-5*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to plan a 10-minute morning meeting with a clear community goal.
+Ten minutes that set the day, rather than filling it.
 
 **COPY FROM HERE**
 
 ```text
-Plan a 10-minute morning meeting with a clear community goal.
+Plan a 10-minute morning meeting for [GRADE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [COMMUNITY_GOAL: supply verified information; do not leave blank]
-- [TEN_MINUTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+This week's focus: [WHAT YOU WANT TO BUILD]
 
-Specific requirements:
-Allocate greeting, optional check-in, activity and close within ten minutes. Provide a pass option and avoid public emotion tracking.
+Give me:
+- A greeting that works for [NUMBER] students in the time available
+- A share prompt about something students choose, never about home or feelings
+- A short activity, 2-3 minutes, needing no materials
+- The closing line that sends them into the day
+- Realistic timing — greetings take longer than anyone plans
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Every part is joinable by a student who does not want to speak
+- No prompt about family, home, weekend, holidays, possessions or feelings
+- No student is the focus unless they chose to be
+
+Then tell me what to cut when the meeting has to be six minutes.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does any prompt touch home, money, or family?
+- Can a silent student take part?
 
 ---
 
 ### CM-021 · Create inclusive check-in options that do not force disclosure
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create inclusive check-in options that do not force disclosure.
+Checking in without requiring anyone to perform being fine.
 
 **COPY FROM HERE**
 
 ```text
-Create inclusive check-in options that do not force disclosure.
+Design check-in options for a [GRADE] class that do not require disclosure.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CHECKIN_PURPOSE: supply verified information; do not leave blank]
-- [RESPONSE_OPTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- 4 ways a student can check in, including at least one entirely non-verbal and
+  one that involves no signal at all
+- What I actually learn from each, honestly
+- How a student signals they want to talk later, privately
+- What I do with what I notice, and what I do not do with it
+- How I avoid a check-in becoming a public mood display
 
-Specific requirements:
-Offer private, written and pass options. Do not collect sensitive disclosures in shared AI systems or display individual results.
+Rules:
+- No mood charts, colour cards, or anything the class can see
+- No question requiring a student to say they are not fine in order to be heard
+- Opting out must be invisible and unremarkable
+- I am not collecting data on children's emotional states
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me what a check-in cannot tell me, so I do not read too much into it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is opting out genuinely invisible?
+- What are you doing with what you notice? Decide before you start.
 
 ---
 
 ### CM-022 · Build a weekly morning-meeting sequence without repetitive prompts
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades K-2, 3-5*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a weekly morning-meeting sequence without repetitive prompts.
+Five days that build, rather than five days of the same question.
 
 **COPY FROM HERE**
 
 ```text
-Build a weekly morning-meeting sequence without repetitive prompts.
+Plan five morning meetings for [GRADE], 10 minutes each, threaded around
+[THEME].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [FIVE_DAYS: supply verified information; do not leave blank]
-- [COMMUNITY_THEMES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- Five days, each with a greeting, a share prompt, and a short activity
+- How Friday connects back to Monday, so the week is one thing
+- Prompts that vary in kind, not just in wording — one about noticing, one
+  about choosing, one about explaining
+- The day most likely to fall flat, and the backup for it
 
-Specific requirements:
-Vary the participation mode and purpose across the week. Avoid repetitive emotional disclosure prompts.
+Rules:
+- No prompt about home, family, feelings, possessions or weekend activities
+- Nothing requiring a student to speak
+- No prompt that a student who has had a bad morning cannot answer
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then give me the three prompts I could reuse in any week, so I always have
+something ready.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Do the five genuinely differ in kind?
+- Could a student having a bad morning answer each one?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Seating and grouping
 
 ---
 
 ### CM-023 · Create a seating plan from classroom access and learning constraints
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a seating plan from classroom access and learning constraints.
+A plan built on needs, not on who annoys whom.
 
 **COPY FROM HERE**
 
 ```text
-Create a seating plan from classroom access and learning constraints.
+Build a seating plan for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ROOM_PLAN: supply verified information; do not leave blank]
-- [NONIDENTIFYING_ACCESS_CONSTRAINTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Room: [LAYOUT, NUMBER OF DESKS, WHERE THE BOARD AND DOOR ARE]
+Class size: [NUMBER]
+Constraints, described as needs not students: [e.g. two students need to be
+near the front for vision, one needs a clear exit route, three should not be
+adjacent]
 
-Specific requirements:
-Propose a seating layout based on access and learning requirements. Keep identity mapping local and avoid punitive isolation.
+Give me:
+- The plan, described so I could draw it
+- Why each constrained position is where it is
+- How the plan looks unremarkable, so no seat reads as a designation
+- What I say when a student asks why they are sitting there
+- What changes when two students are absent
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- No student named or described in a way that identifies them
+- No seat that is visibly the special seat, the front-for-behaviour seat, or the
+  isolation seat
+- Everyone can see the board and reach the door
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does any seat read as a designation?
+- Can everyone genuinely see and exit?
 
 ---
 
 ### CM-024 · Build a transparent regrouping plan using temporary learning evidence
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a transparent regrouping plan using temporary learning evidence.
+Groups that change, and are seen to change.
 
 **COPY FROM HERE**
 
 ```text
-Build a transparent regrouping plan using temporary learning evidence.
+Build a regrouping plan for [GRADE] [SUBJECT] based on this evidence:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CURRENT_LEARNING_PATTERNS: supply verified information; do not leave blank]
-- [REGROUP_DATE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[DESCRIBE THE LEARNING PATTERNS — no names]
 
-Specific requirements:
-Explain temporary grouping criteria and movement triggers. Do not disclose private evidence to classmates.
+Give me:
+- The groups, defined by what they are working on rather than by level
+- What I tell students about why groups change, in one sentence
+- How often groups change, and what triggers a change
+- How a student moves group without it being an event
+- The evidence I gather that would move someone
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Groups are named after the work, not after a level or an animal that everyone
+  decodes within a week
+- No group is permanent, and the plan states when they end
+- No student stays in the same group all term by default
+
+Then tell me the sign that these have quietly become fixed ability groups.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is there a stated end date?
+- Would the class decode the group names?
 
 ---
 
 ### CM-025 · Audit seating and grouping decisions for labels, isolation and accessibility
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit seating and grouping decisions for labels, isolation and accessibility.
+Before the arrangement becomes permanent by inertia.
 
 **COPY FROM HERE**
 
 ```text
-Audit seating and grouping decisions for labels, isolation and accessibility.
+Audit this [GRADE] seating and grouping arrangement: [DESCRIBE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [SEATING_OR_GROUP_PLAN: supply verified information; do not leave blank]
-- [ACCESS_RULES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Whether any seat or group is identifiable as being for a particular kind of
+  student
+- Whether anyone is isolated — physically apart, or the only one of something
+- Whether every student can see, hear, reach the door, and access materials
+- Whether the arrangement is doing what it was set up to do, or is just habit
+- Whether any student has been in the same position or group all term
+- What a student in the least desirable position would say about it
 
-Specific requirements:
-Audit visibility, movement, stigma and isolation. Show a revised neutral layout and unresolved local constraints.
+Then tell me:
+- The one change that would most improve it
+- Whether this arrangement should be rebuilt from scratch
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Be direct about anything that isolates a child, however practical the reason.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
+- Answer the "least desirable position" question honestly yourself.
+- When did you last change it?
