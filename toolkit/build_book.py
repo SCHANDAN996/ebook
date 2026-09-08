@@ -11,6 +11,7 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
+
 CSS = """
 :root{
   --bg:#0d1117; --panel:#161b22; --panel-2:#1b222b; --line:#262d36;
@@ -289,7 +290,8 @@ def render_page(text):
         out.append(
             '<article class="card"><div class="head">'
             f'<span class="pid">{html.escape(m.group(1))}</span>'
-            f"<h3>{html.escape(m.group(2))}</h3></div>" + render_body(rest) + "</article>")
+            f"<h3>{html.escape(m.group(2))}</h3></div>"
+            + render_body(rest) + "</article>")
     return "\n".join(out)
 
 
@@ -303,7 +305,24 @@ def sources():
     return pages
 
 
+def preflight():
+    """Refuse to build a sellable edition with placeholders still in it."""
+    import config as cfg
+    bad = []
+    for k, v in cfg.PRODUCT.items():
+        if isinstance(v, str) and ("REPLACE_BEFORE_SELLING" in v or "CHANGE_ME" in v):
+            bad.append("config.PRODUCT[%r] = %r" % (k, v))
+    for f in sorted((ROOT / "book/manuscript/chapters").glob("*.md")):
+        t = f.read_text()
+        for marker in ("REPLACE_BEFORE_SELLING", "CHANGE_ME", "TODO", "FIXME"):
+            if marker in t:
+                bad.append("%s contains %s" % (f.name, marker))
+    return bad
+
+
 def main():
+    for problem in preflight():
+        print("  ! %s" % problem)
     (ROOT / "output/html").mkdir(parents=True, exist_ok=True)
     (ROOT / "output/pdf").mkdir(parents=True, exist_ok=True)
 
