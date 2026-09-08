@@ -10,20 +10,20 @@ general tool is pointed at it.
 
 | Group | Prompts | Use when |
 |---|---|---|
-| Mathematics | 3 | Word problems, worked examples, error analysis |
-| Science | 3 | Investigations, controls, lab write-ups |
-| English language arts | 3 | Close reading, writing tasks, text sets |
-| Social studies | 3 | Sources, chronology, contested questions |
+| Mathematics | 3 | Concepts, representations, error analysis |
+| Science | 3 | Investigations, evidence, explanation |
+| English language arts | 3 | Close reading, writing, revision |
+| Social studies | 3 | Sources, corroboration, claims |
 | Arts, PE and electives | 3 | The subjects general tools ignore |
 
 ## Worth knowing before you start
 
 **Verify everything factual in this chapter.** Historical dates, scientific
-values, quotations from texts — this is where a confident wrong answer does the
-most damage, because it looks exactly like a right one.
+values, quotations from texts, worked calculations — this is where a confident
+wrong answer does the most damage, because it looks exactly like a right one.
 
 For science, never accept invented data. Predicted patterns and measured results
-are different things, and the prompts here keep them separate.
+are different things, and these prompts keep them apart.
 
 For social studies, ask for the contested question rather than the settled
 summary. That is where the thinking is.
@@ -31,624 +31,590 @@ summary. That is where the thinking is.
 For arts and PE, be specific about equipment and space. Generic plans assume a
 room you do not have.
 
-## Every prompt in this chapter
-
-### Mathematics
-
-| ID | Prompt | Grades |
-|---|---|---|
-| SD-001 | Create a concept-first mathematics explanation | 3-5, 6-8, 9-12 |
-| SD-003 | Connect concrete, visual and symbolic mathematics representations | 3-5, 6-8, 9-12 |
-| SD-004 | Build a mathematics error-analysis lesson with verified solutions | 3-5, 6-8, 9-12 |
-
-### Science
-
-| ID | Prompt | Grades |
-|---|---|---|
-| SD-002 | Design an evidence-based science investigation | 3-5, 6-8, 9-12 |
-| SD-008 | Build a claim-evidence-reasoning task from supplied observations | 3-5, 6-8, 9-12 |
-| SD-009 | Audit a science explanation for causation, uncertainty and safety | 3-5, 6-8, 9-12 |
-
-### English Language Arts
-
-| ID | Prompt | Grades |
-|---|---|---|
-| SD-005 | Build a close-reading lesson from an authorized supplied text | 3-5, 6-8, 9-12 |
-| SD-006 | Create an evidence-based writing task with a clear mentor model | 3-5, 6-8, 9-12 |
-| SD-007 | Design a revision lesson that separates ideas, organization and conventions | 3-5, 6-8, 9-12 |
-
-### Social Studies
-
-| ID | Prompt | Grades |
-|---|---|---|
-| SD-010 | Create a source-analysis lesson using origin, purpose and context | 3-5, 6-8, 9-12 |
-| SD-011 | Build a corroboration task with multiple supplied perspectives | 3-5, 6-8, 9-12 |
-| SD-012 | Design a historical claim task that distinguishes evidence from interpretation | 3-5, 6-8, 9-12 |
-
-### Arts Physical Education And Electives
-
-| ID | Prompt | Grades |
-|---|---|---|
-| SD-013 | Create a skill-development lesson with modelling, practice and reflection | 3-5, 6-8, 9-12 |
-| SD-014 | Adapt a performance task for space, equipment and physical access | 3-5, 6-8, 9-12 |
-| SD-015 | Build an observable process rubric for an arts, PE or elective task | 3-5, 6-8, 9-12 |
-
 ---
+
+## Mathematics
 
 ---
 
 ### SD-001 · Create a concept-first mathematics explanation
-
-*Grades 3-5, 6-8, 9-12  ·  Mathematics*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Students can follow a procedure but need the underlying idea.
+They can do the procedure and have no idea what it means.
 
 **COPY FROM HERE**
 
 ```text
-Create a concept-first mathematics explanation.
+Explain [MATHEMATICAL CONCEPT] for [GRADE], starting from what it means rather
+than how to do it.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [FRACTION_EXAMPLES: supply verified information; do not leave blank]
-- [REPRESENTATIONS: supply verified information; do not leave blank]
-- [PRIOR_KNOWLEDGE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- What the concept actually is, in a sentence I could say to a [GRADE] student
+- Why it exists — the problem it solves that could not be solved without it
+- A concrete situation where the idea is visible before any notation appears
+- Where the notation comes in, and what each part of it is standing for
+- The moment students typically stop understanding and start following steps,
+  and the question I ask to catch that
+- Two misconceptions this explanation should prevent, and one it might create
 
-Specific requirements:
-Connect quantities, diagrams and symbols with equal wholes. Verify comparisons and state the conditions under which the explanation works.
+Do not open with a definition or a rule. Do not use "just" or "simply" anywhere.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Check every calculation you use. Flag anything you are not certain of rather
+than stating it confidently.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Both are one unit fraction short of one. Since 1/4 is larger than 1/6, subtracting 1/6 leaves more: 5/6>3/4. Confirm with twelfths: 10/12>9/12. Draw equal 0-1 number lines; different whole sizes would invalidate a direct amount comparison. Transfer: order 2/3, 7/8, 11/12. Answer: 2/3<7/8<11/12 because their missing unit fractions decrease.
-
----
-
-### SD-002 · Design an evidence-based science investigation
-
-*Grades 3-5, 6-8, 9-12  ·  Science*
-
-**When you need this**
-
-Students need to investigate a testable question safely.
-
-**COPY FROM HERE**
-
-```text
-Design an evidence-based science investigation.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [APPROVED_INVESTIGATION: supply verified information; do not leave blank]
-- [VARIABLES: supply verified information; do not leave blank]
-- [SAFETY_LIMITS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Write controls, repeated observations, units and limitations. Separate predicted patterns from measured results and prohibit fabricated data.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Change water temperature and measure time until visible sugar disappears. Keep sugar amount, water volume, cup type and stirring pattern constant. Repeat conditions if time allows. Record actual seconds in a blank table; no data are supplied here. Predicted pattern: warmer water may dissolve sugar faster under these conditions. Limits: judging disappearance and inconsistent stirring. Teacher verifies safe handling and cleanup before use.
+- Work every example yourself.
+- Does the notation arrive after the need for it?
+- Any "just" or "simply" left?
 
 ---
 
 ### SD-003 · Connect concrete, visual and symbolic mathematics representations
-
-*Grades 3-5, 6-8, 9-12  ·  Mathematics*
+*Grades K-2, 3-5, 6-8*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to connect concrete, visual and symbolic mathematics representations.
+Three representations that students never connect to each other.
 
 **COPY FROM HERE**
 
 ```text
-Connect concrete, visual and symbolic mathematics representations.
+Show [MATHEMATICAL IDEA] for [GRADE] across three representations.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CONCEPT: supply verified information; do not leave blank]
-- [CONCRETE_MATERIALS: supply verified information; do not leave blank]
-- [SYMBOLS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- Concrete: what students physically handle, using ordinary classroom materials
+- Visual: what they draw, described so I can draw it on a board
+- Symbolic: the notation
 
-Specific requirements:
-Explain the mapping between each physical action, diagram element and symbolic operation. State where the analogy breaks down.
+Then the part that matters most:
+- The explicit link between each pair — what in the drawing corresponds to what
+  in the objects, and what in the notation corresponds to what in the drawing
+- The exact question I ask to make a student point at the correspondence
+- Where the concrete representation breaks down, because every model has a limit
+- What a student who can do all three separately but has not connected them
+  looks like
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not present the three as three ways to get the answer. They are one idea seen
+three times.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Concrete model: three groups of two tens and three ones. Visual model: six tens and nine ones. Symbolic model: 3x(20+3)=60+9=69. Connect each group in the drawing to one addend rather than treating the picture as decoration. Transfer: 14x2=28. The model assumes positive whole-number groups; it does not by itself explain multiplication by a negative number.
+- Does the concrete model use materials you actually have?
+- Is the limit of the model named honestly?
 
 ---
 
 ### SD-004 · Build a mathematics error-analysis lesson with verified solutions
-
-*Grades 3-5, 6-8, 9-12  ·  Mathematics*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a mathematics error-analysis lesson with verified solutions.
+Finding the mistake teaches more than avoiding it — if the mistakes are real.
 
 **COPY FROM HERE**
 
 ```text
-Build a mathematics error-analysis lesson with verified solutions.
+Build an error-analysis lesson on [TOPIC] for [GRADE] mathematics.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VERIFIED_PROBLEMS: supply verified information; do not leave blank]
-- [DELIBERATE_ERRORS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Use fictional students — Student A, Student B — and invented work. State clearly
+that the work is fabricated for teaching.
 
-Specific requirements:
-Create clearly fictional wrong solutions with the first invalid step identified. Supply corrected reasoning and a fresh transfer problem.
+Give me four pieces of work:
+- A single conceptual error carried consistently through
+- A correct method with an arithmetic slip
+- A method that works here but fails in the general case
+- A correct solution using an unusual but valid approach
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+For each: the work, what went wrong, where exactly, and what the student was
+thinking. Then the answer students should give.
+
+Then verify: recompute every piece of work and every correct answer, show your
+working, and state explicitly that you have checked. Flag anything you are not
+certain about.
+
+The fourth one must be genuinely correct. An "unusual" method that is actually
+wrong would teach the opposite of what I want.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-First invalid step: distributing 2 to x but not to 3. Correct: 2x+6=14; 2x=8; x=4. Check: 2(4+3)=14. Ask learners why 5.5 fails substitution: 2(5.5+3)=17. Fresh item: 3(y+2)=18 gives y=4. Label the initial work deliberately incorrect; do not present it as an actual learner record.
+- Recompute all four yourself, especially the "correct but unusual" one.
+- Does the method-that-fails-in-general genuinely work for this case?
 
 ---
 
-### SD-005 · Build a close-reading lesson from an authorized supplied text
-
-*Grades 3-5, 6-8, 9-12  ·  English language arts*
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to build a close-reading lesson from an authorized supplied text.
-
-**COPY FROM HERE**
-
-```text
-Build a close-reading lesson from an authorized supplied text.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [AUTHORIZED_TEXT: supply verified information; do not leave blank]
-- [READING_OBJECTIVE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Quote only supplied passages and anchor questions to them. Distinguish text evidence from reasonable interpretation.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+## Science
 
 ---
 
-### SD-006 · Create an evidence-based writing task with a clear mentor model
-
-*Grades 3-5, 6-8, 9-12  ·  English language arts*
+### SD-002 · Design an evidence-based science investigation
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create an evidence-based writing task with a clear mentor model.
+Practical work where the thinking is in the design, not the worksheet.
 
 **COPY FROM HERE**
 
 ```text
-Create an evidence-based writing task with a clear mentor model.
+Design an investigation into [QUESTION] for [GRADE] science.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [WRITING_PURPOSE: supply verified information; do not leave blank]
-- [SOURCE_EVIDENCE: supply verified information; do not leave blank]
-- [MENTOR_TEXT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Equipment I actually have: [LIST]
+Room: [DESCRIBE — benches, sinks, space, class size]
+Time: [MINUTES]
 
-Specific requirements:
-Build a writing task and annotated mentor model using authorized or original text. Do not invent quotations, authors or research findings.
+Give me:
+- The question in student words, answerable with what I have
+- What is varied, what is measured, and what must be held constant — with the
+  ones students usually forget
+- How many measurements, and why repeats matter here specifically
+- The recording table, laid out exactly
+- What students do with anomalous results, which is not "ignore them"
+- The safety points specific to this activity, as instructions rather than
+  warnings
+- What we can and cannot conclude from this design
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not invent results. Do not tell students what they should find.
+
+Flag anything needing equipment I did not list. Do not assume a fume hood, gas,
+or running water unless I said so.
+
+I will check all safety guidance against my school's own procedures.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
----
-
-### SD-007 · Design a revision lesson that separates ideas, organization and conventions
-
-*Grades 3-5, 6-8, 9-12  ·  English language arts*
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to design a revision lesson that separates ideas, organization and conventions.
-
-**COPY FROM HERE**
-
-```text
-Design a revision lesson that separates ideas, organization and conventions.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [WRITING_SAMPLE: supply verified information; do not leave blank]
-- [REVISION_PRIORITY: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Separate idea development, organization and conventions. Focus revision on one priority before surface editing.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Check every safety point against your school's policy, not this draft.
+- Does it tell students what to expect? Remove that if so.
 
 ---
 
 ### SD-008 · Build a claim-evidence-reasoning task from supplied observations
-
-*Grades 3-5, 6-8, 9-12  ·  Science*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a claim-evidence-reasoning task from supplied observations.
+Students who write conclusions that are really restatements.
 
 **COPY FROM HERE**
 
 ```text
-Build a claim-evidence-reasoning task from supplied observations.
+Build a claim-evidence-reasoning task for [GRADE] science.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [ACTUAL_OBSERVATIONS: supply verified information; do not leave blank]
-- [QUESTION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+The observations students will have: [DESCRIBE OR PASTE THE DATA]
 
-Specific requirements:
-Build a claim-evidence-reasoning task with uncertainty and alternative explanations. Never strengthen a claim beyond the supplied data.
+Give me:
+- The question their claim answers
+- What a strong claim looks like, and what a restatement of the data looks like
+  — students confuse these constantly
+- What counts as evidence here, and which observations are relevant
+- The reasoning step: the scientific idea linking evidence to claim, which is
+  the part almost always missing
+- A model response, and a response with good evidence and no reasoning
+- Sentence frames for the reasoning step only
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Use only the observations I supplied. Do not add data, and do not assume what
+the results were if I have not told you.
+
+Then tell me what a student could legitimately claim that I might mark wrong.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Has it added any data you did not give it?
+- Consider the legitimate-but-unexpected claim before you mark.
 
 ---
 
 ### SD-009 · Audit a science explanation for causation, uncertainty and safety
-
-*Grades 3-5, 6-8, 9-12  ·  Science*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a science explanation for causation, uncertainty and safety.
+Explanations that are nearly right, which is the hardest kind to spot.
 
 **COPY FROM HERE**
 
 ```text
-Audit a science explanation for causation, uncertainty and safety.
+Audit this [GRADE] science explanation: [PASTE IT]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [SCIENCE_EXPLANATION: supply verified information; do not leave blank]
-- [VERIFIED_SOURCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Anywhere correlation is presented as causation
+- Anywhere a hedged scientific claim has been stated as certain
+- Any factual or numerical error — recompute anything computable and show your
+  working
+- Any simplification that will become a misconception students must later unlearn
+- Whether the level of certainty matches what the evidence supports
+- Any safety-relevant statement that is incomplete or wrong
+- Any anthropomorphism that will cause trouble later — atoms that "want",
+  organisms that "try to"
 
-Specific requirements:
-Check mechanism, correlation versus causation, uncertainty and procedure safety. Cite the supplied source location for corrections where possible.
+For each, quote it and give the correction.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+Where you cannot verify something independently, say so rather than agreeing
+with it by default.
+
+I will check safety statements against my school's procedures.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Verify any correction it offers. It can be wrong about being right.
+- The unlearn-later simplifications: decide which you accept.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## English language arts
+
+---
+
+### SD-005 · Build a close-reading lesson from an authorized supplied text
+*Grades 3-5, 6-8, 9-12*
+
+**When you need this**
+One text, worked properly, in its own words.
+
+**COPY FROM HERE**
+
+```text
+Build a close-reading lesson on the text below for [GRADE], [MINUTES] minutes.
+
+Use only the text I paste. Do not quote from memory, do not add lines, and do
+not reference a version of this text other than the one here.
+
+Give me:
+- A first read with a single narrow purpose
+- A second read that goes deeper, not wider
+- Four text-dependent questions from literal to inferential, each with the exact
+  lines that answer it — quoted from my text
+- The two or three places students will get stuck, quoted
+- The vocabulary that genuinely blocks meaning, with a gloss
+- A writing or discussion task using evidence from the text
+
+If a question cannot be answered from the text alone, say so and cut it.
+
+TEXT:
+[PASTE THE FULL TEXT — only text I am permitted to use]
+```
+
+**TO HERE**
+
+**Before you send it**
+- Check every quoted line appears in your text, exactly.
+- Is the second read deeper, or just more?
+
+---
+
+### SD-006 · Create an evidence-based writing task with a clear mentor model
+*Grades 3-5, 6-8, 9-12*
+
+**When you need this**
+Students who cannot picture what you are asking for.
+
+**COPY FROM HERE**
+
+```text
+Create a writing task for [GRADE] on [TOPIC OR TEXT].
+
+Give me:
+- The task, with the command word doing real work and the audience named
+- A mentor model of the exact kind I am asking for, written at [GRADE] level —
+  good but achievable, not a polished adult piece
+- An annotation of the model: what each part does, and why it is there
+- What a competent piece that misses the point looks like
+- The success criteria, drawn from the model
+- One sentence frame for the move students find hardest here
+
+Rules:
+- The model must be original, not a real published piece
+- It should be a piece a strong student in this class could plausibly write
+- Do not make it impressive at the cost of being imitable
+
+Then tell me the risk of giving a model at all, and how to reduce it.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Could a strong student in your class write this? If not, lower it.
+- Is the model original?
+
+---
+
+### SD-007 · Design a revision lesson that separates ideas, organization and conventions
+*Grades 3-5, 6-8, 9-12*
+
+**When you need this**
+Revision that is currently just checking spelling.
+
+**COPY FROM HERE**
+
+```text
+Design a revision lesson for [GRADE] writing on [TASK].
+
+Separate three passes, in this order, and say why the order matters:
+- Ideas: is there enough here, and is it the right thing
+- Organisation: is it in an order a reader can follow
+- Conventions: sentences, punctuation, spelling
+
+Give me:
+- What students do in each pass, and how long each gets
+- One specific question per pass, not "does it make sense"
+- Why conventions come last, in words I can say to a student who wants to fix
+  spelling first
+- What I do about the student who changes nothing
+- A partner step, with what the partner is looking for — one thing only
+
+Rules:
+- Do not let conventions dominate. If the ideas are thin, spelling is not the
+  problem
+- Revision means changing something, not recopying it neatly
+```
+
+**TO HERE**
+
+**Before you send it**
+- Does the ideas pass get real time, or a token minute?
+- Is the partner looking for one thing, or everything?
+
+---
+
+## Social studies
 
 ---
 
 ### SD-010 · Create a source-analysis lesson using origin, purpose and context
-
-*Grades 3-5, 6-8, 9-12  ·  Social studies*
+*Grades 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a source-analysis lesson using origin, purpose and context.
+Students who read a source as information rather than as evidence.
 
 **COPY FROM HERE**
 
 ```text
-Create a source-analysis lesson using origin, purpose and context.
+Build a source-analysis lesson for [GRADE] on this source: [PASTE IT, WITH ITS
+ATTRIBUTION]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [SOURCE_TEXT: supply verified information; do not leave blank]
-- [KNOWN_ORIGIN: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Use only the source and attribution I supplied. Do not add historical facts,
+dates or context I have not given you — if context is needed, say what I should
+supply.
 
-Specific requirements:
-Analyze origin, purpose, context and limits. Mark unknown provenance explicitly and avoid filling gaps from stereotypes.
+Give me:
+- Questions on origin: who made this, when, and how we know
+- Questions on purpose: who was it for, what was it trying to do
+- Questions on context: what was happening that this responds to
+- What this source is good evidence for, and what it is not
+- The most common misreading of a source like this
+- A task where students state a claim this source supports, with its limits
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not treat the source as simply true or simply biased. Both are ways of not
+reading it.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Supply the context it asked for rather than letting it fill in.
+- Check any date or fact it did use against a real reference.
 
 ---
 
 ### SD-011 · Build a corroboration task with multiple supplied perspectives
-
-*Grades 3-5, 6-8, 9-12  ·  Social studies*
+*Grades 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a corroboration task with multiple supplied perspectives.
+Two accounts that disagree, which is where history actually is.
 
 **COPY FROM HERE**
 
 ```text
-Build a corroboration task with multiple supplied perspectives.
+Build a corroboration task for [GRADE] using these sources:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TWO_OR_MORE_SOURCES: supply verified information; do not leave blank]
-- [INQUIRY_QUESTION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[PASTE EACH SOURCE WITH ITS ATTRIBUTION]
 
-Specific requirements:
-Compare agreement, contradiction and independence of sources. Do not treat multiple copies of one account as independent corroboration.
+Use only what I supplied. Do not add a source, and do not supply facts from
+outside these documents.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- What the sources agree on
+- Where they disagree, quoted precisely
+- Questions that make students account for the disagreement rather than pick a
+  winner
+- What would help resolve it, and whether we have it
+- A task where students write what can be said with confidence, what is
+  contested, and what is unknown
+- Sentence frames for writing about contested claims
+
+Do not resolve the disagreement for students, and do not present one source as
+the reliable one unless the sources themselves support that.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Check every quotation against your source text.
+- Has it quietly picked a winner?
 
 ---
 
 ### SD-012 · Design a historical claim task that distinguishes evidence from interpretation
-
-*Grades 3-5, 6-8, 9-12  ·  Social studies*
+*Grades 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to design a historical claim task that distinguishes evidence from interpretation.
+The difference between what happened and what it meant.
 
 **COPY FROM HERE**
 
 ```text
-Design a historical claim task that distinguishes evidence from interpretation.
+Design a task for [GRADE] on [HISTORICAL QUESTION] using the evidence below.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [HISTORICAL_QUESTION: supply verified information; do not leave blank]
-- [AUTHORIZED_SOURCES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+EVIDENCE: [PASTE WHAT STUDENTS WILL HAVE]
 
-Specific requirements:
-Separate supported claims, interpretations and unresolved questions. Avoid invented quotations, dates or false equivalence among evidence quality.
+Give me:
+- The question, genuinely open — one where historians differ
+- What the evidence establishes as fact
+- What is interpretation, including interpretations I might hold without
+  noticing
+- Two defensible answers to the question, each with its strongest evidence
+- The weakest point in each
+- A task where students argue one and acknowledge the other
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Use only the supplied evidence. Do not add facts, dates or events
+- Do not present the interpretation most common in textbooks as the neutral one
+- Where the topic touches on people alive today or on contested identity, keep
+  the task about the reasoning and the evidence
+
+Then tell me which interpretation students will find easier, and why that may
+not mean it is better supported.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Verify every date and event it used.
+- Are both interpretations genuinely defensible?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Arts, PE and electives
 
 ---
 
 ### SD-013 · Create a skill-development lesson with modelling, practice and reflection
-
-*Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a skill-development lesson with modelling, practice and reflection.
+Skill teaching where practice is deliberate rather than just repeated.
 
 **COPY FROM HERE**
 
 ```text
-Create a skill-development lesson with modelling, practice and reflection.
+Plan a [MINUTES]-minute [SUBJECT] lesson teaching [SKILL] to [GRADE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PERFORMANCE_SKILL: supply verified information; do not leave blank]
-- [APPROVED_EQUIPMENT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Space and equipment I actually have: [DESCRIBE]
+Class size: [NUMBER]
 
-Specific requirements:
-Sequence model, focused practice and reflection with observable criteria. Avoid medical or physical-training advice beyond teacher-approved activities.
+Give me:
+- The skill broken into its components, and which one to work on today
+- What I model, and the specific thing students should watch for — not "watch
+  me do it"
+- Practice designed so students get many attempts, not many queues
+- The one cue I repeat, under five words
+- What good and not-yet look like, observably, so students can self-check
+- A reflection question about the process, not about enjoyment
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- No component that needs equipment I did not list
+- Practice must give every student attempts, not one student demonstrating while
+  the rest watch
+- Do not comment on natural ability anywhere
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Count the actual attempts each student gets. Is it enough?
+- Is the cue short enough to shout across a hall?
 
 ---
 
 ### SD-014 · Adapt a performance task for space, equipment and physical access
-
-*Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to adapt a performance task for space, equipment and physical access.
+The task assumes a room, equipment or a body that not everyone has.
 
 **COPY FROM HERE**
 
 ```text
-Adapt a performance task for space, equipment and physical access.
+Adapt this [SUBJECT] task for my actual conditions: [PASTE THE TASK]
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TASK: supply verified information; do not leave blank]
-- [SPACE: supply verified information; do not leave blank]
-- [EQUIPMENT: supply verified information; do not leave blank]
-- [ACCESS_CONSTRAINTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What I have: [SPACE, EQUIPMENT, TIME, CLASS SIZE]
+Access needs, described as needs not students: [e.g. one student uses a
+wheelchair, one has limited grip strength, one cannot be in a loud space]
 
-Specific requirements:
-Adapt performance access while preserving the learning goal. Offer equivalent evidence modes without inferring diagnoses.
+Give me:
+- The adapted task, achieving the same learning
+- What changes, and what deliberately does not
+- How a student meets the objective by a different route, with the same standing
+  — not a lesser version
+- How the adaptation is unremarkable, so nobody is marked out by doing it
+- What I assess, which must be identical across routes
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Adapt the task, not the expectation
+- No adaptation that removes a student from the group activity
+- Do not name or describe any student
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Would a student feel singled out by the adapted route?
+- Is what you assess genuinely the same?
 
 ---
 
 ### SD-015 · Build an observable process rubric for an arts, PE or elective task
-
-*Grades 3-5, 6-8, 9-12  ·  Arts / PE / electives*
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build an observable process rubric for an arts, PE or elective task.
+Marking the learning rather than the finished performance.
 
 **COPY FROM HERE**
 
 ```text
-Build an observable process rubric for an arts, PE or elective task.
+Build a rubric for [TASK] in [SUBJECT] for [GRADE], assessing [OBJECTIVE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PROCESS_OBJECTIVE: supply verified information; do not leave blank]
-- [OBSERVABLE_EVIDENCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Weight process and technique over the finished product, and say how you have
+weighted them.
 
-Specific requirements:
-Create a rubric for process, technique and reflection. Do not score body type, innate talent or expensive equipment.
+Rules — these define the rubric:
+- Every criterion must be observable in what the student does, not inferred
+  from what they produce
+- Nothing about talent, flair, natural ability, or how much they seem to enjoy it
+- Nothing about a student's body, size, or physical attributes
+- Nothing requiring equipment, coaching or resources outside school
+- Nothing rewarding a student who arrived already able
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- The criteria, with descriptors at proficient
+- What each looks like for a student who has improved a great deal but is still
+  behind, and how that is credited
+- One criterion I could observe during the lesson rather than after it
+
+Then tell me which criterion would advantage a student with outside coaching,
+and how to reduce that.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
+- Which criterion favours the already-trained student? Fix it.
+- Is anything here about the body rather than the learning?
