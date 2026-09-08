@@ -3,18 +3,18 @@
 **30 prompts**
 
 The email you have been putting off is usually the one where the facts are clear
-but the tone is not. These prompts separate the two: state what happened, describe
-what you have already tried, make one specific ask — and leave out everything you
-cannot actually know.
+but the tone is not. These prompts separate the two: state what happened,
+describe what you have already tried, make one specific ask — and leave out
+everything you cannot actually know.
 
 ## What's in here
 
 | Group | Prompts | Use when |
 |---|---|---|
 | Positive notes | 6 | The highest-return five minutes in teaching |
-| Concern emails | 6 | Something needs saying, carefully |
-| Conference preparation | 5 | Ten minutes each, twenty-four families |
-| Newsletters | 4 | Rough notes into something readable |
+| Concern emails | 5 | Something needs saying, carefully |
+| Conference preparation | 4 | Ten minutes each, twenty-four families |
+| Newsletters | 3 | Rough notes into something readable |
 | Permissions and logistics | 4 | Trips, forms, deadlines |
 | Clear and accessible language | 3 | Plain wording, any reading level |
 | Difficult conversations | 2 | When it is already tense |
@@ -25,1281 +25,1123 @@ Describe behaviour, never character. "Three tasks are not recorded as submitted"
 is a fact. "He is unmotivated" is a guess about a child you are writing to their
 family about.
 
-Do not let it infer a home cause. If it writes "with support at home this will
-improve", cut that line — you do not know what home looks like.
+Do not let it infer a home cause. If a draft says "with support at home this
+will improve", cut that line — you do not know what home looks like.
 
 Read the draft as the parent, at 8am, on a phone. Anything that reads as blame
 will be answered as blame.
 
 Ask for a shorter version too. Many families will not read past four lines.
 
-## Every prompt in this chapter
-
-### Positive Notes
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-001 | Write a specific positive family message | All |
-| PC-005 | Share academic growth using one concrete classroom example | 3-5, 6-8, 9-12 |
-| PC-006 | Recognize a learner's helpful contribution without using labels | 3-5, 6-8, 9-12 |
-| PC-007 | Write a brief celebration message suitable for a mobile screen | 3-5, 6-8, 9-12 |
-| PC-008 | Create a positive note that invites the learner's own reflection | 3-5, 6-8, 9-12 |
-| PC-009 | Build a reusable strength-note template with visible evidence fields | 3-5, 6-8, 9-12 |
-
-### Concern Emails
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-002 | Communicate an academic concern with a next step | All |
-| PC-010 | Write a missing-work message using dates and verified counts | 3-5, 6-8, 9-12 |
-| PC-011 | Explain a recurring learning difficulty without diagnosing its cause | 3-5, 6-8, 9-12 |
-| PC-012 | Request a brief family check-in with two exact scheduling options | 3-5, 6-8, 9-12 |
-| PC-013 | Revise a blaming concern email into factual collaborative language | 3-5, 6-8, 9-12 |
-| PC-014 | Audit a concern message for evidence, tone and unsupported claims | 3-5, 6-8, 9-12 |
-
-### Conference Preparation
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-003 | Prepare a balanced family conference | All |
-| PC-015 | Build a 15-minute conference agenda around learning evidence | 3-5, 6-8, 9-12 |
-| PC-016 | Prepare questions that invite family and student perspective | 3-5, 6-8, 9-12 |
-| PC-017 | Turn classroom evidence into a shared action-plan table | 3-5, 6-8, 9-12 |
-| PC-018 | Write a factual post-conference summary with owners and dates | 3-5, 6-8, 9-12 |
-
-### Newsletters
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-004 | Draft a useful class newsletter | All |
-| PC-019 | Create a concise weekly learning update for families | 3-5, 6-8, 9-12 |
-| PC-020 | Rewrite a newsletter as a mobile-friendly plain-text version | 3-5, 6-8, 9-12 |
-| PC-021 | Audit a class newsletter for dates, jargon, access and action items | 3-5, 6-8, 9-12 |
-
-### Permissions And Logistics
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-022 | Draft a permission notice from verified trip or event details | 3-5, 6-8, 9-12 |
-| PC-023 | Create a clear family checklist for materials, dates and return forms | 3-5, 6-8, 9-12 |
-| PC-024 | Write a schedule-change notice without inventing school policy | 3-5, 6-8, 9-12 |
-| PC-025 | Audit a logistics message for missing consent, safety and contact details | 3-5, 6-8, 9-12 |
-
-### Clear And Accessible Language
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-026 | Rewrite school language in plain family-friendly English | 3-5, 6-8, 9-12 |
-| PC-027 | Create a translation-ready message using short unambiguous sentences | 3-5, 6-8, 9-12 |
-| PC-028 | Audit a family message for jargon, idioms and hidden assumptions | 3-5, 6-8, 9-12 |
-
-### Difficult Conversations
-
-| ID | Prompt | Grades |
-|---|---|---|
-| PC-029 | Prepare a calm conversation about a repeated classroom concern | 3-5, 6-8, 9-12 |
-| PC-030 | Create a fact-based communication plan for disagreement with a family | 3-5, 6-8, 9-12 |
+**Use initials or "your child".** These messages leave your classroom.
 
 ---
+
+## Positive notes
 
 ---
 
 ### PC-001 · Write a specific positive family message
-
-*All grades  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-You want to share genuine, evidence-based progress.
+Five minutes that change how a family hears everything you send afterwards.
 
 **COPY FROM HERE**
 
 ```text
-Write a specific positive family message.
+Write a short positive message to a family about their child in [GRADE]
+[SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBSERVED_STRENGTH: supply verified information; do not leave blank]
-- [SPECIFIC_EVIDENCE: supply verified information; do not leave blank]
-- [CHANNEL: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What I actually observed: [DESCRIBE THE SPECIFIC MOMENT OR WORK. Use "your
+child" — no names.]
+When: [DATE OR LESSON]
 
-Specific requirements:
-Write a brief positive message anchored to one observation. Avoid adding a concern or unsupported personality claim.
+Rules:
+- Name the specific thing. "A pleasure to teach" tells a family nothing.
+- Describe what the student did, not what kind of person they are
+- Two to four sentences, readable on a phone
+- No "but", no concern attached, nothing asked of the family
+- Do not generalise one observation into a pattern
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the message, and a shorter two-sentence version.
+
+If what I described is too vague to write from, ask me what happened rather
+than inventing a detail.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Dear Family, Today, [LEARNER] supported a science discussion claim with two details from the class text. This is a useful step toward explaining ideas with evidence. You could invite them to tell you which detail they found most convincing. Best, [TEACHER]. Add identities only in the approved local system. This positive note does not invent a recurring pattern from one observation.
-
----
-
-### PC-002 · Communicate an academic concern with a next step
-
-*All grades  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
-
-**When you need this**
-
-A family needs clear facts and a manageable path forward.
-
-**COPY FROM HERE**
-
-```text
-Communicate an academic concern with a next step.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VERIFIED_CONCERN: supply verified information; do not leave blank]
-- [SUPPORT_TRIED: supply verified information; do not leave blank]
-- [NEXT_STEP: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-State the concern factually, describe support and invite collaboration. Do not infer home causes or promise improvement.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Dear Family, Two practice tasks, dated September 1 and September 3, are not yet recorded as submitted. I have offered a ten-minute in-class catch-up opportunity. Could you let me know if there is information that would help us plan the next step? Best, [TEACHER]. Verify the submission record before sending. Do not infer refusal, home support or motivation.
-
----
-
-### PC-003 · Prepare a balanced family conference
-
-*All grades  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to prepare a balanced family conference.
-
-**COPY FROM HERE**
-
-```text
-Prepare a balanced family conference.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [STRENGTH: supply verified information; do not leave blank]
-- [CONCERN: supply verified information; do not leave blank]
-- [CONFERENCE_MINUTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Build an agenda that balances evidence and family perspective. Leave agreed actions blank until agreement actually occurs.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Agenda: welcome and purpose 2 minutes; review one diagram and explanation 4; listen to family and learner perspective 4; discuss one support 3; confirm next step 2. Proposed support: use an evidence-linking sentence frame in class. Agreement, owner and review date remain blank until discussed. Do not present a proposed plan as already accepted by the family.
-
----
-
-### PC-004 · Draft a useful class newsletter
-
-*All grades  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
-
-**When you need this**
-
-Families need a concise update they can act on.
-
-**COPY FROM HERE**
-
-```text
-Draft a useful class newsletter.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VERIFIED_CLASS_NEWS: supply verified information; do not leave blank]
-- [DATES: supply verified information; do not leave blank]
-- [ACTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Organize learning highlights, upcoming dates and required actions. Exclude individual student information from a class-wide newsletter.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-This week: We used equal-sized models to explore fractions. Next week: We will compare fractions and explain our choices. Action: Please return class library books on Friday. Optional conversation: Ask your learner why the size of the whole matters. Confirm the actual calendar date before sending. No learner names, scores or identifiable stories belong in the class-wide version.
+- Is the specific detail genuinely yours, or has it been filled in?
+- Any hidden "but" at the end?
 
 ---
 
 ### PC-005 · Share academic growth using one concrete classroom example
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to share academic growth using one concrete classroom example.
+Progress a family can picture, not a grade they cannot interpret.
 
 **COPY FROM HERE**
 
 ```text
-Share academic growth using one concrete classroom example.
+Write a message to a family about academic growth in [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [EARLIER_EVIDENCE: supply verified information; do not leave blank]
-- [LATER_EVIDENCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Where they were: [DESCRIBE, with the evidence and roughly when]
+Where they are now: [DESCRIBE, with the evidence]
 
-Specific requirements:
-Describe growth only where observations are comparable. State the specific change without extrapolating overall progress.
+Build it around one concrete before-and-after that a family can picture. Not
+"improved in fractions" — the actual thing that changed in the work.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- The message, under 120 words
+- One sentence the family could say to their child about it
+- The shorter version for a family that reads four lines
+
+Use only what I gave you. Do not attribute the growth to effort, attitude, or
+anything happening at home — you do not know what caused it, and neither do I.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Dear Family, In the later writing task, [LEARNER] explained how two source details supported the claim. In the earlier comparable task, the explanation listed a detail without explaining the connection. The next classroom step is to evaluate which evidence is strongest. This describes a specific change in these tasks, not a claim about every piece of writing.
+- Would a family picture the change from this?
+- Has it credited a cause you cannot actually know?
 
 ---
 
 ### PC-006 · Recognize a learner's helpful contribution without using labels
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to recognize a learner's helpful contribution without using labels.
+Praising what they did, not who you have decided they are.
 
 **COPY FROM HERE**
 
 ```text
-Recognize a learner's helpful contribution without using labels.
+Write a short message about something helpful a [GRADE] student did:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [HELPFUL_ACTION: supply verified information; do not leave blank]
-- [OBSERVED_IMPACT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[DESCRIBE WHAT HAPPENED. No names.]
 
-Specific requirements:
-Recognize the action and its classroom impact. Avoid labels such as natural leader or best student.
+Describe the action and its effect. Do not use character labels — not "kind",
+"a leader", "mature", "a role model", "responsible" or "well-behaved". A child
+who is told they are kind has been given something to live up to or fall short
+of; a child told what they did has been given something to repeat.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me:
+- The message, three sentences
+- The one line naming the effect their action had on someone else
+- A version I could say aloud to the student
+
+If my description does not contain an actual action, ask me what they did.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
-**Example** — an editorial illustration, not a logged AI run
-
-Dear Family, Today, [LEARNER] explained our materials-return routine to a partner, and the pair was then able to begin the next task. I wanted to recognize that helpful action. Best, [TEACHER]. The note names an observed contribution without labelling the learner a natural leader, always helpful or better than classmates.
+- Any character labels left?
+- Does it name a real effect, or a vague good?
 
 ---
 
 ### PC-007 · Write a brief celebration message suitable for a mobile screen
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a brief celebration message suitable for a mobile screen.
+It will be read while walking, on a phone, in about six seconds.
 
 **COPY FROM HERE**
 
 ```text
-Write a brief celebration message suitable for a mobile screen.
+Write a message for a family about [WHAT HAPPENED] in [GRADE] [SUBJECT],
+designed to be read on a phone.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [POSITIVE_EVENT: supply verified information; do not leave blank]
-- [CHARACTER_LIMIT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Constraints:
+- Under 50 words
+- First line carries the whole message, in case they read nothing else
+- No greeting longer than two words, no sign-off longer than my name
+- One idea only
+- No attachment, no link, nothing to click
 
-Specific requirements:
-Write one mobile-sized celebration with the supplied fact and a clear closing. Report character count without changing evidence.
+Give me the message, plus the subject line — under 8 words, saying what it is
+so nobody opens it braced for bad news.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then give me a version with one extra sentence, for the family who will read more.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does the first line stand alone?
+- Does the subject line look like good news?
 
 ---
 
 ### PC-008 · Create a positive note that invites the learner's own reflection
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a positive note that invites the learner's own reflection.
+The student should be in this conversation, not the subject of it.
 
 **COPY FROM HERE**
 
 ```text
-Create a positive note that invites the learner's own reflection.
+Write a positive message about [WHAT HAPPENED] in [GRADE] [SUBJECT] that
+includes the student rather than talking over them.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBSERVATION: supply verified information; do not leave blank]
-- [REFLECTION_INVITATION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- A short note to the family
+- One question the family could ask their child about it, that has more than a
+  yes or no answer
+- One question I could ask the student directly
+- A line the student could write themselves about what they did
 
-Specific requirements:
-Pair a positive observation with an optional learner reflection question. Do not invent what the learner feels or thinks.
+The questions must be answerable by a student who is not sure what they did
+differently — many are not. Do not assume they can articulate it.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Keep the whole thing under 100 words.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could a student who does not know why it went well still answer?
+- Does it talk to the student, or about them?
 
 ---
 
 ### PC-009 · Build a reusable strength-note template with visible evidence fields
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a reusable strength-note template with visible evidence fields.
+So sending ten of these takes twenty minutes, not an evening.
 
 **COPY FROM HERE**
 
 ```text
-Build a reusable strength-note template with visible evidence fields.
+Build a reusable template for positive notes home in [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [STRENGTH_CATEGORIES: supply verified information; do not leave blank]
-- [EVIDENCE_FIELDS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+It must have blanks I fill with something real, so the note cannot be sent
+generic:
+- [WHAT THEY DID] — a specific observed action
+- [WHEN]
+- [WHY IT MATTERED]
 
-Specific requirements:
-Build reusable sentence slots, not ready-to-send claims. Keep evidence placeholders mandatory and visibly unresolved.
+Give me:
+- The template
+- Four openings and four closings I can rotate, so ten notes do not read as
+  one note sent ten times
+- A worked example, filled in
+- The rule for what goes in each blank, so I do not slip into vagueness at 9pm
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me what makes these stop working if I send too many, and how often is
+too often.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Could the template be sent without filling a real detail? Tighten it.
+- Do ten of these read as ten different notes?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Concern emails
+
+---
+
+### PC-002 · Communicate an academic concern with a next step
+*All grades*
+
+**When you need this**
+The email you have been putting off since Tuesday.
+
+**COPY FROM HERE**
+
+```text
+Write an email to a family about an academic concern in [GRADE] [SUBJECT].
+
+The concern, factually: [WHAT IS HAPPENING — observable, with dates or counts]
+What I have already tried: [LIST IT]
+What I want from this email: [A MEETING / AWARENESS / A SPECIFIC NEXT STEP]
+
+Rules:
+- Open with something genuine and specific about the child
+- State the concern as observable fact, not interpretation
+- Describe behaviour, never character
+- Do not name a cause. Do not suggest anything about home, motivation, effort,
+  attention or ability
+- Do not promise improvement
+- End with one clear ask
+- Under 200 words, no jargon, no emoji
+
+Give me the email, then a four-line version for a family that will not read
+further.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Has it inferred a cause anywhere? Cut that line.
+- Read it as the parent at 8am. Does it read as blame?
+- Is there exactly one ask?
 
 ---
 
 ### PC-010 · Write a missing-work message using dates and verified counts
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a missing-work message using dates and verified counts.
+Facts, not a feeling that they are behind.
 
 **COPY FROM HERE**
 
 ```text
-Write a missing-work message using dates and verified counts.
+Write a message to a family about missing work in [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [VERIFIED_COUNTS: supply verified information; do not leave blank]
-- [ASSIGNMENT_DATES: supply verified information; do not leave blank]
-- [RECOVERY_OPTION: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+The record: [LIST WHAT IS MISSING AND THE DATES — only what I have verified]
+What I have already done: [LIST IT]
 
-Specific requirements:
-Separate missing, late and ungraded work. Verify totals and avoid treating absence of submission as proof of refusal.
+Rules:
+- Use only the dates and counts I gave you. Do not round, estimate, or add
+  anything I did not state
+- Do not describe the pattern as a habit, an attitude, or a choice
+- Say plainly what happens next and by when
+- Include how the work can be caught up, specifically
+- Ask whether there is something I should know, without speculating about what
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the message and a short version.
+
+Before I send this, tell me which of my stated facts I should double-check
+against the record — this is the kind of message where being wrong on one date
+loses the family's trust entirely.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Verify every date and count against your actual record.
+- Has it added a number you did not give it?
 
 ---
 
 ### PC-011 · Explain a recurring learning difficulty without diagnosing its cause
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to explain a recurring learning difficulty without diagnosing its cause.
+Something keeps happening, and it is not yours to name.
 
 **COPY FROM HERE**
 
 ```text
-Explain a recurring learning difficulty without diagnosing its cause.
+Write a message to a family about a recurring difficulty in [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [REPEATED_OBSERVATIONS: supply verified information; do not leave blank]
-- [SUPPORTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What I observe, repeatedly: [DESCRIBE THE PATTERN IN THE WORK — what happens,
+how often, in what situations]
 
-Specific requirements:
-Describe the learning difficulty and response to support. Do not name a disability or explain a cause from limited evidence.
+Rules — these matter more than the wording:
+- Describe only what I have observed in the classroom
+- Name no cause. Do not suggest a diagnosis, a condition, a difficulty by name,
+  or anything about attention, processing, ability or home
+- Do not recommend an assessment or referral — that is not mine to initiate in
+  an email
+- Ask what the family notices, rather than telling them what to look for
+- Say what I am doing about it in the classroom already
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the message under 180 words.
+
+If anything in my description is already a diagnosis in disguise, tell me and
+rewrite it as an observation.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Any language that hints at a diagnosis? Cut it.
+- Follow your school's process for anything beyond an observation.
 
 ---
 
 ### PC-012 · Request a brief family check-in with two exact scheduling options
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to request a brief family check-in with two exact scheduling options.
+Making it easy to say yes.
 
 **COPY FROM HERE**
 
 ```text
-Request a brief family check-in with two exact scheduling options.
+Write a short message asking a family for a brief conversation about [TOPIC].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [TWO_CONFIRMED_SLOTS: supply verified information; do not leave blank]
-- [TIMEZONE: supply verified information; do not leave blank]
-- [CHANNEL: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+My availability: [TWO SPECIFIC OPTIONS — day, date, time, duration]
+How: [PHONE / IN PERSON / VIDEO]
 
-Specific requirements:
-Offer exactly the supplied slots with timezone and response route. Leave dates unfilled when availability is not confirmed.
+Rules:
+- Say why in one sentence, without loading it
+- Offer exactly the two options I gave, plus an invitation to suggest another
+- Say how long it will take
+- Make clear this is not an emergency, if it is not
+- Do not make attendance sound compulsory unless it is
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Under 100 words.
+
+Then give me a second version for a family who has not responded to two previous
+messages — same content, different approach, no reproach about the silence.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does it read as urgent when it is not?
+- Is the non-response version free of any hint of blame?
 
 ---
 
 ### PC-013 · Revise a blaming concern email into factual collaborative language
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to revise a blaming concern email into factual collaborative language.
+You wrote it angry. Do not send that one.
 
 **COPY FROM HERE**
 
 ```text
-Revise a blaming concern email into factual collaborative language.
+Rewrite this message so it is factual and collaborative, keeping every fact
+intact.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [DRAFT_EMAIL: supply verified information; do not leave blank]
-- [VERIFIED_FACTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Do not soften it into meaninglessness — the family must still understand there
+is a problem and what happens next.
 
-Specific requirements:
-Remove blame while retaining the material concern. Return original phrase, revision and reason; do not soften away important facts.
+Show me:
+- Each sentence carrying blame, judgement, or an inference about home,
+  character or motivation — quoted
+- What is factually true in it, and what is my interpretation presented as fact
+- The rewritten message
+- Anything I claimed that I should verify before sending
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me three versions: gentle, direct, and firm. Tell me which fits what I
+described, and when I would use each of the others.
+
+DRAFT:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Are all the facts still there, or did softening remove one?
+- Verify anything it flagged as unchecked.
 
 ---
 
 ### PC-014 · Audit a concern message for evidence, tone and unsupported claims
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a concern message for evidence, tone and unsupported claims.
+Before it becomes the email that gets forwarded to the head.
 
 **COPY FROM HERE**
 
 ```text
-Audit a concern message for evidence, tone and unsupported claims.
+Audit this message to a family.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MESSAGE: supply verified information; do not leave blank]
-- [EVIDENCE_RECORD: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- Every claim not supported by something I could show — quoted
+- Anywhere I describe character rather than behaviour
+- Anywhere I imply a cause: home, effort, attitude, ability, attention
+- Anywhere a family could reasonably read blame
+- Whether the ask is clear, single, and actually answerable
+- What a defensive family would seize on first
+- Anything a family might reasonably ask that the message does not answer
 
-Specific requirements:
-Trace factual sentences to evidence and flag assumptions. Return send/hold recommendation with specific unresolved details.
+Then give me the one sentence I should cut, and why.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+MESSAGE:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Cut the sentence it named. That is the one.
+- Could you evidence every remaining claim if asked?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Conference preparation
+
+---
+
+### PC-003 · Prepare a balanced family conference
+*All grades*
+
+**When you need this**
+Ten minutes, and you want them to leave knowing three things.
+
+**COPY FROM HERE**
+
+```text
+Prepare me for a [MINUTES]-minute conference with a family in [GRADE] [SUBJECT].
+
+What I know: [STRENGTHS WITH EVIDENCE, GROWTH AREA WITH EVIDENCE, ANYTHING
+ELSE — no names]
+
+Give me a single card I can glance at:
+- One strength, with the evidence in a phrase
+- One growth area, with the evidence in a phrase
+- One question to ask the family, that is genuinely open
+- One thing they could do at home that costs under ten minutes and does not
+  require them to teach anything
+- The sentence I open with, and the sentence I close with
+
+Keep it to what fits on half a page. I will be reading it while they sit down.
+
+Do not include anything I did not give you, and do not invent an evidence detail
+to make a point land better.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Is every piece of evidence something you actually have?
+- Could you deliver this in ten minutes with the family talking too?
 
 ---
 
 ### PC-015 · Build a 15-minute conference agenda around learning evidence
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to build a 15-minute conference agenda around learning evidence.
+Structure, so the ten minutes do not disappear into small talk.
 
 **COPY FROM HERE**
 
 ```text
-Build a 15-minute conference agenda around learning evidence.
+Build a [MINUTES]-minute conference agenda for [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CONFERENCE_PRIORITY: supply verified information; do not leave blank]
-- [FIFTEEN_MINUTES: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me the agenda with minutes allocated to each part, including:
+- Time for the family to talk, which is the part that always gets squeezed
+- Where I show actual work rather than describe it
+- Where the student's own view comes in, if they are present
+- The point at which I stop and check whether we agree on what we are seeing
+- What I do when we reach the last two minutes and nothing is settled
 
-Specific requirements:
-Allocate 15 minutes among evidence, listening and next steps. Include a follow-up route for issues that cannot fit.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me:
+- Which part to cut first if we are running over
+- The conversation this agenda does not handle — the one that needs a separate
+  meeting — and how I recognise it early and say so
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does the family get real time, or a token minute?
+- Could you say "this needs a longer conversation" comfortably?
 
 ---
 
 ### PC-016 · Prepare questions that invite family and student perspective
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to prepare questions that invite family and student perspective.
+You do most of the talking. That is the wrong way round.
 
 **COPY FROM HERE**
 
 ```text
-Prepare questions that invite family and student perspective.
+Write questions for a [GRADE] conference that get the family and the student
+talking.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [CONFERENCE_TOPIC: supply verified information; do not leave blank]
-- [KNOWN_EVIDENCE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- Three questions for the family, open, none of which can be answered "fine"
+- Three for the student, answerable by a student who is nervous or monosyllabic
+- One question I ask when the family disagrees with something I have said
+- One I ask when the family says nothing at all
 
-Specific requirements:
-Write open, non-leading questions for family and student voice. Offer a right to decline personal disclosure.
+Rules:
+- No question assuming a particular home setup, language, work schedule,
+  resources or family structure
+- Nothing that reads as checking whether they are doing enough at home
+- Nothing that puts a child on the spot in front of an adult
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me which question is most likely to open something I am not prepared
+for, and how to hold that well.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does any question assume a kind of household?
+- Would a nervous 9-year-old manage the student questions?
 
 ---
 
 ### PC-017 · Turn classroom evidence into a shared action-plan table
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to turn classroom evidence into a shared action-plan table.
+So the meeting produces something rather than just happening.
 
 **COPY FROM HERE**
 
 ```text
-Turn classroom evidence into a shared action-plan table.
+Turn this into a shared action plan after a conference in [GRADE] [SUBJECT]:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [PROPOSED_ACTIONS: supply verified information; do not leave blank]
-- [CONFIRMED_OWNERS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What we discussed: [SUMMARISE — no names]
+What was agreed: [LIST IT]
 
-Specific requirements:
-Create an action table with proposed versus agreed status. Do not present suggestions as family commitments.
+Give me a table with: what will happen, who does it, by when, and how we will
+know it worked.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Rules:
+- Every row has a named owner — me, the family, or the student. No unowned rows
+- Nothing asks a family to teach subject content
+- Nothing requires resources, internet, or an adult free at a fixed time,
+  unless the family offered it
+- The student owns at least one row
+- Include a date to check back, and who initiates that
+
+Only include what was actually agreed. If something was discussed but not
+agreed, list it separately as open.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Does every row have an owner?
+- Is anything here the family did not actually agree to?
 
 ---
 
 ### PC-018 · Write a factual post-conference summary with owners and dates
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a factual post-conference summary with owners and dates.
+A record, sent the same day, that both sides recognise.
 
 **COPY FROM HERE**
 
 ```text
-Write a factual post-conference summary with owners and dates.
+Write a summary email after a family conference in [GRADE] [SUBJECT].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MEETING_NOTES: supply verified information; do not leave blank]
-- [AGREEMENTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What was discussed: [YOUR NOTES — no names]
+What was agreed: [LIST IT]
 
-Specific requirements:
-Separate agreed actions, open questions and follow-up dates. Ask for corrections without claiming unanimous agreement.
+Rules:
+- Record only what was said and agreed. Do not smooth over a disagreement, and
+  do not record agreement that was not given
+- Where the family and I saw it differently, record both views neutrally
+- Every action has an owner and a date
+- No new information, no new concerns — this is a record, not a second email
+- Invite correction: they may remember it differently, and that is fine
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Under 200 words.
+
+Then tell me what to do if the family replies disputing the summary.
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Send it the same day. Memory diverges fast.
+- Have you recorded agreement that was not actually given?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Newsletters
+
+---
+
+### PC-004 · Draft a useful class newsletter
+*Grades K-2, 3-5*
+
+**When you need this**
+Bullet points in, something families actually read out.
+
+**COPY FROM HERE**
+
+```text
+Turn these notes into a class newsletter for [GRADE] families, week of [DATE]:
+
+[PASTE YOUR ROUGH NOTES]
+
+Sections: what we learned, what is coming, dates to remember, one thing to do
+at home.
+
+Rules:
+- Under 300 words, headings, scannable in thirty seconds
+- Dates in full — day, date, month — never "next Tuesday"
+- The home suggestion takes under ten minutes and needs no printing, internet,
+  or subject knowledge
+- No school jargon, no acronyms
+- Written for any adult at any reading level
+
+Give me the newsletter, then a five-line version for families who will not read
+the full one.
+
+Use only what is in my notes. If a date or detail is missing, ask rather than
+filling it in.
+```
+
+**TO HERE**
+
+**Before you send it**
+- Check every date against the calendar yourself.
+- Has anything been invented to fill a section?
 
 ---
 
 ### PC-019 · Create a concise weekly learning update for families
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*Grades 3-5, 6-8, 9-12*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a concise weekly learning update for families.
+Same shape every week, so families know where to look.
 
 **COPY FROM HERE**
 
 ```text
-Create a concise weekly learning update for families.
+Build a repeatable weekly update format for [GRADE] [SUBJECT] families.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [WEEKLY_LEARNING: supply verified information; do not leave blank]
-- [NEXT_WEEK_ACTIONS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Give me:
+- A fixed structure, four sections maximum, in the same order every week
+- What goes in each, written as a rule so I can fill it in five minutes
+- This week's version, using: [YOUR NOTES]
+- The one section families will actually read, placed first
+- What to do in a week where little happened, without padding
 
-Specific requirements:
-Create a concise class update with three sections and no individual results. Prioritize actions over promotional adjectives.
+Under 200 words.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Then tell me what makes families stop reading a weekly update, so I can avoid
+building that in from the start.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
----
-
-### PC-020 · Rewrite a newsletter as a mobile-friendly plain-text version
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
-
-**When you need this**
-
-Choose this focused tool when your immediate task is to rewrite a newsletter as a mobile-friendly plain-text version.
-
-**COPY FROM HERE**
-
-```text
-Rewrite a newsletter as a mobile-friendly plain-text version.
-
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [NEWSLETTER: supply verified information; do not leave blank]
-- [MOBILE_LIMIT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
-
-Specific requirements:
-Rewrite for a small screen using short sections. Preserve dates, costs and required actions exactly.
-
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
-```
-
-**TO HERE**
-
-**Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Could you fill this in five minutes every week? If not, simplify it.
+- Is the most-read section first?
 
 ---
 
 ### PC-021 · Audit a class newsletter for dates, jargon, access and action items
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a class newsletter for dates, jargon, access and action items.
+Before three families turn up on the wrong day.
 
 **COPY FROM HERE**
 
 ```text
-Audit a class newsletter for dates, jargon, access and action items.
+Audit this newsletter for [GRADE] families.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [NEWSLETTER: supply verified information; do not leave blank]
-- [VERIFIED_CALENDAR: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Check:
+- Every date and day-of-week — flag any that is ambiguous, relative, or that I
+  should verify
+- School jargon, acronyms and internal shorthand, quoted
+- Anything assuming internet, a printer, money, transport, or a free adult
+- Anything a family is being asked to do that is not stated clearly as an ask
+- Whether the reading level suits every family, not most of them
+- Whether the most important item is buried
 
-Specific requirements:
-Audit conflicting dates, jargon, inaccessible formats and hidden action requests. Return corrections and unresolved confirmations.
+Then tell me the three items to move to the top, and everything I could cut
+without loss.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+NEWSLETTER:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Verify every flagged date against the school calendar.
+- Are the asks unmistakably asks?
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+### PC-020 · Rewrite a newsletter as a mobile-friendly plain-text version
+*All grades*
+
+**When you need this**
+Most families will open this on a phone, in a queue, with one thumb.
+
+**COPY FROM HERE**
+
+```text
+Rewrite this newsletter as plain text for a phone screen.
+
+Rules:
+- No formatting that depends on a wide screen — no columns, no tables, no
+  boxes, no indentation carrying meaning
+- Most important item first, in the first two lines
+- Short paragraphs, two or three lines each, with a blank line between
+- Dates in full, on their own line, so they survive being screenshotted
+- No attachment and no link required to understand the message
+- Under 200 words
+
+Give me:
+- The plain-text version
+- A three-line version for a text message or messaging app
+- Which items I should send separately instead, because they will be lost in a
+  long message
+
+Keep every date and deadline exactly as written.
+
+NEWSLETTER:
+[PASTE IT]
+```
+
+**TO HERE**
+
+**Before you send it**
+- Read it on your own phone before sending.
+- Did any date change in the rewrite?
+
+
+---
+
+## Permissions and logistics
 
 ---
 
 ### PC-022 · Draft a permission notice from verified trip or event details
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to draft a permission notice from verified trip or event details.
+A form that comes back complete, first time.
 
 **COPY FROM HERE**
 
 ```text
-Draft a permission notice from verified trip or event details.
+Write a permission notice for [EVENT] for [GRADE] families.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OFFICIAL_EVENT_DETAILS: supply verified information; do not leave blank]
-- [APPROVED_FORM: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Verified details: [DATE, TIMES, LOCATION, TRANSPORT, COST, WHAT TO BRING, WHAT
+TO WEAR, RETURN DEADLINE, WHO TO CONTACT]
 
-Specific requirements:
-Draft the notice, not a legally sufficient consent form. Refer to the school's approved permission process and leave unknowns flagged.
+Rules:
+- Use only the details I supplied. Invent nothing — not a cost, not a time, not
+  a policy, not a supervision ratio
+- If something a permission notice normally contains is missing from my list,
+  list it as missing rather than filling it in
+- Plain language, short sentences, translation-ready
+- Say clearly what happens if a family cannot pay or cannot consent, without
+  requiring them to explain why
+- One clear return deadline and one place to return it
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the notice and the tear-off slip.
+
+I will check this against my school's own consent and safeguarding requirements
+before it goes out.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Check every detail against the actual arrangements.
+- Check the form against your school's required consent wording.
+- Fill in anything it listed as missing — do not send it with gaps.
 
 ---
 
 ### PC-023 · Create a clear family checklist for materials, dates and return forms
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a clear family checklist for materials, dates and return forms.
+One list, so nothing arrives on the wrong day.
 
 **COPY FROM HERE**
 
 ```text
-Create a clear family checklist for materials, dates and return forms.
+Turn these into a family checklist for [GRADE]:
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MATERIALS: supply verified information; do not leave blank]
-- [DEADLINES: supply verified information; do not leave blank]
-- [RETURN_ITEMS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+[LIST WHAT IS NEEDED, WITH DATES]
 
-Specific requirements:
-Make an action checklist ordered by deadline. Offer a contact route for access needs without requesting medical details in replies to public AI.
+Rules:
+- Grouped by date, earliest first, with the full date each time
+- Each item says what, by when, and where it goes
+- Say which items are essential and which are optional — families need to know
+  what they can skip
+- For anything costing money or needing a purchase, note the school's route for
+  families who cannot
+- Nothing requiring a printer at home
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Give me the checklist as one page, plus a two-line phone summary of the most
+urgent items.
+
+Use only my list. If a date is missing, ask.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is essential versus optional actually accurate?
+- Is your school's support route stated correctly?
 
 ---
 
 ### PC-024 · Write a schedule-change notice without inventing school policy
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to write a schedule-change notice without inventing school policy.
+Something moved, and families need to know today.
 
 **COPY FROM HERE**
 
 ```text
-Write a schedule-change notice without inventing school policy.
+Write a notice about a schedule change for [GRADE] families.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OLD_SCHEDULE: supply verified information; do not leave blank]
-- [CONFIRMED_NEW_SCHEDULE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What changed: [OLD ARRANGEMENT → NEW ARRANGEMENT]
+Effective: [DATE]
+Reason I am permitted to share: [STATE IT, or say none]
 
-Specific requirements:
-Explain exactly what changed, what did not and what families must do. Never invent the reason or school policy.
+Rules:
+- Lead with the change. The reason, if any, comes second
+- State no policy, procedure or entitlement I have not given you
+- If families will ask something this notice cannot answer, say who to ask
+  rather than guessing
+- Do not apologise repeatedly; say it once if warranted
+- Do not speculate about further changes
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Under 100 words, plus a one-line version for a text message.
+
+If the reason I gave should not be shared with families, say so.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Has it stated a policy you did not give it?
+- Is the reason yours to share?
 
 ---
 
 ### PC-025 · Audit a logistics message for missing consent, safety and contact details
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a logistics message for missing consent, safety and contact details.
+The message that will generate forty replies asking the same question.
 
 **COPY FROM HERE**
 
 ```text
-Audit a logistics message for missing consent, safety and contact details.
+Audit this logistics message to [GRADE] families.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [LOGISTICS_DRAFT: supply verified information; do not leave blank]
-- [OFFICIAL_REQUIREMENTS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Tell me:
+- What a family needs to know that is missing — timing, location, cost,
+  supervision, what to bring, what to do if they cannot
+- Any consent, medical or emergency-contact element that appears incomplete
+- Every ambiguous date, time or place, quoted
+- Anything stated as policy that I should verify before sending
+- The three questions families will email me about after reading this
+- Anything assuming a family has a car, a smartphone, spare money, or a free
+  weekday
 
-Specific requirements:
-Check consent references, safety contacts, cost and dates. Hold the message if essential authorization is missing.
+Then tell me the single addition that would prevent the most replies.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+I will check all consent and safeguarding elements against my school's own
+requirements.
+
+MESSAGE:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- Add the missing items before sending, not after the questions arrive.
+- Take the consent and safeguarding flags to your school's process.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Clear and accessible language
 
 ---
 
 ### PC-026 · Rewrite school language in plain family-friendly English
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to rewrite school language in plain family-friendly English.
+The message is accurate and nobody outside the staffroom understands it.
 
 **COPY FROM HERE**
 
 ```text
-Rewrite school language in plain family-friendly English.
+Rewrite this message for [GRADE] families in plain English.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [SCHOOL_MESSAGE: supply verified information; do not leave blank]
-- [READING_NEEDS: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Rules:
+- Replace every acronym, initialism and piece of school jargon with what it
+  actually means
+- Short sentences, one idea each
+- Active voice — say who does what, rather than "it has been decided"
+- Keep every fact and every deadline exactly as they are
+- Do not make it warmer by making it vaguer
 
-Specific requirements:
-Replace jargon with plain language and define unavoidable terms. Preserve obligations and conditions without adding policy.
+Give me:
+- The rewritten message
+- A table of what you changed and why
+- Any term I must keep for accuracy, with a plain gloss beside it
+- Anywhere the original was ambiguous, so I can decide what it meant rather than
+  you guessing
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+MESSAGE:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Did any fact or deadline shift in the rewrite?
+- Where it flagged ambiguity, decide it yourself.
 
 ---
 
 ### PC-027 · Create a translation-ready message using short unambiguous sentences
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a translation-ready message using short unambiguous sentences.
+It will go through machine translation, and idioms do not survive that.
 
 **COPY FROM HERE**
 
 ```text
-Create a translation-ready message using short unambiguous sentences.
+Rewrite this message for [GRADE] families so it survives machine translation.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MESSAGE: supply verified information; do not leave blank]
-- [TARGET_LANGUAGE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Rules:
+- One idea per sentence, under 15 words where possible
+- No idioms, phrasal verbs, metaphors, humour or cultural references
+- No sarcasm, no understatement
+- Consistent terms — do not call the same thing two different names
+- Dates written in full, unambiguously — not 03/04, which means two different
+  days in two countries
+- Avoid words with several meanings where a plainer word exists
 
-Specific requirements:
-Prepare short unambiguous source sentences plus a terminology list. Require competent human translation review before sending.
+Give me the rewritten message, and a list of anything I should have a person
+check rather than trusting to translation.
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not lose any fact in the simplification.
+
+MESSAGE:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Is every date unambiguous?
+- Have the facts survived intact?
 
 ---
 
 ### PC-028 · Audit a family message for jargon, idioms and hidden assumptions
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to audit a family message for jargon, idioms and hidden assumptions.
+Checking what the message quietly assumes about a family.
 
 **COPY FROM HERE**
 
 ```text
-Audit a family message for jargon, idioms and hidden assumptions.
+Audit this message to families.
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [MESSAGE: supply verified information; do not leave blank]
-- [AUDIENCE_CONTEXT: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Flag and quote:
+- Jargon, acronyms and school shorthand
+- Idioms and phrasal verbs that will not translate
+- Assumptions about the family: two parents, English at home, a car, internet,
+  a printer, spare money, someone free during the school day, a quiet room, a
+  parent who can help with the subject
+- Anything implying a family is not doing enough
+- Any sentence with two possible readings
+- Anything requiring a reading level above straightforward everyday English
 
-Specific requirements:
-Find idioms, assumptions about home resources and unexplained terminology. Suggest inclusive alternatives without stereotyping families.
+Then give me the single sentence most likely to make a family feel judged, and
+a replacement.
 
-Output:
-Return an issue table with location, evidence, severity and smallest correction; then the corrected artifact and unresolved decisions.
+MESSAGE:
+[PASTE IT]
 ```
 
 **TO HERE**
 
 **Before you send it**
+- The judged-feeling sentence: replace it, do not defend it.
+- Which assumption surprised you? That is the useful one.
 
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+---
+
+## Difficult conversations
 
 ---
 
 ### PC-029 · Prepare a calm conversation about a repeated classroom concern
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to prepare a calm conversation about a repeated classroom concern.
+It has come up before, and this conversation needs to go better than the last.
 
 **COPY FROM HERE**
 
 ```text
-Prepare a calm conversation about a repeated classroom concern.
+Prepare me for a conversation with a family about a repeated concern in [GRADE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [OBSERVABLE_CONCERN: supply verified information; do not leave blank]
-- [SCHOOL_PROCEDURE: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+What keeps happening: [OBSERVABLE FACTS, WITH DATES]
+What has already been tried: [BY ME, AND BY THE FAMILY IF I KNOW]
+What I want from this conversation: [STATE IT]
 
-Specific requirements:
-Draft a calm opening, listening questions and proposed support. Stop for safeguarding concerns and follow the approved local process.
+Give me:
+- My opening, under 30 seconds, that states the concern without a preamble that
+  makes it sound worse
+- The facts in the order I say them
+- What I say when the family disagrees with the facts
+- What I say when the family becomes upset
+- What I say when the family says it is my responsibility, or the school's
+- The point at which I stop and listen rather than continuing
+- How I close if nothing is resolved
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not script the family's side. Do not assume they will be difficult.
+
+Nothing here should involve me guessing at causes at home.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
+- Are the facts verified, with dates?
+- Are you prepared to actually stop and listen at that point?
 
 ---
 
 ### PC-030 · Create a fact-based communication plan for disagreement with a family
-
-*Grades 3-5, 6-8, 9-12  ·  Any subject*
-
-> **Handle with care.** Read the safety page before using this one.
+*All grades*
 
 **When you need this**
-
-Choose this focused tool when your immediate task is to create a fact-based communication plan for disagreement with a family.
+You and the family see it differently, and it needs handling rather than winning.
 
 **COPY FROM HERE**
 
 ```text
-Create a fact-based communication plan for disagreement with a family.
+Help me plan communication with a family who disagrees with me about [ISSUE] in
+[GRADE].
 
-Required inputs:
-- [GRADE_SUBJECT: exact age/grade and subject]
-- [GOAL: the learning or communication purpose]
-- [POINTS_OF_DISAGREEMENT: supply verified information; do not leave blank]
-- [VERIFIED_RECORD: supply verified information; do not leave blank]
-- [CONSTRAINTS: duration, format, resources and approved access requirements; write none only if confirmed]
+Their position, as I understand it: [DESCRIBE IT FAIRLY]
+My position, and the evidence: [DESCRIBE IT]
 
-Specific requirements:
-Separate facts, disputed accounts and requested decisions. Avoid legal advice, admissions or promises on behalf of the school.
+Give me:
+- What we actually agree on, which is usually more than it feels like
+- Where the disagreement genuinely sits — fact, interpretation, or what should
+  happen next. These need different handling and I want to know which this is
+- What I would need to see to change my view, stated honestly
+- What is not negotiable, and why, in one sentence a family can accept
+- What I put in writing and what stays a conversation
+- When this stops being mine to handle alone, and who I involve
 
-Output:
-Return the named artifact with all questions, directions, examples or text needed for the task; put teacher keys and notes separately from student/family-facing text.
+Do not tell me how to win this. If the family may be right, say so.
+
+I will follow my school's procedures for anything formal.
 ```
 
 **TO HERE**
 
 **Before you send it**
-
-- [ ] Factual claims trace to supplied evidence; proposals and unknowns are labelled.
-- [ ] Answers and subject content checked independently; access and local policy preserved.
-- [ ] No identifying or sensitive records were shared; final recipient/content checked locally.
-
+- If it said the family may be right, sit with that before replying.
+- Involve your school's process at the point it named, not later.
